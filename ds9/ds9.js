@@ -1,6 +1,92 @@
 ﻿document.addEventListener('DOMContentLoaded', function() {
 	var bottomBorder = document.getElementById('bottomBorder');
 	setTimeout(function(){bottomBorder.style.width = '76%'},100);
+	
+	// Color the rating numbers
+	Array.from(document.getElementsByClassName("ratingNumber")).forEach(rating => {
+		
+		switch (Array.from(rating.innerHTML)[0]) {
+			case "0":
+				rating.style.color = '#F8696BBF';
+				break;
+			case "1":
+				if (Array.from(rating.innerHTML)[1] == "0") {
+					rating.style.color = '#63BE7BBF';
+				} else {
+					rating.style.color = '#F98370BF';
+				}
+				break;
+			case "2":
+				rating.style.color = '#FA9D75BF';
+				break;
+			case "3":
+				rating.style.color = '#FCB77ABF';
+				break;
+			case "4":
+				rating.style.color = '#FDD17FBF';
+				break;
+			case "5":
+				rating.style.color = '#FFEB84BF';
+				break;
+			case "6":
+				rating.style.color = '#E0E383BF';
+				break;
+			case "7":
+				rating.style.color = '#C1DA81BF';
+				break;
+			case "8":
+				rating.style.color = '#A2D07FBF';
+				break;
+			case "9":
+				rating.style.color = '#83C77DBF';
+				break;
+		}
+		
+	});
+
+	// Color the Score Boxes
+	Array.from(document.getElementsByClassName("ScoreBox")).forEach(box => {
+		
+		var score = box.querySelector(".xx-large").innerHTML;
+
+		switch (Array.from(score)[0]) {
+			case "0":
+				box.style.backgroundColor = '#F8696BBF';
+				break;
+			case "1":
+				if (Array.from(score)[1] == "0") {
+					box.style.backgroundColor = '#63BE7BBF';
+				} else {
+					box.style.backgroundColor = '#F98370BF';
+				}
+				break;
+			case "2":
+				box.style.backgroundColor = '#FA9D75BF';
+				break;
+			case "3":
+				box.style.backgroundColor = '#FCB77ABF';
+				break;
+			case "4":
+				box.style.backgroundColor = '#FDD17FBF';
+				break;
+			case "5":
+				box.style.backgroundColor = '#FFEB84BF';
+				break;
+			case "6":
+				box.style.backgroundColor = '#E0E383BF';
+				break;
+			case "7":
+				box.style.backgroundColor = '#C1DA81BF';
+				break;
+			case "8":
+				box.style.backgroundColor = '#A2D07FBF';
+				break;
+			case "9":
+				box.style.backgroundColor = '#83C77DBF';
+				break;
+		}
+		
+	});
 });
 
 function closeToolTip(caller) {
@@ -161,91 +247,7 @@ window.onload = function() {
 		}
 	}	
 
-	// Color the rating numbers
-	Array.from(document.getElementsByClassName("ratingNumber")).forEach(rating => {
-		
-		switch (Array.from(rating.innerHTML)[0]) {
-			case "0":
-				rating.style.color = '#F8696BBF';
-				break;
-			case "1":
-				if (Array.from(rating.innerHTML)[1] == "0") {
-					rating.style.color = '#63BE7BBF';
-				} else {
-					rating.style.color = '#F98370BF';
-				}
-				break;
-			case "2":
-				rating.style.color = '#FA9D75BF';
-				break;
-			case "3":
-				rating.style.color = '#FCB77ABF';
-				break;
-			case "4":
-				rating.style.color = '#FDD17FBF';
-				break;
-			case "5":
-				rating.style.color = '#FFEB84BF';
-				break;
-			case "6":
-				rating.style.color = '#E0E383BF';
-				break;
-			case "7":
-				rating.style.color = '#C1DA81BF';
-				break;
-			case "8":
-				rating.style.color = '#A2D07FBF';
-				break;
-			case "9":
-				rating.style.color = '#83C77DBF';
-				break;
-		}
-		
-	});
-
-	// Color the Score Boxes
-	Array.from(document.getElementsByClassName("ScoreBox")).forEach(box => {
-		
-		var score = box.querySelector(".xx-large").innerHTML;
-
-		switch (Array.from(score)[0]) {
-			case "0":
-				box.style.backgroundColor = '#F8696BBF';
-				break;
-			case "1":
-				if (Array.from(score)[1] == "0") {
-					box.style.backgroundColor = '#63BE7BBF';
-				} else {
-					box.style.backgroundColor = '#F98370BF';
-				}
-				break;
-			case "2":
-				box.style.backgroundColor = '#FA9D75BF';
-				break;
-			case "3":
-				box.style.backgroundColor = '#FCB77ABF';
-				break;
-			case "4":
-				box.style.backgroundColor = '#FDD17FBF';
-				break;
-			case "5":
-				box.style.backgroundColor = '#FFEB84BF';
-				break;
-			case "6":
-				box.style.backgroundColor = '#E0E383BF';
-				break;
-			case "7":
-				box.style.backgroundColor = '#C1DA81BF';
-				break;
-			case "8":
-				box.style.backgroundColor = '#A2D07FBF';
-				break;
-			case "9":
-				box.style.backgroundColor = '#83C77DBF';
-				break;
-		}
-		
-	});
+	
 	
 	var bottomBorder = document.getElementById('bottomBorder');
 	setTimeout(function(){bottomBorder.style.width = '100%'},800);

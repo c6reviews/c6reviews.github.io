@@ -99,7 +99,7 @@ body li {
 .c6Left {
 	position: fixed;
 	left: 0;
-	width: 58px;
+	width: 60px;
 	margin-top: 1px;
 	height: 235px;
 	z-index: -2;
@@ -110,9 +110,9 @@ body li {
 }
 .c6Right {
 	position: fixed;
-	right: 0;
+	right: 0px;
 	top: 9px;
-	width: 58px;
+	width: 63px;
 	height: 235px;
 	color: #bb4c1c;
 	padding: 0px;
@@ -122,6 +122,8 @@ body li {
 .c6Right img {
 	display: block;
 	width: 58px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .c6Right > a {
 	display: block;
@@ -133,10 +135,11 @@ body li {
 	position: absolute;
 	bottom: 0;
 	line-height: 0.9;
-	margin: 3px auto 5px auto;
+	margin: 3px 8px 5px auto;
 	font-size: 11px;
 	text-align: center;
 	color: #e47545;
+	width: 60px;
 }
 .c6Right .bsky a{
 	color: #e47545;
@@ -227,7 +230,6 @@ body li {
 
 /* ---------------------------------------- CONTENT ---------------------------------------- */
 .content {
-	margin: auto;
 	padding: 8px;
 	margin-left: 60px;
 	margin-right: 60px;
@@ -336,6 +338,9 @@ body li {
 		width: fit-content;
 		clear: both;
 	}
+	.finalVerdict .tagline {
+		font-size: small;
+	}
 	.understanding-ratings {
 		border-collapse: collapse;
 		width: 90%;
@@ -357,7 +362,8 @@ body li {
 .timelineTable{
 	border: 3px double #C0C0C0;
 	background-color: #181818EE;
-	border-collapse: collapse;
+	border-collapse: separate;
+	border-spacing: 0px;
 	font-size: 12px;
 	text-align: center;
 }
@@ -375,56 +381,86 @@ body li {
 }
 
 .timelineTable .seriesBox {
-	background-color: #3A3A3A;
+	position: relative;
+	background-color: #2F2F39;
 	border: 1px solid #C0C0C0;
-}
-.timelineTable .seriesBox div{
-	background-color: #AAAAAA;
 	font-weight: bold;
-	padding: 3px;
-	border-radius:3px;
-	width: fit-content;
-	margin: auto;
 }
+
 .timelineTable .episodeBox {
-	background-color: #7A7A7A;
+	position: relative;
+	background-color: #1A1A24;
 	border: 1px solid #C0C0C0;
 	font-weight: bold;
 }
 .timelineTable .filmBox {
-	background-color: #242437;
+	position: relative;
+	background-color: #141447;
 	border: 1px solid #C0C0C0;
 	font-weight: bold;
 }
 
 .timelineTable .activeBox {
 	color: yellow;
-	border: 2px solid yellow;
+	border: 2px solid yellow !important;
 }
 
 .timelineTable .majorEventBox {
 	background-color: #642800;
 }
 .timelineTable .alternateReality{
-	border: 2px solid indigo;
+	border: 2px solid violet !important;
+	color: violet;
 }
 .timelineTable .majorTimeTravel{
-	background-color: #FFD966;
+	background-color: #484810;
 }
 .timelineTable .minorTimeTravel{
-	background-color: #FFF2CC;
+	background-color: #303010;
 }
 .timelineTable .firstGen{
-	color: #806000;
+	color: #C0A000;
 }
 .timelineTable .secondGen{
-	color: #5B0000;
+	color: #EB5050;
 }
 .timelineTable .kelvin{
-	color: #0472FF;
+	border: 2px solid #04FF72 !important;
+	color: #14FF82;
 }
 .timelineTable .thirdGen{
-	color: #002060;
+	color: #2090E0;
+}
+.timelineTable .yearGap{
+	border-top-width: 2px;
+	border-top-style: dashed;
+	border-bottom-width: 2px;
+	border-bottom-style: dashed;
+	background-color: black;
+}
+.timelineTable .icon{
+	position: absolute;
+	left: 1px;
+	top: 1px;
+}
+.timelineTable .joinLeft {
+	border-top: 2px solid;
+	border-bottom: 2px solid;
+	border-left: 2px solid;
+	border-right: none !important;
+	border-color: #C0C0C0;
+}
+.timelineTable .joinMiddle {
+	border-top: 2px solid;
+	border-bottom: 2px solid;
+	border-color: #C0C0C0;
+}
+.timelineTable .joinRight {
+	border-top: 2px solid;
+	border-bottom: 2px solid;
+	border-right: 2px solid;
+	border-left: none !important;
+	border-color: #C0C0C0;
 }
 .seriesTimelineTable{
 	float: right;
