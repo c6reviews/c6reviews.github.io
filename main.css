@@ -8,7 +8,7 @@
 
 /* ---------------------------------------- MAIN SETUP ---------------------------------------- */
 html {
-	scrollbar-gutter: stable;
+	/*scrollbar-gutter: stable;*/
 }
 body {
 	background-color: #181818;
