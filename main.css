@@ -191,30 +191,33 @@ body li {
 	height: 60px;
 }
 .pageFooter {
-	display: flex;
-    align-items: center;
 	clear: both;
 	height: 25px;
-	margin: 20px -8px 25px -8px;
+	width: 100%;
+	margin: 20px auto 25px auto;
 	background-color: #030303;
 	border-top: 1px solid;
 	border-bottom: 1px solid;
 	border-color: #404040;
 }
 .pageFooter a {
+	display: inline-block;
 	color: #e47545;
 	margin-right: 8px;
+	margin-top: 3px;
 }
 .pageFooter img {
-	margin-bottom: 1px;
 	margin-left: 8px;
 	margin-right: 4px;
 	height: 18px;
+	vertical-align: middle;
+	
 }
 .pageFooter .bsky{
 	position: absolute;
 	right: 8px;
 	font-size: 11px;
+	vertical-align: middle;
 }
 	
 #bottomBorder{
