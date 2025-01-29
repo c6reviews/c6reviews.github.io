@@ -1,4 +1,6 @@
-﻿document.addEventListener('DOMContentLoaded', function() {
+﻿/* File version 0.9.1 */
+
+document.addEventListener('DOMContentLoaded', function() {
 	var bottomBorder = document.getElementById('bottomBorder');
 	setTimeout(function(){bottomBorder.style.width = '76%'},100);
 	
