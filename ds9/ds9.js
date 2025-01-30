@@ -1,46 +1,46 @@
-﻿/* File version 0.9.1 */
+﻿/* File version 0.9.2 */
 
 document.addEventListener('DOMContentLoaded', function() {
 	var bottomBorder = document.getElementById('bottomBorder');
-	setTimeout(function(){bottomBorder.style.width = '76%'},100);
+	setTimeout(function() {bottomBorder.style.width = '76%';}, 100);
 	
 	// Color the rating numbers
 	Array.from(document.getElementsByClassName("ratingNumber")).forEach(rating => {
 		
 		switch (Array.from(rating.innerHTML)[0]) {
 			case "0":
-				rating.style.color = '#F8696BBF';
+				rating.style.color = '#F8393BBF';
 				break;
 			case "1":
 				if (Array.from(rating.innerHTML)[1] == "0") {
-					rating.style.color = '#63BE7BBF';
+					rating.style.color = '#03BE4BBF';
 				} else {
-					rating.style.color = '#F98370BF';
+					rating.style.color = '#F95350BF';
 				}
 				break;
 			case "2":
-				rating.style.color = '#FA9D75BF';
+				rating.style.color = '#FA6D55BF';
 				break;
 			case "3":
-				rating.style.color = '#FCB77ABF';
+				rating.style.color = '#FC975ABF';
 				break;
 			case "4":
-				rating.style.color = '#FDD17FBF';
+				rating.style.color = '#FDC16FBF';
 				break;
 			case "5":
-				rating.style.color = '#FFEB84BF';
+				rating.style.color = '#FFEB74BF';
 				break;
 			case "6":
-				rating.style.color = '#E0E383BF';
+				rating.style.color = '#C0E373BF';
 				break;
 			case "7":
-				rating.style.color = '#C1DA81BF';
+				rating.style.color = '#91DA71BF';
 				break;
 			case "8":
-				rating.style.color = '#A2D07FBF';
+				rating.style.color = '#72D06FBF';
 				break;
 			case "9":
-				rating.style.color = '#83C77DBF';
+				rating.style.color = '#43C75DBF';
 				break;
 		}
 		
@@ -53,38 +53,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		switch (Array.from(score)[0]) {
 			case "0":
-				box.style.backgroundColor = '#F8696BBF';
+				box.style.backgroundColor = '#F8393BBF';
 				break;
 			case "1":
 				if (Array.from(score)[1] == "0") {
-					box.style.backgroundColor = '#63BE7BBF';
+					box.style.backgroundColor = '#03BE4BBF';
 				} else {
-					box.style.backgroundColor = '#F98370BF';
+					box.style.backgroundColor = '#F95350BF';
 				}
 				break;
 			case "2":
-				box.style.backgroundColor = '#FA9D75BF';
+				box.style.backgroundColor = '#FA6D55BF';
 				break;
 			case "3":
-				box.style.backgroundColor = '#FCB77ABF';
+				box.style.backgroundColor = '#FC975ABF';
 				break;
 			case "4":
-				box.style.backgroundColor = '#FDD17FBF';
+				box.style.backgroundColor = '#FDC16FBF';
 				break;
 			case "5":
-				box.style.backgroundColor = '#FFEB84BF';
+				box.style.backgroundColor = '#FFEB74BF';
 				break;
 			case "6":
-				box.style.backgroundColor = '#E0E383BF';
+				box.style.backgroundColor = '#C0E373BF';
 				break;
 			case "7":
-				box.style.backgroundColor = '#C1DA81BF';
+				box.style.backgroundColor = '#91DA71BF';
 				break;
 			case "8":
-				box.style.backgroundColor = '#A2D07FBF';
+				box.style.backgroundColor = '#72D06FBF';
 				break;
 			case "9":
-				box.style.backgroundColor = '#83C77DBF';
+				box.style.backgroundColor = '#43C75DBF';
 				break;
 		}
 		

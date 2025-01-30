@@ -1,4 +1,4 @@
-﻿/* File version 0.9.1 */
+﻿/* File version 0.9.2 */
 
 /* ----------------------------------------------------- GLOBAL VARIABLES ----------------------------------------------------- */
 
@@ -72,8 +72,10 @@ function createTable(array) {
 					break;
 				case 3:
 					cellClass = "col_episodeRecommendation";
-					// Stylize notably bad entries
-					cell = cell.replace("✖ Notably Bad",'<span class="NotablyBad">✖ Notably Bad</span>');
+					// Stylize certain entries
+					cell = cell.replace("🕶 ‼ Must Watch/Bare Minimum",'<span class="mustWatch">🕶</span> <span class="bareMinimum">‼</span> Must Watch/Bare Minimum');
+					cell = cell.replace("🕶 Must Watch",'<span class="mustWatch">🕶</span> Must Watch');
+					cell = cell.replace("✖ Notably Bad",'<span class="NotablyBad">✖</span> Notably Bad');
 					break;
 				case 4:
 					cellClass = "col_episodeRating";
@@ -795,38 +797,38 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 		
 		switch (Array.from(rating.innerHTML)[0]) {
 			case "0":
-				rating.style.backgroundColor = '#F8696BBF';
+				rating.style.backgroundColor = '#F8393BBF';
 				break;
 			case "1":
 				if (Array.from(rating.innerHTML)[1] == "0") {
-					rating.style.backgroundColor = '#63BE7BBF';
+					rating.style.backgroundColor = '#03BE4BBF';
 				} else {
-					rating.style.backgroundColor = '#F98370BF';
+					rating.style.backgroundColor = '#F95350BF';
 				}
 				break;
 			case "2":
-				rating.style.backgroundColor = '#FA9D75BF';
+				rating.style.backgroundColor = '#FA6D55BF';
 				break;
 			case "3":
-				rating.style.backgroundColor = '#FCB77ABF';
+				rating.style.backgroundColor = '#FC975ABF';
 				break;
 			case "4":
-				rating.style.backgroundColor = '#FDD17FBF';
+				rating.style.backgroundColor = '#FDC16FBF';
 				break;
 			case "5":
-				rating.style.backgroundColor = '#FFEB84BF';
+				rating.style.backgroundColor = '#FFEB74BF';
 				break;
 			case "6":
-				rating.style.backgroundColor = '#E0E383BF';
+				rating.style.backgroundColor = '#C0E373BF';
 				break;
 			case "7":
-				rating.style.backgroundColor = '#C1DA81BF';
+				rating.style.backgroundColor = '#91DA71BF';
 				break;
 			case "8":
-				rating.style.backgroundColor = '#A2D07FBF';
+				rating.style.backgroundColor = '#72D06FBF';
 				break;
 			case "9":
-				rating.style.backgroundColor = '#83C77DBF';
+				rating.style.backgroundColor = '#43C75DBF';
 				break;
 		}
 		
