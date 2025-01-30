@@ -1,4 +1,4 @@
-/* File version 0.9.1 */
+/* File version 0.9.2 */
 
 /* ---------------------------------------- TABLE SETUP ---------------------------------------- */
 #tableContainer{
@@ -35,7 +35,7 @@
 	font-size: small;
 }
 
-input[type=textbox] {
+input[type=text] {
 	background-color: #333;
 	color: white;
 	border: 1px solid gray;

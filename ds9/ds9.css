@@ -1,4 +1,4 @@
-/* File version 0.9.1 */
+/* File version 0.9.2 */
 
 /* ------------------------------------ LEFT NAVIGATION MENU ------------------------------------ */
 #leftNavOpenButton{
@@ -76,19 +76,19 @@
 /* ---------------------------------------- STARS ---------------------------------------- */
 .stars0 {
 	font-size: x-large;
-	color: #F8696B;
+	color: #F8393B;
 	height: 24px;
 	padding-left: 8px;
 }
 .stars1 {
 	font-size: x-large;
-	color: #FA9473;
+	color: #FA6453;
 	height: 24px;
 	padding-left: 8px;
 }
 .stars2 {
 	font-size: x-large;
-	color: #FCBF7B;
+	color: #FC9F5B;
 	height: 24px;
 	padding-left: 8px;
 }
@@ -100,13 +100,13 @@
 }
 .stars4 {
 	font-size: x-large;
-	color: #B1D580;
+	color: #81D570;
 	height: 24px;
 	padding-left: 8px;
 }
 .stars5 {
 	font-size: x-large;
-	color: #63BE7B;
+	color: #03BE4B;
 	height: 24px;
 	padding-left: 8px;
 }
@@ -162,6 +162,12 @@
 .NotablyBad {
 	color: #FF6666;
 }
+.bareMinimum {
+	color: #FFFF66;
+}
+.mustWatch {
+	color: #66FF66;
+}
 
 /* --- OTHER RATINGS --- */
 .ratingNumber {
@@ -185,7 +191,6 @@
 }
 .spoilerContent{
 	filter: blur(6px);
-	font-size:small;
 	color: #FFE1CA;
 	transition: 0.5s;
 	user-select: none;
