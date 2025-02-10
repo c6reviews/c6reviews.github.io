@@ -1,0 +1,109 @@
+#legendOpenButton{
+	cursor: pointer;
+	position: fixed;
+	right:0;
+	top:315px;
+	text-align: center;
+	background-color: #031014DD;
+	padding: 4px;
+	border: 2px solid;
+	border-radius: 12px 0px 0px 12px;
+	overflow: hidden;
+	z-index: 99;
+	transition: 0.2s;
+	width: 45px;
+}
+#legendOpenButton:hover {
+	background-color: #124054;
+}
+
+.legend {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  background-color: #111111EE;
+  overflow-x: hidden;
+  padding-top: 20px; 
+  transition: 0.2s; 
+}
+.legend .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#spoilerMenuOpenButton{
+	cursor: pointer;
+	position: fixed;
+	right:0;
+	top:368px;
+	text-align: center;
+	background-color: #031014DD;
+	padding: 4px;
+	border: 2px solid;
+	border-radius: 12px 0px 0px 12px;
+	overflow: hidden;
+	z-index: 99;
+	transition: 0.2s;
+	width: 45px;
+}
+#spoilerMenuOpenButton:hover {
+	background-color: #124054;
+}
+.kirkEra {
+	background-color: #604000;
+}
+.picardEra {
+	background-color: #400000;
+}
+.lostEra {
+	color: #606060;
+}
+.TOSSpoiler, .TNGSpoiler, .DS9Spoiler, .VOYSpoiler, .ENTSpoiler, .kelvinSpoiler, .DISSpoiler, .PICSpoiler, .PROSpoiler, .characterDeath{
+	position: relative;
+	white-space: pre;
+  &:after {
+    background: black;
+    border-radius: 0.1em;
+    box-shadow: 0 0 1px rgba(0,0,0,0.35);
+    content: "SPOILER";
+    width: 99%;
+    height: 1.2em;
+    left: 0.5%;
+    position: absolute;
+    transform: skewY(-10deg) rotate(10deg);
+	color: #505050;
+	display: var(--spoilerDisplay, inline-block);
+  }
+}
+.moreInfo{
+	cursor: help;
+}
+.moreInfo::after{
+	content: "💬";
+	margin-left: 3px;
+}
+.highlighted {
+	position: relative;
+  &:after {
+    background: #FFFFFF33;
+    border-radius: 0.1em;
+    content: "";
+    height: 100%;
+	top: 0;
+    left: 80px;
+	right: 8px;
+    position: absolute;
+	transform: skewY(-10deg) rotate(10deg);
+	display: ;
+  }
+}
+
+.tooltip {
+	background-color:#031014EE;
+}

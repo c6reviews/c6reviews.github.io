@@ -1,0 +1,4173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="darkreader-lock" content="47">
+<link rel="stylesheet" href="main.css?v=1.0">
+<link rel="stylesheet" href="timeline.css">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+<script src="timeline.js"></script>
+<title>This is a test of the thing</title>
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+
+<div id="legendOpenButton" onclick="toggleLegend()">🧭<br><span style="font-size: small;">legend</span></div>
+<div id="legend" class="legend">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeLegend()">&times;</a>
+	<p>&nbsp;</p>
+	<p style="text-align:center">Cell Background Colors</p>
+	<table class="timelineTable" style="margin:auto;">
+		<tr>
+			<td class="majorEventBox">Major Events</td>
+		</tr>
+		<tr>
+			<td class="minorTimeTravel">&lt; Past reference or minor role in story</td>
+		</tr>
+		<tr>
+			<td class="minorTimeTravel">&gt; Future reference or minor role in story</td>
+		</tr>
+		<tr>
+			<td class="majorTimeTravel">&lt;&lt; Past time travel or significant role in story</td>
+		</tr>
+		<tr>
+			<td class="majorTimeTravel">&gt;&gt; Future time travel or significant role in story</td>
+		</tr>
+		<tr>
+			<td class="episodeBox"><span class="icon">📺</span>Single television episode</td>
+		</tr>
+		<tr>
+			<td class="seriesBox"><span class="icon">📺</span>Television series</td>
+		</tr>
+		<tr>
+			<td class="filmBox"><span class="icon">🎥</span>Films</td>
+		</tr>
+	</table>
+	<p>&nbsp;</p>
+	<p style="text-align:center">Text and Border Colors</p>
+	<table class="timelineTable" style="margin:auto;">
+		<tr>
+			<td class="firstGen">1st generation Trek (1966-1991)</td>
+		</tr>
+		<tr>
+			<td class="secondGen">2nd generation Trek (1987-2004)</td>
+		</tr>
+		<tr>
+			<td class="thirdGen">3rd generation Trek (2017-Present)</td>
+		</tr>
+		<tr>
+			<td class="kelvin">Kelvin Alternate Timeline</td>
+		</tr>
+		<tr>
+			<td class="alternateReality">Other (Non-Kelvin) Alternate Timeline</td>
+		</tr>
+		<tr>
+			<td class="mirrorUniverse">Mirror Universe</td>
+		</tr>
+		<tr>
+			<td class="apocryphal">Apocryphal information*</td>
+		</tr>
+	</table>
+	<p>&nbsp;</p>
+	<p style="text-align:center">Other</p>
+	<table class="timelineTable" style="margin:auto;">
+		<tr>
+			<td>≈ Approximate Date</td>
+		</tr>
+		<tr>
+			<td>First time something happens (<span style="font-family:serif">I</span>)</td>
+		</tr>
+		<tr>
+			<td>Second time something happens (<span style="font-family:serif">II</span>)</td>
+		</tr>
+		<tr>
+			<td class="moreInfo">Click to view additional info</td>
+		</tr>
+	</table>
+</div>
+<div id="spoilerMenuOpenButton" onclick="toggleSpoilerMenu()">🛑<br><span style="font-size: small;">spoilers</span></div>
+<div id="spoilerMenu" class="legend">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeSpoilerMenu()">&times;</a>
+	<p>&nbsp;</p>
+	<p style="text-align:center">Toggle Spoilers</p>
+	<label class="switch"><input type="checkbox" id="TOSSpoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span></label><span class="switchLabel">Show TOS/TAS Spoilers</span><br><br>
+	<label class="switch"><input type="checkbox" id="TNGSpoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span></label><span class="switchLabel">Show TNG Spoilers</span><br><br>
+	<label class="switch"><input type="checkbox" id="DS9SpoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span></label><span class="switchLabel">Show DS9 Spoilers</span><br><br>
+	<label class="switch"><input type="checkbox" id="VOYSpoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span></label><span class="switchLabel">Show VOY Spoilers</span><br><br>
+	<label class="switch"><input type="checkbox" id="ENTSpoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span></label><span class="switchLabel">Show ENT Spoilers</span><br><br>
+	<label class="switch"><input type="checkbox" id="kelvinSpoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span></label><span class="switchLabel">Show Kevlin Spoilers</span><br><br>
+	<label class="switch"><input type="checkbox" id="DISSpoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span></label><span class="switchLabel">Show DIS/SHO Spoilers</span><br><br>
+	<label class="switch"><input type="checkbox" id="PICSpoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span></label><span class="switchLabel">Show PIC Spoilers</span><br><br>
+	<label class="switch"><input type="checkbox" id="LOWSpoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span></label><span class="switchLabel">Show LOW Spoilers</span><br><br>
+	<label class="switch"><input type="checkbox" id="PROSpoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span></label><span class="switchLabel">Show PRO Spoilers</span><br><br>
+	<label class="switch"><input type="checkbox" id="SNWSpoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span></label><span class="switchLabel">Show SNW Spoilers</span><br><br>
+	<br>
+	<label class="switch"><input type="checkbox" id="characterDeathToggle" onclick="toggleSpoilers()"><span class="slider round"></span></label><span class="switchLabel">Show main character deaths</span>
+</div>
+
+
+<h1>Star Trek Universe Timeline</h1>
+
+<div id="svgOverlay"></div>
+<table class="timelineTable" style="width: 100%" id="theTable">
+	<tr>
+		<td width="40px">&nbsp;</td>
+		<td width="40px">2149</td>
+		<td width="250px">&nbsp;</td>
+		<td width="250px">&nbsp;</td>
+		<td width="250px">&nbsp;</td>
+		<td width="250px">&nbsp;</td>
+		<td width="250px">&nbsp;</td>
+		<td width="250px">&nbsp;</td>
+		<td width="180px">&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+		<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2150</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+		<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2151</td>
+		<td rowspan="5" class="seriesBox secondGen"><span class="icon">📺</span>STAR TREK<br>ENTERPRISE (ENT)<br><span class="x-small" style="font-weight:normal;font-family:serif">2001-2005</span></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+		<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2152</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+		<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2153</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+		<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2154</td>
+		<td>&nbsp;</td>
+		<td>Arik Soong escapes from Archer's custody</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+		<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2155</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td class="mirrorUniverse">Mirror Archer captures the <em>Defiant</em></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+		<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2156</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+		<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2157</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+		<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2158</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+		<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2159</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2160</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2161</td>
+		<td class="episodeBox secondGen joinLeft"><span class="icon">📺</span>ENT: &quot;These Are The Voyages...&quot;</td>
+		<td class="majorEventBox joinRight">United Federation of Planets founded</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2162</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2163</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2164</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2165</td>
+		<td class="minorTimeTravel alternateReality">&gt; ENT: Twilight</td>
+		<td>&nbsp;</td>
+		<td>Sarek born</td>
+		<td></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2166</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2167</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2168</td>
+		<td class="minorTimeTravel firstGen joinLeft">&lt; TOS: A Piece of the Action</td>
+		<td class="joinRight">The <em>Horizon</em> contaminates life on Sigma Iota II</td>
+		<td>Lela becomes first Dax host</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2169</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2170</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2171</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2172</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2173</td>
+		<td colspan="2" class="minorTimeTravel alternateReality">≈ The <em>Defiant</em> crash-lands and becomes stranded (DS9: Children of Time)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2174</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2175</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2176</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2177</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2178</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2179</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2180</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2181</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2182</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2183</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2184</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2185</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2186</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2187</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2188</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2189</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2190</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2191</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2192</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2193</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2194</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2195</td>
+		<td>Robert April born</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2196</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2197</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2198</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2199</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="centuryEnd">&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;" class="centuryEnd">2200</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>23rd</strong</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2201</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>Century</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2202</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>↓</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2203</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2204</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2205</td>
+		<td class="apocryphal">Christopher Pike born*</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2206</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2207</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2208</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2209</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2210</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2211</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2212</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2213</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2214</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2215</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2216</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2217</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2218</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2219</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2220</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2221</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2222</td>
+		<td>Montgomery Scott born</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2223</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2224</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2225</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2226</td>
+		<td>Michael Burnham born</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>Lela dies, Dax joins with Tobin</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2227</td>
+		<td>Leonard McCoy born</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2228</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2229</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2230</td>
+		<td>Spock born</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2231</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2232</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td rowspan="61" class="kirkEra" style="font-size:x-large">K<br>I<br>R<br>K<br>&nbsp;<br>E<br>R<br>A</td>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2233</td>
+		<td>Kirk born (March 22)</td>
+		<td class="apocryphal">(Pike Age 28)*</td>
+		<td>&nbsp;</td>
+		<td class="majorTimeTravel kelvin joinLeft">&lt;&lt; Star Trek [2009]</td>
+		<td class="kelvin joinRight">Nero arrives from 2387</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2234</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2235</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2236</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2237</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2238</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2239</td>
+		<td class="episodeBox thirdGen joinLeft"><span class="icon">📺</span>SHO: "The Brightest Star" (1x03)</td>
+		<td class="joinRight">Saru leaves his home</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2240</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2241</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td class="kelvin">Chekov born</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2242</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2243</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2244</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2245</td>
+		<td>Chekov born</td>
+		<td>&nbsp;</td>
+		<td>Battle of Donatu V</td>
+		<td>Emony Dax meets Dr. McCoy (speculative)</td>
+		<td>&nbsp;</td>
+		<td>USS ENTERPRISE NCC-1701<br>Launched on April 11</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2246</td>
+		<td class="minorTimeTravel firstGen joinLeft">&lt; TOS: The Conscience of the King</td>
+		<td class="joinRight">Kodos executes 4,000 at Tarsus IV</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2247</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2248</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2249</td>
+		<td class="minorTimeTravel thirdGen joinLeft">&lt; DIS: Battle at the Binary Stars</td>
+		<td colspan="2" class="joinRight">Michael Burnham graduates from the Vulcan Science 
+		Academy and joins the Shenzhou</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2250</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2251</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2252</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2253</td>
+		<td class="episodeBox thirdGen joinLeft"><span class="icon">📺</span>SHO: &quot;Q&amp;A&quot; (2x01)</td>
+		<td class="joinRight">Spock joins the USS Enterprise</td>
+		<td>(Kirk Age 20)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2254</td>
+		<td class="episodeBox firstGen joinLeft moreInfo" onClick="openToolTip(event,'TheCageTT')"><span class="icon">📺</span>TOS: &quot;The Cage&quot;</td>
+		<td class="minorTimeTravel thirdGen joinMiddle">&lt; DIS: If Memory Serves</td>
+		<td class="minorTimeTravel thirdGen joinRight">&lt; SNW: Among the Lotus Eaters</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2255</td>
+		<td>Last contact with the Sheliak until 2366</td>
+		<td>Lt. Kirk assigned to USS Farragut</td>
+		<td>&nbsp;</td>
+		<td class="kelvin">Kirk joins Starfleet Academy</td>
+		<td class="mirrorUniverse DISSpoiler">Lorca transported to Prime Universe</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2256</td>
+		<td class="seriesBox thirdGen" rowspan="3"><span class="icon">📺</span>STAR TREK<br>
+		DISCOVERY (DIS)<br>
+		SEASONS 1 &amp; 2<br><span class="x-small" style="font-weight:normal;font-family:serif">2017-2019</span></td>
+		<td rowspan="2" class="majorEventBox">Federation-Klingon War</td>
+		<td class="majorEventBox">May 11: Battle of the Binary Stars</td>
+		<td>(Burnham Age 30)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2257</td>
+		<td>&nbsp;</td>
+		<td class="episodeBox thirdGen"><span class="icon">📺</span>SHO: &quot;Runaway&quot; (1x01)</td>
+		<td class="minorTimeTravel firstGen">&lt; TOS: Obsession</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2258</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td class="filmBox kelvin joinLeft"><span class="icon">🎥</span>Star Trek [2009] <span class="x-small" style="font-weight:normal;font-family:serif">(#11)</span></td>
+		<td class="kelvin joinRight">Spock arrives from 2387</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2259</td>
+		<td class="seriesBox thirdGen" rowspan="2"><span class="icon">📺</span>STAR TREK<br />
+		STRANGE NEW WORLDS (SNW)<br><span class="x-small" style="font-weight:normal;font-family:serif">2022-Present<span></td>
+		<td class="apocryphal">(Pike Age 54)*</td>
+		<td>&nbsp;</td>
+		<td class="filmBox kelvin"><span class="icon">🎥</span> Into Darkness <span class="x-small" style="font-weight:normal;font-family:serif">(2013, #12)</span></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2260</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2261</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2262</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td class="filmBox kelvin"><span class="icon">🎥</span>Beyond <span class="x-small" style="font-weight:normal;font-family:serif">(2016, #13)</span></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2263</td>
+		<td>(Kirk Age 30)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td class="kelvin kelvinSpoiler characterDeath">Spock dies (<span style="font-family: serif">II</span>) (Age 161)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2264</td>
+		<td>Tuvok born</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2265</td>
+		<td rowspan="4" class="seriesBox firstGen" style="border-bottom:0px;"><span class="icon">📺</span> STAR TREK<br>
+			[THE ORIGINAL SERIES] (TOS)<br><span class="x-small" style="font-weight:normal;font-family:serif">1966-1969</span>
+		</td>
+		<td class="apocryphal">(Pike Age 60)*</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2266</td>
+		<td class="joinLeft">Pike is gravely injured</td>
+		<td class="majorTimeTravel thirdGen joinRight">&gt;&gt; SNW: Through the Valley of Shadows</td>
+		<td class="alternateReality majorTimeTravel">&gt;&gt; SNW: A Quality of Mercy</td>
+		<td class="episodeBox thirdGen"><span class="icon">📺</span>SHO: &quot;Ephraim and Dot&quot; begins (2x04)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2267</td>
+		<td class="majorTimeTravel secondGen">&lt;&lt; DS9: Trials and Tribble-ations</td>
+		<td>Khan revived; marooned on Ceti Alpha</td>
+		<td class="mirrorUniverse">Kirk crosses over to Mirror Universe</td>
+		<td>|</td>
+		<td colspan="2">Zefram Cochrane discovered after being missing for 150 years</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2268</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2269</td>
+		<td class="seriesBox firstGen diagonalRising" style="border-top: 0px; border-bottom: 0px;text-align:right;vertical-align:bottom;font-size:x-small"><span class="x-small" style="font-weight:normal;font-family:serif">1973-74</span></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2270</td>
+		<td class="seriesBox firstGen" style="border-top:0px;"><span class="icon">📺</span> Star Trek: The Animated Series (TAS)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2271</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2272</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2273</td>
+		<td>(Kirk Age 40)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td class="filmBox firstGen moreInfo" onclick="openToolTip(event,'TMPTT')"><span class="icon">🎥</span>The Motion Picture <span class="x-small" style="font-weight:normal;font-family:serif">(1979, #1)</span></td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2274</td>
+		<td>&nbsp;</td>
+		<td>SS Artemis launched</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2275</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2276</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2277</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2278</td>
+		<td>&nbsp;</td>
+		<td class="minorTimeTravel secondGen joinLeft">&lt; TNG: Cause &amp; Effect</td>
+		<td class="joinRight">USS Bozeman lost in time loop</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2279</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2280</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2281</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2282</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2283</td>
+		<td>(Kirk Age 50)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2284</td>
+		<td>Audrid dies, Dax joins with Torias</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td class="moreInfo" onclick="openToolTip(event,'ExcelsiorTT')">≈ USS EXCELSIOR NCC-2000 Launched</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2285</td>
+		<td>Torias dies, Dax joins with Joran</td>
+		<td class="joinLeft TOSSpoiler characterDeath">Spock dies (<span style="font-family: serif">I</span>) (Age 55)</td>
+		<td class="filmBox firstGen joinRight"><span class="icon">🎥</span><span style="font-family:serif">II:</span> The Wrath of Khan <span class="x-small" style="font-weight:normal;font-family:serif">(1982)</span></td>
+		<td class="filmBox firstGen"><span class="icon">🎥</span><span style="font-family:serif">III:</span> The Search for Spock <span class="x-small" style="font-weight:normal;font-family:serif">(1984)</span></td>
+		<td class="episodeBox thirdGen"><span class="icon">📺</span>SHO: &quot;Ephraim and Dot&quot; ends (2x04)</td>
+		<td class="TOSSpoiler characterDeath">USS ENTERPRISE NCC-1701 Destroyed</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2286</td>
+		<td>Joran dies, Dax joins with Curzon</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td class="filmBox firstGen"><span class="icon">🎥</span><span style="font-family:serif">IV:</span> The Voyage Home <span class="x-small" style="font-weight:normal;font-family:serif">(1986)</span></td>
+		<td>&nbsp;</td>
+		<td class="TOSSpoiler characterDeath">USS ENTERPRISE NCC-1701-A Launched</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2287</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td class="filmBox firstGen"><span class="icon">🎥</span><span style="font-family:serif">V:</span> The Final Frontier <span class="x-small" style="font-weight:normal;font-family:serif">(1989)</span></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2288</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2289</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2290</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2291</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2292</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2293</td>
+		<td class="filmBox firstGen joinLeft"><span class="icon">🎥</span><span style="font-family:serif">VI:</span> The Undiscovered Country <span class="x-small" style="font-weight:normal;font-family:serif">(1991)</span></td>
+		<td class="majorTimeTravel secondGen joinRight">&lt;&lt; VOY: Flashback</td>
+		<td class="majorTimeTravel secondGen joinLeft">&lt;&lt; Star Trek Generations [VII]</td>
+		<td class="joinRight TOSSpoiler TNGSpoiler characterDeath">Kirk presumed dead (Age 60)</td>
+		<td class="majorEventBox">Khitomer Accords Signed</td>
+		<td>USS ENTERPRISE NCC-1701-A<br>Decommissioned</td>
+		<td>USS ENTERPRISE NCC-1701-B<br>Commissioned</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;" class="lostEra">2294</td>
+		<td style="color:#606060">Start of Trek's &quot;lost era&quot;</td>
+		<td class="joinLeft" colspan="2">Scotty placed in transporter buffer on USS Jenolan</td>
+		<td class="minorTimeTravel secondGen joinRight">&lt; TNG: Relics</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;" class="lostEra">2295</td>
+		<td style="color:#606060;">↓</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;" class="lostEra">2296</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;" class="lostEra">2297</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;" class="lostEra">2298</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;" class="lostEra">2299</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="centuryEnd">&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"  class="lostEra centuryEnd">2300</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>24th</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;" class="lostEra">2301</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>Century</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;" class="lostEra">2302</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>↓</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;" class="lostEra">2303</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;" class="lostEra">2304</td>
+		<td>Tuvok married</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td rowspan="96" class="picardEra centuryEnd" style="font-size:x-large">P<br>I<br>C<br>A<br>R<br>D<br>&nbsp;<br>E<br>R<br>A</td>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2305</td>
+		<td>Picard born (July 13)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2306</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2307</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2308</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2309</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2310</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2311</td>
+		<td>&nbsp;</td>
+		<td class="majorEventBox">Treaty of Algeron signed</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2312</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2313</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2314</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2315</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2316</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2317</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2318</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2319</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>Cardassian occupation of Bajor begins</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2320</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2321</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2322</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2323</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2324</td>
+		<td>Beverly Crusher (née Howard) born</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td class="filmBox thirdGen"><span class="icon">🎥</span>Section 31 <span class="x-small" style="font-weight:normal;font-family:serif">(2025, #14, straight-to-streaming)</span></td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2325</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2326</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>USS STARGAZER NCC-2893 Commissioned</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2327</td>
+		<td class="majorTimeTravel secondGen joinLeft">&lt;&lt; TNG: Tapestry</td>
+		<td class="joinRight">Picard's bar fight (Age 22)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2328</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2329</td>
+		<td>Chakotay born</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2330</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2331</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2332</td>
+		<td>Ben Sisko born</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2333</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>Picard takes command of the USS Stargazer</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2334</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2335</td>
+		<td>Riker born, La Forge born</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2336</td>
+		<td>Troi born</td>
+		<td class="apocryphal moreInfo" onClick="openToolTip(event,'JanewayTT')">Kathryn Janeway born*</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2337</td>
+		<td>Tasha Yar born</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2338</td>
+		<td>Data activated on Omicron Theta</td>
+		<td>Noonian Soong escapes the Crystaline Entity</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2339</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2340</td>
+		<td>Worf born</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2341</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2342</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2343</td>
+		<td>Kira Nerys born</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2344</td>
+		<td class="minorTimeTravel secondGen">&lt; VOY: Tattoo</td>
+		<td class="minorTimeTravel secondGen joinLeft">&lt; TNG: Yesterday's Enterprise</td>
+		<td class="majorEventBox joinRight"  id="altYar2">Battle at Narendra III</td>
+		<td>|</td>
+		<td>|</td>
+		<td>USS ENTERPRISE NCC-1701-C Destroyed</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2345</td>
+		<td>(Picard Age 40)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2346</td>
+		<td class="minorTimeTravel secondGen">&lt; DS9: Wrongs Darker Than Death or Night</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>Terok Nor completed</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2347</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2348</td>
+		<td>Wesley Crusher born</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2349</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td class="TNGSpoiler characterDeath" id="altYar3">Alternate Yar dies (<span style="font-family:serif">II</span>) (Age 34)</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2350</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2351</td>
+		<td class="minorTimeTravel secondGen">&lt; VOY: Eye of the Needle</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2352</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2353</td>
+		<td>Jack R. Crusher dies</td>
+		<td>Kira Meru dies</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2354</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2355</td>
+		<td>(Picard Age 50)</td>
+		<td>Jake Sisko born</td>
+		<td>&nbsp;</td>
+		<td>USS STARGAZER NCC-2893 Abandoned</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2356</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2357</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2358</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2359</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2360</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2361</td>
+		<td class="joinLeft TNGSpoiler">Riker Duplicated</td>
+		<td class="minorTimeTravel secondGen joinRight">&lt; TNG: Second Chances</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2362</td>
+		<td style="color:#606060">↓</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td class="joinLeft">USS ENTERPRISE NCC-1701-D Launched</td>
+		<td class="joinRight">Source: <em>Star Trek: Picard Logs</em></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2363</td>
+		<td style="color:#606060">End of Trek's &quot;lost era&quot;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td class="joinLeft">USS ENTERPRISE NCC-1701-D Launched</td>
+		<td class="joinRight">Source: 2nd dedication plaque</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2364</td>
+		<td class="seriesBox secondGen" rowspan="7"><span class="icon">📺</span>STAR TREK<br>THE NEXT GENERATION (TNG)<br><span class="x-small" style="font-weight:normal;font-family:serif">1987-1994</span></td>
+		<td>McCoy visits the Enterprise D (Age 137)</td>
+		<td class="TNGSpoiler characterDeath">Tasha Yar dies (<span style="font-family:serif">I</span>) (Age 27)</td>
+		<td>USS STARGAZER NCC-2893<br>Recovered &amp; Decommissioned</td>
+		<td>|</td>
+		<td class="joinLeft">USS ENTERPRISE NCC-1701-D Launched</td>
+		<td class="joinRight">Source: 1st dedication plaque</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2365</td>
+		<td>(Picard Age 60)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2366</td>
+		<td>Alexander Rozhenko born</td>
+		<td class="TNGSpoiler" colspan="2" style="color:violet" id="altYar1">Alternate Tasha Yar sent back to 2344 in the prime timeline</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2367</td>
+		<td class="majorEventBox">Battle at Wolf 359 (early January)</td>
+		<td>Noonian Soong dies</td>
+		<td>Curzon dies, Dax joins with Jadzia</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2368</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>|</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2369</td>
+		<td class="seriesBox secondGen" rowspan="7"><span class="icon">📺</span>STAR TREK<br>DEEP SPACE NINE (DS9)<br><span class="x-small" style="font-weight:normal;font-family:serif">1993-1999</span></td>
+		<td>Scotty recovered from the Jenolan</td>
+		<td>(Sisko Age 37)</td>
+		<td>Terok Nor becomes DS9</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2370</td>
+		<td class="minorTimeTravel secondGen">&gt; ENT: These Are The Voyages...</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2371</td>
+		<td class="seriesBox secondGen" rowspan="8"><span class="icon">📺</span>STAR TREK<br>VOYAGER (VOY)<br><span class="x-small" style="font-weight:normal;font-family:serif">1995-2001</span></td>
+		<td class="apocryphal">(Janeway Age 35)*</td>
+		<td class="filmBox secondGen joinLeft"><span class="icon">🎥</span>GENERATIONS <span class="x-small" style="font-weight:normal;font-family:serif">(1994, #7)</span></td>
+		<td class="joinMiddle TOSSpoiler TNGSpoiler characterDeath">Kirk dies (Age 60)</td>
+		<td class="joinRight TNGSpoiler characterDeath">USS ENTERPRISE NCC-1701-D Destroyed</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2372</td>
+		<td>Worf joins DS9 crew</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td class="TNGSpoiler characterDeath">USS ENTERPRISE NCC-1701-E Launched</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2373</td>
+		<td>&nbsp;</td>
+		<td class="filmBox secondGen"><span class="icon">🎥</span>FIRST CONTACT <span class="x-small" style="font-weight:normal;font-family:serif">(1996, #8)</span></td>
+		<td class="majorEventBox" rowspan="3">Dominion War</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2374</td>
+		<td class="DS9Spoiler characterDeath">Jadzia dies, Dax joins with Ezri</td>
+		<td>Alexander, 8, joins the <em>Rotarran</em></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2375</td>
+		<td>&nbsp;</td>
+		<td class="filmBox secondGen"><span class="icon">🎥</span>INSURRECTION <span class="x-small" style="font-weight:normal;font-family:serif">(1998, #9)</span></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2376</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2377</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2378</td>
+		<td class="VOYSpoiler" id="voyHome3">Voyager Returns to Earth (<span style="font-family:serif">II</span>)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2379</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td class="filmBox secondGen joinLeft"><span class="icon">🎥</span>NEMESIS <span class="x-small" style="font-weight:normal;font-family:serif">(2002, #10)</span></td>
+		<td class="joinRight TNGSpoiler characterDeath">Data dies (<span style="font-family:serif">I</span>) (41 yrs since activation)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2380</td>
+		<td class="seriesBox thirdGen" rowspan="3"><span class="icon">📺</span>STAR TREK<br>LOWER DECKS (LOW)<br><span class="x-small" style="font-weight:normal;font-family:serif">2020-2024</span></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2381</td>
+		<td>≈ Jack Crusher born (estimated)</td>
+		<td class="minorTimeTravel thirdGen">&gt; SNW: Those Old Scientists</td>
+		<td>≈ Picard promoted to Admiral by this year</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2382</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td colspan="2"  class="PROSpoiler">The USS Protostar is launched and is thrown into the future (2436) with Chakotay (PRO)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2383</td>
+		<td class="seriesBox thirdGen" rowspan="3"><span class="icon">📺</span>STAR TREK<br>PRODIGY (PRO)<br><span class="x-small" style="font-weight:normal;font-family:serif">2021-2024</span></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td colspan="2"  class="PROSpoiler">Dal finds the Protostar (which has now been to the future and back) on Tars Lamora</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2384</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td colspan="2"  class="PROSpoiler">The Protostar is destroyed, creating the time anomaly that trapped Chakotay</td>
+		<td  class="PROSpoiler">Dal &amp; crew enter the anomaly to the future</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2385</td>
+		<td class="majorEventBox joinLeft">Rogue Synth Attack on Mars (April 5)</td>
+		<td class="episodeBox thirdGen joinRight"><span class="icon">📺</span>SHO: &quot;Children of Mars&quot; (2x06)</td>
+		<td>(Picard Age 80)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2386</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2387</td>
+		<td>&nbsp;</td>
+		<td class="majorEventBox joinLeft">Romulus Destroyed by Supernova</td>
+		<td class="kelvin joinRight" colspan="2">Nero and Spock thrown back in time to 2233 and 2258</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2388</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2389</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2390</td>
+		<td class="alternateReality minorTimeTravel">&gt; VOY: Timeless</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2391</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2392</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2393</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2394</td>
+		<td class="alternateReality VOYSpoiler" id="voyHome1">Voyager Returns to Earth (<span style="font-family:serif">I</span>)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2395</td>
+		<td class="alternateReality majorTimeTravel">&gt;&gt; TNG: All Good Things</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2396</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2397</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2398</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2399</td>
+		<td class="seriesBox thirdGen" rowspan="4"><span class="icon">📺</span>STAR TREK<br>PICARD (PIC)<br><span class="x-small" style="font-weight:normal;font-family:serif">2020-2023</span></td>
+		<td class="PICSpoiler characterDeath">Picard dies (<span style="font-family:serif">I</span>) (Age 94)</td>
+		<td class="PICSpoiler characterDeath">Data dies (<span style="font-family:serif">II</span>) (61 yrs since activation)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra centuryEnd" onclick="toggleHighlight(this)" style="cursor:pointer;">2400</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+		<td class="centuryEnd">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra" style="border-bottom:none"><strong>25th</strong</td>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2401</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="picardEra"><strong>Century</strong></td>
+		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2402</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>↓</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2403</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2404</td>
+		<td class="alternateReality majorTimeTravel" id="voyHome2">&gt;&gt; VOY: Endgame</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2405</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2406</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2407</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2408</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2409</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2410</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td class="minorTimeTravel alternateReality joinLeft">&gt; TNG: Firstborn</td>
+		<td class="joinRight TNGSpoiler">Alexander, 44, goes back in time to 2370</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2411</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2412</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2413</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2414</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2415</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2416</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2417</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2418</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2419</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2420</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2421</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2422</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2423</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2424</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2425</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2426</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2427</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2428</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2429</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2430</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2431</td>
+		<td>&nbsp;</td>
+		<td>Planet Meridian due to reappear (DS9)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2432</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2433</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2434</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2435</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2436</td>
+		<td class="majorTimeTravel thirdGen">&gt;&gt; PRO: Who Saves the Saviors</td>
+		<td class="PROSpoiler">Chakotay sends the Protostar back in time</td>
+		<td colspan="2" class="PROSpoiler">The Diviner, The Vindicator, and their Drednoks go back in time after the Protostar</td>
+		<td colspan="2" class="PROSpoiler">Dal &amp; crew alter events so Chakotay now returns to his time with the Protostar</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2437</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2438</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2439</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2440</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2441</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2442</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2443</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2444</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2445</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2446</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2447</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2448</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2449</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2450</td>
+		<td class="majorTimeTravel alternateReality">&gt;&gt; DS9: The Visitor</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2451</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2452</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2453</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2454</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2455</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>26th</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2550</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>Century</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2551</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2552</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2553</td>
+		<td class="minorTimeTravel secondGen">≈ &gt; ENT: The Expanse, The Xindi</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2554</td>
+		<td class="majorEventBox joinLeft">≈ Battle of Procyon V</td>
+		<td class="minorTimeTravel secondGen joinRight">≈ &gt; ENT: Azati Prime</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2555</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>27th</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>Century</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td class="minorTimeTravel secondGen joinLeft">≈ &gt; TNG: Captain's Holiday</td>
+		<td class="joinRight TNGSpoiler" colspan="2">(Year unknown) Vorgons from this century go back to 2366 in an attempt to steal the Tox Uthat</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td class="mirrorUniverse" colspan="2">(c. 2689) Mirror Universe has drifted too far to allow any more crossings</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong></strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>28th</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>Century</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>29th</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>Century</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td class="minorTimeTravel secondGen joinLeft">≈ &gt; VOY: Future's End</td>
+		<td class="joinRight" colspan="2">(Year unknown) Braxton goes back to 2373 to prevent Voyager from causing a catastrophe</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong></strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td class="majorTimeTravel secondGen joinLeft">≈ &gt;&gt; VOY: Relativity</td>
+		<td class="joinRight" colspan="2">(30 years later) Braxton enlists Seven from 2375 to help correct changes in the timeline</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong></strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td class="minorTimeTravel secondGen joinLeft">≈ &gt; VOY: Relativity</td>
+		<td class="joinRight VOYSpoiler" colspan="2">(A few years later) Braxton, desperate and broken, returns to 2372 to destroy Voyager</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong></strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>30th</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>Century</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>31st</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>Century</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td class="majorEventBox">(Years Unknown) Temporal Cold War</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td class="minorTimeTravel secondGen">(Year Unknown) ≈ &gt; ENT: Future Tense</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td class="majorEventBox joinLeft">(3069) The Burn</td>
+		<td class="minorTimeTravel thirdGen joinRight">&lt; DIS: That Hope Is You, Part 1</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td class="majorTimeTravel secondGen">(c. 3074) ≈ &gt;&gt; VOY: Living Witness</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+		<td class="yearGap">&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>32nd</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">3180</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><strong>Century</strong></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">3181</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">3182</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">3183</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">3184</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">3185</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">3186</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">3187</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">3188</td>
+		<td class="seriesBox thirdGen" rowspan="4"><span class="icon">📺</span>STAR TREK<br>DISCOVERY (DIS)<br>SEASONS 3, 4, 5<br><span class="x-small" style="font-weight:normal;font-family:serif">2020-2024</span></td>
+		<td>Burnham arrives from 2258</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">3189</td>
+		<td>USS Discovery arrives from 2258</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">3190</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">3191</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">3192</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">3193</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;">3194</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+
+<div id="TTDIV">
+	<div id="TheCageTT" class="tooltip" onClick="closeToolTip(this)">&quot;The Cage&quot; was the original, unaired pilot. It starred Christopher Pike as the captain of the Enterprise, before the concept was retooled and a new pilot was written with Kirk in command.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
+	
+	<div id="TMPTT" class="tooltip" onClick="closeToolTip(this)">There is some debate as to what year The Motion Picture took place. I personally deemed 2273 to be the most likely based on the available evidence.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
+	
+	<div id="ExcelsiorTT" class="tooltip" onClick="closeToolTip(this)">The USS Excelsior was definitely in operation by 2285. Only the Star Trek Encyclopedia (4th ed., vol1) suggests it may have been launched in 2284.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
+	
+	<div id="JanewayTT" class="tooltip" onClick="closeToolTip(this)">2336 is an approximate birth year for Janeway based on a statement she made in &quot;Future's End&quot; about her time in high school. It is also the date given in the apocryphal novel, &quot;The Autobiography of Kathryn Janeway.&quot; However, an okudogram that appears in &quot;The Killing Game&quot; lists her birth year as 2344.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
+</div>
+
+</body>
+</html>
