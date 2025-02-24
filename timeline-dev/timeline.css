@@ -1,4 +1,53 @@
-#legendOpenButton{
+html {
+	scroll-behavior: smooth;
+}
+td {
+	scroll-margin-top: 150px;
+	cursor: default;
+}
+.content{
+	/* Override main.css */
+	min-height: 100px;
+}
+@keyframes shake {
+  0% { transform: skewY(-12deg) rotate(8.5deg); }
+  5% { transform: skewY(-8deg) rotate(8.5deg); }
+  10% { transform: skewY(-12deg) rotate(8.5deg); }
+  15% { transform: skewY(-8deg) rotate(8.5deg); }
+  20% { transform: skewY(-10deg) rotate(8.5deg); }
+  100% { transform: skewY(-10deg) rotate(8.5deg); }
+}
+
+/* ------------------------- TOP/BOTTOM BUTTONS ------------------------- */
+#toTopButton {
+  /* Supplements main.css */
+  left: auto;
+  right: 0px; 
+  border-radius: 12px 0px 0px 12px;
+  width: 45px;
+  transition: 0.2s;
+}
+#toBottomButton {
+  position: fixed;
+  top: 474px; 
+  right: 0px; 
+  z-index: 99; 
+  cursor: pointer;
+  text-align: center;
+  background-color: #031014DD;
+  padding: 4px;
+  border: 2px solid;
+  border-radius: 12px 0px 0px 12px;
+  overflow: hidden;
+  width: 45px;
+  transition: 0.2s;
+}
+#toBottomButton:hover {
+  background-color: #124054;
+}
+
+/* ------------------------- NAV MENU ------------------------- */
+#navOpenButton{
 	cursor: pointer;
 	position: fixed;
 	right:0;
@@ -13,10 +62,57 @@
 	transition: 0.2s;
 	width: 45px;
 }
+#navOpenButton:hover {
+	background-color: #124054;
+}
+.nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  background-color: #111111EE;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: 0.2s; 
+}
+.nav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.nav a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #C0C0C0;
+  transition: 0.3s;
+}
+.nav a:hover {
+  color: #FFFFFF;
+}
+
+/* ------------------------- LEGEND MENU ------------------------- */
+#legendOpenButton{
+	cursor: pointer;
+	position: fixed;
+	right:0;
+	top:368px;
+	text-align: center;
+	background-color: #031014DD;
+	padding: 4px;
+	border: 2px solid;
+	border-radius: 12px 0px 0px 12px;
+	overflow: hidden;
+	z-index: 99;
+	transition: 0.2s;
+	width: 45px;
+}
 #legendOpenButton:hover {
 	background-color: #124054;
 }
-
 .legend {
   height: 100%;
   width: 0;
@@ -37,11 +133,12 @@
   margin-left: 50px;
 }
 
+/* ------------------------- SPOILER MENU ------------------------- */
 #spoilerMenuOpenButton{
 	cursor: pointer;
 	position: fixed;
 	right:0;
-	top:368px;
+	top:421px;
 	text-align: center;
 	background-color: #031014DD;
 	padding: 4px;
@@ -55,16 +152,48 @@
 #spoilerMenuOpenButton:hover {
 	background-color: #124054;
 }
+.spoilerSwitch {
+	display: block;
+	margin: 15px;
+	padding: 5px;
+}
+
+/* ------------------------- MISC ------------------------- */
+.tooltip {
+	background-color:#031014EE;
+}
+.icon {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	font-weight: bold;
+}
+
+/* ------------------------- TABLE ELEMENTS ------------------------- */
+#theTable a{
+	color: inherit;
+}
+#theTable a:hover{
+	color: #F1F1F1;
+	text-decoration: none;
+}
+.blinkBox {
+	color: yellow !important;
+	border-color: yellow !important;
+}
 .kirkEra {
 	background-color: #604000;
-}
-.picardEra {
-	background-color: #400000;
 }
 .lostEra {
 	color: #606060;
 }
-.TOSSpoiler, .TNGSpoiler, .DS9Spoiler, .VOYSpoiler, .ENTSpoiler, .kelvinSpoiler, .DISSpoiler, .PICSpoiler, .PROSpoiler, .characterDeath{
+.picardEra {
+	background-color: #400000;
+}
+.burnhamEra {
+	background-color: #000040;
+}
+.spoiler{
 	position: relative;
 	white-space: pre;
   &:after {
@@ -72,13 +201,19 @@
     border-radius: 0.1em;
     box-shadow: 0 0 1px rgba(0,0,0,0.35);
     content: "SPOILER";
+	vertical-align: -50%;
     width: 99%;
-    height: 1.2em;
+    height: 80%;
     left: 0.5%;
+	top: 8%;
+	padding-top: 3px;
     position: absolute;
-    transform: skewY(-10deg) rotate(10deg);
+    transform: skewY(-10deg) rotate(8.5deg);
 	color: #505050;
 	display: var(--spoilerDisplay, inline-block);
+	opacity: var(--spoilerOpacity, 100%);
+	transition: var(--spoilerTransition, 4s);
+	animation: var(--spoilerAnimation, none);
   }
 }
 .moreInfo{
@@ -94,16 +229,12 @@
     background: #FFFFFF33;
     border-radius: 0.1em;
     content: "";
-    height: 100%;
-	top: 0;
-    left: 80px;
-	right: 8px;
+    top: 2px;
+	bottom: 3px;
+    left: 42px;
+	right: -3px;
     position: absolute;
 	transform: skewY(-10deg) rotate(10deg);
-	display: ;
+	pointer-events: none;
   }
-}
-
-.tooltip {
-	background-color:#031014EE;
 }
