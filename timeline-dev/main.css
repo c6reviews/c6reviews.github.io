@@ -1,4 +1,4 @@
-/* File version 1.0 */
+/* File version 1.1.0 */
 
 /* --- Global table borders - for troubleshooting only  --- */
 /*
@@ -8,9 +8,7 @@
 */
 
 /* ---------------------------------------- MAIN SETUP ---------------------------------------- */
-html {
-	/*scrollbar-gutter: stable;*/
-}
+
 body {
 	background-color: #181818;
 	color: #C0C0C0;
@@ -34,6 +32,18 @@ body li {
   margin: 0px 3px 0px 5px;
 }
 
+@font-face {
+  font-family: "BB";
+  src: url("assets/Boucherie Block.ttf");
+}
+@font-face {
+  font-family: "BBB";
+  src: url("assets/Boucherie Block Bold.ttf");
+}
+@font-face {
+  font-family: "BBI";
+  src: url("assets/Boucherie Block Italic.ttf");
+}
 
 /* ---------------------------------------- BUTTONS ---------------------------------------- */
 
@@ -93,6 +103,7 @@ body li {
 	font-size:small;
 	cursor: pointer;
 	max-width: 300px;
+	z-index: 200;
 }
 
 
@@ -388,24 +399,51 @@ body li {
 	position: relative;
 	background-color: #2F2F39;
 	border: 1px solid #C0C0C0;
-	font-weight: bold;
+	font-family: BBB, serif;
+	font-size: medium;
 }
-
+.timelineTable .seriesBox:not(.noIcon)::before{
+	content: "📺";
+	position: absolute;
+	left: -10px;
+	top: -6px;
+	font-size: x-large;
+	transform: rotate(-20deg);
+}
 .timelineTable .episodeBox {
 	position: relative;
 	background-color: #1A1A24;
 	border: 1px solid #C0C0C0;
-	font-weight: bold;
+	padding-left: 24px;
+	font-family: BBB, serif;
+	font-size: medium;
+}
+.timelineTable .episodeBox::before{
+	content: "📺";
+	position: absolute;
+	left: -10px;
+	top: -6px;
+	font-size: x-large;
+	transform: rotate(-20deg);
 }
 .timelineTable .filmBox {
 	position: relative;
 	background-color: #141447;
 	border: 1px solid #C0C0C0;
-	font-weight: bold;
+	padding-left: 24px;
+	font-family: BBB, serif;
+	font-size: medium;
 }
-
+.timelineTable .filmBox::before{
+	content: "🎥";
+	position: absolute;
+	left: -10px;
+	top: -6px;
+	font-size: x-large;
+	transform: rotate(-20deg);
+}
 .timelineTable .activeBox {
-	color: yellow;
+	color: yellow !important;
 	border: 2px solid yellow !important;
 }
 
@@ -428,33 +466,8 @@ body li {
 .timelineTable .secondGen{
 	color: #EB5050;
 }
-.timelineTable .kelvin{
-	border: 2px solid #00B757 !important;
-	color: #00B757; /*#14FF82;*/
-}
 .timelineTable .thirdGen{
 	color: #2090E0;
-}
-.timelineTable .yearGap{
-	border-top-width: 2px;
-	border-top-style: dashed;
-	border-bottom-width: 2px;
-	border-bottom-style: dashed;
-	background-color: black;
-	height: 25px;
-}
-.timelineTable .apocryphal{
-	color: orange;
-}
-.timelineTable .mirrorUniverse{
-	color: #181818;
-	background-color: #C0C0C0;
-	transform: scale(-1, 1);
-}
-.timelineTable .icon{
-	position: absolute;
-	left: 1px;
-	top: 1px;
 }
 .timelineTable .joinLeft {
 	border-top: 2px solid;
@@ -475,8 +488,48 @@ body li {
 	border-left: none !important;
 	border-color: #C0C0C0;
 }
+.timelineTable .kelvin{
+	border: 2px solid;
+	border-color: #00B757;
+	color: #00B757;
+}
+.timelineTable .yearGap{
+	border-top-width: 2px;
+	border-top-style: dashed;
+	border-top-color: #505050;
+	border-bottom-width: 2px;
+	border-bottom-style: dashed;
+	border-bottom-color: #505050;
+	background-color: black;
+	height: 25px;
+}
+.timelineTable .apocryphal{
+	color: orange;
+}
+.timelineTable .mirrorUniverse{
+	color: #181818;
+	background-color: #C0C0C0;
+	transform: scale(-1, 1);
+}
+.timelineTable .mirrorUniverse:hover{
+	transform: scale(1, 1);
+}
+.timelineTable .realLife{
+	background-color: #383838;
+	border: 1px dashed !important;
+	font-style: italic;
+	opacity: 0.7;
+}
+.timelineTable .icon{
+	position: absolute;
+	left: -10px;
+	top: -6px;
+	font-size: x-large;
+	transform: rotate(-20deg);
+}
+
 .timelineTable .centuryEnd {
-	border-bottom: 2px dashed;
+	border-bottom: 2px dashed #C0C0C0;
 }
 .seriesTimelineTable{
 	float: right;
@@ -679,6 +732,8 @@ input:checked + .slider:before {
   border-radius: 50%;
   background: white;
 } 
+
+
 
 
 /* -------------------- MISC -------------------- */
