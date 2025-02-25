@@ -1,4 +1,4 @@
-/* File version 1.1.1 */
+/* File version 1.1.0 */
 
 /* --- Global table borders - for troubleshooting only  --- */
 /*
@@ -124,7 +124,6 @@ body li {
 	position: fixed;
 	right: 0px;
 	top: 9px;
-	z-index: -2;
 	width: 63px;
 	height: 235px;
 	color: #bb4c1c;
