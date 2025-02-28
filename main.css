@@ -1,4 +1,4 @@
-/* File version 1.1.0 */
+/* File version 1.1.1a */
 
 /* --- Global table borders - for troubleshooting only  --- */
 /*
@@ -129,7 +129,8 @@ body li {
 	color: #bb4c1c;
 	padding: 0px;
 	line-height: 1.6;
-	background-image: linear-gradient(to left, #bb4c1c77, #03030300 80%, #03030300);
+	/*background-image: linear-gradient(to left, #bb4c1c77, #03030377 80%, #03030377);*/
+	background-image: linear-gradient(to left, #58240dFF, #030303DD 80%, #03030344);
 }
 .c6Right img {
 	display: block;
@@ -182,6 +183,7 @@ body li {
     font-weight: bold;
 	text-wrap: nowrap;
 	color: #C0C0C0;
+	pointer-events: none;
 }
 .pageTitle{
 	padding: 10px;
@@ -262,6 +264,33 @@ body li {
 		text-align: center;
 		vertical-align: top;
 		width: 50%;
+	}
+	.timelineCard {
+		position: relative;
+		display: block;
+		z-index: 0;
+		margin: 25px auto 5px auto;
+		border-style: solid;
+		border-width: 1px;
+		border-radius: 15px;
+		padding: 1px;
+		width: 350px;
+		overflow: hidden;
+		min-height:140px;
+		background-color: #101010;
+		line-height: 1.1;
+		text-align: center;
+		text-shadow: black 2px 2px 1px;
+	}
+	.timelineCardBG{
+		position: absolute;
+		z-index:-1;
+		left: 0;
+		top: 0;
+		height: 100%;
+		overflow:hidden;
+		object-fit:contain;
+		mask-image: radial-gradient( rgba(0,0,0,0.6), rgba(0,0,0,0.4) 40%, rgba(0,0,0,0));
 	}
 	.seriesCard {
 		position: relative;

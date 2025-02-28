@@ -1,4 +1,4 @@
-﻿/* File version 0.9.2 */
+﻿/* File version 1.1.0 */
 
 document.addEventListener('DOMContentLoaded', function() {
 	var bottomBorder = document.getElementById('bottomBorder');
@@ -141,12 +141,12 @@ window.addEventListener('mouseup',function(event){
 
 /* -------------------------------------------------- SCROLL TO TOP BUTTON -------------------------------------------------- */
 
-
-
 function scrollToTop() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-} 
+	window.scrollTo({
+		top: 0,
+		behavior: "smooth",
+	});
+}
 
 /* -------------------------------------------------- SPOILERS -------------------------------------------------- */
 
@@ -249,8 +249,6 @@ window.onload = function() {
 		}
 	}	
 
-	
-	
 	var bottomBorder = document.getElementById('bottomBorder');
 	setTimeout(function(){bottomBorder.style.width = '100%'},800);
 }

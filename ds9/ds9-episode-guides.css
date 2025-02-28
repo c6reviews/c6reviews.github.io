@@ -1,4 +1,4 @@
-﻿/* File version 1.0 */
+﻿/* File version 1.1.0 */
 
 .content {
 	/* Override main.css background color */
@@ -111,6 +111,16 @@
 			vertical-align: bottom;
 			font-weight: bold;
 			line-height: 1;
+		}
+		.airDateBox {
+			border: 1px solid #C0C0C0;
+			text-align: center;
+			background-color:rgba(0,0,0,0.6);
+			width: 90px;
+			height: 24px;
+			line-height: 0.9;
+			padding-top: 0px;
+			font-size: 14px;
 		}
 		.SepisodeNumberBox {
 			border: 1px solid #C0C0C0;
