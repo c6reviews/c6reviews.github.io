@@ -1,4 +1,4 @@
-﻿/* File version 0.9.2 */
+﻿/* File version 1.0.1 */
 
 /* ----------------------------------------------------- GLOBAL VARIABLES ----------------------------------------------------- */
 
@@ -75,7 +75,7 @@ function createTable(array) {
 					// Stylize certain entries
 					cell = cell.replace("🕶 ‼ Must Watch/Bare Minimum",'<span class="mustWatch">🕶</span> <span class="bareMinimum">‼</span> Must Watch/Bare Minimum');
 					cell = cell.replace("🕶 Must Watch",'<span class="mustWatch">🕶</span> Must Watch');
-					cell = cell.replace("✖ Notably Bad",'<span class="NotablyBad">✖</span> Notably Bad');
+					cell = cell.replace("✖ Notably Bad",'<span class="notablyBad">✖</span> Notably Bad');
 					break;
 				case 4:
 					cellClass = "col_episodeRating";

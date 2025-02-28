@@ -1,9 +1,10 @@
-/* File version 1.0 */
+/* File version 1.0.1 */
 
 /* ---------------------------------------- TABLE SETUP ---------------------------------------- */
 #tableContainer{
 	margin-left: auto;
 	margin-right: auto;
+	min-height: 550px;
 }
 #episodeTable{
 	border: 1px;

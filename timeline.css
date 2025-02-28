@@ -162,6 +162,11 @@ td {
 .tooltip {
 	background-color:#031014EE;
 }
+.tooltip a[target="_blank"]::after {
+  /* Adds box-and-arrow icon after links that open a new tab */
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAACXRFWHRDb21tZW50AACJKo0GAAAASElEQVR4nGP4//8/AzZ85syZ/8gYQwBNcQKKQhwmwhQl4FSIrAjmDAyF6IpgGEXhqVOnFLApwlAIU4zue6wKsQUT6QoJYZBCABxrNhBirnqBAAAAAElFTkSuQmCC);
+  margin: 0px 3px 0px 5px;
+}
 .icon {
 	display: inline-block;
 	width: 30px;
