@@ -463,6 +463,8 @@ function getOffset(el) {
 
 function drawLines(){
 	
+	var TOSTAS = getOffset(document.getElementById("TOSTAS"));
+	
 	var yar1 = getOffset(document.getElementById("altYar1"));
 	var yar1x = yar1.left + ((yar1.right - yar1.left)/2) +10;
 	var yar1y = yar1.top;
@@ -527,10 +529,21 @@ function drawLines(){
 	var YPDeath2 = getOffset(document.getElementById("YPDeath2"));
 	var YPDeath3 = getOffset(document.getElementById("YPDeath3"));
 	
+	var S31 = getOffset(document.getElementById("S31"));
+	var warp1 = getOffset(document.getElementById("warp1"));
+	var twok = getOffset(document.getElementById("TWOK"));
+	var stb = getOffset(document.getElementById("STB"));
+	var calypso = getOffset(document.getElementById("calypso"));
+	var times_arrow = getOffset(document.getElementById("time's_arrow"));
+	var tcoteof = getOffset(document.getElementById("tcoteof"));
+	var generationsPast = getOffset(document.getElementById("GenerationsPast"));
+	var FC = getOffset(document.getElementById("FC"));
+	
 	var pageWidth = document.documentElement.scrollWidth;
 	var pageHeight = document.documentElement.scrollHeight;
 	
 	var content = `<svg width="` + pageWidth + `" height="` + pageHeight + `" style="position:absolute;top:0;left:0px;z-index:50;pointer-events:none">
+		
 		<defs>
 			<marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
 				<path d="M 0 0 L 10 5 L 0 10 z" fill="#C0C0C077">
@@ -538,10 +551,19 @@ function drawLines(){
 			<marker id="greenarrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
 				<path d="M 0 0 L 10 5 L 0 10 z" fill="#00B757DD">
 			</marker>
+			<radialGradient id="vignette">
+				<stop offset="0%" stop-color="black" stop-opacity="1">
+				<stop offset="70%" stop-color="black" stop-opacity="1">
+				<stop offset="100%" stop-color="black" stop-opacity="0">
+			</radialGradient>
 		</defs>
+	
+		<line x1="` + TOSTAS.left + `" y1="` + TOSTAS.bottom + `" x2="` + TOSTAS.right + `" y2="` + TOSTAS.top + `" stroke="#C0C0C0"/>
+	
 	<!-- Template for straight arrow -->	
 		<line x1="` + yar1x + `" y1="` + yar1y + `" x2="` + yar2x + `" y2="` + yar2y + `" stroke="#C0C0C077" stroke-dasharray="3" marker-end="url(#arrow)"/>
 		<line x1="` + (yar2x-50) + `" y1="` + yar2y + `" x2="` + yar3x + `" y2="` + yar3y + `" stroke="#C0C0C077" stroke-dasharray="3" marker-end="url(#arrow)"/>
+	
 	<!-- Template for curved arrow -->
 		<path d="M `+ voyHome1x + ` ` + voyHome1y + ` C ` + (voyHome1x+30) + ` ` + (voyHome1y+30) + `, ` + (voyHome2x+30) + ` ` + (voyHome2y-30) + `, ` + (voyHome2x+3) + ` ` + (voyHome2y-3) + `" stroke="#C0C0C077" fill="none" stroke-dasharray="3" marker-end="url(#arrow)"/>
 		<path d="M `+ voyHome2x + ` ` + (voyHome2y+10) + ` C ` + (voyHome2x+80) + ` ` + (voyHome2y-20) + `, ` + (voyHome3x) + ` ` + (voyHome3y+50) + `, ` + voyHome3x + ` ` + voyHome3y + `" stroke="#C0C0C077" fill="none" stroke-dasharray="3" marker-end="url(#arrow)"/>
@@ -566,6 +588,18 @@ function drawLines(){
 		<polyline points="` + (y2250s1.right) + `,` + (y2250s1.top + ((y2250s1.bottom-y2250s1.top)/2)) + ` ` + (y2250s1.right-10) + `,` + (y2250s1.top + ((y2250s1.bottom-y2250s1.top)/2)) + ` ` + (y2250s2.left-10) + `,` + (y2250s2.top - 5 + ((y2250s2.bottom-y2250s2.top)/2)) + ` ` + (y2250s2.left-20) + `,` + (y2250s2.top + ((y2250s2.bottom-y2250s2.top)/2)) + ` ` + (y2250s2.left-10) + `,` + (y2250s2.top + 5 + ((y2250s2.bottom-y2250s2.top)/2)) + ` ` + (y2250s4.left-10) + `,` + (y2250s4.top + ((y2250s4.bottom-y2250s4.top)/2)) + ` ` + (y2250s4.left) + `,` + (y2250s4.top + ((y2250s4.bottom-y2250s4.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
 		
 		<polyline points="` + (YPDeath1.right-40) + `,` + (YPDeath1.top + ((YPDeath1.bottom-YPDeath1.top)/2)) + ` ` + (YPDeath1.right-20) + `,` + (YPDeath1.top + ((YPDeath1.bottom-YPDeath1.top)/2)) + ` ` + (YPDeath2.left-20) + `,` + (YPDeath2.top - 5 + ((YPDeath2.bottom-YPDeath2.top)/2)) + ` ` + (YPDeath2.left) + `,` + (YPDeath2.top + ((YPDeath2.bottom-YPDeath2.top)/2)) + ` ` + (YPDeath2.left-20) + `,` + (YPDeath2.top + 5 + ((YPDeath2.bottom-YPDeath2.top)/2)) + ` ` + (YPDeath3.right-20) + `,` + (YPDeath3.top + ((YPDeath3.bottom-YPDeath3.top)/2)) + ` ` + (YPDeath3.right-40) + `,` + (YPDeath3.top + ((YPDeath3.bottom-YPDeath3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
+		
+		<image href="images/times_arrow.png" x="` + (times_arrow.right - ((times_arrow.right-times_arrow.left)/2) - 104) + `" y="` + (times_arrow.top - 140) + `" opacity="0.9"/>
+		<image href="images/cochrane.png" x="` + (warp1.right - ((warp1.right-warp1.left)/2) - 115) + `" y="` + (warp1.top - 192) + `" opacity="0.9"/>
+		<image href="images/tcoteof.png" x="` + (tcoteof.right - ((tcoteof.right-tcoteof.left)/2) - 93) + `" y="` + (tcoteof.top - 140) + `" opacity="0.8"/>
+		<image href="images/kelvinkirkandspock.png" x="` + (stb.right + 10) + `" y="` + (stb.bottom - 128) + `" opacity="1"/>
+		<image href="images/khan.png" x="` + (twok.right - ((twok.right-twok.left)/2) - 62) + `" y="` + (twok.top - 126) + `" opacity="0.9"/>
+		<image href="images/georgiou.png" x="` + (S31.right - ((S31.right-S31.left)/2) - 55) + `" y="` + (S31.top - 113) + `" opacity="0.8"/>
+		<image href="images/garrett.png" x="` + (yar2.left - 5) + `" y="` + (yar2.top - 82) + `" opacity="0.9"/>
+		<image href="images/calypso.png" x="` + (calypso.right - ((calypso.right-calypso.left)/2) - 28) + `" y="` + (calypso.top - 95) + `" opacity="0.9"/>
+		<image href="images/generations.png" x="` + (generationsPast.left + 5) + `" y="` + (generationsPast.top - 100) + `" fill="url(#vignette)"/>
+		<image href="images/borgqueen.png" x="` + (FC.right - 60) + `" y="` + (FC.top - 105) + `" opacity="0.9"/>
+		
 		
 	</svg>`;
 		
@@ -607,4 +641,7 @@ window.onload = function() {
 	Array.from(document.getElementsByClassName("spoilerToggle")).forEach((toggle) => {
 		toggle.checked = false;
 	});
+	
+	const afterhash = window.location.hash.substring(1);
+	if (afterhash) {blink(afterhash);}
 }

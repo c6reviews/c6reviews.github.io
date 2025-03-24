@@ -1,4 +1,4 @@
-﻿/* File version 1.1.0 */
+﻿/* File version 1.1.1 */
 
 .content {
 	/* Override main.css background color */
@@ -24,6 +24,29 @@
 	padding: 2px;
 }
 
+/* ---------------------------------- SEASON SUMMARY ---------------------------------- */
+.seasonSummary {
+	position: relative;
+	z-index: 0;
+	margin: 10px auto 50px auto;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 15px;
+	padding: 1px;
+	width: 75%;
+	overflow: clip;
+	background-color: #181818EE;
+	line-height: 1.1;
+	scroll-margin-top: 50px;
+	padding: 15px;
+}
+.seasonName {
+	display: block;
+	text-align: center;
+	margin-bottom: 25px;
+	font-size: x-large;
+	text-decoration: underline;
+}
 
 /* ---------------------------------------- ------------ ---------------------------------------- */
 /* ---------------------------------------- EPISODE CARD ---------------------------------------- */

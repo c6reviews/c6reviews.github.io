@@ -1,4 +1,4 @@
-/* File version 1.1.1a */
+/* File version 1.1.1 */
 
 /* --- Global table borders - for troubleshooting only  --- */
 /*
@@ -352,7 +352,13 @@ body li {
 		font-weight: bold;
 		margin-right: 8px;
 	}
-
+	.updateTable{
+		
+	}
+	.updateTable td,.updateTable th {
+		border: 1px solid #505050;
+		padding: 3px;
+	}
 
 	/* | ---------------------------------------- SERIES INDEX-SPECIFIC CONTENT ---------------------------------------- */
 	.seriesInfoCard {
@@ -403,6 +409,13 @@ body li {
 
 
 /* ---------------------------------------- GLOBAL: TIMELINE TABLE ---------------------------------------- */
+.goToTimelineLink {
+	position:absolute;
+	right: 5px;
+	font-size:small;
+	font-weight: normal;
+}
+
 .timelineTable{
 	border: 3px double #C0C0C0;
 	background-color: #181818EE;
@@ -410,6 +423,7 @@ body li {
 	border-spacing: 0px;
 	font-size: 12px;
 	text-align: center;
+	position: relative;
 }
 
 .timelineTable th {
@@ -430,6 +444,7 @@ body li {
 	border: 1px solid #C0C0C0;
 	font-family: BBB, serif;
 	font-size: medium;
+	text-shadow: black 2px 2px 1px;
 }
 .timelineTable .seriesBox:not(.noIcon)::before{
 	content: "📺";
@@ -462,6 +477,7 @@ body li {
 	padding-left: 24px;
 	font-family: BBB, serif;
 	font-size: medium;
+	text-shadow: black 2px 2px 1px;
 }
 .timelineTable .filmBox::before{
 	content: "🎥";

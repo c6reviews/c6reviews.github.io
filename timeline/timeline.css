@@ -131,6 +131,7 @@ td {
   right: 10px;
   font-size: 36px;
   margin-left: 50px;
+  color: #C0C0C0;
 }
 
 /* ------------------------- SPOILER MENU ------------------------- */
@@ -151,6 +152,26 @@ td {
 }
 #spoilerMenuOpenButton:hover {
 	background-color: #124054;
+}
+.spoilerMenu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  background-color: #111111EE;
+  overflow-x: hidden;
+  padding-top: 20px; 
+  transition: 0.2s; 
+}
+.spoilerMenu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #C0C0C0;
 }
 .spoilerSwitch {
 	display: block;
@@ -176,6 +197,9 @@ td {
 
 /* ------------------------- TABLE ELEMENTS ------------------------- */
 
+#theTable {
+	margin-right: 60px;
+}
 #theTable a{
 	color: inherit;
 }
@@ -186,6 +210,7 @@ td {
 .blinkBox {
 	color: yellow !important;
 	border-color: yellow !important;
+	text-decoration: underline overline 2px;
 }
 .kirkEra {
 	background-color: #604000;
