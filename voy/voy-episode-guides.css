@@ -1,4 +1,4 @@
-﻿/* File version 1.1.0 */					  
+﻿/* File version 1.1.1 */					  
 
 .content {
 	/* Override main.css background color */
@@ -216,7 +216,7 @@
 			left: 0%;
 			top: 50%;
 			transform: translateX(-100%) translateY(-50%);
-			z-index: 6;
+			z-index: 12;
 			transition: .3s;
 			vertical-align: middle;
 		}
