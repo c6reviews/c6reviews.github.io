@@ -4,10 +4,10 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.0" />
-<link rel="stylesheet" href="voy.css?v=1.0" />
+<link rel="stylesheet" href="../main.css?v=1.1.1.1" />
+<link rel="stylesheet" href="voy.css?v=1.1.1" />
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-<!-- <link rel="stylesheet" href="voy-episode-guides.css?v=1.0" /> -->
+<!-- <link rel="stylesheet" href="voy-episode-guides.css?v=1.1.1" /> -->
 
 <script src="voy.js"></script>
 <title>C6 | voy Episode Guides</title>
@@ -42,7 +42,7 @@
 </div>
 
 <div id="backButton" onclick="window.location = '../index.html';"><span style="font-size:large;font-weight:bold">←</span><br>Star Trek<br>home</div>
-
+<div class="draftBanner">DRAFT PAGE - MISTAKES MAY BE PREVALENT</div>
 <div class="content">
 	<div class="seriesInfoCard">
 		<table>
@@ -82,7 +82,7 @@
 	
 	<table class="timelineTable seriesTimelineTable">
 		<tr>
-			<th colspan="4">Universe Timeline</th>
+			<th colspan="4">Universe Timeline<span class="goToTimelineLink"><a href="../timeline/index.html#VOY">Go to full timeline ➡</a></span></th>
 		</tr>
 		<tr>
 			<td style="width: 40px">2363</td>
@@ -232,8 +232,9 @@
 			Captain Katherine Janeway made <em>Voyager</em> the first Star Trek show to feature a woman in command of a starship, a welcome change to Roddenberry's, um, shall we say, &quot;dated&quot; feelings toward women. First Officer Chakotay, a Native American, is also a notable addition to the crew, but sadly it's for all the wrong reasons. It turns out that <a href="https://redshirtsalwaysdie.com/2021/02/26/voyagers-native-american-consultant-was-a-fraud/" style="white-space:normal">the Native American consultant that was hired to work on the show was a fraud</a>, making Chakotay's character an inaccurate caricature of a Native American. 
 		</p>
 		<p>
-			I found it difficult to give watch recommendations to some of these episodes because not only is this mostly an episodic series where each episode is self-contained, but it also involves species and stories well outside the normal Trek canon, so not only are some episodes one-offs to the series, they're one-offs to the entire franchise.
+			I found it difficult to give watch recommendations to some of these episodes because not only is this mostly an episodic series where each episode is self-contained, but it also involves species and stories well outside the normal Trek canon, so some episodes aren't just one-offs to the series, they're one-offs to the entire franchise.
 		</p>
+		<p> *Something about nerfing the Borg* </p>
 	</div>
 	
 	<div class="finalVerdict">Final Verdict: 7 out of 10</div>
@@ -244,7 +245,7 @@
 	<h2 style="text-align:center">Spoiler Policy</h2>
 	
 	<ul>
-		<li>Generally speaking, you can safely read any of the episode guides without fear of spoiling any plot reveals or twists in a single episode.</li>
+		<li>Generally speaking, you can safely read any of the episode guides without fear of spoiling any plot reveals or twists in a single episode, though it's possible it might spoil something from a <em>previous</em> episode.</li>
 		<li><em>HOWEVER,</em> this show is over 25 years old, so some things just can't be a surprise any more. Some of the episode descriptions or pictures may hint at things you might not have otherwise known if this is your first time watching. Also, certain other major developments in the series can't and won't be hidden.</li>
 		<li>Blatant spoilers will be obscured, with a "Spoiler" tag that you can click on to reveal the contents. Don't read the spoiler unless you've seen the episode or don't have any intention of seeing the episode. Try it here:
 			<div class="spoiler"><span class="spoilerTag" onClick="displaySpoiler(this)">Spoiler » </span><span class="spoilerContent">This is a spoiler!</span></div>
@@ -257,7 +258,7 @@
 	<h2 style="text-align:center">Understanding Ratings and Recommendations</h2>
 
 	<p>
-		Everyone has different tastes and opinions, and my opinions certainly aren't always popular. To help combat that, a &quot;final score&quot; on any episode is an average of my rating and the ratings from 3 other independent sources, including IMDB. Though, my rating is weighted a little higher in that calculation, because this is my website, after all. In addition to the ratings, I also provide a &quot;Watch Recommendation&quot; which doesn't necessarily have anything to do with the quality of the episode. Rather, the watch recommendation is based on how important the episode is to the overall story of the entire series, whether that episode is good or bad. See below for more details.
+		Everyone has different tastes and opinions, and my opinions certainly aren't always popular. To help combat that, a &quot;final score&quot; on any episode is an average of my rating and the ratings from 3 other independent sources, including IMDb. Though, my rating is weighted a little higher in that calculation, because this is my website, after all. In addition to the ratings, I also provide a &quot;Watch Recommendation&quot; which doesn't necessarily have anything to do with the quality of the episode. Rather, the watch recommendation is based on how important the episode is to the overall story of the entire series, whether that episode is good or bad. See below for more details.
 	</p>
 	<p>&nbsp;</p>
 	<h3 id="episode-scores" style="text-decoration:underline;text-align:center">Episode Scores</h3>
@@ -303,12 +304,12 @@
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align:right">Normalized IMDB rating</td>
+			<td style="text-align:right">Normalized IMDb rating</td>
 			<td style="text-align:center">
 				0-10
 			</td>
 			<td>
-				<ul><li>User ratings on <span style="white-space:nowrap;"><a href="https://imdb.com" target="_blank">IMDB</a></span> might have the lowest-rated episode in a series at a 6.2 and the highest-rated at a 8.9. The normalized rating that I present here turns the lowest rating into a 1, and the highest rating into a 10, and distributes the remaining scores accordingly. There may be some other tweaks, such as scoring a very low outlier as a 0 instead of using it for the basis of a 1 rating. <em>IMDB ratings were retrieved on April 21, 2024.</em></li></ul>
+				<ul><li>User ratings on <span style="white-space:nowrap;"><a href="https://imdb.com" target="_blank">IMDb</a></span> might have the lowest-rated episode in a series at a 6.2 and the highest-rated at a 8.9. The normalized rating that I present here turns the lowest rating into a 1, and the highest rating into a 10, and distributes the remaining scores accordingly. There may be some other tweaks, such as scoring a very low outlier as a 0 instead of using it for the basis of a 1 rating. <em>IMDb ratings were retrieved on April 21, 2024.</em></li></ul>
 			</td>
 		</tr>
 		<tr>
