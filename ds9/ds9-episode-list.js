@@ -688,7 +688,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 4x04,Hippocratic Oath,,-,5.3
 4x05,Indiscretion,,🕶 Must Watch,6.7
 4x06,Rejoined,,-,5.1
-4x07,Starship Down,,-,7.4
+4x07,Starship Down,,-,6.9
 4x08,Little Green Men,🕖🌎,♦ Optional,6.0
 4x09,The Sword of Kahless,,-,4.8
 4x10,Our Man Bashir,🎭🟨♥️,♦ Optional,6.8
