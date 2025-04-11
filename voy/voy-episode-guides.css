@@ -181,14 +181,7 @@
 			width: auto;
 		}
 		.synopsisBox {
-			text-align: left;
-			font-size: small;
-			font-style: italic;
-			background-color: #18181890;
-			margin-right: 35%;
-			white-space: normal;
-			width: 600px;
-			border-radius: 5px;
+			padding-right: 16%;
 		}
 		.synopsis {
 			text-align: left;
