@@ -54,8 +54,9 @@ function createTable(array) {
 					
 					// Add titles to remaining tags
 					cell = cell.replace("♥",'<span title="Personal Favorite">♥</span>');
-					cell = cell.replace("🕖",'<span title="Time Travel episode">🕖</span>');
-					cell = cell.replace("🤖",'<span title="Borg episode">🤖</span>');
+					cell = cell.replace("🕖",'<span title="Time Travel Episode">🕖</span>');
+					cell = cell.replace("🤖",'<span title="Proper Borg Episode">🤖</span>');
+					cell = cell.replace('(<span title="Proper Borg Episode">🤖</span>)','<span title="Episode involves the Borg">(🤖)</span>');
 					cell = cell.replace("Q",'<span title="Q Episode">Q</span>');
 					cell = cell.replace("31",'<span title="Section 31" style="border:1px solid #C0C0C0;border-radius:10px;">31</span>');
 					cell = cell.replace("⚖",'<span title="Courtroom Episode">⚖</span>');
@@ -674,7 +675,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 3x14,Alter Ego,,-,5.8
 3x15,Coda,,-,3.1
 3x16,Blood Fever,,-,4.3
-3x17,Unity,🤖, ✔ Recommended,6.2
+3x17,Unity,(🤖), ✔ Recommended,6.2
 3x18,Darkling,,-,3.0
 3x19,Rise,,-,5.1
 3x20,Favorite Son,,-,2.9
@@ -689,7 +690,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 4x03,Day of Honor,, ✔ Recommended,7.0
 4x04,Nemesis,,-,4.1
 4x05,Revulsion,,-,4.9
-4x06,The Raven,, 🕶 Must Watch,6.3
+4x06,The Raven,(🤖), 🕶 Must Watch,6.3
 4x07,Scientific Method,,-,6.3
 4x08 & 09,Year of Hell (Parts I and II),🕖🥇A🟡, 🕶 ‼ Must Watch/Bare Minimum,9.6
 4x10,Random Thoughts,,-,4.6
@@ -697,21 +698,21 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 4x12,Mortal Coil,,-,5.2
 4x13,Waking Moments,,-,6.3
 4x14,Message in a Bottle,♥️, 🕶 ‼ Must Watch/Bare Minimum,8.3
-4x15,Hunters,, 🕶 Must Watch,6.8
-4x16,Prey,, ✔ Recommended,6.6
+4x15,Hunters,, ✔ Recommended,6.8
+4x16,Prey,, 🕶 Must Watch,6.6
 4x17,Retrospect,,-,4.4
 4x18 & 19,The Killing Game (Parts I and II),🟨🌎V🟡, 🕶 Must Watch,6.4
 4x20,Vis à Vis,,-,4.5
 4x21,The Omega Directive,, ✔ Recommended,7.0
 4x22,Unforgettable,,-,4.3
-4x23,Living Witness,👨🏻‍🤝‍👨🏻, ✔ Recommended,9.0
+4x23,Living Witness,👨🏻‍🤝‍👨🏻, ✔+ Highly Recommended,9.0
 4x24,Demon,,-,4.3
 4x25,One,, ✔ Recommended,6.9
 4x26,Hope and Fear,, 🕶 Must Watch,7.4
-5x01,Night,, ✔ Recommended,5.3
-5x02,Drone,, ✔ Recommended,7.3
-5x03,Extreme Risk,, 🕶 ‼ Must Watch/Bare Minimum,4.6
-5x04,In the Flesh,🌎, ✔ Recommended,5.4
+5x01,Night,, 🕶 Must Watch,5.9
+5x02,Drone,(🤖), ✔ Recommended,7.3
+5x03,Extreme Risk,, 🕶 Must Watch,4.6
+5x04,In the Flesh,🌎,-,5.4
 5x05,Once Upon a Time,,-,4.3
 5x06,Timeless,🕖V🟡, 🕶 Must Watch,8.8
 5x07,Infinite Regress,,-,6.1
@@ -719,37 +720,37 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 5x09,Thirty Days,,-,6.1
 5x10,Counterpoint,, ✔ Recommended,7.6
 5x11,Latent Image,, ✔ Recommended,7.3
-5x12,Bride of Chaotica!,🟨,-,6.9
+5x12,Bride of Chaotica!,🎭🟨, ✔ Recommended,6.9
 5x13,Gravity,♥️,-,6.2
 5x14,Bliss,,-,6.0
-5x15/16 [FL],Dark Frontier,🤖V🟡, 🕶 Must Watch,8.9
+5x15/16 [FL],Dark Frontier,🤖V🟡, 🕶 ‼ Must Watch/Bare Minimum,9.2
 5x17,The Disease,,-,3.5
-5x18,Course: Oblivion,,-,5.0
-5x19,The Fight,,-,1.5
+5x18,Course: Oblivion,P⚑,-,5.5
+5x19,The Fight,, ✖ Notably Bad,1.5
 5x20,Think Tank,, ✔ Recommended,6.9
 5x21,Juggernaut,,-,4.8
 5x22,Someone to Watch Over Me,, ✔ Recommended,6.6
 5x23,11:59,🌌P⚑V🟡,-,3.2
-5x24,Relativity,🕖♥️, ✔ Recommended,9.0
+5x24,Relativity,🕖♥️🥉, ✔ Recommended,9.0
 5x25,Warhead,,-,6.4
 5x26,Equinox (Part I),, 🕶 Must Watch,7.5
 6x01,Equinox (Part II),, 🕶 Must Watch,7.5
-6x02,Survival Instinct,, ✔ Recommended,7.1
+6x02,Survival Instinct,(🤖), ✔ Recommended,7.1
 6x03,Barge of the Dead,,-,5.2
-6x04,Tinker Tenor Doctor Spy,, ✔ Recommended,7.6
+6x04,Tinker Tenor Doctor Spy,, ✔ Recommended,8.2
 6x05,Alice,,-,4.6
 6x06,Riddles,,-,6.5
 6x07,Dragon's Teeth,,-,6.1
-6x08,One Small Step,🌎,-,6.4
+6x08,One Small Step,, ✔ Recommended,6.7
 6x09,The Voyager Conspiracy,, ✔ Recommended,6.0
 6x10,Pathfinder,🌎P⚑V🟡, 🕶 ‼ Must Watch/Bare Minimum,7.6
 6x11,Fair Haven,🟨,-,2.2
-6x12,Blink of an Eye,🕖,-,7.1
-6x13,Virtuoso,,-,6.3
+6x12,Blink of an Eye,🕖, ✔ Recommended,7.1
+6x13,Virtuoso,,-,5.7
 6x14,Memorial,,-,4.9
 6x15,Tsunkatse,,-,4.5
-6x16,Collective,, ✔ Recommended,4.9
-6x17,Spirit Folk,🟨,-,2.5
+6x16,Collective,(🤖), ✔ Recommended,4.9
+6x17,Spirit Folk,🟨🎭,-,2.5
 6x18,Ashes to Ashes,,-,5.4
 6x19,Child's Play,, ✔ Recommended,5.8
 6x20,Good Shepherd,,-,4.2
