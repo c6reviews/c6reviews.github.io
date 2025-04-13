@@ -760,8 +760,8 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 6x24,Time's Orphan,🕖,-,4.9
 6x25,The Sound of Her Voice,,-,6.4
 6x26,Tears of the Prophets,,🕶 ‼ Must Watch/Bare Minimum,6.4
-7x01,Image in the Sand,🌎,🕶 Must Watch,6.1
-7x02,Shadows and Symbols,,🕶 ‼ Must Watch/Bare Minimum,6.4
+7x01,Image in the Sand,🌎,🕶 Must Watch,5.9
+7x02,Shadows and Symbols,,🕶 ‼ Must Watch/Bare Minimum,6.1
 7x03,Afterimage,,-,4.7
 7x04,Take Me Out to the Holosuite,🎭,-,4.1
 7x05,Chrysalis,,-,3.7
