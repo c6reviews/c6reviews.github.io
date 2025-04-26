@@ -246,7 +246,7 @@
 			font-size: large;
 			height: 24px;
 			width: 36px;
-			line-height: 0;
+			vertical-align: top;
 		}
 		.iconDescription {
 			border-radius: 8px;
@@ -255,7 +255,10 @@
 			height: auto;
 			width: fit-content;
 			background-color: #18181890;
-			padding: 3px;
+			padding: 0px 3px 3px 3px;
+		}
+		td:has(> .iconDescription){
+			vertical-align: top;
 		}
 		.nitpickery {
 			border-radius: 8px;
