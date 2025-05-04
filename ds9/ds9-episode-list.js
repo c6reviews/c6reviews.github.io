@@ -1,5 +1,4 @@
-﻿/* File version 1.0.1 */
-
+﻿
 /* ----------------------------------------------------- GLOBAL VARIABLES ----------------------------------------------------- */
 
 var G_sortcol = 0;
@@ -55,7 +54,7 @@ function createTable(array) {
 					// Add titles to remaining tags
 					cell = cell.replace("♥",'<span title="Personal Favorite">♥</span>');
 					cell = cell.replace("🕖",'<span title="Time Travel episode">🕖</span>');
-					cell = cell.replace("Q",'<span title="Q Episode">Q</span>');
+					cell = cell.replace("Q",'<span title="Q Episode" class="Q">Q</span>');
 					cell = cell.replace("31",'<span title="Section 31" style="border:1px solid #C0C0C0;border-radius:10px;">31</span>');
 					cell = cell.replace("⚖",'<span title="Courtroom Episode">⚖</span>');
 					cell = cell.replace("♊",'<span title="Mirror Universe episode">♊</span>');

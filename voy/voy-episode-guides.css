@@ -1,5 +1,4 @@
-﻿/* File version 1.1.1 */					  
-
+﻿
 .content {
 	/* Override main.css background color */
 	background-color: transparent;
@@ -15,7 +14,7 @@
 	width: fit-content;
 	padding: 5px;
 	line-height:1.5;
-	border-radius: 10px;			 				 
+	border-radius: 10px;
 }
 .activeSeason {
 	border-style: solid none solid none;
@@ -256,6 +255,9 @@
 			width: fit-content;
 			background-color: #18181890;
 			padding: 0px 3px 3px 3px;
+		}
+		.quoteDescription {
+			
 		}
 		td:has(> .iconDescription){
 			vertical-align: top;
