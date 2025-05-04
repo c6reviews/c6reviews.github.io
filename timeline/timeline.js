@@ -544,63 +544,62 @@ function drawLines(){
 	
 	var content = `<svg width="` + pageWidth + `" height="` + pageHeight + `" style="position:absolute;top:0;left:0px;z-index:50;pointer-events:none">
 		
-		<defs>
-			<marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
-				<path d="M 0 0 L 10 5 L 0 10 z" fill="#C0C0C077">
-			</marker>
-			<marker id="greenarrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
-				<path d="M 0 0 L 10 5 L 0 10 z" fill="#00B757DD">
-			</marker>
-			<radialGradient id="vignette">
-				<stop offset="0%" stop-color="black" stop-opacity="1">
-				<stop offset="70%" stop-color="black" stop-opacity="1">
-				<stop offset="100%" stop-color="black" stop-opacity="0">
-			</radialGradient>
-		</defs>
-	
-		<line x1="` + TOSTAS.left + `" y1="` + TOSTAS.bottom + `" x2="` + TOSTAS.right + `" y2="` + TOSTAS.top + `" stroke="#C0C0C0"/>
-	
-	<!-- Template for straight arrow -->	
-		<line x1="` + yar1x + `" y1="` + yar1y + `" x2="` + yar2x + `" y2="` + yar2y + `" stroke="#C0C0C077" stroke-dasharray="3" marker-end="url(#arrow)"/>
-		<line x1="` + (yar2x-50) + `" y1="` + yar2y + `" x2="` + yar3x + `" y2="` + yar3y + `" stroke="#C0C0C077" stroke-dasharray="3" marker-end="url(#arrow)"/>
-	
-	<!-- Template for curved arrow -->
-		<path d="M `+ voyHome1x + ` ` + voyHome1y + ` C ` + (voyHome1x+30) + ` ` + (voyHome1y+30) + `, ` + (voyHome2x+30) + ` ` + (voyHome2y-30) + `, ` + (voyHome2x+3) + ` ` + (voyHome2y-3) + `" stroke="#C0C0C077" fill="none" stroke-dasharray="3" marker-end="url(#arrow)"/>
-		<path d="M `+ voyHome2x + ` ` + (voyHome2y+10) + ` C ` + (voyHome2x+80) + ` ` + (voyHome2y-20) + `, ` + (voyHome3x) + ` ` + (voyHome3y+50) + `, ` + voyHome3x + ` ` + voyHome3y + `" stroke="#C0C0C077" fill="none" stroke-dasharray="3" marker-end="url(#arrow)"/>
-		<line x1="` + futuresEnd1x + `" y1="` + futuresEnd1y + `" x2="` + futuresEnd2x + `" y2="` + futuresEnd2y + `" stroke="#C0C0C077" stroke-dasharray="3" marker-end="url(#arrow)"/>
+			<defs>
+				<marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+					<path d="M 0 0 L 10 5 L 0 10 z" fill="#C0C0C077">
+				</marker>
+				<marker id="greenarrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+					<path d="M 0 0 L 10 5 L 0 10 z" fill="#00B757DD">
+				</marker>
+				<radialGradient id="vignette">
+					<stop offset="0%" stop-color="black" stop-opacity="1">
+					<stop offset="70%" stop-color="black" stop-opacity="1">
+					<stop offset="100%" stop-color="black" stop-opacity="0">
+				</radialGradient>
+			</defs>
 		
-	<!-- Template for large "squiggly bracket" -->
-		<polyline points="` + (SF1.right-40) + `,` + (SF1.top + ((SF1.bottom-SF1.top)/2)) + ` ` + (SF1.right-20) + `,` + (SF1.top + ((SF1.bottom-SF1.top)/2)) + ` ` + (SF2.left-20) + `,` + (SF2.top - 5 + ((SF2.bottom-SF2.top)/2)) + ` ` + (SF2.left) + `,` + (SF2.top + ((SF2.bottom-SF2.top)/2)) + ` ` + (SF2.left-20) + `,` + (SF2.top + 5 + ((SF2.bottom-SF2.top)/2)) + ` ` + (SF3.right-20) + `,` + (SF3.top + ((SF3.bottom-SF3.top)/2)) + ` ` + (SF3.right-40) + `,` + (SF3.top + ((SF3.bottom-SF3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
+			<line x1="` + TOSTAS.left + `" y1="` + TOSTAS.bottom + `" x2="` + TOSTAS.right + `" y2="` + TOSTAS.top + `" stroke="#C0C0C0"/>
 		
-	<!-- Template for small "squiggly bracket" -->
-		<polyline points="` + (ZC1.right-20) + `,` + (ZC1.top + ((ZC1.bottom-ZC1.top)/2)) + ` ` + (ZC1.right-10) + `,` + (ZC1.top + ((ZC1.bottom-ZC1.top)/2)) + ` ` + (ZC2.left-10) + `,` + (ZC2.top - 5 + ((ZC2.bottom-ZC2.top)/2)) + ` ` + (ZC2.left) + `,` + (ZC2.top + ((ZC2.bottom-ZC2.top)/2)) + ` ` + (ZC2.left-10) + `,` + (ZC2.top + 5 + ((ZC2.bottom-ZC2.top)/2)) + ` ` + (ZC3.right-10) + `,` + (ZC3.top + ((ZC3.bottom-ZC3.top)/2)) + ` ` + (ZC3.right-20) + `,` + (ZC3.top + ((ZC3.bottom-ZC3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
+		<!-- Template for straight arrow -->	
+			<line x1="` + yar1x + `" y1="` + yar1y + `" x2="` + yar2x + `" y2="` + yar2y + `" stroke="#C0C0C077" stroke-dasharray="3" marker-end="url(#arrow)"/>
+			<line x1="` + (yar2x-50) + `" y1="` + yar2y + `" x2="` + yar3x + `" y2="` + yar3y + `" stroke="#C0C0C077" stroke-dasharray="3" marker-end="url(#arrow)"/>
 		
-		<polyline points="` + (TGWMTS1.right-40) + `,` + (TGWMTS1.top + ((TGWMTS1.bottom-TGWMTS1.top)/2)) + ` ` + (TGWMTS1.right-20) + `,` + (TGWMTS1.top + ((TGWMTS1.bottom-TGWMTS1.top)/2)) + ` ` + (TGWMTS2.left-20) + `,` + (TGWMTS2.top - 5 + ((TGWMTS2.bottom-TGWMTS2.top)/2)) + ` ` + (TGWMTS2.left) + `,` + (TGWMTS2.top + ((TGWMTS2.bottom-TGWMTS2.top)/2)) + ` ` + (TGWMTS2.left-20) + `,` + (TGWMTS2.top + 5 + ((TGWMTS2.bottom-TGWMTS2.top)/2)) + ` ` + (TGWMTS3.right-20) + `,` + (TGWMTS3.top + ((TGWMTS3.bottom-TGWMTS3.top)/2)) + ` ` + (TGWMTS3.right-40) + `,` + (TGWMTS3.top + ((TGWMTS3.bottom-TGWMTS3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
-		
-		<line x1="` + kelvin1.right + `" y1="` + (kelvin1.top + ((kelvin1.bottom-kelvin1.top)/2)) + `" x2="` + (kelvin2.right - 10) + `" y2="` + (kelvin2.top + ((kelvin2.bottom-kelvin2.top)/2)) + `" stroke="#00B757DD" stroke-dasharray="3" />
-		<line x1="` + (kelvin2.right - 10) + `" y1="` + (kelvin2.top + ((kelvin2.bottom-kelvin2.top)/2)) + `" x2="` + (kelvin4a.right - 10) + `" y2="` + (kelvin4a.top + ((kelvin4a.bottom-kelvin4a.top)/2)) + `" stroke="#00B757DD" stroke-dasharray="3" />
-		<path d="M `+ (kelvin3a.right - 10) + ` ` + (kelvin3a.top + ((kelvin3a.bottom-kelvin3a.top)/2)) + ` C ` + (kelvin3a.right - 60) + ` ` + (kelvin3a.top - 50 + ((kelvin3a.bottom-kelvin3a.top)/2)) + `, ` + (kelvin3b.right+43) + ` ` + (kelvin3b.top-43) + `, ` + (kelvin3b.right+3) + ` ` + (kelvin3b.top) + `" stroke="#00B757DD" fill="none" stroke-dasharray="3" marker-end="url(#greenarrow)"/>
-		<path d="M `+ (kelvin4a.right - 10) + ` ` + (kelvin4a.top + ((kelvin4a.bottom-kelvin4a.top)/2)) + ` C ` + (kelvin4a.right - 60) + ` ` + (kelvin4a.top - 50 + ((kelvin4a.bottom-kelvin4a.top)/2)) + `, ` + (kelvin4b.right+43) + ` ` + (kelvin4b.top-43) + `, ` + (kelvin4b.right+3) + ` ` + (kelvin4b.top) + `" stroke="#00B757DD" fill="none" stroke-dasharray="3" marker-end="url(#greenarrow)"/>
-		
-		<polyline points="` + (ZCBorn1.right-20) + `,` + (ZCBorn1.top + ((ZCBorn1.bottom-ZCBorn1.top)/2)) + ` ` + (ZCBorn1.right-10) + `,` + (ZCBorn1.top + ((ZCBorn1.bottom-ZCBorn1.top)/2)) + ` ` + (ZCBorn2.left-10) + `,` + (ZCBorn2.top - 5 + ((ZCBorn2.bottom-ZCBorn2.top)/2)) + ` ` + (ZCBorn2.left) + `,` + (ZCBorn2.top + ((ZCBorn2.bottom-ZCBorn2.top)/2)) + ` ` + (ZCBorn2.left-10) + `,` + (ZCBorn2.top + 5 + ((ZCBorn2.bottom-ZCBorn2.top)/2)) + ` ` + (ZCBorn3.right-10) + `,` + (ZCBorn3.top + ((ZCBorn3.bottom-ZCBorn3.top)/2)) + ` ` + (ZCBorn3.right-20) + `,` + (ZCBorn3.top + ((ZCBorn3.bottom-ZCBorn3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
-		
-		<polyline points="` + (y2250s1.right-40) + `,` + (y2250s1.top + ((y2250s1.bottom-y2250s1.top)/2)) + ` ` + (y2250s1.right-30) + `,` + (y2250s1.top + ((y2250s1.bottom-y2250s1.top)/2)) + ` ` + (y2250s2.left-30) + `,` + (y2250s2.top - 5 + ((y2250s2.bottom-y2250s2.top)/2)) + ` ` + (y2250s2.left-20) + `,` + (y2250s2.top + ((y2250s2.bottom-y2250s2.top)/2)) + ` ` + (y2250s2.left-30) + `,` + (y2250s2.top + 5 + ((y2250s2.bottom-y2250s2.top)/2)) + ` ` + (y2250s3.right-30) + `,` + (y2250s3.top + ((y2250s3.bottom-y2250s3.top)/2)) + ` ` + (y2250s3.right-40) + `,` + (y2250s3.top + ((y2250s3.bottom-y2250s3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
-		<polyline points="` + (y2250s1.right) + `,` + (y2250s1.top + ((y2250s1.bottom-y2250s1.top)/2)) + ` ` + (y2250s1.right-10) + `,` + (y2250s1.top + ((y2250s1.bottom-y2250s1.top)/2)) + ` ` + (y2250s2.left-10) + `,` + (y2250s2.top - 5 + ((y2250s2.bottom-y2250s2.top)/2)) + ` ` + (y2250s2.left-20) + `,` + (y2250s2.top + ((y2250s2.bottom-y2250s2.top)/2)) + ` ` + (y2250s2.left-10) + `,` + (y2250s2.top + 5 + ((y2250s2.bottom-y2250s2.top)/2)) + ` ` + (y2250s4.left-10) + `,` + (y2250s4.top + ((y2250s4.bottom-y2250s4.top)/2)) + ` ` + (y2250s4.left) + `,` + (y2250s4.top + ((y2250s4.bottom-y2250s4.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
-		
-		<polyline points="` + (YPDeath1.right-40) + `,` + (YPDeath1.top + ((YPDeath1.bottom-YPDeath1.top)/2)) + ` ` + (YPDeath1.right-20) + `,` + (YPDeath1.top + ((YPDeath1.bottom-YPDeath1.top)/2)) + ` ` + (YPDeath2.left-20) + `,` + (YPDeath2.top - 5 + ((YPDeath2.bottom-YPDeath2.top)/2)) + ` ` + (YPDeath2.left) + `,` + (YPDeath2.top + ((YPDeath2.bottom-YPDeath2.top)/2)) + ` ` + (YPDeath2.left-20) + `,` + (YPDeath2.top + 5 + ((YPDeath2.bottom-YPDeath2.top)/2)) + ` ` + (YPDeath3.right-20) + `,` + (YPDeath3.top + ((YPDeath3.bottom-YPDeath3.top)/2)) + ` ` + (YPDeath3.right-40) + `,` + (YPDeath3.top + ((YPDeath3.bottom-YPDeath3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
-		
-		<image href="images/times_arrow.png" x="` + (times_arrow.right - ((times_arrow.right-times_arrow.left)/2) - 104) + `" y="` + (times_arrow.top - 140) + `" opacity="0.9"/>
-		<image href="images/cochrane.png" x="` + (warp1.right - ((warp1.right-warp1.left)/2) - 115) + `" y="` + (warp1.top - 192) + `" opacity="0.9"/>
-		<image href="images/tcoteof.png" x="` + (tcoteof.right - ((tcoteof.right-tcoteof.left)/2) - 93) + `" y="` + (tcoteof.top - 140) + `" opacity="0.8"/>
-		<image href="images/kelvinkirkandspock.png" x="` + (stb.right + 10) + `" y="` + (stb.bottom - 128) + `" opacity="1"/>
-		<image href="images/khan.png" x="` + (twok.right - ((twok.right-twok.left)/2) - 62) + `" y="` + (twok.top - 126) + `" opacity="0.9"/>
-		<image href="images/georgiou.png" x="` + (S31.right - ((S31.right-S31.left)/2) - 55) + `" y="` + (S31.top - 113) + `" opacity="0.8"/>
-		<image href="images/garrett.png" x="` + (yar2.left - 5) + `" y="` + (yar2.top - 82) + `" opacity="0.9"/>
-		<image href="images/calypso.png" x="` + (calypso.right - ((calypso.right-calypso.left)/2) - 28) + `" y="` + (calypso.top - 95) + `" opacity="0.9"/>
-		<image href="images/generations.png" x="` + (generationsPast.left + 5) + `" y="` + (generationsPast.top - 100) + `" fill="url(#vignette)"/>
-		<image href="images/borgqueen.png" x="` + (FC.right - 60) + `" y="` + (FC.top - 105) + `" opacity="0.9"/>
-		
-		
+		<!-- Template for curved arrow -->
+			<path d="M `+ voyHome1x + ` ` + voyHome1y + ` C ` + (voyHome1x+30) + ` ` + (voyHome1y+30) + `, ` + (voyHome2x+30) + ` ` + (voyHome2y-30) + `, ` + (voyHome2x+3) + ` ` + (voyHome2y-3) + `" stroke="#C0C0C077" fill="none" stroke-dasharray="3" marker-end="url(#arrow)"/>
+			<path d="M `+ voyHome2x + ` ` + (voyHome2y+10) + ` C ` + (voyHome2x+80) + ` ` + (voyHome2y-20) + `, ` + (voyHome3x) + ` ` + (voyHome3y+50) + `, ` + voyHome3x + ` ` + voyHome3y + `" stroke="#C0C0C077" fill="none" stroke-dasharray="3" marker-end="url(#arrow)"/>
+			<line x1="` + futuresEnd1x + `" y1="` + futuresEnd1y + `" x2="` + futuresEnd2x + `" y2="` + futuresEnd2y + `" stroke="#C0C0C077" stroke-dasharray="3" marker-end="url(#arrow)"/>
+			
+		<!-- Template for large "squiggly bracket" -->
+			<polyline points="` + (SF1.right-40) + `,` + (SF1.top + ((SF1.bottom-SF1.top)/2)) + ` ` + (SF1.right-20) + `,` + (SF1.top + ((SF1.bottom-SF1.top)/2)) + ` ` + (SF2.left-20) + `,` + (SF2.top - 5 + ((SF2.bottom-SF2.top)/2)) + ` ` + (SF2.left) + `,` + (SF2.top + ((SF2.bottom-SF2.top)/2)) + ` ` + (SF2.left-20) + `,` + (SF2.top + 5 + ((SF2.bottom-SF2.top)/2)) + ` ` + (SF3.right-20) + `,` + (SF3.top + ((SF3.bottom-SF3.top)/2)) + ` ` + (SF3.right-40) + `,` + (SF3.top + ((SF3.bottom-SF3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
+			
+		<!-- Template for small "squiggly bracket" -->
+			<polyline points="` + (ZC1.right-20) + `,` + (ZC1.top + ((ZC1.bottom-ZC1.top)/2)) + ` ` + (ZC1.right-10) + `,` + (ZC1.top + ((ZC1.bottom-ZC1.top)/2)) + ` ` + (ZC2.left-10) + `,` + (ZC2.top - 5 + ((ZC2.bottom-ZC2.top)/2)) + ` ` + (ZC2.left) + `,` + (ZC2.top + ((ZC2.bottom-ZC2.top)/2)) + ` ` + (ZC2.left-10) + `,` + (ZC2.top + 5 + ((ZC2.bottom-ZC2.top)/2)) + ` ` + (ZC3.right-10) + `,` + (ZC3.top + ((ZC3.bottom-ZC3.top)/2)) + ` ` + (ZC3.right-20) + `,` + (ZC3.top + ((ZC3.bottom-ZC3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
+			
+			<polyline points="` + (TGWMTS1.right-40) + `,` + (TGWMTS1.top + ((TGWMTS1.bottom-TGWMTS1.top)/2)) + ` ` + (TGWMTS1.right-20) + `,` + (TGWMTS1.top + ((TGWMTS1.bottom-TGWMTS1.top)/2)) + ` ` + (TGWMTS2.left-20) + `,` + (TGWMTS2.top - 5 + ((TGWMTS2.bottom-TGWMTS2.top)/2)) + ` ` + (TGWMTS2.left) + `,` + (TGWMTS2.top + ((TGWMTS2.bottom-TGWMTS2.top)/2)) + ` ` + (TGWMTS2.left-20) + `,` + (TGWMTS2.top + 5 + ((TGWMTS2.bottom-TGWMTS2.top)/2)) + ` ` + (TGWMTS3.right-20) + `,` + (TGWMTS3.top + ((TGWMTS3.bottom-TGWMTS3.top)/2)) + ` ` + (TGWMTS3.right-40) + `,` + (TGWMTS3.top + ((TGWMTS3.bottom-TGWMTS3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
+			
+			<line x1="` + kelvin1.right + `" y1="` + (kelvin1.top + ((kelvin1.bottom-kelvin1.top)/2)) + `" x2="` + (kelvin2.right - 10) + `" y2="` + (kelvin2.top + ((kelvin2.bottom-kelvin2.top)/2)) + `" stroke="#00B757DD" stroke-dasharray="3" />
+			<line x1="` + (kelvin2.right - 10) + `" y1="` + (kelvin2.top + ((kelvin2.bottom-kelvin2.top)/2)) + `" x2="` + (kelvin4a.right - 10) + `" y2="` + (kelvin4a.top + ((kelvin4a.bottom-kelvin4a.top)/2)) + `" stroke="#00B757DD" stroke-dasharray="3" />
+			<path d="M `+ (kelvin3a.right - 10) + ` ` + (kelvin3a.top + ((kelvin3a.bottom-kelvin3a.top)/2)) + ` C ` + (kelvin3a.right - 60) + ` ` + (kelvin3a.top - 50 + ((kelvin3a.bottom-kelvin3a.top)/2)) + `, ` + (kelvin3b.right+43) + ` ` + (kelvin3b.top-43) + `, ` + (kelvin3b.right+3) + ` ` + (kelvin3b.top) + `" stroke="#00B757DD" fill="none" stroke-dasharray="3" marker-end="url(#greenarrow)"/>
+			<path d="M `+ (kelvin4a.right - 10) + ` ` + (kelvin4a.top + ((kelvin4a.bottom-kelvin4a.top)/2)) + ` C ` + (kelvin4a.right - 60) + ` ` + (kelvin4a.top - 50 + ((kelvin4a.bottom-kelvin4a.top)/2)) + `, ` + (kelvin4b.right+43) + ` ` + (kelvin4b.top-43) + `, ` + (kelvin4b.right+3) + ` ` + (kelvin4b.top) + `" stroke="#00B757DD" fill="none" stroke-dasharray="3" marker-end="url(#greenarrow)"/>
+			
+			<polyline points="` + (ZCBorn1.right-20) + `,` + (ZCBorn1.top + ((ZCBorn1.bottom-ZCBorn1.top)/2)) + ` ` + (ZCBorn1.right-10) + `,` + (ZCBorn1.top + ((ZCBorn1.bottom-ZCBorn1.top)/2)) + ` ` + (ZCBorn2.left-10) + `,` + (ZCBorn2.top - 5 + ((ZCBorn2.bottom-ZCBorn2.top)/2)) + ` ` + (ZCBorn2.left) + `,` + (ZCBorn2.top + ((ZCBorn2.bottom-ZCBorn2.top)/2)) + ` ` + (ZCBorn2.left-10) + `,` + (ZCBorn2.top + 5 + ((ZCBorn2.bottom-ZCBorn2.top)/2)) + ` ` + (ZCBorn3.right-10) + `,` + (ZCBorn3.top + ((ZCBorn3.bottom-ZCBorn3.top)/2)) + ` ` + (ZCBorn3.right-20) + `,` + (ZCBorn3.top + ((ZCBorn3.bottom-ZCBorn3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
+			
+			<polyline points="` + (y2250s1.right-40) + `,` + (y2250s1.top + ((y2250s1.bottom-y2250s1.top)/2)) + ` ` + (y2250s1.right-30) + `,` + (y2250s1.top + ((y2250s1.bottom-y2250s1.top)/2)) + ` ` + (y2250s2.left-30) + `,` + (y2250s2.top - 5 + ((y2250s2.bottom-y2250s2.top)/2)) + ` ` + (y2250s2.left-20) + `,` + (y2250s2.top + ((y2250s2.bottom-y2250s2.top)/2)) + ` ` + (y2250s2.left-30) + `,` + (y2250s2.top + 5 + ((y2250s2.bottom-y2250s2.top)/2)) + ` ` + (y2250s3.right-30) + `,` + (y2250s3.top + ((y2250s3.bottom-y2250s3.top)/2)) + ` ` + (y2250s3.right-40) + `,` + (y2250s3.top + ((y2250s3.bottom-y2250s3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
+			<polyline points="` + (y2250s1.right) + `,` + (y2250s1.top + ((y2250s1.bottom-y2250s1.top)/2)) + ` ` + (y2250s1.right-10) + `,` + (y2250s1.top + ((y2250s1.bottom-y2250s1.top)/2)) + ` ` + (y2250s2.left-10) + `,` + (y2250s2.top - 5 + ((y2250s2.bottom-y2250s2.top)/2)) + ` ` + (y2250s2.left-20) + `,` + (y2250s2.top + ((y2250s2.bottom-y2250s2.top)/2)) + ` ` + (y2250s2.left-10) + `,` + (y2250s2.top + 5 + ((y2250s2.bottom-y2250s2.top)/2)) + ` ` + (y2250s4.left-10) + `,` + (y2250s4.top + ((y2250s4.bottom-y2250s4.top)/2)) + ` ` + (y2250s4.left) + `,` + (y2250s4.top + ((y2250s4.bottom-y2250s4.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
+			
+			<polyline points="` + (YPDeath1.right-40) + `,` + (YPDeath1.top + ((YPDeath1.bottom-YPDeath1.top)/2)) + ` ` + (YPDeath1.right-20) + `,` + (YPDeath1.top + ((YPDeath1.bottom-YPDeath1.top)/2)) + ` ` + (YPDeath2.left-20) + `,` + (YPDeath2.top - 5 + ((YPDeath2.bottom-YPDeath2.top)/2)) + ` ` + (YPDeath2.left) + `,` + (YPDeath2.top + ((YPDeath2.bottom-YPDeath2.top)/2)) + ` ` + (YPDeath2.left-20) + `,` + (YPDeath2.top + 5 + ((YPDeath2.bottom-YPDeath2.top)/2)) + ` ` + (YPDeath3.right-20) + `,` + (YPDeath3.top + ((YPDeath3.bottom-YPDeath3.top)/2)) + ` ` + (YPDeath3.right-40) + `,` + (YPDeath3.top + ((YPDeath3.bottom-YPDeath3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
+			
+			<image href="images/times_arrow.png" x="` + (times_arrow.right - ((times_arrow.right-times_arrow.left)/2) - 104) + `" y="` + (times_arrow.top - 140) + `" opacity="0.9"/>
+			<image href="images/cochrane.png" x="` + (warp1.right - ((warp1.right-warp1.left)/2) - 115) + `" y="` + (warp1.top - 192) + `" opacity="0.9"/>
+			<image href="images/tcoteof.png" x="` + (tcoteof.right - ((tcoteof.right-tcoteof.left)/2) - 93) + `" y="` + (tcoteof.top - 140) + `" opacity="0.8"/>
+			<image href="images/kelvinkirkandspock.png" x="` + (stb.right + 10) + `" y="` + (stb.bottom - 128) + `" opacity="1"/>
+			<image href="images/khan.png" x="` + (twok.right - ((twok.right-twok.left)/2) - 62) + `" y="` + (twok.top - 126) + `" opacity="0.9"/>
+			<image href="images/georgiou.png" x="` + (S31.right - ((S31.right-S31.left)/2) - 55) + `" y="` + (S31.top - 113) + `" opacity="0.8"/>
+			<image href="images/garrett.png" x="` + (yar2.left - 5) + `" y="` + (yar2.top - 82) + `" opacity="0.9"/>
+			<image href="images/calypso.png" x="` + (calypso.right - ((calypso.right-calypso.left)/2) - 28) + `" y="` + (calypso.top - 95) + `" opacity="0.9"/>
+			<image href="images/generations.png" x="` + (generationsPast.left + 5) + `" y="` + (generationsPast.top - 100) + `" fill="url(#vignette)"/>
+			<image href="images/borgqueen.png" x="` + (FC.right - 60) + `" y="` + (FC.top - 105) + `" opacity="0.9"/>
+				
 	</svg>`;
 		
 	document.getElementById("svgOverlay").innerHTML = content;

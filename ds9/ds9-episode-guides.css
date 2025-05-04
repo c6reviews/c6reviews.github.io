@@ -1,5 +1,4 @@
-﻿/* File version 1.1.1 */
-
+﻿
 .content {
 	/* Override main.css background color */
 	background-color: transparent;
@@ -148,7 +147,7 @@
 		.SepisodeNumberBox {
 			border: 1px solid #C0C0C0;
 			text-align: center;
-			background-color:rgba(0,0,0,0.5);
+			background-color:rgba(0,0,0,0.6);
 			width: 90px;
 			height: 24px;
 			line-height: 0.9;
@@ -157,7 +156,7 @@
 		.FepisodeNumberBox {
 			border: 1px solid #C0C0C0;
 			text-align: center;
-			background-color:rgba(0,0,0,0.5);
+			background-color:rgba(0,0,0,0.6);
 			width: 90px;
 			height: 24px;
 			cursor: help;
@@ -181,14 +180,7 @@
 			width: auto;
 		}
 		.synopsisBox {
-			text-align: left;
-			font-size: small;
-			font-style: italic;
-			background-color: #18181890;
-			margin-right: 35%;
-			white-space: normal;
-			width: 600px;
-			border-radius: 5px;
+			padding-right: 16%;
 		}
 		.synopsis {
 			text-align: left;
@@ -216,7 +208,7 @@
 			left: 0%;
 			top: 50%;
 			transform: translateX(-100%) translateY(-50%);
-			z-index: 6;
+			z-index: 12;
 			transition: .3s;
 			vertical-align: middle;
 		}
@@ -253,7 +245,7 @@
 			font-size: large;
 			height: 24px;
 			width: 36px;
-			line-height: 0;
+			vertical-align: top;
 		}
 		.iconDescription {
 			border-radius: 8px;
@@ -262,7 +254,13 @@
 			height: auto;
 			width: fit-content;
 			background-color: #18181890;
-			padding: 3px;
+			padding: 0px 3px 3px 3px;
+		}
+		.quoteDescription {
+			
+		}
+		td:has(> .iconDescription){
+			vertical-align: top;
 		}
 		.nitpickery {
 			border-radius: 8px;

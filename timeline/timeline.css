@@ -200,13 +200,6 @@ td {
 #theTable {
 	margin-right: 60px;
 }
-#theTable a{
-	color: inherit;
-}
-#theTable a:hover{
-	color: #F1F1F1;
-	text-decoration: none;
-}
 .blinkBox {
 	color: yellow !important;
 	border-color: yellow !important;

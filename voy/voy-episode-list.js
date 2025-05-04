@@ -57,13 +57,13 @@ function createTable(array) {
 					cell = cell.replace("🕖",'<span title="Time Travel Episode">🕖</span>');
 					cell = cell.replace("🤖",'<span title="Proper Borg Episode">🤖</span>');
 					cell = cell.replace('(<span title="Proper Borg Episode">🤖</span>)','<span title="Episode involves the Borg">(🤖)</span>');
-					cell = cell.replace("Q",'<span title="Q Episode">Q</span>');
+					cell = cell.replace("Q",'<span title="Q Episode" class="Q">Q</span>');
 					cell = cell.replace("31",'<span title="Section 31" style="border:1px solid #C0C0C0;border-radius:10px;">31</span>');
 					cell = cell.replace("⚖",'<span title="Courtroom Episode">⚖</span>');
 					cell = cell.replace("♊",'<span title="Mirror Universe episode">♊</span>');
 					cell = cell.replace("🌎",'<span title="Episode takes place on Earth">🌎</span>');
 					cell = cell.replace("🟨",'<span title="Holodeck episode">🟨</span>');
-					cell = cell.replace("👨🏻‍🤝‍👨🏻",'<span title="Parallel / Alternate Reality">👨🏻‍🤝‍👨🏻</span>');
+					cell = cell.replace("👬",'<span title="Parallel / Alternate Reality">👬</span>');
 					cell = cell.replace("🎭",'<span title="Lighthearted/Comedy">🎭</span>');
 					cell = cell.replace("😱",'<span title="Scary">😱</span>');
 					cell = cell.replace("🥇",'<span title="1st place episode">🥇</span>');
@@ -636,17 +636,17 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 1x16,Learning Curve,,-,4.4
 2x01,The 37's,,✔ Recommended,5.9
 2x02,Initiations,,-,4.0
-2x03,Projections,🟨,✔+ Highly Recommended,7.8
+2x03,Projections,🟨,✔ Recommended,7.8
 2x04,Elogium,,-,2.3
-2x05,Non Sequitur,🕖🌎,-,4.5
+2x05,Non Sequitur,👬🌎,♦ Optional,4.5
 2x06,Twisted,,-,3.4
-2x07,Partuition,,-,3.7
+2x07,Parturition,,-,3.7
 2x08,Persistence of Vision,,-,4.6
 2x09,Tattoo,,✖ Notably Bad,2.1
 2x10,Cold Fire,,✔ Recommended,5.0
 2x11,Maneuvers,,🕶 Must Watch,6.1
 2x12,Resistance,♥️,-,5.3
-2x13,Prototype,,-,6.3
+2x13,Prototype,,✔ Recommended,6.3
 2x14,Alliances,,✔ Recommended,6.1
 2x15,Threshold,💩,✖ Notably Bad,0.6
 2x16,Meld,,✔ Recommended,6.8
@@ -654,14 +654,14 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 2x18,Death Wish,Q⚖️,✔ Recommended,7.8
 2x19,Lifesigns,,✔ Recommended,6.0
 2x20,Investigations,,✔ Recommended,5.1
-2x21,Deadlock,👨🏻‍🤝‍👨🏻,✔ Recommended,7.2
+2x21,Deadlock,👬,✔ Recommended,7.2
 2x22,Innocence,,-,2.8
-2x23,The Thaw,👺🎖V🟡,✔+ Highly Recommended,6.6
-2x24,Tuvix,,♦ Optional,5.5
+2x23,The Thaw,👺V🟡,✔+ Highly Recommended,6.6
+2x24,Tuvix,,✔ Recommended,5.5
 2x25,Resolutions,,-,4.6
 2x26,Basics (Part I),,🕶 ‼ Must Watch/Bare Minimum,6.4
 3x01,Basics (Part II),,🕶 ‼ Must Watch/Bare Minimum,6.4
-3x02,Flashback,🕖♥️,🕶 Must Watch,7.2
+3x02,Flashback,🕖♥️V🟡,🕶 Must Watch,7.2
 3x03,The Chute,,-,4.3
 3x04,The Swarm,,-,5.8
 3x05,False Profits,,-,4.4
@@ -669,7 +669,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 3x07,Sacred Ground,,-,3.3
 3x08 & 09,Future's End (Parts I and II),🕖🌎A🟡,🕶 Must Watch,8.5
 3x10,Warlord,♥️,-,5.1
-3x11,The Q and the Grey,Q,✔ Recommended,4.6
+3x11,The Q and the Grey,Q,♦ Optional,4.6
 3x12,Macrocosm,,-,4.1
 3x13,Fair Trade,,-,5.0
 3x14,Alter Ego,,-,5.8
@@ -694,10 +694,10 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 4x07,Scientific Method,,-,6.3
 4x08 & 09,Year of Hell (Parts I and II),🕖🥇A🟡,🕶 ‼ Must Watch/Bare Minimum,9.6
 4x10,Random Thoughts,,-,4.6
-4x11,Concerning Flight,,✔ Recommended,5.1
+4x11,Concerning Flight,,-,5.1
 4x12,Mortal Coil,,-,5.2
 4x13,Waking Moments,,-,6.3
-4x14,Message in a Bottle,♥️,🕶 ‼ Must Watch/Bare Minimum,8.3
+4x14,Message in a Bottle,♥️V🟡,🕶 ‼ Must Watch/Bare Minimum,8.6
 4x15,Hunters,,✔ Recommended,6.8
 4x16,Prey,,🕶 Must Watch,6.6
 4x17,Retrospect,,-,4.4
@@ -705,22 +705,22 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 4x20,Vis à Vis,,-,4.5
 4x21,The Omega Directive,,✔ Recommended,7.0
 4x22,Unforgettable,,-,4.3
-4x23,Living Witness,👨🏻‍🤝‍👨🏻,✔+ Highly Recommended,9.0
+4x23,Living Witness,👬,✔+ Highly Recommended,9.3
 4x24,Demon,,-,4.3
 4x25,One,,✔ Recommended,6.9
 4x26,Hope and Fear,,🕶 Must Watch,7.4
 5x01,Night,,🕶 Must Watch,5.9
 5x02,Drone,(🤖),✔ Recommended,7.3
-5x03,Extreme Risk,,🕶 Must Watch,4.6
+5x03,Extreme Risk,,✔ Recommended,4.6
 5x04,In the Flesh,🌎,-,5.4
 5x05,Once Upon a Time,,-,4.3
-5x06,Timeless,🕖V🟡,🕶 Must Watch,8.8
+5x06,Timeless,🕖A🟡,🕶 Must Watch,9.1
 5x07,Infinite Regress,,-,6.1
-5x08,Nothing Human,,-,5.6
+5x08,Nothing Human,,✔ Recommended,5.6
 5x09,Thirty Days,,-,6.1
-5x10,Counterpoint,,✔ Recommended,7.6
+5x10,Counterpoint,V🟡,✔ Recommended,7.6
 5x11,Latent Image,,✔ Recommended,7.3
-5x12,Bride of Chaotica!,🎭🟨,✔ Recommended,6.9
+5x12,Bride of Chaotica!,🟨🎭,✔ Recommended,7.5
 5x13,Gravity,♥️,-,6.2
 5x14,Bliss,,-,6.0
 5x15/16 [FL],Dark Frontier,🤖V🟡,🕶 ‼ Must Watch/Bare Minimum,9.2
@@ -730,11 +730,11 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 5x20,Think Tank,,✔ Recommended,6.9
 5x21,Juggernaut,,-,4.8
 5x22,Someone to Watch Over Me,,✔ Recommended,6.6
-5x23,11:59,🌌P⚑V🟡,-,3.2
-5x24,Relativity,🕖♥️🥉,✔ Recommended,9.0
+5x23,11:59,P⚑,-,3.2
+5x24,Relativity,🕖♥️🥉,✔+ Highly Recommended,9.0
 5x25,Warhead,,-,6.4
-5x26,Equinox (Part I),,🕶 Must Watch,7.5
-6x01,Equinox (Part II),,🕶 Must Watch,7.5
+5x26,Equinox (Part I),A🟡,🕶 Must Watch,7.5
+6x01,Equinox (Part II),A🟡,🕶 Must Watch,7.5
 6x02,Survival Instinct,(🤖),✔ Recommended,7.1
 6x03,Barge of the Dead,,-,5.2
 6x04,Tinker Tenor Doctor Spy,,✔ Recommended,8.2
@@ -745,7 +745,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 6x09,The Voyager Conspiracy,,✔ Recommended,6.0
 6x10,Pathfinder,🌎P⚑V🟡,🕶 ‼ Must Watch/Bare Minimum,7.6
 6x11,Fair Haven,🟨,-,2.2
-6x12,Blink of an Eye,🕖,✔ Recommended,7.1
+6x12,Blink of an Eye,🕖V🟡,✔ Recommended,7.7
 6x13,Virtuoso,,-,5.7
 6x14,Memorial,,-,4.9
 6x15,Tsunkatse,,-,4.5
@@ -758,13 +758,13 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 6x22,Muse,,-,6.6
 6x23,Fury,🕖,✔ Recommended,3.9
 6x24,Life Line,🌎,🕶 Must Watch,8.4
-6x25,The Haunting of Deck Twelve,,-,5.6
+6x25,The Haunting of Deck Twelve,,-,5.1
 6x26,Unimatrix Zero (Part I),🤖,🕶 Must Watch,4.4
 7x01,Unimatrix Zero (Part II),🤖,🕶 Must Watch,4.4
-7x02,Imperfection,,✔ Recommended,7.7
+7x02,Imperfection,(🤖),✔+ Highly Recommended,7.7
 7x03,Drive,♥️,-,6.3
 7x04,Repression,,-,4.0
-7x05,Critical Care,♥️,-,7.0
+7x05,Critical Care,♥️,✔ Recommended,7.0
 7x06,Inside Man,🌎,✔ Recommended,6.2
 7x07,Body and Soul,,-,6.0
 7x08,Nightingale,,-,3.6
@@ -773,16 +773,16 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 7x12,Lineage,,✔ Recommended,5.8
 7x13,Repentance,,-,5.9
 7x14,Prophecy,,-,4.6
-7x15,The Void,,-,7.3
+7x15,The Void,V🟡,-,7.3
 7x16 & 17,Workforce (Parts I and II),,✔ Recommended,7.2
 7x18,Human Error,,-,4.0
 7x19,Q2,Q,♦ Optional,5.2
 7x20,"Author, Author",⚖️V🟡,✔ Recommended,7.3
-7x21,Friendship One,🌎,-,4.6
+7x21,Friendship One,,-,4.6
 7x22,Natural Law,,-,5.5
-7x23,Homestead,,🕶 Must Watch,5.6
+7x23,Homestead,,🕶 Must Watch,6.1
 7x24,Renaissance Man,,✔ Recommended,6.3
-7x25/26 [FL],Endgame,🕖🤖,🕶 ‼ Must Watch/Bare Minimum,6.7`;
+7x25/26 [FL],Endgame,🕖🤖A🟡,🕶 ‼ Must Watch/Bare Minimum,7.0`;
 
 	var array = csvToNestedArray(csvString);
 	
