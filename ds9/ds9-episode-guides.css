@@ -257,7 +257,13 @@
 			padding: 0px 3px 3px 3px;
 		}
 		.quoteDescription {
-			
+			border-radius: 8px;
+			text-align: left;
+			font-size: medium;
+			height: auto;
+			width: fit-content;
+			background-color: #18181890;
+			padding: 0px 3px 3px 3px;			
 		}
 		td:has(> .iconDescription){
 			vertical-align: top;
