@@ -46,7 +46,6 @@
 	margin-bottom: 25px;
 	font-family: BB, Roboto, sans-serif;
 	font-size: xx-large;
-	text-decoration: underline;
 	font-style: normal;
 }
 
@@ -268,7 +267,7 @@
 			height: auto;
 			width: fit-content;
 			background-color: #18181890;
-			padding: 0px 3px 3px 3px;			
+			padding: 0px 3px 3px 3px;
 		}
 		td:has(> .iconDescription){
 			vertical-align: top;
