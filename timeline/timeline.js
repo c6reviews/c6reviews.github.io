@@ -1,4 +1,5 @@
-
+var G_searchterm = "";
+var G_searchresulti = 0;
 
 /* -------------------------------------------------- NAV MENU -------------------------------------------------- */
 
@@ -333,6 +334,7 @@ function toggleSpoilers() {
 		ALLSpoilerToggle.checked = false;
 	}
 	
+	autocompleteUpdate(document.getElementById("tableSearch"), compileSuggestions());
 }
 
 
@@ -411,7 +413,6 @@ function blink(elementIDs) {
 	var elements = [];
 	
 	elementIDs = elementIDs.split(",");
-	console.log(elementIDs);
 	
 	for (var i=0; i < elementIDs.length; i++) {
 		elements.push(document.getElementById(elementIDs[i]));
@@ -440,11 +441,33 @@ function blink(elementIDs) {
 				}, 300);
 			}, 300);
 		}, 300);
-	});
+	});	
+}
+
+function blinkElement(element) {
 	
-	
-	
-	
+		element.classList.toggle("blinkBox");
+		setTimeout(() => {
+			element.classList.toggle("blinkBox");
+			setTimeout(() => {
+				element.classList.toggle("blinkBox");
+				setTimeout(() => {
+					element.classList.toggle("blinkBox");
+					setTimeout(() => {
+						element.classList.toggle("blinkBox");
+						setTimeout(() => {
+							element.classList.toggle("blinkBox");
+							setTimeout(() => {
+								element.classList.toggle("blinkBox");
+								setTimeout(() => {
+									element.classList.remove("blinkBox");
+								}, 300);
+							}, 300);
+						}, 300);
+					}, 300);
+				}, 300);
+			}, 300);
+		}, 300);
 }
 
 /* -------------------------------------------------- GET ELEMENT POSITION (relative to page, not screen) -------------------------------------------------- */
@@ -610,15 +633,273 @@ window.addEventListener('resize', function(event) {
 }, true);
 
 
+/* ---------------------------------------------- SEARCH SUGGESTIONS ------------------------------------------*/
+function compileSuggestions(){
+
+	const rows = Array.from(document.getElementsByClassName("contentRow"));
+	const cells = [];
+	const ALLSpoilerToggle = document.getElementById("ALLSpoilerToggle");
+	
+	if (ALLSpoilerToggle.checked)
+	{		
+		rows.forEach(row => {
+				cells.push(Array.from(row.querySelectorAll('tr:scope > td')).filter(item => !item.innerHTML.includes("<table")));
+		});
+	} else {
+			rows.forEach(row => {
+				cells.push(Array.from(row.querySelectorAll('tr:scope > td:not(.spoiler)')).filter(item => !item.innerHTML.includes("<table")));
+		});
+	}
+		
+		// 1. Remove line breaks, tabs, and leading ≈
+		// 2. Remove leading and trailing whitespace
+		// 3. Remove leading < and >
+		// 4. Replace nbsp with standard space
+		// 5. Remove leading and trailing whitespace again
+		var searchSuggestions = cells.flat().map(cell => cell.textContent.replace(/(\r\n|\n|\r|\t|^\u2248)/gm, "").replace(/^\s+|\s+$/g, "").replace(/(^❰+|^❱+)/g, "").replace(/\u00a0/g, ' ').replace(/^\s+|\s+$/g, ""));
+		// 6. Remove duplicates
+		searchSuggestions = [...new Set(searchSuggestions)];
+		
+		return searchSuggestions.flat();
+}
+
+function autocompleteSetup(inp, arr) {
+	  /*the autocomplete function takes two arguments,
+	  the text field element and an array of possible autocompleted values:*/
+	  var currentFocus;
+	  /*execute a function when someone writes in the text field:*/
+	  inp.addEventListener("input", function(e) {
+		  var a, b, i, val = this.value;
+		  /*close any already open lists of autocompleted values*/
+		  closeAllLists();
+		  document.getElementById("resultCount").innerHTML="";
+		  document.getElementById("tableSearch").style.backgroundColor="#333";
+		  if (!val || val.length < 2)
+		  {
+				return false;
+		  }
+		  currentFocus = -1;
+		  /*create a DIV element that will contain the items (values):*/
+		  a = document.createElement("DIV");
+		  a.setAttribute("id", this.id + "autocomplete-list");
+		  a.setAttribute("class", "autocomplete-items");
+		  /*append the DIV element as a child of the autocomplete container:*/
+		  this.parentNode.appendChild(a);
+		  /*for each item in the array...*/
+		  for (i = 0; i < arr.length; i++) {
+			/*check if the item starts with the same letters as the text field value:*/
+			if (arr[i].toUpperCase().includes(val.toUpperCase())) {
+			  /*create a DIV element for each matching element:*/
+			  b = document.createElement("DIV");
+			  /*Highlight matching characters*/
+			  const regEx = new RegExp(val, 'gi');
+			  b.innerHTML = arr[i].replace(regEx, '<span style="color:yellow">$&</span>');
+			  /*insert a input field that will hold the current array item's value:*/
+			  b.innerHTML += "<input type='hidden' value='" + arr[i].replace(/'/g, "&#39;") + "'>";
+			  /*execute a function when someone clicks on the item value (DIV element):*/
+			  b.addEventListener("click", function(e) {
+				  /*insert the value for the autocomplete text field:*/
+				  inp.value = this.getElementsByTagName("input")[0].value;
+				  /*close the list of autocompleted values,
+				  (or any other open lists of autocompleted values:*/
+				  closeAllLists();
+				  document.getElementById("tableSearch").focus();
+			  });
+			  a.appendChild(b);
+			}
+		  }
+	  });
+	  /*execute a function presses a key on the keyboard:*/
+	  inp.addEventListener("keydown", function(e) {
+		  var x = document.getElementById(this.id + "autocomplete-list");
+		  if (x) x = x.getElementsByTagName("div");
+		  if (e.keyCode == 40) {
+				/*If the arrow DOWN key is pressed,
+				increase the currentFocus variable:*/
+				currentFocus++;
+				/*and and make the current item more visible:*/
+				addActive(x);
+		  } else if (e.keyCode == 38) { //up
+				/*If the arrow UP key is pressed,
+				decrease the currentFocus variable:*/
+				currentFocus--;
+				/*and and make the current item more visible:*/
+				addActive(x);
+		  } else if (e.keyCode == 13) {
+				/*If the ENTER key is pressed, prevent the form from being submitted,*/
+				e.preventDefault();
+				if (currentFocus > -1) {
+				  /*and simulate a click on the "active" item:*/
+				  if (x) x[currentFocus].click();
+				  currentFocus = -1;
+				} else {
+				  closeAllLists();
+				  search('down');
+				}
+		  } else if (e.keyCode == 27 || e.keyCode == 9) {
+				/*If the ESC or TAB key is pressed, close suggestions,*/
+				closeAllLists();
+		  }
+	  });
+	  function addActive(x) {
+		/*a function to classify an item as "active":*/
+		if (!x) return false;
+		/*start by removing the "active" class on all items:*/
+		removeActive(x);
+		if (currentFocus >= x.length) currentFocus = 0;
+		if (currentFocus < 0) currentFocus = (x.length - 1);
+		/*add class "autocomplete-active":*/
+		x[currentFocus].classList.add("autocomplete-active");
+	  }
+	  function removeActive(x) {
+		/*a function to remove the "active" class from all autocomplete items:*/
+		for (var i = 0; i < x.length; i++) {
+		  x[i].classList.remove("autocomplete-active");
+		}
+	  }
+	  function closeAllLists(elmnt) {
+		/*close all autocomplete lists in the document,
+		except the one passed as an argument:*/
+		var x = document.getElementsByClassName("autocomplete-items");
+		for (var i = 0; i < x.length; i++) {
+		  if (elmnt != x[i] && elmnt != inp) {
+			x[i].parentNode.removeChild(x[i]);
+		  }
+		}
+	  }
+	  /*execute a function when someone clicks in the document:*/
+	  document.addEventListener("click", function (e) {
+		  closeAllLists(e.target);
+	  });
+}
+
+function autocompleteUpdate(inp, arr) {
+	  /*the autocomplete function takes two arguments,
+	  the text field element and an array of possible autocompleted values:*/
+	  var currentFocus;
+	  /*execute a function when someone writes in the text field:*/
+	  inp.addEventListener("input", function(e) {
+		  var a, b, i, val = this.value;
+		  /*close any already open lists of autocompleted values*/
+		  closeAllLists();
+		  if (!val) { return false;}
+		  currentFocus = -1;
+		  /*create a DIV element that will contain the items (values):*/
+		  a = document.createElement("DIV");
+		  a.setAttribute("id", this.id + "autocomplete-list");
+		  a.setAttribute("class", "autocomplete-items");
+		  /*append the DIV element as a child of the autocomplete container:*/
+		  this.parentNode.appendChild(a);
+		  /*for each item in the array...*/
+		  for (i = 0; i < arr.length; i++) {
+			/*check if the item starts with the same letters as the text field value:*/
+			if (arr[i].toUpperCase().includes(val.toUpperCase())) {
+			  /*create a DIV element for each matching element:*/
+			  b = document.createElement("DIV");
+			  /*x*/
+			  b.innerHTML = arr[i];
+			  /*insert a input field that will hold the current array item's value:*/
+			  b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+			  /*execute a function when someone clicks on the item value (DIV element):*/
+			  b.addEventListener("click", function(e) {
+				  /*insert the value for the autocomplete text field:*/
+				  inp.value = this.getElementsByTagName("input")[0].value;
+				  /*close the list of autocompleted values,
+				  (or any other open lists of autocompleted values:*/
+				  closeAllLists();
+			  });
+			  a.appendChild(b);
+			}
+		  }
+	  });
+	 
+	  function closeAllLists(elmnt) {
+		/*close all autocomplete lists in the document,
+		except the one passed as an argument:*/
+		var x = document.getElementsByClassName("autocomplete-items");
+		for (var i = 0; i < x.length; i++) {
+		  if (elmnt != x[i] && elmnt != inp) {
+			x[i].parentNode.removeChild(x[i]);
+		  }
+		}
+	  }
+
+}
+
+/* ---------------------------------------------- SEARCH FUNCTION --------------------------------------------- */
+
+function search(dir) {
+
+	searchTerm = document.getElementById("tableSearch").value.toLowerCase();
+	if (searchTerm == "")
+	{
+		document.getElementById("resultCount").innerHTML="";
+		return;
+	}
+		
+	const ALLSpoilerToggle = document.getElementById("ALLSpoilerToggle");
+	if (ALLSpoilerToggle.checked)
+	{		
+		cells = Array.from(document.querySelectorAll('.contentRow > td')).filter(element => element.textContent.toLowerCase().replace(/(\r\n|\n|\r)/gm, " ").replace(/\u00a0/g, ' ').includes(searchTerm) && !element.innerHTML.includes("<table"));
+	} else {
+		cells = Array.from(document.querySelectorAll('.contentRow > td:not(.spoiler)')).filter(element => element.textContent.toLowerCase().replace(/(\r\n|\n|\r)/gm, " ").replace(/\u00a0/g, ' ').includes(searchTerm) && !element.innerHTML.includes("<table"));
+	}
+	if (cells.length == 0)
+	{
+		document.getElementById("tableSearch").style.backgroundColor="#FF000040";
+		document.getElementById("resultCount").innerHTML="0 results";
+	}
+	else if (searchTerm != G_searchterm)
+	{
+		G_searchterm = searchTerm
+		
+		if (dir == "up")
+		{
+			cells[cells.length-1].scrollIntoView({behavior:"smooth"});
+			blinkElement(cells[cells.length-1]);
+			G_searchresulti = cells.length-1;
+		}
+		else
+		{
+			cells[0].scrollIntoView({behavior:"smooth"});
+			blinkElement(cells[0]);
+			G_searchresulti = 0;
+		}
+		
+		document.getElementById("resultCount").innerHTML="Result " + (G_searchresulti+1) + " of " + cells.length;
+	}
+	else if (searchTerm == G_searchterm)
+	{
+		if (dir == "up")
+		{
+			G_searchresulti--;
+			if (G_searchresulti < 0) {G_searchresulti = cells.length-1;}
+		}
+		else
+		{
+			G_searchresulti++;
+			if (G_searchresulti > cells.length-1) {G_searchresulti = 0;}
+		}
+		
+		cells[G_searchresulti].scrollIntoView({behavior:"smooth"});
+		blinkElement(cells[G_searchresulti]);	
+		
+		document.getElementById("resultCount").innerHTML="Result " + (G_searchresulti+1) + " of " + cells.length;
+	}
+
+}
+
 
 /* ------------------------------------------------------------------------------------------------------------
    -------------------------------------------------- ONLOAD --------------------------------------------------
    ------------------------------------------------------------------------------------------------------------ */
 
 window.onload = function() {
-	
+
+	// Draw the SVG overlay
 	drawLines();
 	
+	// Add shake animation to spoiler elements
 	for (const item of document.getElementsByClassName('spoiler')) {
 		item.onmousedown = function(){
 			item.style.setProperty("--spoilerTransition", "4s");
@@ -637,9 +918,14 @@ window.onload = function() {
 		}
 	}
 	
+	// Uncheck all spoiler toggles
 	Array.from(document.getElementsByClassName("spoilerToggle")).forEach((toggle) => {
 		toggle.checked = false;
 	});
+	
+	//Get cell contents for search suggestions
+	autocompleteSetup(document.getElementById("tableSearch"), compileSuggestions());
+	
 	
 	const afterhash = window.location.hash.substring(1);
 	if (afterhash) {blink(afterhash);}

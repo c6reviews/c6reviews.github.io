@@ -18,6 +18,64 @@ td {
   100% { transform: skewY(-10deg) rotate(8.5deg); }
 }
 
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #909090;
+  border-bottom: none;
+  /*border-top: none;*/
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 4px 3px;
+  cursor: pointer;
+  background-color: #181818; 
+  border-bottom: 1px solid #909090; 
+  color: #C0C0C0;
+  font-size: small;
+  height: fit-content;
+  line-height: 1;
+  text-align: left;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #383838; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+input[type=text] {
+	background-color: #333;
+	color: white;
+	border: 1px solid gray;
+	border-radius: 3px;
+}
+input[type=button] {
+	background-color: #00000000;
+	color: #C0C0C0;
+	border: 1px solid #C0C0C0;
+	cursor: pointer;
+}
+input[type=button]:hover {
+	background-color: #1b8aba;
+	color: white;
+}
+
 /* ------------------------- TOP/BOTTOM BUTTONS ------------------------- */
 #toTopButton {
   /* Supplements main.css */
@@ -175,8 +233,13 @@ td {
 }
 .spoilerSwitch {
 	display: block;
-	margin: 15px;
-	padding: 5px;
+	position: relative;
+	margin: 5px;
+	padding: 3px;
+	font-size: small;
+}
+.spoilerSwitch .switch {
+	vertical-align: text-bottom;
 }
 
 /* ------------------------- MISC ------------------------- */
