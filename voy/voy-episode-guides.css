@@ -38,13 +38,15 @@
 	line-height: 1.1;
 	scroll-margin-top: 50px;
 	padding: 15px;
+	font-style: italic;
 }
 .seasonName {
 	display: block;
 	text-align: center;
 	margin-bottom: 25px;
-	font-size: x-large;
-	text-decoration: underline;
+	font-family: BB, Roboto, sans-serif;
+	font-size: xx-large;
+	font-style: normal;
 }
 
 /* ---------------------------------------- ------------ ---------------------------------------- */
@@ -174,7 +176,9 @@
 			text-align: left;
 			font-size: xx-large;
 			height: 36px;
+			font-family: BBI, Roboto, sans-serif;
 			font-weight: bold;
+			padding-bottom: 0px;
 		}
 		.titleMarginBox {
 			width: auto;
