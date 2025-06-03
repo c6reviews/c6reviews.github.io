@@ -4,7 +4,8 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="main.css?v=1.2.1">
+<meta property="og:image" content="https://c6reviews.com/images/ogimage.png">
+<link rel="stylesheet" href="main.css?v=1.2.2">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <title>C6 | Star Trek Episode Guides</title>
@@ -12,11 +13,11 @@
 
 <body>
 
-<div class="c6Left"><img src="images/c6reviews-vert.png" alt="c6reviews"></div>
+<div class="c6Left"><a href="index.html"><img src="images/c6reviews-vert.png" alt="c6reviews"></a></div>
 	<div class="pageTitleImage"><img src="images/main-header.png" alt="Starfleet delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
 	<div class="pageTitleContainer">
 		<div class="pageTitle">
-			<img src="images/c6reviews-hor.png" style="width:350px" alt="c6reviews"><br>Star Trek Episode Guides
+			<a href="index.html"><img src="images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br>Star Trek Episode Guides
 			<span class="pageSubtitle">Site Updates</span>
 		</div>
 	</div>
@@ -25,13 +26,25 @@
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div>
 
-<div class="content">
+<!--<div class="content">-->
 
 	<table class="updateTable">
 		<tr>
-			<th>Date</th>
+			<th style="width:150px;">Date</th>
 			<th>Version</th>
 			<th style="text-align:left;padding-left: 35px;">Description</th>
+		</tr>
+		<tr>
+			<td><span class="updateDate">June 3, 2025</span></td>
+			<td>1.2.2</td>
+			<td>
+				<ul>
+					<li>When sorting episode tables with Title Sort, episode titles are now displayed with the leading article moved to the end. (e.g. &ldquo;Chute, The&rdquo; instead of &ldquo;The Chute&rdquo;)</li>
+					<li>Added an entirely stupid (and poorly-coded) mini-game to the 404 page.</li>
+					<li>Other general quality improvements and fixes including but not limited to:<br>
+					<div class="minorUpdates">The "C6Reviews" banners at the top and top left now link back to the home page; changed &lt; &gt; symbols to nicer-looking chevrons ❰ ❱ in all timelines; added custom OpenGraph images to all pages, not just the Home page; updated the layout and content of the Home, About, and Updates pages; and more hyphen work, if you can believe it.</div>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<td><span class="updateDate">May 10, 2025</span></td>
@@ -41,18 +54,20 @@
 					<li>Added a search bar to the <a href="timeline/index.html">Star Trek Universe Master Timeline</a>, along with some other style and quality updates.</li>
 					<li>Adjusted color coding on all timelines to be WCAG AA compliant.</li>
 					<li>Updated various fonts and styles throughout the site.</li>
-					<li>A few fixes to the recently-released <a href="voy/index.html"><em>Star Trek: Voyager</em></a> guide.</li>
+					<li>Other general quality improvements and fixes including but not limited to:<br>
+					<div class="minorUpdates">Re-wrote the About page; improved the look of the spoiler menu on the master timeline; added color coding and updated episode-specific timelines; worked toward standardizing the use of dashes and hyphens across the site (I know, try to contain your excitement about that one).</div>
 				</ul>
 			</td>
 		</tr>
-		<tr>
+		<tr class="dotRelease">
 			<td><span class="updateDate">May 4, 2025</span></td>
 			<td>1.2.0</td>
 			<td>
 				<ul>
 					<li>The <a href="voy/index.html"><em>Star Trek: Voyager</em></a> Episode Guide just dropped!!</li>
 					<li>Added a few minor events to the <a href="timeline/index.html">Star Trek Universe Master Timeline</a>.</li>
-					<li>Other general quality improvements and fixes.</li>
+					<li>Other general quality improvements and fixes including but not limited to:<br>
+					<div class="minorUpdates">Fixed an error where filtering episode lists by &quot;Recommended&quot; would also display &quot;Highly Recommended&quot; episodes; further standardized episode &quot;quotes&quot;; added color coding to series timelines; added an OpenGraph image for social media link previews; spruced up the Section 31 movie review page.</div>
 				</ul>
 			</td>
 		</tr>
@@ -62,34 +77,33 @@
 			<td>
 				<ul>
 					<li>Added some photos for series and important events to the <a href="timeline/index.html">Star Trek Universe Master Timeline</a>, plus some other small improvements.</li>
-					<li>Added season descriptions and episode air dates to the <em><a href="ds9/index.html">Deep Space Nine</a></em> guide.</li>
-					<li>Linked episode-specific timelines to the master timeline.</li>
+					<li>Added season descriptions and episode air dates to the <em><a href="ds9/index.html">Star Trek: Deep Space Nine</a></em> guide.</li>
+					<li>Linked series- and episode-specific timelines to the master timeline.</li>
 				</ul>
 			</td>
 		</tr>
-		<tr>
+		<tr class="dotRelease">
 			<td><span class="updateDate">February 28, 2025</span></td>
 			<td>1.1.0</td>
 			<td><ul>
 					<li>The <a href="timeline/index.html">Star Trek Universe Master Timeline</a> is here! I am particularly excited about this one.</li>
-					<li>Other general quality improvements and fixes.</li>
+					<li>Other general quality improvements and fixes including but not limited to:<br>
+					<div class="minorUpdates">Reorganized the home page; made episode &quot;quotes&quot; consistent across the DS9 guide to match the upcoming VOY guide; added smooth scroll to some places it was missing.</div>
+					</li>
 				</ul>
 			</td>
 		</tr>
-		<tr>
+		<tr class="majorRelease">
 			<td><span class="updateDate">February 1, 2025</span></td>
 			<td>1.0.0</td>
 			<td><ul>
-					<li>Version 1.0 of the site is launched with its first and only series guide, <em><a href="ds9/index.html">Deep Space Nine</a></em>, and a bonus review of <em><a href="s31.html">Star Trek: Section 31</a></em>. More to come!</li>
+					<li>Version 1.0 of the site is launched with its first and only series guide, <em><a href="ds9/index.html">Star Trek: Deep Space Nine</a></em>, and a bonus review of <em><a href="s31.html">Star Trek: Section 31</a></em>. More to come!</li>
 				</ul>
 			</td>
 		</tr>
 	
 	</table>
-	
-
-	
-</div>
+<!--</div>-->
 
 <div class="pageFooter"><img src="images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">HOME</a>&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 

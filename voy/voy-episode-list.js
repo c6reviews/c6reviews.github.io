@@ -160,20 +160,68 @@ function sortTable(n) {
 			  
 			} else {
 				
+				// Ignore link  
 				if (x.innerHTML.startsWith("<a")) {
 					x = x.querySelectorAll("a")[0];
 					y = y.querySelectorAll("a")[0];
 				}
 				
+				// If sorting by Title
+				if (n == 1)
+				{
+					if (sorttype == "title"){
+						//	x = x.replace(/^('|a\s|an\s|the\s)/, '')
+						//	y = y.replace(/^('|a\s|an\s|the\s)/, '')
+						
+						// Move "the" "a" "an" to the end	
+						var words = x.innerHTML.trim().split(/\s+/);
+						//if (words.length <= 1) {break}
+						
+						if (words[0].toLowerCase() === "the" || words[0].toLowerCase() === "a" || words[0].toLowerCase() === "an")
+						{
+							const wordToMove = words.shift();
+							x.innerHTML = words.join(" ") + ", " + wordToMove;
+						}
+						
+						var words = y.innerHTML.trim().split(/\s+/);
+						//if (words.length <= 1) {break}
+						
+						if (words[0].toLowerCase() === "the" || words[0].toLowerCase() === "a" || words[0].toLowerCase() === "an")
+						{
+							const wordToMove = words.shift();
+							y.innerHTML = words.join(" ") + ", " + wordToMove;
+						}
+					}
+					
+					if (sorttype == "strictaz"){
+						//	x = x.replace(/^('|a\s|an\s|the\s)/, '')
+						//	y = y.replace(/^('|a\s|an\s|the\s)/, '')
+						
+						// Move "the" "a" "an" to the beginning
+						var words = x.innerHTML.trim().split(/\s+/);
+						//if (words.length <= 1) {break}
+						
+						if (words[words.length-1].toLowerCase() === "the" || words[words.length-1].toLowerCase() === "a" || words[words.length-1].toLowerCase() === "an")
+						{
+							const wordToMove = words.pop();
+							x.innerHTML = (wordToMove + " " + words.join(" ")).slice(0, -1);
+						}
+						
+						var words = y.innerHTML.trim().split(/\s+/);
+						//if (words.length <= 1) {break}
+						
+						if (words[words.length-1].toLowerCase() === "the" || words[words.length-1].toLowerCase() === "a" || words[words.length-1].toLowerCase() === "an")
+						{
+							const wordToMove = words.pop();
+							y.innerHTML = (wordToMove + " " + words.join(" ")).slice(0, -1);
+						}
+					}
+					
+				}
+				
+				// Ignore leading '
 				x = x.innerHTML.toLowerCase().replace(/^(')/, '');
 				y = y.innerHTML.toLowerCase().replace(/^(')/, '');
-				
-				if (sorttype == "title"){
-					x = x.replace(/^('|a\s|an\s|the\s)/, '')
-					y = y.replace(/^('|a\s|an\s|the\s)/, '')
-				}
-
-
 				if (dir == "asc") {
 					if (x > y) {
 						// If so, mark as a switch and break the loop:
