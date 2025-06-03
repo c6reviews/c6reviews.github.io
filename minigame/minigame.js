@@ -3,7 +3,7 @@
 //********************************************************************************************
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-ctx.font = "18px Roboto";
+ctx.font = "18px Roboto, sans-serif";
 
 
 //********************************************************************************************
@@ -103,15 +103,15 @@ mushroom.onload = function() {
 };
 
 ctx.fillStyle = "white";
-ctx.font = "18px Roboto";
+ctx.font = "18px Roboto, sans-serif";
 ctx.fillText("This is PICARD. Move him around with the arrow keys or the WASD keys.",110,90);
 ctx.fillText("Collect the FIVE LIGHTS in order, within 30 seconds.",255,170);
 ctx.fillText("Don't get too close to GUL MADRED, because he takes up more pixels",130,270);
 ctx.fillText("than he should, and he will freeze you in place for 5 seconds!",130,295);
 ctx.fillText("Pick up the RAW TASPAR EGG for a speed boost!",130,378);
-ctx.font = "30px Roboto";
+ctx.font = "30px Roboto, sans-serif";
 ctx.fillText("Click anywhere to begin!",225,480);
-ctx.font = "18px Roboto";
+ctx.font = "18px Roboto, sans-serif";
 
 canvas.addEventListener('click', startGame);
 
@@ -128,7 +128,7 @@ function startGame(){
 			
 		//Clear the entire screen and reset default font and color
 		ctx.clearRect(0,20,800,480);	
-		ctx.font = "18px Roboto";
+		ctx.font = "18px Roboto, sans-serif";
 		ctx.fillStyle = "white";
 		
 		//Move the mushroom off-screen until later
@@ -541,7 +541,7 @@ function endGame(type){
 	howmanylights.pause();
 	
 	ctx.clearRect(0,20,800,480);
-	ctx.font = "80px Roboto";
+	ctx.font = "80px Roboto, sans-serif";
 	ctx.fillStyle="white";
 	ctx.fillText("It's over!",250,100);
 	
