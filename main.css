@@ -127,7 +127,7 @@ body li {
 	width: 60px;
 	margin-top: 1px;
 	height: 235px;
-	z-index: -2;
+	/*z-index: -2;*/
 	background-image: linear-gradient(to right, #bb4c1c77, #03030300 80%, #03030300);
 }
 .c6Left img{
@@ -195,7 +195,7 @@ body li {
     font-size: 2.5em;
 	text-wrap: nowrap;
 	color: #C0C0C0;
-	pointer-events: none;
+	/*pointer-events: none;*/
 	line-height: 1;
 }
 .pageTitle{
@@ -269,9 +269,45 @@ body li {
 }
 
 	/* | ---------------------------------------- MAIN INDEX-SPECIFIC CONTENT ---------------------------------------- */
+	.news{
+		width: 80%;
+		display: table;
+		border-top: 3px solid;
+		border-bottom: 3px solid;
+		margin: auto;
+		background-color: #282828EE;
+		padding-bottom: 8px;
+	}
+	.news .highlight{
+		background-color: #BB4C1C55;
+		margin: 8px 3px;
+		padding: 3px;
+		border: 1px solid #E47545;
+		border-radius: 4px;
+		line-height: 1.5;
+	}
+	.news .latest {
+		background-color: #BB4C1C22;
+		margin: 24px 5px 24px 5px;
+		padding: 3px;
+		border-top: 1px solid #E4754544;
+		border-bottom: 1px solid #E4754544;
+		font-size: small;
+		text-align: left;
+	}
+	.news table {
+		border-collapse: collapse;
+		margin: 8px 3px 8px 25px;
+	}
+	.news table tbody tr td{
+		border: 1px dotted;
+		padding: 3px;
+	}
+	
 	.mainIndexTable{
 		width: 90%;
-		margin: auto;
+		margin-right: 0;
+		margin-left: auto;
 	}
 	.mainIndexTable > tbody > tr > td {
 		text-align: center;
@@ -361,17 +397,30 @@ body li {
 		mask-image: linear-gradient(to left, rgba(0,0,0,1),  rgba(0,0,0,0));
 	}
 	.updateDate{
-		color: #E47545;
+		font-size: large;
 		font-weight: bold;
 		margin-right: 8px;
 	}
 	.updateTable{
 		width: 85%;
 		margin: auto;
+		background-color: #181818EE;
 	}
 	.updateTable td,.updateTable th {
 		border: 1px solid #505050;
 		padding: 0px 12px 0px 12px;		
+	}
+	.updateTable .minorUpdates {
+		font-size: small;
+		color: #777;
+		font-style: italic;
+		margin-left: 8px;
+	}
+	.updateTable .majorRelease td {
+		background-color: #BB4C1C55;
+	}
+	.updateTable .dotRelease td {
+		background-color: #BB4C1C22;
 	}
 
 	/* | ---------------------------------------- SERIES INDEX-SPECIFIC CONTENT ---------------------------------------- */
@@ -692,11 +741,11 @@ td.diagonalFalling {
   display: inline-block;
   width: 35px;
   height: 20px;
-  margin-left: 15px;
+  margin-left: 10px;
 }
 .switchLabel {
 	display: inline-block;
-	margin-left: 8px;
+	margin-left: 10px;
 }
 .switch input {
   opacity: 0;
@@ -710,7 +759,7 @@ td.diagonalFalling {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #999;
   -webkit-transition: .4s;
   transition: .4s;
 }
