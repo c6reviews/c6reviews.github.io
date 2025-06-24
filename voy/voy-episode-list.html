@@ -4,9 +4,9 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.2.2">
-<link rel="stylesheet" href="voy.css?v=1.2.2">
-<link rel="stylesheet" href="voy-episode-list.css?v=1.2.2">
+<link rel="stylesheet" href="../main.css?v=1.3.0">
+<link rel="stylesheet" href="voy.css?v=1.3.0">
+<link rel="stylesheet" href="voy-episode-list.css?v=1.3.0">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 <meta property="og:image" content="https://c6reviews.com/voy/images/ogimage.png">
 
@@ -34,7 +34,7 @@
 <div id="mainSidenav" class="sidenav">
 	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	<a href="index.html"><span style="font-size:large">←</span> VOY Episode Guide Home</a><br>
-	<img src="../images/voy-title.png" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="voy logo"><br>
+	<a href="index.html"><img src="../images/voy-title.png" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="voy logo"></a><br>
 	<a href="voy-episode-list.html" style="text-align:center">Full Episode List</a>
 	<div class="sidenavseasons">
 		Season: 
@@ -96,9 +96,9 @@
 			<th style="width:100px;text-align:left" onclick="sortTable(0)">Episode <span id="0asc" class="sortarrows">↿</span><span id="0desc" class="sortarrows">⇂</span></th>
 			<th style="width:auto;text-align:left" onclick="sortTable(1)">Title <span id="1asc" class="sortarrows">↿</span><span id="1desc" class="sortarrows">⇂</span>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<span style="font-weight:normal;font-size:small">
-					<label class="radioContainer"><input type="radio" class="sorttype" value="title" name="sorttype" onClick="" checked>Title Sort&nbsp;<span class="radioDot"></span></label>&nbsp;&nbsp;
-					<label class="radioContainer"><input type="radio" class="sorttype" value="strictaz" name="sorttype" onClick="">Strict A-Z Sort&nbsp;<span class="radioDot"></span></label>
+				<span style="font-weight:normal;font-size:x-small">
+					<label class="radioContainer"><input type="radio" class="sorttype" value="strictaz" name="sorttype" onClick="" checked >Strict A-Z Sort&nbsp;<span class="radioDot"></span></label>&nbsp;&nbsp;
+					<label class="radioContainer"><input type="radio" class="sorttype" value="title" name="sorttype" onClick="" >Title Sort (ignore the, a, an)&nbsp;<span class="radioDot"></span></label>
 				</span>
 			</th>
 			<th style="width:150px" onclick="sortTable(2)">Tags <span id="sortarrows"><span id="2asc" class="sortarrows">↿</span><span id="2desc" class="sortarrows">⇂</span></span></th>

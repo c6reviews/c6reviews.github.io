@@ -422,6 +422,11 @@ body li {
 	.updateTable .dotRelease td {
 		background-color: #BB4C1C22;
 	}
+	.updateTable .newGuideRelease {
+		border: 1px solid white;
+		border-radius: 5px;
+		padding: 3px;
+	}
 
 	/* | ---------------------------------------- SERIES INDEX-SPECIFIC CONTENT ---------------------------------------- */
 	.seriesInfoCard {
@@ -603,6 +608,8 @@ body li {
 .timelineTable .joinMiddle {
 	border-top: 2px solid;
 	border-bottom: 2px solid;
+	border-left: none !important;
+	border-right: none !important;
 	border-color: #C0C0C0;
 }
 .timelineTable .joinRight {
