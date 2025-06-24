@@ -76,6 +76,29 @@
 }
 
 
+/* ---------------------------------------- SEASONS TABLE ---------------------------------------- */
+
+.seasonsTable {
+	margin:auto;
+}
+.seasonsTable td {
+	border: 1px solid #1B8ABA88;
+	text-align:center;
+	padding:0px;
+	font-size:large;
+	font-weight:bold;
+	vertical-align:bottom;
+}
+.seasonsTable div {
+	text-align:center;
+	padding:8px;
+	font-size:large;
+	font-weight:bold;
+	vertical-align:bottom;
+	height: 100%;
+}
+
+
 /* ---------------------------------------- STARS ---------------------------------------- */
 .stars0 {
 	font-size: x-large;

@@ -1,4 +1,4 @@
-﻿/* File version 1.0.0 */
+﻿
 
 /* ----------------------------------------------------- GLOBAL VARIABLES ----------------------------------------------------- */
 
@@ -101,7 +101,7 @@ function createTable(array) {
 		var cellContents = cell.innerHTML;
 		var season = cellContents.substring(0,1);
 		var episode = cellContents.substring(2,4);
-		var link = "voy-s" + season + ".html#e" + episode;
+		var link = "pro-s" + season + ".html#e" + episode;
 		
 		var titleCell = cell.parentElement.querySelectorAll("td")[1];
 		cellContents = titleCell.innerHTML;
@@ -160,7 +160,7 @@ function sortTable(n) {
 			  
 			} else {
 				
-				// Ignore link  
+				// Ignore link
 				if (x.innerHTML.startsWith("<a")) {
 					x = x.querySelectorAll("a")[0];
 					y = y.querySelectorAll("a")[0];
@@ -222,6 +222,8 @@ function sortTable(n) {
 				// Ignore leading '
 				x = x.innerHTML.toLowerCase().replace(/^(')/, '');
 				y = y.innerHTML.toLowerCase().replace(/^(')/, '');
+				
+				
 				if (dir == "asc") {
 					if (x > y) {
 						// If so, mark as a switch and break the loop:
@@ -667,170 +669,45 @@ function removeSeasonSeparator() {
 window.onload = function() {
 
 var csvString = `Episode,Title,Tags,Recommendation,Rating
-1x01/02 [FL],Caretaker,,🕶 ‼ Must Watch/Bare Minimum,5.9
-1x03,Parallax,🕖,✔ Recommended,4.5
-1x04,Time and Again,🕖,-,6.6
-1x05,Phage,,🕶 Must Watch,5.7
-1x06,The Cloud,,-,4.2
-1x07,Eye of the Needle,,✔ Recommended,7.3
-1x08,Ex Post Facto,,-,4.3
-1x09,Emanations,,-,5.0
-1x10,Prime Factors,,-,6.0
-1x11,State of Flux,,🕶 Must Watch,6.2
-1x12,Heroes and Demons,🟨,-,4.3
-1x13,Cathexis,,-,4.1
-1x14,Faces,,✔ Recommended,6.2
-1x15,Jatrel,,-,5.2
-1x16,Learning Curve,,-,4.2
-2x01,The 37's,,✔ Recommended,5.6
-2x02,Initiations,,-,4.3
-2x03,Projections,🟨,✔ Recommended,7.8
-2x04,Elogium,,-,2.5
-2x05,Non Sequitur,👬🌎,♦ Optional,4.3
-2x06,Twisted,,-,3.9
-2x07,Parturition,,-,4.0
-2x08,Persistence of Vision,,-,4.8
-2x09,Tattoo,,✖ Notably Bad,1.9
-2x10,Cold Fire,,✔ Recommended,5.1
-2x11,Maneuvers,,🕶 Must Watch,5.9
-2x12,Resistance,♥️,-,5.8
-2x13,Prototype,,✔ Recommended,6.1
-2x14,Alliances,,✔ Recommended,6.0
-2x15,Threshold,💩,✖ Notably Bad,0.5
-2x16,Meld,,✔ Recommended,7.0
-2x17,Dreadnought,♥️,-,7.4
-2x18,Death Wish,Q⚖️,✔ Recommended,7.8
-2x19,Lifesigns,,✔ Recommended,5.9
-2x20,Investigations,,✔ Recommended,5.2
-2x21,Deadlock,👬,✔ Recommended,7.3
-2x22,Innocence,,-,2.9
-2x23,The Thaw,👺V🟡,✔+ Highly Recommended,6.8
-2x24,Tuvix,,✔ Recommended,4.6
-2x25,Resolutions,,-,4.8
-2x26,"Basics, Part I",,🕶 ‼ Must Watch/Bare Minimum,6.2
-3x01,"Basics, Part II",,🕶 ‼ Must Watch/Bare Minimum,6.2
-3x02,Flashback,🕖♥️V🟡,🕶 Must Watch,7.3
-3x03,The Chute,,-,4.5
-3x04,The Swarm,,-,5.7
-3x05,False Profits,,-,4.2
-3x06,Remember,,-,5.9
-3x07,Sacred Ground,,-,3.8
-3x08 & 09,Future's End (Parts I and II),🕖🌎A🟡,🕶 Must Watch,8.8
-3x10,Warlord,♥️,-,5.6
-3x11,The Q and the Grey,Q,♦ Optional,4.7
-3x12,Macrocosm,,-,3.9
-3x13,Fair Trade,,-,5.1
-3x14,Alter Ego,,-,5.8
-3x15,Coda,,-,2.7
-3x16,Blood Fever,,-,4.5
-3x17,Unity,(🤖),✔ Recommended,6.1
-3x18,Darkling,,-,3.0
-3x19,Rise,,-,5.2
-3x20,Favorite Son,,-,3.0
-3x21,Before and After,🕖,🕶 Must Watch,7.9
-3x22,Real Life,,-,5.3
-3x23,Distant Origin,,✔ Recommended,7.6
-3x24,Displaced,,-,5.5
-3x25,Worst Case Scenario,🟨,✔ Recommended,7.7
-3x26,Scorpion (Part I),🤖🥈A🟡,🕶 ‼ Must Watch/Bare Minimum,9.7
-4x01,"Scorpion, Part II",🤖🥈A🟡,🕶 ‼ Must Watch/Bare Minimum,9.7
-4x02,The Gift,,🕶 Must Watch,6.3
-4x03,Day of Honor,,✔ Recommended,7.1
-4x04,Nemesis,,-,3.9
-4x05,Revulsion,,-,5.0
-4x06,The Raven,(🤖),🕶 Must Watch,6.1
-4x07,Scientific Method,,-,6.2
-4x08 & 09,Year of Hell (Parts I and II),🕖🥇A🟡,🕶 ‼ Must Watch/Bare Minimum,9.6
-4x10,Random Thoughts,,-,4.8
-4x11,Concerning Flight,,-,5.7
-4x12,Mortal Coil,,-,5.3
-4x13,Waking Moments,,-,6.1
-4x14,Message in a Bottle,♥️V🟡,🕶 ‼ Must Watch/Bare Minimum,8.6
-4x15,Hunters,,✔ Recommended,6.6
-4x16,Prey,,🕶 Must Watch,6.4
-4x17,Retrospect,,-,4.2
-4x18 & 19,The Killing Game (Parts I and II),🟨🌎V🟡,🕶 Must Watch,6.7
-4x20,Vis à Vis,,-,4.7
-4x21,The Omega Directive,,✔ Recommended,7.2
-4x22,Unforgettable,,-,4.5
-4x23,Living Witness,👬,✔+ Highly Recommended,9.2
-4x24,Demon,,-,4.5
-4x25,One,,✔ Recommended,7.1
-4x26,Hope and Fear,,🕶 Must Watch,7.5
-5x01,Night,,🕶 Must Watch,5.8
-5x02,Drone,(🤖),✔ Recommended,6.5
-5x03,Extreme Risk,,✔ Recommended,4.8
-5x04,In the Flesh,🌎,-,5.0
-5x05,Once Upon a Time,,-,4.5
-5x06,Timeless,🕖A🟡,🕶 Must Watch,9.0
-5x07,Infinite Regress,,-,6.0
-5x08,Nothing Human,,✔ Recommended,5.5
-5x09,Thirty Days,,-,5.9
-5x10,Counterpoint,V🟡,✔ Recommended,7.6
-5x11,Latent Image,,✔ Recommended,7.4
-5x12,Bride of Chaotica!,🟨🎭,✔ Recommended,7.5
-5x13,Gravity,♥️,-,6.5
-5x14,Bliss,,-,5.9
-5x15/16 [FL],Dark Frontier,🤖V🟡,🕶 ‼ Must Watch/Bare Minimum,9.1
-5x17,The Disease,,-,3.4
-5x18,Course: Oblivion,P⚑,-,5.1
-5x19,The Fight,,✖ Notably Bad,1.4
-5x20,Think Tank,,✔ Recommended,7.1
-5x21,Juggernaut,,-,5.0
-5x22,Someone to Watch Over Me,,✔ Recommended,6.4
-5x23,11:59,P⚑,-,3.8
-5x24,Relativity,🕖♥️🥉,✔+ Highly Recommended,9.2
-5x25,Warhead,,-,6.6
-5x26,Equinox (Part I),A🟡,🕶 Must Watch,7.5
-6x01,"Equinox, Part II",A🟡,🕶 Must Watch,7.5
-6x02,Survival Instinct,(🤖),✔ Recommended,6.8
-6x03,Barge of the Dead,,-,5.3
-6x04,Tinker Tenor Doctor Spy,,✔ Recommended,8.1
-6x05,Alice,,-,4.8
-6x06,Riddles,,-,6.3
-6x07,Dragon's Teeth,,-,6.0
-6x08,One Small Step,,✔ Recommended,6.7
-6x09,The Voyager Conspiracy,,✔ Recommended,5.9
-6x10,Pathfinder,🌎P⚑V🟡,🕶 ‼ Must Watch/Bare Minimum,7.6
-6x11,Fair Haven,🟨,-,2.4
-6x12,Blink of an Eye,🕖V🟡,✔ Recommended,7.7
-6x13,Virtuoso,,-,5.2
-6x14,Memorial,,-,5.1
-6x15,Tsunkatse,,-,4.2
-6x16,Collective,(🤖),✔ Recommended,5.0
-6x17,Spirit Folk,🟨🎭,-,2.2
-6x18,Ashes to Ashes,,-,5.5
-6x19,Child's Play,,✔ Recommended,5.8
-6x20,Good Shepherd,,-,4.0
-6x21,Live Fast and Prosper,,-,5.6
-6x22,Muse,,-,6.9
-6x23,Fury,🕖,✔ Recommended,4.6
-6x24,Life Line,🌎,🕶 Must Watch,8.3
-6x25,The Haunting of Deck Twelve,,-,5.1
-6x26,Unimatrix Zero (Part I),🤖,🕶 Must Watch,4.2
-7x01,"Unimatrix Zero, Part II",🤖,🕶 Must Watch,4.2
-7x02,Imperfection,(🤖),✔+ Highly Recommended,7.7
-7x03,Drive,♥️,-,6.6
-7x04,Repression,,-,4.3
-7x05,Critical Care,♥️,✔ Recommended,7.2
-7x06,Inside Man,🌎,✔ Recommended,6.5
-7x07,Body and Soul,,-,5.9
-7x08,Nightingale,,-,3.3
-7x09/10 [FL],Flesh and Blood,🟨,✔ Recommended,6.4
-7x11,Shattered,🕖,✔ Recommended,6.9
-7x12,Lineage,,✔ Recommended,5.7
-7x13,Repentance,,-,5.8
-7x14,Prophecy,,-,4.8
-7x15,The Void,V🟡,-,7.0
-7x16 & 17,Workforce (Parts I and II),,✔ Recommended,7.3
-7x18,Human Error,,-,3.8
-7x19,Q2,Q,♦ Optional,5.2
-7x20,"Author, Author",⚖️V🟡,✔ Recommended,7.4
-7x21,Friendship One,,-,4.7
-7x22,Natural Law,,-,5.5
-7x23,Homestead,,🕶 Must Watch,6.0
-7x24,Renaissance Man,,✔ Recommended,6.6
-7x25/26 [FL],Endgame,🕖🤖A🟡,🕶 ‼ Must Watch/Bare Minimum,7.4`;
+1x01/02,Lost and Found,,🕶 ‼ Must Watch/Bare Minimum,5.0
+1x03,Starstruck,,✔ Recommended,4.0
+1x04,Dream Catcher,,🕶 Must Watch,4.7
+1x05,Terror Firma,,🕶 ‼ Must Watch/Bare Minimum,5.9
+1x06,Kobayashi,,-,5.9
+1x07,First Con-tact,,-,4.1
+1x08,Time Amok,🕖♥️🥉,✔ Recommended,7.3
+1x09,"A Moral Star, Part 1",,🕶 ‼ Must Watch/Bare Minimum,5.9
+1x10,"A Moral Star, Part 2",,🕶 ‼ Must Watch/Bare Minimum,7.3
+1x11,Asylum,,🕶 Must Watch,4.1
+1x12,Let Sleeping Borg Lie,🤖,-,3.9
+1x13,All the World's a Stage,♥️,✔ Recommended,7.2
+1x14,Crossroads,,✔ Recommended,5.5
+1x15,Masquerade,,-,5.0
+1x16,Preludes,,🕶 Must Watch,5.1
+1x17,Ghost in the Machine,🟨,-,3.3
+1x18,Mindwalk,,✔ Recommended,5.3
+1x19,"Supernova, Part 1",,🕶 ‼ Must Watch/Bare Minimum,6.6
+1x20,"Supernova, Part 2",,🕶 ‼ Must Watch/Bare Minimum,7.8
+2x01,"Into the Breach, Part I",,✔ Recommended,4.3
+2x02,"Into the Breach, Part II",,🕶 ‼ Must Watch/Bare Minimum,4.3
+2x03,Who Saves the Saviors,,🕶 ‼ Must Watch/Bare Minimum,6.0
+2x04,Temporal Mechanics 101,,✔ Recommended,5.3
+2x05,Observer's Paradox,,✔ Recommended,4.9
+2x06,Imposter Syndrome,,-,5.9
+2x07,The Fast and the Curious,,-,2.4
+2x08,Is There in Beauty No Truth?,,-,5.1
+2x09,"The Devourer of All Things, Part I",♥️🥈,🕶 ‼ Must Watch/Bare Minimum,7.9
+2x10,"The Devourer of All Things, Part II",,🕶 ‼ Must Watch/Bare Minimum,6.9
+2x11,"Last Flight of the Protostar, Part I",,✔ Recommended,7.4
+2x12,"Last Flight of the Protostar, Part II",️,✔ Recommended,7.4
+2x13,A Tribble Called Quest,,-,4.5
+2x14,Cracked Mirror,♊👬,✔ Recommended,7.1
+2x15,"Ascension, Part I",,🕶 Must Watch,6.1
+2x16,"Ascension, Part II",,♦ Optional,7.3
+2x17,Brink,️,✔ Recommended,5.9
+2x18,Touch of Grey,️,🕶 Must Watch,6.1
+2x19,"Ouroboros, Part I",,🕶 ‼ Must Watch/Bare Minimum,7.7
+2x20,"Ouroboros, Part II",🥇,🕶 ‼ Must Watch/Bare Minimum,9.0`;
 
 	var array = csvToNestedArray(csvString);
 	
