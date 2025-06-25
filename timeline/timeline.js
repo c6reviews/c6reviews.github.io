@@ -73,8 +73,10 @@ function closeLegend() {
 
 window.addEventListener('mouseup',function(event){
 	var menu = document.getElementById("legend");
-	if(menu.style.width == "320px" && !menu.contains(event.target)){
+	var legendtooltip = document.getElementById("ExampleTT");
+	if(menu.style.width == "320px" && !menu.contains(event.target) && !legendtooltip.contains(event.target)){
             closeLegend();
+			closeToolTip(legendtooltip);
         }
 });
 
