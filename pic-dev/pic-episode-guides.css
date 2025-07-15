@@ -123,10 +123,7 @@
 	width: 100%;
 	height: 100%;
 }
-.episodeCardTable > tbody > tr:nth-child(2) > td{
-	/* Make the second row (the detail block) have a minimum height */
-	height: 280px;
-}
+
 
 	/* | ---------------------------------------- EPISODE CARD BLOCKS ---------------------------------------- */
 	.titleBlock {
@@ -156,7 +153,6 @@
 		padding-bottom: 8px;
 	}
 	.lowerTitle {
-		float: right;
 		text-align: right;
 		margin-right: 16px;
 		font-size: x-large;
@@ -489,11 +485,20 @@
 
 			/* ||| --- SCORE BOX --- */
 			.ScoreBox {
-				border: 4px solid #e47545; /*#CCCCCC*/
+				border: 4px solid #e47545;
 				text-align: center;
 				color: #000000;
 				background-color: #ccc;
 				width: 120px;
+				vertical-align:middle;
+				font-weight: bold;
+			}
+			.SeasonPlaceBox {
+				border: 4px solid #e47545;
+				text-align: center;
+				background-color: #333;
+				width:150px;
+				color:white;
 				vertical-align:middle;
 			}
 

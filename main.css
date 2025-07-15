@@ -10,7 +10,7 @@
 
 body {
 	background-color: #181818;
-	color: #C0C0C0;
+	color: #D0D0D0;
 	font-family: Roboto, sans-serif;
 }
 body a {
@@ -109,7 +109,7 @@ body li {
 /* ---------------------------------------- TOOL TIPS ---------------------------------------- */
 .tooltip {
 	display: none;
-	border: 1px solid #C0C0C0;
+	border: 1px solid #D0D0D0;
 	padding: 5px;
 	border-radius:5px;
 	background-color:#031014DD;
@@ -141,7 +141,7 @@ body li {
 	height: 235px;
 	color: #bb4c1c;
 	padding: 0px;
-	line-height: 1.6;
+	line-height: 1.85; /* Min 1.85 for WCAG */
 	/*background-image: linear-gradient(to left, #bb4c1c77, #03030377 80%, #03030377);*/
 	background-image: linear-gradient(to left, #58240dFF, #030303DD 80%, #03030344);
 }
@@ -173,6 +173,34 @@ body li {
 .c6Right .bsky img{
 	margin: 0px auto 3px auto;
 }
+#kofiframe {
+	transition: 0.2s;
+	position: fixed;
+	right: 24px;
+	top: 80px;
+	border: none;
+	border-radius: 20px;
+	background-color: #181818;
+	height: 0px;
+	width: 400px;
+	transform: scale(0.8);
+	z-index:300;
+	overflow: hidden;
+	
+}
+#kofiframe iframe{
+	height: 700px;
+	width: 400px;
+	border: none;
+}
+#koficlose{
+	position:absolute;
+	left: 10px;
+	right: 10px;
+	z-index: 90;
+	font-size: xx-large;
+	cursor: pointer;
+}
 .pageTitleImage {
 	position: fixed;
 	left: 0;
@@ -194,7 +222,7 @@ body li {
 	display: block;
     font-size: 2.5em;
 	text-wrap: nowrap;
-	color: #C0C0C0;
+	color: #D0D0D0;
 	/*pointer-events: none;*/
 	line-height: 1;
 }
@@ -212,7 +240,7 @@ body li {
 	display: block;
     font-size: 28px;
 	text-wrap: nowrap;
-	color: #C0C0C0;
+	color: #D0D0D0;
 }
 .spacer {
 	height: 60px;
@@ -412,9 +440,10 @@ body li {
 	}
 	.updateTable .minorUpdates {
 		font-size: small;
-		color: #777;
+		color: #888;
 		font-style: italic;
-		margin-left: 8px;
+		margin-left: 40px;
+		margin-bottom: 15px;
 	}
 	.updateTable .majorRelease td {
 		background-color: #BB4C1C55;

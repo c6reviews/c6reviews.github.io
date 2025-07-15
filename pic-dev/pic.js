@@ -24,17 +24,17 @@ document.addEventListener('DOMContentLoaded', function() {
 		
 		switch (Array.from(rating.innerHTML)[0]) {
 			case "0":
-				rating.style.color = '#F8393BBF';
+				rating.style.color = '#F8393BF6';
 				break;
 			case "1":
 				if (Array.from(rating.innerHTML)[1] == "0") {
 					rating.style.color = '#03BE4BBF';
 				} else {
-					rating.style.color = '#F95350BF';
+					rating.style.color = '#F95350E3';
 				}
 				break;
 			case "2":
-				rating.style.color = '#FA6D55BF';
+				rating.style.color = '#FA6D55D0';
 				break;
 			case "3":
 				rating.style.color = '#FC975ABF';
@@ -312,7 +312,10 @@ window.onload = function() {
 	});
 	
 	// Check status of master spoiler toggle
-	alwaysShowFullReview(document.getElementById("masterToggle"));
+	if (document.getElementById("masterToggle"))
+	{
+		alwaysShowFullReview(document.getElementById("masterToggle"));
+	}
 
 	var bottomBorder = document.getElementById('bottomBorder');
 	setTimeout(function(){bottomBorder.style.width = '100%'},800);

@@ -2,20 +2,33 @@
 <html lang="en">
 
 <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DM44X85QLJ');
+</script>
+
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.3.0">
-<link rel="stylesheet" href="voy.css?v=1.3.0">
-<link rel="stylesheet" href="voy-episode-list.css?v=1.3.0">
+<link rel="stylesheet" href="../main.css?v=1.3.1">
+<link rel="stylesheet" href="voy.css?v=1.3.1">
+<link rel="stylesheet" href="voy-episode-list.css?v=1.3.1">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 <meta property="og:image" content="https://c6reviews.com/voy/images/ogimage.png">
 
 <script src="voy.js"></script>
 <script src="voy-episode-list.js"></script>
-<title>C6 | VOY Full Episode List</title>
+<title>C6 | VOY Episode List</title>
 </head>
 
 <body>
+
+<div id='kofiframe'><iframe src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'></iframe><span id="koficlose" onclick="document.getElementById('kofiframe').style.height='0px';document.getElementById('kofiframe').style.border='none';">&times;</span></div>
 
 <div class="c6Left"><a href="../index.html"><img src="../images/c6reviews-vert.png" alt="c6reviews"></a></div>
 <div class="pageTitleImage"><img src="images/voy-header.png" alt="The USS Voyager"></div>
@@ -25,7 +38,7 @@
 		<span class="pageSubtitle">Full Episode List</span>
 	</div>
 </div>
-<div class="c6Right"><img src="../images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="../images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"><a href="../index.html" style="margin-top:8px;">HOME</a><a href="../about.html">ABOUT</a><a href="../updates.html">UPDATES</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="../images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+<div class="c6Right"><img src="../images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="../images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"><a href="../index.html" style="margin-top:8px;">HOME</a><a href="../about.html">ABOUT</a><a href="../updates.html">UPDATES</a><a style="cursor:pointer" onclick="x=getComputedStyle(document.getElementById('kofiframe')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframe').style.height=x;document.getElementById('kofiframe').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="../images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div> 
@@ -48,16 +61,20 @@
 	<table id="episodeTable">
 		<tr>
 			<td><div id="filterTotalbox">Showing<br><span id="filterTotal">168</span> of 168<br>episodes</div></td>
-			<td style="text-align:right;padding-right:8px;vertical-align:bottom;">
-				<span style="font-size: 12px;text-decoration:underline">Filter mode</span><br>
-				<div class="filterModeContainer">
-					<label class="radioContainer">AND&nbsp;<input type="radio" class="andorradio" id="andordefault" value="and" name="andor" onClick="setFilters('andor')" checked><span class="radioDot"></span></label><br>
-					<label class="radioContainer">OR&nbsp;<input type="radio" class="andorradio" value="or" name="andor" onClick="setFilters('andor')"><span class="radioDot"></span></label>
+			<td style="padding-right:8px;vertical-align:bottom;position:relative;">
+				<div class="episodeSearchBoxContainer">
+					<input type="text" id="episodeSearchBox" placeholder="Title search" onkeyup="filterTitle()" size="28">
 				</div>
+				<div class="filterModeContainer">
+					<span style="font-size: 12px;text-decoration:underline">Filter mode</span><br>
+					<label class="radioContainer">AND&nbsp;<input type="radio" class="andorradio" id="andordefault" value="and" name="andor" onClick="setFilters('andor')" checked ><span class="radioDot"></span></label><br>
+					<label class="radioContainer">OR&nbsp;<input type="radio" class="andorradio" value="or" name="andor" onClick="setFilters('andor')" ><span class="radioDot"></span></label>
+				</div>
+				
 			</td>
 			<td style="text-align:center;vertical-align:bottom;">
 				<div class="xx-small">Mouse over tags<br>to see description<br><br></div>
-				<input type="text" id="tagFilterTextbox" placeholder="Tags filter" size="12" readonly><span id="tagFilterDropdownArrow" class="dropdownArrow" onclick="toggleFilterBox('tagFilter')">▼</span>
+				<input type="text" id="tagFilterTextbox" placeholder="Tags filter" size="12" onclick="toggleFilterBox('tagFilter')" readonly><span id="tagFilterDropdownArrow" class="dropdownArrow" onclick="toggleFilterBox('tagFilter')">▼</span>
 				<div class="filterDropdownContainer" id="tagFilter" style="transform: translateX(-112px);">
 					<label class="checkContainer"><input type="checkbox" id="tagsfilterall" onClick="setFilters('tagsall')" checked><span class="checkmark"></span><span class="icon"></span>&nbsp;All&nbsp;Tags</label>
 					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="admiral.png" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon">⏺</span>&nbsp;Admiral&nbsp;Pips</label>
@@ -75,7 +92,7 @@
 				</div>
 			</td>
 			<td style="text-align:center;vertical-align:bottom;">
-				<input type="text" id="recommendationFilterTextbox" placeholder="Recommendation filter" size="26" readonly><span id="recommendationFilterDropdownArrow" class="dropdownArrow" onclick="toggleFilterBox('recommendationFilter')">▼</span>
+				<input type="text" id="recommendationFilterTextbox" placeholder="Recommendation filter" size="26" onclick="toggleFilterBox('recommendationFilter')" readonly><span id="recommendationFilterDropdownArrow" class="dropdownArrow" onclick="toggleFilterBox('recommendationFilter')">▼</span>
 				<div class="filterDropdownContainer" id="recommendationFilter" style="transform: translateX(29px);">
 					<label class="checkContainer"><input type="checkbox" id="rnfilterall" onClick="setFilters('rnall')" checked><span class="checkmark"></span><span class="icon"></span>&nbsp;All&nbsp;Recommendations</label>
 					<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="‼" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">‼</span>&nbsp;Bare&nbsp;Minimum</label>
@@ -93,27 +110,25 @@
 			</td>
 		</tr>
 		<tr>
-			<th style="width:100px;text-align:left" onclick="sortTable(0)">Episode <span id="0asc" class="sortarrows">↿</span><span id="0desc" class="sortarrows">⇂</span></th>
-			<th style="width:auto;text-align:left" onclick="sortTable(1)">Title <span id="1asc" class="sortarrows">↿</span><span id="1desc" class="sortarrows">⇂</span>
+			<th style="width:100px;text-align:left" onclick="sortTable(0,event)">Episode <span id="0asc" class="sortarrows">↿</span><span id="0desc" class="sortarrows">⇂</span></th>
+			<th style="width:auto;text-align:left" onclick="sortTable(1,event)">Title <span id="1asc" class="sortarrows">↿</span><span id="1desc" class="sortarrows">⇂</span>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<span style="font-weight:normal;font-size:x-small">
-					<label class="radioContainer"><input type="radio" class="sorttype" value="strictaz" name="sorttype" onClick="" checked >Strict A-Z Sort&nbsp;<span class="radioDot"></span></label>&nbsp;&nbsp;
-					<label class="radioContainer"><input type="radio" class="sorttype" value="title" name="sorttype" onClick="" >Title Sort (ignore the, a, an)&nbsp;<span class="radioDot"></span></label>
+					<label class="radioContainer"><input type="radio" class="sorttype" value="strictaz" name="sorttype" checked >Strict A-Z Sort&nbsp;<span class="radioDot"></span></label>&nbsp;&nbsp;
+					<label class="radioContainer"><input type="radio" class="sorttype" value="title" name="sorttype">Title Sort (ignore the, a, an)&nbsp;<span class="radioDot"></span></label>
 				</span>
 			</th>
-			<th style="width:150px" onclick="sortTable(2)">Tags <span id="sortarrows"><span id="2asc" class="sortarrows">↿</span><span id="2desc" class="sortarrows">⇂</span></span></th>
-			<th style="width:250px" onclick="sortTable(3)">Recommendation <span id="3asc" class="sortarrows">↿</span><span id="3desc" class="sortarrows">⇂</span></th>
-			<th style="width:80px" onclick="sortTable(4)">Rating <span id="4asc" class="sortarrows">↿</span><span id="4desc" class="sortarrows">⇂</span></th>
+			<th style="width:150px" onclick="sortTable(2,event)">Tags <span id="sortarrows"><span id="2asc" class="sortarrows">↿</span><span id="2desc" class="sortarrows">⇂</span></span></th>
+			<th style="width:250px" onclick="sortTable(3,event)">Recommendation <span id="3asc" class="sortarrows">↿</span><span id="3desc" class="sortarrows">⇂</span></th>
+			<th style="width:80px" onclick="sortTable(4,event)">Rating <span id="4asc" class="sortarrows">↿</span><span id="4desc" class="sortarrows">⇂</span></th>
 		</tr>
 		
 	</table>
 </div>
 
-<div class="pageFooter"><img src="../images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html">HOME</a>&nbsp;&nbsp;<a href="../about.html">ABOUT</a>&nbsp;&nbsp;<a href="../updates.html">UPDATES</a>&nbsp;&nbsp;<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="../images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><img src="../images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html">HOME</a>&nbsp;&nbsp;<a href="../about.html">ABOUT</a>&nbsp;&nbsp;<a href="../updates.html">UPDATES</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="x=getComputedStyle(document.getElementById('kofiframe')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframe').style.height=x;document.getElementById('kofiframe').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="../images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 
-	<div id="TTDIV"></div>
-
-
+<div id="TTDIV"></div>
 
 
 <div id="bottomBorder"></div>
