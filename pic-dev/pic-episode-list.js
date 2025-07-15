@@ -1,10 +1,9 @@
-﻿/* File version 1.0.0 */
-
+﻿
 /* ----------------------------------------------------- GLOBAL VARIABLES ----------------------------------------------------- */
 
 var G_sortcol = 0;
 var G_sortdir = "asc";
-
+var G_filterset = document.getElementsByClassName("filterableRow");
 
 /* ----------------------------------------------------- CREATE THE TABLE ----------------------------------------------------- */
 
@@ -124,20 +123,68 @@ function sortTable(n) {
 			  
 			} else {
 				
+				// Ignore link
 				if (x.innerHTML.startsWith("<a")) {
 					x = x.querySelectorAll("a")[0];
 					y = y.querySelectorAll("a")[0];
 				}
 				
+				// If sorting by Title
+				if (n == 1)
+				{
+					if (sorttype == "title"){
+						//	x = x.replace(/^('|a\s|an\s|the\s)/, '')
+						//	y = y.replace(/^('|a\s|an\s|the\s)/, '')
+						
+						// Move "the" "a" "an" to the end	
+						var words = x.innerHTML.trim().split(/\s+/);
+						//if (words.length <= 1) {break}
+						
+						if (words[0].toLowerCase() === "the" || words[0].toLowerCase() === "a" || words[0].toLowerCase() === "an")
+						{
+							const wordToMove = words.shift();
+							x.innerHTML = words.join(" ") + ", " + wordToMove;
+						}
+						
+						var words = y.innerHTML.trim().split(/\s+/);
+						//if (words.length <= 1) {break}
+						
+						if (words[0].toLowerCase() === "the" || words[0].toLowerCase() === "a" || words[0].toLowerCase() === "an")
+						{
+							const wordToMove = words.shift();
+							y.innerHTML = words.join(" ") + ", " + wordToMove;
+						}
+					}
+					
+					if (sorttype == "strictaz"){
+						//	x = x.replace(/^('|a\s|an\s|the\s)/, '')
+						//	y = y.replace(/^('|a\s|an\s|the\s)/, '')
+						
+						// Move "the" "a" "an" to the beginning
+						var words = x.innerHTML.trim().split(/\s+/);
+						//if (words.length <= 1) {break}
+						
+						if (words[words.length-1].toLowerCase() === "the" || words[words.length-1].toLowerCase() === "a" || words[words.length-1].toLowerCase() === "an")
+						{
+							const wordToMove = words.pop();
+							x.innerHTML = (wordToMove + " " + words.join(" ")).slice(0, -1);
+						}
+						
+						var words = y.innerHTML.trim().split(/\s+/);
+						//if (words.length <= 1) {break}
+						
+						if (words[words.length-1].toLowerCase() === "the" || words[words.length-1].toLowerCase() === "a" || words[words.length-1].toLowerCase() === "an")
+						{
+							const wordToMove = words.pop();
+							y.innerHTML = (wordToMove + " " + words.join(" ")).slice(0, -1);
+						}
+					}
+					
+				}
+				
+				// Ignore leading '
 				x = x.innerHTML.toLowerCase().replace(/^(')/, '');
 				y = y.innerHTML.toLowerCase().replace(/^(')/, '');
-				
-				if (sorttype == "title"){
-					x = x.replace(/^('|a\s|an\s|the\s)/, '')
-					y = y.replace(/^('|a\s|an\s|the\s)/, '')
-				}
-
-
 				if (dir == "asc") {
 					if (x > y) {
 						// If so, mark as a switch and break the loop:
@@ -187,6 +234,55 @@ function sortTable(n) {
 
 /* ------------------------------------------------------------ TABLE FILTERS ------------------------------------------------------------ */
 
+function updateFilterCount() {
+	
+	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
+	var displayedRows = 0;
+
+	filterrows.forEach((filterrow) => {
+		if (filterrow.style.display != "none") {
+			displayedRows += 1;
+			if (filterrow.querySelector(".col_episodeNumber").innerHTML.match("&")){
+				displayedRows += 1;
+			}
+		}
+	});
+	
+	document.getElementById("filterTotal").innerHTML = displayedRows;
+}
+
+function filterTitle() {
+	
+	const filterrows = G_filterset;
+	
+	var input, filter, table, td, i, txtValue;
+	input = document.getElementById("episodeSearchBox");
+	filter = input.value.toLowerCase();
+	table = document.getElementById("episodeTable");
+	
+	for (i = 0; i < filterrows.length; i++) {
+		td = filterrows[i].getElementsByClassName("col_episodeTitle")[0];
+		if (td) {
+			txtValue = td.textContent || td.innerText;
+			if (txtValue.toLowerCase().indexOf(filter) > -1) {
+				filterrows[i].style.display = "";
+				const regEx = new RegExp(filter, 'gi');
+				var link = td.querySelector('a');
+				var linktext = link.innerText;
+				link.innerHTML = linktext.replace(regEx, '<span style="color:yellow">$&</span>');
+			} else {
+				filterrows[i].style.display = "none";
+			}
+		}
+	}
+	
+	updateFilterCount();
+	removeSeasonSeparator();
+	if (G_sortcol == 0) {
+		addSeasonSeparator();
+	}
+}
+
 function toggleFilterBox(id) {
 	var box = document.getElementById(id);
 
@@ -210,23 +306,6 @@ window.addEventListener('mouseup',function(event){
         filterBox.style.display = "none";
     }
 });
-
-function updateFilterCount() {
-	
-	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
-	var displayedRows = 0;
-
-	filterrows.forEach((filterrow) => {
-		if (filterrow.style.display != "none") {
-			displayedRows += 1;
-			if (filterrow.querySelector(".col_episodeNumber").innerHTML.match("&")){
-				displayedRows += 1;
-			}
-		}
-	});
-	
-	document.getElementById("filterTotal").innerHTML = displayedRows;
-}
 
 function setRnFilters() {
 	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
@@ -256,12 +335,14 @@ function setRnFilters() {
 	})
 	
 	updateFilterCount();
-	
 	removeSeasonSeparator();
-	
 	if (G_sortcol == 0) {
 		addSeasonSeparator();
 	}
+	G_filterset = filterrows.filter(function(ele) {
+		return window.getComputedStyle(ele).display !== 'none';
+	});
+	filterTitle();
 }
 
 function setTagsFilters() {
@@ -281,7 +362,7 @@ function setTagsFilters() {
 	document.getElementById("tagFilterTextbox").value = activeIcons;
 
 	filterrows.forEach((filterrow) => {
-		
+
 		filterrow.style.display="none";
 		var checkCell = filterrow.getElementsByTagName("td")[2];
 		
@@ -305,13 +386,14 @@ function setTagsFilters() {
 	});
 	
 	updateFilterCount();
-	
 	removeSeasonSeparator();
-	
 	if (G_sortcol == 0) {
 		addSeasonSeparator();
 	}
-	
+	G_filterset = filterrows.filter(function(ele) {
+		return window.getComputedStyle(ele).display !== 'none';
+	});
+	filterTitle();
 }
 
 function setFilters(type) {
@@ -349,6 +431,10 @@ function setFilters(type) {
 					if (G_sortcol == 0) {
 						addSeasonSeparator();
 					}
+					G_filterset = filterrows.filter(function(ele) {
+						return window.getComputedStyle(ele).display !== 'none';
+					});
+					filterTitle();
 					return;
 				}
 				else // Else if "All Tags" is not selected, filter by Tags
@@ -388,6 +474,10 @@ function setFilters(type) {
 					if (G_sortcol == 0) {
 						addSeasonSeparator();
 					}
+					G_filterset = filterrows.filter(function(ele) {
+						return window.getComputedStyle(ele).display !== 'none';
+					});
+					filterTitle();
 					return;
 				}
 				else // Else if "All Recommendations" is not selected, filter by Tags
@@ -429,7 +519,11 @@ function setFilters(type) {
 				removeSeasonSeparator();
 				if (G_sortcol == 0) {
 					addSeasonSeparator();
-				}				
+				}
+				G_filterset = filterrows.filter(function(ele) {
+						return window.getComputedStyle(ele).display !== 'none';
+					});		
+				filterTitle();
 				return;
 			}
 			if (rnallfilter.checked && !tagsallfilter.checked) { // Recommendations is set to "All": filter by Tags
@@ -497,13 +591,16 @@ function setFilters(type) {
 		
 		})
 	}
+	
 	updateFilterCount();
 	removeSeasonSeparator();
-	
 	if (G_sortcol == 0) {
 		addSeasonSeparator();
 	}
-	
+	G_filterset = filterrows.filter(function(ele) {
+		return window.getComputedStyle(ele).display !== 'none';
+	});
+	filterTitle();
 }
 
 
@@ -514,6 +611,7 @@ function resetFilters() {
 	
 	document.getElementById("recommendationFilterTextbox").value = "";
 	document.getElementById("tagFilterTextbox").value = "";
+	document.getElementById("episodeSearchBox").value = "";
 	
 	Array.from(filterallcheckboxes).forEach((checkbox) => {
 		checkbox.checked = true;
@@ -529,7 +627,6 @@ function resetFilters() {
 	setFilters("andor");
 	updateFilterCount();
 	removeSeasonSeparator();
-	
 	if (G_sortcol == 0) {
 		addSeasonSeparator();
 	}

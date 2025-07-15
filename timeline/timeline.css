@@ -241,6 +241,11 @@ input[type=button]:hover {
 .spoilerSwitch .switch {
 	vertical-align: text-bottom;
 }
+.switchLabel {
+	position: absolute;
+	right: -310px;
+	width: 300px;
+}
 
 /* ------------------------- MISC ------------------------- */
 .tooltip {

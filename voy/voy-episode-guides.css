@@ -183,10 +183,10 @@
 		.titleMarginBox {
 			width: auto;
 		}
-		.synopsisBox {
+		.summaryBox {
 			padding-right: 16%;
 		}
-		.synopsis {
+		.summary {
 			text-align: left;
 			font-size: small;
 			font-style: italic;
@@ -365,6 +365,7 @@
 				background-color: #ccc;
 				width: 120px;
 				vertical-align:middle;
+				font-weight: bold;
 			}
 
 

@@ -24,17 +24,17 @@ document.addEventListener('DOMContentLoaded', function() {
 		
 		switch (Array.from(rating.innerHTML)[0]) {
 			case "0":
-				rating.style.color = '#F8393BBF';
+				rating.style.color = '#F8393BF6';
 				break;
 			case "1":
 				if (Array.from(rating.innerHTML)[1] == "0") {
 					rating.style.color = '#03BE4BBF';
 				} else {
-					rating.style.color = '#F95350BF';
+					rating.style.color = '#F95350E3';
 				}
 				break;
 			case "2":
-				rating.style.color = '#FA6D55BF';
+				rating.style.color = '#FA6D55D0';
 				break;
 			case "3":
 				rating.style.color = '#FC975ABF';

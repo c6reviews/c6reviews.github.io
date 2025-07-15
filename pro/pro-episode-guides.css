@@ -197,12 +197,12 @@ td:has(> img.episodeCardBG) {
 		.titleMarginBox {
 			width: auto;
 		}
-		.synopsisBox {
+		.summaryBox {
 			vertical-align: top;
 			height: 1px;
 			padding-bottom: 8px;
 		}
-		.synopsis {
+		.summary {
 			text-align: left;
 			font-size: small;
 			font-style: italic;
@@ -388,6 +388,7 @@ td:has(> img.episodeCardBG) {
 				background-color: #ccc;
 				width: 120px;
 				vertical-align:middle;
+				font-weight: bold;
 			}
 
 

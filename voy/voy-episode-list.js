@@ -1,10 +1,9 @@
-﻿/* File version 1.0.0 */
-
+﻿
 /* ----------------------------------------------------- GLOBAL VARIABLES ----------------------------------------------------- */
 
 var G_sortcol = 0;
 var G_sortdir = "asc";
-
+var G_filterset = document.getElementsByClassName("filterableRow");
 
 /* ----------------------------------------------------- CREATE THE TABLE ----------------------------------------------------- */
 
@@ -62,7 +61,7 @@ function createTable(array) {
 					cell = cell.replace("⚖",'<span title="Courtroom Episode">⚖</span>');
 					cell = cell.replace("♊",'<span title="Mirror Universe episode">♊</span>');
 					cell = cell.replace("🌎",'<span title="Episode takes place on Earth">🌎</span>');
-					cell = cell.replace("🟨",'<span title="Holodeck episode">🟨</span>');
+					cell = cell.replace("🟨",'<span title="Holodeck Episode">🟨</span>');
 					cell = cell.replace("👬",'<span title="Parallel / Alternate Reality">👬</span>');
 					cell = cell.replace("🎭",'<span title="Lighthearted/Comedy">🎭</span>');
 					cell = cell.replace("😱",'<span title="Scary">😱</span>');
@@ -113,7 +112,11 @@ function createTable(array) {
 
 /* ------------------------------------------------------------ TABLE SORT ------------------------------------------------------------ */
 
-function sortTable(n) {
+async function sortTable(n,event) {
+
+	if (event.target.className.startsWith("radio")) {
+		return;
+	}
 	
 	sortArrowOff = document.getElementById(G_sortcol + G_sortdir);
 	sortArrowOff.style.color = "#555";
@@ -124,6 +127,10 @@ function sortTable(n) {
 	switching = true;
 	// Set the sorting direction to ascending:
 	dir = "asc";
+	// Clear the title search
+	document.getElementById("episodeSearchBox").value = "";
+	await filterTitle();
+	
 	/* Make a loop that will continue until
 	no switching has been done: */
 	while (switching) {
@@ -160,7 +167,7 @@ function sortTable(n) {
 			  
 			} else {
 				
-				// Ignore link  
+				// Ignore link
 				if (x.innerHTML.startsWith("<a")) {
 					x = x.querySelectorAll("a")[0];
 					y = y.querySelectorAll("a")[0];
@@ -169,6 +176,7 @@ function sortTable(n) {
 				// If sorting by Title
 				if (n == 1)
 				{
+					
 					if (sorttype == "title"){
 						//	x = x.replace(/^('|a\s|an\s|the\s)/, '')
 						//	y = y.replace(/^('|a\s|an\s|the\s)/, '')
@@ -200,6 +208,7 @@ function sortTable(n) {
 						// Move "the" "a" "an" to the beginning
 						var words = x.innerHTML.trim().split(/\s+/);
 						//if (words.length <= 1) {break}
+						
 						
 						if (words[words.length-1].toLowerCase() === "the" || words[words.length-1].toLowerCase() === "a" || words[words.length-1].toLowerCase() === "an")
 						{
@@ -271,6 +280,66 @@ function sortTable(n) {
 
 /* ------------------------------------------------------------ TABLE FILTERS ------------------------------------------------------------ */
 
+function updateFilterCount() {
+	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
+	var displayedRows = 0;
+
+	filterrows.forEach((filterrow) => {
+		if (filterrow.style.display != "none") {
+			displayedRows += 1;
+			if (filterrow.querySelector(".col_episodeNumber").innerHTML.match("&")){
+				displayedRows += 1;
+			}
+		}
+	});
+	
+	document.getElementById("filterTotal").innerHTML = displayedRows;
+}
+
+function filterTitle() {
+	const filterrows = G_filterset;
+	
+	//Clear all yellow highlights
+	for (i = 0; i < filterrows.length; i++) {
+		td = filterrows[i].getElementsByClassName("col_episodeTitle")[0];
+		if (td) {
+			td.innerHTML = td.innerHTML.replaceAll('<span style="color:yellow">',"")
+			td.innerHTML = td.innerHTML.replaceAll('</span>',"")
+		}
+	}
+	
+	var input, filter, table, td, i, txtValue;
+	input = document.getElementById("episodeSearchBox");
+	filter = input.value.toLowerCase();
+	table = document.getElementById("episodeTable");
+	
+	for (i = 0; i < filterrows.length; i++) {
+		td = filterrows[i].getElementsByClassName("col_episodeTitle")[0];
+		if (td) {
+			txtValue = td.textContent || td.innerText;
+			if (txtValue.toLowerCase().indexOf(filter) > -1) {
+				filterrows[i].style.display = "";
+				const regEx = new RegExp(filter, 'gi');
+				if (filter != "") {
+					var link = td.querySelector('a');
+					var linktext = link.innerText;
+					link.innerHTML = linktext.replace(regEx, '<span style="color:yellow">$&</span>');
+				}
+			} else {
+				filterrows[i].style.display = "none";
+			}
+		}
+	}
+
+	updateFilterCount();
+	removeSeasonSeparator();
+	if (G_sortcol == 0) {
+		addSeasonSeparator();
+	}
+	
+	return;
+}
+
 function toggleFilterBox(id) {
 	var box = document.getElementById(id);
 
@@ -294,23 +363,6 @@ window.addEventListener('mouseup',function(event){
         filterBox.style.display = "none";
     }
 });
-
-function updateFilterCount() {
-	
-	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
-	var displayedRows = 0;
-
-	filterrows.forEach((filterrow) => {
-		if (filterrow.style.display != "none") {
-			displayedRows += 1;
-			if (filterrow.querySelector(".col_episodeNumber").innerHTML.match("&")){
-				displayedRows += 1;
-			}
-		}
-	});
-	
-	document.getElementById("filterTotal").innerHTML = displayedRows;
-}
 
 function setRnFilters() {
 	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
@@ -340,12 +392,14 @@ function setRnFilters() {
 	})
 	
 	updateFilterCount();
-	
 	removeSeasonSeparator();
-	
 	if (G_sortcol == 0) {
 		addSeasonSeparator();
 	}
+	G_filterset = filterrows.filter(function(ele) {
+		return window.getComputedStyle(ele).display !== 'none';
+	});
+	filterTitle();
 }
 
 function setTagsFilters() {
@@ -365,7 +419,7 @@ function setTagsFilters() {
 	document.getElementById("tagFilterTextbox").value = activeIcons;
 
 	filterrows.forEach((filterrow) => {
-		
+
 		filterrow.style.display="none";
 		var checkCell = filterrow.getElementsByTagName("td")[2];
 		
@@ -389,17 +443,17 @@ function setTagsFilters() {
 	});
 	
 	updateFilterCount();
-	
 	removeSeasonSeparator();
-	
 	if (G_sortcol == 0) {
 		addSeasonSeparator();
 	}
-	
+	G_filterset = filterrows.filter(function(ele) {
+		return window.getComputedStyle(ele).display !== 'none';
+	});
+	filterTitle();
 }
 
 function setFilters(type) {
-	
 	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
 
 	if (type.endsWith("all")) { // "All Tags" or "All Recommendations" was checked or unchecked
@@ -433,6 +487,10 @@ function setFilters(type) {
 					if (G_sortcol == 0) {
 						addSeasonSeparator();
 					}
+					G_filterset = filterrows.filter(function(ele) {
+						return window.getComputedStyle(ele).display !== 'none';
+					});
+					filterTitle();
 					return;
 				}
 				else // Else if "All Tags" is not selected, filter by Tags
@@ -472,6 +530,10 @@ function setFilters(type) {
 					if (G_sortcol == 0) {
 						addSeasonSeparator();
 					}
+					G_filterset = filterrows.filter(function(ele) {
+						return window.getComputedStyle(ele).display !== 'none';
+					});
+					filterTitle();
 					return;
 				}
 				else // Else if "All Recommendations" is not selected, filter by Tags
@@ -513,7 +575,11 @@ function setFilters(type) {
 				removeSeasonSeparator();
 				if (G_sortcol == 0) {
 					addSeasonSeparator();
-				}				
+				}
+				G_filterset = filterrows.filter(function(ele) {
+						return window.getComputedStyle(ele).display !== 'none';
+					});		
+				filterTitle();
 				return;
 			}
 			if (rnallfilter.checked && !tagsallfilter.checked) { // Recommendations is set to "All": filter by Tags
@@ -581,13 +647,16 @@ function setFilters(type) {
 		
 		})
 	}
+	
 	updateFilterCount();
 	removeSeasonSeparator();
-	
 	if (G_sortcol == 0) {
 		addSeasonSeparator();
 	}
-	
+	G_filterset = filterrows.filter(function(ele) {
+		return window.getComputedStyle(ele).display !== 'none';
+	});
+	filterTitle();
 }
 
 
@@ -598,6 +667,7 @@ function resetFilters() {
 	
 	document.getElementById("recommendationFilterTextbox").value = "";
 	document.getElementById("tagFilterTextbox").value = "";
+	document.getElementById("episodeSearchBox").value = "";
 	
 	Array.from(filterallcheckboxes).forEach((checkbox) => {
 		checkbox.checked = true;
@@ -613,7 +683,6 @@ function resetFilters() {
 	setFilters("andor");
 	updateFilterCount();
 	removeSeasonSeparator();
-	
 	if (G_sortcol == 0) {
 		addSeasonSeparator();
 	}
@@ -624,7 +693,6 @@ function resetFilters() {
 /* ------------------------------------------------------------ SEASON SEPARATOR ------------------------------------------------------------ */
 
 function addSeasonSeparator() {
-	
 	table = document.getElementById("episodeTable");
 	rows = table.rows;
 	
