@@ -620,16 +620,16 @@ function drawLines(){
 		<!-- Large bracket for Yvette Picard death -->
 			<polyline points="` + (YPDeath1.right-40) + `,` + (YPDeath1.top + ((YPDeath1.bottom-YPDeath1.top)/2)) + ` ` + (YPDeath1.right-20) + `,` + (YPDeath1.top + ((YPDeath1.bottom-YPDeath1.top)/2)) + ` ` + (YPDeath2.left-20) + `,` + (YPDeath2.top - 5 + ((YPDeath2.bottom-YPDeath2.top)/2)) + ` ` + (YPDeath2.left) + `,` + (YPDeath2.top + ((YPDeath2.bottom-YPDeath2.top)/2)) + ` ` + (YPDeath2.left-20) + `,` + (YPDeath2.top + 5 + ((YPDeath2.bottom-YPDeath2.top)/2)) + ` ` + (YPDeath3.right-20) + `,` + (YPDeath3.top + ((YPDeath3.bottom-YPDeath3.top)/2)) + ` ` + (YPDeath3.right-40) + `,` + (YPDeath3.top + ((YPDeath3.bottom-YPDeath3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
 			
-			<image href="images/times_arrow.png" x="` + (times_arrow.right - ((times_arrow.right-times_arrow.left)/2) - 104) + `" y="` + (times_arrow.top - 140) + `" opacity="0.9" height="auto" width="auto"/>
-			<image href="images/cochrane.png" x="` + (warp1.right - ((warp1.right-warp1.left)/2) - 115) + `" y="` + (warp1.top - 192) + `" opacity="0.9" height="auto" width="auto"/>
-			<image href="images/tcoteof.png" x="` + (tcoteof.right - ((tcoteof.right-tcoteof.left)/2) - 93) + `" y="` + (tcoteof.top - 140) + `" opacity="0.8" height="auto" width="auto"/>
-			<image href="images/kelvinkirkandspock.png" x="` + (stb.right + 20) + `" y="` + (stb.bottom - 109) + `" opacity="1" height="auto" width="auto"/>
-			<image href="images/khan.png" x="` + (twok.right - ((twok.right-twok.left)/2) - 62) + `" y="` + (twok.top - 126) + `" opacity="0.9" height="auto" width="auto"/>
-			<image href="images/georgiou.png" x="` + (S31.right - ((S31.right-S31.left)/2) - 55) + `" y="` + (S31.top - 113) + `" opacity="0.8" height="auto" width="auto"/>
-			<image href="images/garrett.png" x="` + (yar2.left - 5) + `" y="` + (yar2.top - 82) + `" opacity="0.9" height="auto" width="auto"/>
-			<image href="images/calypso.png" x="` + (calypso.right - ((calypso.right-calypso.left)/2) - 28) + `" y="` + (calypso.top - 95) + `" opacity="0.9" height="auto" width="auto"/>
-			<image href="images/generations.png" x="` + (generationsPast.left + 5) + `" y="` + (generationsPast.top - 100) + `" height="auto" width="auto"/>
-			<image href="images/borgqueen.png" x="` + (FC.right - 60) + `" y="` + (FC.bottom - 106) + `" opacity="0.9" height="auto" width="auto"/>
+			<image href="images/times_arrow.png" x="` + (times_arrow.right - ((times_arrow.right-times_arrow.left)/2) - 104) + `" y="` + (times_arrow.top - 140) + `" opacity="0.9"/>
+			<image href="images/cochrane.png" x="` + (warp1.right - ((warp1.right-warp1.left)/2) - 115) + `" y="` + (warp1.top - 192) + `" opacity="0.9"/>
+			<image href="images/tcoteof.png" x="` + (tcoteof.right - ((tcoteof.right-tcoteof.left)/2) - 93) + `" y="` + (tcoteof.top - 140) + `" opacity="0.8"/>
+			<image href="images/kelvinkirkandspock.png" x="` + (stb.right + 20) + `" y="` + (stb.bottom - 109) + `" opacity="1"/>
+			<image href="images/khan.png" x="` + (twok.right - ((twok.right-twok.left)/2) - 62) + `" y="` + (twok.top - 126) + `" opacity="0.9"/>
+			<image href="images/georgiou.png" x="` + (S31.right - ((S31.right-S31.left)/2) - 55) + `" y="` + (S31.top - 113) + `" opacity="0.8"/>
+			<image href="images/garrett.png" x="` + (yar2.left - 5) + `" y="` + (yar2.top - 82) + `" opacity="0.9"/>
+			<image href="images/calypso.png" x="` + (calypso.right - ((calypso.right-calypso.left)/2) - 28) + `" y="` + (calypso.top - 95) + `" opacity="0.9"/>
+			<image href="images/generations.png" x="` + (generationsPast.left + 5) + `" y="` + (generationsPast.top - 100) + `"/>
+			<image href="images/borgqueen.png" x="` + (FC.right - 60) + `" y="` + (FC.bottom - 106) + `" opacity="0.9"/>
 				
 	</svg>`;
 		
