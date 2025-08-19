@@ -293,6 +293,13 @@ function updateFilterCount() {
 	});
 	
 	document.getElementById("filterTotal").innerHTML = displayedRows;
+	if (displayedRows != 39) {
+		document.getElementById("filterTotal").style.color = "yellow";
+		document.getElementById("filterTotal").style.fontWeight = "bold";
+	} else {
+		document.getElementById("filterTotal").style.color = "";
+		document.getElementById("filterTotal").style.fontWeight = "";
+	}
 }
 
 function filterTitle() {

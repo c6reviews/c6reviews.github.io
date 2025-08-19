@@ -16,7 +16,7 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
 <meta property="og:image" content="https://c6reviews.com/images/ogimage.png">
-<link rel="stylesheet" href="main.css?v=1.3.1">
+<link rel="stylesheet" href="main.css?v=1.4">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <title>C6Reviews | Star Trek </title>
@@ -24,7 +24,7 @@
 
 <body>
 
-<div id='kofiframe'><iframe src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'></iframe><span id="koficlose" onclick="document.getElementById('kofiframe').style.height='0px';document.getElementById('kofiframe').style.border='none';">&times;</span></div>
+<div id='kofiframediv'><iframe id="kofiframe" src='loader.html'></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
 <div class="c6Left"><a href="index.html"><img src="images/c6reviews-vert.png" alt="c6reviews"></a></div>
 	<div class="pageTitleImage"><img src="images/main-header.png" alt="Starfleet delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
@@ -35,7 +35,7 @@
 		</div>
 	</div>
 	<div class="c6Right"><img src="images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"><a href="index.html" style="margin-top:8px;">HOME</a><a href="about.html">ABOUT</a><a href="updates.html">UPDATES</a>
-	<a style="cursor:pointer" onclick="x=getComputedStyle(document.getElementById('kofiframe')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframe').style.height=x;document.getElementById('kofiframe').style.border=y;">SUPPORT</a>
+	<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a>
 	<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 
@@ -43,28 +43,31 @@
 
 <div class="content" style="background-color:#00000000">
 		
+	
+	
 	<table class="mainIndexTable">
 		<tr>
 			<td colspan="2">
+				
 				<div class="timelineCard">
 					<a href="timeline/index.html">
-						<div class="timelineCardBG"><img src="images/timelinebg.png" style="height:140px;" alt="background image of colored lines representing a timeline"></div>
-						<span style="font-size:xx-large;font-family:BBB,serif"><br>Star Trek Universe<br>Master Timeline</span>
-						<br><span style="font-size:small">Confused about what happened when? This should help.</span>
+						<div class="timelineCardBG"><img src="images/timelinebg.png" style="width:766px;" alt="background image of colored lines representing a timeline"></div>
+						<div style="font-size:48px;font-family:BBI,serif;margin-top:0px">Star Trek Universe &ndash; Full Timeline ❱❱❱</div>
+						<br><br><br><span style="font-size:medium;font-style:italic;">Confused about what happened when? This should help.</span>
 					</a>
 				</div>
 			</td>
 			<td rowspan="2"  style="width:20%">
+				<div class="headquote"><img src="images/headquotes/drumhead.png" style="width:500px;">
+					&ldquo;Villains who twirl their mustaches are easy to spot; those who clothe themselves in good deeds are well-camouflaged. ...Someone like [that] will always be with us, waiting for the right climate in which to flourish, spreading fear in the name of righteousness. Vigilance, Mister Worf, that is the price we have to continually pay.&rdquo; &mdash; <span style="font-style:normal">Captain Jean-Luc Picard</span>
+				</div>
 				<div class="news">	
 					<h2 style="text-decoration:underline;">News</h2>
 					
-					<div class="highlight"><span style="text-decoration:underline;font-style:italic">Star Trek: Strange New Worlds</span><br>Season 3 premieres July&nbsp;17, and the show has been <a href="https://trekmovie.com/2025/06/12/star-trek-strange-new-worlds-renewed-for-fifth-and-final-season/" target="_blank" style="white-space:normal">renewed for its fifth and final season</a>.</div>
-					
-					
 					<div class="latest">
 						<span style="text-decoration:underline;">Site updates:</span>
-						<br><br><span class="small">Last update: July 15, 2025 &ndash; <a href="updates.html">Details</a></span>
-						<br><br>The <a href="pro/index.html"><em>Star Trek: Prodigy</em></a> guide is live as of June 24, 2025!
+						<br><br><span class="small">Last update: August 19 &ndash; <a href="updates.html">Details</a></span>
+						<br><br>The <a href="pic/index.html"><em>Star Trek: Picard</em></a> episode guide and the <a href="7of9/index.html"><em>Seven of Nine</em></a> topic guide are live as of August 19, along with a new movie review: <a href="films/nemesis.html"><em>Star Trek: Nemesis</em></a>.
 					</div>
 					
 					<span style="color:#E47545">Coming up:</span>
@@ -76,30 +79,26 @@
 						</tr>
 						<tr>
 							<td>1</td>
-							<td><strong>Picard</strong> <span style="color:#909090;font-style:italic;font-size:x-small;">&ndash; by early September</span></td>
-						</tr>
-						<tr>
-							<td>2</td>
 							<td><strong>The Next Generation</strong> <span style="color:#909090;font-style:italic;font-size:x-small;">&ndash; by end of 2025</span></td>
 						</tr>
 						<tr>
-							<td>3</td>
+							<td>2</td>
 							<td><strong>Lower Decks</strong></td>
 						</tr>
 						<tr>
-							<td>4</td>
+							<td>3</td>
 							<td><strong>Discovery &amp; Short Treks</strong></td>
 						</tr>
 						<tr>
-							<td>5</td>
+							<td>4</td>
 							<td><strong>Enterprise</strong></td>
 						</tr>
 						<tr>
-							<td>6</td>
+							<td>5</td>
 							<td><strong>The Original Series</strong></td>
 						</tr>
 						<tr>
-							<td>7</td>
+							<td>6</td>
 							<td><strong>The Animated Series</strong></td>
 						</tr>
 					</table>
@@ -111,7 +110,7 @@
 		</tr>
 		<tr>
 			<td style="width:40%">
-				<h2 style="text-decoration:underline;">Series Episode Guides</h2>
+				<h1 style="text-decoration:underline;font-family:BB,Roboto,sans-serif;">Series Episode Guides</h2>
 				<div class="seriesCard">
 					<img src="images/tos.png" class="seriesCardBG inactive" alt="The USS Enterprise NCC-1701">
 					<table class="seriesCardTitle">
@@ -137,7 +136,7 @@
 							<td><img src="images/tng-title.png" alt="Star Trek: The Next Generation" class="inactive"></td>
 						</tr>
 					</table>
-					<img src="images/coming-someday.png" class="comingSoonFlag" alt="coming someday">
+					<img src="images/coming-next.png" class="comingSoonFlag" alt="coming up next!">
 				</div>
 				<a href="ds9/index.html">
 					<div class="seriesCard">
@@ -177,15 +176,16 @@
 					</table>
 					<img src="images/coming-someday.png" class="comingSoonFlag" alt="coming someday">
 				</div>
-				<div class="seriesCard">
-					<img src="images/pic.png" class="seriesCardBG inactive" alt="Jean-Luc Picard">
-					<table class="seriesCardTitle">
-						<tr>
-							<td><img src="images/pic-title.png" alt="Star Trek: Picard" class="inactive"></td>
-						</tr>
-					</table>
-					<img src="images/coming-next.png" class="comingSoonFlag" alt="coming up next!">
-				</div>
+				<a href="pic/index.html">
+					<div class="seriesCard">
+						<img src="images/pic.png" class="seriesCardBG" alt="Jean-Luc Picard">
+						<table class="seriesCardTitle">
+							<tr>
+								<td><img src="images/pic-title.png" alt="Star Trek: Picard"></td>
+							</tr>
+						</table>
+					</div>
+				</a>
 				<div class="seriesCard">
 					<img src="images/low.png" class="seriesCardBG inactive" alt="The USS Cerritos NCC-75567 knocking over a stalagmite made of ice">
 					<table class="seriesCardTitle">
@@ -216,22 +216,32 @@
 				</div>
 			</td>
 			<td style="width:40%">
-				<h2 style="text-decoration:underline;"> Other Guides </h2>
-				<p style="text-align:center"><a href="s31.html"><img src="images/c6reviewsS31.png" style="border:1px solid #C0C0C0;width:300px;padding:6px;border-radius:5px" alt="C6Reviews Section 31"></a></p>
-				<div class="seriesCard">
-					<img src="images/7of9.png" class="seriesCardBG" alt="Seven of Nine with black eyes">
-					<table class="seriesCardTitle inactive">
-						<tr>
-							<td>Seven of Nine</td>
-						</tr>
-					</table>
-					<img src="images/coming-someday.png" class="comingSoonFlag" alt="coming someday">
-				</div>
+				<h1 style="text-decoration:underline;font-family:BB,Roboto,sans-serif;"> Other Guides </h2>
+				<a href="films/index.html">
+					<div class="seriesCard">
+						<img src="images/films.png" class="seriesCardBG" alt="A movie film reel">
+						<table class="seriesCardTitle">
+							<tr>
+								<td style="font-family:BB,Roboto,sans-serif;font-size:xx-large;">Star Trek<br>Films</td>
+							</tr>
+						</table>
+					</div>
+				</a>
+				<a href="7of9/index.html">
+					<div class="seriesCard">
+						<img src="images/7of9.png" class="seriesCardBG" alt="Seven of Nine with black eyes">
+						<table class="seriesCardTitle">
+							<tr>
+								<td style="font-family:BB,Roboto,sans-serif;font-size:xx-large;">Seven of Nine</td>
+							</tr>
+						</table>
+					</div>
+				</a>
 				<div class="seriesCard">
 					<img src="images/theBorg.png" class="seriesCardBG" alt="a borg cube">
 					<table class="seriesCardTitle inactive">
 						<tr>
-							<td>The Borg</td>
+							<td style="font-family:BB,Roboto,sans-serif;font-size:xx-large;">The Borg</td>
 						</tr>
 					</table>
 					<img src="images/coming-someday.png" class="comingSoonFlag" alt="coming someday">
@@ -240,7 +250,7 @@
 					<img src="images/q.png" class="seriesCardBG" alt="Q in his judge robes">
 					<table class="seriesCardTitle inactive">
 						<tr>
-							<td>Q</td>
+							<td style="font-family:BB,Roboto,sans-serif;font-size:xx-large;">Q</td>
 						</tr>
 					</table>
 					<img src="images/coming-someday.png" class="comingSoonFlag" alt="coming someday">
@@ -249,7 +259,7 @@
 					<img src="images/31.png" class="seriesCardBG inactive" alt="a black Starfleet badge">
 					<table class="seriesCardTitle inactive">
 						<tr>
-							<td>Section 31</td>
+							<td style="font-family:BB,Roboto,sans-serif;font-size:xx-large;">Section 31</td>
 						</tr>
 					</table>
 					<img src="images/coming-someday.png" class="comingSoonFlag" alt="coming someday">
@@ -258,7 +268,7 @@
 					<img src="images/mirrorUniverse.png" class="seriesCardBG" alt="the Terran Empire logo - a drawing of Earth with a sword through it">
 					<table class="seriesCardTitle inactive">
 						<tr>
-							<td>Mirror Universe</td>
+							<td style="font-family:BB,Roboto,sans-serif;font-size:xx-large;">Mirror Universe</td>
 						</tr>
 					</table>
 					<img src="images/coming-someday.png" class="comingSoonFlag" alt="coming someday">
@@ -270,7 +280,7 @@
 	
 </div>
 
-<div class="pageFooter"><img src="images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">HOME</a>&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="x=getComputedStyle(document.getElementById('kofiframe')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframe').style.height=x;document.getElementById('kofiframe').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><img src="images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">HOME</a>&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 
 <div id="TTDIV"></div>
 <p>&nbsp;</p>

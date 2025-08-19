@@ -15,9 +15,9 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.3.1">
-<link rel="stylesheet" href="voy.css?v=1.3.1">
-<link rel="stylesheet" href="voy-episode-guides.css?v=1.3.1">
+<link rel="stylesheet" href="../main.css?v=1.4">
+<link rel="stylesheet" href="voy.css?v=1.4">
+<link rel="stylesheet" href="voy-episode-guides.css?v=1.4">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 <meta property="og:image" content="https://c6reviews.com/voy/images/ogimage.png">
 
@@ -27,7 +27,7 @@
 
 <body>
 
-<div id='kofiframe'><iframe src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'></iframe><span id="koficlose" onclick="document.getElementById('kofiframe').style.height='0px';document.getElementById('kofiframe').style.border='none';">&times;</span></div>
+<div id='kofiframediv'><iframe id="kofiframe" src='../loader.html'></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
 <div class="c6Left"><a href="../index.html"><img src="../images/c6reviews-vert.png" alt="c6reviews"></a></div>
 <div class="pageTitleImage"><img src="images/voy-header.png" alt="The USS Voyager and show title"></div>
@@ -37,7 +37,7 @@
 		<span class="pageSubtitle">Season 3 Episode Guides</span>
 	</div>
 </div>
-<div class="c6Right"><img src="../images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="../images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"><a href="../index.html" style="margin-top:8px;">HOME</a><a href="../about.html">ABOUT</a><a href="../updates.html">UPDATES</a><a style="cursor:pointer" onclick="x=getComputedStyle(document.getElementById('kofiframe')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframe').style.height=x;document.getElementById('kofiframe').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="../images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+<div class="c6Right"><img src="../images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="../images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"><a href="../index.html" style="margin-top:8px;">HOME</a><a href="../about.html">ABOUT</a><a href="../updates.html">UPDATES</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="../images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 <h3 class="seasonNav"><a href="voy-episode-list.html">Full Episode List</a><br><a href="voy-s1.html">Season 1</a> • <a href="voy-s2.html">Season 2</a> • <span class="activeSeason"><a href="voy-s3.html">Season 3</a></span> • <a href="voy-s4.html">Season 4</a> • <a href="voy-s5.html">Season 5</a> • <a href="voy-s6.html">Season 6</a> • <a href="voy-s7.html">Season 7</a></h3>
 
@@ -2440,7 +2440,7 @@
 <span class="activeSeason"><a href="voy-s3.html">Season 3</a></span> • <a href="voy-s4.html">Season 4</a> • <a href="voy-s5.html">Season 5</a> • <a href="voy-s6.html">Season 6</a> • <a href="voy-s7.html">Season 7</a></h3>
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
 
-<div class="pageFooter"><img src="../images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html">HOME</a>&nbsp;&nbsp;<a href="../about.html">ABOUT</a>&nbsp;&nbsp;<a href="../updates.html">UPDATES</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="x=getComputedStyle(document.getElementById('kofiframe')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframe').style.height=x;document.getElementById('kofiframe').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="../images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><img src="../images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html">HOME</a>&nbsp;&nbsp;<a href="../about.html">ABOUT</a>&nbsp;&nbsp;<a href="../updates.html">UPDATES</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="../images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 
 <div id="TTDIV">
 

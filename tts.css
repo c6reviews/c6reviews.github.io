@@ -1,0 +1,45 @@
+.TTScontrols {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-size: large;
+	font-style: normal;
+	color: #D0D0D0;
+	margin-left: 100px;
+	float: right;
+}
+.TTScontrols button {
+	border: none;
+	background-color: #00000000;
+	color: #D0D0D0;
+	cursor: pointer;
+}
+.TTScontrols .ttsicon {
+	cursor: help;
+}
+.TTScontrols .ttsrate {
+	appearance:none;
+	border: 1px solid #D0D0D0;
+	border-radius: 5px;
+	background-color: #00000000;
+	color: #D0D0D0;
+	width: 42px;
+	padding: 0px 2px;
+	cursor: pointer;
+}
+.TTScontrols option {
+	background-color: #181818;
+	border:none;
+}
+.TTSstopButton {
+	font-size:large;
+}
+.TTSstopButton:hover {
+	color: darkred;
+}
+.TTSplayButton {
+	font-size:x-large;
+}
+.TTSplayButton:hover {
+	color: green;
+}

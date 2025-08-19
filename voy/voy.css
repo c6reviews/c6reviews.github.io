@@ -2,7 +2,9 @@
 /* td {
 	border: 1px dotted #999;
 	} */
-
+html {
+	scroll-behavior: smooth;
+}
 /* ------------------------------------ LEFT NAVIGATION MENU ------------------------------------ */
 #leftNavOpenButton{
 	cursor: pointer;

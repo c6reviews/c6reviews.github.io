@@ -30,6 +30,10 @@ body li {
   content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAACXRFWHRDb21tZW50AACJKo0GAAAASElEQVR4nGP4//8/AzZ85syZ/8gYQwBNcQKKQhwmwhQl4FSIrAjmDAyF6IpgGEXhqVOnFLApwlAIU4zue6wKsQUT6QoJYZBCABxrNhBirnqBAAAAAElFTkSuQmCC);
   margin: 0px 3px 0px 5px;
 }
+.serif {
+	font-family: CCS,Georgia,serif;
+	font-size: 16px;
+}
 
 @font-face {
   font-family: "BB";
@@ -42,6 +46,10 @@ body li {
 @font-face {
   font-family: "BBI";
   src: url("assets/Boucherie Block Italic.ttf");
+}
+@font-face {
+  font-family: "CCS";
+  src: url("assets/CactusClassicalSerif-Regular.ttf");
 }
 .draftBanner {
 	position: fixed;
@@ -56,6 +64,22 @@ body li {
 	color: red;
 	text-align: center;
 	pointer-events: none;
+}
+.headquote {
+	font-family: CCS, Georgia, sans-serif;
+	font-size: large;
+	font-style: italic;
+	text-align: center;
+	margin: 10px auto 80px auto;
+	width: 500px;
+	padding: 0px 0px 3px 0px;
+	border: solid #BB4C1C;
+	border-width: 2px 0px 0px 0px;
+	border-radius: 10px;
+	background: linear-gradient(to top, #BB4C1C88, #181818 35% );
+}
+.headquote img {
+	border-radius: 10px;
 }
 
 /* ---------------------------------------- BUTTONS ---------------------------------------- */
@@ -173,7 +197,7 @@ body li {
 .c6Right .bsky img{
 	margin: 0px auto 3px auto;
 }
-#kofiframe {
+#kofiframediv {
 	transition: 0.2s;
 	position: fixed;
 	right: 24px;
@@ -188,7 +212,7 @@ body li {
 	overflow: hidden;
 	
 }
-#kofiframe iframe{
+#kofiframe {
 	height: 700px;
 	width: 400px;
 	border: none;
@@ -249,7 +273,7 @@ body li {
 	clear: both;
 	height: 25px;
 	width: 100%;
-	margin: 20px auto 25px auto;
+	margin: 20px auto 0px auto;
 	background-color: #030303;
 	border-top: 1px solid;
 	border-bottom: 1px solid;
@@ -333,9 +357,9 @@ body li {
 	}
 	
 	.mainIndexTable{
-		width: 90%;
+		
 		margin-right: 0;
-		margin-left: auto;
+		margin-left: 0;
 	}
 	.mainIndexTable > tbody > tr > td {
 		text-align: center;
@@ -346,17 +370,18 @@ body li {
 		position: relative;
 		display: block;
 		z-index: 0;
-		margin: 25px auto 5px auto;
+		margin: 2px auto 48px auto;
+		padding: 8px;
 		border-style: solid;
 		border-width: 1px;
 		border-radius: 15px;
-		padding: 1px;
-		width: 350px;
+		/*width: 968px;*/
+		width: 750px;
 		overflow: hidden;
-		min-height:140px;
+		height:124px;
 		background-color: #101010;
 		line-height: 1.1;
-		text-align: center;
+		text-align: left;
 		text-shadow: black 2px 2px 1px;
 	}
 	.timelineCardBG{
@@ -367,7 +392,7 @@ body li {
 		height: 100%;
 		overflow:hidden;
 		object-fit:contain;
-		mask-image: radial-gradient( rgba(0,0,0,0.6), rgba(0,0,0,0.4) 40%, rgba(0,0,0,0));
+		mask-image: radial-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.4) 40%, rgba(0,0,0,0));
 	}
 	.seriesCard {
 		position: relative;
@@ -475,6 +500,7 @@ body li {
 	}
 	.introParagraph {
 		margin-top: 30px;
+		font-family: CCS,Georgia,serif;
 	}
 	.finalVerdict {
 		text-align: center;
@@ -507,7 +533,7 @@ body li {
 /* ---------------------------------------- GLOBAL: MISC ---------------------------------------- */
 
 	.Q {
-		font-family: serif;
+		font-family: CCS,serif;
 		font-weight: bold;
 		text-shadow: 0 0 8px #fff;
 	}

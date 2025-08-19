@@ -34,7 +34,9 @@
 	background-color: #303030;
 	font-size: small;
 }
-
+#filterTotal {
+	font-size: large;
+}
 input[type=text] {
 	background-color: #333;
 	color: white;

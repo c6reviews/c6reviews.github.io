@@ -1,0 +1,205 @@
+
+#sortSelector {
+	border: 1px solid #D0D0D0;
+	border-radius: 5px;
+	background-color: #00000000;
+	color: #D0D0D0;
+	width: auto;
+	padding: 2px 4px;
+	margin-bottom: 15px;
+	display: inline-block;
+	vertical-align: top;
+}
+#sortSelector option {
+	background-color: #181818;
+	border:none;
+}
+#sortOrderButton {
+	background-color: #18181800;
+	padding: 0px 3px;
+	border-width: 1px;
+	border-radius: 5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.sortarrows {
+	color: #555;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+
+#filmsFlexContainer{
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
+	width: 85%;
+	margin: auto;
+	gap: 15px 36px;
+}
+
+.filmCategoryCard {
+	position: absolute;
+	z-index: 2;
+	padding: 2px 8px;
+	font-size: x-large;
+	text-align: center;
+	border: solid #BB4C1C;
+	border-width: 2px 0px 0px 0px;
+	border-radius: 10px;
+	background: linear-gradient(to top, #BB4C1C88, #181818 65% );
+	font-family: BBI;
+}
+.filmCard {
+	position: relative;
+	width: 170px;
+	height: 350px;
+}
+.filmCard img {
+	height: 250px;
+	border: 2px solid;
+}
+.filmTitle {
+	font-family: BBI,Roboto,serif;
+	font-size: x-large;
+	text-align: center;
+	vertical-align: top;
+}
+.filmNumbers {
+	float:right;
+	border: 1px solid;
+	text-align: center;
+	width: fit-content;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	padding: 0px 2px;
+	background-color: #333;
+}
+.filmNumber {
+	font-size: x-large;
+}
+.filmYear {
+	font-size: small;
+}
+.filmRating {
+	position: absolute;
+	bottom: 5px;
+	width: 100%;
+	clear: right;
+	font-size: medium;
+	background-color: #303030;
+	text-align: center;
+}
+
+.flexLineBreak {
+        flex-basis: 100%;
+        height: 0; /* or a small height if you need visual separation */
+}
+
+
+.filmInfoCard {
+	border:2px solid white;
+	float: left;
+	padding: 3px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+.filmInfoCard th{
+		background-color: #444;
+}
+.sectionHeader {
+	display: block;
+	position: relative;
+	color: #E47545;
+	font-family: BB, Roboto, sans-serif;
+	font-size: x-large;
+	margin-top: 40px;
+	border-bottom: 1px solid #E47545;
+	overflow: hidden;
+}
+
+.calloutdiv{
+	margin: 25px auto 10px auto;
+	text-align: center;
+	font-size: xx-large;
+	font-family: BBI,Roboto,sans-serif;
+	color: #D0D0D0;
+}
+.calloutspan{
+	background: linear-gradient(to bottom, #1B8ABA, #181818 65% );
+	border-radius:3px;
+	padding: 2px 20px;"
+}
+.quote {
+	color: #D0D0D0;
+	font-size: xx-large;
+	font-weight: bold;
+	font-family: "Times New Roman", serif;
+	padding-right:8px;
+}
+
+.finalGraphic {
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:80px;
+	width:50%;
+	text-align:center;
+}
+.ratingBlock {
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+		border: 2px solid #C0C0C0;
+		z-index: 1;
+}
+
+/* | -------------------- RATING BLOCK ELEMENTS -------------------- */
+		.myRatingDescriptionBox {
+			text-align: right;
+			vertical-align: bottom;
+			width: 250px; height: 24px;
+			font-weight: bold;
+			padding-bottom: 5px;
+		}
+		.SFDratingDescriptionBox {
+			text-align: right;
+			width: 250px; height: 24px;
+			font-weight: bold;
+		}
+		.EASratingDescriptionBox {
+			text-align: right;
+			width: 250px; height: 24px;
+			font-weight: bold;
+		}
+		.NIMDBratingDescriptionBox {
+			text-align: right;
+			width: 250px; height: 24px;
+			font-weight: bold;
+		}
+		.ratingsInfoLinkBox{
+			font-size: small;
+			vertical-align:bottom;
+			text-align: right;
+		}
+		.ratingsInfoLinkBox a {
+			white-space: normal;
+			background-color: #18181890;
+		}
+		.ratingNumber {
+			font-weight: bold;
+			padding-left: 10px;
+		}
+		.ScoreBox {
+			border: 4px solid #e47545; /*#CCCCCC*/
+			text-align: center;
+			color: #000000;
+			background-color: #ccc;
+			width: 240px;
+			vertical-align:middle;
+			font-weight: bold;
+		}
