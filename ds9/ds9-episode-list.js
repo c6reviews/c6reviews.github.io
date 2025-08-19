@@ -290,11 +290,18 @@ function updateFilterCount() {
 	});
 	
 	document.getElementById("filterTotal").innerHTML = displayedRows;
+	if (displayedRows != 173) {
+		document.getElementById("filterTotal").style.color = "yellow";
+		document.getElementById("filterTotal").style.fontWeight = "bold";
+	} else {
+		document.getElementById("filterTotal").style.color = "";
+		document.getElementById("filterTotal").style.fontWeight = "";
+	}
 }
 
 function filterTitle() {
 	const filterrows = G_filterset;
-	
+
 	//Clear all yellow highlights
 	for (i = 0; i < filterrows.length; i++) {
 		td = filterrows[i].getElementsByClassName("col_episodeTitle")[0];

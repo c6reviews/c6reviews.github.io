@@ -16,7 +16,7 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
 <meta property="og:image" content="https://c6reviews.com/images/ogimage.png">
-<link rel="stylesheet" href="main.css?v=1.3.1">
+<link rel="stylesheet" href="main.css?v=1.4">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <title>C6Reviews | Updates</title>
@@ -24,7 +24,7 @@
 
 <body>
 
-<div id='kofiframe'><iframe src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'></iframe><span id="koficlose" onclick="document.getElementById('kofiframe').style.height='0px';document.getElementById('kofiframe').style.border='none';">&times;</span></div>
+<div id='kofiframediv'><iframe id="kofiframe" src='loader.html'></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
 <div class="c6Left"><a href="index.html"><img src="images/c6reviews-vert.png" alt="c6reviews"></a></div>
 	<div class="pageTitleImage"><img src="images/main-header.png" alt="Starfleet delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
@@ -35,7 +35,7 @@
 		</div>
 	</div>
 	<div class="c6Right"><img src="images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"><a href="index.html" style="margin-top:8px;">HOME</a><a href="about.html">ABOUT</a><a href="updates.html">UPDATES</a>
-	<a style="cursor:pointer" onclick="x=getComputedStyle(document.getElementById('kofiframe')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframe').style.height=x;document.getElementById('kofiframe').style.border=y;">SUPPORT</a>
+	<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a>
 	<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 
@@ -49,14 +49,32 @@
 			<th>Version</th>
 			<th style="text-align:left;padding-left: 35px;">Description</th>
 		</tr>
+		<tr class="dotRelease">
+			<td><span class="updateDate">August 19, 2025</span></td>
+			<td>1.4 +</td>
+			<td>
+				<ul>
+					<li><span class="newGuideRelease">The <a href="pic/index.html"><em>Star Trek: Picard</em></a> Series Guide is now live!</span></li>
+					<li><span class="newGuideRelease">The <a href="7of9/index.html">Seven of Nine</a> Topic Guide is also live!</span></li>
+					<li><span class="newGuideRelease"><a href="films/nemesis.html"><em>Star Trek: Nemesis</em></a> has been reviewed and added to the new <a href="films/index.html"><em>Films</em></a> page!</span></li>
+					<ul>
+						<li>The review of <a href="films/section31.html"><em>Star Trek: Section 31</em></a> has been updated and was also moved to the <a href="films/index.html"><em>Films</em></a> page.</li>
+					</ul>
+					<li>A new <strong>text-to-speech</strong> feature has been introduced on some text-heavy reviews.<br>
+					<span style="font-size:small;font-style:italic">I found myself writing long paragraphs in the new reviews for <span style="font-style:normal">Picard</span> and <span style="font-style:normal">Nemesis</span>, and if you're like me, you don't always have the attention span to just read lots and lots of text. So, now you can listen to it, instead!</span></li>
+				</ul>
+				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
+					 Made some additions to a few DS9 episode reviews; switched to a new serif font for some text-heavy areas; the timeline search bar now executes a search when you select an item from the suggestions instead of making you click once to select and again to search; a &ldquo;clear&rdquo; button was added to the timeline search box and episode title search boxes; &ldquo;Showing X of Y episodes&rdquo; box now stands out more when titles are filtered; adjusted the Support link so it doesn't load the iframe until it's actually clicked; added smooth scroll to even more places it was missing; updated language in a few places to be more inclusive.</div>
+			</td>
+		</tr>
 		<tr>
 			<td><span class="updateDate">July 15, 2025</span></td>
 			<td>1.3.1</td>
 			<td>
 				<ul>
-					<li>Added a title search box to the &ldquo;full episode list&rdquo; for each series.</li>
-					<li>Applied Google Analytics to the site for page view statistics.</li>
-					<li>Added a &ldquo;Support&rdquo; link in the header and footer with a Ko-fi widget for making donations to the site.<br>
+					<li>Added a <strong>title search box</strong> to the &ldquo;full episode list&rdquo; for each series.</li>
+					<li>Applied <strong>Google Analytics</strong> to the site for page view statistics.</li>
+					<li>Added a <strong>&ldquo;Support&rdquo; link</strong> in the header and footer with a Ko-fi widget for making donations to the site.<br>
 					<span style="font-size:small;font-style:italic">I certainly don't expect any donations to my silly little website here, but it's there if anyone wants to, and proceeds will go toward maintaining the site.</span>
 					</li>
 				</ul>
@@ -64,7 +82,7 @@
 					Improved the performance of title sorting on episode lists by fixing an issue where it would redundantly sort twice; added a &ldquo;Mirror Universe&rdquo; designator to the appropriate episode descriptions; added a &ldquo;start here&rdquo; indicator on the Prodigy timeline; reworked &lt;title&gt; text on most pages; fixed every instance where I conflated &ldquo;summary&rdquo; and &ldquo;synopsis&rdquo; (heaven forbid!).
 				</div>
 				<div class="minorUpdates"><span style="text-decoration:underline">WCAG accessibility improvements</span><br>
-					Fixed labels for toggles on the spoiler menu on the master timeline; fixed touch target spacing for navigation menus; fixed unordered list elements on this page; brightened up default text on all pages; contrast improvements on timeline menus, series home pages, Home page, this Updates page, episode ratings below 3, and final score boxes for scores below 2.
+					Fixed labels for toggles on the spoiler menu on the full timeline; fixed touch target spacing for navigation menus; fixed unordered list elements on this page; brightened up default text on all pages; contrast improvements on timeline menus, series home pages, Home page, this Updates page, episode ratings below 3, and final score boxes for scores below 2.
 				</div>
 			</td>
 		</tr>
@@ -77,7 +95,7 @@
 					<li>Recalculated all episode scores for the <a href="voy/index.html"><em>Star Trek: Voyager</em></a> guides (due to a spreadsheet error, they were all slightly off).</li>
 				</ul>
 				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
-					Improved(?) the look of links to guides on series home pages; series title graphics in the nav menu now link back to their respective home pages; fixed some strange HTML in the &ldquo;Watch Recommendation&rdquo; box for all reviews; slight change to title sort radio buttons on episode lists; fixed all episode titles that have &ldquo;Part 1/Part I/Part 2/Part II&rdquo;, etc. as part of the title or not; cleaned up legacy links with unnecessary nbsp characters; made all quotation marks consistent by replacing <span style="font-style:normal">&quot;</span>straight quotes<span style="font-style:normal">&quot;</span> with &ldquo;stylized left and right quotes&rdquo; in work that can only be described as <u>almost</u> as fulfilling as the hyphens.</div>
+					Improved(?) the look of links to guides on series home pages; series title graphics in the nav menu now link back to their respective home pages; fixed some strange HTML in the &ldquo;Watch Recommendation&rdquo; box for all reviews; slight change to title sort radio buttons on episode lists; fixed all episode titles that have &ldquo;Part 1/Part I/Part 2/Part II&rdquo;, etc. as part of the title or not; cleaned up legacy links with unnecessary nbsp characters; made all quotation marks consistent by replacing <span style="font-style:normal">&quot;straight quotes&quot;</span> with &ldquo;stylized left and right quotes&rdquo; in work that can only be described as <u>almost</u> as fulfilling as the hyphens.</div>
 			</td>
 		</tr>
 		<tr>
@@ -85,7 +103,7 @@
 			<td>1.2.2</td>
 			<td>
 				<ul>
-					<li>Added an entirely stupid (and poorly-coded) mini-game to the 404 page.</li>
+					<li>Added an entirely stupid (and poorly-coded) <strong>mini-game</strong> to the 404 page.</li>
 					<li>When sorting episode tables with Title Sort, episode titles are now displayed with the leading article moved to the end (e.g. &ldquo;Chute, The&rdquo; instead of &ldquo;The Chute&rdquo;).</li>
 				</ul>
 				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
@@ -97,12 +115,12 @@
 			<td>1.2.1</td>
 			<td>
 				<ul>
-					<li>Added a search bar to the <a href="timeline/index.html">Star Trek Universe Master Timeline</a>, along with some other style and quality updates.</li>
+					<li>Added a <strong>search bar</strong> to the <a href="timeline/index.html">Star Trek Universe Full Timeline</a>, along with some other style and quality updates.</li>
 					<li>Adjusted color coding on all timelines to be WCAG AA compliant.</li>
 					<li>Updated various fonts and styles throughout the site.</li>
 				</ul>
 				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
-					Re-wrote the About page; improved the look of the spoiler menu on the master timeline; updated and added color coding to episode-specific timelines; worked toward standardizing the use of dashes and hyphens across the site (I know, try to contain your excitement about that one).</div>
+					Re-wrote the About page; improved the look of the spoiler menu on the full timeline; updated and added color coding to episode-specific timelines; worked toward standardizing the use of dashes and hyphens across the site (I know, try to contain your excitement about that one).</div>
 			</td>
 		</tr>
 		<tr class="dotRelease">
@@ -111,7 +129,7 @@
 			<td>
 				<ul>
 					<li><span class="newGuideRelease">The <a href="voy/index.html"><em>Star Trek: Voyager</em></a> Series Guide just dropped!!</span></li>
-					<li>Added a few minor events to the <a href="timeline/index.html">Star Trek Universe Master Timeline</a>.</li>
+					<li>Added a few minor events to the <a href="timeline/index.html">Star Trek Universe Full Timeline</a>.</li>
 				</ul>
 				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
 					Fixed an error where filtering episode lists by &ldquo;Recommended&rdquo; would also display &ldquo;Highly Recommended&rdquo; episodes; further standardized episode quotes formatting; added color coding to series timelines; added an OpenGraph image for social media link previews; spruced up the Section 31 movie review page.</div>
@@ -122,9 +140,9 @@
 			<td>1.1.1</td>
 			<td>
 				<ul>
-					<li>Added some photos for series and important events to the <a href="timeline/index.html">Star Trek Universe Master Timeline</a>, plus some other small improvements.</li>
+					<li>Added some photos for series and important events to the <a href="timeline/index.html">Star Trek Universe Full Timeline</a>, plus some other small improvements.</li>
 					<li>Added season descriptions and episode air dates to the <em><a href="ds9/index.html">Star Trek: Deep Space Nine</a></em> guide.</li>
-					<li>Linked series- and episode-specific timelines to the master timeline.</li>
+					<li>Linked series- and episode-specific timelines to the full timeline.</li>
 				</ul>
 			</td>
 		</tr>
@@ -132,7 +150,7 @@
 			<td><span class="updateDate">February 28, 2025</span></td>
 			<td>1.1</td>
 			<td><ul>
-					<li><span class="newGuideRelease">The <a href="timeline/index.html">Star Trek Universe Master Timeline</a> is here! I am particularly excited about this one.</span></li>
+					<li><span class="newGuideRelease">The <a href="timeline/index.html">Star Trek Universe Full Timeline</a> is here! I am particularly excited about this one.</span></li>
 				</ul>
 				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
 					Reorganized the home page; made episode quotes formatting consistent across the DS9 guide to match the upcoming VOY guide; added smooth scroll to some places it was missing.</div>
@@ -142,7 +160,7 @@
 			<td><span class="updateDate">February 1, 2025</span></td>
 			<td>1.0</td>
 			<td><ul>
-					<li><span class="newGuideRelease">Version 1.0 of the site is launched with its first and only series guide, <em><a href="ds9/index.html">Star Trek: Deep Space Nine</a></em>, and a bonus review of <em><a href="s31.html">Star Trek: Section 31</a></em>. More to come!</span></li>
+					<li><span class="newGuideRelease">Version 1.0 of the site is launched with its first and only series guide, <em><a href="ds9/index.html">Star Trek: Deep Space Nine</a></em>, and a bonus review of <em><a href="films/section31.html">Star Trek: Section 31</a></em>. More to come!</span></li>
 				</ul>
 			</td>
 		</tr>
@@ -150,7 +168,7 @@
 	</table>
 <!--</div>-->
 
-<div class="pageFooter"><img src="images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">HOME</a>&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="x=getComputedStyle(document.getElementById('kofiframe')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframe').style.height=x;document.getElementById('kofiframe').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><img src="images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">HOME</a>&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 
 <div id="TTDIV"></div>
 

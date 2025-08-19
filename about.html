@@ -16,7 +16,7 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
 <meta property="og:image" content="https://c6reviews.com/images/ogimage.png">
-<link rel="stylesheet" href="main.css?v=1.3.1">
+<link rel="stylesheet" href="main.css?v=1.4">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <title>C6Reviews | About</title>
@@ -34,7 +34,7 @@
 
 <body>
 
-<div id='kofiframe'><iframe src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'></iframe><span id="koficlose" onclick="document.getElementById('kofiframe').style.height='0px';document.getElementById('kofiframe').style.border='none';">&times;</span></div>
+<div id='kofiframediv'><iframe id="kofiframe" src='loader.html'></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
 <div class="c6Left"><a href="index.html"><img src="images/c6reviews-vert.png" alt="c6reviews"></a></div>
 	<div class="pageTitleImage"><img src="images/main-header.png" alt="Starfleet delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
@@ -46,7 +46,7 @@
 	</div>
 	<div class="c6Right"><img src="images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"><a href="index.html" style="margin-top:8px;">HOME</a><a href="about.html">ABOUT</a><a href="updates.html">UPDATES</a>
 	
-	<a style="cursor:pointer" onclick="x=getComputedStyle(document.getElementById('kofiframe')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframe').style.height=x;document.getElementById('kofiframe').style.border=y;">SUPPORT</a>
+	<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a>
 	
 	<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
@@ -59,6 +59,7 @@
 	<img src="images/c6.png" style="float:right;width:300px;margin-bottom:20px;margin-left:10px;" alt="a smiling, pale-skinned android with C6 tattooed to his forehead">
 	
 	<div class="sectionHeader">What is C6Reviews.com?</div>
+	<div class="serif">
 	<p>As <em>Star Trek</em> has entered a new era since the premiere of <em>Star Trek: Discovery</em> in 2017, more and more people are being introduced to the Star Trek Universe. It is my hope that this site can serve as a resource for newcomers and long-time fans alike, to help better understand the events and stories, and to find the links between them. This site operates on the following key principles:</p>
 	<ul>
 		<li>Star Trek is for everyone, and everyone has their own version of what Trek means to them. There are Trek fans of all ages, and generational differences are often what determine which era of Trek resonates most with an individual.</li>
@@ -66,23 +67,28 @@
 		<li>When I &ldquo;rate&rdquo; a show, that is just my opinion. You might love an episode that I hate, or you might hate an episode that I love, <em>and that's perfectly okay!</em> In fact, that's the whole point! My ratings are not to be taken as any sort of universal truth.</li>
 		<li>I have no hard and fast rules about what Trek &ldquo;should&rdquo; or &ldquo;shouldn't&rdquo; be. I think it's important to allow yourself to enjoy each new iteration of Star Trek in its own light, and not get hung up on comparing it to things that came before.</li>
 	</ul>
+	</div>
 	
 	<div class="sectionHeader">Who is C6?</div>
+	<div class="serif">
 	<p>C6 is just another of many internet denizens who posts his opinions about Star Trek stuff. His opinion is no more important than anyone else's, it's just that he took the time to make this idiotic website. C6 grew up in the 90s with Star Trek shows like <em>The Next Generation</em>, <em>Deep Space Nine</em>, and <em>Voyager</em>, and he's excited that Trek has made a return to television... er, a streaming service. C6 has spent much of his life trying to temper his enthusiasm for Star Trek and not be too &ldquo;nerdy&rdquo; about it, but he's starting to embrace his inner Trekkie as he gets older.</p>
 	<p>Feel free to reach out to C6 on his Bluesky social media account <a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank">@c6reviews.bsky.social</a>.</p>
+	</div>
 	
 	<div class="sectionHeader">What makes this site any different than IMDb or Memory Alpha?</div>
-	<ul>
+	<ul class="serif">
 		<li><strong>Designed for first-time viewers and long-time fans: </strong>This site is designed with the first-time viewer in mind, but also in such a way that long-time fans should also find valuable.</li>
-		<li><strong>Spoiler avoidance: </strong>This site strives to avoid spoiling any episode or show that you haven't watched yet &ndash; even the master timeline has spoilers hidden.</li>
+		<li><strong>Spoiler avoidance: </strong>This site strives to avoid spoiling any episode or show that you haven't watched yet &ndash; even the full timeline has spoilers hidden.</li>
 		<li><strong>Easily find links and references: </strong>This site gets to the point of each episode and makes it easy to find connections to other episodes and series. Everything on the site will eventually be linked together, from each episode to the timeline and back!</li>
 	</ul>
 	
 	<div class="sectionHeader">Support C6</div>
+	<div class="serif">
 	<p>I am certainly not trying to monetize this site, nor do I expect to make any sort of profit off of this. I made this site as a personal project for my own enjoyment and hopefully for the occasional new <em>Star Trek</em> fan who wanders across the site. If you are feeling generous and you like my work, you can visit my Ko-fi page at <a href="https://ko-fi.com/c6reviews/" target="_blank">https://ko-fi.com/c6reviews/</a> and/or use the &ldquo;support&rdquo; link at the top-right of most pages to toss a buck or two my way. Proceeds will be used toward the maintenance of this site. Thank you!</p>
+	</div>
 </div>
 
-<div class="pageFooter"><img src="images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">HOME</a>&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="x=getComputedStyle(document.getElementById('kofiframe')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframe').style.height=x;document.getElementById('kofiframe').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><img src="images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">HOME</a>&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 
 <div id="TTDIV"></div>
 
