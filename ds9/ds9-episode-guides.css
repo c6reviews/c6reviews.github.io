@@ -119,6 +119,9 @@
 		vertical-align: bottom;
 		padding-bottom: 8px;
 	}
+	.detailBlock a {
+		text-decoration: underline dotted;
+	}
 	.ratingBlock {
 		margin-left: auto;
 		margin-right: auto;

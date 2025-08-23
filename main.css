@@ -18,6 +18,12 @@ body a {
 	text-decoration: none;
 	white-space: nowrap;
 }
+body p a {
+	text-decoration: underline dotted;
+}
+body ul a {
+	text-decoration: underline dotted;
+}
 body a:hover {
 	color: #F1F1F1;
 	text-decoration: none;
@@ -465,7 +471,7 @@ body li {
 	}
 	.updateTable .minorUpdates {
 		font-size: small;
-		color: #888;
+		color: #999;
 		font-style: italic;
 		margin-left: 40px;
 		margin-bottom: 15px;

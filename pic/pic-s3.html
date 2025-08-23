@@ -15,10 +15,10 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.4">
-<link rel="stylesheet" href="../tts.css?v=1.4">
-<link rel="stylesheet" href="pic.css?v=1.4">
-<link rel="stylesheet" href="pic-episode-guides.css?v=1.4">
+<link rel="stylesheet" href="../main.css?v=1.4hf1">
+<link rel="stylesheet" href="../tts.css?v=1.4hf1">
+<link rel="stylesheet" href="pic.css?v=1.4hf1">
+<link rel="stylesheet" href="pic-episode-guides.css?v=1.4hf1">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 <meta property="og:image" content="https://c6reviews.com/pic/images/ogimage.png">
 
@@ -43,7 +43,7 @@
 
 <body>
 
-<div id='kofiframediv'><iframe id="kofiframe" src='../loader.html'></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
+<div id='kofiframediv'><iframe id="kofiframe" src='../loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
 <div class="c6Left"><a href="../index.html"><img src="../images/c6reviews-vert.png" alt="c6reviews"></a></div>
 <div class="pageTitleImage"><img src="images/pic-header.png" alt="Star Trek: Picard title header"></div>
@@ -210,7 +210,7 @@
 					</tr>
 					<tr>
 						<td class="titleBox">The Next Generation
-							<span class="TTScontrols" style="margin-right:265px"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts1apb" onclick="textToSpeech('tts1a',prepTextToSpeech('tts1a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
 						<td colspan="3" style="text-align:center">
@@ -238,7 +238,7 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts1bpb" onclick="textToSpeech('tts1b',prepTextToSpeech('tts1b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -268,7 +268,7 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts1cpb" onclick="textToSpeech('tts1c',prepTextToSpeech('tts1c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -309,7 +309,7 @@
 						<tr>
 							<td class="iconBox">⁉</td>
 							<td class="sectionHead">Nitpickery &amp; Other Weirdness
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts1dpb" onclick="textToSpeech('tts1d',prepTextToSpeech('tts1d'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -395,7 +395,7 @@
 					</tr>
 					<tr>
 						<td class="titleBox">Disengage
-							<span class="TTScontrols" style="margin-right:265px"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts2apb" onclick="textToSpeech('tts2a',prepTextToSpeech('tts2a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
 						<td colspan="3" style="text-align:center">
@@ -423,7 +423,7 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts2bpb" onclick="textToSpeech('tts2b',prepTextToSpeech('tts2b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -453,7 +453,7 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts2cpb" onclick="textToSpeech('tts2c',prepTextToSpeech('tts2c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -482,7 +482,7 @@
 						<tr>
 							<td class="iconBox">⁉</td>
 							<td class="sectionHead">Nitpickery &amp; Other Weirdness
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts2dpb" onclick="textToSpeech('tts2d',prepTextToSpeech('tts2d'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -566,7 +566,7 @@
 					</tr>
 					<tr>
 						<td class="titleBox">Seventeen Seconds
-							<span class="TTScontrols" style="margin-right:265px"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts3apb" onclick="textToSpeech('tts3a',prepTextToSpeech('tts3a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
 						<td colspan="3" style="text-align:center">
@@ -594,7 +594,7 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts3bpb" onclick="textToSpeech('tts3b',prepTextToSpeech('tts3b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -628,7 +628,7 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts3cpb" onclick="textToSpeech('tts3c',prepTextToSpeech('tts3c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -671,7 +671,7 @@
 						<tr>
 							<td class="iconBox">⁉</td>
 							<td class="sectionHead">Nitpickery &amp; Other Weirdness
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts3dpb" onclick="textToSpeech('tts3d',prepTextToSpeech('tts3d'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -743,7 +743,7 @@
 					</tr>
 					<tr>
 						<td class="titleBox">No Win Scenario
-							<span class="TTScontrols" style="margin-right:265px"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts4apb" onclick="textToSpeech('tts4a',prepTextToSpeech('tts4a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
 						<td colspan="3" style="text-align:center">
@@ -770,7 +770,7 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts4bpb" onclick="textToSpeech('tts4b',prepTextToSpeech('tts4b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -802,7 +802,7 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts4cpb" onclick="textToSpeech('tts4c',prepTextToSpeech('tts4c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -835,7 +835,7 @@
 						<tr>
 							<td class="iconBox">⁉</td>
 							<td class="sectionHead">Nitpickery &amp; Other Weirdness
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts4dpb" onclick="textToSpeech('tts4d',prepTextToSpeech('tts4d'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -920,7 +920,7 @@
 					</tr>
 					<tr>
 						<td class="titleBox">Imposters
-							<span class="TTScontrols" style="margin-right:265px"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts5apb" onclick="textToSpeech('tts5a',prepTextToSpeech('tts5a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
 						<td colspan="3" style="text-align:center">
@@ -949,7 +949,7 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts5bpb" onclick="textToSpeech('tts5b',prepTextToSpeech('tts5b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -981,7 +981,7 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts5cpb" onclick="textToSpeech('tts5c',prepTextToSpeech('tts5c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -1014,7 +1014,7 @@
 						<tr>
 							<td class="iconBox">⁉</td>
 							<td class="sectionHead">Nitpickery &amp; Other Weirdness
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts5dpb" onclick="textToSpeech('tts5d',prepTextToSpeech('tts5d'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -1100,7 +1100,7 @@
 					</tr>
 					<tr>
 						<td class="titleBox">The Bounty
-							<span class="TTScontrols" style="margin-right:265px"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts6apb" onclick="textToSpeech('tts6a',prepTextToSpeech('tts6a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
 						<td colspan="3" style="text-align:center">
@@ -1127,7 +1127,7 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts6bpb" onclick="textToSpeech('tts6b',prepTextToSpeech('tts6b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -1157,7 +1157,7 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts6cpb" onclick="textToSpeech('tts6c',prepTextToSpeech('tts6c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -1243,7 +1243,7 @@
 						<tr>
 							<td class="iconBox">⁉</td>
 							<td class="sectionHead">Nitpickery &amp; Other Weirdness
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts6dpb" onclick="textToSpeech('tts6d',prepTextToSpeech('tts6d'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -1328,7 +1328,7 @@
 					</tr>
 					<tr>
 						<td class="titleBox">Dominion
-							<span class="TTScontrols" style="margin-right:265px"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts7apb" onclick="textToSpeech('tts7a',prepTextToSpeech('tts7a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
 						<td colspan="3" style="text-align:center">
@@ -1355,7 +1355,7 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts7bpb" onclick="textToSpeech('tts7b',prepTextToSpeech('tts7b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span><span>Thoughts</span>
 							</td>
 						</tr>
@@ -1386,7 +1386,7 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-									<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+									<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 									<button class="TTSplayButton" id="tts7cpb" onclick="textToSpeech('tts7c',prepTextToSpeech('tts7c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -1412,7 +1412,7 @@
 						<tr>
 							<td class="iconBox">⁉</td>
 							<td class="sectionHead">Nitpickery &amp; Other Weirdness
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts7dpb" onclick="textToSpeech('tts7d',prepTextToSpeech('tts7d'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -1494,7 +1494,7 @@
 					</tr>
 					<tr>
 						<td class="titleBox">Surrender
-							<span class="TTScontrols" style="margin-right:265px"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts8apb" onclick="textToSpeech('tts8a',prepTextToSpeech('tts8a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
 						<td colspan="3" style="text-align:center">
@@ -1521,7 +1521,7 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts8bpb" onclick="textToSpeech('tts8b',prepTextToSpeech('tts8b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -1552,7 +1552,7 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts8cpb" onclick="textToSpeech('tts8c',prepTextToSpeech('tts8c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -1653,7 +1653,7 @@
 					</tr>
 					<tr>
 						<td class="titleBox">Võx
-							<span class="TTScontrols" style="margin-right:265px"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts9apb" onclick="textToSpeech('tts9a',prepTextToSpeech('tts9a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
 						<td colspan="3" style="text-align:center">
@@ -1680,7 +1680,7 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts9bpb" onclick="textToSpeech('tts9b',prepTextToSpeech('tts9b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -1713,7 +1713,7 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts9cpb" onclick="textToSpeech('tts9c',prepTextToSpeech('tts9c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -1749,7 +1749,7 @@
 						<tr>
 							<td class="iconBox">⁉</td>
 							<td class="sectionHead">Nitpickery &amp; Other Weirdness
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts9dpb" onclick="textToSpeech('tts9d',prepTextToSpeech('tts9d'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -1819,7 +1819,7 @@
 					</tr>
 					<tr>
 						<td class="titleBox">The Last Generation
-							<span class="TTScontrols" style="margin-right:265px"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts10apb" onclick="textToSpeech('tts10a',prepTextToSpeech('tts10a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
 						<td colspan="3" style="text-align:center">
@@ -1848,7 +1848,7 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts10bpb" onclick="textToSpeech('tts10b',prepTextToSpeech('tts10b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -1892,7 +1892,7 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 								<button class="TTSplayButton" id="tts10cpb" onclick="textToSpeech('tts10c',prepTextToSpeech('tts10c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 							</td>
 						</tr>
@@ -1986,7 +1986,7 @@
 	
 	<div class="seasonReviewCard" id="seasonReview">
 		
-		<div class="seasonName">Season 3 Review<span class="TTScontrols"><span class="ttsicon">🗣</span> <select id="ttsratemaster" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select>
+		<div class="seasonName">Season 3 Review<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select id="ttsratemaster" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 			<button class="TTSplayButton" id="tts1pb" onclick="textToSpeech('tts1',prepTextToSpeech('tts1'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 			<br><span style="font-size:small;font-family:sans-serif;color:#E0C0A0"><span style="text-shadow: red 0px 0px 12px">🚨</span> Definitely contains spoilers <span style="text-shadow: red 0px 0px 12px">🚨</span></span></div>
 		<div class="serif" id="tts1">
