@@ -153,6 +153,9 @@
 		vertical-align: bottom;
 		padding-bottom: 8px;
 	}
+	.detailBlock a {
+		text-decoration: underline dotted;
+	}
 	.lowerTitle {
 		text-align: right;
 		margin-right: 16px;
