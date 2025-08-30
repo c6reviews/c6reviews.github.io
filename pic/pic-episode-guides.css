@@ -154,7 +154,7 @@
 		padding-bottom: 8px;
 	}
 	.detailBlock a {
-		text-decoration: underline dotted;
+		text-decoration: underline dotted 1px;
 	}
 	.lowerTitle {
 		text-align: right;
@@ -249,7 +249,22 @@
 			padding: 2px;
 			border-radius: 2px;
 		}
-		
+		.spoilerSwitch {
+			display: block;
+			position: relative;
+			margin: 5px;
+			padding: 3px;
+			font-size: small;
+		}
+		.spoilerSwitch .switch {
+			vertical-align: text-bottom;
+		}
+		.switchLabel {
+			position: absolute;
+			right: -185px;
+			width: 180px;
+			font-size: large;
+		}	
 
 		/* || -------------------- DETAIL BLOCK ELEMENTS -------------------- */
 		.timelinePopup {
@@ -508,6 +523,31 @@
 			}
 			.nostalgiaMeterTitle {
 				font-size: small;
+			}
+			.nostalgiaText1 {
+				color: #FA6453;
+				font-size: medium;
+				vertical-align: bottom;
+			}
+			.nostalgiaText2 {
+				color: #FC9F5B;
+				font-size: medium;
+				vertical-align: bottom;
+			}
+			.nostalgiaText3 {
+				color: #FFEB84;
+				font-size: medium;
+				vertical-align: bottom;
+			}
+			.nostalgiaText4 {
+				color: #81D570;
+				font-size: medium;
+				vertical-align: bottom;
+			}
+			.nostalgiaText5 {
+				color: #03BE4B;
+				font-size: medium;
+				vertical-align: bottom;
 			}
 
 			/* ||| --- SCORE BOX --- */

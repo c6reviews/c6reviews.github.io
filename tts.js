@@ -82,3 +82,9 @@ function speechStop() {
 }
 
 
+window.addEventListener('beforeunload', function() {
+    // Stop any ongoing speech synthesis when the page is unloaded
+    if (window.speechSynthesis) {
+        window.speechSynthesis.cancel();
+    }
+});

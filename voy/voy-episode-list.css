@@ -26,6 +26,20 @@
 
 
 /* ---------------------------------------- PRE-HEADER ROW ---------------------------------------- */
+#preHeaderRow {
+	position:sticky;
+	top:0;
+	background-color:#181818;z-index:5
+}
+#preHeaderRow::after {
+	content: "";
+	position: absolute;
+	right: -2px;
+	top: 0px;
+	background-color: #181818;
+	width: 2px;
+	height: 100%;
+}
 #filterTotalbox {
 	width: 80px;
 	text-align: center;
@@ -78,16 +92,23 @@ input[type=button]:hover {
 	display: none;
 }
 .dropdownArrow {
-	cursor: pointer;
-	user-select: none;
-	font-size: 15px;
-	margin-left: 3px;
-	border: 1px solid;
-	border-radius: 2px;
+	width:24px;
+	height:24px;
+	padding-left:4px;
+	padding-top:0px;
+	border-radius:2px;
+	margin-left:2px;
 }
-.dropdownArrow:hover {
-	background-color: #1b8aba;
-	color: white;
+.textClearButton {
+	width:24px;
+	height:24px;
+	padding-left:6px;
+	padding-top:0px;
+	border-radius:2px;
+	margin-left:2px;
+}
+.resetFiltersButton {
+	height: 24px;
 }
 .icon {
 	display: inline-block;
@@ -98,6 +119,21 @@ input[type=button]:hover {
 
 
 /* ---------------------------------------- HEADER ROW ---------------------------------------- */
+#headerRow{
+	position:sticky;
+	top:64px;
+	height: 32px;
+	vertical-align: bottom;
+}
+#headerRow::after {
+	content: "";
+	position: absolute;
+	right: -2px;
+	top: 0px;
+	background-color: #303030;
+	width: 2px;
+	height: 100%;
+}
 .sortarrows {
 	color: #555;
 	font-weight: bold;

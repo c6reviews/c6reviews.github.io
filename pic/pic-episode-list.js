@@ -21,6 +21,7 @@ function createTable(array) {
 	
 	var columns = 5;
 	var content = "";
+	var cellClass = "";
 	
 	array.slice(1).forEach(function(row) {
         content += '<tr class="filterableRow">';
@@ -311,44 +312,6 @@ function toggleFilterBox(id) {
 }
 
 
-function setRnFilters() {
-	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
-	var checkedRnFilters = document.querySelectorAll(".rnfiltercheckbox:checked");
-	let activeRnFilters = [];
-	var activeIcons = "";
-	
-	Array.from(checkedRnFilters).forEach((filter) => {
-		activeRnFilters.push(filter.value);
-		var rnIcon = filter.parentElement.querySelector("span.icon").innerHTML
-		activeIcons += rnIcon + "   ";
-	})
-	
-	document.getElementById("recommendationFilterTextbox").value = activeIcons;
-
-	filterrows.forEach((filterrow) => {
-		
-		filterrow.style.display="none";
-		var checkCell = filterrow.getElementsByTagName("td")[3];
-	
-		Array.from(activeRnFilters).forEach((rnfilter) => {
-			if ((checkCell.innerHTML).includes(rnfilter)){
-				filterrow.style.display="";
-			}
-		})
-		
-	})
-	
-	updateFilterCount();
-	removeSeasonSeparator();
-	if (G_sortcol == 0) {
-		addSeasonSeparator();
-	}
-	G_filterset = filterrows.filter(function(ele) {
-		return window.getComputedStyle(ele).display !== 'none';
-	});
-	filterTitle();
-}
-
 function setTagsFilters() {
 	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
 	var checkedTagsFilters = document.querySelectorAll(".tagsfiltercheckbox:checked");
@@ -356,11 +319,9 @@ function setTagsFilters() {
 	var activeIcons = "";
 	
 	Array.from(checkedTagsFilters).forEach((filter) => {
-		const filterItem = filter.value.split('|');
-		filterItem.forEach((item) => {
-			activeTagsFilters.push(item);
-		});
+		activeTagsFilters.push(filter.value);
 		activeIcons += filter.parentElement.querySelector("span.icon").innerHTML;
+		activeIcons += " ";
 	});
 
 	document.getElementById("tagFilterTextbox").value = activeIcons;
@@ -375,15 +336,7 @@ function setTagsFilters() {
 			if ((checkCell.innerHTML).includes(tagsfilter)){
 				filterrow.style.display="";
 			}
-			
-			/*Array.from(checkCell.innerHTML).forEach((tag) => {
-				Array.from(tagsfilter).forEach((filter) => {
-					if (tag == filter){
-						filterrow.style.display="";
-					}
-				});
-			});*/
-			
+
 		});
 		
 		
@@ -406,49 +359,6 @@ function setFilters(type) {
 
 	if (type.endsWith("all")) { // "All Tags" or "All Recommendations" was checked or unchecked
 		
-		if (type == "rnall") { // "All Recommendations" was checked or unchecked
-			var rnallfilter = document.getElementById("rnfilterall");
-			var rnfilters = document.getElementsByClassName("rnfiltercheckbox");
-			
-			if (!rnallfilter.checked) { // "All Recommendations" was unchecked: re-check it
-				rnallfilter.checked = true;
-				return;
-			}
-			else // "All Recommendations" was checked
-			{
-				// Uncheck all other Recommendation selections
-				Array.from(rnfilters).forEach((filter) => {
-					filter.checked = false;
-				})
-				
-				// Clear the filter textbox
-				document.getElementById("recommendationFilterTextbox").value = "";
-				
-				toggleFilterBox('recommendationFilter');
-				
-				if (tagsfilterall.checked) { // If "All Tags" is also selected, show all rows
-					filterrows.forEach((filterrow) => {
-						filterrow.style.display = "";
-					})
-					updateFilterCount();
-					removeSeasonSeparator();
-					if (G_sortcol == 0) {
-						addSeasonSeparator();
-					}
-					G_filterset = filterrows.filter(function(ele) {
-						return window.getComputedStyle(ele).display !== 'none';
-					});
-					filterTitle();
-					return;
-				}
-				else // Else if "All Tags" is not selected, filter by Tags
-				{
-					setTagsFilters();
-					return;
-				}
-			}
-		}
-		
 		if (type == "tagsall") { // "All Tags" was checked or unchecked
 			var tagsallfilter = document.getElementById("tagsfilterall");
 			var tagsfilters = document.getElementsByClassName("tagsfiltercheckbox");
@@ -469,131 +379,34 @@ function setFilters(type) {
 				
 				toggleFilterBox('tagFilter');
 				
-				if (rnfilterall.checked) { // If "All Recommendations" is also selected, show all rows
-					filterrows.forEach((filterrow) => {
-						filterrow.style.display = "";
-					})
-					updateFilterCount();
-					removeSeasonSeparator();
-					if (G_sortcol == 0) {
-						addSeasonSeparator();
-					}
-					G_filterset = filterrows.filter(function(ele) {
-						return window.getComputedStyle(ele).display !== 'none';
-					});
-					filterTitle();
-					return;
-				}
-				else // Else if "All Recommendations" is not selected, filter by Tags
-				{
-					setRnFilters();
-					return;
-				}
-			}
-		}
-	}
-	else // A selection was made that WASN'T of of the "All" options
-	{
-		var rnallfilter = document.getElementById("rnfilterall");
-		var tagsallfilter = document.getElementById("tagsfilterall");
-		
-
-		if (type=="rn") { // A recommendation filter was checked or unchecked
-			rnallfilter.checked = false;
-			
-			if (tagsallfilter.checked) { // All Tags is checked: just filter by Recommendation
-				setRnFilters();
-				return;
-			}
-		}
-		if (type=="tags") { // A tags filter was checked or unchecked
-			tagsallfilter.checked = false;
-			
-			if (rnallfilter.checked) { // All Recommendations is checked: just filter by Tags
-				setTagsFilters();
-				return;
-			}
-		}
-		if (type=="andor") { // The and/or selector was changed
-			if (rnallfilter.checked && tagsallfilter.checked) { // Both Tags and Recommendations are set to "All": Show all rows
 				filterrows.forEach((filterrow) => {
 					filterrow.style.display = "";
-				})
+				});
 				updateFilterCount();
 				removeSeasonSeparator();
 				if (G_sortcol == 0) {
 					addSeasonSeparator();
 				}
 				G_filterset = filterrows.filter(function(ele) {
-						return window.getComputedStyle(ele).display !== 'none';
-					});		
+					return window.getComputedStyle(ele).display !== 'none';
+				});
 				filterTitle();
 				return;
 			}
-			if (rnallfilter.checked && !tagsallfilter.checked) { // Recommendations is set to "All": filter by Tags
-				setTagsFilters();
-				return;
-			}
-			if (!rnallfilter.checked && tagsallfilter.checked) { // Tags is set to "All": filter by Recommendation
-				setRnFilters();
-				return;
-			}
 		}
+	}
+	else // A selection was made that WASN'T of of the "All" options
+	{
+		var tagsallfilter = document.getElementById("tagsfilterall");
 		
-	// ********** A SELECTION WAS MADE THAT REQUIRES FILTERING BY BOTH FILTERS **********
-		
-		var checkedRnFilters = document.querySelectorAll(".rnfiltercheckbox:checked");
-		let activeRnFilters = [];
-		var activeRnIcons = "";
-		var checkedTagsFilters = document.querySelectorAll(".tagsfiltercheckbox:checked");
-		let activeTagsFilters = [];
-		var activeTagsIcons = "";
-		var andorradio = document.querySelector(".andorradio:checked");
-		var andor = andorradio.value;
-	
-		Array.from(checkedRnFilters).forEach((filter) => {
-			activeRnFilters.push(filter.value);
-			activeRnIcons += filter.parentElement.querySelector("span.icon").innerHTML + "   ";
-		});
+		if (type=="tags") { // A tags filter was checked or unchecked
+			tagsallfilter.checked = false;
+			
+			setTagsFilters();
+			return;
+			
+		}
 
-		document.getElementById("recommendationFilterTextbox").value = activeRnIcons;
-		
-		
-		Array.from(checkedTagsFilters).forEach((filter) => {
-			activeTagsFilters.push(filter.value);
-			activeTagsIcons += filter.parentElement.querySelector("span.icon").innerHTML;
-		});
-		
-		document.getElementById("tagFilterTextbox").value = activeTagsIcons;
-		
-		filterrows.forEach((filterrow) => {
-			
-			var partmatch = false;
-			
-			filterrow.style.display="none";
-			
-			
-			Array.from(activeRnFilters).forEach((rnfilter) => {
-				if ((filterrow.innerHTML).includes(rnfilter)){
-					if (andor == "and"){
-						partmatch = true;
-					} else {
-						filterrow.style.display="";
-					}
-				}
-			})
-			
-			if (partmatch || andor == "or"){
-				var checkCell = filterrow.getElementsByTagName("td")[2];
-				Array.from(activeTagsFilters).forEach((tagsfilter) => {
-					if ((checkCell.innerHTML).includes(tagsfilter)){
-						filterrow.style.display="";
-					}
-				})
-			}
-			
-		
-		})
 	}
 	
 	updateFilterCount();
@@ -613,7 +426,6 @@ function resetFilters() {
 	var filterallcheckboxes = document.querySelectorAll("#rnfilterall,#tagsfilterall");
 	var filtercheckboxes = document.querySelectorAll(".rnfiltercheckbox,.tagsfiltercheckbox");
 	
-	document.getElementById("recommendationFilterTextbox").value = "";
 	document.getElementById("tagFilterTextbox").value = "";
 	document.getElementById("episodeSearchBox").value = "";
 	
@@ -624,11 +436,9 @@ function resetFilters() {
 	Array.from(filtercheckboxes).forEach((checkbox) => {
 		checkbox.checked = false;
 	})
-	
-	var andordefault = document.getElementById("andordefault");
-	andordefault.checked = true;
-	
-	setFilters("andor");
+		
+	setFilters("tagsall");
+	document.getElementById("tagFilter").style.display = "none";
 	updateFilterCount();
 	removeSeasonSeparator();
 	if (G_sortcol == 0) {
@@ -710,7 +520,7 @@ var csvString = `Episode,Title,Distinctions,NostalgiaMeter,Rating
 3x04,No Win Scenario,(SD)|F-Bomb,4,8.5
 3x05,Imposters,(GD)(SD)|<span style="color:#eea432">Return To Service</span><br>Unceremonious End,4,8.8
 3x06,The Bounty,(GD)(GD)(GD)|<span style="color:#eea432">Return To Service</span><br><span style="color:#eea432">Return To Villainy x2</span>,5,7.2
-3x07,Dominion,(GD)|<span style="color:#eea432">Special Guest Star</span>,1,7.7
+3x07,Dominion,(GD)|<span style="color:#eea432">Special Guest Star</span><br><span class="personalFavorite">♥ <span class="large">Personal Favorite</span></span>,1,7.7
 3x08,Surrender,(SD)(GD)|F-Bomb<br><span style="color:#eea432">Return To Service</span>,3,8.6
 3x09,Võx,,6,7.3
 3x10,The Last Generation,(GD)(GD)(GD)|<span style="color:#eea432">Return To Service</span><br><span style="color:#eea432">Special Guest Star</span><br><span style="color:#eea432;font-style:italic">( +1 )</span>,5,7.1`;

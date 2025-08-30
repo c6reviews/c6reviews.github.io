@@ -15,9 +15,9 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.4hf1">
-<link rel="stylesheet" href="../tts.css?v=1.4hf1">
-<link rel="stylesheet" href="7of9.css?v=1.4hf1">
+<link rel="stylesheet" href="../main.css?v=1.4.1">
+<link rel="stylesheet" href="../tts.css?v=1.4.1">
+<link rel="stylesheet" href="7of9.css?v=1.4.1">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 <meta property="og:image" content="https://c6reviews.com/7of9/images/ogimage.png">
 
@@ -56,7 +56,7 @@
 	
 <div class="content">
 	
-		<p style="text-align: center"><a href="#tableContainer">▼ Jump to list of appearances ▼</a></p>
+		<p style="text-align: center"><a href="#tableContainer" style="text-decoration:none">▼ Jump to list of appearances ▼</a></p>
 	
 		<div class="sectionHeader">Seven of Nine</div>
 		
@@ -98,15 +98,15 @@
 				<td>&nbsp;</td>
 				<td style="padding-right:8px;vertical-align:bottom;position:relative;">
 					<div class="episodeSearchBoxContainer">
-						<input type="text" id="episodeSearchBox" placeholder="Title search" onkeyup="filterTitle()" size="28"><input type="button" value="✖" style="width:13px;height:20px;padding-left:0px;padding-top:0px;border-radius:2px;margin-left:2px;" onClick="document.getElementById('episodeSearchBox').value='';filterTitle()">
+						<input type="text" id="episodeSearchBox" placeholder="Title search" onkeyup="filterTitle()" size="28" style="height:21px"><input type="button" value="✖" class="textClearButton" onClick="document.getElementById('episodeSearchBox').value='';filterTitle()">
 					</div>
-					
 				</td>
 				<td style="text-align:left;vertical-align:bottom;">
 					<label class="checkContainer" style="padding-left:20px;height:auto;"><input type="checkbox" id="hideNonPrimary" onClick="setFilters('hideNonPrimary')"><span class="checkmark"></span>Hide episodes where Seven did not have a primary role</label>
 				</td>
 				<td style="text-align:center;vertical-align:bottom">
-					<input type="text" id="recommendationFilterTextbox" placeholder="Recommendation filter" size="24" onclick="toggleFilterBox('recommendationFilter')" readonly><span id="recommendationFilterDropdownArrow" class="dropdownArrow" onclick="toggleFilterBox('recommendationFilter')">▼</span>
+					<input type="text" id="recommendationFilterTextbox" placeholder="Recommendation filter" size="22" onclick="toggleFilterBox('recommendationFilter')" style="height:21px" readonly>
+					<input id="recommendationFilterDropdownArrow" type="button" class="dropdownArrow" value="▼" onclick="toggleFilterBox('recommendationFilter')">
 					<div class="filterDropdownContainer" id="recommendationFilter" style="transform: translateX(15px);">
 						<label class="checkContainer"><input type="checkbox" id="rnfilterall" onClick="setFilters('rnall')" checked><span class="checkmark"></span><span class="icon"></span>&nbsp;All&nbsp;Recommendations</label>
 						<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="🕶" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">🕶</span>&nbsp;Must&nbsp;Watch</label>
@@ -117,7 +117,7 @@
 					</div>
 				</td>
 				<td style="text-align:right;vertical-align:bottom;">
-					<input type="button" class="resetfiltersbutton" onClick="resetFilters()" value="Clear Filters">
+					<input type="button" class="resetFiltersButton" onClick="resetFilters()" value="Clear Filters">
 				</td>
 			</tr>
 			<tr id="headerRow">

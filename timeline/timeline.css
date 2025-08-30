@@ -268,6 +268,22 @@ input[type=button]:hover {
 #theTable {
 	margin-right: 60px;
 }
+#theTable tr {
+	position: relative;
+}
+#theTable tr:hover::after {
+    background: #FFFFFF33;
+    border-radius: 0.1em;
+    content: "";
+    top: 2px;
+	bottom: 3px;
+    left: 42px;
+	right: -3px;
+    position: absolute;
+	transform: skewY(-10deg) rotate(10deg);
+	pointer-events: none;
+}
+
 .blinkBox {
 	color: yellow !important;
 	border-color: yellow !important;

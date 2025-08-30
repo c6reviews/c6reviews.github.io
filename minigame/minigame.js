@@ -5,7 +5,6 @@ var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 ctx.font = "18px Roboto, sans-serif";
 
-
 //********************************************************************************************
 //Create an area for messages and the timer at the top of the canvas
 //********************************************************************************************
@@ -62,11 +61,13 @@ var nextWaypoint = 0;
 var frozen = true;
 var gameStart = false;
 var gameOver = false;
-var timerVal = 30;
-var timer = setInterval(timerTick,1000);
+var timerVal = 29;
+var timer = "";
 var speedBonus = 0;
+var speedBonusD = 0;
 var tarpitActive = false;
 var dudeToggle = false;
+var audio = true;
 
 //********************************************************************************************
 //Set starting coordinates for images, display images, and display text on the instructions screen
@@ -109,6 +110,7 @@ ctx.fillText("Collect the FIVE LIGHTS in order, within 30 seconds.",255,170);
 ctx.fillText("Don't get too close to GUL MADRED, because he takes up more pixels",130,270);
 ctx.fillText("than he should, and he will freeze you in place for 5 seconds!",130,295);
 ctx.fillText("Pick up the RAW TASPAR EGG for a speed boost!",130,378);
+ctx.fillText("🔊  There is some audio during the game. Once you start, you can mute by pressing [m]",50,440);
 ctx.font = "30px Roboto, sans-serif";
 ctx.fillText("Click anywhere to begin!",225,480);
 ctx.font = "18px Roboto, sans-serif";
@@ -116,6 +118,79 @@ ctx.font = "18px Roboto, sans-serif";
 canvas.addEventListener('click', startGame);
 
 
+//********************************************************************************************
+//Set up key listeners and the keycheck loop
+//********************************************************************************************
+const pressedKeys = {};
+
+document.addEventListener("keydown", (event) => {
+  if (event.repeat) return; 
+  pressedKeys[event.code] = true;
+});
+
+window.addEventListener('keyup', (event) => {
+  delete pressedKeys[event.code];
+  if (event.code == 'KeyM') toggleAudio();
+});
+
+function keycheckLoop(){
+	
+	if (!frozen)
+	{
+		var moved = false;
+
+		if (pressedKeys['ArrowLeft'] || pressedKeys['KeyA']) {
+			moved = true;
+			ctx.clearRect(dudeX,dudeY,35,75);
+			if (pressedKeys['ArrowUp'] || pressedKeys['KeyW']) {
+				if(dudeX >= 5+speedBonus){dudeX -= (5.657+speedBonusD);}
+				if(dudeY >= 25+speedBonus){dudeY -= (5.657+speedBonusD);}
+			} else if (pressedKeys['ArrowDown'] || pressedKeys['KeyS']) {
+				if(dudeX >= 5+speedBonus){dudeX -= (5.657+speedBonusD);}
+				if(dudeY + 75 <= 495-speedBonus){dudeY += (5.657+speedBonusD);}
+			} else {
+				if(dudeX >= 5+speedBonus){dudeX -= (8+speedBonus);}
+			}	
+		}
+		else if (pressedKeys['ArrowRight'] || pressedKeys['KeyD']) {
+			moved = true;
+			ctx.clearRect(dudeX,dudeY,35,75);
+			if (pressedKeys['ArrowUp'] || pressedKeys['KeyW']) {
+				if(dudeX + 35 <= 795-speedBonus){dudeX += (5.657+speedBonusD);}
+				if(dudeY >= 25+speedBonus){dudeY -= (5.657+speedBonusD);}
+			} else if (pressedKeys['ArrowDown'] || pressedKeys['KeyS']) {
+				if(dudeX + 35 <= 795-speedBonus){dudeX += (5.657+speedBonusD);}
+				if(dudeY + 75 <= 495-speedBonus){dudeY += (5.657+speedBonusD);}
+			} else {
+				if(dudeX + 35 <= 795-speedBonus){dudeX += (8+speedBonus);}
+			}	
+		}
+		else if (pressedKeys['ArrowUp'] || pressedKeys['KeyW']) {
+			moved = true;
+			ctx.clearRect(dudeX,dudeY,35,75);
+			if(dudeY >= 25+speedBonus){dudeY -= (8+speedBonus);}
+		}
+		else if (pressedKeys['ArrowDown'] || pressedKeys['KeyS']) {
+			moved = true;
+			ctx.clearRect(dudeX,dudeY,35,75);
+			if(dudeY + 75 <= 495-speedBonus){dudeY += (8+speedBonus);}
+		}
+		
+		if (moved) {
+			if (dudeToggle)
+			{
+				ctx.drawImage(dude1, dudeX, dudeY, 35, 75);
+			} else {
+				ctx.drawImage(dude2, dudeX, dudeY, 35, 75);
+			}
+			dudeToggle = !dudeToggle;
+			
+			checkForCollision();
+		}
+	}
+	
+	setTimeout('window.requestAnimationFrame(keycheckLoop);',100);
+}
 
 //********************************************************************************************
 //Function to set up the game after the user clicks on the instructions screen
@@ -126,15 +201,19 @@ function startGame(){
 
 		gameStart = true;
 			
-		//Clear the entire screen and reset default font and color
+		//Clear the entire screen and reset default color
 		ctx.clearRect(0,20,800,480);	
-		ctx.font = "18px Roboto, sans-serif";
 		ctx.fillStyle = "white";
 		
 		//Move the mushroom off-screen until later
 		mushroomX = 801;
 		mushroomY = 501;
 			
+		//Add the audio control
+		ctx.font = "12px 'Times New Roman', serif";
+		ctx.fillText("[m]",30,35);
+		ctx.font = "18px Roboto, sans-serif";
+		ctx.fillText("🔊",3,38);
 			
 		//********************************************************************************************
 		//Create random starting positions for the dude and the tarpit
@@ -185,9 +264,34 @@ function startGame(){
 			ctx.fillStyle="white";
 		}
 
+		//Start the keycheck loop
+		window.requestAnimationFrame(keycheckLoop);
+		
+		//Start the timer
+		
+		timer = setInterval(timerTick,1000);
+		
 		//Unfreeze the player!
 		frozen = false;
-		
+	}
+}
+
+//********************************************************************************************
+//Function to turn audio on or off
+//********************************************************************************************
+
+function toggleAudio(){
+	ctx.clearRect(0,20,25,40);
+	if (audio == true) {
+		ctx.fillStyle = "white";
+		ctx.font = "18px Roboto, sans-serif";
+		ctx.fillText("🔇",3,38)
+		audio = false;
+	} else if (audio == false) {
+		ctx.fillStyle = "white";
+		ctx.font = "18px Roboto, sans-serif";
+		ctx.fillText("🔊",3,38)
+		audio = true;
 	}
 }
 
@@ -227,51 +331,6 @@ function timerTick(){
 	}
 
 }
-
-
-
-//********************************************************************************************
-//Function and listener for arrow key presses to move the dude
-//********************************************************************************************
-function handleKeydown(e){
-
-	if (!frozen)
-	{
-		ctx.clearRect(dudeX,dudeY,35,75);
-		
-		switch (e.key){
-			case "ArrowRight":
-			case "d":
-				if(dudeX + 35 <= 795-speedBonus){dudeX += 5+speedBonus;}
-				break;
-			case "ArrowLeft":
-			case "a":
-				if(dudeX >= 5+speedBonus){dudeX -= 5+speedBonus;}
-				break;
-			case "ArrowUp":
-			case "w":
-				if(dudeY >= 25+speedBonus){dudeY -= 5+speedBonus;}
-				break;
-			case "ArrowDown":
-			case "s":
-				if(dudeY + 75 <= 495-speedBonus){dudeY += 5+speedBonus;}
-				break;	
-		}		
-
-		if (dudeToggle)
-		{
-			ctx.drawImage(dude1, dudeX, dudeY, 35, 75);
-		} else {
-			ctx.drawImage(dude2, dudeX, dudeY, 35, 75);
-		}
-		dudeToggle = !dudeToggle;
-		checkForCollision(e);
-	}
-	
-}
-
-document.addEventListener("keydown", handleKeydown);
-
 
 //********************************************************************************************
 //Function to reposition the tarpit
@@ -356,7 +415,7 @@ function placeMushroom(){
 //********************************************************************************************
 //Function to check for collisions during the game
 //********************************************************************************************
-function checkForCollision(e){
+function checkForCollision(){
 	
 	// Check for collision with next waypoint and clear the waypoint
 	if (dudeX < waypointX[nextWaypoint] + 25 &&
@@ -383,22 +442,17 @@ function checkForCollision(e){
 			ctx.fillText(i+1, waypointX[i]+8, waypointY[i]+20);
 			ctx.fillStyle="white";
 			
-			switch (e.key){
-				case "ArrowRight":
-				case "d":
-					dudeX -= 20;
-					break;
-				case "ArrowLeft":
-				case "a":
-					dudeX += 20;
-					break;
-				case "ArrowUp":
-				case "w":
-					dudeY += 20;
-					break;
-				case "ArrowDown":
-				case "s":
-					dudeY -= 20;
+			if (pressedKeys['ArrowLeft'] || pressedKeys['KeyA']) {
+				dudeX += 20;
+			}
+			if (pressedKeys['ArrowRight'] || pressedKeys['KeyD']) {
+				dudeX -= 20;
+			}
+			if (pressedKeys['ArrowUp'] || pressedKeys['KeyW']) {
+				dudeY += 20;
+			}
+			if (pressedKeys['ArrowDown'] || pressedKeys['KeyS']) {
+				dudeY -= 20;
 			}
 			
 			ctx.drawImage(dude1, dudeX, dudeY, 35, 75);
@@ -418,7 +472,7 @@ function checkForCollision(e){
 		ctx.clearRect(dudeX,dudeY,35,75);
 		ctx.drawImage(tarpit, tarpitX, tarpitY, 38, 80);
 		
-		howmanylights.play();
+		if (audio) howmanylights.play();
 		
 		ctx.fillStyle="red";
 		ctx.fillText("How",tarpitX+4,tarpitY+25);
@@ -445,10 +499,11 @@ function checkForCollision(e){
 		dudeY + 75 > mushroomY &&
 		speedBonus == 0){
 		
-		engage.play();
+		if (audio) engage.play();
 		
 		ctx.clearRect(mushroomX, mushroomY, 30, 35);
-		speedBonus = 3;
+		speedBonus = 4;
+		speedBonusD = 3;
 		ctx.drawImage(dude1, dudeX, dudeY, 35, 75);
 		ctx.fillStyle="green";
 		ctx.fillText("Speed bonus!",5,15);
@@ -475,16 +530,16 @@ function clearWaypoint(w){
 	
 	switch (w) {
 		case 0:
-			makeitso.play();
+			if (audio) makeitso.play();
 			break;
 		case 1:
-			makeitso.play();
+			if (audio) makeitso.play();
 			break;
 		case 2:
-			makeitso.play();
+			if (audio) makeitso.play();
 			break;
 		case 3:
-			therearefourlights.play();
+			if (audio) therearefourlights.play();
 			break;
 	}
 	if (w >= 3) {
@@ -507,6 +562,12 @@ function redrawAll(){
 	if (!gameOver)
 	{
 		ctx.clearRect(0,20,800,480);
+		
+		ctx.font = "12px 'Times New Roman', serif";
+		ctx.fillText("[m]",30,35);
+		ctx.font = "18px Roboto, sans-serif";
+		if (audio) ctx.fillText("🔊",3,38);
+		if (!audio) ctx.fillText("🔇",3,38);
 		
 		ctx.drawImage(dude1, dudeX, dudeY, 35, 75);
 			
@@ -570,7 +631,7 @@ function endGame(type){
 			ctx.fillStyle="white";
 			ctx.drawImage(tarpit5, 355, 275, 57, 120);
 			
-			therearefivelights.play();
+			if (audio) therearefivelights.play();
 			
 			break;
 	}
