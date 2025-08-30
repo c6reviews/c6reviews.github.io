@@ -15,9 +15,9 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.4hf1">
-<link rel="stylesheet" href="pro.css?v=1.4hf1">
-<link rel="stylesheet" href="pro-episode-list.css?v=1.4hf1">
+<link rel="stylesheet" href="../main.css?v=1.4.1">
+<link rel="stylesheet" href="pro.css?v=1.4.1">
+<link rel="stylesheet" href="pro-episode-list.css?v=1.4.1">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 <meta property="og:image" content="https://c6reviews.com/pro/images/ogimage.png">
 
@@ -60,11 +60,11 @@
 
 <div id="tableContainer">
 	<table id="episodeTable">
-		<tr>
+		<tr id="preHeaderRow">
 			<td><div id="filterTotalbox">Showing<br><span id="filterTotal">39</span> of 39<br>episodes</div></td>
 			<td style="padding-right:8px;vertical-align:bottom;position:relative;">
 				<div class="episodeSearchBoxContainer">
-					<input type="text" id="episodeSearchBox" placeholder="Title search" onkeyup="filterTitle()" size="28"><input type="button" value="✖" style="width:13px;height:20px;padding-left:0px;padding-top:0px;border-radius:2px;margin-left:2px;" onClick="document.getElementById('episodeSearchBox').value='';filterTitle()"/>
+					<input type="text" id="episodeSearchBox" placeholder="Title search" onkeyup="filterTitle()" size="28" style="height:21px"><input type="button" value="✖" class="textClearButton" onClick="document.getElementById('episodeSearchBox').value='';filterTitle()">
 				</div>
 				<div class="filterModeContainer">
 					<span style="font-size: 12px;text-decoration:underline">Filter mode</span><br>
@@ -75,7 +75,8 @@
 			</td>
 			<td style="text-align:center;vertical-align:bottom;">
 				<div class="xx-small">Mouse over tags<br>to see description<br><br></div>
-				<input type="text" id="tagFilterTextbox" placeholder="Tags filter" size="12" onclick="toggleFilterBox('tagFilter')" readonly><span id="tagFilterDropdownArrow" class="dropdownArrow" onclick="toggleFilterBox('tagFilter')">▼</span>
+				<input type="text" id="tagFilterTextbox" placeholder="Tags filter" size="10" onclick="toggleFilterBox('tagFilter')" style="height:21px;" readonly>
+				<input id="tagFilterDropdownArrow" type="button" class="dropdownArrow" value="▼" onClick="toggleFilterBox('tagFilter')">
 				<div class="filterDropdownContainer" id="tagFilter" style="transform: translateX(-112px);">
 					<label class="checkContainer"><input type="checkbox" id="tagsfilterall" onClick="setFilters('tagsall')" checked><span class="checkmark"></span><span class="icon"></span>&nbsp;All&nbsp;Tags</label>
 					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="♥" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon">♥️</span>&nbsp;Personal&nbsp;Favorites</label>
@@ -87,7 +88,8 @@
 				</div>
 			</td>
 			<td style="text-align:center;vertical-align:bottom;">
-				<input type="text" id="recommendationFilterTextbox" placeholder="Recommendation filter" size="26" onclick="toggleFilterBox('recommendationFilter')" readonly><span id="recommendationFilterDropdownArrow" class="dropdownArrow" onclick="toggleFilterBox('recommendationFilter')">▼</span>
+				<input type="text" id="recommendationFilterTextbox" placeholder="Recommendation filter" size="24" onclick="toggleFilterBox('recommendationFilter')" style="height:21px" readonly>
+				<input id="recommendationFilterDropdownArrow" type="button" class="dropdownArrow" value="▼" onClick="toggleFilterBox('recommendationFilter')">
 				<div class="filterDropdownContainer" id="recommendationFilter" style="transform: translateX(29px);">
 					<label class="checkContainer"><input type="checkbox" id="rnfilterall" onClick="setFilters('rnall')" checked><span class="checkmark"></span><span class="icon"></span>&nbsp;All&nbsp;Recommendations</label>
 					<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="‼" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">‼</span>&nbsp;Bare&nbsp;Minimum</label>
@@ -99,10 +101,10 @@
 				</div>
 			</td>
 			<td style="text-align:right;vertical-align:bottom;">
-				<input type="button" class="resetfiltersbutton" onClick="resetFilters()" value="Clear Filters">
+				<input type="button" class="resetFiltersButton" onClick="resetFilters()" value="Clear Filters">
 			</td>
 		</tr>
-		<tr>
+		<tr id="headerRow">
 			<th style="width:100px;text-align:left" onclick="sortTable(0,event)">Episode <span id="0asc" class="sortarrows">↿</span><span id="0desc" class="sortarrows">⇂</span></th>
 			<th style="width:auto;text-align:left" onclick="sortTable(1,event)">Title <span id="1asc" class="sortarrows">↿</span><span id="1desc" class="sortarrows">⇂</span>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

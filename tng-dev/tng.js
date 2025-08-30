@@ -1,4 +1,4 @@
-﻿
+﻿/* File version 1.1.0 */
 document.addEventListener('DOMContentLoaded', function() {
 	var bottomBorder = document.getElementById('bottomBorder');
 	setTimeout(function() {bottomBorder.style.width = '74%';}, 100);

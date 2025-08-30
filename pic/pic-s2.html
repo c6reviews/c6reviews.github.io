@@ -15,10 +15,10 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.4hf1">
-<link rel="stylesheet" href="../tts.css?v=1.4hf1">
-<link rel="stylesheet" href="pic.css?v=1.4hf1">
-<link rel="stylesheet" href="pic-episode-guides.css?v=1.4hf1">
+<link rel="stylesheet" href="../main.css?v=1.4.1">
+<link rel="stylesheet" href="../tts.css?v=1.4.1">
+<link rel="stylesheet" href="pic.css?v=1.4.1">
+<link rel="stylesheet" href="pic-episode-guides.css?v=1.4.1">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 <meta property="og:image" content="https://c6reviews.com/pic/images/ogimage.png">
 
@@ -89,7 +89,7 @@
 	<a href="#seasonReview" onclick="closeNav()" style="text-align:center">Season 2 Review</a>
 </div>
 
-<div id="masterSpoilerSwitch"><label class="switch" style="margin-left:0px;"><input type="checkbox" id="masterToggle" onclick="alwaysShowFullReview(this)" style="margin-bottom:6px;"><span class="slider round"></span><span style="font-size:12px;">Always show full review</span></label></div>
+<div id="masterSpoilerSwitch"><label class="switch" style="margin-left:0px;"><input type="checkbox" id="masterToggle" onclick="alwaysShowFullReview(this)" style="margin-bottom:6px;"><span class="slider round"></span><span style="font-size:12px;">Always show spoiler content</span></label></div>
 
 <div class="content">
 
@@ -206,8 +206,8 @@
 							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts1apb" onclick="textToSpeech('tts1a',prepTextToSpeech('tts1a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
-						<td colspan="3" style="text-align:center">
-							<div class="spoilerSwitch" style="">No-spoiler review<label class="switch"><input type="checkbox" id="e01toggle" class="spoilerToggle" onclick="displaySpoilerContent('e01',this)"><span class="slider round"></span><span style="display:none">Toggle spoilers</span></label><span class="switchLabel">Full review</span></div>
+						<td colspan="3" style="text-align:left">
+							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e01toggle" class="spoilerToggle" onclick="displaySpoilerContent('e01',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
 						</td>
 					</tr>
 					<tr>
@@ -330,7 +330,7 @@
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
 							<img src="images/nm-4.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 4"><br>
-							<span class="stars4" style="font-size:medium">10 Forward Ave</span>
+							<span class="nostalgiaText4">10 Forward Ave</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
 							
@@ -370,8 +370,8 @@
 							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts2apb" onclick="textToSpeech('tts2a',prepTextToSpeech('tts2a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
-						<td colspan="3" style="text-align:center">
-							<div class="spoilerSwitch" style="">No-spoiler review<label class="switch"><input type="checkbox" id="e02toggle" class="spoilerToggle" onclick="displaySpoilerContent('e02',this)"><span class="slider round"></span><span style="display:none">Toggle spoilers</span></label><span class="switchLabel">Full review</span></div>
+						<td colspan="3" style="text-align:left">
+							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e02toggle" class="spoilerToggle" onclick="displaySpoilerContent('e02',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
 						</td>
 					</tr>
 					<tr>
@@ -485,7 +485,7 @@
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
 							<img src="images/nm-3.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 3"><br>
-							<span class="stars3" style="font-size:medium">Through a mirror darkly</span>
+							<span class="nostalgiaText3">Through a mirror darkly</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
 							
@@ -525,8 +525,8 @@
 							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts3apb" onclick="textToSpeech('tts3a',prepTextToSpeech('tts3a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
-						<td colspan="3" style="text-align:center">
-							<div class="spoilerSwitch" style="">No-spoiler review<label class="switch"><input type="checkbox" id="e03toggle" class="spoilerToggle" onclick="displaySpoilerContent('e03',this)"><span class="slider round"></span><span style="display:none">Toggle spoilers</span></label><span class="switchLabel">Full review</span></div>
+						<td colspan="3" style="text-align:left">
+							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e03toggle" class="spoilerToggle" onclick="displaySpoilerContent('e03',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
 						</td>
 					</tr>
 					<tr>
@@ -638,7 +638,7 @@
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
 							<img src="images/nm-1.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 1"><br>
-							<span class="stars1" style="font-size:medium">Halfway to Hell</span>
+							<span class="nostalgiaText1">Halfway to Hell</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
 							
@@ -678,8 +678,8 @@
 							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts4apb" onclick="textToSpeech('tts4a',prepTextToSpeech('tts4a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
-						<td colspan="3" style="text-align:center">
-							<div class="spoilerSwitch" style="">No-spoiler review<label class="switch"><input type="checkbox" id="e04toggle" class="spoilerToggle" onclick="displaySpoilerContent('e04',this)"><span class="slider round"></span><span style="display:none">Toggle spoilers</span></label><span class="switchLabel">Full review</span></div>
+						<td colspan="3" style="text-align:left">
+							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e04toggle" class="spoilerToggle" onclick="displaySpoilerContent('e04',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
 						</td>
 					</tr>
 					<tr>
@@ -810,7 +810,7 @@
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
 							<img src="images/nm-4.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 4"><br>
-							<span class="stars4" style="font-size:medium">I just like that song</span>
+							<span class="nostalgiaText4">I just like that song</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
 							
@@ -850,8 +850,8 @@
 							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts5apb" onclick="textToSpeech('tts5a',prepTextToSpeech('tts5a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
-						<td colspan="3" style="text-align:center">
-							<div class="spoilerSwitch" style="">No-spoiler review<label class="switch"><input type="checkbox" id="e05toggle" class="spoilerToggle" onclick="displaySpoilerContent('e05',this)"><span class="slider round"></span><span style="display:none">Toggle spoilers</span></label><span class="switchLabel">Full review</span></div>
+						<td colspan="3" style="text-align:left">
+							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e05toggle" class="spoilerToggle" onclick="displaySpoilerContent('e05',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
 						</td>
 					</tr>
 					<tr>
@@ -975,7 +975,7 @@
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
 							<img src="images/nm-1.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 1"><br>
-							<span class="stars1" style="font-size:medium">Crackpot talk!</span>
+							<span class="nostalgiaText1">Crackpot talk!</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
 							
@@ -1015,8 +1015,8 @@
 							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts6apb" onclick="textToSpeech('tts6a',prepTextToSpeech('tts6a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
-						<td colspan="3" style="text-align:center">
-							<div class="spoilerSwitch" style="">No-spoiler review<label class="switch"><input type="checkbox" id="e06toggle" class="spoilerToggle" onclick="displaySpoilerContent('e06',this)"><span class="slider round"></span><span style="display:none">Toggle spoilers</span></label><span class="switchLabel">Full review</span></div>
+						<td colspan="3" style="text-align:left">
+							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e06toggle" class="spoilerToggle" onclick="displaySpoilerContent('e06',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
 						</td>
 					</tr>
 					<tr>
@@ -1136,7 +1136,7 @@
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
 							<img src="images/nm-1.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 1"><br>
-							<span class="stars1" style="font-size:medium">Shadows of the night</span>
+							<span class="nostalgiaText1">Shadows of the night</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
 							
@@ -1176,8 +1176,8 @@
 							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts7apb" onclick="textToSpeech('tts7a',prepTextToSpeech('tts7a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
-						<td colspan="3" style="text-align:center">
-							<div class="spoilerSwitch" style="">No-spoiler review<label class="switch"><input type="checkbox" id="e07toggle" class="spoilerToggle" onclick="displaySpoilerContent('e07',this)"><span class="slider round"></span><span style="display:none">Toggle spoilers</span></label><span class="switchLabel">Full review</span></div>
+						<td colspan="3" style="text-align:left">
+							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e07toggle" class="spoilerToggle" onclick="displaySpoilerContent('e07',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
 						</td>
 					</tr>
 					<tr>
@@ -1312,7 +1312,7 @@
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
 							<img src="images/nm-2.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 2"><br>
-							<span class="stars2" style="font-size:medium">There are FOUR lights!</span>
+							<span class="nostalgiaText2">There are FOUR lights!</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
 							
@@ -1352,8 +1352,8 @@
 							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts8apb" onclick="textToSpeech('tts8a',prepTextToSpeech('tts8a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
-						<td colspan="3" style="text-align:center">
-							<div class="spoilerSwitch" style="">No-spoiler review<label class="switch"><input type="checkbox" id="e08toggle" class="spoilerToggle" onclick="displaySpoilerContent('e08',this)"><span class="slider round"></span><span style="display:none">Toggle spoilers</span></label><span class="switchLabel">Full review</span></div>
+						<td colspan="3" style="text-align:left">
+							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e08toggle" class="spoilerToggle" onclick="displaySpoilerContent('e08',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
 						</td>
 					</tr>
 					<tr>
@@ -1472,7 +1472,7 @@
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
 							<img src="images/nm-1.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 1"><br>
-							<span class="stars1" style="font-size:medium">*snap, snap, snap*</span>
+							<span class="nostalgiaText1">*snap, snap, snap*</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
 							
@@ -1512,8 +1512,8 @@
 							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts9apb" onclick="textToSpeech('tts9a',prepTextToSpeech('tts9a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
-						<td colspan="3" style="text-align:center">
-							<div class="spoilerSwitch" style="">No-spoiler review<label class="switch"><input type="checkbox" id="e09toggle" class="spoilerToggle" onclick="displaySpoilerContent('e09',this)"><span class="slider round"></span><span style="display:none">Toggle spoilers</span></label><span class="switchLabel">Full review</span></div>
+						<td colspan="3" style="text-align:left">
+							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e09toggle" class="spoilerToggle" onclick="displaySpoilerContent('e09',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
 						</td>
 					</tr>
 					<tr>
@@ -1657,7 +1657,7 @@
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
 							<img src="images/nm-1.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 1"><br>
-							<span class="stars1" style="font-size:medium"></span>
+							<span class="nostalgiaText1" style="font-size:small">an echo of a star that has long since faded</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
 							
@@ -1697,8 +1697,8 @@
 							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 							<button class="TTSplayButton" id="tts10apb" onclick="textToSpeech('tts10a',prepTextToSpeech('tts10a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 						</td>
-						<td colspan="3" style="text-align:center">
-							<div class="spoilerSwitch" style="">No-spoiler review<label class="switch"><input type="checkbox" id="e10toggle" class="spoilerToggle" onclick="displaySpoilerContent('e10',this)"><span class="slider round"></span><span style="display:none">Toggle spoilers</span></label><span class="switchLabel">Full review</span></div>
+						<td colspan="3" style="text-align:left">
+							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e10toggle" class="spoilerToggle" onclick="displaySpoilerContent('e10',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
 						</td>
 					</tr>
 					<tr>
@@ -1815,7 +1815,7 @@
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
 							<img src="images/nm-5.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 5"><br>
-							<span class="stars5" style="font-size:medium">See you out there</span>
+							<span class="nostalgiaText5">See you out there</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
 							
@@ -1909,7 +1909,9 @@
 
 <div class="pageFooter"><img src="../images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html">HOME</a>&nbsp;&nbsp;<a href="../about.html">ABOUT</a>&nbsp;&nbsp;<a href="../updates.html">UPDATES</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="../images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 
-<div id="TTDIV"><div id="FepisodeToolTip" class="tooltip" onClick="closeToolTip(this)">"Franchise Episode" tells you the order in which episodes from ANY/ALL Star Trek television shows aired or streamed for the first time. This number excludes movies, TOS's "The Cage", and the "Very Short Treks" web shorts.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div></div>
+<div id="TTDIV">
+	<div id="FepisodeToolTip" class="tooltip" onClick="closeToolTip(this)">"Franchise Episode" tells you the order in which episodes from ANY/ALL Star Trek television shows aired or streamed for the first time. This number excludes movies, TOS's "The Cage", and the "Very Short Treks" web shorts.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
+</div>
 
 
 <div id="bottomBorder"></div>

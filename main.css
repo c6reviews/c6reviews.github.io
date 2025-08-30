@@ -19,10 +19,10 @@ body a {
 	white-space: nowrap;
 }
 body p a {
-	text-decoration: underline dotted;
+	text-decoration: underline dotted 1px;
 }
 body ul a {
-	text-decoration: underline dotted;
+	text-decoration: underline dotted 1px;
 }
 body a:hover {
 	color: #F1F1F1;
@@ -576,6 +576,7 @@ body li {
 
 .timelineTable a{
 	color: inherit;
+	text-decoration: none !important;
 }
 .timelineTable a:hover{
 	color: #F1F1F1;

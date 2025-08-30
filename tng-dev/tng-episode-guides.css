@@ -56,6 +56,9 @@
 	position: relative;
 	z-index: 0;
 	margin: auto;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 15px;
 	padding: 1px;
 	width: 95%;
 	overflow: clip;
@@ -63,21 +66,17 @@
 	background-color: #181818EE;
 	line-height: 1.1;
 	scroll-margin-top: 50px;
-	
-	border: 5px solid transparent;
-	border-image-slice: 1;
-	border-image-source: linear-gradient(135deg, #743ad5, #de427e, #27b9fd, #743ad5);
 }
 .episodeCardBG{
+	position: absolute;
 	z-index:-1;
-	height: 350px;
+	right: 0;
+	top: 0;
+	height: 100%;
 	width: auto;
 	overflow:hidden;
-	object-fit:contain;	
-	border: 2px solid #743ad5;
-}
-td:has(> img.episodeCardBG) {
-	text-align: right;
+	object-fit:contain;
+	mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0));
 }
 .episodeCardFlare{
 	position: absolute;
@@ -105,7 +104,7 @@ td:has(> img.episodeCardBG) {
 	}
 	.detailBlock {
 		margin-left: 56px;
-		
+		margin-right: 35%;
 		border-width: 0;
 		height: auto;
 		min-height: 100%;
@@ -113,7 +112,6 @@ td:has(> img.episodeCardBG) {
 	.detailBlock > table {
 		height: 100%;
 		min-height: 280px;
-		width: 100%;
 	}
 	.detailBlock > table > tbody > tr:last-child > td {
 		/* Make the last row fill the remaining space */
@@ -122,17 +120,14 @@ td:has(> img.episodeCardBG) {
 		padding-bottom: 8px;
 	}
 	.detailBlock a {
-		text-decoration: underline dotted 1px;
+		text-decoration: underline dotted;
 	}
 	.ratingBlock {
 		margin-left: auto;
 		margin-right: auto;
 		width: 98%;
-		border: 2px solid #743ad5;
+		border: 2px solid #C0C0C0;
 		z-index: 1;
-		transform:skewY(-8deg) rotate(8deg);
-		border-radius: 15px 0px 15px 0px;
-		
 	}
 
 
@@ -145,10 +140,7 @@ td:has(> img.episodeCardBG) {
 			line-height: 1;
 		}
 		.airDateBox {
-			border: 1px solid transparent;
-			border-image-slice: 1;
-			/*border-image-source: linear-gradient(135deg, #743ad5, #27b9fd, #743ad5);*/
-			border-image-source: linear-gradient(135deg, #743ad5, #27b9fd);
+			border: 1px solid #C0C0C0;
 			text-align: center;
 			background-color:rgba(0,0,0,0.6);
 			width: 90px;
@@ -158,10 +150,7 @@ td:has(> img.episodeCardBG) {
 			font-size: 14px;
 		}
 		.SepisodeNumberBox {
-			border: 1px solid transparent;
-			border-image-slice: 1;
-			/*border-image-source: linear-gradient(135deg, #743ad5, #de427e, #743ad5);*/
-			border-image-source: linear-gradient(135deg, #27b9fd, #de427e);
+			border: 1px solid #C0C0C0;
 			text-align: center;
 			background-color:rgba(0,0,0,0.6);
 			width: 90px;
@@ -170,10 +159,7 @@ td:has(> img.episodeCardBG) {
 			padding-top: 0px;
 		}
 		.FepisodeNumberBox {
-			border: 1px solid transparent;
-			border-image-slice: 1;
-			/*border-image-source: linear-gradient(135deg, #743ad5, #27b9fd, #743ad5);*/
-			border-image-source: linear-gradient(135deg, #de427e, #743ad5);
+			border: 1px solid #C0C0C0;
 			text-align: center;
 			background-color:rgba(0,0,0,0.6);
 			width: 90px;
@@ -201,9 +187,7 @@ td:has(> img.episodeCardBG) {
 			width: auto;
 		}
 		.summaryBox {
-			vertical-align: top;
-			height: 1px;
-			padding-bottom: 8px;
+			padding-right: 16%;
 		}
 		.summary {
 			text-align: left;
@@ -218,8 +202,8 @@ td:has(> img.episodeCardBG) {
 		.arcDescription {
 			font-style: normal;
 			font-size: medium;
-			color: #111;
-			background-image: linear-gradient(135deg, #9160E6, #27b9fd);
+			color: #FFFBAA;
+			background-color: #555100;
 			padding: 2px;
 			border-radius: 2px;
 		}
@@ -302,7 +286,6 @@ td:has(> img.episodeCardBG) {
 		}
 		.quote {
 			border-radius: 10px;
-			height: 24px;
 			text-align: center;
 			font-size: xx-large;
 			font-family: "Times New Roman", serif;
@@ -354,14 +337,9 @@ td:has(> img.episodeCardBG) {
 			font-size: large;
 			padding-left: 10px;
 		}
-		.timelineSuggestionBox {
-			font-size: small;
-			vertical-align: top;
-			text-align: right;
-		}
 		.ratingsInfoLinkBox{
 			font-size: small;
-			vertical-align: bottom;
+			vertical-align:bottom;
 			text-align: right;
 		}
 		.ratingsInfoLinkBox a {
@@ -376,7 +354,7 @@ td:has(> img.episodeCardBG) {
 				background-color:rgba(51,51,51,0.7);
 				width: 150px;
 				vertical-align:top;
-				line-height: 0.9;
+				line-height: 1;
 			}
 			.watchRecommendationTitle {
 				font-size: small;
@@ -385,7 +363,6 @@ td:has(> img.episodeCardBG) {
 			/* ||| --- SCORE BOX --- */
 			.ScoreBox {
 				border: 4px solid #e47545; /*#CCCCCC*/
-				border-radius: 0px 0px 12px 0px;
 				text-align: center;
 				color: #000000;
 				background-color: #ccc;

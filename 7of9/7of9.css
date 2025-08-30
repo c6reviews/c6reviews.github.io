@@ -5,7 +5,7 @@ html {
 
 .articleImage {
 	text-align: center;
-	font-family: Roboto, sand-serif;
+	font-family: Roboto, sans-serif;
 	font-style: italic;
 	font-size: small;
 	margin: 8px 12px;
@@ -120,16 +120,23 @@ input[type=button]:hover {
 	display: none;
 }
 .dropdownArrow {
-	cursor: pointer;
-	user-select: none;
-	font-size: 15px;
-	margin-left: 3px;
-	border: 1px solid;
-	border-radius: 2px;
+	width:24px;
+	height:24px;
+	padding-left:4px;
+	padding-top:0px;
+	border-radius:2px;
+	margin-left:2px;
 }
-.dropdownArrow:hover {
-	background-color: #1b8aba;
-	color: white;
+.textClearButton {
+	width:24px;
+	height:24px;
+	padding-left:6px;
+	padding-top:0px;
+	border-radius:2px;
+	margin-left:2px;
+}
+.resetFiltersButton {
+	height: 24px;
 }
 .icon {
 	display: inline-block;
@@ -143,7 +150,7 @@ input[type=button]:hover {
 
 #headerRow{
 	position:sticky;
-	top:65px;
+	top:64px;
 }
 #headerRow::after {
 	content: "";
