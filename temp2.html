@@ -40,7 +40,7 @@ let voices = speechSynthesis.getVoices();
 				
 				
 voices.forEach(voice => {
-	document.getElementById('svoices').innerHTML += voice.name + "<br>";
+	document.getElementById('svoices').innerHTML += voice.name + " " + voice.lang + "<br>";
 });
 
 </script>
