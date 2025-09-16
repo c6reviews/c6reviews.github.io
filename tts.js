@@ -47,10 +47,19 @@ function textToSpeech(id,text) {
 	{
 		synth.cancel();
 		
+		// ********************************* GLOBAL TEXT REPLACEMENT RULES *********************************
+		text = text.replaceAll(/\bPart I\b/g,"Part 1").replaceAll(/\bParts I\b/g,"Parts 1");
+		// *************************************************************************************************
 		
 		setTimeout(() => {
+			var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (isSafari){
+				utterance.voice = speechSynthesis.getVoices()[0];
+			} else {
+				utterance.voice = speechSynthesis.getVoices()[1];
+			}
+			
 			utterance.text = text;
-			utterance.voice = speechSynthesis.getVoices()[1];
 			utterance.volume = 1;
 			utterance.rate = document.getElementById('ttsratemaster').value;
 			utterance.pitch = 0.9;
