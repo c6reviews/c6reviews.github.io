@@ -52,10 +52,12 @@ function textToSpeech(id,text) {
 		// *************************************************************************************************
 		
 		setTimeout(() => {
+			
+			
+			
 			var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 			if (isSafari){
-				let voices = speechSynthesis.getVoices();
-				document.getElementById('svoices').innerHTML = voices;
+				utterance.voice = speechSynthesis.getVoices()[0];
 			} else {
 				utterance.voice = speechSynthesis.getVoices()[1];
 			}
