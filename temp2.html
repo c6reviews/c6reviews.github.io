@@ -16,39 +16,14 @@
 
 <body>
 
-<div class="c6Left"><img src="images/c6reviews-vert.png" alt="c6reviews"></div>
-
-	<div class="pageTitleImage"><img src="films/images/section31/section31-header.png" style="height:235px"></div>
-	<!--<div class="pageTitleImage"><img src="films/images/nemesis/temp.png" style="height:235px"><img src="films/images/nemesis/nemesis-title.png" style="height: 80px;position:absolute;left:80px;top:150px;"></div>-->
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<div class="c6Right"><img src="images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"><a href="index.html" style="margin-top:8px;">HOME</a><a href="about.html">ABOUT</a><a href="updates.html">UPDATES</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
-
-
-<div id="svoices"></div>
-
 
 <div id="pi" style="position: absolute; bottom: 15px; right: 15px; cursor: default;">π</div>
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div>
 
+<div id="svoices">&nbsp;</div>
+
+<div id="TTDIV">&nbsp;</div>
 
 <script>
 const pi = document.getElementById('pi'); 
@@ -59,6 +34,13 @@ pi.addEventListener('click', function(event) {
   if (event.ctrlKey && event.shiftKey) {
 	window.location.href="mozart's_ghost/index.html";
   }
+});
+
+let voices = speechSynthesis.getVoices();
+				
+				
+voices.forEach(voice => {
+	document.getElementById('svoices').innerHTML += voice.name + "<br>";
 });
 
 </script>
