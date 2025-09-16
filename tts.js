@@ -53,7 +53,7 @@ function textToSpeech(id,text) {
 		
 		setTimeout(() => {
 			
-			
+			utterance.lang = "en-US";
 			
 			var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 			if (isSafari){
