@@ -57,7 +57,13 @@ function textToSpeech(id,text) {
 			
 			var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 			if (isSafari){
-				
+				let voices = speechSynthesis.getVoices();
+				for (const voice of voices) {
+					if (voice.name == "Reed" && voice.lang == "en-US"){
+						utterance.voice = voice;
+						break;
+					}
+				}
 			} else {
 				utterance.voice = speechSynthesis.getVoices()[1];
 			}
