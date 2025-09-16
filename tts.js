@@ -57,7 +57,7 @@ function textToSpeech(id,text) {
 			
 			var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 			if (isSafari){
-				utterance.voice = speechSynthesis.getVoices()[0];
+				utterance.voice = speechSynthesis.getVoices()[9];
 			} else {
 				utterance.voice = speechSynthesis.getVoices()[1];
 			}
