@@ -7,11 +7,31 @@
 */
 
 /* ---------------------------------------- MAIN SETUP ---------------------------------------- */
+@font-face {
+  font-family: "BB";
+  src: url("assets/Boucherie Block.ttf");
+}
+@font-face {
+  font-family: "BBB";
+  src: url("assets/Boucherie Block Bold.ttf");
+}
+@font-face {
+  font-family: "BBI";
+  src: url("assets/Boucherie Block Italic.ttf");
+}
+@font-face {
+  font-family: "Exo";
+  src: url("assets/Exo-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "CCS";
+  src: url("assets/CactusClassicalSerif-Regular.ttf");
+}
 
 body {
 	background-color: #181818;
 	color: #D0D0D0;
-	font-family: Roboto, sans-serif;
+	font-family: Exo, Roboto, sans-serif;
 }
 body a {
 	color: #44b3e3;
@@ -31,7 +51,7 @@ body a:hover {
 body li {
 	margin-bottom: 10px;
 }
-.content a[target="_blank"]::after {
+.content a[target="_blank"]::after,#TTDIV a[target="_blank"]::after {
   /* Adds box-and-arrow icon after links that open a new tab */
   content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAACXRFWHRDb21tZW50AACJKo0GAAAASElEQVR4nGP4//8/AzZ85syZ/8gYQwBNcQKKQhwmwhQl4FSIrAjmDAyF6IpgGEXhqVOnFLApwlAIU4zue6wKsQUT6QoJYZBCABxrNhBirnqBAAAAAElFTkSuQmCC);
   margin: 0px 3px 0px 5px;
@@ -41,22 +61,7 @@ body li {
 	font-size: 16px;
 }
 
-@font-face {
-  font-family: "BB";
-  src: url("assets/Boucherie Block.ttf");
-}
-@font-face {
-  font-family: "BBB";
-  src: url("assets/Boucherie Block Bold.ttf");
-}
-@font-face {
-  font-family: "BBI";
-  src: url("assets/Boucherie Block Italic.ttf");
-}
-@font-face {
-  font-family: "CCS";
-  src: url("assets/CactusClassicalSerif-Regular.ttf");
-}
+
 .draftBanner {
 	position: fixed;
 	top: 0;
@@ -71,22 +76,7 @@ body li {
 	text-align: center;
 	pointer-events: none;
 }
-.headquote {
-	font-family: CCS, Georgia, sans-serif;
-	font-size: large;
-	font-style: italic;
-	text-align: center;
-	margin: 10px auto 80px auto;
-	width: 500px;
-	padding: 0px 0px 3px 0px;
-	border: solid #BB4C1C;
-	border-width: 2px 0px 0px 0px;
-	border-radius: 10px;
-	background: linear-gradient(to top, #BB4C1C88, #181818 35% );
-}
-.headquote img {
-	border-radius: 10px;
-}
+
 
 /* ---------------------------------------- BUTTONS ---------------------------------------- */
 
@@ -95,7 +85,7 @@ body li {
 	cursor: pointer;
 	position: fixed;
 	left:0;
-	top:368px;
+	top:371px;
 	text-align: center;
 	background-color: #031014DD;
 	padding: 4px;
@@ -113,7 +103,7 @@ body li {
 #toTopButton {
   display: none;
   position: fixed;
-  top: 262px; 
+  top: 259px; 
   left: 0px; 
   z-index: 99; 
   cursor: pointer;
@@ -327,8 +317,53 @@ body li {
 }
 
 	/* | ---------------------------------------- MAIN INDEX-SPECIFIC CONTENT ---------------------------------------- */
+	.headquote {
+		font-family: CCS, Georgia, sans-serif;
+		font-size: 16px;
+		font-style: italic;
+		text-align: center;
+		margin: 10px auto 10px auto;
+		width: 250px;
+		padding: 0px 0px 3px 0px;
+		border: solid #BB4C1C;
+		border-width: 2px 0px 0px 0px;
+		border-radius: 10px;
+		background: linear-gradient(to top, #BB4C1C88, #181818 35% );
+	}
+	.headquote img {
+		border-radius: 10px;
+		width: 250px;
+	}
+	#randomReview {
+		border: 3px solid #E47545;
+		border-radius: 8px;
+		width: fit-content;
+		margin: 10px auto 10px auto;
+		text-align: center;
+	}
+	#randomReviewImage img {
+		width: 250px;
+	}
+	#randomReviewEpisodeID {
+		margin-left: 5px;
+	}
+	#randomReviewTitle {
+		margin-left: 5px;
+		font-family: BBI, serif;
+		font-size: x-large;
+		width: 240px;
+		line-height: 1;
+	}
+	#randomReviewScore {
+		margin: 5px auto 5px auto;
+		width: fit-content;
+		font-weight: bold;
+		font-size: large;
+		border-top: 1px solid #505050;
+	}
+	
 	.news{
-		width: 80%;
+		width: 250px;
 		display: table;
 		border-top: 3px solid;
 		border-bottom: 3px solid;
@@ -362,8 +397,66 @@ body li {
 		padding: 3px;
 	}
 	
-	.mainIndexTable{
-		
+	#mainIndexGrid {
+		display: grid;
+		grid-template-columns: 2fr 2fr 1fr;
+		grid-template-rows: auto auto;
+		grid-column-gap: 10px;
+		grid-row-gap: 0px;
+	}
+	#mainIndexGrid .timelineCard {
+		grid-area: 1 / 1 / 2 / 3;
+	}
+	#mainIndexGrid #rightCol {
+		grid-area: 1 / 3 / 3 / 4;
+	}
+	#mainIndexGrid #episodeGuides {
+		grid-area: 2 / 1 / 3 / 2;
+		text-align: center;
+	}
+	#mainIndexGrid #otherGuides {
+		grid-area: 2 / 2 / 3 / 3;
+		text-align: center;
+	}
+	@media (max-width: 1440px) {
+		#mainIndexGrid {
+			grid-template-columns: minmax(auto,2fr) 1fr;
+			grid-template-rows: auto auto auto;
+		}
+		#mainIndexGrid .timelineCard {
+			grid-area: 1 / 1 / 2 / 2;
+		}
+		#mainIndexGrid #rightCol {
+			grid-area: 1 / 2 / 4 / 3;
+		}
+		#mainIndexGrid #episodeGuides {
+			grid-area: 2 / 1 / 3 / 2;
+		}
+		#mainIndexGrid #otherGuides {
+			grid-area: 3 / 1 / 4 / 2;
+		}
+	}
+	@media (max-width: 1000px) {
+		#mainIndexGrid {
+			grid-template-columns: auto;
+			grid-template-rows: auto auto auto auto;
+		}
+
+		#mainIndexGrid #rightCol {
+			grid-area: 1 / 1 / 2 / 1;
+		}
+		#mainIndexGrid .timelineCard {
+			grid-area: 2 / 1 / 3 / 1;
+		}
+		#mainIndexGrid #episodeGuides {
+			grid-area: 3 / 1 / 4 / 1;
+		}
+		#mainIndexGrid #otherGuides {
+			grid-area: 4 / 1 / 5 / 1;
+		}
+	}
+	
+	.mainIndexTable{	
 		margin-right: 0;
 		margin-left: 0;
 	}
@@ -720,7 +813,11 @@ body li {
 	font-size: x-large;
 	transform: rotate(-20deg);
 }
-
+.timelineTable .kTimelineSplit {
+	color: #00B757;
+	font-weight: bold;
+	background: linear-gradient(to right, #181818, #181818 25%, #225522, #181818 75%, #181818);
+}
 .timelineTable .centuryEnd {
 	border-bottom: 2px dashed #C0C0C0;
 }
