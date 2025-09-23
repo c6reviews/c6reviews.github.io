@@ -15,10 +15,10 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.4.1">
-<link rel="stylesheet" href="../tts.css?v=1.4.1">
-<link rel="stylesheet" href="pic.css?v=1.4.1">
-<link rel="stylesheet" href="pic-episode-guides.css?v=1.4.1">
+<link rel="stylesheet" href="../main.css?v=1.4.2">
+<link rel="stylesheet" href="../tts.css?v=1.4.2">
+<link rel="stylesheet" href="pic.css?v=1.4.2">
+<link rel="stylesheet" href="pic-episode-guides.css?v=1.4.2">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 <meta property="og:image" content="https://c6reviews.com/pic/images/ogimage.png">
 
@@ -38,7 +38,7 @@
 	function prepTextToSpeech(id)
 	{
 		let text = document.getElementById(id).innerText;
-		return text.replaceAll("Guinan","Guynan").replaceAll("Ito Aghayere","Eetoh Aguyer-A").replaceAll("Kore.","Kor-A,").replaceAll("Kore's","Kor-aze,").replaceAll("Kore","Kor-A").replaceAll("shenanigans","shenanig-ins").replaceAll("appreciate the journey within","appreciate the journey with in,").replaceAll(/de-ag/gi,"dee-ag").replaceAll("Her species lives", "Her species lihvz").replaceAll("Mon capitaine","Mon cap-e-ten").replaceAll("Shinzon","Shinzahn").replaceAll("Gul Dukat","Gull Dukaat").replaceAll("Martok","Martock").replaceAll("Sarek","Sareck").replaceAll("Ferengi","Fer-ren-gii").replaceAll("Nagus","Naygus").replaceAll(/unimatrix/gi,"Unimaytrix").replaceAll("1-5-8-3", "1, 5, 8, 3").replaceAll("C-G-C-E♭","C, G, C, E flat").replaceAll(/tricorder/gi,"try-corder").replaceAll("Romulan","Rahmulin").replaceAll(/af-kelt/gi, "aff-kelt").replaceAll("Dahj","Dawge").replaceAll("Evagora","Ava-gore-uh").replaceAll("Locutus","locude-us").replaceAll("Sirena","Sih-REN-uh").replaceAll("mise en scène","meeze on sehn").replaceAll("oopsie","oops-e");
+		return text.replaceAll("Ito Aghayere","Eetoh Aguyer-A").replaceAll("Kore.","Kor-A,").replaceAll("Kore's","Kor-aze,").replaceAll("Kore","Kor-A").replaceAll("shenanigans","shenanig-ins").replaceAll("appreciate the journey within","appreciate the journey with in,").replaceAll(/de-ag/gi,"dee-ag").replaceAll("Her species lives", "Her species lihvz").replaceAll("Mon capitaine","Mon cap-e-ten").replaceAll("Shinzon","Shinzahn").replaceAll("Gul Dukat","Gull Dukaat").replaceAll("Martok","Martock").replaceAll("Sarek","Sareck").replaceAll("Ferengi","Fer-ren-gii").replaceAll("Nagus","Naygus").replaceAll(/unimatrix/gi,"Unimaytrix").replaceAll("1-5-8-3", "1, 5, 8, 3").replaceAll("C-G-C-E♭","C, G, C, E flat").replaceAll(/af-kelt/gi, "aff-kelt").replaceAll("Dahj","Dawge").replaceAll("Evagora","Ava-gore-uh").replaceAll("Locutus","locude-us").replaceAll("Sirena","Sih-REN-uh").replaceAll("mise en scène","meeze on sehn").replaceAll("oopsie","oops-e");
 	}
 </script>
 
@@ -89,7 +89,7 @@
 	<a href="#seasonReview" onclick="closeNav()" style="text-align:center">Season 2 Review</a>
 </div>
 
-<div id="masterSpoilerSwitch"><label class="switch" style="margin-left:0px;"><input type="checkbox" id="masterToggle" onclick="alwaysShowFullReview(this)" style="margin-bottom:6px;"><span class="slider round"></span><span style="font-size:12px;">Always show spoiler content</span></label></div>
+<div id="mainSpoilerSwitch"><label class="switch" style="margin-left:0px;"><input type="checkbox" id="mainToggle" onclick="alwaysShowFullReview(this)" style="margin-bottom:6px;"><span class="slider round"></span><span style="font-size:12px;">Always show spoiler content</span></label></div>
 
 <div class="content">
 
@@ -301,9 +301,10 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td>
-								<div class="distinctions"><img src="images/tng.png" height="180" alt="A Starfleet Delta labeled 'The Nostalgic Generation' with an image of Picard hugging Riker and Troi"></div>
+								<div class="distinctions"><img src="images/tng.png" height="180" alt="A Starfleet Delta labeled 'The Nostalgic Generation' with an image of Picard hugging Riker and Troi"><img src="images/sgs-guinan.png" height="180" alt="A Starfleet Delta labeled 'Special Guest Star' with an image of Guinan"></div>
 								<div class="distinctionDescriptions">
 									<strong>The Nostalgic Generation: </strong>The Stargazer, Guinan, and Q<br><br>
+									<span style="color:#eea432"><strong>Special Guest Star: </strong>Guinan</span><br><br>
 									👑 <strong>Borg Queen #3 </strong>played by an unknown/uncredited performer
 								</div>
 							</td>
@@ -1840,7 +1841,7 @@
 	<div class="seasonReviewCard" id="seasonReview">
 		
 		<div class="seasonName">
-			Season 2 Review<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select id="ttsratemaster" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+			Season 2 Review<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select id="ttsratemain" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 			<button class="TTSplayButton" id="tts1pb" onclick="textToSpeech('tts1',prepTextToSpeech('tts1'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 			<br>
 			<span style="font-size:small;font-family:sans-serif;color:#E0C0A0"><span style="text-shadow: red 0px 0px 12px">🚨</span> Definitely contains spoilers <span style="text-shadow: red 0px 0px 12px">🚨</span></span>
@@ -1911,6 +1912,10 @@
 
 <div id="TTDIV">
 	<div id="FepisodeToolTip" class="tooltip" onClick="closeToolTip(this)">"Franchise Episode" tells you the order in which episodes from ANY/ALL Star Trek television shows aired or streamed for the first time. This number excludes movies, TOS's "The Cage", and the "Very Short Treks" web shorts.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
+	
+	<div id="EASToolTip" class="tooltip" onClick="closeToolTip(this)">Ex Astris Scientia is an independent website devoted to the <em>Star Trek</em> universe, and includes reviews of episodes on a scale of 0 to 10. Visit the site at <span style="white-space:nowrap;"><a href="https://www.ex-astris-scientia.org" target="_blank">ex&#8209;astris&#8209;scientia.org</a>.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
+	
+	<div id="IMDbToolTip" class="tooltip" onClick="closeToolTip(this)">IMDb ratings re-distributed on a 2-9 scale. Scores of 0, 1, and 10 are reserved for outliers (determined by a <a href="https://en.wikipedia.org/wiki/Standard_score" target="_blank">z-score</a> less than -2.5 or greater than 2.5). User ratings on <span style="white-space:nowrap;"><a href="https://imdb.com" target="_blank">IMDb</a></span> for the episodes in <em>Star Trek: Picard</em> range from 5.4 to 9.4. <em>IMDb ratings were retrieved on May 24, 2025.</em><br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
 </div>
 
 

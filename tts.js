@@ -48,7 +48,16 @@ function textToSpeech(id,text) {
 		synth.cancel();
 		
 		// ********************************* GLOBAL TEXT REPLACEMENT RULES *********************************
-		text = text.replaceAll(/\bPart I\b/g,"Part 1").replaceAll(/\bParts I\b/g,"Parts 1");
+			
+			// Species
+			text = text.replaceAll("Romulan","Rahmulin").replaceAll("Ferengi","Fer-ren-gii");
+			
+			// Characters
+			text = text.replaceAll("La Forge","LaForge").replaceAll("Guinan","Guynan").replaceAll("Data's","Dayta's");
+		
+			// Misc
+			text = text.replaceAll(/\bPart I\b/g,"Part 1").replaceAll(/\bParts I\b/g,"Parts 1").replaceAll(/tricorder/gi,"try-corder");
+			
 		// *************************************************************************************************
 		
 		setTimeout(() => {
@@ -70,7 +79,7 @@ function textToSpeech(id,text) {
 			
 			utterance.text = text;
 			utterance.volume = 1;
-			utterance.rate = document.getElementById('ttsratemaster').value;
+			utterance.rate = document.getElementById('ttsratemain').value;
 			utterance.pitch = 0.9;
 			currentUtteranceID = id;
 			document.getElementById(id+'pb').style.color = "limegreen";

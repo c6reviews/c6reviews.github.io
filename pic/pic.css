@@ -43,7 +43,8 @@ html {
   transition: 0.2s; 
 }
 .sidenav a {
-  padding: 4px 12px 4px 12px;
+  padding: 0px 12px 0px 12px;
+  margin: 3px auto 2px auto;
   text-decoration: none;
   font-size: 14px;
   color: #44b3e3; /*#AAAACC;*/
@@ -68,7 +69,7 @@ html {
 	width: max-content;
 }
 .sidenav .sidenavseasons a{
-	padding: 0px 0px 0px 0px;
+	padding: 0px 8px 0px 8px;
 	display:inline;
 }
 .sidenav .closebtn {
@@ -82,13 +83,13 @@ html {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 10px;}
 }
-#masterSpoilerSwitch{
+#mainSpoilerSwitch{
 	position: fixed;
 	left:0;
-	top:460px;
-	text-align: center;
+	top:471px;
+	text-align: left;
 	background-color: #031014DD;
-	padding: 4px;
+	padding: 4px 5px 4px 3px;
 	border: 2px solid;
 	border-radius: 0px 12px 12px 0px;
 	overflow: hidden;

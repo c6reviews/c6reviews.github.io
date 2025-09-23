@@ -15,8 +15,8 @@
 
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 	<meta name="darkreader-lock" content="47">
-	<link rel="stylesheet" href="../main.css?v=1.4.1">
-	<link rel="stylesheet" href="timeline.css?v=1.4.1">
+	<link rel="stylesheet" href="../main.css?v=1.4.2">
+	<link rel="stylesheet" href="timeline.css?v=1.4.2">
 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	<meta property="og:image" content="https://c6reviews.com/images/ogimage.png">
 
@@ -316,8 +316,8 @@
 
 <!-- =============================================================== SEARCH BAR =============================================================== -->
 
-<div class="searchBarContainer" style="position:fixed;top:3px;right:100px;z-index:99;background-color:#BB4C1C50;width:fit-content;height:auto;line-height:30px;padding:3px 8px;text-align:center;line-height:1">
-	<span class="small"></span><form autocomplete="off" style="display:inline-block"><div class="autocomplete"><input id="tableSearch" type="text" placeholder="Timeline Search" size="30"/></div><input type="button" value="✖" style="width:13px;height:20px;padding-left:0px;padding-top:0px;" onClick="document.getElementById('tableSearch').value=''"/>&nbsp;&nbsp;<input type="button" id="searchDownButton" value="▽" onClick="search('down')"/> <input type="button" value="△" onClick="search('up')"/><div id="resultCount" style="display:inline-block;width:120px;font-size:small;font-style:italic;color:#B0B0B0;">&nbsp;</div><br><span style="font-size:x-small;font-style:italic">Spoiler content cannot be searched unless &ldquo;Show all spoilers&rdquo; is selected from the menu.</span></form>
+<div class="searchBarContainer">
+	<form autocomplete="off" style="display:inline-block"><div class="autocomplete"><input id="tableSearch" type="text" placeholder="Timeline Search" size="30"/></div><input type="button" value="✖" style="width:24px;height:24px;padding-left:3px;padding-top:0px;margin-left:3px;" onClick="document.getElementById('tableSearch').value=''"/>&nbsp;&nbsp;<input type="button" id="searchDownButton" value="▼" onClick="search('down')" style="width:24px;height:24px;font-size:12px"/> <input type="button" value="▲" onClick="search('up')" style="width:24px;height:24px;font-size:12px"/><div id="resultCount">&nbsp;</div><br><span style="font-size:x-small;font-style:italic">Spoiler content cannot be searched unless &ldquo;Show all spoilers&rdquo; is selected from the menu.</span></form>
 </div>
 
 <!-- ========================================================================================================================================= -->
@@ -3767,10 +3767,9 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2079</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td colspan="2" class="joinLeft">Q re-creates a courtroom from this year when he puts humanity on trial</td>
+		<td class="minorTimeTravel secondGen joinMiddle">❰ TNG: Encounter at Farpoint</td>
+		<td class="minorTimeTravel secondGen joinRight">❰ TNG: All Good Things...</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -7269,9 +7268,8 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2416</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td colspan="2" class="joinLeft">Enterprise-D's subspace message from galaxy M-33 due to be received by Starfleet</td>
+		<td class="minorTimeTravel secondGen joinRight">❱ TNG: Where No One Has Gone Before</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -7836,6 +7834,16 @@
 	</tr>
 	<tr class="contentRow">
 		<td></td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td colspan="2">2664: Humans invited to return to Velara III (TNG: Home Soil)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow">
+		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
 		<td class="mirrorUniverse" colspan="2">c. 2689: Mirror Universe has drifted too far to allow any more crossings</td>
 		<td>&nbsp;</td>

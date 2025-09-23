@@ -138,9 +138,8 @@ window.onscroll = function scrollFunction() {
 		}
 }
 
-window.onload = function() {
-	var bottomBorder = document.getElementById('bottomBorder');
-	setTimeout(function(){bottomBorder.style.width = '100%'},800);
+function closeToolTip(caller) {
+	caller.style.display = 'none';
 }
 
 /* -------------------------------------------------- GET ELEMENT POSITION (relative to page, not screen) -------------------------------------------------- */
@@ -160,9 +159,7 @@ function getOffset(el) {
 function sort(by) {
 	
 	var sortableElements = Array.from(document.getElementsByClassName("sortableElement"));
-	var categoryCards = Array.from(document.getElementsByClassName("filmCategoryCard"));
 	var newOrder = [];
-	var categoryDisplay = "";
 	
 	sortableElements.forEach((ele) => {
 		ele.style.transform = '';
@@ -171,10 +168,8 @@ function sort(by) {
 	if (G_sortdir == "asc") {
 		if (by == "alpha") {
 			newOrder = [7,14,9,13,2,12,15,4,3,5,8,16,11,6,1,17,10,9998,9999];
-			categoryDisplay = "none";
 		} else if (by == "release") {
 			newOrder = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,9998,9999];
-			categoryDisplay = "";
 			setTimeout( function() {
 				document.getElementById("TOSfilms").style.top = "90px";
 				document.getElementById("TNGfilms").style.top = "470px";
@@ -183,15 +178,12 @@ function sort(by) {
 			},500);
 		} else if (by == "score") {
 			newOrder = ['x','x','x','x','x','x',0,'x','x','x',-1,16,'x','x','x',17,-2,9998,9999]
-			categoryDisplay = "none";
 		}
 	} else if (G_sortdir == "desc") {
 		if (by == "alpha") {
 			newOrder = [8,1,6,2,13,3,15,11,12,10,7,16,4,9,14,17,5,9998,9999];
-			categoryDisplay = "none";
 		} else if (by == "release") {
 			newOrder = [17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,9998,9999];
-			categoryDisplay = "";
 			setTimeout( function() {
 				document.getElementById("TOSfilms").style.top = "1230px";
 				document.getElementById("TNGfilms").style.top = "850px";
@@ -200,20 +192,7 @@ function sort(by) {
 			},500);
 		} else if (by == "score") {
 			newOrder = ['x','x','x','x','x','x',0,'x','x','x',-2,16,'x','x','x',17,-1,9998,9999]
-			categoryDisplay = "none";
 		}
-	}
-	
-	if (categoryDisplay == "none") {
-		categoryCards.forEach((ele) => {
-			ele.style.display = categoryDisplay;
-		});
-	} else if (categoryDisplay == "") {
-		setTimeout( function() {
-			categoryCards.forEach((ele) => {
-				ele.style.display = categoryDisplay;
-			});
-		},500);
 	}
 	
 	for (let i=0; i < sortableElements.length; i++) {
@@ -276,4 +255,72 @@ function reverseSort() {
 	}
 	
 	aniSort(document.getElementById('sortSelector').value);
+}
+
+/* ------------------------------------------------------------------------------------------------------------
+   -------------------------------------------------- ONLOAD --------------------------------------------------
+   ------------------------------------------------------------------------------------------------------------ */
+
+window.onload = function() {
+
+	// ************************* TOOL TIPS *************************
+			
+			// SFDebris Tool Tip
+			for (const item of document.getElementsByClassName('SFDratingDescriptionBox')) {
+				item.onclick = function(e){
+					var tooltip = document.getElementById('SFDToolTip');
+					var x = e.clientX,
+						y = e.clientY;
+						tooltip.style.top = (y+20) + 'px';
+						tooltip.style.left = (x+20) + 'px';
+						tooltip.style.display = 'block';
+						tooltip.style.position = 'fixed';
+				}
+			}
+			
+			// EAS Tool Tip
+			for (const item of document.getElementsByClassName('EASratingDescriptionBox')) {
+				item.onclick = function(e){
+					var tooltip = document.getElementById('EASToolTip');
+					var x = e.clientX,
+						y = e.clientY;
+						tooltip.style.top = (y+20) + 'px';
+						tooltip.style.left = (x+20) + 'px';
+						tooltip.style.display = 'block';
+						tooltip.style.position = 'fixed';
+				}
+			}
+			
+			// RT Tool Tip
+			for (const item of document.getElementsByClassName('RTratingDescriptionBox')) {
+				item.onclick = function(e){
+					var tooltip = document.getElementById('RTToolTip');
+					var x = e.clientX,
+						y = e.clientY;
+						tooltip.style.top = (y+20) + 'px';
+						tooltip.style.left = (x+20) + 'px';
+						tooltip.style.display = 'block';
+						tooltip.style.position = 'fixed';
+				}
+			}
+			
+			// NIMDb Tool Tip
+			for (const item of document.getElementsByClassName('NIMDBratingDescriptionBox')) {
+				item.onclick = function(e){
+					var tooltip = document.getElementById('IMDbToolTip');
+					var x = e.clientX,
+						y = e.clientY;
+						tooltip.style.top = (y+20) + 'px';
+						tooltip.style.left = (x+20) + 'px';
+						tooltip.style.display = 'block';
+						tooltip.style.position = 'fixed';
+				}
+			}
+			
+	// *************************  *************************
+
+
+
+	var bottomBorder = document.getElementById('bottomBorder');
+	setTimeout(function(){bottomBorder.style.width = '100%'},800);
 }

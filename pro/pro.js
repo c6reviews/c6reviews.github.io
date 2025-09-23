@@ -212,57 +212,87 @@ window.onload = function() {
 		openNav();
 	};
 
-	// Franchise Episode Tool Tip
-	for (const item of document.getElementsByClassName('FepisodeNumberBox')) {
-		item.onclick = function(e){
-			var tooltip = document.getElementById('FepisodeToolTip');
-			var x = e.clientX,
-				y = e.clientY;
-				tooltip.style.top = (y+20) + 'px';
-				tooltip.style.left = (x+20) + 'px';
-				tooltip.style.display = 'block';
-				tooltip.style.position = 'fixed';
-		}
-	}
-	
-	// Red Flag Tool Tip
-	for (const item of document.getElementsByClassName('redFlag')) {
-		item.onclick = function(e){
-			var tooltip = document.getElementById('redFlagToolTip');
-			var x = e.clientX,
-				y = e.clientY;
-				tooltip.style.top = (y+20) + 'px';
-				tooltip.style.left = (x+20) + 'px';
-				tooltip.style.display = 'block';
-				tooltip.style.position = 'fixed';
-		}
-	}
-	
-	// Penalty Flag Tool Tip
-	for (const item of document.getElementsByClassName('penaltyFlag')) {
-		item.onclick = function(e){
-			var tooltip = document.getElementById('penaltyFlagToolTip');
-			var x = e.clientX,
-				y = e.clientY;
-				tooltip.style.top = (y+20) + 'px';
-				tooltip.style.left = (x+20) + 'px';
-				tooltip.style.display = 'block';
-				tooltip.style.position = 'fixed';
-		}
-	}
-	
-	// Show Award Tool Tip
-	for (const item of document.getElementsByClassName('showAward')) {
-		item.onclick = function(e){
-			var tooltip = document.getElementById('showAwardToolTip');
-			var x = e.clientX,
-				y = e.clientY;
-				tooltip.style.top = (y+20) + 'px';
-				tooltip.style.left = (x+20) + 'px';
-				tooltip.style.display = 'block';
-				tooltip.style.position = 'fixed';
-		}
-	}	
+	// ************************* TOOL TIPS *************************
+
+			// Franchise Episode Tool Tip
+			for (const item of document.getElementsByClassName('FepisodeNumberBox')) {
+				item.onclick = function(e){
+					var tooltip = document.getElementById('FepisodeToolTip');
+					var x = e.clientX,
+						y = e.clientY;
+						tooltip.style.top = (y+20) + 'px';
+						tooltip.style.left = (x+20) + 'px';
+						tooltip.style.display = 'block';
+						tooltip.style.position = 'fixed';
+				}
+			}
+			
+			// Red Flag Tool Tip
+			for (const item of document.getElementsByClassName('redFlag')) {
+				item.onclick = function(e){
+					var tooltip = document.getElementById('redFlagToolTip');
+					var x = e.clientX,
+						y = e.clientY;
+						tooltip.style.top = (y+20) + 'px';
+						tooltip.style.left = (x+20) + 'px';
+						tooltip.style.display = 'block';
+						tooltip.style.position = 'fixed';
+				}
+			}
+			
+			// Penalty Flag Tool Tip
+			for (const item of document.getElementsByClassName('penaltyFlag')) {
+				item.onclick = function(e){
+					var tooltip = document.getElementById('penaltyFlagToolTip');
+					var x = e.clientX,
+						y = e.clientY;
+						tooltip.style.top = (y+20) + 'px';
+						tooltip.style.left = (x+20) + 'px';
+						tooltip.style.display = 'block';
+						tooltip.style.position = 'fixed';
+				}
+			}
+			
+			// Show Award Tool Tip
+			for (const item of document.getElementsByClassName('showAward')) {
+				item.onclick = function(e){
+					var tooltip = document.getElementById('showAwardToolTip');
+					var x = e.clientX,
+						y = e.clientY;
+						tooltip.style.top = (y+20) + 'px';
+						tooltip.style.left = (x+20) + 'px';
+						tooltip.style.display = 'block';
+						tooltip.style.position = 'fixed';
+				}
+			}
+			
+			// EAS Tool Tip
+			for (const item of document.getElementsByClassName('EASratingDescriptionBox')) {
+				item.onclick = function(e){
+					var tooltip = document.getElementById('EASToolTip');
+					var x = e.clientX,
+						y = e.clientY;
+						tooltip.style.top = (y+20) + 'px';
+						tooltip.style.left = (x+20) + 'px';
+						tooltip.style.display = 'block';
+						tooltip.style.position = 'fixed';
+				}
+			}
+			
+			// NIMDb Tool Tip
+			for (const item of document.getElementsByClassName('NIMDBratingDescriptionBox')) {
+				item.onclick = function(e){
+					var tooltip = document.getElementById('IMDbToolTip');
+					var x = e.clientX,
+						y = e.clientY;
+						tooltip.style.top = (y+20) + 'px';
+						tooltip.style.left = (x+20) + 'px';
+						tooltip.style.display = 'block';
+						tooltip.style.position = 'fixed';
+				}
+			}
+			
+	// *************************  *************************
 
 	var bottomBorder = document.getElementById('bottomBorder');
 	setTimeout(function(){bottomBorder.style.width = '100%'},800);

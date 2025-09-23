@@ -1,4 +1,20 @@
 
+.filmsIntroCard {
+	position: relative;
+	z-index: 0;
+	margin: 20px auto 50px auto;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: #E47545;
+	width: 85%;
+	overflow: clip;
+	background-color: #181818EE;
+	line-height: 1.1;
+	scroll-margin-top: 50px;
+	padding: 15px;
+	font-family: CCS,serif;
+}
 #sortSelector {
 	border: 1px solid #D0D0D0;
 	border-radius: 5px;
@@ -57,8 +73,34 @@
 .filmCard {
 	position: relative;
 	width: 170px;
-	height: 350px;
+	height: 370px;
 }
+.filmCategory {
+	margin: 0px 0px 1px 0px;
+	padding: 2px 0px 0px 4px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 8px 8px 0px 0px;
+	transform: skewY(-12deg) rotate(12deg);
+	font-family: Roboto, sans-serif;
+}
+	.TOC {
+		color: #FFFF44;
+		background: linear-gradient(160deg, #555522, #181818 65%);
+	}
+	.TNG {
+		color: #FF4444;
+		background: linear-gradient(160deg, #552222, #181818 65%);
+	}
+	.kelvinTimeline {
+		color: #44FF44;
+		background: linear-gradient(160deg, #225522, #181818 65%);
+	}
+	.standalone {
+		color: #D0D0D0;
+		background: linear-gradient(160deg, #555555, #181818 65%);
+	}
+	
 .filmCard img {
 	height: 250px;
 	border: 2px solid;
@@ -68,6 +110,7 @@
 	font-size: x-large;
 	text-align: center;
 	vertical-align: top;
+	line-height: 1.1;
 }
 .filmNumbers {
 	float:right;
@@ -112,6 +155,23 @@
 .filmInfoCard th{
 		background-color: #444;
 }
+.spoilerDivider {
+	background-color: #221111;
+	color: red;
+	font-family: BB, Roboto, sans-serif;
+	font-size: large;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 85%;
+	border-bottom: 1px solid red;
+	border-top: 1px solid red;
+	border-radius: 6px;
+	clear: both;
+}
+
 .sectionHeader {
 	display: block;
 	position: relative;
@@ -121,6 +181,21 @@
 	margin-top: 40px;
 	border-bottom: 1px solid #E47545;
 	overflow: hidden;
+}
+
+.suggestedEpisodeTable {
+	border-collapse: collapse;
+	font-family: Roboto, sans-serif;
+	margin: auto;
+}
+.suggestedEpisodeTable td {
+	border-bottom: 1px dotted #DDD;
+	padding: 5px;
+}
+.suggestedEpisodeTable th {
+	border-top: 1px dotted #DDD;
+	border-bottom: 1px dotted #DDD;
+	background-color: #303030;
 }
 
 .calloutdiv{
@@ -170,16 +245,25 @@
 			text-align: right;
 			width: 250px; height: 24px;
 			font-weight: bold;
+			cursor: help;
 		}
 		.EASratingDescriptionBox {
 			text-align: right;
 			width: 250px; height: 24px;
 			font-weight: bold;
+			cursor: help;
+		}
+		.RTratingDescriptionBox {
+			text-align: right;
+			width: 250px; height: 24px;
+			font-weight: bold;
+			cursor: help;
 		}
 		.NIMDBratingDescriptionBox {
 			text-align: right;
 			width: 250px; height: 24px;
 			font-weight: bold;
+			cursor: help;
 		}
 		.ratingsInfoLinkBox{
 			font-size: small;

@@ -496,7 +496,7 @@ window.onload = function() {
 var csvString = `Episode,Title,Distinctions,NostalgiaMeter,Rating
 1x01,Remembrance,(SD)(SD)|The Nostalgic Generation<br>Unceremonious End,4,7.1
 1x02,Maps and Legends,(SD)|F-Bomb,2,4.2
-1x03,The End is the Beginning,,3,5.7
+1x03,The End is the Beginning,(GD)|<span style="color:#eea432">Guest Star</span>,3,5.7
 1x04,Absolute Candor,(SD)|F-Bomb,1,3.0
 1x05,Stardust City Rag,(SD)(SD)(GD)|The Nostalgic Generation<br>Unceremonious End<br><span style="color:#eea432">Subtle Continuity</span>,4,5.5
 1x06,The Impossible Box,,2,6.1
@@ -504,7 +504,7 @@ var csvString = `Episode,Title,Distinctions,NostalgiaMeter,Rating
 1x08,Broken Pieces,(SD)|F-Bomb,2,6.1
 1x09,"Et in Arcadia Ego, Part 1",,2,4.5
 1x10,"Et in Arcadia Ego, Part 2",(SD)(SD)(SD)(GD)|F-Bomb<br>The Nostalgic Generation<br>Unceremonious Lazarus<br><span style="color:#eea432">Ceremonious End</span>,5,5.7
-2x01,The Star Gazer,(SD)|The Nostalgic Generation,4,7.0
+2x01,The Star Gazer,(SD)(GD)|The Nostalgic Generation<br><span style="color:#eea432">Special Guest Star</span>,4,7.0
 2x02,Penance,(SD)|4th Wall,3,5.7
 2x03,Assimilation,(SD)|4th Wall,1,5.7
 2x04,Watcher,,4,5.3
@@ -522,8 +522,8 @@ var csvString = `Episode,Title,Distinctions,NostalgiaMeter,Rating
 3x06,The Bounty,(GD)(GD)(GD)|<span style="color:#eea432">Return To Service</span><br><span style="color:#eea432">Return To Villainy x2</span>,5,7.2
 3x07,Dominion,(GD)|<span style="color:#eea432">Special Guest Star</span><br><span class="personalFavorite">♥ <span class="large">Personal Favorite</span></span>,1,7.7
 3x08,Surrender,(SD)(GD)|F-Bomb<br><span style="color:#eea432">Return To Service</span>,3,8.6
-3x09,Võx,,6,7.3
-3x10,The Last Generation,(GD)(GD)(GD)|<span style="color:#eea432">Return To Service</span><br><span style="color:#eea432">Special Guest Star</span><br><span style="color:#eea432;font-style:italic">( +1 )</span>,5,7.1`;
+3x09,Võx,(GD)|<span style="color:#eea432">Return To Service</span>,6,7.3
+3x10,The Last Generation,(GD)(GD)|<span style="color:#eea432">Special Guest Star</span><br><span style="color:#eea432;font-style:italic">( +1 )</span>,5,7.1`;
 
 	var array = csvToNestedArray(csvString);
 	

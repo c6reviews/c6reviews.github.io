@@ -18,6 +18,27 @@ td {
   100% { transform: skewY(-10deg) rotate(8.5deg); }
 }
 
+/* ------------------------- SEARCH BAR ------------------------- */
+
+.searchBarContainer{
+	position:fixed;
+	top:3px;
+	right:100px;
+	z-index:99;
+	background-color:#BB4C1C50;
+	width:fit-content;
+	height:auto;
+	padding:3px 8px;
+	text-align:center;
+	line-height:1;
+}
+#resultCount{
+	display:inline-block;
+	width:120px;
+	font-size:small;
+	font-style:italic;
+	color:#C0C0C0;
+}
 
 .autocomplete {
   position: relative;
@@ -64,6 +85,8 @@ input[type=text] {
 	color: white;
 	border: 1px solid gray;
 	border-radius: 3px;
+	height: 20px;
+	font-family: Exo, Roboto, sans-serif;
 }
 input[type=button] {
 	background-color: #00000000;
@@ -87,7 +110,7 @@ input[type=button]:hover {
 }
 #toBottomButton {
   position: fixed;
-  top: 474px; 
+  top: 483px; 
   right: 0px; 
   z-index: 99; 
   cursor: pointer;
@@ -157,7 +180,7 @@ input[type=button]:hover {
 	cursor: pointer;
 	position: fixed;
 	right:0;
-	top:368px;
+	top:371px;
 	text-align: center;
 	background-color: #031014DD;
 	padding: 4px;
@@ -197,7 +220,7 @@ input[type=button]:hover {
 	cursor: pointer;
 	position: fixed;
 	right:0;
-	top:421px;
+	top:427px;
 	text-align: center;
 	background-color: #031014DD;
 	padding: 4px;
@@ -267,11 +290,12 @@ input[type=button]:hover {
 
 #theTable {
 	margin-right: 60px;
+	font-family: Roboto, sans-serif;
 }
 #theTable tr {
 	position: relative;
 }
-#theTable tr:hover::after {
+#theTable > tbody > tr:hover::after {
     background: #FFFFFF33;
     border-radius: 0.1em;
     content: "";
