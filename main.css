@@ -367,9 +367,10 @@ body li {
 		display: table;
 		border-top: 3px solid;
 		border-bottom: 3px solid;
-		margin: auto;
+		margin: auto auto 20px auto;
 		background-color: #282828EE;
 		padding-bottom: 8px;
+		text-align: center;
 	}
 	.news .highlight{
 		background-color: #BB4C1C55;
@@ -474,8 +475,7 @@ body li {
 		border-style: solid;
 		border-width: 1px;
 		border-radius: 15px;
-		/*width: 968px;*/
-		width: 750px;
+		width: 480px;
 		overflow: hidden;
 		height:124px;
 		background-color: #101010;

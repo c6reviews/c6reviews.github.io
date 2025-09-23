@@ -1,4 +1,8 @@
 
+html {
+	scrollbar-gutter: stable;
+}
+
 /* ---------------------------------------- TABLE SETUP ---------------------------------------- */
 #tableContainer{
 	margin-left: auto;

@@ -15,10 +15,10 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.4.1">
-<link rel="stylesheet" href="../tts.css?v=1.4.1">
-<link rel="stylesheet" href="pic.css?v=1.4.1">
-<link rel="stylesheet" href="pic-episode-guides.css?v=1.4.1">
+<link rel="stylesheet" href="../main.css?v=1.4.2">
+<link rel="stylesheet" href="../tts.css?v=1.4.2">
+<link rel="stylesheet" href="pic.css?v=1.4.2">
+<link rel="stylesheet" href="pic-episode-guides.css?v=1.4.2">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 <meta property="og:image" content="https://c6reviews.com/pic/images/ogimage.png">
 
@@ -34,7 +34,7 @@
 	function prepTextToSpeech(id)
 	{
 		let text = document.getElementById(id).innerText;
-		return text.replaceAll("Naáshala Kunamadéstifee","Nuh-ah-shuh-la Koo-nuh-mah-dest-if-fee").replaceAll("Icheb","E-chehb").replaceAll("Romulan","Rahmulin").replaceAll("Dahj's","Dawge-iz").replaceAll("Dahj","Dawge").replaceAll("Data's","Dayta's").replaceAll(/decaf/gi,"dee-calf").replaceAll("Xahean","zah-HEyan").replaceAll("Me Hani Ika Hali Ka Po", "May-Hani-Eeka-Hali-KuhPo").replaceAll("Zhat Vash","Zhaht Vosh").replaceAll("Shiar","She-are").replaceAll("CinC","C-in-C").replaceAll("Ramdha","Romduh").replaceAll("Sirena","Sih-REN-uh").replaceAll(/retcon/gi,"rett-con").replaceAll("Narissa","Narr-issa").replaceAll("Qowat Milat","Co-watt Mil-aht").replaceAll("Bjayzl","behjayzl").replaceAll(/tranya/gi, "trahnyuh").replaceAll("Mot","Mott").replaceAll("Locutus","locude-us").replaceAll("Sikarians","Sick-ahrians").replaceAll("xBs","ex-bees").replaceAll(/imzadi/gi,"imz-zah-di").replaceAll("Betazed","Beta-zed").replaceAll("Aia","I-ah").replaceAll("ibn Majid", "ibben Majid").replaceAll("Vayt","viyt").replaceAll(/d'k/gi,"dock").replaceAll(/plaque/gi,"plack").replaceAll(/\bexposit\b/gi,"expawz-it").replaceAll(/\bexpositing\b/gi,"expawz-itting");
+		return text.replaceAll("Naáshala Kunamadéstifee","Nuh-ah-shuh-la Koo-nuh-mah-dest-if-fee").replaceAll("Icheb","E-chehb").replaceAll("Dahj's","Dawge-iz").replaceAll("Dahj","Dawge").replaceAll(/decaf/gi,"dee-calf").replaceAll("Xahean","zah-HEyan").replaceAll("Me Hani Ika Hali Ka Po", "May-Hani-Eeka-Hali-KuhPo").replaceAll("Zhat Vash","Zhaht Vosh").replaceAll("Shiar","She-are").replaceAll("CinC","C-in-C").replaceAll("Ramdha","Romduh").replaceAll("Sirena","Sih-REN-uh").replaceAll(/retcon/gi,"rett-con").replaceAll("Narissa","Narr-issa").replaceAll("Qowat Milat","Co-watt Mil-aht").replaceAll("Bjayzl","behjayzl").replaceAll(/tranya/gi, "trahnyuh").replaceAll("Mot","Mott").replaceAll("Locutus","locude-us").replaceAll("Sikarians","Sick-ahrians").replaceAll("xBs","ex-bees").replaceAll(/imzadi/gi,"imz-zah-di").replaceAll("Betazed","Beta-zed").replaceAll("Aia","I-ah").replaceAll("ibn Majid", "ibben Majid").replaceAll("Vayt","viyt").replaceAll(/d'k/gi,"dock").replaceAll(/plaque/gi,"plack").replaceAll(/\bexposit\b/gi,"expawz-it").replaceAll(/\bexpositing\b/gi,"expawz-itting");
 	}
 </script>
 
@@ -85,7 +85,7 @@
 	<a href="#seasonReview" onclick="closeNav()" style="text-align:center">Season 1 Review</a>
 </div>
 
-<div id="masterSpoilerSwitch"><label class="switch" style="margin-left:0px;"><input type="checkbox" id="masterToggle" onclick="alwaysShowFullReview(this)" style="margin-bottom:6px;"><span class="slider round"></span><span style="font-size:12px;">Always show spoiler content</span></label></div>
+<div id="mainSpoilerSwitch"><label class="switch" style="margin-left:0px;"><input type="checkbox" id="mainToggle" onclick="alwaysShowFullReview(this)" style="margin-bottom:6px;"><span class="slider round"></span><span style="font-size:12px;">Always show spoiler content</span></label></div>
 
 <div class="content">
 
@@ -116,7 +116,7 @@
 					<td style="text-align:center"><img src="../images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
 					<td>3x26 &amp; 4x01</td>
 					<td><a href="../tng/tng-s3.html#e26">The Best of Both Worlds</a></td>
-					<td>Picard becomes Locutus of Borg</td>
+					<td>Picard is captured and assimilated by the Borg, transformed into Locutus</td>
 				</tr>
 				<tr>
 					<td style="text-align:center"><img src="../images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
@@ -443,7 +443,7 @@
 								<li>The workers at Utopia Planitia complain about having to work on &ldquo;First Contact Day.&rdquo; That day is April 5th, and it is celebrated by the Federation since making first contact with an alien species – the Vulcans – 322 years prior. That story is told in the film <a href="../films/firstcontact.html"><em>Star Trek: First Contact</em></a>.</li>
 								<li>For another viewpoint of the synth attack on Mars, see also: <a href="../dis/sho-s2.html#e06">SHO 2x06: Children of Mars</a>.</li>
 								<li>Picard's doctor talks about an abnormality in his parietal lobe, and Picard says he was told about it long ago. The structural defect was first discovered in The Next Generation's series finale, <a href="../tng/tng-s7.html#e25">TNG 7x25/26: All Good Things...</a>.</li>
-								<li>Non-reference: Doctor Moritz Benayoun apparently served with Picard on the USS Stargazer, Picard's first command, but Benayoun and his anecdote about &ldquo;the fire-forest on Calyx&rdquo; have never been mentioned in any Star Trek canon prior to this episode.</li>
+								<li>Non-reference: Doctor Moritz Benayoun apparently served with Picard on the USS Stargazer, Picard's first command, but Benayoun and his anecdote about &ldquo;the fire-forest on Calyx&rdquo; have never been mentioned in any <em>Star Trek</em> canon prior to this episode.</li>
 								<li>Raffi canonically lives in a trailer by the Vasquez Rocks in California. That area is famously used in numerous film and television productions, including <em>Star Trek</em>. Perhaps most notably, it is the location of the Original Series episode <a href="../tos/tos-s1.html#e18">TOS 1x18: Arena</a>, featuring the Gorn.</li>
 							</ul></td>
 						</tr>
@@ -604,7 +604,7 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td class="references" id="tts3c"><ul>
-								<li>The Executive Director of the Borg Reclamation Project is Hugh, formerly a Borg drone that was discovered by the Enterprise&#8209;D in <a href="../tng/tng-s5.html#e23">TNG 5x23: I Borg</a>, taught about individuality, and returned to the collective. His last appearance was in <a href="../tng/tng-s7.html#e01">TNG 7x01: Descent, Part II</a>, still fully-Borg, where he was left to lead a sect of Borg drones that had been separated from the collective.</li>
+								<li><a href="https://memory-alpha.fandom.com/wiki/Jonathan_Del_Arco" target="_blank">Jonathan Del Arco</a> reprises his role as <strong>Hugh</strong>. Now the Executive Director of the Borg Reclamation Project, he was formerly a Borg drone that was discovered by the Enterprise&#8209;D in <a href="../tng/tng-s5.html#e23">TNG 5x23: I Borg</a>, taught about individuality, and returned to the collective. His last appearance was in <a href="../tng/tng-s7.html#e01">TNG 7x01: Descent, Part II</a>, still fully-Borg, where he was left to lead a sect of Borg drones that had been separated from the collective.</li>
 								<li>The episode retcons some inconsistencies about whether Romulans have forehead ridges or not by explaining that only &ldquo;northerners&rdquo; sport the ridges.</li>
 								<li>At the end of the episode, Rios looks to Picard to give the order to head out. He says &ldquo;engage&rdquo; and performs a hand gesture which was his signature command on the Enterprise&#8209;D.</li>
 							</ul></td>
@@ -622,6 +622,19 @@
 								<li>When Commodore Oh first meets Jurati, her single rank pip is crooked, and it is infuriating. I can't figure out if this was a costume error, or if it's a subtle reminder that Oh is crooked, herself.</li>
 								<li>Soji's &ldquo;gradient badge&rdquo; is seen very briefly lit up green during her interview with Ramdha. We don't know exactly what this badge measures, only that a supervisor in the previous episode said, &ldquo;if your gradient badge starts to blink green, run.&rdquo;</li>
 							</ul></td>	
+						</tr>
+						<tr>
+							<td class="iconBox">🏅</td>
+							<td class="sectionHead">Distinctions</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>
+								<div class="distinctions"><span class="spoilerContent"><img src="images/gs-hugh.png" style="height:180px" alt="A Starfleet Delta labeled 'Guest Star' with a photo of Hugh as a Borg drone"></span></div>
+								<div class="distinctionDescriptions" style="color:#eea432">
+										<strong>Guest Star: </strong> Hugh
+								</div>
+							</td>
 						</tr>
 					</table>
 				</div>
@@ -929,7 +942,7 @@
 									<li>Disappointingly, although this episode sees the return of Icheb and Bruce Maddox, neither of the characters is played by their original actor.</li>
 									<li>Bjayzl offers Maddox a drink called tranya. This is Balok's drink in the original series episode <a href="../tos/tos-s1.html#e02">TOS 1x02: The Corbomite Maneuver</a>.</li>
 									<li>Among the establishments shown on Freecloud, we see <a href="https://memory-alpha.fandom.com/wiki/Quark's_Bar_(Stardust_City)" target="_blank">&ldquo;Quark's Bar&rdquo;</a>, which had been franchised from its original beginnings on Deep Space Nine. There's also <a href="https://memory-alpha.fandom.com/wiki/Mr._Mot's_Hair_Emporium" target="_blank">&ldquo;Mr. Mot's Hair Emporium&rdquo;</a>... Mot was the Bolian hair stylist on the Enterprise&#8209;D who appeared in a few episodes of <em>The Next Generation</em>.</li>
-									<li>Just before Seven leaves la Sirena, she asks Picard about his recovery from being Borg. Picard says &ldquo;we're both working on it, aren't we?&rdquo; and Seven replies, &ldquo;Every damn day of my life.&rdquo; The music then swells with a variation of the theme song from <a href="../voy/index.html"><em>Star Trek: Voyager</em></a>.</li>
+									<li>Just before Seven leaves <em>la Sirena</em>, she asks Picard about his recovery from being Borg. Picard says &ldquo;we're both working on it, aren't we?&rdquo; and Seven replies, &ldquo;Every damn day of my life.&rdquo; The music then swells with a variation of the theme song from <a href="../voy/index.html"><em>Star Trek: Voyager</em></a>.</li>
 								</ul>
 							</td>
 						</tr>
@@ -1068,7 +1081,7 @@
 								<p>There are two things that I didn't care for in this installment. The scene between Rios and Jurati seems very out of place and is kind of annoying. I get that they're trying to display that Jurati has &ldquo;seen some stuff&rdquo; and is suffering from some serious psychological trauma, but I think that could have been accomplished much better with a different tactic. I suspect that someone decided that they needed to inject some sex-appeal into the episode, so this is what we ended up with. The other thing I wasn't a huge fan of: after Raffi successfully secures diplomatic credentials for Picard, the theme song from <em>The Next Generation</em> plays triumphantly in the background as if some great victory has been made. But the victory comes at a heavy cost for Raffi, and she had just finished trying to make light of drinking herself to death, as she is actively in the middle of a concerning bender. It doesn't feel like the right time for triumphant music to me.</p>
 								
 								<div class="spoilerContent">
-								<p>The ending sequence is interesting, at least. It's not clear why la Sirena couldn't just beam Picard and Soji off the cube, but Elnor somehow was able to transport the other direction. No matter, because there's a big deus ex machina spatial trajector in the secret queencell! And Elnor finally gets to do something by closing out the episode with his ominous line, &ldquo;Please friends, choose to live.&rdquo;</p>
+								<p>The ending sequence is interesting, at least. It's not clear why <em>la Sirena</em> couldn't just beam Picard and Soji off the cube, but Elnor somehow was able to transport the other direction. No matter, because there's a big deus ex machina spatial trajector in the secret queencell! And Elnor finally gets to do something by closing out the episode with his ominous line, &ldquo;Please friends, choose to live.&rdquo;</p>
 								</div>
 							</div></td>
 						</tr>
@@ -1235,7 +1248,7 @@
 									<li>Will and Deanna's daughter Kestra is named after Deanna's older sister who died at age six, when Deanna was just a baby. The story of this tragic loss is told in <a href="../tng/tng-s7.html#e07">TNG 7x07: Dark Page</a>.</li>
 									<li>Kestra asks Soji if she plays violin and if she likes Sherlock Holmes. These were interests of Soji's father, Data.</li>
 									<li>Kestra says that Data wanted to have dreams, tell jokes, and learn how to ballroom dance. Data did all three of these things in the episodes <a href="../tng/tng-s6.html#e16">TNG 6x16: Birthright, Part I</a>, <a href="../tng/tng-s2.html#e04">TNG 2x04: The Outrageous Okona</a>, and <a href="../tng/tng-s4.html#e11">TNG 4x11: Data's Day</a>, respectively.</li>
-									<li>Riker calls Deanna &ldquo;imzadi,&rdquo; a word that means &ldquo;beloved&rdquo; in Deanna's native language from her homeworld of Betazed. Deanna calls Riker imzadi in the very first episode of The Next Generation, <a href="../tng/tng-s1.html#e01">TNG 1x01: Encounter at Farpoint</a>.</li>
+									<li>Riker calls Deanna &ldquo;imzadi,&rdquo; a word that means &ldquo;beloved&rdquo; in Deanna's native language from her homeworld of Betazed. Deanna calls Riker imzadi in the very first episode of The Next Generation, <a href="../tng/tng-s1.html#e01">TNG 1x01/02: Encounter at Farpoint</a>.</li>
 									<li>Non-reference: The last we saw Riker and Troi was in <a href="../films/nemesis.html"><em>Star Trek: Nemesis</em></a>, just after they had been married. So all of the story behind their two children, Thad and Kestra, is all new material.</li>
 								</ul>
 							</td>
@@ -1517,7 +1530,7 @@
 							<td><div class="thoughts" id="tts9b">
 								<p>I am not sure how to describe this episode except <em>weird</em>. We have giant space orchids, we have androids performing mind-melds &ndash; which I thought required Vulcan telepathy and wasn't just &ldquo;something you can learn&rdquo; &ndash; we have a very awkward moment between Picard and Raffi, we have this weird little amphitheater where everyone gathers to further the plot like they're going to watch a little play or something, we have &ldquo;death by hummingbird brooch to the eye&rdquo;... and we have a little repeating gif of Maddox and Jurati making out.</p>
 								
-								<p>The gang spends all of 10 minutes on the Borg cube to confirm that Seven and Elnor are okay, and then they just leave them behind. Soong shows Jurati a &ldquo;golem&rdquo; in a strange little scene that is obviously only there to introduce the thing that will be important later. Saga gives Raffi a device to help fix la Sirena &ndash; a device which apparently runs on the power of ✨IMAGINATION✨. Do you see what I mean? This episode is <em>weird</em>.</p>
+								<p>The gang spends all of 10 minutes on the Borg cube to confirm that Seven and Elnor are okay, and then they just leave them behind. Soong shows Jurati a &ldquo;golem&rdquo; in a strange little scene that is obviously only there to introduce the thing that will be important later. Saga gives Raffi a device to help fix <em>la Sirena</em> &ndash; a device which apparently runs on the power of ✨IMAGINATION✨. Do you see what I mean? This episode is <em>weird</em>.</p>
 							</div></td>
 						</tr>
 						<tr>
@@ -1630,7 +1643,7 @@
 					</tr>
 					<tr>
 						<td class="summaryBox"><div class="summary" id="tts10a">
-							<p><span class="spoilerContent"><strong>Act I:</strong> </span>The synths, specifically Soji, are building a beacon tower in order to contact the &ldquo;uber-synths,&rdquo; and Picard has been locked away so he can't meddle with the effort. Fortunately, Narek has had a change of heart and after collecting some grenades from the Borg Artifact, he meets with Rios and Raffi at la Sirena and suggests they work together to destroy the beacon. As they regain access to the settlement with a concealed grenade, Jurati has engineered a prison break for Picard and they head back to la Sirena. The Romulans are only minutes away, so Picard takes the ship into orbit, hoping to find some way to delay them until Starfleet can arrive.<span class="spoilerContent"> With time running out, Rios launches the grenade, but Soji is able to intercept it and prevent any damage to the tower. As the Romulan fleet arrives, some of the giant orchid defenses rise up to keep them busy for a little while, and Soji activates the beacon, opening a portal. Once the orchids are defeated, Jurati finds a way to create hundreds of echoes of la Sirena, again delaying the Romulan assault. When that ruse fails, Picard makes one last entreaty for Soji to change her mind. She does, shutting down the portal and preventing some nasty-looking mechanical tentacles from invading, and just in time for a fleet of Starfleet ships to arrive and protect the planet.</span></p>
+							<p><span class="spoilerContent"><strong>Act I:</strong> </span>The synths, specifically Soji, are building a beacon tower in order to contact the &ldquo;uber-synths,&rdquo; and Picard has been locked away so he can't meddle with the effort. Fortunately, Narek has had a change of heart and after collecting some grenades from the Borg Artifact, he meets with Rios and Raffi at la Sirena and suggests they work together to destroy the beacon. As they regain access to the settlement with a concealed grenade, Jurati has engineered a prison break for Picard and they head back to la Sirena. The Romulans are only minutes away, so Picard takes the ship into orbit, hoping to find some way to delay them until Starfleet can arrive.<span class="spoilerContent"> With time running out, Rios launches the grenade, but Soji is able to intercept it and prevent any damage to the tower. As the Romulan fleet arrives, some of the giant orchid defenses rise up to keep them busy for a little while, and Soji activates the beacon, opening a portal. Once the orchids are defeated, Jurati finds a way to create hundreds of echoes of la Sirena, again delaying the Romulan assault. When that ruse fails, Picard makes one last entreaty for Soji to change her mind. She does, shutting down the portal and preventing some nasty-looking mechanical tentacles from invading, and just in time for a fleet of Starfleet ships to arrive and protect the planet from the Romulans.</span></p>
 							
 							<div class="spoilerContent"><p><strong>Act II:</strong> Picard's heroism has come at a cost: his brain abnormality has finally reached a critical point. After the battle, he collapses and is beamed down to the planet where he can say his goodbyes before closing his eyes for the last time. Oddly, he opens them again in his château study, but there's a dark gray pall over everything. There, he meets Data, who explains that his consciousness has been reconstituted from a single neuron from B-4, by Bruce Maddox. They talk for a time, and Data finally says that Soong and Jurati have successfully transferred Picard's consciousness to the golem, so it is time for him to go. Data asks one last favor: to end his consciousness – he wants to experience the finiteness of life. And so, with his new android body, Picard grants his dear friend's request, disconnecting the components from the machine as Data listens to &ldquo;Blue Skies&rdquo; one last time. Finally, everyone gathers back on la Sirena and warps off to new adventures.</p></div>
 						</div></td>
@@ -1799,7 +1812,7 @@
 	<div class="seasonReviewCard" id="seasonReview">
 		
 		<div class="seasonName">
-			Season 1 Review<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select id="ttsratemaster" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+			Season 1 Review<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select id="ttsratemain" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 			<button class="TTSplayButton" id="tts1pb" onclick="textToSpeech('tts1',prepTextToSpeech('tts1'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 			<br>
 			<span style="font-size:small;font-family:sans-serif;color:#E0C0A0"><span style="text-shadow: red 0px 0px 12px">🚨</span> Definitely contains spoilers <span style="text-shadow: red 0px 0px 12px">🚨</span></span>
@@ -1811,7 +1824,7 @@
 		
 		<p>Season One of <em>Picard</em> suffers from jumbled storytelling and the introduction of elements that exist only long enough to further the plot. One example of the latter includes Doctor Naáshala Kunamadéstifee, who gets an introduction and a decent amount of screen-time in one episode, but is never seen again. Another example are the &ldquo;gradient badges&rdquo; worn by the workers on the Borg artifact. They were introduced and then never used, violating the <a href="https://en.wikipedia.org/wiki/Chekhov%27s_gun" target="_blank"><em>Chekhov's gun</em></a> principle. There is a split second where one of the badges lights up, so I suspect that their intended use for the story ended up on the cutting room floor. There's also that little Fenris SOS dongle that is introduced, just so we know what it is when Elnor conveniently finds another one on the Borg cube. Even poor Icheb was brought in, just to be thrown away again once he established Seven's motivations. And of course, there are the stupidly-convenient elements needed for the two-part finale, including the handheld magic imagination device, and the fact that a non-Vulcan android can somehow perform a Vulcan mind-meld.</p>
 		
-		<p>As for jumbled storytelling, well, the biggest problem is truly understanding Jurati's motivations throughout the season. I understand and appreciate the decision to keep the audience in the dark about it, just as Picard was in the dark, but I don't think they made it clear enough just how tortured she was by what she saw. She sees the vision in episode 3, but we don't learn about it until episode 8. In the 4-episode interim, she just seems weird, quirky, awkward, and frankly, incompetent. Maybe instead of that scene where she randomly decides &ldquo;maybe sex will make me feel better!&rdquo;, maybe they could have done a better job of showing how tortured she really is by what she saw. When we finally do find out what happened to Jurati, it's a little difficult to go back and remember everything she did over so many episodes to try and reconcile her actions in our minds. Because of this, I found Jurati to be truly intolerable the first time I watched this season. On the second watch-through &ndash; now that I know her motivations ahead of time &ndash; I actually found her to be less annoying than the first time through.</p>
+		<p>As for jumbled storytelling, well, the biggest problem is truly understanding Jurati's motivations throughout the season. I understand and appreciate the decision to keep the audience in the dark about it, just as Picard was in the dark, but I don't think they made it clear enough just how tortured she was by what she saw. She sees the vision in episode 3, but we don't learn about it until episode 8. In the 4-episode interim, she just seems weird, quirky, awkward, and frankly, incompetent. Maybe instead of that scene where she randomly decides &ldquo;maybe sex will make me feel better!&rdquo;, maybe they could have done a better job of showing how tortured she really is by what she saw. When we finally do find out what happened to Jurati, it's a little difficult to go back and remember everything she did over so many episodes to try and reconcile her actions in our minds. Because of this, I found Jurati to be truly intolerable the first time I watched this season. On the second watch-through &ndash; now that I know her motivations ahead of time &ndash; I found her to be only slightly less annoying.</p>
 		
 		<p>In the opposite vein, almost an entire episode is devoted to Narek helping Soji to resurface her memories until she comes to the grand realization that she is some sort of artificially-constructed being, not human. But we, the audience, already knew that, so the epiphany isn't nearly as impactful.</p>
 		
@@ -1855,6 +1868,10 @@
 
 <div id="TTDIV">
 	<div id="FepisodeToolTip" class="tooltip" onClick="closeToolTip(this)">"Franchise Episode" tells you the order in which episodes from ANY/ALL Star Trek television shows aired or streamed for the first time. This number excludes movies, TOS's "The Cage", and the "Very Short Treks" web shorts.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
+
+	<div id="EASToolTip" class="tooltip" onClick="closeToolTip(this)">Ex Astris Scientia is an independent website devoted to the <em>Star Trek</em> universe, and includes reviews of episodes on a scale of 0 to 10. Visit the site at <span style="white-space:nowrap;"><a href="https://www.ex-astris-scientia.org" target="_blank">ex&#8209;astris&#8209;scientia.org</a>.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
+	
+	<div id="IMDbToolTip" class="tooltip" onClick="closeToolTip(this)">IMDb ratings re-distributed on a 2-9 scale. Scores of 0, 1, and 10 are reserved for outliers (determined by a <a href="https://en.wikipedia.org/wiki/Standard_score" target="_blank">z-score</a> less than -2.5 or greater than 2.5). User ratings on <span style="white-space:nowrap;"><a href="https://imdb.com" target="_blank">IMDb</a></span> for the episodes in <em>Star Trek: Picard</em> range from 5.4 to 9.4. <em>IMDb ratings were retrieved on May 24, 2025.</em><br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
 </div>
 
 

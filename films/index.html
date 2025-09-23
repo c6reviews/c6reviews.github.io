@@ -15,8 +15,8 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.4.1">
-<link rel="stylesheet" href="films.css?v=1.4.1">
+<link rel="stylesheet" href="../main.css?v=1.4.2">
+<link rel="stylesheet" href="films.css?v=1.4.2">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 <meta property="og:image" content="https://c6reviews.com/images/ogimage.png">
 
@@ -50,6 +50,19 @@ a.no-after::after {
 <div id="backButton" onclick="window.location = '../index.html';"><span style="font-size:large;font-weight:bold">←</span><br>Star Trek<br>home</div>
 
 <div class="content">
+
+	<div class="filmsIntroCard">
+		
+		<p>There are <span class="x-large" style="font-weight:bold">14</span> films in the <em>Star Trek</em> franchise, dating back to the first motion picture in 1979.</p>
+		
+		<ul>
+			<li><span class="filmCategory TOC">The Original Cast</span> &ndash; The first <span class="x-large" style="font-weight:bold">6</span> films take place in the 22nd century and feature the original cast, including <a href="https://memory-alpha.fandom.com/wiki/William_Shatner" target="_blank">William Shatner</a> as <strong>James T. Kirk</strong> and <a href="https://memory-alpha.fandom.com/wiki/Leonard_Nimoy" target="_blank">Leonard Nimoy</a> as <strong>Spock</strong>.</li>
+			<li><span class="filmCategory TNG">The Next Generation</span> &ndash; The next <span class="x-large" style="font-weight:bold">4</span> films take place in the 23nd century, starring the Next Generation cast, including <a href="https://memory-alpha.fandom.com/wiki/Patrick_Stewart" target="_blank">Patrick Stewart</a> as <strong>Jean-Luc Picard</strong> and <a href="https://memory-alpha.fandom.com/wiki/Brent_Spiner" target="_blank">Brent Spiner</a> as <strong>Data</strong>.</li>
+			<li><span class="filmCategory kelvinTimeline">Kelvin Timeline</span> &ndash; There are <span class="x-large" style="font-weight:bold">3</span> films that take place in the Kelvin Timeline's 22nd century. These films feature <a href="https://memory-alpha.fandom.com/wiki/Chris_Pine" target="_blank">Chris Pine</a> as <strong>James T. Kirk</strong> and <a href="https://memory-alpha.fandom.com/wiki/Zachary_Quinto" target="_blank">Zachary Quinto</a> as <strong>Spock</strong>.</li>
+			<li><span class="filmCategory standalone">Standalone</span> &ndash; <span class="x-large" style="font-weight:bold">1</span> straight-to-streaming film stars <a href="https://memory-alpha.fandom.com/wiki/Michelle_Yeoh" target="_blank">Michelle Yeoh</a> as <strong>Philippa Georgiou</strong>. Her character originates from <em>Star Trek: Discovery</em>, but the film is a separate,  standalone story.</li>
+		</ul>
+		
+	</div>
 	
 		<label for="sortSelector">Sort by: </label>
 		<select id="sortSelector">
@@ -61,44 +74,44 @@ a.no-after::after {
 
 	
 	<div id="filmsFlexContainer">
-	
-		<div id="TOSfilms" class="filmCategoryCard" style="top:90px;left:-80px">The Original Cast<br><span class="xx-large" style="font-weight:bold">⇒</span></div>
-		<div id="TNGfilms" class="filmCategoryCard" style="top:470px;left:-80px">The Next Generation<br><span class="xx-large" style="font-weight:bold">⇒</span></div>
-		<div id="Kelvinfilms" class="filmCategoryCard" style="top:850px;left:-80px">Kelvin Timeline<br><span class="xx-large" style="font-weight:bold">⇒</span></div>
-		<div id="Standalonefilms" class="filmCategoryCard" style="top:1230px;left:-80px">Standalone<br><span class="xx-large" style="font-weight:bold">⇒</span></div>
-	
 		<div class="filmCard sortableElement" id="film01" style="order:1">
-			<img src="images/cover-1.webp" alt="Star Trek: The Motion Picture movie poster"><br>
+			<div class="filmCategory TOC">The Original Cast</div>
+			<img src="images/cover-1.webp" alt="Star Trek: The Motion Picture movie poster">
 			<div class="filmNumbers"><span class="filmNumber">#1</span><br><span class="filmYear">1979</span></div>
 			<div class="filmTitle">The Motion Picture</div>
 			<div class="filmRating">Review pending</div>
 		</div>
 		<div class="filmCard sortableElement" id="film02" style="order:2">
-			<img src="images/cover-2.webp" alt="Star Trek II: The Wrath of Khan movie poster"><br>
+			<div class="filmCategory TOC">The Original Cast</div>
+			<img src="images/cover-2.webp" alt="Star Trek II: The Wrath of Khan movie poster">
 			<div class="filmNumbers"><span class="filmNumber">#2</span><br><span class="filmYear">1982</span></div>
 			<div class="filmTitle">The Wrath of Khan</div>
 			<div class="filmRating">Review pending</div>
 		</div>
 		<div class="filmCard sortableElement" id="film03" style="order:3">
-			<img src="images/cover-3.webp" alt="Star Trek III: The Search for Spock movie poster"><br>
+			<div class="filmCategory TOC">The Original Cast</div>
+			<img src="images/cover-3.webp" alt="Star Trek III: The Search for Spock movie poster">
 			<div class="filmNumbers"><span class="filmNumber">#3</span><br><span class="filmYear">1984</span></div>
 			<div class="filmTitle">The Search for Spock</div>
 			<div class="filmRating">Review pending</div>
 		</div>
 		<div class="filmCard sortableElement" id="film04" style="order:4">
-			<img src="images/cover-4.webp"  alt="Star Trek IV: The Voyage Home movie poster"><br>
+			<div class="filmCategory TOC">The Original Cast</div>
+			<img src="images/cover-4.webp"  alt="Star Trek IV: The Voyage Home movie poster">
 			<div class="filmNumbers"><span class="filmNumber">#4</span><br><span class="filmYear">1986</span></div>
 			<div class="filmTitle">The Voyage Home</div>
 			<div class="filmRating">Review pending</div>
 		</div>
 		<div class="filmCard sortableElement" id="film05" style="order:5">
-			<img src="images/cover-5.webp" alt="Star Trek V: The Final Frontier movie poster"><br>
+			<div class="filmCategory TOC">The Original Cast</div>
+			<img src="images/cover-5.webp" alt="Star Trek V: The Final Frontier movie poster">
 			<div class="filmNumbers"><span class="filmNumber">#5</span><br><span class="filmYear">1989</span></div>
 			<div class="filmTitle">The Final Frontier</div>
 			<div class="filmRating">Review pending</div>
 		</div>
 		<div class="filmCard sortableElement" id="film06" style="order:6">
-			<img src="images/cover-6.webp" alt="Star Trek VI: The Undiscovered Country movie poster"><br>
+			<div class="filmCategory TOC">The Original Cast</div>
+			<img src="images/cover-6.webp" alt="Star Trek VI: The Undiscovered Country movie poster">
 			<div class="filmNumbers"><span class="filmNumber">#6</span><br><span class="filmYear">1991</span></div>
 			<div class="filmTitle" style="font-size:large">The Undiscovered Country</div>
 			<div class="filmRating">Review pending</div>
@@ -107,25 +120,29 @@ a.no-after::after {
 		<div class="flexLineBreak sortableElement" id="lineBreak1" style="order:7"></div>
 		
 		<div class="filmCard sortableElement" id="film07" style="order:8">
-			<img src="images/cover-7.webp" alt="Star Trek Generations movie poster"><br>
+			<div class="filmCategory TNG">The Next Generation</div>
+			<img src="images/cover-7.webp" alt="Star Trek Generations movie poster">
 			<div class="filmNumbers"><span class="filmNumber">#7</span><br><span class="filmYear">1994</span></div>
 			<div class="filmTitle">Generations</div>
 			<div class="filmRating">Review pending</div>
 		</div>
 		<div class="filmCard sortableElement" id="film08" style="order:9">
-			<img src="images/cover-8.webp"  alt="Star Trek: First Contact movie poster"><br>
+			<div class="filmCategory TNG">The Next Generation</div>
+			<img src="images/cover-8.webp"  alt="Star Trek: First Contact movie poster">
 			<div class="filmNumbers"><span class="filmNumber">#8</span><br><span class="filmYear">1996</span></div>
 			<div class="filmTitle">First Contact</div>
 			<div class="filmRating">Review pending</div>
 		</div>
 		<div class="filmCard sortableElement" id="film09" style="order:10">
-			<img src="images/cover-9.webp" alt="Star Trek: Insurrection movie poster"><br>
+			<div class="filmCategory TNG">The Next Generation</div>
+			<img src="images/cover-9.webp" alt="Star Trek: Insurrection movie poster">
 			<div class="filmNumbers"><span class="filmNumber">#9</span><br><span class="filmYear">1998</span></div>
 			<div class="filmTitle">Insurrection</div>
 			<div class="filmRating">Review pending</div>
 		</div>
 		<div class="filmCard sortableElement" id="film10" style="order:11">
-			<a href="nemesis.html"><img src="images/cover-10.webp" alt="Star Trek: Nemesis movie poster"></a><br>
+			<div class="filmCategory TNG">The Next Generation</div>
+			<a href="nemesis.html"><img src="images/cover-10.webp" alt="Star Trek: Nemesis movie poster"></a>
 			<div class="filmNumbers"><span class="filmNumber">#10</span><br><span class="filmYear">2002</span></div>
 			<div class="filmTitle"><a href="nemesis.html">Nemesis</a></div>
 			<div class="filmRating" style="background-color:#FC975ABF;color:black;font-weight:bold">Final score: 3.3</div>
@@ -134,19 +151,22 @@ a.no-after::after {
 		<div class="flexLineBreak sortableElement" id="lineBreak2" style="order:12"></div>
 		
 		<div class="filmCard sortableElement" id="film11" style="order:13">
-			<img src="images/cover-11.webp" alt="Star Trek [2009] movie poster"><br>
+			<div class="filmCategory kelvinTimeline">Kelvin Timeline</div>
+			<img src="images/cover-11.webp" alt="Star Trek [2009] movie poster">
 			<div class="filmNumbers"><span class="filmNumber">#11</span><br><span class="filmYear">2009</span></div>
 			<div class="filmTitle">Star Trek</div>
 			<div class="filmRating">Review pending</div>
 		</div>
 		<div class="filmCard sortableElement" id="film12" style="order:14">
-			<img src="images/cover-12.webp" alt="Star Trek: Into Darkness movie poster"><br>
+			<div class="filmCategory kelvinTimeline">Kelvin Timeline</div>
+			<img src="images/cover-12.webp" alt="Star Trek: Into Darkness movie poster">
 			<div class="filmNumbers"><span class="filmNumber">#12</span><br><span class="filmYear">2013</span></div>
 			<div class="filmTitle">Into Darkness</div>
 			<div class="filmRating">Review pending</div>
 		</div>
 		<div class="filmCard sortableElement" id="film13" style="order:15">
-			<img src="images/cover-13.webp" alt="Star Trek: Beyond movie poster"><br>
+			<div class="filmCategory kelvinTimeline">Kelvin Timeline</div>
+			<img src="images/cover-13.webp" alt="Star Trek: Beyond movie poster">
 			<div class="filmNumbers"><span class="filmNumber">#13</span><br><span class="filmYear">2016</span></div>
 			<div class="filmTitle">Beyond</div>
 			<div class="filmRating">Review pending</div>
@@ -155,9 +175,10 @@ a.no-after::after {
 		<div class="flexLineBreak sortableElement" id="lineBreak3" style="order:16"></div>
 		
 		<div class="filmCard sortableElement" id="film14" style="order:17">
-			<a href="section31.html"><img src="images/cover-14.webp" alt="Star Trek: Section 31 movie poster"></a><br>
+			<div class="filmCategory standalone">Standalone</div>
+			<a href="section31.html"><img src="images/cover-14.webp" alt="Star Trek: Section 31 movie poster"></a>
 			<div class="filmNumbers"><span class="filmNumber">#14</span><br><span class="filmYear">2025</span></div>
-			<div class="filmTitle"><a href="section31.html">Section 31</a></div>
+			<div class="filmTitle"><a href="section31.html">Section 31</a> <span style="font-size:10px;font-family:Roboto,sans-serif;font-style:italic">[straight-to-streaming]</span></div>
 			<div class="filmRating" style="background-color:#F95350E3;color:black;font-weight:bold">Final score: 1.3</div>
 		</div>
 	

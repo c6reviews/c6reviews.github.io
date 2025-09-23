@@ -322,16 +322,19 @@
 			text-align: right;
 			width: 200px; height: 24px;
 			font-weight: bold;
+			cursor: help;
 		}
 		.EASratingDescriptionBox {
 			text-align: right;
 			width: 200px; height: 24px;
 			font-weight: bold;
+			cursor: help;
 		}
 		.NIMDBratingDescriptionBox {
 			text-align: right;
 			width: 200px; height: 24px;
 			font-weight: bold;
+			cursor: help;
 		}
 		.starRatingBox {
 			font-size: large;

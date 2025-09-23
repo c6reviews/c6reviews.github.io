@@ -64,6 +64,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Color the Score Boxes
 	Array.from(document.getElementsByClassName("ScoreBox")).forEach(box => {
 		
+	if (box.querySelector(".xx-large")){
+		
 		var score = box.querySelector(".xx-large").innerHTML;
 
 		switch (Array.from(score)[0]) {
@@ -102,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				box.style.backgroundColor = '#43C75DBF';
 				break;
 		}
-		
+	}
 	});
 });
 
@@ -270,67 +272,97 @@ window.onload = function() {
 		openNav();
 	};
 
-	// Franchise Episode Tool Tip
-	for (const item of document.getElementsByClassName('FepisodeNumberBox')) {
-		item.onclick = function(e){
-			var tooltip = document.getElementById('FepisodeToolTip');
-			var x = e.clientX,
-				y = e.clientY;
-				tooltip.style.top = (y+20) + 'px';
-				tooltip.style.left = (x+20) + 'px';
-				tooltip.style.display = 'block';
-				tooltip.style.position = 'fixed';
-		}
-	}
-	
-	// Red Flag Tool Tip
-	for (const item of document.getElementsByClassName('redFlag')) {
-		item.onclick = function(e){
-			var tooltip = document.getElementById('redFlagToolTip');
-			var x = e.clientX,
-				y = e.clientY;
-				tooltip.style.top = (y+20) + 'px';
-				tooltip.style.left = (x+20) + 'px';
-				tooltip.style.display = 'block';
-				tooltip.style.position = 'fixed';
-		}
-	}
-	
-	// Penalty Flag Tool Tip
-	for (const item of document.getElementsByClassName('penaltyFlag')) {
-		item.onclick = function(e){
-			var tooltip = document.getElementById('penaltyFlagToolTip');
-			var x = e.clientX,
-				y = e.clientY;
-				tooltip.style.top = (y+20) + 'px';
-				tooltip.style.left = (x+20) + 'px';
-				tooltip.style.display = 'block';
-				tooltip.style.position = 'fixed';
-		}
-	}
-	
-	// Show Award Tool Tip
-	for (const item of document.getElementsByClassName('showAward')) {
-		item.onclick = function(e){
-			var tooltip = document.getElementById('showAwardToolTip');
-			var x = e.clientX,
-				y = e.clientY;
-				tooltip.style.top = (y+20) + 'px';
-				tooltip.style.left = (x+20) + 'px';
-				tooltip.style.display = 'block';
-				tooltip.style.position = 'fixed';
-		}
-	}	
+	// ************************* TOOL TIPS *************************
+
+			// Franchise Episode Tool Tip
+			for (const item of document.getElementsByClassName('FepisodeNumberBox')) {
+				item.onclick = function(e){
+					var tooltip = document.getElementById('FepisodeToolTip');
+					var x = e.clientX,
+						y = e.clientY;
+						tooltip.style.top = (y+20) + 'px';
+						tooltip.style.left = (x+20) + 'px';
+						tooltip.style.display = 'block';
+						tooltip.style.position = 'fixed';
+				}
+			}
+			
+			// Red Flag Tool Tip
+			for (const item of document.getElementsByClassName('redFlag')) {
+				item.onclick = function(e){
+					var tooltip = document.getElementById('redFlagToolTip');
+					var x = e.clientX,
+						y = e.clientY;
+						tooltip.style.top = (y+20) + 'px';
+						tooltip.style.left = (x+20) + 'px';
+						tooltip.style.display = 'block';
+						tooltip.style.position = 'fixed';
+				}
+			}
+			
+			// Penalty Flag Tool Tip
+			for (const item of document.getElementsByClassName('penaltyFlag')) {
+				item.onclick = function(e){
+					var tooltip = document.getElementById('penaltyFlagToolTip');
+					var x = e.clientX,
+						y = e.clientY;
+						tooltip.style.top = (y+20) + 'px';
+						tooltip.style.left = (x+20) + 'px';
+						tooltip.style.display = 'block';
+						tooltip.style.position = 'fixed';
+				}
+			}
+			
+			// Show Award Tool Tip
+			for (const item of document.getElementsByClassName('showAward')) {
+				item.onclick = function(e){
+					var tooltip = document.getElementById('showAwardToolTip');
+					var x = e.clientX,
+						y = e.clientY;
+						tooltip.style.top = (y+20) + 'px';
+						tooltip.style.left = (x+20) + 'px';
+						tooltip.style.display = 'block';
+						tooltip.style.position = 'fixed';
+				}
+			}	
+			
+			// EAS Tool Tip
+			for (const item of document.getElementsByClassName('EASratingDescriptionBox')) {
+				item.onclick = function(e){
+					var tooltip = document.getElementById('EASToolTip');
+					var x = e.clientX,
+						y = e.clientY;
+						tooltip.style.top = (y+20) + 'px';
+						tooltip.style.left = (x+20) + 'px';
+						tooltip.style.display = 'block';
+						tooltip.style.position = 'fixed';
+				}
+			}
+			
+			// NIMDb Tool Tip
+			for (const item of document.getElementsByClassName('NIMDBratingDescriptionBox')) {
+				item.onclick = function(e){
+					var tooltip = document.getElementById('IMDbToolTip');
+					var x = e.clientX,
+						y = e.clientY;
+						tooltip.style.top = (y+20) + 'px';
+						tooltip.style.left = (x+20) + 'px';
+						tooltip.style.display = 'block';
+						tooltip.style.position = 'fixed';
+				}
+			}
+			
+	// *************************  *************************
 
 	// Uncheck all spoiler toggles
 	Array.from(document.getElementsByClassName("spoilerToggle")).forEach((toggle) => {
 		toggle.checked = false;
 	});
 	
-	// Check status of master spoiler toggle
-	if (document.getElementById("masterToggle"))
+	// Check status of main spoiler toggle
+	if (document.getElementById("mainToggle"))
 	{
-		alwaysShowFullReview(document.getElementById("masterToggle"));
+		alwaysShowFullReview(document.getElementById("mainToggle"));
 	}
 
 	var bottomBorder = document.getElementById('bottomBorder');
