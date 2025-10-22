@@ -16,10 +16,15 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
 <meta property="og:image" content="https://c6reviews.com/images/ogimage.png">
-<link rel="stylesheet" href="main.css?v=1.4.2">
+<link rel="stylesheet" href="main.css?v=1.4.3">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <script src="random-review.js"></script>
+<script src="main-marquee.js"></script>
+
+<style>
+
+</style>
 
 <title>C6Reviews | Star Trek </title>
 </head>
@@ -47,13 +52,37 @@
 		
 	<div id="mainIndexGrid">
 	
-		<div class="timelineCard">
-			<a href="timeline/index.html">
-				<div class="timelineCardBG"><img src="images/timelinebg.png" style="width:760px;" alt="background image of colored lines representing a timeline"></div>
-				<div style="font-size:48px;font-family:BBI,serif;margin-top:0px">Star Trek Universe<br>Full Timeline ❱❱❱</div>
-				<span style="font-size:medium;font-style:italic;">Confused about what happened when? This should help.</span>
-			</a>
+		<div id="mainPanel">
+			<div id="mainMarquee" class="marquee-container">
+				<div class="marquee-controls"><span onClick="scrollPages('back')">◄&#xFE0E;</span><span class="marquee-pause" onClick="pauseMarquee(this)">⏸&#xFE0E;</span><span onClick="scrollPages()">►&#xFE0E;</span><br><span class="marquee-page-indicator"></span></div>
+				<div id="mainMarqueeTrack" class="marquee-track">
+					<div class="marquee-page">
+						<img class="marqueeImg" src="images/marquee/FT-STSA.png">
+						<div class="marqueeTitle">STAR TREK: STARFLEET ACADEMY</div>
+						<div class="marqueeSubtitle">TRAILER &mdash; FIRST THOUGHTS</div>
+						<div class="marqueeContent"><em>Star Trek: Starfleet Academy</em> will premiere on January 15, 2026. They dropped a new trailer on October 12 and... well, I'm trying so hard to be optimistic, but this trailer is making that really difficult. Check out my <a href="blog/2025-10-22-StarfleetAcademyTrailer.html">first thoughts here</a>.
+						</div>
+					</div>
+					<div class="marquee-page">
+						<img class="marqueeImg" src="images/ogimage.png">
+						<div class="marqueeTitle">SITE UPDATES AND NEWS</div>
+						<div class="marqueeSubtitle"></div>
+						<div class="marqueeContent">Last update: October 22 &ndash; <a href="updates.html">Details</a>
+							<br><br>The review of <a href="films/startrek2009.html"><em>Star Trek</em> [2009]</a> went live on October 22.<br>
+							The <a href="pic/index.html"><em>Star Trek: Picard</em></a> episode guide and the <a href="7of9/index.html"><em>Seven of Nine</em></a> topic guide are live as of August 19.
+						</div>
+					</div>
+					<div class="marquee-page">
+						<img class="marqueeImg" src="timeline/images/timeline-bg1.png">
+						<div class="marqueeTitle">STAR TREK UNIVERSE - FULL TIMELINE</div>
+						<div class="marqueeSubtitle">Not sure what happened when?</div>
+						<div class="marqueeContent">Check out this <a href="timeline/index.html">comprehensive timeline</a> of the entire Trek universe.</div>
+					</div>
+				</div>
+			</div>
 		</div>
+		
+		
 		
 		<div id="rightCol">
 			<div class="headquote"><img src="images/headquotes/drumhead.png" alt="Captain Picard and Lieutenant Worf looking through the observation room windows on the Enterprise-D">
@@ -65,18 +94,13 @@
 				<div id="randomReviewImage"></div>
 				<div id="randomReviewEpisodeID"></div>
 				<div id="randomReviewTitle"></div>
+				<div id="randomReviewMyScore"></div>
 				<div id="randomReviewScore"></div>
 			</div>
-					
-			<div class="news">	
-				<h2 style="text-decoration:underline;">News</h2>
-				
-				<div class="latest">
-					<span style="text-decoration:underline;">Site updates:</span>
-					<br><br><span class="small">Last update: September 23 &ndash; <a href="updates.html">Details</a></span>
-					<br><br>The <a href="pic/index.html"><em>Star Trek: Picard</em></a> episode guide and the <a href="7of9/index.html"><em>Seven of Nine</em></a> topic guide are live as of August 19, along with a new movie review: <a href="films/nemesis.html"><em>Star Trek: Nemesis</em></a>.
-				</div>
-				
+			
+			<a href="blog/index.html" class="blogButton">BLOG</a>
+			
+			<div class="news" style="padding-top:10px;">	
 				<span style="color:#E47545">Coming up:</span>
 				<br><br>
 				
@@ -225,7 +249,16 @@
 
 		<div id="otherGuides">
 			<h1 style="text-decoration:underline;font-family:BB,Roboto,sans-serif;"> Other Guides </h1>
-
+			<a href="timeline/index.html">
+				<div class="seriesCard">
+					<img src="images/timelinebg.png" class="seriesCardBG" style="width:510px;height:120px;object-fit:fill;mask-image: radial-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.4) 40%, rgba(0,0,0,0));" alt="background image of colored lines representing a timeline">
+					<table class="seriesCardTitle">
+						<tr>
+							<td style="font-family:BB,Roboto,sans-serif;font-size:36px;text-shadow: black 2px 2px 1px;">Star Trek Universe<br>Full Timeline ❱❱❱</td>
+						</tr>
+					</table>
+				</div>
+			</a>
 			<a href="films/index.html">
 				<div class="seriesCard">
 					<img src="images/films.png" class="seriesCardBG" alt="A movie film reel">
@@ -247,19 +280,19 @@
 				</div>
 			</a>
 			<div class="seriesCard">
-				<img src="images/theBorg.png" class="seriesCardBG" alt="a borg cube">
+				<img src="images/q.png" class="seriesCardBG" alt="Q in his judge robes">
 				<table class="seriesCardTitle inactive">
 					<tr>
-						<td style="font-family:BB,Roboto,sans-serif;font-size:xx-large;">The Borg</td>
+						<td style="font-family:BB,Roboto,sans-serif;font-size:xx-large;">Q</td>
 					</tr>
 				</table>
 				<img src="images/coming-someday.png" class="comingSoonFlag" alt="coming someday">
 			</div>
 			<div class="seriesCard">
-				<img src="images/q.png" class="seriesCardBG" alt="Q in his judge robes">
+				<img src="images/theBorg.png" class="seriesCardBG" alt="a borg cube">
 				<table class="seriesCardTitle inactive">
 					<tr>
-						<td style="font-family:BB,Roboto,sans-serif;font-size:xx-large;">Q</td>
+						<td style="font-family:BB,Roboto,sans-serif;font-size:xx-large;">The Borg</td>
 					</tr>
 				</table>
 				<img src="images/coming-someday.png" class="comingSoonFlag" alt="coming someday">

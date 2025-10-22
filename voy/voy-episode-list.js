@@ -44,8 +44,8 @@ function createTable(array) {
 				case 2:
 					cellClass = "col_episodeTags";
 					// Replace flags
-					cell = cell.replace("R⚑",'<span style="color:red" title="Red Flag">⚑</span>');
-					cell = cell.replace("P⚑",'<span style="color:yellow" title="Penalty Flag">⚑</span>');
+					cell = cell.replace("R⚑",'<span style="color:red" title="Red Flag">⚑&#xFE0E;</span>');
+					cell = cell.replace("P⚑",'<span style="color:yellow" title="Penalty Flag">⚑&#xFE0E;</span>');
 					
 					// Replace pips
 					cell = cell.replace("A🟡",'<img alt="admiral insignia" title="Full Admiral Pips" src="images/admiral.png" width="29" >');
@@ -58,7 +58,7 @@ function createTable(array) {
 					cell = cell.replace('(<span title="Proper Borg Episode">🤖</span>)','<span title="Episode involves the Borg">(🤖)</span>');
 					cell = cell.replace("Q",'<span title="Q Episode" class="Q">Q</span>');
 					cell = cell.replace("31",'<span title="Section 31" style="border:1px solid #C0C0C0;border-radius:10px;">31</span>');
-					cell = cell.replace("⚖",'<span title="Courtroom Episode">⚖</span>');
+					cell = cell.replace("⚖",'<span title="Courtroom Episode">⚖&#xFE0F;</span>');
 					cell = cell.replace("♊",'<span title="Mirror Universe episode">♊</span>');
 					cell = cell.replace("🌎",'<span title="Episode takes place on Earth">🌎</span>');
 					cell = cell.replace("🟨",'<span title="Holodeck Episode">🟨</span>');
@@ -69,16 +69,19 @@ function createTable(array) {
 					cell = cell.replace("🥈",'<span title="2nd place episode">🥈</span>');
 					cell = cell.replace("🥉",'<span title="3rd place episode">🥉</span>');
 					cell = cell.replace("🏅",'<span title="Special Award">🏅</span>');
-					cell = cell.replace("🎖",'<span title="General Award">🎖</span>');
+					cell = cell.replace("🎖",'<span title="General Award">🎖&#xFE0F;</span>');
 					cell = cell.replace("💩",'<span title="Worst episode of the series">💩</span>');
 					cell = cell.replace("👺",'<span title="&quot;Fear&quot;">👺</span>');
+					cell = cell.replace("🌌",'<span title="Iconic episode">🌌</span>');
+					cell = cell.replace('[<span title="Iconic episode">🌌</span>]','[<span title="Iconically Bad episode">🌌</span>]');
 					break;
 				case 3:
 					cellClass = "col_episodeRecommendation";
 					// Stylize certain entries
-					cell = cell.replace("🕶 ‼ Must Watch/Bare Minimum",'<span class="mustWatch">🕶</span> <span class="bareMinimum">‼</span> Must Watch/Bare Minimum');
-					cell = cell.replace("🕶 Must Watch",'<span class="mustWatch">🕶</span> Must Watch');
-					cell = cell.replace("✖ Notably Bad",'<span class="notablyBad">✖</span> Notably Bad');
+					cell = cell.replace("✔",'✔&#xFE0E;');
+					cell = cell.replace("🕶 ‼ Must Watch/Bare Minimum",'<span class="mustWatch">🕶&#xFE0E;</span> <span class="bareMinimum">‼&#xFE0E;</span> Must Watch/Bare Minimum');
+					cell = cell.replace("🕶 Must Watch",'<span class="mustWatch">🕶&#xFE0E;</span> Must Watch');
+					cell = cell.replace("✖ Notably Bad",'<span class="notablyBad">✖&#xFE0E;</span> Notably Bad');
 					break;
 				case 4:
 					cellClass = "col_episodeRating";
@@ -771,7 +774,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 2x12,Resistance,♥️,-,5.8
 2x13,Prototype,,✔ Recommended,6.1
 2x14,Alliances,,✔ Recommended,6.0
-2x15,Threshold,💩,✖ Notably Bad,0.5
+2x15,Threshold,<span class="notablyBad">[🌌]</span>💩,✖ Notably Bad,0.5
 2x16,Meld,,✔ Recommended,7.0
 2x17,Dreadnought,♥️,-,7.4
 2x18,Death Wish,Q⚖️,✔ Recommended,7.8
@@ -790,7 +793,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 3x05,False Profits,,-,4.2
 3x06,Remember,,-,5.9
 3x07,Sacred Ground,,-,3.8
-3x08 & 09,Future's End (Parts I and II),🕖🌎A🟡,🕶 Must Watch,8.8
+3x08 & 09,Future's End (Parts I and II),🌌🕖🌎A🟡,🕶 Must Watch,8.8
 3x10,Warlord,♥️,-,5.6
 3x11,The Q and the Grey,Q,♦ Optional,4.7
 3x12,Macrocosm,,-,3.9
@@ -807,15 +810,15 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 3x23,Distant Origin,,✔ Recommended,7.6
 3x24,Displaced,,-,5.5
 3x25,Worst Case Scenario,🟨,✔ Recommended,7.7
-3x26,Scorpion (Part I),🤖🥈A🟡,🕶 ‼ Must Watch/Bare Minimum,9.7
-4x01,"Scorpion, Part II",🤖🥈A🟡,🕶 ‼ Must Watch/Bare Minimum,9.7
+3x26,Scorpion (Part I),🌌🤖🥈A🟡,🕶 ‼ Must Watch/Bare Minimum,9.7
+4x01,"Scorpion, Part II",🌌🤖🥈A🟡,🕶 ‼ Must Watch/Bare Minimum,9.7
 4x02,The Gift,,🕶 Must Watch,6.3
 4x03,Day of Honor,,✔ Recommended,7.1
 4x04,Nemesis,,-,3.9
 4x05,Revulsion,,-,5.0
 4x06,The Raven,(🤖),🕶 Must Watch,6.1
 4x07,Scientific Method,,-,6.2
-4x08 & 09,Year of Hell (Parts I and II),🕖🥇A🟡,🕶 ‼ Must Watch/Bare Minimum,9.6
+4x08 & 09,Year of Hell (Parts I and II),🌌🕖🥇A🟡,🕶 ‼ Must Watch/Bare Minimum,9.6
 4x10,Random Thoughts,,-,4.8
 4x11,Concerning Flight,,-,5.7
 4x12,Mortal Coil,,-,5.3
@@ -837,7 +840,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 5x03,Extreme Risk,,✔ Recommended,4.8
 5x04,In the Flesh,🌎,-,5.0
 5x05,Once Upon a Time,,-,4.5
-5x06,Timeless,🕖A🟡,🕶 Must Watch,9.0
+5x06,Timeless,🌌🕖A🟡,🕶 Must Watch,9.0
 5x07,Infinite Regress,,-,6.0
 5x08,Nothing Human,,✔ Recommended,5.5
 5x09,Thirty Days,,-,5.9
@@ -905,7 +908,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 7x22,Natural Law,,-,5.5
 7x23,Homestead,,🕶 Must Watch,6.0
 7x24,Renaissance Man,,✔ Recommended,6.6
-7x25/26 [FL],Endgame,🕖🤖A🟡,🕶 ‼ Must Watch/Bare Minimum,7.4`;
+7x25/26 [FL],Endgame,🌌🕖🤖A🟡,🕶 ‼ Must Watch/Bare Minimum,7.4`;
 
 	var array = csvToNestedArray(csvString);
 	

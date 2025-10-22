@@ -1,0 +1,49 @@
+/* ----- INDEX ----- */
+
+.blogDate {
+	width: fit-content;
+	font-weight: bold;
+	font-size: large;
+	padding-left: 3px;
+	padding-right: 50px;
+	background: linear-gradient(to right, #8A3714, #8A3714 70%, #181818);
+}
+.blogEntry {
+	margin-left: 8px;
+	margin-top: 8px;
+	font-size: large;
+}
+.blogEntryCategory {
+	font-family: BB;
+	border: 1px solid;
+	padding: 0px 3px 0px 3px;
+}
+
+/* ----- ENTRIES ----- */
+
+.sectionHeader {
+	display: block;
+	position: relative;
+	color: #E47545;
+	font-family: BB, Roboto, sans-serif;
+	font-size: x-large;
+	margin-top: 40px;
+	border-bottom: 1px solid #E47545;
+	overflow: hidden;
+}
+.dateline {
+	
+}
+
+.criticQuote {
+	font-family: CCS, serif;
+	font-size: x-large;
+	width: 250px;
+	border-top: 3px solid;
+	margin: 15px;
+	color: white;
+	.byLine{
+		font-size: small;
+		color: #A0A0A0;
+	}
+}

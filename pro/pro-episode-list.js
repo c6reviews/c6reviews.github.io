@@ -44,8 +44,8 @@ function createTable(array) {
 				case 2:
 					cellClass = "col_episodeTags";
 					// Replace flags
-					cell = cell.replace("R⚑",'<span style="color:red" title="Red Flag">⚑</span>');
-					cell = cell.replace("P⚑",'<span style="color:yellow" title="Penalty Flag">⚑</span>');
+					cell = cell.replace("R⚑",'<span style="color:red" title="Red Flag">⚑&#xFE0E;</span>');
+					cell = cell.replace("P⚑",'<span style="color:yellow" title="Penalty Flag">⚑&#xFE0E;</span>');
 					
 					// Replace pips
 					cell = cell.replace("A🟡",'<img alt="admiral insignia" title="Full Admiral Pips" src="images/admiral.png" width="29" >');
@@ -58,7 +58,7 @@ function createTable(array) {
 					cell = cell.replace('(<span title="Proper Borg Episode">🤖</span>)','<span title="Episode involves the Borg">(🤖)</span>');
 					cell = cell.replace("Q",'<span title="Q Episode" class="Q">Q</span>');
 					cell = cell.replace("31",'<span title="Section 31" style="border:1px solid #C0C0C0;border-radius:10px;">31</span>');
-					cell = cell.replace("⚖",'<span title="Courtroom Episode">⚖</span>');
+					cell = cell.replace("⚖",'<span title="Courtroom Episode">⚖&#xFE0F;</span>');
 					cell = cell.replace("♊",'<span title="Mirror Universe episode">♊</span>');
 					cell = cell.replace("🌎",'<span title="Episode takes place on Earth">🌎</span>');
 					cell = cell.replace("🟨",'<span title="Holodeck Episode">🟨</span>');
@@ -69,15 +69,16 @@ function createTable(array) {
 					cell = cell.replace("🥈",'<span title="2nd place episode">🥈</span>');
 					cell = cell.replace("🥉",'<span title="3rd place episode">🥉</span>');
 					cell = cell.replace("🏅",'<span title="Special Award">🏅</span>');
-					cell = cell.replace("🎖",'<span title="General Award">🎖</span>');
+					cell = cell.replace("🎖",'<span title="General Award">🎖&#xFE0F;</span>');
 					cell = cell.replace("💩",'<span title="Worst episode of the series">💩</span>');
 					break;
 				case 3:
 					cellClass = "col_episodeRecommendation";
 					// Stylize certain entries
-					cell = cell.replace("🕶 ‼ Must Watch/Bare Minimum",'<span class="mustWatch">🕶</span> <span class="bareMinimum">‼</span> Must Watch/Bare Minimum');
-					cell = cell.replace("🕶 Must Watch",'<span class="mustWatch">🕶</span> Must Watch');
-					cell = cell.replace("✖ Notably Bad",'<span class="notablyBad">✖</span> Notably Bad');
+					cell = cell.replace("✔",'✔&#xFE0E;');
+					cell = cell.replace("🕶 ‼ Must Watch/Bare Minimum",'<span class="mustWatch">🕶&#xFE0E;</span> <span class="bareMinimum">‼&#xFE0E;</span> Must Watch/Bare Minimum');
+					cell = cell.replace("🕶 Must Watch",'<span class="mustWatch">🕶&#xFE0E;</span> Must Watch');
+					cell = cell.replace("✖ Notably Bad",'<span class="notablyBad">✖&#xFE0E;</span> Notably Bad');
 					break;
 				case 4:
 					cellClass = "col_episodeRating";

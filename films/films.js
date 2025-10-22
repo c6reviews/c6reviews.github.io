@@ -177,7 +177,7 @@ function sort(by) {
 				document.getElementById("Standalonefilms").style.top = "1230px";
 			},500);
 		} else if (by == "score") {
-			newOrder = ['x','x','x','x','x','x',0,'x','x','x',-1,16,'x','x','x',17,-2,9998,9999]
+			newOrder = ['x','x','x','x','x','x',0,'x','x','x',-2,16,-1,'x','x',17,-3,9998,9999]
 		}
 	} else if (G_sortdir == "desc") {
 		if (by == "alpha") {
@@ -191,7 +191,7 @@ function sort(by) {
 				document.getElementById("Standalonefilms").style.top = "90px";
 			},500);
 		} else if (by == "score") {
-			newOrder = ['x','x','x','x','x','x',0,'x','x','x',-2,16,'x','x','x',17,-1,9998,9999]
+			newOrder = ['x','x','x','x','x','x',0,'x','x','x',-2,16,-3,'x','x',17,-1,9998,9999]
 		}
 	}
 	
