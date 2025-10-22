@@ -15,10 +15,10 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.4.2">
-<link rel="stylesheet" href="../tts.css?v=1.4.2">
-<link rel="stylesheet" href="pic.css?v=1.4.2">
-<link rel="stylesheet" href="pic-episode-guides.css?v=1.4.2">
+<link rel="stylesheet" href="../main.css?v=1.4.3">
+<link rel="stylesheet" href="../tts.css?v=1.4.3">
+<link rel="stylesheet" href="pic.css?v=1.4.3">
+<link rel="stylesheet" href="pic-episode-guides.css?v=1.4.3">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 <meta property="og:image" content="https://c6reviews.com/pic/images/ogimage.png">
 
@@ -34,7 +34,7 @@
 	function prepTextToSpeech(id)
 	{
 		let text = document.getElementById(id).innerText;
-		return text.replaceAll("Locutus","locude-us").replaceAll("Sirena","Sih-REN-uh").replaceAll(/ups/gi,"uhps").replaceAll("Cor Coroli V [sic]","Core Coroli 5").replaceAll("Cor Caroli","Core Caroli").replaceAll("Lt Cmdr","Lieutenant Commander").replaceAll("Ressikan","Rehssikkan").replaceAll("Mintaka","Min-takah").replaceAll("Sela","Seela").replaceAll("Enterprise-D's", "Enterprise-Deez").replaceAll(/ensign/gi,"ensin").replaceAll("Shiar","She-are").replaceAll("Ferenginar","Fer-ren-geh-narr").replaceAll("Risa","Ryza").replaceAll("Kalara V","Kalara 5").replaceAll("Praetor","Pray-tor").replaceAll("Reman","Reemin").replaceAll("Wolf 359","Wolf 3 5 9").replaceAll("Hirogen","Hir-ohjen").replaceAll(/kal-toh/gi, "Cal-toh").replaceAll("Tuvok","Two-vock").replaceAll("PADD","pad").replaceAll("rendezvous*","rawn-day-voos").replaceAll("Icheb","E-chehb").replaceAll("Okona","Okawna").replaceAll("Larell of Renhia","Lar-ell of Renia").replaceAll("Ba'ku", "Bah-ku").replaceAll("Kore.","Kor-A,").replaceAll(/thalaron/gi,"thay-ler-on").replaceAll("IV, V, and VI.","4, 5, and 6.").replaceAll("1986‑Earth", "Nineteen Eighty-Six Earth").replaceAll(/slo-mo/gi,"slow-moe").replaceAll("B'Elanna","Bull-on-uh").replaceAll("Unification I", "Unification 1").replaceAll("Duras","Duross").replaceAll("B'Etor","bay-tor").replaceAll("Gowron","Gow-ron").replaceAll("ol'","oul");
+		return text.replaceAll("Locutus","locude-us").replaceAll("Sirena","Sih-REN-uh").replaceAll(/ups/gi,"uhps").replaceAll("Cor Coroli V [sic]","Core Coroli 5").replaceAll("Cor Caroli","Core Caroli").replaceAll("Lt Cmdr","Lieutenant Commander").replaceAll("Ressikan","Rehssikkan").replaceAll("Mintaka","Min-takah").replaceAll("Sela","Seela").replaceAll("Enterprise-D's", "Enterprise-Deez").replaceAll(/ensign/gi,"ensin").replaceAll("Shiar","She-are").replaceAll("Ferenginar","Fer-ren-geh-narr").replaceAll("Risa","Ryza").replaceAll("Kalara V","Kalara 5").replaceAll("Praetor","Pray-tor").replaceAll("Reman","Reemin").replaceAll("Wolf 359","Wolf 3 5 9").replaceAll("Hirogen","Hir-ohjen").replaceAll(/kal-toh/gi, "Cal-toh").replaceAll("Tuvok","Two-vock").replaceAll("PADD","pad").replaceAll("rendezvous*","rawn-day-voos").replaceAll("Icheb","E-chehb").replaceAll("Okona","Okawna").replaceAll("Larell of Renhia","Lar-ell of Renia").replaceAll("Ba'ku", "Bah-ku").replaceAll("Kore.","Kor-A,").replaceAll(/thalaron/gi,"thay-ler-on").replaceAll("IV, V, and VI.","4, 5, and 6.").replaceAll("1986‑Earth", "Nineteen Eighty-Six Earth").replaceAll(/slo-mo/gi,"slow-moe").replaceAll("B'Elanna","Bull-on-uh").replaceAll("Unification I", "Unification 1").replaceAll("Duras","Duross").replaceAll("B'Etor","bay-tor").replaceAll("Gowron","Gow-ron").replaceAll("ol'","oul").replace("43996.2","4 3 9 9 6 point 2").replace("45236.4","4 5 2 3 6 point 4").replace("41153.7","4 1 1 5 3 point 7");
 	}
 </script>
 
@@ -210,8 +210,8 @@
 					</tr>
 					<tr>
 						<td class="titleBox">The Next Generation
-							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-							<button class="TTSplayButton" id="tts1apb" onclick="textToSpeech('tts1a',prepTextToSpeech('tts1a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+							<button class="TTSplayButton" id="tts1apb" onclick="textToSpeech('tts1a',prepTextToSpeech('tts1a'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 						</td>
 						<td colspan="3" style="text-align:left">
 							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e01toggle" class="spoilerToggle" onclick="displaySpoilerContent('e01',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
@@ -238,8 +238,8 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts1bpb" onclick="textToSpeech('tts1b',prepTextToSpeech('tts1b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts1bpb" onclick="textToSpeech('tts1b',prepTextToSpeech('tts1b'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -268,8 +268,8 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts1cpb" onclick="textToSpeech('tts1c',prepTextToSpeech('tts1c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts1cpb" onclick="textToSpeech('tts1c',prepTextToSpeech('tts1c'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -285,7 +285,7 @@
 								<li>Non-reference: Beverly's codeword &ldquo;Hellbird&rdquo; and the so-named virus that Riker talks about is not a reference to anything that had previously happened on screen.</li>
 								<li>During the Titan's launch sequence, an officer reports, &ldquo;Metaphasic shields at the ready.&rdquo; This is a nod to <a href="../tng/tng-s6.html#e22">TNG 6x22: Suspicions</a>, which was an episode primarily focused on Beverly Crusher and her desire to bring scientists together to work on this shield technology, which was experimental at the time. Obviously the designs have been refined and implemented on modern Starfleet ships.</li>
 								<li class="spoilerPlaceholder">( +1 spoiler )</li>
-								<li class="spoilerContent">The &ldquo;Red Lady&rdquo; is a statue of Rachel Garrett, who was the captain of the U.S.S. Enterprise NCC-1701-C, only ever seen in the TNG episode <a href="../tng/tng-s3.html#e15">TNG 3x15: Yesterday's Enterprise</a>, which tells the story of the event responsible for sending Tasha Yar into the past, eventually leading to the birth of the hybrid Human-Romulan, Sela.</li>
+								<li class="spoilerContent">The &ldquo;Red Lady&rdquo; is a statue of Rachel Garrett, who was the captain of the U.S.S. Enterprise NCC-1701-C, only ever seen in the TNG episode <a href="../tng/tng-s3.html#e15">TNG 3x15: Yesterday's Enterprise</a>, which tells the story of the event responsible for sending Tasha Yar into the past, eventually leading to the birth of the hybrid Human-Romulan, Sela. [Okay, fine, a younger Rachel Garrett was also seen in <a href="../films/section31.html"><em>Star Trek: Section 31</em></a>, but her appearance there was entirely arbitrary and didn't really add anything of value to her character.]</li>
 								<li>When Picard uploads Beverly's medical history, we briefly see two things on the screen:<br><br>
 									<ul>
 										<li>&ldquo;47653.2: Near paralysis from unidentified venom. Placed in stasis to prevent paralysis. Reconstructive surgery required.&rdquo; – this is a reference to <a href="../tng/tng-s7.html#e19">TNG 7x19: Genesis</a>.</li>
@@ -309,8 +309,8 @@
 						<tr>
 							<td class="iconBox">⁉</td>
 							<td class="sectionHead">Nitpickery &amp; Other Weirdness
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts1dpb" onclick="textToSpeech('tts1d',prepTextToSpeech('tts1d'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts1dpb" onclick="textToSpeech('tts1d',prepTextToSpeech('tts1d'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -395,8 +395,8 @@
 					</tr>
 					<tr>
 						<td class="titleBox">Disengage
-							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-							<button class="TTSplayButton" id="tts2apb" onclick="textToSpeech('tts2a',prepTextToSpeech('tts2a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+							<button class="TTSplayButton" id="tts2apb" onclick="textToSpeech('tts2a',prepTextToSpeech('tts2a'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 						</td>
 						<td colspan="3" style="text-align:left">
 							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e02toggle" class="spoilerToggle" onclick="displaySpoilerContent('e02',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
@@ -423,8 +423,8 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts2bpb" onclick="textToSpeech('tts2b',prepTextToSpeech('tts2b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts2bpb" onclick="textToSpeech('tts2b',prepTextToSpeech('tts2b'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -453,15 +453,15 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts2cpb" onclick="textToSpeech('tts2c',prepTextToSpeech('tts2c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts2cpb" onclick="textToSpeech('tts2c',prepTextToSpeech('tts2c'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
 							<td>&nbsp;</td>
 							<td class="references" id="tts2c"><ul>
 								<li>When Picard and Riker's shuttle is destroyed by the Shrike, a piece of debris is briefly seen with the shuttle name: Saavik. This is a reference to the Vulcan Lt. J.G. Saavik from the Star Trek films <a href="../films/ii-twok.html">II</a>, <a href="../films/iii-tsfs.html">III</a>, and <a href="../films/iv-tvh.html">IV</a>. The font is reminiscent of the livery used on shuttlecraft in The Original Series.</li>
-								<li>Tiny detail: The beeping sound heard when Vadic appears on the viewscreen is the same sound as when establishing communications in <a href="../films/vi-tuc.html"><em>Star Trek VI: The Undiscovered Country</em></a>.</li>
+								<li>Tiny detail: The &ldquo;beep&rdquo; heard when Vadic appears on the viewscreen is the same sound as when establishing communications in <a href="../films/vi-tuc.html"><em>Star Trek VI: The Undiscovered Country</em></a>.</li>
 								<li>Captain Vadic is played by <a href="https://memory-alpha.fandom.com/wiki/Amanda_Plummer" target="_blank">Amanda Plummer</a>, daughter of <a href="https://memory-alpha.fandom.com/wiki/Christopher_Plummer" target="_blank">Christopher Plummer</a>, who played General Chang in <a href="../films/vi-tuc.html"><em>Star Trek VI: The Undiscovered Country</em></a>.</li>
 								<li class="spoilerPlaceholder">( +1 spoiler )</li>
 								<li class="spoilerContent">Musical continuity: The music heard when Worf appears is the Klingon battle theme from <a href="../films/tmp.html"><em>Star Trek: The Motion Picture</em></a>.</li>
@@ -482,8 +482,8 @@
 						<tr>
 							<td class="iconBox">⁉</td>
 							<td class="sectionHead">Nitpickery &amp; Other Weirdness
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts2dpb" onclick="textToSpeech('tts2d',prepTextToSpeech('tts2d'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts2dpb" onclick="textToSpeech('tts2d',prepTextToSpeech('tts2d'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -566,8 +566,8 @@
 					</tr>
 					<tr>
 						<td class="titleBox">Seventeen Seconds
-							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-							<button class="TTSplayButton" id="tts3apb" onclick="textToSpeech('tts3a',prepTextToSpeech('tts3a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+							<button class="TTSplayButton" id="tts3apb" onclick="textToSpeech('tts3a',prepTextToSpeech('tts3a'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 						</td>
 						<td colspan="3" style="text-align:left">
 							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e03toggle" class="spoilerToggle" onclick="displaySpoilerContent('e03',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
@@ -594,8 +594,8 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts3bpb" onclick="textToSpeech('tts3b',prepTextToSpeech('tts3b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts3bpb" onclick="textToSpeech('tts3b',prepTextToSpeech('tts3b'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -628,15 +628,15 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts3cpb" onclick="textToSpeech('tts3c',prepTextToSpeech('tts3c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts3cpb" onclick="textToSpeech('tts3c',prepTextToSpeech('tts3c'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
 							<td>&nbsp;</td>
 							<td class="references" id="tts3c"><ul>
 								<li>The flashback scene where Picard and Riker talk at the bar about Riker's newborn son takes place 20 years prior, in 2381.</li>
-								<li>In her quarters, Seven is listening to Mozart's Ave Verum Corpus K.618. I don't know if that is a reference to anything, but now you know.</li>
+								<li>In her quarters, Seven is listening to Mozart's <a href="https://www.youtube.com/watch?v=2UXLKmhd920" target="_blank">Ave Verum Corpus K.618</a>. I don't know if that is a reference to anything, but now you know.</li>
 								<li>Crusher got preggo during a trip with Picard to Casperia Prime, a competitor to the pleasure-planet Risa.</li>
 								<li>Non-references: Beverly talks about several times she tried to tell Picard about his son, but circumstances prevented her from doing so. They included Kalara V refugees kidnapping Picard for nine days, Reman assassins intercepting Picard's ship, and a photon grenade detonating meters from Picard while he negotiated with the Praetor. None of these reference any on-screen events that were previously seen, but they do all reference the Romulans. (A trivia entry on IMDb says that these reference events from <a href="../films/nemesis.html"><em>Star Trek: Nemesis</em></a>, but that entry is incorrect.)</li>
 								<li>When Raffi first meets Worf, he is listening to &ldquo;Vallon Sonore&rdquo; from the opera <em>Les Troyens</em> by Hector Berlioz. The same song was enjoyed by Picard, very loudly, toward the beginning of <a href="../films/firstcontact.html"><em>Star Trek: First Contact</em></a>.</li>
@@ -671,8 +671,8 @@
 						<tr>
 							<td class="iconBox">⁉</td>
 							<td class="sectionHead">Nitpickery &amp; Other Weirdness
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts3dpb" onclick="textToSpeech('tts3d',prepTextToSpeech('tts3d'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts3dpb" onclick="textToSpeech('tts3d',prepTextToSpeech('tts3d'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -681,8 +681,8 @@
 								<li>The item that Seven fiddles with in her quarters is a camper's mini butane stove...</li>
 								<li>It bothers me – but only slightly – that they perform defibrillation shocks on Jack and that the accompanying sound effect is of a present-day defibrillator. I get that it is a sound that we have all become familiar with as part of TV medical dramas, and it helps to signal to the watcher the severity of the situation. But... I mean, come on... this is <em>Star Trek</em>.</li>
 								<li>I can't figure out Picard's need to go on offense with the Shrike. We already know that the Shrike greatly outclasses the Titan, so I don't feel like sneaking up behind it is enough of an advantage. Picard later says that Riker's strategy keeps failing and that's why they need to try something different, insisting they go on the offensive again. But they <em>are</em> trying something different. Riker's strategy failed because of the verterium leak &ndash; now that the leak is sealed, Riker's strategy has a perfectly good chance of succeeding.</li>
-								<li>Why didn't Rikka just... shapeshift himself away from Raffi and Worf? Worf suggests that he didn't want to &ldquo;reveal his true nature,&rdquo; but I don't really think it would have changed much if he had. And look at the alternative: Now he's dead AND he's revealed his true self.</li>
-								<li>Riker dramatically yells, &ldquo;Fire everything we've got!&rdquo;  Apparently, &ldquo;everything they've got&rdquo; is 4 photon torpedoes.</li>
+								<li>Why didn't Rikka just... shapeshift himself away from Raffi and Worf? Worf suggests that he didn't want to &ldquo;reveal his true nature,&rdquo; but I don't really think it would have changed much if he had. And look at the alternative: Now he's revealed his true nature AND he's dead!</li>
+								<li>Riker dramatically yells, &ldquo;Fire everything we've got!&rdquo;  Apparently, &ldquo;everything we've got&rdquo; is 4 photon torpedoes.</li>
 							</ul></td>	
 						</tr>
 					</table>
@@ -743,8 +743,8 @@
 					</tr>
 					<tr>
 						<td class="titleBox">No Win Scenario
-							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-							<button class="TTSplayButton" id="tts4apb" onclick="textToSpeech('tts4a',prepTextToSpeech('tts4a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+							<button class="TTSplayButton" id="tts4apb" onclick="textToSpeech('tts4a',prepTextToSpeech('tts4a'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 						</td>
 						<td colspan="3" style="text-align:left">
 							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e04toggle" class="spoilerToggle" onclick="displaySpoilerContent('e04',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
@@ -770,8 +770,8 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts4bpb" onclick="textToSpeech('tts4b',prepTextToSpeech('tts4b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts4bpb" onclick="textToSpeech('tts4b',prepTextToSpeech('tts4b'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -802,8 +802,8 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts4cpb" onclick="textToSpeech('tts4c',prepTextToSpeech('tts4c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts4cpb" onclick="textToSpeech('tts4c',prepTextToSpeech('tts4c'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -835,8 +835,8 @@
 						<tr>
 							<td class="iconBox">⁉</td>
 							<td class="sectionHead">Nitpickery &amp; Other Weirdness
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts4dpb" onclick="textToSpeech('tts4d',prepTextToSpeech('tts4d'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts4dpb" onclick="textToSpeech('tts4d',prepTextToSpeech('tts4d'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -920,8 +920,8 @@
 					</tr>
 					<tr>
 						<td class="titleBox">Imposters
-							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-							<button class="TTSplayButton" id="tts5apb" onclick="textToSpeech('tts5a',prepTextToSpeech('tts5a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+							<button class="TTSplayButton" id="tts5apb" onclick="textToSpeech('tts5a',prepTextToSpeech('tts5a'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 						</td>
 						<td colspan="3" style="text-align:left">
 							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e05toggle" class="spoilerToggle" onclick="displaySpoilerContent('e05',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
@@ -949,8 +949,8 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts5bpb" onclick="textToSpeech('tts5b',prepTextToSpeech('tts5b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts5bpb" onclick="textToSpeech('tts5b',prepTextToSpeech('tts5b'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -981,8 +981,8 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts5cpb" onclick="textToSpeech('tts5c',prepTextToSpeech('tts5c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts5cpb" onclick="textToSpeech('tts5c',prepTextToSpeech('tts5c'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -1014,8 +1014,8 @@
 						<tr>
 							<td class="iconBox">⁉</td>
 							<td class="sectionHead">Nitpickery &amp; Other Weirdness
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts5dpb" onclick="textToSpeech('tts5d',prepTextToSpeech('tts5d'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts5dpb" onclick="textToSpeech('tts5d',prepTextToSpeech('tts5d'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -1100,8 +1100,8 @@
 					</tr>
 					<tr>
 						<td class="titleBox">The Bounty
-							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-							<button class="TTSplayButton" id="tts6apb" onclick="textToSpeech('tts6a',prepTextToSpeech('tts6a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+							<button class="TTSplayButton" id="tts6apb" onclick="textToSpeech('tts6a',prepTextToSpeech('tts6a'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 						</td>
 						<td colspan="3" style="text-align:left">
 							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e06toggle" class="spoilerToggle" onclick="displaySpoilerContent('e06',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
@@ -1127,8 +1127,8 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts6bpb" onclick="textToSpeech('tts6b',prepTextToSpeech('tts6b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts6bpb" onclick="textToSpeech('tts6b',prepTextToSpeech('tts6b'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -1157,8 +1157,8 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts6cpb" onclick="textToSpeech('tts6c',prepTextToSpeech('tts6c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts6cpb" onclick="textToSpeech('tts6c',prepTextToSpeech('tts6c'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -1243,8 +1243,8 @@
 						<tr>
 							<td class="iconBox">⁉</td>
 							<td class="sectionHead">Nitpickery &amp; Other Weirdness
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts6dpb" onclick="textToSpeech('tts6d',prepTextToSpeech('tts6d'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts6dpb" onclick="textToSpeech('tts6d',prepTextToSpeech('tts6d'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -1328,8 +1328,8 @@
 					</tr>
 					<tr>
 						<td class="titleBox">Dominion
-							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-							<button class="TTSplayButton" id="tts7apb" onclick="textToSpeech('tts7a',prepTextToSpeech('tts7a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+							<button class="TTSplayButton" id="tts7apb" onclick="textToSpeech('tts7a',prepTextToSpeech('tts7a'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 						</td>
 						<td colspan="3" style="text-align:left">
 							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e07toggle" class="spoilerToggle" onclick="displaySpoilerContent('e07',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
@@ -1355,8 +1355,8 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts7bpb" onclick="textToSpeech('tts7b',prepTextToSpeech('tts7b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span><span>Thoughts</span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts7bpb" onclick="textToSpeech('tts7b',prepTextToSpeech('tts7b'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span><span>Thoughts</span>
 							</td>
 						</tr>
 						<tr>
@@ -1386,8 +1386,8 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-									<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-									<button class="TTSplayButton" id="tts7cpb" onclick="textToSpeech('tts7c',prepTextToSpeech('tts7c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+									<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+									<button class="TTSplayButton" id="tts7cpb" onclick="textToSpeech('tts7c',prepTextToSpeech('tts7c'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -1412,8 +1412,8 @@
 						<tr>
 							<td class="iconBox">⁉</td>
 							<td class="sectionHead">Nitpickery &amp; Other Weirdness
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts7dpb" onclick="textToSpeech('tts7d',prepTextToSpeech('tts7d'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts7dpb" onclick="textToSpeech('tts7d',prepTextToSpeech('tts7d'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -1433,7 +1433,7 @@
 								<div class="distinctionDescriptions">
 									<span class="spoilerPlaceholder">( +1 spoiler )</span>
 									<span class="spoilerContent" style="color:#eea432"><strong>Special Guest Star:</strong> Captain Tuvok (sorta)</span><br><br>
-									<span class="personalFavorite">♥ <span class="large">Personal Favorite Episode</span></span>
+									<span class="personalFavorite">♥&#xFE0E; <span class="large">Personal Favorite Episode</span></span>
 								</div>
 							</td>
 						</tr>
@@ -1495,8 +1495,8 @@
 					</tr>
 					<tr>
 						<td class="titleBox">Surrender
-							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-							<button class="TTSplayButton" id="tts8apb" onclick="textToSpeech('tts8a',prepTextToSpeech('tts8a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+							<button class="TTSplayButton" id="tts8apb" onclick="textToSpeech('tts8a',prepTextToSpeech('tts8a'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 						</td>
 						<td colspan="3" style="text-align:left">
 							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e08toggle" class="spoilerToggle" onclick="displaySpoilerContent('e08',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
@@ -1522,8 +1522,8 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts8bpb" onclick="textToSpeech('tts8b',prepTextToSpeech('tts8b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts8bpb" onclick="textToSpeech('tts8b',prepTextToSpeech('tts8b'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -1536,7 +1536,7 @@
 								
 								<div class="spoilerContent"><p>Deborah Kampmeier directed this episode and the previous one, and considering how much I liked the last episode, I was surprised to find something to complain about regarding this episode's direction. Toward the end, we finally get Picard, Riker, Worf, Troi, Data, Geordi, and Crusher sitting around a table for the first time in over twenty years, and there is not one single wide shot that captures everyone in the same frame during that scene. Oh, there is <em>almost</em> one, but Troi is sitting too close to the table, completely blocking our view of Worf. This was such an important gathering &ndash; the director should have been sure to get the perfect shot with everyone around the table.</p>
 								<p style="text-align:center"><img src="images/pic-3x08-infuriating.png" style="width:800px;" alt="A photo of Picard, Riker, Worf, Troi, Data, La Forge, and Crusher, all sitting around a conference table, but Troi is blocking the camera's view of Worf"></p>
-								<p>And of course, that last scene. Finally going to see what's behind that red door! PSYCH! Tune in next time to find out what's behind this suspense-manufacturing device!</p></div>
+								<p>And of course, that last scene. Finally going to see what's behind that red door! Oh, just kidding, tune in next time to find out what's behind this suspense-manufacturing device!</p></div>
 							</div></td>
 						</tr>
 						<tr>
@@ -1553,8 +1553,8 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts8cpb" onclick="textToSpeech('tts8c',prepTextToSpeech('tts8c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts8cpb" onclick="textToSpeech('tts8c',prepTextToSpeech('tts8c'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -1654,8 +1654,8 @@
 					</tr>
 					<tr>
 						<td class="titleBox">Võx
-							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-							<button class="TTSplayButton" id="tts9apb" onclick="textToSpeech('tts9a',prepTextToSpeech('tts9a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+							<button class="TTSplayButton" id="tts9apb" onclick="textToSpeech('tts9a',prepTextToSpeech('tts9a'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 						</td>
 						<td colspan="3" style="text-align:left">
 							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e09toggle" class="spoilerToggle" onclick="displaySpoilerContent('e09',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
@@ -1681,8 +1681,8 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts9bpb" onclick="textToSpeech('tts9b',prepTextToSpeech('tts9b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts9bpb" onclick="textToSpeech('tts9b',prepTextToSpeech('tts9b'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -1714,8 +1714,8 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts9cpb" onclick="textToSpeech('tts9c',prepTextToSpeech('tts9c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts9cpb" onclick="textToSpeech('tts9c',prepTextToSpeech('tts9c'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -1750,8 +1750,8 @@
 						<tr>
 							<td class="iconBox">⁉</td>
 							<td class="sectionHead">Nitpickery &amp; Other Weirdness
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts9dpb" onclick="textToSpeech('tts9d',prepTextToSpeech('tts9d'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts9dpb" onclick="textToSpeech('tts9d',prepTextToSpeech('tts9d'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -1835,8 +1835,8 @@
 					</tr>
 					<tr>
 						<td class="titleBox">The Last Generation
-							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-							<button class="TTSplayButton" id="tts10apb" onclick="textToSpeech('tts10a',prepTextToSpeech('tts10a'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+							<span class="TTScontrols" style="margin-right:265px"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+							<button class="TTSplayButton" id="tts10apb" onclick="textToSpeech('tts10a',prepTextToSpeech('tts10a'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 						</td>
 						<td colspan="3" style="text-align:left">
 							<div class="spoilerSwitch" style=""><label class="switch"><input type="checkbox" id="e10toggle" class="spoilerToggle" onclick="displaySpoilerContent('e10',this)"><span class="slider round"></span><span class="switchLabel">Show spoiler content</span></label></div>
@@ -1864,8 +1864,8 @@
 						<tr>
 							<td class="iconBox">💭</td>
 							<td class="sectionHead">Thoughts
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts10bpb" onclick="textToSpeech('tts10b',prepTextToSpeech('tts10b'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts10bpb" onclick="textToSpeech('tts10b',prepTextToSpeech('tts10b'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -1908,8 +1908,8 @@
 						<tr>
 							<td class="iconBox">🔗</td>
 							<td class="sectionHead">References
-								<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-								<button class="TTSplayButton" id="tts10cpb" onclick="textToSpeech('tts10c',prepTextToSpeech('tts10c'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+								<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+								<button class="TTSplayButton" id="tts10cpb" onclick="textToSpeech('tts10c',prepTextToSpeech('tts10c'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 							</td>
 						</tr>
 						<tr>
@@ -1918,7 +1918,7 @@
 								<ul>
 									<li>Federation President Anton Chekov delivers a warning to avoid Earth because of the assimilated fleet, paralleling a similar message in <a href="../films/iv-tvh.html"><em>Star Trek IV: The Voyage Home</em></a> from the President to avoid Earth because of the unknown probe decimating the planet.</li>
 									<li>Anton Chekov is the son of Pavel Chekov, who served alongside Kirk on the Enterprise and Enterprise-A. Anton was voiced by <a href="https://memory-alpha.fandom.com/wiki/Walter_Koenig" target="_blank">Walter Koenig</a>, who played Pavel Chekov in the original cast.</li>
-									<li>In the opening, just as Chekov says &ldquo;on all emergency channels – do not approach Earth&rdquo;, the space/nebula footage that we see is the same as the first thing seen in the opening credits sequence in every episode of <em>TNG</em>.</li>
+									<li>In the opening, just as Chekov says &ldquo;on all emergency channels – do not approach Earth&rdquo;, the space/nebula footage that we see is the same as the first thing seen in the opening credits sequence in every episode of <em>TNG</em> (well, after Seasons 1 and 2).</li>
 									<li>At the bar, Crusher tells Worf to have another glass of prune juice. Worf dubbed this unlikely beverage &ldquo;a warrior's drink&rdquo; and it became one of his favorites after it was introduced to him by Guinan in <a href="../tng/tng-s3.html#e15">TNG 3x15: Yesterday's Enterprise</a>.</li>
 									<li>Geordi asks Data to make the night's last toast. He starts with, &ldquo;There was a young lady from Venus&rdquo; and everyone says &ldquo;Data!&rdquo; to stop him. He then says &ldquo;I always wanted to finish that.&rdquo;  This is a reference to <a href="../tng/tng-s1.html#e03">TNG 1x03: The Naked Now</a>, where Data ponders the meaning of this limerick, but is interrupted by Picard before he can get to the vulgar bit.</li>
 									<li class="spoilerPlaceholder">( +2 spoilers )</li>
@@ -2002,8 +2002,8 @@
 	
 	<div class="seasonReviewCard" id="seasonReview">
 		
-		<div class="seasonName">Season 3 Review<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select id="ttsratemain" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-			<button class="TTSplayButton" id="tts1pb" onclick="textToSpeech('tts1',prepTextToSpeech('tts1'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+		<div class="seasonName">Season 3 Review<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select id="ttsratemain" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+			<button class="TTSplayButton" id="tts1pb" onclick="textToSpeech('tts1',prepTextToSpeech('tts1'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 			<br><span style="font-size:small;font-family:sans-serif;color:#E0C0A0"><span style="text-shadow: red 0px 0px 12px">🚨</span> Definitely contains spoilers <span style="text-shadow: red 0px 0px 12px">🚨</span></span></div>
 		<div class="serif" id="tts1">
 		

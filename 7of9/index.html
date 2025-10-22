@@ -15,9 +15,9 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.4.2">
-<link rel="stylesheet" href="../tts.css?v=1.4.2">
-<link rel="stylesheet" href="7of9.css?v=1.4.2">
+<link rel="stylesheet" href="../main.css?v=1.4.3">
+<link rel="stylesheet" href="../tts.css?v=1.4.3">
+<link rel="stylesheet" href="7of9.css?v=1.4.3">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 <meta property="og:image" content="https://c6reviews.com/7of9/images/ogimage.png">
 
@@ -63,8 +63,8 @@
 		<div class="articleImage" style="float:left;margin-top:24px;"><img src="images/annika.png" style="width:300px;" alt="A photo of Annika Hansen"><br>Annika Hansen, 2350 (Age 6)</div>
 		
 		<div style="position:relative">
-			<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select id="ttsratemain" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
-			<button class="TTSplayButton" id="tts1pb" onclick="textToSpeech('tts1',prepTextToSpeech('tts1'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
+			<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select id="ttsratemain" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+			<button class="TTSplayButton" id="tts1pb" onclick="textToSpeech('tts1',prepTextToSpeech('tts1'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 		</div>
 		
 		<div class="serif" id="tts1">	
@@ -98,7 +98,7 @@
 				<td>&nbsp;</td>
 				<td style="padding-right:8px;vertical-align:bottom;position:relative;">
 					<div class="episodeSearchBoxContainer">
-						<input type="text" id="episodeSearchBox" placeholder="Title search" onkeyup="filterTitle()" size="28" style="height:21px"><input type="button" value="✖" class="textClearButton" onClick="document.getElementById('episodeSearchBox').value='';filterTitle()">
+						<input type="text" id="episodeSearchBox" placeholder="Title search" onkeyup="filterTitle()" size="28" style="height:21px"><input type="button" value="✖&#xFE0E;" class="textClearButton" onClick="document.getElementById('episodeSearchBox').value='';filterTitle()">
 					</div>
 				</td>
 				<td style="text-align:left;vertical-align:bottom;">
@@ -109,9 +109,9 @@
 					<input id="recommendationFilterDropdownArrow" type="button" class="dropdownArrow" value="▼" onclick="toggleFilterBox('recommendationFilter')">
 					<div class="filterDropdownContainer" id="recommendationFilter" style="transform: translateX(15px);">
 						<label class="checkContainer"><input type="checkbox" id="rnfilterall" onClick="setFilters('rnall')" checked><span class="checkmark"></span><span class="icon"></span>&nbsp;All&nbsp;Recommendations</label>
-						<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="🕶" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">🕶</span>&nbsp;Must&nbsp;Watch</label>
-						<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="✔ " onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">✔</span>&nbsp;Recommended</label>
-						<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="♦" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">♦</span>&nbsp;Optional</label>
+						<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="🕶&#xFE0E;" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">🕶&#xFE0E;</span>&nbsp;Must&nbsp;Watch</label>
+						<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="✔&#xFE0E; " onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">✔&#xFE0E;</span>&nbsp;Recommended</label>
+						<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="♦&#xFE0E;" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">♦&#xFE0E;</span>&nbsp;Optional</label>
 						<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="-" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">-</span>&nbsp;No Recommendation</label>
 						<input type="hidden" class="rnfiltercheckbox" value="None">
 					</div>
@@ -127,7 +127,7 @@
 				<th style="width:315px;text-align:left;line-height:0.94" onclick="sortTable(3,event)">
 					<span style="font-weight:normal;font-size:x-small;float:right;text-align:right;line-height:2.1">
 						<label class="radioContainer"><input type="radio" class="sorttype" value="strictaz" name="sorttype" checked >Strict A-Z Sort&nbsp;<span class="radioDot"></span></label><br>
-						<label class="radioContainer"><input type="radio" class="sorttype" value="title" name="sorttype">Title Sort (ignore the, a, an)&nbsp;<span class="radioDot"></span></label>
+						<label class="radioContainer"><input type="radio" class="sorttype" value="title" name="sorttype">Title Sort (ignore a, an, the)&nbsp;<span class="radioDot"></span></label>
 					</span>
 					<br>Title <span id="3asc" class="sortarrows">↿</span><span id="3desc" class="sortarrows">⇂</span>
 				</th>

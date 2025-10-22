@@ -15,9 +15,9 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.4.2">
-<link rel="stylesheet" href="pic.css?v=1.4.2">
-<link rel="stylesheet" href="pic-episode-list.css?v=1.4.2">
+<link rel="stylesheet" href="../main.css?v=1.4.3">
+<link rel="stylesheet" href="pic.css?v=1.4.3">
+<link rel="stylesheet" href="pic-episode-list.css?v=1.4.3">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 <meta property="og:image" content="https://c6reviews.com/pic/images/ogimage.png">
 
@@ -63,7 +63,7 @@
 			<td><div id="filterTotalbox">Showing<br><span id="filterTotal">30</span> of 30<br>episodes</div></td>
 			<td style="padding-right:8px;vertical-align:bottom;position:relative;">
 				<div class="episodeSearchBoxContainer">
-					<input type="text" id="episodeSearchBox" placeholder="Title search" onkeyup="filterTitle()" size="28" style="height:21px"><input type="button" value="✖" class="textClearButton" onClick="document.getElementById('episodeSearchBox').value='';filterTitle()">
+					<input type="text" id="episodeSearchBox" placeholder="Title search" onkeyup="filterTitle()" size="28" style="height:21px"><input type="button" value="✖&#xFE0E;" class="textClearButton" onClick="document.getElementById('episodeSearchBox').value='';filterTitle()">
 				</div>
 			</td>
 			<td style="text-align:center;vertical-align:bottom;">
@@ -71,7 +71,7 @@
 				<input id="tagFilterDropdownArrow" type="button" class="dropdownArrow" value="▼" onClick="toggleFilterBox('tagFilter')">
 				<div class="filterDropdownContainer" id="tagFilter" style="transform: translateX(-18px);">
 					<label class="checkContainer"><input type="checkbox" id="tagsfilterall" onClick="setFilters('tagsall')" checked><span class="checkmark"></span><span class="icon"></span>&nbsp;All&nbsp;Distinctions</label>
-					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="♥" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon">♥️</span>&nbsp;Personal&nbsp;Favorites</label>
+					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="♥" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon">♥&#xFE0E;</span>&nbsp;Personal&nbsp;Favorites</label>
 					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="4th Wall" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon">4W</span>&nbsp;4th Wall</label>
 					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="Ceremonious End" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon">CE</span>&nbsp;Ceremonious End</label>
 					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="Cosmic Facepalm" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon">CF</span>&nbsp;Cosmic Facepalm</label>
@@ -98,7 +98,7 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<span style="font-weight:normal;font-size:x-small">
 					<label class="radioContainer"><input type="radio" class="sorttype" value="strictaz" name="sorttype" onClick="" checked >Strict A-Z Sort&nbsp;<span class="radioDot"></span></label>&nbsp;&nbsp;
-					<label class="radioContainer"><input type="radio" class="sorttype" value="title" name="sorttype" onClick="" >Title Sort (ignore the, a, an)&nbsp;<span class="radioDot"></span></label>
+					<label class="radioContainer"><input type="radio" class="sorttype" value="title" name="sorttype" onClick="" >Title Sort (ignore a, an, the)&nbsp;<span class="radioDot"></span></label>
 				</span>
 			</th>
 			<th style="width:300px" onclick="sortTable(2)">Distinctions <span id="2asc" class="sortarrows">↿</span><span id="2desc" class="sortarrows">⇂</span></th>

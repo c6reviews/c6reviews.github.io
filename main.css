@@ -317,6 +317,90 @@ body li {
 }
 
 	/* | ---------------------------------------- MAIN INDEX-SPECIFIC CONTENT ---------------------------------------- */
+	#mainPanel{
+		width: 100%;
+		max-width: 1200px;
+		border: 2px solid #E47545;
+		margin: auto;
+		background-color: #181818DD;
+	}
+	
+	#mainMarquee{
+		z-index: 0;
+		width: 100%;
+		max-width: 1200px;
+		border: 1px solid #E47545;
+		border-radius: 0px 0px 0px 0px;
+		min-height: 200px;
+		margin: auto;
+		overflow-x: hidden;
+		overflow-y: clip;
+	}
+	.yearDiff {
+		display: inline;
+	}
+	.marquee-container {
+		position:relative;
+	}
+	.marquee-track{
+		display: flex;
+		white-space: nowrap;
+		transition: transform 0.5s ease-in-out;
+		min-height: 200px;
+	}
+	.marquee-track:hover {
+		animation-play-state: paused;
+	}
+	.marquee-page {
+	  position: relative;
+	  flex-shrink: 0;
+	  width: 100%;
+	  padding: 5px 5px 5px 250px;
+	  box-sizing: border-box;
+	  white-space: wrap;
+	}
+	.marquee-controls{
+		position: absolute;
+		z-index: 2;
+		top:0;
+		right:10px;
+		text-align: center;
+		line-height: 1;
+		cursor: pointer;
+		background: linear-gradient(to bottom, #000000FF, #00000040);
+		border-radius: 0px 0px 4px 4px;
+		.marquee-pause{
+			font-size: large;
+		}
+	}
+	#mainMarquee .marqueeImg {
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		top: 0;
+		height: 100%;
+		float: left;
+		margin-right: 15px;
+		object-fit: contain;
+		mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 80%, rgba(0,0,0,0));
+	}
+	#mainMarquee .marqueeTitle {
+		font-size: 36px;
+		font-family: BBI,CCS,Roboto,sans-serif;
+		/*color: #E47545;*/
+		line-height: 1;
+	}
+	#mainMarquee .marqueeSubtitle {
+		font-size: 22px;
+		font-family: Exo,Roboto,sans-serif;
+		color: #E47545;
+		line-height: 1;
+	}
+	#mainMarquee .marqueeContent {
+		margin-top:15px;
+	}
+	
+	
 	.headquote {
 		font-family: CCS, Georgia, sans-serif;
 		font-size: 16px;
@@ -340,6 +424,7 @@ body li {
 		width: fit-content;
 		margin: 10px auto 10px auto;
 		text-align: center;
+		background-color: #181818;
 	}
 	#randomReviewImage img {
 		width: 250px;
@@ -354,12 +439,35 @@ body li {
 		width: 240px;
 		line-height: 1;
 	}
+	#randomReviewMyScore {
+		margin: 5px auto auto auto;
+		width: fit-content;
+		max-width: 250px;
+		font-size: large;
+		border-top: 1px solid #505050;
+		line-height: 1;
+	}
 	#randomReviewScore {
 		margin: 5px auto 5px auto;
 		width: fit-content;
 		font-weight: bold;
 		font-size: large;
-		border-top: 1px solid #505050;
+	}
+	
+	.blogButton {
+		display: block;
+		font-family: Exo, sans-serif;
+		font-size: 30px;
+		font-weight: bold;
+		color: #E47545;
+		text-align: center;
+		margin: 10px auto 10px auto;
+		width: 250px;
+		padding: 0px 0px 3px 0px;
+		border: solid #BB4C1C;
+		border-width: 2px 0px 0px 0px;
+		border-radius: 10px;
+		background: linear-gradient(to top, #BB4C1C88, #181818 35% );
 	}
 	
 	.news{
@@ -405,7 +513,7 @@ body li {
 		grid-column-gap: 10px;
 		grid-row-gap: 0px;
 	}
-	#mainIndexGrid .timelineCard {
+	#mainIndexGrid #mainPanel {
 		grid-area: 1 / 1 / 2 / 3;
 	}
 	#mainIndexGrid #rightCol {
@@ -421,10 +529,10 @@ body li {
 	}
 	@media (max-width: 1440px) {
 		#mainIndexGrid {
-			grid-template-columns: minmax(auto,2fr) 1fr;
+			grid-template-columns:  minmax(600px,3fr) 1fr;
 			grid-template-rows: auto auto auto;
 		}
-		#mainIndexGrid .timelineCard {
+		#mainIndexGrid #mainPanel {
 			grid-area: 1 / 1 / 2 / 2;
 		}
 		#mainIndexGrid #rightCol {
@@ -439,11 +547,10 @@ body li {
 	}
 	@media (max-width: 1000px) {
 		#mainIndexGrid {
-			grid-template-columns: auto;
+			grid-template-columns: minmax(600px,1fr);
 			grid-template-rows: auto auto auto auto;
 		}
-
-		#mainIndexGrid #rightCol {
+		#mainIndexGrid #mainPanel {
 			grid-area: 1 / 1 / 2 / 1;
 		}
 		#mainIndexGrid .timelineCard {
@@ -568,6 +675,9 @@ body li {
 		font-style: italic;
 		margin-left: 40px;
 		margin-bottom: 15px;
+		em {
+			font-style: normal;
+		}
 	}
 	.updateTable .majorRelease td {
 		background-color: #BB4C1C55;
@@ -665,6 +775,7 @@ body li {
 .timelineTable td {
 	 border-bottom: 1px dotted #DDD;
 	 padding: 3px;
+	 font-family: Roboto, sans-serif;
 }
 
 .timelineTable a{
@@ -718,11 +829,11 @@ body li {
 	text-shadow: black 2px 2px 1px;
 }
 .timelineTable .filmBox::before{
-	content: "🎥";
+	content: "📽️";
 	position: absolute;
 	left: -10px;
 	top: -6px;
-	font-size: x-large;
+	font-size: 28px;
 	transform: rotate(-20deg);
 }
 .timelineTable .activeBox {
@@ -1045,5 +1156,86 @@ input:checked + .slider:before {
 .xx-large {
 	font-size: xx-large;
 }
-
+#randomReviewMyScore .stars0 {
+	display: inline;
+	font-size: x-large;
+	color: #F8393B;
+	height: 24px;
+	padding-left: 8px;
+}
+#randomReviewMyScore .stars1 {
+	display: inline;
+	font-size: x-large;
+	color: #FA6453;
+	height: 24px;
+	padding-left: 8px;
+}
+#randomReviewMyScore .stars2 {
+	display: inline;
+	font-size: x-large;
+	color: #FC9F5B;
+	height: 24px;
+	padding-left: 8px;
+}
+#randomReviewMyScore .stars3 {
+	display: inline;
+	font-size: x-large;
+	color: #FFEB84;
+	height: 24px;
+	padding-left: 8px;
+}
+#randomReviewMyScore .stars4 {
+	display: inline;
+	font-size: x-large;
+	color: #81D570;
+	height: 24px;
+	padding-left: 8px;
+}
+#randomReviewMyScore .stars5 {
+	display: inline;
+	font-size: x-large;
+	color: #03BE4B;
+	height: 24px;
+	padding-left: 8px;
+}
+#randomReviewMyScore .hollowStar {
+	color: #828282;
+}
+#randomReviewMyScore .halfstar {
+	display: inline-block;
+	position: relative;
+	font-size:x-large;
+	height:26px;
+	overflow:hidden;
+	vertical-align:top;
+}
+#randomReviewMyScore .lefthalfstar{
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	width:50%;
+	transform: translateX(-6px);
+}
+#randomReviewMyScore .righthalfstar{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #828282;
+}
+#randomReviewMyScore .showAward{
+	color: lightgray;
+}
+#randomReviewMyScore .award{
+	color: lightgray;
+}
+#randomReviewMyScore .redFlag{
+	color:red;
+}
+#randomReviewMyScore .penaltyFlag{
+	color:yellow;
+}
 /* --------------------  -------------------- */
