@@ -50,7 +50,7 @@ function textToSpeech(id,text) {
 		// ********************************* GLOBAL TEXT REPLACEMENT RULES *********************************
 			
 			// Species
-			text = text.replaceAll("Romulan","Rahmulin").replaceAll("Ferengi","Fer-ren-gii");
+			text = text.replaceAll("Romulan","Rahmulin").replaceAll("Ferengi","Fer-ren-gii").replaceAll("Cardassian","Card-ass-ian");
 			
 			// Characters
 			text = text.replaceAll("La Forge","LaForge").replaceAll("Guinan","Guynan").replaceAll("Data's","Dayta's");

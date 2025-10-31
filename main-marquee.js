@@ -15,9 +15,16 @@ document.addEventListener('DOMContentLoaded', function() {
 	var monthAndDate = today.toLocaleDateString("en-US", {month: 'long', day: 'numeric'});
 	year = today.toLocaleDateString("en-US", {year: 'numeric'});
 
-	// Add any automatic marquee pages
+	// Add automatic marquee pages
+	// Pages that appear later in this list appear sooner in the marquee (unless it doesn't follow the template)
+	
+	
 	if (year == '2026' && monthAndDate != 'September 8') {
 		track.innerHTML = marqueePage_60thYear + track.innerHTML;
+	}
+	
+	if (monthAndDate.includes("October")) {
+		track.innerHTML = marqueePage_SpookyOctober + track.innerHTML;
 	}
 	
 	switch (monthAndDate) {
@@ -204,6 +211,19 @@ var marqueePage_STARTREK60TH = `
 		<div class="marqueeTitle">STAR TREK 60<SUP style="font-size:20px">TH</SUP> ANNIVERSARY!</div>
 		<div class="marqueeSubtitle">September 8, 2026</div>
 		<div class="marqueeContent">60 years ago today, the first episode of the Original Series aired on television, bringing <em>Star Trek</em> to the world for the very first time!</div>
+	</div>`
+
+// **************************************************************************************************
+//	SEASONAL PAGES
+// **************************************************************************************************
+
+var marqueePage_SpookyOctober = `
+	<div class="marquee-page">
+		<img class="marqueeImg" src="blog/images/2025-10-31/allthosewhowander.png">
+		<div class="marqueeTitle">HALLOWEEN EPISODE WATCH-LIST</div>
+		<div class="marqueeSubtitle">🎃👻🧛‍♂️</div>
+		<div class="marqueeContent">Whether haunting or disturbing or downright chilling, <a href="blog/2025-10-31-Halloween_Episode_Watch-List.html">here are twelve</a> of the best episodes of the Star Trek franchise to watch for the Halloween spooky season!
+		</div>
 	</div>`
 
 
