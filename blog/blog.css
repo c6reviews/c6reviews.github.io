@@ -11,6 +11,7 @@
 .blogEntry {
 	margin-left: 8px;
 	margin-top: 8px;
+	margin-bottom: 30px;
 	font-size: large;
 }
 .blogEntryCategory {
@@ -33,6 +34,10 @@
 }
 .dateline {
 	
+}
+
+h2 {
+	font-family: Exo, Roboto, sans-serif;
 }
 
 .criticQuote {
