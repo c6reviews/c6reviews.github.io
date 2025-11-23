@@ -79,6 +79,7 @@ function createTable(array) {
 					cellClass = "col_episodeRecommendation";
 					// Stylize certain entries
 					cell = cell.replace("✔",'✔&#xFE0E;');
+					cell = cell.replace("♦",'♦&#xFE0E;');
 					cell = cell.replace("🕶 ‼ Must Watch/Bare Minimum",'<span class="mustWatch">🕶&#xFE0E;</span> <span class="bareMinimum">‼&#xFE0E;</span> Must Watch/Bare Minimum');
 					cell = cell.replace("🕶 Must Watch",'<span class="mustWatch">🕶&#xFE0E;</span> Must Watch');
 					cell = cell.replace("✖ Notably Bad",'<span class="notablyBad">✖&#xFE0E;</span> Notably Bad');
@@ -782,7 +783,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 2x20,Investigations,,✔ Recommended,5.2
 2x21,Deadlock,👬,✔ Recommended,7.3
 2x22,Innocence,,-,2.9
-2x23,The Thaw,👺V🟡,✔+ Highly Recommended,6.8
+2x23,The Thaw,👺V🟡🎖,✔+ Highly Recommended,6.8
 2x24,Tuvix,,✔ Recommended,4.6
 2x25,Resolutions,,-,4.8
 2x26,"Basics, Part I",,🕶 ‼ Must Watch/Bare Minimum,6.2
@@ -846,7 +847,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 5x09,Thirty Days,,-,5.9
 5x10,Counterpoint,V🟡,✔ Recommended,7.6
 5x11,Latent Image,,✔ Recommended,7.4
-5x12,Bride of Chaotica!,🟨🎭,✔ Recommended,7.5
+5x12,Bride of Chaotica!,🟨🎭🎖,✔ Recommended,7.5
 5x13,Gravity,♥️,-,6.5
 5x14,Bliss,,-,5.9
 5x15/16 [FL],Dark Frontier,🤖V🟡,🕶 ‼ Must Watch/Bare Minimum,9.1

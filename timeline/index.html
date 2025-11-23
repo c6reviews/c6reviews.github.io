@@ -15,10 +15,15 @@
 
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 	<meta name="darkreader-lock" content="47">
-	<link rel="stylesheet" href="../main.css?v=1.4.3">
-	<link rel="stylesheet" href="timeline.css?v=1.4.3">
+	<link rel="stylesheet" href="../main.css?v=1.4.4">
+	<link rel="stylesheet" href="timeline.css?v=1.4.4">
 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	
+	<meta property="og:title" content="Full Star Trek Timeline | C6Reviews">
+	<meta property="og:type" content="website">
 	<meta property="og:image" content="https://c6reviews.com/images/ogimage.png">
+	<meta property="og:url" content="https://c6reviews.com/timeline/">
+	<meta property="og:description" content="A comprehensive timeline for the entire Star Trek universe. This page is best viewed on a full-size computer screen.">
 
 	<script src="timeline.js"></script>
 	<title>C6 | Star Trek Timeline</title>
@@ -317,7 +322,7 @@
 <!-- =============================================================== SEARCH BAR =============================================================== -->
 
 <div class="searchBarContainer">
-	<form autocomplete="off" style="display:inline-block"><div class="autocomplete"><input id="tableSearch" type="text" placeholder="Timeline Search" size="30"/></div><input type="button" value="✖&#xFE0E;" style="width:24px;height:24px;padding-left:3px;padding-top:0px;margin-left:3px;" onClick="document.getElementById('tableSearch').value=''"/>&nbsp;&nbsp;<input type="button" id="searchDownButton" value="▼" onClick="search('down')" style="width:24px;height:24px;font-size:12px"/> <input type="button" value="▲" onClick="search('up')" style="width:24px;height:24px;font-size:12px"/><div id="resultCount">&nbsp;</div><br><span style="font-size:x-small;font-style:italic">Spoiler content cannot be searched unless &ldquo;Show all spoilers&rdquo; is selected from the menu.</span></form>
+	<form autocomplete="off" style="display:inline-block"><div class="autocomplete"><input id="tableSearch" type="text" placeholder="Timeline Search" size="30"/></div><input type="button" value="✖&#xFE0E;" style="width:24px;height:24px;padding-left:3px;padding-top:0px;margin-left:3px;" onClick="document.getElementById('tableSearch').value='';document.getElementById('resultCount').innerHTML='';"/>&nbsp;&nbsp;<input type="button" id="searchDownButton" value="▼" onClick="search('down')" style="width:24px;height:24px;font-size:12px"/> <input type="button" value="▲" onClick="search('up')" style="width:24px;height:24px;font-size:12px"/><div id="resultCount">&nbsp;</div><br><span style="font-size:x-small;font-style:italic">Spoiler content cannot be searched unless &ldquo;Show all spoilers&rdquo; is selected from the menu.</span></form>
 </div>
 
 <!-- ========================================================================================================================================= -->
@@ -3422,8 +3427,7 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2047</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td colspan="2">The Hermosa Quake destroys much of downtown Los Angeles</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -3593,7 +3597,7 @@
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2063</td>
 		<td class="majorEventBox joinLeft">April 5: First Contact</td>
 		<td id="warp1" class="majorEventBox joinMiddle">Zefram Cochrane breaks Warp 1</td>
-		<td class="majorTimeTravel secondGen joinMiddle">❰❰ Star Trek: First Contact</td>
+		<td class="filmBox majorTimeTravel secondGen joinMiddle">❰❰ Star Trek: First Contact</td>
 		<td class="minorTimeTravel secondGen joinRight">❰ ENT: Regeneration</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5627,7 +5631,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td id="2250s1">&nbsp;</td>
-		<td colspan="2" class="episodeBox thirdGen">≈ SHO: "The Escape Artist" <span style="font-family:Roboto,sans-serif;font-size:12px;">(1.04)</span> <span style="font-family:roboto, sans-serif; font-size:x-small">(year unknown)</span></td>
+		<td colspan="2" class="episodeBox thirdGen">≈ SHO: "The Escape Artist" <span style="font-family:Roboto,sans-serif;font-size:12px;">(1x04)</span> <span style="font-family:roboto, sans-serif; font-size:x-small">(year unknown)</span></td>
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2251</td>
@@ -5702,7 +5706,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td id="ST09" class="filmBox kelvin joinLeft"><a href="../films/startrek2009.html">STAR TREK [2009] <span class="x-small" style="font-weight:normal;font-family:serif">(#11)</span></a></td>
-		<td id="kelvin3b" class="kelvin joinRight">Spock arrives from 2387</td>
+		<td id="kelvin3b" class="kelvin joinRight">Spock (Prime) arrives from 2387</td>
 		<td>&nbsp;</td>
 		<td id="kelvin3a">&nbsp;</td>
 	</tr>
@@ -5751,7 +5755,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td class="kelvin spoiler kelvinSpoiler characterDeath">Spock dies (<span style="font-family: serif">II</span>) (Age 161)</td>
+		<td class="kelvin spoiler kelvinSpoiler characterDeath">Spock (Prime) dies (<span style="font-family: serif">II</span>) (Age 161)</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 	</tr>
@@ -6733,9 +6737,9 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2361</td>
+		<td>&nbsp;</td>
 		<td class="joinLeft spoiler TNGSpoiler">Riker Duplicated</td>
 		<td class="minorTimeTravel secondGen joinRight">❰ TNG: Second Chances</td>
-		<td>&nbsp;</td>
 		<td>•</td>
 		<td>|</td>
 		<td>&nbsp;</td>
@@ -6744,12 +6748,12 @@
 	<tr class="contentRow">
 		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2362</td>
 		<td style="color:#606060">↓</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td class="joinLeft">La Forge investigates Tarchannen III disappearances</td>
+		<td class="minorTimeTravel secondGen joinRight">❰ TNG: Identity Crisis</td>
 		<td>•</td>
 		<td>|</td>
-		<td class="joinLeft">USS ENTERPRISE NCC-1701-D Launched</td>
-		<td class="joinRight">Source: <em>Star Trek: Picard Logs</em></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2363</td>
@@ -6758,8 +6762,7 @@
 		<td>&nbsp;</td>
 		<td>•</td>
 		<td>|</td>
-		<td class="joinLeft">USS ENTERPRISE NCC-1701-D Launched</td>
-		<td class="joinRight">Source: 2nd dedication plaque</td>
+		<td class="moreInfo" colspan="2" onClick="openToolTip(event,'DLaunchTT')">USS ENTERPRISE NCC-1701-D Launched</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2364</td>
@@ -6768,8 +6771,8 @@
 		<td class="spoiler TNGSpoiler characterDeath">Tasha Yar dies (<span style="font-family:serif">I</span>) (Age 27)</td>
 		<td>USS STARGAZER NCC-2893 <br>Recovered &amp; Decommissioned</td>
 		<td>|</td>
-		<td class="joinLeft">USS ENTERPRISE NCC-1701-D Launched</td>
-		<td class="joinRight">Source: 1st dedication plaque</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2365</td>
@@ -9057,6 +9060,8 @@
 	<div id="EugenicsWarsTT" class="tooltip" onClick="closeToolTip(this)">Originally fought at this time, the wars were shifted into the 21st century after efforts by various temporal factions attempted to stop the rise of Khan and the events that followed.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
 	
 	<div id="BorgVideoGameTT" class="tooltip" onClick="closeToolTip(this)">I know it's not canon, and this timeline would be a lot busier if I included every Star Trek video game, but I'm only including this one because it is actually more of an interactive movie that included 2 hours of original footage and starred John de Lancie as Q.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
+	
+	<div id="DLaunchTT" class="tooltip" onClick="closeToolTip(this)">Give or take a year. The launch and/or commissioning date of the Enterprise-D is not entirely certain due to contradictions from official sources. 2363 is the year indicated by the stardate on the second dedication plaque on the ship's bridge, which was used for seasons 5-7. It's also the year calculated by using Data's statement about 1550 days having passed since the ships commissioning, in the episode <a href="../tng/tng-s4.html#e11">TNG 4x11: Data's Day</a>. However, the first dedication plaque that appears in seasons 1-4 lists a commissioning stardate in 2364. Furthermore, a <a href="https://www.instagram.com/p/Coh6YkJNuJk/" target="_blank">video</a> on the official &ldquo;startreklogs&rdquo; Instagram account gives the launch year as 2362.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
 </div>
 
 <div id="bottomBorder"></div>

@@ -166,9 +166,11 @@ function scrollPages(dir = "next") {
 		}
 	  }
 	  
-	  clearInterval(marqueeInterval);
-	  marqueeInterval = null;
-	  marqueeInterval = setInterval(scrollPages, speed);
+	  if(marqueeInterval){
+		  clearInterval(marqueeInterval);
+		  marqueeInterval = null;
+		  marqueeInterval = setInterval(scrollPages, speed);
+	  }
 	  
 	  const offset = -pageIndex * 100;
 	  track.style.transform = `translateX(${offset}%)`;

@@ -76,6 +76,7 @@ function createTable(array) {
 					cellClass = "col_episodeRecommendation";
 					// Stylize certain entries
 					cell = cell.replace("✔",'✔&#xFE0E;');
+					cell = cell.replace("♦",'♦&#xFE0E;');
 					cell = cell.replace("🕶 ‼ Must Watch/Bare Minimum",'<span class="mustWatch">🕶&#xFE0E;</span> <span class="bareMinimum">‼&#xFE0E;</span> Must Watch/Bare Minimum');
 					cell = cell.replace("🕶 Must Watch",'<span class="mustWatch">🕶&#xFE0E;</span> Must Watch');
 					cell = cell.replace("✖ Notably Bad",'<span class="notablyBad">✖&#xFE0E;</span> Notably Bad');
@@ -753,7 +754,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 1x10,"A Moral Star, Part 2",,🕶 ‼ Must Watch/Bare Minimum,7.3
 1x11,Asylum,,🕶 Must Watch,4.1
 1x12,Let Sleeping Borg Lie,🤖,-,3.9
-1x13,All the World's a Stage,♥️,✔ Recommended,7.2
+1x13,All the World's a Stage,♥️🎖,✔ Recommended,7.2
 1x14,Crossroads,,✔ Recommended,5.5
 1x15,Masquerade,,-,5.0
 1x16,Preludes,,🕶 Must Watch,5.1
@@ -772,13 +773,13 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 2x09,"The Devourer of All Things, Part I",♥️🥈,🕶 ‼ Must Watch/Bare Minimum,7.9
 2x10,"The Devourer of All Things, Part II",,🕶 ‼ Must Watch/Bare Minimum,6.9
 2x11,"Last Flight of the Protostar, Part I",,✔ Recommended,7.4
-2x12,"Last Flight of the Protostar, Part II",️,✔ Recommended,7.4
+2x12,"Last Flight of the Protostar, Part II",,✔ Recommended,7.4
 2x13,A Tribble Called Quest,,-,4.5
 2x14,Cracked Mirror,♊👬,✔ Recommended,7.1
 2x15,"Ascension, Part I",,🕶 Must Watch,6.1
 2x16,"Ascension, Part II",,♦ Optional,7.3
-2x17,Brink,️,✔ Recommended,5.9
-2x18,Touch of Grey,️,🕶 Must Watch,6.1
+2x17,Brink,,✔ Recommended,5.9
+2x18,Touch of Grey,,🕶 Must Watch,6.1
 2x19,"Ouroboros, Part I",,🕶 ‼ Must Watch/Bare Minimum,7.7
 2x20,"Ouroboros, Part II",🥇,🕶 ‼ Must Watch/Bare Minimum,9.0`;
 
