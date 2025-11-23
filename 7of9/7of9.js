@@ -87,9 +87,11 @@ function createTable(array) {
 				case 5:
 					cellClass = "col_episodeRecommendation";
 					// Stylize certain entries
-					cell = cell.replace("🕶 ‼ Must Watch/Bare Minimum",'<span class="mustWatch">🕶</span> <span class="bareMinimum">‼</span> Must Watch/Bare Minimum');
-					cell = cell.replace("🕶 Must Watch",'<span class="mustWatch">🕶</span> Must Watch');
-					cell = cell.replace("✖ Notably Bad",'<span class="notablyBad">✖</span> Notably Bad');
+					cell = cell.replace("✔",'✔&#xFE0E;');
+					cell = cell.replace("♦",'♦&#xFE0E;');
+					cell = cell.replace("🕶 ‼ Must Watch/Bare Minimum",'<span class="mustWatch">🕶&#xFE0E;</span> <span class="bareMinimum">‼&#xFE0E;</span> Must Watch/Bare Minimum');
+					cell = cell.replace("🕶 Must Watch",'<span class="mustWatch">🕶&#xFE0E;</span> Must Watch');
+					cell = cell.replace("✖ Notably Bad",'<span class="notablyBad">✖&#xFE0E;</span> Notably Bad');
 					break;
 				case 6:
 					cellClass = "col_episodeRating";
@@ -691,31 +693,31 @@ var csvString = `ReleaseAndTimelineOrder,Series,Episode,Title,Notes,Recommendati
 098,VOY,7x23,Homestead,-,-,6
 099,VOY,7x24,Renaissance Man,-,-,6.6
 100,VOY,7x25/26 [FL],Endgame,⭐Seven pursues a relationship with Chakotay while aiding Janeway with a daring plan to cripple the Borg,✔ Recommended,7.4
-101,PIC,1x04,Absolute Candor,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven just shows up at the end and collapses,-,3.0
-102,PIC,1x05,Stardust City Rag,⭐Seven avenges her adopted son's death in an all-out assault on Bjayzl,🕶 Must Watch,5.5
-103,PIC,1x08,Broken Pieces,Seven takes control of a Borg cube and its inhabitants in order to expel the Romulans,✔ Recommended,6.1
-104,PIC,1x09,"Et in Arcadia Ego, Part I",<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven survives the cube crash and stays behind to clean things up,-,4.5
-105,PIC,1x10,"Et in Arcadia Ego, Part II",<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven fights Narissa and mourns the death of a colleague,-,5.7
-106,PIC,2x01,The Star Gazer,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven joins Rios and Picard on the Stargazer after an anomaly appears,-,7.0
-107,PIC,2x02,Penance,Seven awakes as Annika &ndash; President of a totalitarian xenophobic human empire,✔ Recommended,5.7
-108,PIC,2x03,Assimilation,"Seven accompanies Raffi to find the Watcher, and enjoys what it feels like to be human",-,5.7
-109,PIC,2x04,Watcher,Seven drives a stolen police car in a high-stakes chase,-,5.3
-110,PIC,2x05,Fly Me to the Moon,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven helps to free Rios from ICE custody,-,3.9
-111,PIC,2x06,Two of One,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven attends the gala but only has three lines,-,5.4
-112,PIC,2x07,Monsters,"<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> In a minor story line, Seven and Raffi start to track down Jurati",-,5.4
-113,PIC,2x08,Mercy,Seven gets a bit upset with Raffi while they search for Queen Jurati,-,3.5
-114,PIC,2x09,Hide and Seek,"Seven fights the Borg army and the Queen, then has her own Borg implants replaced after being mortally wounded",-,5.3
-115,PIC,2x10,Farewell,Seven makes some peace with her past and is given a field commission by Picard,-,7.3
-116,PIC,3x01,The Next Generation,Seven helps Picard get to the Ryton system against orders,✔ Recommended,6.1
-117,PIC,3x02,Disengage,Seven convinces Shaw to rescue Picard and Riker and is then relieved of duty for insubordination,-,5.5
-118,PIC,3x03,Seventeen Seconds,Seven broods while confined to quarters until she escapes to help track down a verterium leak,-,6.7
-119,PIC,3x04,No Win Scenario,Seven launches an investigation to find the Changeling saboteur,-,8.5
-120,PIC,3x05,Imposters,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven doesn't really do much in this episode,-,8.8
-121,PIC,3x06,The Bounty,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven reminisces about Voyager but otherwise doesn't do much here,-,7.2
-122,PIC,3x07,Dominion,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven reaches out to an old friend,-,7.7
-123,PIC,3x08,Surrender,Seven mostly gets angry about being a prisoner on her own ship and then finally delivers the line &ldquo;Get off my bridge!&rdquo;,-,8.6
-124,PIC,3x09,Võx,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven helps the gang escape,-,7.3
-125,PIC,3x10,The Last Generation,Seven takes command of the Titan and inspires a skeleton crew to do their best work,✔ Recommended,7.1`;
+101,PIC,1x04,Absolute Candor<sup> ‡</sup>,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven just shows up at the end and collapses,-,3.0
+102,PIC,1x05,Stardust City Rag<sup> ‡</sup>,⭐Seven avenges her adopted son's death in an all-out assault on Bjayzl,🕶 Must Watch,5.5
+103,PIC,1x08,Broken Pieces<sup> ‡</sup>,Seven takes control of a Borg cube and its inhabitants in order to expel the Romulans,✔ Recommended,6.1
+104,PIC,1x09,"Et in Arcadia Ego, Part I<sup> ‡</sup>",<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven survives the cube crash and stays behind to clean things up,-,4.5
+105,PIC,1x10,"Et in Arcadia Ego, Part II<sup> ‡</sup>",<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven fights Narissa and mourns the death of a colleague,-,5.7
+106,PIC,2x01,The Star Gazer<sup> ‡</sup>,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven joins Rios and Picard on the Stargazer after an anomaly appears,-,7.0
+107,PIC,2x02,Penance<sup> ‡</sup>,Seven awakes as Annika &ndash; President of a totalitarian xenophobic human empire,✔ Recommended,5.7
+108,PIC,2x03,Assimilation<sup> ‡</sup>,"Seven accompanies Raffi to find the Watcher, and enjoys what it feels like to be human",-,5.7
+109,PIC,2x04,Watcher<sup> ‡</sup>,Seven drives a stolen police car in a high-stakes chase,-,5.3
+110,PIC,2x05,Fly Me to the Moon<sup> ‡</sup>,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven helps to free Rios from ICE custody,-,3.9
+111,PIC,2x06,Two of One<sup> ‡</sup>,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven attends the gala but only has three lines,-,5.4
+112,PIC,2x07,Monsters<sup> ‡</sup>,"<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> In a minor story line, Seven and Raffi start to track down Jurati",-,5.4
+113,PIC,2x08,Mercy<sup> ‡</sup>,Seven gets a bit upset with Raffi while they search for Queen Jurati,-,3.5
+114,PIC,2x09,Hide and Seek<sup> ‡</sup>,"Seven fights the Borg army and the Queen, then has her own Borg implants replaced after being mortally wounded",-,5.3
+115,PIC,2x10,Farewell<sup> ‡</sup>,Seven makes some peace with her past and is given a field commission by Picard,-,7.3
+116,PIC,3x01,The Next Generation<sup> ‡</sup>,Seven helps Picard get to the Ryton system against orders,✔ Recommended,6.1
+117,PIC,3x02,Disengage<sup> ‡</sup>,Seven convinces Shaw to rescue Picard and Riker and is then relieved of duty for insubordination,-,5.5
+118,PIC,3x03,Seventeen Seconds<sup> ‡</sup>,Seven broods while confined to quarters until she escapes to help track down a verterium leak,-,6.7
+119,PIC,3x04,No Win Scenario<sup> ‡</sup>,Seven launches an investigation to find the Changeling saboteur,-,8.5
+120,PIC,3x05,Imposters<sup> ‡</sup>,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven doesn't really do much in this episode,-,8.8
+121,PIC,3x06,The Bounty<sup> ‡</sup>,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven reminisces about Voyager but otherwise doesn't do much here,-,7.2
+122,PIC,3x07,Dominion<sup> ‡</sup>,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven reaches out to an old friend,-,7.7
+123,PIC,3x08,Surrender<sup> ‡</sup>,Seven mostly gets angry about being a prisoner on her own ship and then finally delivers the line &ldquo;Get off my bridge!&rdquo;,-,8.6
+124,PIC,3x09,Võx<sup> ‡</sup>,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven helps the gang escape,-,7.3
+125,PIC,3x10,The Last Generation<sup> ‡</sup>,Seven takes command of the Titan and inspires a skeleton crew to do their best work,✔ Recommended,7.1`;
 
 	var array = csvToNestedArray(csvString);
 	

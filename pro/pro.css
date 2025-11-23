@@ -173,14 +173,18 @@ html {
 .personalFavorite {
 	font-size: x-large;
 	color: #FF86AD;
-	height: 24px
+	height: 24px;
+	white-space: nowrap;
 }
+
+/* .award appears on index pages, .showAward appears on actual episode guides */
 .award{
 	color: lightgray;
 }
 .showAward{
 	color: lightgray;
 	cursor: help;
+	white-space: nowrap;
 }
 .redFlag{
 	color:red;

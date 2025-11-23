@@ -49,14 +49,14 @@ function textToSpeech(id,text) {
 		
 		// ********************************* GLOBAL TEXT REPLACEMENT RULES *********************************
 			
-			// Species
-			text = text.replaceAll("Romulan","Rahmulin").replaceAll("Ferengi","Fer-ren-gii").replaceAll("Cardassian","Card-ass-ian");
+			// Species and Homeworlds
+			text = text.replaceAll("Romulan","Rahmulin").replaceAll("Ferengi","Fer-ren-gii").replaceAll("Cardassian","Card-ass-ian").replaceAll("Qo'noS","Kro-nohs");
 			
 			// Characters
 			text = text.replaceAll("La Forge","LaForge").replaceAll("Guinan","Guynan").replaceAll("Data's","Dayta's");
 		
 			// Misc
-			text = text.replaceAll(/\bPart I\b/g,"Part 1").replaceAll(/\bParts I\b/g,"Parts 1").replaceAll(/tricorder/gi,"try-corder");
+			text = text.replaceAll(/tricorder/gi,"try-corder").replaceAll(/voyage/gi,"voyij").replaceAll(/\bPart I\b/g,"Part 1").replaceAll(/\bParts I\b/g,"Parts 1").replaceAll(/mythos/gi,"myth-ohhs");
 			
 		// *************************************************************************************************
 		

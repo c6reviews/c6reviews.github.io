@@ -74,6 +74,7 @@ function createTable(array) {
 					cellClass = "col_episodeRecommendation";
 					// Stylize certain entries
 					cell = cell.replace("✔",'✔&#xFE0E;');
+					cell = cell.replace("♦",'♦&#xFE0E;');
 					cell = cell.replace("🕶 ‼ Must Watch/Bare Minimum",'<span class="mustWatch">🕶&#xFE0E;</span> <span class="bareMinimum">‼&#xFE0E;</span> Must Watch/Bare Minimum');
 					cell = cell.replace("🕶 Must Watch",'<span class="mustWatch">🕶&#xFE0E;</span> Must Watch');
 					cell = cell.replace("✖ Notably Bad",'<span class="notablyBad">✖&#xFE0E;</span> Notably Bad');
@@ -741,7 +742,7 @@ window.onload = function() {
 
 var csvString = `Episode,Title,Tags,Recommendation,Rating
 1x01/02 [FL],Emissary,,🕶 ‼ Must Watch/Bare Minimum,7.2
-1x03,Past Prologue,,🕶 Must Watch,4.9
+1x03,Past Prologue,,✔ Recommended,4.9
 1x04,A Man Alone,,✔ Recommended,4.4
 1x05,Babel,,-,2.0
 1x06,Captive Pursuit,,-,4.6
@@ -757,7 +758,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 1x16,If Wishes Were Horses,,-,2.9
 1x17,The Forsaken,,✔ Recommended,4.5
 1x18,Dramatis Personae,,-,4.9
-1x19,Duet,♥️,🕶 Must Watch,9.4
+1x19,Duet,♥️,✔+ Highly Recommended,9.4
 1x20,In the Hands of the Prophets,,🕶 ‼ Must Watch/Bare Minimum,5.4
 2x01,The Homecoming,,✔ Recommended,5.4
 2x02,The Circle,,✔ Recommended,5.4
@@ -778,10 +779,10 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 2x17,Playing God,,-,2.9
 2x18,Profit and Loss,,-,5.8
 2x19,Blood Oath,,♦ Optional,6.7
-2x20 & 21,The Maquis (Parts I and II),,🕶 Must Watch,7.1
+2x20 & 21,The Maquis (Parts I and II),,✔ Recommended,7.1
 2x22,The Wire,,✔+ Highly Recommended,6.2
 2x23,Crossover,♊,✔ Recommended,6.7
-2x24,The Collaborator,,🕶 Must Watch,3.8
+2x24,The Collaborator,,✔ Recommended,3.8
 2x25,Tribunal,,-,5.7
 2x26,The Jem'Hadar,,🕶 Must Watch,7.2
 3x01 & 02,The Search (Parts I and II),V🟡,🕶 ‼ Must Watch/Bare Minimum,7.8
@@ -791,7 +792,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 3x06,The Abandoned,,-,3.9
 3x07,Civil Defense,♥️,✔ Recommended,7.2
 3x08,Meridian,,-,1.9
-3x09,Defiant,,🕶 Must Watch,7.2
+3x09,Defiant,,✔ Recommended,7.2
 3x10,Fascination,🎭♥️,-,3.3
 3x11 & 12,Past Tense (Parts I and II),🕖🌎,✔+ Highly Recommended,6.4
 3x13,Life Support,,♦ Optional,3.2
@@ -809,9 +810,9 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 3x25,Facets,,✔ Recommended,4.4
 3x26,The Adversary,,🕶 Must Watch,7.5
 4x01/02 [FL],The Way of the Warrior,🌌V🟡🥈,🕶 ‼ Must Watch/Bare Minimum,9.6
-4x03,The Visitor,,✔+ Highly Recommended,8.6
+4x03,The Visitor,🎖,✔+ Highly Recommended,8.6
 4x04,Hippocratic Oath,,-,5.3
-4x05,Indiscretion,,🕶 Must Watch,6.7
+4x05,Indiscretion,,✔ Recommended,6.7
 4x06,Rejoined,,-,5.1
 4x07,Starship Down,,-,6.9
 4x08,Little Green Men,🕖🌎,♦ Optional,6.0
@@ -869,14 +870,14 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 6x08,Resurrection,♊,♦ Optional,3.6
 6x09,Statistical Probabilities,,✔ Recommended,5.9
 6x10,The Magnificent Ferengi,,-,6.2
-6x11,Waltz,V🟡,🕶 Must Watch,6.1
+6x11,Waltz,V🟡,✔+ Highly Recommended,6.1
 6x12,Who Mourns for Morn?,,-,5.4
-6x13,Far Beyond the Stars,🌌🏅,🕶 Must Watch,9.0
+6x13,Far Beyond the Stars,🌌🏅,✔+ Highly Recommended,9.0
 6x14,One Little Ship,,-,4.8
 6x15,Honor Among Thieves,,-,4.1
 6x16,Change of Heart,,-,3.5
 6x17,Wrongs Darker Than Death or Night,🕖,-,5.0
-6x18,Inquisition,31♥️,🕶 Must Watch,7.3
+6x18,Inquisition,31♥️,✔ Recommended,7.3
 6x19,In the Pale Moonlight,🌌A🟡🥇,🕶 ‼ Must Watch/Bare Minimum,9.6
 6x20,His Way,,♦ Optional,4.4
 6x21,The Reckoning,,-,4.3
@@ -892,7 +893,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 7x05,Chrysalis,,-,3.7
 7x06,"Treachery, Faith and the Great River",,-,6.4
 7x07,Once More Unto the Breach,,♦ Optional,5.9
-7x08,The Siege of AR-558,V🟡,🕶 Must Watch,7.5
+7x08,The Siege of AR-558,V🟡🎖,✔+ Highly Recommended,7.5
 7x09,Covenant,,✔ Recommended,4.6
 7x10,It's Only a Paper Moon,,✔+ Highly Recommended,7.4
 7x11,Prodigal Daughter,P⚑,-,2.8

@@ -19,7 +19,7 @@ const reviews = [
 	'pic/pic-s2.html#e01','pic/pic-s2.html#e02','pic/pic-s2.html#e03','pic/pic-s2.html#e04','pic/pic-s2.html#e05','pic/pic-s2.html#e06','pic/pic-s2.html#e07','pic/pic-s2.html#e08','pic/pic-s2.html#e09','pic/pic-s2.html#e10',
 	'pic/pic-s3.html#e01','pic/pic-s3.html#e02','pic/pic-s3.html#e03','pic/pic-s3.html#e04','pic/pic-s3.html#e05','pic/pic-s3.html#e06','pic/pic-s3.html#e07','pic/pic-s3.html#e08','pic/pic-s3.html#e09','pic/pic-s3.html#e10'
 ];
-//const reviews = ['pro/pro-s2.html#e02'];
+//const reviews = ['pic/pic-s3.html#e07'];
 
 // Select random Review
 var randomReview = reviews[Math.floor(Math.random() * reviews.length)];
@@ -50,6 +50,7 @@ async function getReviewElement(url, elementId) {
 		
 		const reviewURL = url + "#" + elementId;
 		const imageURL = subFolder + "/" + element.querySelector('.episodeCardBG').getAttribute('src');
+		const imageALT = element.querySelector('.episodeCardBG').getAttribute('alt');
 		var epNumber = element.querySelector('.seasonEpisodeNumberBox').innerText;
 		if (epNumber.includes('Feature-Length')) {epNumber = epNumber.substring(0,7)}
 		
@@ -59,20 +60,25 @@ async function getReviewElement(url, elementId) {
 		const myScore = element.querySelector('[class^="stars"]').outerHTML;
 		const score = element.querySelector('.xx-large').innerText;
 		
-        return [reviewURL, imageURL, series, epNumber, title, myScore, score];
+        return [reviewURL, imageURL, imageALT, series, epNumber, title, myScore, score];
     } catch (error) {
         console.error('Error fetching or parsing page:', url, elementId, error);
         return null;
     }
 }
 
-getReviewElement('https://c6reviews.com/' + selectedPage , selectedReview).then(([reviewURL, imageURL, series, epNumber, title, myScore, score]) => {
+getReviewElement('https://c6reviews.com/' + selectedPage , selectedReview).then(([reviewURL, imageURL, imageALT, series, epNumber, title, myScore, score]) => {
 
-	document.getElementById('randomReviewImage').innerHTML = "<a href='" + reviewURL + "'><img src='" + imageURL + "'></a>";
+	document.getElementById('randomReviewImage').innerHTML = "<a href='" + reviewURL + "'><img src='" + imageURL + "' alt='" + imageALT + "'></a>";
 	document.getElementById('randomReviewEpisodeID').innerHTML = series + " " + epNumber;
 	document.getElementById('randomReviewTitle').innerHTML = "<a style='white-space:wrap;' href='" + reviewURL + "'>" + title.replace(/ \(parts i and ii\)/gi,'') + "</a>";
 	
 	document.getElementById('randomReviewMyScore').innerHTML = "MY SCORE: " + myScore.replaceAll('<td','<div').replaceAll('/td','/div').replaceAll('<span class="showAward">','<br><span class="showAward" style="font-size:medium">').replaceAll('<span class="award">','<br><span class="award" style="font-size:medium">').replaceAll('<span class="personalFavorite">','<br><span class="personalFavorite" style="color:#FF86AD">').replaceAll('<span class="penaltyFlag">','<br><span class="penaltyFlag">').replaceAll('<span class="redFlag">','<br><span class="redFlag">').replaceAll('<span class="large">','<span class="small">');
+	
+	if (randomReview == "pic/pic-s3.html#e07") {
+		document.getElementById('randomReviewMyScore').innerHTML += '<br><span class="personalFavorite" style="color:#FF86AD">♥&#xFE0E; <span class="large">Personal Favorite</span></span>';
+	}
+	
 	var scoreColor = "#D0D0D0";
 	
 	switch (Array.from(score)[0]) {

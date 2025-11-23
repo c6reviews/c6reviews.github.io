@@ -651,11 +651,11 @@ function compileSuggestions(){
 	if (ALLSpoilerToggle.checked)
 	{		
 		rows.forEach(row => {
-				cells.push(Array.from(row.querySelectorAll('tr:scope > td')).filter(item => !item.innerHTML.includes("<table")));
+				cells.push(Array.from(row.querySelectorAll('tr:scope > td')).filter(item => !item.innerHTML.includes("<table") && !item.innerHTML.includes("E<br>R<br>A")));
 		});
 	} else {
 			rows.forEach(row => {
-				cells.push(Array.from(row.querySelectorAll('tr:scope > td:not(.spoiler)')).filter(item => !item.innerHTML.includes("<table")));
+				cells.push(Array.from(row.querySelectorAll('tr:scope > td:not(.spoiler)')).filter(item => !item.innerHTML.includes("<table") && !item.innerHTML.includes("E<br>R<br>A")));
 		});
 	}
 		
@@ -849,9 +849,9 @@ function search(dir) {
 	const ALLSpoilerToggle = document.getElementById("ALLSpoilerToggle");
 	if (ALLSpoilerToggle.checked)
 	{		
-		cells = Array.from(document.querySelectorAll('.contentRow > td')).filter(element => element.textContent.toLowerCase().replace(/(\r\n|\n|\r)/gm, " ").replace(/\u00a0/g, ' ').includes(searchTerm) && !element.innerHTML.includes("<table"));
+		cells = Array.from(document.querySelectorAll('.contentRow > td')).filter(element => element.textContent.toLowerCase().replace(/(\r\n|\n|\r)/gm, " ").replace(/\u00a0/g, ' ').includes(searchTerm) && !element.innerHTML.includes("<table") && !element.innerHTML.includes("E<br>R<br>A"));
 	} else {
-		cells = Array.from(document.querySelectorAll('.contentRow > td:not(.spoiler)')).filter(element => element.textContent.toLowerCase().replace(/(\r\n|\n|\r)/gm, " ").replace(/\u00a0/g, ' ').includes(searchTerm) && !element.innerHTML.includes("<table"));
+		cells = Array.from(document.querySelectorAll('.contentRow > td:not(.spoiler)')).filter(element => element.textContent.toLowerCase().replace(/(\r\n|\n|\r)/gm, " ").replace(/\u00a0/g, ' ').includes(searchTerm) && !element.innerHTML.includes("<table") && !element.innerHTML.includes("E<br>R<br>A"));
 	}
 	if (cells.length == 0)
 	{

@@ -165,33 +165,27 @@ function sort(by) {
 		ele.style.transform = '';
 	});
 	
+	// Film list order: I, II, III, IV, V, VI, LINEBREAK, Gen, FC, Ins, Nem, LINEBREAK, ST, ID, B, LINEBREAK, S31
+	
 	if (G_sortdir == "asc") {
 		if (by == "alpha") {
 			newOrder = [7,14,9,13,2,12,15,4,3,5,8,16,11,6,1,17,10,9998,9999];
 		} else if (by == "release") {
 			newOrder = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,9998,9999];
-			setTimeout( function() {
-				document.getElementById("TOSfilms").style.top = "90px";
-				document.getElementById("TNGfilms").style.top = "470px";
-				document.getElementById("Kelvinfilms").style.top = "850px";
-				document.getElementById("Standalonefilms").style.top = "1230px";
-			},500);
 		} else if (by == "score") {
-			newOrder = ['x','x','x','x','x','x',0,'x','x','x',-2,16,-1,'x','x',17,-3,9998,9999]
+			newOrder = ['x','x','x','x','x','x',0,'x','x','x',-3,16,-1,-2,'x',17,-4,9998,9999]
+		} else if (by == "chron") {
+			newOrder = [4,5,6,7,8,9,15,11,12,13,14,16,1,2,3,17,10];
 		}
 	} else if (G_sortdir == "desc") {
 		if (by == "alpha") {
 			newOrder = [8,1,6,2,13,3,15,11,12,10,7,16,4,9,14,17,5,9998,9999];
 		} else if (by == "release") {
 			newOrder = [17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,9998,9999];
-			setTimeout( function() {
-				document.getElementById("TOSfilms").style.top = "1230px";
-				document.getElementById("TNGfilms").style.top = "850px";
-				document.getElementById("Kelvinfilms").style.top = "470px";
-				document.getElementById("Standalonefilms").style.top = "90px";
-			},500);
 		} else if (by == "score") {
-			newOrder = ['x','x','x','x','x','x',0,'x','x','x',-2,16,-3,'x','x',17,-1,9998,9999]
+			newOrder = ['x','x','x','x','x','x',0,'x','x','x',-2,16,-4,-3,'x',17,-1,9998,9999]
+		} else if (by == "chron") {
+			newOrder = [11,10,9,8,7,6,15,4,3,2,1,16,14,13,12,17,5];
 		}
 	}
 	
