@@ -233,6 +233,12 @@ body li {
 	border-bottom: 1px solid;
 	border-color: #404040;
 }
+.pageTitleRightImage {
+	position: absolute;
+	right: 0;
+	height: 235px;
+	z-index: -3;
+}
 .pageTitleContainer {
 	margin: auto;
 	position: relative;
@@ -844,9 +850,9 @@ body li {
 .timelineTable .seriesBox:not(.noIcon)::before{
 	content: "📺";
 	position: absolute;
-	left: -10px;
-	top: -6px;
-	font-size: x-large;
+	left: -6px;
+	top: -10px;
+	font-size: 28px;
 	transform: rotate(-20deg);
 }
 .timelineTable .episodeBox {
@@ -860,9 +866,9 @@ body li {
 .timelineTable .episodeBox::before{
 	content: "📺";
 	position: absolute;
-	left: -10px;
+	left: -6px;
 	top: -6px;
-	font-size: x-large;
+	font-size: 28px;
 	transform: rotate(-20deg);
 }
 .timelineTable .filmBox {
@@ -878,8 +884,8 @@ body li {
 	content: "📽️";
 	position: absolute;
 	left: -10px;
-	top: -6px;
-	font-size: 28px;
+	top: -10px;
+	font-size: 32px;
 	transform: rotate(-20deg);
 }
 .timelineTable .activeBox {
