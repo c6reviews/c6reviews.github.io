@@ -6,19 +6,22 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	var host = window.location.hostname;
+	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  gtag('config', 'G-DM44X85QLJ');
+		gtag('config', 'G-DM44X85QLJ');
+	}
 </script>
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.4.4">
-<link rel="stylesheet" href="../tts.css?v=1.4.4">
-<link rel="stylesheet" href="pic.css?v=1.4.4">
-<link rel="stylesheet" href="pic-episode-guides.css?v=1.4.4">
+<link rel="stylesheet" href="../main.css?v=1.4.5">
+<link rel="stylesheet" href="../tts.css?v=1.4.5">
+<link rel="stylesheet" href="pic.css?v=1.4.5">
+<link rel="stylesheet" href="pic-episode-guides.css?v=1.4.5">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 
 <meta property="og:title" content="PIC Season 3 | C6Reviews">
@@ -39,7 +42,7 @@
 	function prepTextToSpeech(id)
 	{
 		let text = document.getElementById(id).innerText;
-		return text.replaceAll("Locutus","locude-us").replaceAll("Sirena","Sih-REN-uh").replaceAll(/ups/gi,"uhps").replaceAll("Cor Coroli V [sic]","Core Coroli 5").replaceAll("Cor Caroli","Core Caroli").replaceAll("Lt Cmdr","Lieutenant Commander").replaceAll("Ressikan","Rehssikkan").replaceAll("Mintaka","Min-takah").replaceAll("Sela","Seela").replaceAll("Enterprise-D's", "Enterprise-Deez").replaceAll(/ensign/gi,"ensin").replaceAll("Shiar","She-are").replaceAll("Ferenginar","Fer-ren-geh-narr").replaceAll("Risa","Ryza").replaceAll("Kalara V","Kalara 5").replaceAll("Praetor","Pray-tor").replaceAll("Reman","Reemin").replaceAll("Wolf 359","Wolf 3 5 9").replaceAll("Hirogen","Hir-ohjen").replaceAll(/kal-toh/gi, "Cal-toh").replaceAll("Tuvok","Two-vock").replaceAll("PADD","pad").replaceAll("rendezvous*","rawn-day-voos").replaceAll("Icheb","E-chehb").replaceAll("Okona","Okawna").replaceAll("Larell of Renhia","Lar-ell of Renia").replaceAll("Ba'ku", "Bah-ku").replaceAll("Kore.","Kor-A,").replaceAll(/thalaron/gi,"thay-ler-on").replaceAll("IV, V, and VI.","4, 5, and 6.").replaceAll("1986‑Earth", "Nineteen Eighty-Six Earth").replaceAll(/slo-mo/gi,"slow-moe").replaceAll("B'Elanna","Bull-on-uh").replaceAll("Unification I", "Unification 1").replaceAll("Duras","Duross").replaceAll("B'Etor","bay-tor").replaceAll("Gowron","Gow-ron").replaceAll("ol'","oul").replace("43996.2","4 3 9 9 6 point 2").replace("45236.4","4 5 2 3 6 point 4").replace("41153.7","4 1 1 5 3 point 7");
+		return text.replaceAll("Locutus","locude-us").replaceAll("Sirena","Sih-REN-uh").replaceAll(/ups/gi,"uhps").replaceAll("Cor Coroli V [sic]","Core Coroli 5").replaceAll("Cor Caroli","Core Caroli").replaceAll("Lt Cmdr","Lieutenant Commander").replaceAll("Ressikan","Rehssikkan").replaceAll("Mintaka","Min-takah").replaceAll("Sela","Seela").replaceAll("Enterprise‑D's", "Enterprise‑Deez").replaceAll(/ensign/gi,"ensin").replaceAll("Shiar","She-are").replaceAll("Ferenginar","Fer-ren-geh-narr").replaceAll("Risa","Ryza").replaceAll("Kalara V","Kalara 5").replaceAll("Praetor","Pray-tor").replaceAll("Reman","Reemin").replaceAll("Wolf 359","Wolf 3 5 9").replaceAll("Hirogen","Hir-ohjen").replaceAll(/kal-toh/gi, "Cal-toh").replaceAll("Tuvok","Two-vock").replaceAll("PADD","pad").replaceAll("rendezvous*","rawn-day-voos").replaceAll("Icheb","E-chehb").replaceAll("Okona","Okawna").replaceAll("Larell of Renhia","Lar-ell of Renia").replaceAll("Ba'ku", "Bah-ku").replaceAll("Kore.","Kor-A,").replaceAll(/thalaron/gi,"thay-ler-on").replaceAll("IV, V, and VI.","4, 5, and 6.").replaceAll("1986‑Earth", "Nineteen Eighty-Six Earth").replaceAll(/slo-mo/gi,"slow-moe").replaceAll("B'Elanna","Bull-on-uh").replaceAll("Unification I", "Unification 1").replaceAll("Duras","Duross").replaceAll("B'Etor","bay-tor").replaceAll("Gowron","Gow-ron").replaceAll("ol'","oul").replace("43996.2","4 3 9 9 6 point 2").replace("45236.4","4 5 2 3 6 point 4").replace("41153.7","4 1 1 5 3 point 7");
 	}
 </script>
 
@@ -224,7 +227,7 @@
 					</tr>
 					<tr>
 						<td class="summaryBox"><div class="summary" id="tts1a">
-							Beverly Crusher sends a desperate distress call to Picard after not having spoken to him for over 20 years. To the rescue, Picard and Riker take the USS Titan-A, along with Captain Shaw, first officer Commander Annika Hansen, and helmsman Sidney La Forge, Geordi's daughter. Shaw is clearly not thrilled by Picard and Riker's visit. Meanwhile, Raffi is<span class="spoilerContent"> working for Starfleet Intelligence</span> in search of information about some portal technology stolen from the Daystrom Institute<span class="spoilerContent">, but she is too late to save a devastating attack on a Starfleet recruiting facility. On Beverly's ship, Picard and Riker find the doctor in a stasis tube, being guarded by a young man in his 20s who says he is Crusher's son and that they are being hunted, just as a big bad ship appears menacingly before them</span>.
+							Beverly Crusher sends a desperate distress call to Picard after not having spoken to him for over 20 years. To the rescue, Picard and Riker take the USS Titan&#8209;A, along with Captain Shaw, first officer Commander Annika Hansen, and helmsman Sidney La Forge, Geordi's daughter. Shaw is clearly not thrilled by Picard and Riker's visit. Meanwhile, Raffi is<span class="spoilerContent"> working for Starfleet Intelligence</span> in search of information about some portal technology stolen from the Daystrom Institute<span class="spoilerContent">, but she is too late to save a devastating attack on a Starfleet recruiting facility. On Beverly's ship, Picard and Riker find the doctor in a stasis tube, being guarded by a young man in his 20s who says he is Crusher's son and that they are being hunted, just as a big bad ship appears menacingly before them</span>.
 						</div></td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -290,7 +293,7 @@
 								<li>Non-reference: Beverly's codeword &ldquo;Hellbird&rdquo; and the so-named virus that Riker talks about is not a reference to anything that had previously happened on screen.</li>
 								<li>During the Titan's launch sequence, an officer reports, &ldquo;Metaphasic shields at the ready.&rdquo; This is a nod to <a href="../tng/tng-s6.html#e22">TNG 6x22: Suspicions</a>, which was an episode primarily focused on Beverly Crusher and her desire to bring scientists together to work on this shield technology, which was experimental at the time. Obviously the designs have been refined and implemented on modern Starfleet ships.</li>
 								<li class="spoilerPlaceholder">( +1 spoiler )</li>
-								<li class="spoilerContent">The &ldquo;Red Lady&rdquo; is a statue of Rachel Garrett, who was the captain of the U.S.S. Enterprise NCC-1701-C, only ever seen in the TNG episode <a href="../tng/tng-s3.html#e15">TNG 3x15: Yesterday's Enterprise</a>, which tells the story of the event responsible for sending Tasha Yar into the past, eventually leading to the birth of the hybrid Human-Romulan, Sela. [Okay, fine, a younger Rachel Garrett was also seen in <a href="../films/section31.html"><em>Star Trek: Section 31</em></a>, but her appearance there was entirely arbitrary and didn't really add anything of value to her character.]</li>
+								<li class="spoilerContent">The &ldquo;Red Lady&rdquo; is a statue of Rachel Garrett, who was the captain of the U.S.S. Enterprise NCC&#8209;1701&#8209;C, only ever seen in the TNG episode <a href="../tng/tng-s3.html#e15">TNG 3x15: Yesterday's Enterprise</a>, which tells the story of the event responsible for sending Tasha Yar into the past, eventually leading to the birth of the hybrid Human-Romulan, Sela. [Okay, fine, a younger Rachel Garrett was also seen in <a href="../films/section31.html"><em>Star Trek: Section 31</em></a>, but her appearance there was entirely arbitrary and didn't really add anything of value to her character.]</li>
 								<li>When Picard uploads Beverly's medical history, we briefly see two things on the screen:<br><br>
 									<ul>
 										<li>&ldquo;47653.2: Near paralysis from unidentified venom. Placed in stasis to prevent paralysis. Reconstructive surgery required.&rdquo; – this is a reference to <a href="../tng/tng-s7.html#e19">TNG 7x19: Genesis</a>.</li>
@@ -321,7 +324,7 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td class="nitpickery" id="tts1d"><ul>
-								<li>Picard doesn't recognize Beverly's codeword &ldquo;Hellbird,&rdquo; and Riker explains that it references a virus that got into the Enterprise-D's computers while Picard was... well... busy being Locutus, as if that explains why Picard wouldn't have known about it. Uh, would there not have been any logs? You know, records of what happened on the Enterprise during that time? Wouldn't Picard have probably reviewed those logs to get caught up? (Maybe it was too hard for him to review the logs considering the trauma he went through?)</li>
+								<li>Picard doesn't recognize Beverly's codeword &ldquo;Hellbird,&rdquo; and Riker explains that it references a virus that got into the Enterprise&#8209;D's computers while Picard was... well... busy being Locutus, as if that explains why Picard wouldn't have known about it. Uh, would there not have been any logs? You know, records of what happened on the Enterprise during that time? Wouldn't Picard have probably reviewed those logs to get caught up? (Maybe it was too hard for him to review the logs considering the trauma he went through?)</li>
 								<li>When Picard and Riker finish up their conversation at their bar table and start to leave, the camera focuses on an unknown man sitting at the bar (listed in the credits only as &ldquo;Dark Haired Man&rdquo;). It seems like he was maybe listening into Picard's conversation, and then he ominously drops a model of a Galaxy-class starship into his drink and leaves. These are all obvious cues to the audience that this is a bad guy. Just keep that in mind for now, I'm going to talk more about it in the Nitpickery section of the fourth episode.</li>
 								<li>Seven says that the ensign guarding &ldquo;Shuttle 3&rdquo; will be called away, and later Ensign La Forge says there's an unauthorized launch from &ldquo;Shuttlebay 3.&rdquo;  I suppose Shuttle 3 could be in Shuttlebay 3... and I suppose Shuttlebay 3 could be the name of the main shuttlebay from where the craft is seen departing...</li>
 								<li>Raffi asks the computer to search on the term &ldquo;red lady&rdquo; as a name of a vessel. The computer responds with a vessel named the &ldquo;Red Lady,&rdquo; followed by a second result about a former member of the Tal Shiar, who clearly is not a vessel... and that's it. Raffi, having done 23 searches, talks to herself about the Red Lady not being a buyer or a seller or a ship... making it seem like she's really only done 3 searches.</li>
@@ -782,7 +785,7 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td><div class="thoughts" id="tts4b">
-								<p>This episode effectively serves as a mid-season mini-finale. I don't think it will really spoil anything to tell you that the ship and crew make it safely out of harm's way (at least for now) while we learn more about our characters, their pasts, and their present motivations. On top of that, the story is an homage to the first adventure of the USS Enterprise NCC-1701-D in the series premiere of <em>The Next Generation</em>. It's wonderfully done and it reminds you that there is beauty in the universe.</p>
+								<p>This episode effectively serves as a mid-season mini-finale. I don't think it will really spoil anything to tell you that the ship and crew make it safely out of harm's way (at least for now) while we learn more about our characters, their pasts, and their present motivations. On top of that, the story is an homage to the first adventure of the USS Enterprise NCC&#8209;1701&#8209;D in the series premiere of <em>The Next Generation</em>. It's wonderfully done and it reminds you that there is beauty in the universe.</p>
 								
 								<p>As I mentioned in the previous episode, I can't figure out Picard and Riker's separate motivations for their differing strategies. Riker opens this episode with some explanation about his feelings (or lack thereof) as he watched his son's coffin being lowered into the ground but... that could have been years ago, and it's unclear why it's affecting him so much now. I like that they're trying to give Riker some depth here, but it doesn't quite do it for me.</p>
 								
@@ -1196,23 +1199,23 @@
 									</li>
 									<li>At the Federation Fleet Museum, there are numerous ships from the <em>Star Trek</em> franchise. Seven and Jack scroll through a few:<br><br>
 										<ul>
-											<li>The USS Defiant (NX-74205), the Federation ship featured in the series <a href="../ds9/index.html"><em>Deep Space Nine</em></a>. A variation of the <em>DS9</em> theme song can be heard as they view this ship.</li>
-											<li>The USS New Jersey (NCC-1975), which references nothing except a nod to showrunner Terry Matalas's birthplace and year.</li>
-											<li>The USS Enterprise (NCC-1701-A), &ldquo;Kirk's Enterprise,&rdquo; from Star Trek films <a href="../films/iv-tvh.html">IV</a>, <a href="../films/v-tff.html">V</a>, and <a href="../vi-tuc.html">VI</a>. A variation on the Original Series theme song can be heard as they view the ship.</li>
-											<li>The USS Voyager (NCC-75656), the titular vessel from <a href="../voy/index.html"><em>Star Trek: Voyager</em></a>, and former home to Seven of Nine. A variation on the <em>Voyager</em> theme song can be heard when they view this ship.</li>
+											<li>The USS Defiant (NX&#8209;74205), the Federation ship featured in the series <a href="../ds9/index.html"><em>Deep Space Nine</em></a>. A variation of the <em>DS9</em> theme song can be heard as they view this ship.</li>
+											<li>The USS New Jersey (NCC&#8209;1975), which references nothing except a nod to showrunner Terry Matalas's birthplace and year.</li>
+											<li>The USS Enterprise (NCC&#8209;1701&#8209;A), &ldquo;Kirk's Enterprise,&rdquo; from Star Trek films <a href="../films/iv-tvh.html">IV</a>, <a href="../films/v-tff.html">V</a>, and <a href="../vi-tuc.html">VI</a>. A variation on the Original Series theme song can be heard as they view the ship.</li>
+											<li>The USS Voyager (NCC&#8209;75656), the titular vessel from <a href="../voy/index.html"><em>Star Trek: Voyager</em></a>, and former home to Seven of Nine. A variation on the <em>Voyager</em> theme song can be heard when they view this ship.</li>
 											<li>The HMS Bounty, which plays an important role in this episode. This Klingon Bird-of-Prey was stolen by Kirk in <a href="../films/iii-tsfs.html"><em>Star Trek III: The Search for Spock</em></a> and was famously flown back in time to retrieve a pair of humpback whales from 1986&#8209;Earth in <a href="../films/iv-tvh.html"><em>Star Trek IV: The Voyage Home</em></a>.</li>
 										</ul>
 									</li>
 									<li>Other notable ships that can be seen at the museum include:<br><br>
 										<ul>
-											<li>The USS Enterprise (NX-01 Refit), the titular vessel from <a href="../ent/index.html"><em>Star Trek: Enterprise</em></a>.</li>
+											<li>The USS Enterprise (NX&#8209;01 Refit), the titular vessel from <a href="../ent/index.html"><em>Star Trek: Enterprise</em></a>.</li>
 											<li>&ldquo;Kronos One,&rdquo; a K'T'inga-class Klingon ship, from <a href="../films/vi-tuc.html"><em>Star Trek VI: The Undiscovered Country</em></a>.</li>
 											<li>A TOS-era Romulan Bird-of-Prey.</li>
-											<li>The USS Stargazer (NCC-2893), Picard's first command.</li>
-											<li>The USS Excelsior (NCC-2000), Sulu's ship from Star Trek <a href="../films/index.html">films</a> III through VI.</li>
-											<li>The USS Lexington (NCC-30405), a Nebula-class ship occasionally referenced in <em>TNG</em> and <em>DS9</em>.</li>
-											<li>The USS Saratoga (NCC-31911), a replica of the ship on which Benjamin Sisko served when it was destroyed in the battle of Wolf 359.</li>
-											<li>The USS Sentinel (NCC-68455), mentioned only once in the episode <a href="../ds9/ds9-s7.html#e06">DS9 7x06: Treachery, Faith and the Great River</a>.</li>
+											<li>The USS Stargazer (NCC&#8209;2893), Picard's first command.</li>
+											<li>The USS Excelsior (NCC&#8209;2000), Sulu's ship from Star Trek <a href="../films/index.html">films</a> III through VI.</li>
+											<li>The USS Lexington (NCC&#8209;30405), a Nebula-class ship occasionally referenced in <em>TNG</em> and <em>DS9</em>.</li>
+											<li>The USS Saratoga (NCC&#8209;31911), a replica of the ship on which Benjamin Sisko served when it was destroyed in the battle of Wolf 359.</li>
+											<li>The USS Sentinel (NCC&#8209;68455), mentioned only once in the episode <a href="../ds9/ds9-s7.html#e06">DS9 7x06: Treachery, Faith and the Great River</a>.</li>
 										</ul>
 									</li>
 									<li>Geordi's daughter, Alandra La Forge, is played by Mica Burton, the real-life daughter of actor LeVar Burton.</li>
@@ -1727,12 +1730,12 @@
 							<td>&nbsp;</td>
 							<td class="references" id="tts9c">
 								<ul>
-									<li>Non-reference: We don't know what happened to the Enterprise-E. Worf merely says that it's &ldquo;not his fault&rdquo; that they can't use it. The showrunners purposely left the fate of the Enterprise-E up to future writers.</li>
+									<li>Non-reference: We don't know what happened to the Enterprise&#8209;E. Worf merely says that it's &ldquo;not his fault&rdquo; that they can't use it. The showrunners purposely left the fate of the Enterprise&#8209;E up to future writers.</li>
 									<li class="spoilerPlaceholder">( +6 spoilers )</li>
 									
 									<li class="spoilerContent"><strong>Elizabeth Dennehey</strong> reprises her role as <strong>Elizabeth Shelby</strong> from the TNG two-parter, <a href="../tng/tng-s3.html#e26">TNG 3x26 &amp; 4x01: The Best of Both Worlds</a>, which tells the story of Picard being assimilated by the Borg, an experience he is now forced to re-live through his son, Jack.</li>
 									<li class="spoilerContent"><strong>Alice Krige</strong> reprises her role as (the voice of) the <strong>Borg Queen</strong> from <a href="../films/firstcontact.html"><em>Star Trek: First Contact</em></a>. (A body double played by Jane Edwina Seymour fills in for her physical form.)</li>
-									<li class="spoilerContent">The big reveal: The USS Enterprise NCC-1701-D is the ship that this crew famously flew through the galaxy in 176 episodes of <a href="../tng/index.html"><em>Star Trek: The Next Generation</em></a>. Geordi says that the saucer section was retrieved from Veridian III, which is the planet where it crash-landed in <a href="../films/generations.html"><em>Star Trek Generations</em></a>, while the engines and nacelles came from a different Galaxy-class ship called the Syracuse.</li>
+									<li class="spoilerContent">The big reveal: The USS Enterprise NCC&#8209;1701&#8209;D is the ship that this crew famously flew through the galaxy in 176 episodes of <a href="../tng/index.html"><em>Star Trek: The Next Generation</em></a>. Geordi says that the saucer section was retrieved from Veridian III, which is the planet where it crash-landed in <a href="../films/generations.html"><em>Star Trek Generations</em></a>, while the engines and nacelles came from a different Galaxy-class ship called the Syracuse.</li>
 									<li class="spoilerContent">And of course, the Enterprise&#8209;D bridge is a remarkably accurate recreation of the set used for the entirety of <a href="../tng/index.html"><em>The Next Generation</em></a>. The bridge was last seen in <a href="../films/generations.html"><em>Star Trek Generations</em></a> in 1994, 29 years before this episode aired, give or take some months. (In-universe, the crew last saw the bridge in 2371, 30 years before this episode takes place in 2401... give or take some months.)
 									<li class="spoilerContent">The voice of the Enterprise&#8209;D computer is archive audio of <a href="https://memory-alpha.fandom.com/wiki/Majel_Barrett_Roddenberry#Federation_computer_voice" target="_blank">Majel Barrett</a>, who was the voice of the  computer on many Starfleet ships across <a href="../tos/index.html"><em>TOS</em></a>, <a href="../tas/index.html"><em>TAS</em></a>, <a href="../tng/index.html"><em>TNG</em></a>, <a href="../ds9/index.html"><em>DS9</em></a>, <a href="../voy/index.html"><em>VOY</em></a>, and several <a href="../films/index.html">films</a>. In the next episode, Riker says &ldquo;I miss that voice&rdquo; &ndash; referring both to the computer voice and also to Majel herself, who passed away in 2008.</li>
 									<li class="spoilerContent">Near the end, as Picard says &ldquo;Mister Data, set a direct course for Earth, maximum warp.&rdquo; There is a reverse-angle shot of Data spinning in his chair to the right, looking over his shoulder behind him toward the direction of Picard and the camera. This was done on purpose as a reference to many similar shots over the course of <em>The Next Generation</em>.</li>
@@ -1763,7 +1766,7 @@
 							<td>&nbsp;</td>
 							<td class="nitpickery" id="tts9d"><ul>
 								<li>It is a mystery why the title of this episode is spelled the way it is, as there is no tilde diacritic used over an &ldquo;o&rdquo; in Latin. &ldquo;Voice,&rdquo; in Latin would just be spelled &ldquo;vox&rdquo; or possibly &ldquo;vōx&rdquo; with a macron (straight line) diacritic.</li>
-								<li>The Enterprise-F bridge is just the Titan bridge again... which was also the Stargazer bridge... I think maybe just with a different chair this time.</li>
+								<li>The Enterprise&#8209;F bridge is just the Titan bridge again... which was also the Stargazer bridge... I think maybe just with a different chair this time.</li>
 								<li class="spoilerPlaceholder">( +1 spoiler )</li>
 								<li class="spoilerContent">Crusher says the Borg haven't been heard from in over a decade. Then what happened to that contingent of Borg that was left to protect that fissure that had opened at the end of Season 2? I have some more thoughts about this that I'll put on my <a href="../theborg/index.html">Borg</a> topic guide.</li>
 							</ul></td>	
@@ -1922,7 +1925,7 @@
 							<td class="references" id="tts10c">
 								<ul>
 									<li>Federation President Anton Chekov delivers a warning to avoid Earth because of the assimilated fleet, paralleling a similar message in <a href="../films/iv-tvh.html"><em>Star Trek IV: The Voyage Home</em></a> from the President to avoid Earth because of the unknown probe decimating the planet.</li>
-									<li>Anton Chekov is the son of Pavel Chekov, who served alongside Kirk on the Enterprise and Enterprise-A. Anton was voiced by <a href="https://memory-alpha.fandom.com/wiki/Walter_Koenig" target="_blank">Walter Koenig</a>, who played Pavel Chekov in the original cast.</li>
+									<li>Anton Chekov is the son of Pavel Chekov, who served alongside Kirk on the Enterprise and Enterprise&#8209;A. Anton was voiced by <a href="https://memory-alpha.fandom.com/wiki/Walter_Koenig" target="_blank">Walter Koenig</a>, who played Pavel Chekov in the original cast.</li>
 									<li>In the opening, just as Chekov says &ldquo;on all emergency channels – do not approach Earth&rdquo;, the space/nebula footage that we see is the same as the first thing seen in the opening credits sequence in every episode of <em>TNG</em> (well, after Seasons 1 and 2).</li>
 									<li>At the bar, Crusher tells Worf to have another glass of prune juice. Worf dubbed this unlikely beverage &ldquo;a warrior's drink&rdquo; and it became one of his favorites after it was introduced to him by Guinan in <a href="../tng/tng-s3.html#e15">TNG 3x15: Yesterday's Enterprise</a>.</li>
 									<li>Geordi asks Data to make the night's last toast. He starts with, &ldquo;There was a young lady from Venus&rdquo; and everyone says &ldquo;Data!&rdquo; to stop him. He then says &ldquo;I always wanted to finish that.&rdquo;  This is a reference to <a href="../tng/tng-s1.html#e03">TNG 1x03: The Naked Now</a>, where Data ponders the meaning of this limerick, but is interrupted by Picard before he can get to the vulgar bit.</li>
@@ -2012,7 +2015,7 @@
 			<br><span style="font-size:small;font-family:sans-serif;color:#E0C0A0"><span style="text-shadow: red 0px 0px 12px">🚨</span> Definitely contains spoilers <span style="text-shadow: red 0px 0px 12px">🚨</span></span></div>
 		<div class="serif" id="tts1">
 		
-		<p>Season 3 of <em>Star Trek: Picard</em> delivers on what the fans demanded: the crew of the USS Enterprise NCC-1701-D, back together again &ndash; and it does so with style! They are still the characters we love, but with 20 more years of experience, and that experience has changed them and made them grow. Beverly has clearly &ldquo;seen some things&rdquo; and is ready and willing to kick some ass. Riker and Troi are back with a little bit of new drama. Geordi has settled down and become a family man. Even Data is back... Data 3.0, now with more emotion! And Worf, well... one thing that was a definite improvement with this season was the lack of Jurati- or Elnor-style comedy relief. Instead, our comedy relief comes from a most unexpected source: Worf. And it is <em>amazing</em>. The straight-faced delivery of his lines is comedy gold.</p>
+		<p>Season 3 of <em>Star Trek: Picard</em> delivers on what the fans demanded: the crew of the USS Enterprise NCC&#8209;1701&#8209;D, back together again &ndash; and it does so with style! They are still the characters we love, but with 20 more years of experience, and that experience has changed them and made them grow. Beverly has clearly &ldquo;seen some things&rdquo; and is ready and willing to kick some ass. Riker and Troi are back with a little bit of new drama. Geordi has settled down and become a family man. Even Data is back... Data 3.0, now with more emotion! And Worf, well... one thing that was a definite improvement with this season was the lack of Jurati- or Elnor-style comedy relief. Instead, our comedy relief comes from a most unexpected source: Worf. And it is <em>amazing</em>. The straight-faced delivery of his lines is comedy gold.</p>
 		
 		<img src="images/s3_bridge.png" style="width:600px;float:left;margin-right:16px;" alt="Actors Michael Dorn, Gates McFadden, LeVar Burton, Brent Spiner, Jonathan Frakes, Patrick Stewart, and Marina Sirtis, posing for a cast photo on the set of the Enterprise-D bridge">
 		

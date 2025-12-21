@@ -6,17 +6,20 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	var host = window.location.hostname;
+	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  gtag('config', 'G-DM44X85QLJ');
+		gtag('config', 'G-DM44X85QLJ');
+	}
 </script>
 
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 	<meta name="darkreader-lock" content="47">
-	<link rel="stylesheet" href="../main.css?v=1.4.4">
-	<link rel="stylesheet" href="timeline.css?v=1.4.4">
+	<link rel="stylesheet" href="../main.css?v=1.4.5">
+	<link rel="stylesheet" href="timeline.css?v=1.4.5">
 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	
 	<meta property="og:title" content="Full Star Trek Timeline | C6Reviews">
@@ -301,16 +304,16 @@
 			<td><strong>navigation: </strong>The beginning of this timeline is a little dry. Might I suggest skipping ahead to your favorite show using the nav button on the right?</td>
 		</tr>
 		<tr>
-			<td style="padding:3px;text-align:center">🖊</td>
-			<td><strong>highlight: </strong>To highlight a row on the table, click the year number.</td>
-		</tr>
-		<tr>
 			<td style="padding:3px;text-align:center">🔑</td>
 			<td><strong>legend: </strong>Use the legend menu on the right to understand color coding in the timeline.</td>
 		</tr>
 		<tr>
 			<td style="padding:3px;text-align:center">🛑</td>
 			<td><strong>spoilers: </strong>All spoilers are hidden by default. Reveal spoilers using the spoiler menu on the right, or click and hold on an individual spoiler.</td>
+		</tr>
+		<tr>
+			<td style="padding:3px;text-align:center">✍&#xFE0F;</td>
+			<td><strong>highlight: </strong>To highlight a row on the table, click the year number.</td>
 		</tr>
 		<tr>
 			<td style="padding:3px;text-align:center">❕</td>
@@ -661,6 +664,27 @@
 		<td style="text-align:right;font-weight:bold">c.</td>
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;font-weight:bold">8,000 BC</td>
 		<td colspan="3" style="text-align:left">The first of the Orbs is discovered by the Bajorans (DS9: &ldquo;Emissary&rdquo;)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" style="cursor:pointer;font-weight:bold">5,760 BC</td>
+		<td colspan="2" class="moreInfo" style="text-align:left" onClick="openToolTip(event,'TrelaneBornTT')">Trelane &ldquo;born&rdquo; (SNW: &ldquo;Wedding Bell Blues&rdquo;)</td>
+		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -2987,7 +3011,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td class="realLife kelvin">Star Trek: Beyond premieres</td>
+		<td class="realLife kelvin"><a href="../films/beyond.html">Star Trek: Beyond premieres</a></td>
 	</tr>
 	<tr class="contentRow">
 		<td>&nbsp;</td>
@@ -3079,7 +3103,7 @@
 			<table class="timelineTable" style="width:100%;border:none;border-width:0;margin:0;padding:0;">
 				<tr class="contentRow">
 					<td style="width:50%;border:none">&nbsp;</td>
-					<td style="width:50%;border-top:double 3px !important;" class="realLife thirdGen">Prodigy S1.1 airs</td>
+					<td style="width:50%;border-top:double 3px !important;" class="realLife thirdGen"><a href="../pro/index.html">Prodigy S1.1 airs</a></td>
 				</tr>
 			</table>
 		</td>
@@ -3110,7 +3134,7 @@
 			<table class="timelineTable" style="width:100%;border:none;border-width:0;margin:0;padding:0;">
 				<tr class="contentRow">
 					<td style="width:50%;border:none">&nbsp;</td>
-					<td style="width:50%" class="realLife thirdGen">Prodigy S1.2 airs</td>
+					<td style="width:50%" class="realLife thirdGen"><a href="../pro/index.html">Prodigy S1.2 airs</a></td>
 				</tr>
 			</table>
 		</td>
@@ -3167,7 +3191,7 @@
 			<table class="timelineTable" style="width:100%;border:none;border-width:0;margin:0;padding:0;">
 				<tr class="contentRow">
 					<td style="width:50%;border:none">&nbsp;</td>
-					<td style="width:50%;border-bottom:double 3px !important;" class="realLife thirdGen">Prodigy S2 airs</td>
+					<td style="width:50%;border-bottom:double 3px !important;" class="realLife thirdGen"><a href="../pro/index.html">Prodigy S2 airs</a></td>
 				</tr>
 			</table>
 		</td>
@@ -4486,8 +4510,8 @@
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2144</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>Arik Soong captured and incarcerated</td>
 		<td>&nbsp;</td>
+		<td>Arik Soong captured and incarcerated</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4496,7 +4520,7 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2145</td>
 		<td class="majorEventBox">The NX program breaks Warp 3</td>
-		<td>&nbsp;</td>
+		<td id="USSFranklin1">&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4530,8 +4554,7 @@
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2148</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td id="USSFranklin2" colspan="2" class="majorEventBox">≈ USS Franklin NX&#8209;326, Earth's first Warp 4 ship, launched (year unknown)</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4541,7 +4564,7 @@
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2149</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td>•</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4552,7 +4575,7 @@
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2150</td>
 		<td class="majorEventBox">United Earth world government formed</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td>•</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4562,18 +4585,18 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2151</td>
 		<td rowspan="5" class="seriesBox secondGen" style="background-image:url('images/archer.png');background-size:100% auto;" id="ENT">STAR TREK <br>ENTERPRISE (ENT) <br><span class="x-small" style="font-weight:normal;font-family:serif">2001-2005</span></td>
+		<td id="USSFranklin3">&nbsp;</td>
+		<td>•</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>ENTERPRISE NX-01 launched</td>
+		<td>ENTERPRISE NX&#8209;01 launched</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2152</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td>•</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4583,7 +4606,7 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2153</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td>•</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4593,8 +4616,8 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2154</td>
 		<td>&nbsp;</td>
+		<td>•</td>
 		<td>Arik Soong escapes from Archer's custody</td>
-		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4603,8 +4626,8 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2155</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td colspan="2" class="mirrorUniverse">Mirror Archer captures the <em>Defiant</em> NCC-1764</td>
+		<td>•</td>
+		<td colspan="2" class="mirrorUniverse">Mirror Archer captures the <em>Defiant</em> NCC&#8209;1764</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 	</tr>
@@ -4613,7 +4636,7 @@
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2156</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td>•</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4624,7 +4647,7 @@
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2157</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td>•</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4635,7 +4658,7 @@
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2158</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td>•</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4646,7 +4669,7 @@
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2159</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td>•</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4657,7 +4680,7 @@
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2160</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td>•</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4668,10 +4691,10 @@
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2161</td>
 		<td id="ENTtatv" class="episodeBox secondGen joinLeft">ENT: &ldquo;These Are The Voyages...&rdquo;</td>
 		<td class="majorEventBox joinRight">United Federation of Planets founded</td>
+		<td>•</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>ENTERPRISE NX-01 decommissioned</td>
+		<td>ENTERPRISE NX&#8209;01 decommissioned</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -4679,7 +4702,7 @@
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2162</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td>•</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4690,7 +4713,7 @@
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2163</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td>•</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4701,8 +4724,7 @@
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2164</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td colspan="2">USS Franklin NX&#8209;326 vanishes while on a mission in the Gagarin Radiation Belt</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4712,8 +4734,8 @@
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2165</td>
 		<td class="minorTimeTravel alternateReality">❱ ENT: Twilight</td>
 		<td>&nbsp;</td>
+		<td>&nbsp;</td>
 		<td>Sarek born</td>
-		<td></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4732,8 +4754,8 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2167</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td class="minorTimeTravel secondGen joinLeft">❰ TNG: Power Play</td>
+		<td class="joinRight">USS Essex NCC-173 lost at Mab-Bu VI</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4745,8 +4767,8 @@
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2168</td>
 		<td class="minorTimeTravel firstGen joinLeft">❰ TOS: A Piece of the Action</td>
 		<td class="joinRight"><em>Horizon</em> contaminates life on Sigma Iota II</td>
-		<td>Lela becomes first Dax host</td>
 		<td>&nbsp;</td>
+		<td>Lela becomes first Dax host</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4798,7 +4820,7 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2173</td>
-		<td colspan="2" class="minorTimeTravel alternateReality"><a href="../ds9/ds9-s5.html#e22">≈ The <em>Defiant</em> NX-74205 crash-lands and becomes stranded (DS9: Children of Time)</a></td>
+		<td colspan="2" class="minorTimeTravel alternateReality"><a href="../ds9/ds9-s5.html#e22">≈ The <em>Defiant</em> NX&#8209;74205 crash-lands and becomes stranded (DS9: Children of Time)</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5480,7 +5502,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td id="TGWMTS2" colspan="2" class="episodeBox thirdGen">≈ SHO: "The Girl Who Made the Stars" <span style="font-family:Roboto,sans-serif;font-size:12px;">(2x05)</span> <span style="font-size:x-small;font-weight:normal;font-family:Roboto,sans-serif;">(year unknown)</span></td>
+		<td id="TGWMTS2" colspan="2" class="episodeBox thirdGen">≈ SHO: "The Girl Who Made the Stars" <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(2x05)</span> <span style="font-size:x-small;font-weight:normal;font-family:Exo,Roboto,sans-serif;">(year unknown)</span></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 	</tr>
@@ -5516,7 +5538,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2239</td>
-		<td class="episodeBox thirdGen joinLeft">SHO: "The Brightest Star" <span style="font-family:Roboto,sans-serif;font-size:12px;">(1x03)</span></td>
+		<td class="episodeBox thirdGen joinLeft">SHO: "The Brightest Star" <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(1x03)</span></td>
 		<td class="joinRight">Saru leaves his home</td>
 		<td id="TGWMTS3">&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5581,7 +5603,7 @@
 		<td>Battle of Donatu V</td>
 		<td>Emony Dax meets Dr. McCoy (speculative)</td>
 		<td>&nbsp;</td>
-		<td>USS ENTERPRISE NCC-1701 <br>Launched on April 11</td>
+		<td>USS ENTERPRISE NCC&#8209;1701 <br>Launched on April 11</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -5631,7 +5653,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td id="2250s1">&nbsp;</td>
-		<td colspan="2" class="episodeBox thirdGen">≈ SHO: "The Escape Artist" <span style="font-family:Roboto,sans-serif;font-size:12px;">(1x04)</span> <span style="font-family:roboto, sans-serif; font-size:x-small">(year unknown)</span></td>
+		<td colspan="2" class="episodeBox thirdGen">≈ SHO: "The Escape Artist" <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(1x04)</span> <span style="font-family:Exo,Roboto,sans-serif; font-size:x-small">(year unknown)</span></td>
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2251</td>
@@ -5640,7 +5662,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td id="2250s2" colspan="2" class="episodeBox thirdGen">≈ SHO: "The Trouble with Edward" <span style="font-family:Roboto,sans-serif;font-size:12px;">(2x02)</span> <span style="font-family:roboto, sans-serif; font-size:x-small">(year unknown)</span></td>
+		<td id="2250s2" colspan="2" class="episodeBox thirdGen">≈ SHO: "The Trouble with Edward" <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(2x02)</span> <span style="font-family:roboto, sans-serif; font-size:x-small">(year unknown)</span></td>
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2252</td>
@@ -5649,11 +5671,11 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td id="2250s4" colspan="2" class="episodeBox thirdGen">≈ SHO: "Ask Not" <span style="font-family:Roboto,sans-serif;font-size:12px;">(2x03)</span> <span style="font-family:roboto, sans-serif; font-size:x-small">(year unknown)</span></td>
+		<td id="2250s4" colspan="2" class="episodeBox thirdGen">≈ SHO: "Ask Not" <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(2x03)</span> <span style="font-family:roboto, sans-serif; font-size:x-small">(year unknown)</span></td>
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2253</td>
-		<td class="episodeBox thirdGen joinLeft">SHO: &ldquo;Q&amp;A&rdquo; <span style="font-family:Roboto,sans-serif;font-size:12px;">(2x01)</span></td>
+		<td class="episodeBox thirdGen joinLeft">SHO: &ldquo;Q&amp;A&rdquo; <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(2x01)</span></td>
 		<td class="joinRight">Spock joins the USS Enterprise</td>
 		<td>(Kirk Age 20)</td>
 		<td>&nbsp;</td>
@@ -5696,7 +5718,7 @@
 	<tr class="contentRow">
 		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2257</td>
 		<td>&nbsp;</td>
-		<td class="episodeBox thirdGen">SHO: &ldquo;Runaway&rdquo; <span style="font-family:Roboto,sans-serif;font-size:12px;">(1x01)</span></td>
+		<td class="episodeBox thirdGen">SHO: &ldquo;Runaway&rdquo; <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(1x01)</span></td>
 		<td class="minorTimeTravel firstGen">❰ TOS: Obsession</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5716,7 +5738,7 @@
 		STRANGE NEW WORLDS (SNW) <br><span class="x-small" style="font-weight:normal;font-family:serif">2022-Present</span></td>
 		<td class="apocryphal">(Pike Age 54)*</td>
 		<td>&nbsp;</td>
-		<td id="STID" class="filmBox kelvin"><a href="../films/intodarkness.html">INTO DARKNESS <span class="x-small" style="font-weight:normal;font-family:serif">(2013, #12)</span></a></td>
+		<td id="STID" class="filmBox kelvin" style="border-bottom: dashed 2px"><a href="../films/intodarkness.html">INTO DARKNESS <span class="x-small" style="font-weight:normal;font-family:serif">(2013, #12)</span></a></td>
 		<td id="2250s3">&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5725,7 +5747,7 @@
 		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2260</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td class="kelvin" style="border-top:none">The Enterprise embarks on its 5-year mission</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5744,7 +5766,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td id="STB" class="filmBox kelvin">BEYOND <span class="x-small" style="font-weight:normal;font-family:serif">(2016, #13)</span></td>
+		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5754,9 +5776,9 @@
 		<td>(Kirk Age 30)</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td class="kelvin spoiler kelvinSpoiler characterDeath">Spock (Prime) dies (<span style="font-family: serif">II</span>) (Age 161)</td>
-		<td>&nbsp;</td>
+		<td id="STB" class="filmBox kelvin joinLeft"><a href="../films/beyond.html">BEYOND <span class="x-small" style="font-weight:normal;font-family:serif">(2016, #13)</span></a></td>
+		<td class="kelvin joinMiddle">USS Franklin NX&#8209;326, lost in 2164, found</td>
+		<td class="kelvin spoiler kelvinSpoiler characterDeath joinRight">Spock (Prime) dies (<span style="font-family: serif">II</span>) (Age 161)</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -5767,7 +5789,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>USS RELIANT NCC-1864 Launched</td>
+		<td>USS RELIANT NCC&#8209;1864 Launched</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2265</td>
@@ -5786,7 +5808,7 @@
 		<td class="joinLeft">Pike is gravely injured</td>
 		<td class="majorTimeTravel thirdGen joinRight">❱❱ SNW: Through the Valley of Shadows</td>
 		<td class="alternateReality majorTimeTravel">❱❱ SNW: A Quality of Mercy</td>
-		<td class="episodeBox thirdGen">SHO: &ldquo;Ephraim and Dot&rdquo; <span style="font-family:Roboto,sans-serif;font-size:12px;">(2x04)</span></td>
+		<td class="episodeBox thirdGen">SHO: &ldquo;Ephraim and Dot&rdquo; <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(2x04)</span></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 	</tr>
@@ -5814,11 +5836,11 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>|</td>
-		<td colspan="2">USS DEFIANT NCC-1764 sent to mirror universe year 2155 or before</td>
+		<td colspan="2">USS DEFIANT NCC&#8209;1764 sent to mirror universe year 2155 or before</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2270</td>
-		<td class="seriesBox firstGen" style="border-top:1px hidden #2F2F39;text-align:left;padding-left:25px;background-image:url('images/tascrew.png');background-size:100% auto;background-blend-mode:lighten;" id="TAS"><span style="font-size:x-small">THE ANIMATED SERIES (TAS)</span> <span class="x-small" style="font-weight:normal;font-family:serif">1973-74</span></td>
+		<td class="seriesBox firstGen" style="border-top:1px hidden #2F2F39;text-align:left;line-height:1;padding-left:36px;background-image:url('images/tascrew.png');background-size:100% auto;background-blend-mode:lighten;" id="TAS"><span style="font-size:small">THE ANIMATED SERIES<br>(TAS)</span> <span class="x-small" style="font-weight:normal;font-family:serif">1973-74</span></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5899,7 +5921,7 @@
 	<tr class="contentRow">
 		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2278</td>
 		<td>&nbsp;</td>
-		<td class="minorTimeTravel secondGen joinLeft">❰ TNG: Cause &amp; Effect</td>
+		<td id="TNGCauseAndEffect" class="minorTimeTravel secondGen joinLeft">❰ TNG: Cause And Effect</td>
 		<td class="joinRight">USS Bozeman lost in time loop</td>
 		<td>&nbsp;</td>
 		<td>|</td>
@@ -5963,7 +5985,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>|</td>
-		<td class="moreInfo" onclick="openToolTip(event,'ExcelsiorTT')">≈ USS EXCELSIOR NCC-2000 Launched</td>
+		<td class="moreInfo" onclick="openToolTip(event,'ExcelsiorTT')">≈ USS EXCELSIOR NCC&#8209;2000 Launched</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -5972,9 +5994,9 @@
 		<td class="joinLeft spoiler TOSSpoiler characterDeath">Spock dies (<span style="font-family: serif">I</span>) (Age 55)</td>
 		<td id="TWOK" class="filmBox firstGen joinRight">II: THE WRATH OF KHAN <span class="x-small" style="font-weight:normal;font-family:serif">(1982)</span></td>
 		<td id="TSFS" class="filmBox firstGen">III: THE SEARCH FOR SPOCK <span class="x-small" style="font-weight:normal;font-family:serif">(1984)</span></td>
-		<td class="episodeBox thirdGen">SHO: &ldquo;Ephraim and Dot&rdquo; <span style="font-family:Roboto,sans-serif;font-size:12px;">(2x04)</span></td>
-		<td class="spoiler TOSSpoiler characterDeath">USS ENTERPRISE NCC-1701 Destroyed</td>
-		<td>USS RELIANT NCC-1864 destroyed</td>
+		<td class="episodeBox thirdGen">SHO: &ldquo;Ephraim and Dot&rdquo; <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(2x04)</span></td>
+		<td class="spoiler TOSSpoiler characterDeath">USS ENTERPRISE NCC&#8209;1701 Destroyed</td>
+		<td>USS RELIANT NCC&#8209;1864 destroyed</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2286</td>
@@ -5983,7 +6005,7 @@
 		<td>&nbsp;</td>
 		<td id="TVH" class="filmBox firstGen">IV: THE VOYAGE HOME <span class="x-small" style="font-weight:normal;font-family:serif">(1986)</span></td>
 		<td>&nbsp;</td>
-		<td>USS ENTERPRISE NCC-1701-A Launched</td>
+		<td>USS ENTERPRISE NCC&#8209;1701&#8209;A Launched</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -6053,8 +6075,8 @@
 		<td class="majorTimeTravel secondGen joinLeft" id="GenerationsPast">❰❰ Star Trek Generations</td>
 		<td class="joinRight spoiler TOSSpoiler TNGSpoiler characterDeath">Kirk presumed dead (Age 60)</td>
 		<td class="majorEventBox">Khitomer Accords Signed</td>
-		<td>USS ENTERPRISE NCC-1701-A <br>Decommissioned</td>
-		<td>USS ENTERPRISE NCC-1701-B <br>Commissioned</td>
+		<td>USS ENTERPRISE NCC&#8209;1701&#8209;A <br>Decommissioned</td>
+		<td>USS ENTERPRISE NCC&#8209;1701&#8209;B <br>Commissioned</td>
 	</tr>
 	<tr class="contentRow">
 		<td>&nbsp;</td>
@@ -6334,7 +6356,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>|</td>
-		<td colspan="2">USS EXCELSIOR NCC-2000 Decommissioned</td>
+		<td colspan="2">USS EXCELSIOR NCC&#8209;2000 Decommissioned</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2321</td>
@@ -6377,7 +6399,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2325</td>
-		<td>&nbsp;</td>
+		<td>(Picard Age 20)</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -6390,7 +6412,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>USS STARGAZER NCC-2893 Commissioned</td>
+		<td>USS STARGAZER NCC&#8209;2893 Commissioned</td>
 		<td>|</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -6398,7 +6420,7 @@
 	<tr class="contentRow">
 		<td class="picardEra lostEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2327</td>
 		<td class="majorTimeTravel secondGen joinLeft">❰❰ TNG: Tapestry</td>
-		<td class="joinRight">Picard's bar fight (Age 22)</td>
+		<td class="joinRight">Picard's bar fight</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>|</td>
@@ -6572,7 +6594,7 @@
 		<td class="majorEventBox joinRight"  id="altYar2">Battle at Narendra III</td>
 		<td>|</td>
 		<td>|</td>
-		<td>USS ENTERPRISE NCC-1701-C Destroyed</td>
+		<td>USS ENTERPRISE NCC&#8209;1701&#8209;C Destroyed</td>
 		<td>Annika Hansen born</td>
 	</tr>
 	<tr class="contentRow">
@@ -6680,7 +6702,7 @@
 		<td>(Picard Age 50)</td>
 		<td>Jake Sisko born</td>
 		<td>&nbsp;</td>
-		<td>USS STARGAZER NCC-2893 Abandoned</td>
+		<td>USS STARGAZER NCC&#8209;2893 Abandoned</td>
 		<td>|</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -6762,14 +6784,14 @@
 		<td>&nbsp;</td>
 		<td>•</td>
 		<td>|</td>
-		<td class="moreInfo" colspan="2" onClick="openToolTip(event,'DLaunchTT')">USS ENTERPRISE NCC-1701-D Launched</td>
+		<td class="moreInfo" colspan="2" onClick="openToolTip(event,'DLaunchTT')">USS ENTERPRISE NCC&#8209;1701&#8209;D Launched</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2364</td>
-		<td class="seriesBox secondGen" style="background-image:url('images/picard.png');background-size:100% auto;background-blend-mode:color-dodge" rowspan="7" id="TNG">STAR TREK <br>THE NEXT GENERATION (TNG) <br><span class="x-small" style="font-weight:normal;font-family:serif">1987-1994</span></td>
+		<td class="seriesBox secondGen" style="font-size:large;background-image:url('images/picard.png');background-size:100% auto;background-blend-mode:color-dodge" rowspan="7" id="TNG">STAR TREK <br>THE NEXT GENERATION (TNG) <br><span class="x-small" style="font-weight:normal;font-family:serif">1987-1994</span></td>
 		<td>McCoy visits the Enterprise D (Age 137)</td>
 		<td class="spoiler TNGSpoiler characterDeath">Tasha Yar dies (<span style="font-family:serif">I</span>) (Age 27)</td>
-		<td>USS STARGAZER NCC-2893 <br>Recovered &amp; Decommissioned</td>
+		<td>USS STARGAZER NCC&#8209;2893 <br>Recovered &amp; Decommissioned</td>
 		<td>|</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -6811,7 +6833,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2369</td>
-		<td class="seriesBox secondGen" style="background-image:url('images/sisko.png');background-size:100% auto;background-blend-mode:lighten" rowspan="7" id="DS9"><a href="../ds9/index.html">STAR TREK <br>DEEP SPACE NINE (DS9)</a> <br><span class="x-small" style="font-weight:normal;font-family:serif">1993-1999</span></td>
+		<td class="seriesBox secondGen" style="font-size:large;background-image:url('images/sisko.png');background-size:100% auto;background-blend-mode:lighten" rowspan="7" id="DS9"><a href="../ds9/index.html">STAR TREK <br>DEEP SPACE NINE (DS9)</a> <br><span class="x-small" style="font-weight:normal;font-family:serif">1993-1999</span></td>
 		<td>Scotty recovered from the Jenolan</td>
 		<td>(Sisko Age 37)</td>
 		<td>Terok Nor becomes DS9</td>
@@ -6824,23 +6846,23 @@
 		<td>&nbsp;</td>
 		<td class="mirrorUniverse">Terran Empire has fallen by this year</td>
 		<td>&nbsp;</td>
-		<td>USS DEFIANT NX-74205 Launched</td>
+		<td>USS DEFIANT NX&#8209;74205 Launched</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2371</td>
-		<td class="seriesBox secondGen" style="background-image:url('images/janeway.png');background-size:100% auto;background-blend-mode:lighten" rowspan="8" id="VOY"><a href="../voy/index.html">STAR TREK <br>VOYAGER (VOY)</a> <br><span class="x-small" style="font-weight:normal;font-family:serif">1995-2001</span></td>
+		<td class="seriesBox secondGen" style="font-size:large;background-image:url('images/janeway.png');background-size:100% auto;background-blend-mode:lighten" rowspan="8" id="VOY"><a href="../voy/index.html">STAR TREK <br>VOYAGER (VOY)</a> <br><span class="x-small" style="font-weight:normal;font-family:serif">1995-2001</span></td>
 		<td class="apocryphal moreInfo" onClick="openToolTip(event,'JanewayTT')">(Janeway Age 35)*</td>
 		<td id="GEN" class="filmBox secondGen joinLeft" style="text-align:left;padding-left:32px;">GENERATIONS <span class="x-small" style="font-weight:normal;font-family:serif">(1994, #7)</span></td>
 		<td class="joinMiddle spoiler TOSSpoiler TNGSpoiler characterDeath">Kirk dies (Age 60)</td>
-		<td class="joinRight spoiler TNGSpoiler characterDeath">USS ENTERPRISE NCC-1701-D Destroyed</td>
-		<td>USS VOYAGER NCC-74656 Launched</td>
+		<td class="joinRight spoiler TNGSpoiler characterDeath">USS ENTERPRISE NCC&#8209;1701&#8209;D Destroyed</td>
+		<td>USS VOYAGER NCC&#8209;74656 Launched</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2372</td>
 		<td>Worf joins DS9 crew</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>USS ENTERPRISE NCC-1701-E Launched</td>
+		<td>USS ENTERPRISE NCC&#8209;1701&#8209;E Launched</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -6862,8 +6884,8 @@
 		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2375</td>
 		<td>&nbsp;</td>
 		<td id="INS" class="filmBox secondGen" style="text-align:left;padding-left:32px;">INSURRECTION <span class="x-small" style="font-weight:normal;font-family:serif">(1998, #9)</span></td>
-		<td class="spoiler DS9Spoiler characterDeath">USS DEFIANT NX-74205 Destroyed</td>
-		<td class="spoiler DS9Spoiler characterDeath">USS DEFIANT NX-74205 (2) Launched</td>
+		<td class="spoiler DS9Spoiler characterDeath">USS DEFIANT NX&#8209;74205 Destroyed</td>
+		<td class="spoiler DS9Spoiler characterDeath">USS DEFIANT NX&#8209;74205 (2) Launched</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2376</td>
@@ -6952,7 +6974,7 @@
 	<tr class="contentRow">
 		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2385</td>
 		<td class="majorEventBox joinLeft">Rogue Synth Attack on Mars (April 5)</td>
-		<td class="episodeBox thirdGen joinMiddle" style="border-left:0px;border-right:0px;">SHO: &ldquo;Children of Mars&rdquo; <span style="font-family:Roboto,sans-serif;font-size:12px;">(2x06)</span></td>
+		<td class="episodeBox thirdGen joinMiddle" style="border-left:0px;border-right:0px;">SHO: &ldquo;Children of Mars&rdquo; <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(2x06)</span></td>
 		<td class="minorTimeTravel thirdGen joinMiddle"><a href="../pic/pic-s1.html#e02">❰ PIC: Maps and Legends</a></td>
 		<td class="joinRight spoiler PICSpoiler">Picard resigns from Starfleet</td>		
 		<td>(Picard Age 80)</td>
@@ -6965,7 +6987,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td class="spoiler characterDeath PICSpoiler">Icheb dies</td>
-		<td>USS ENTERPRISE NCC-1701-F Launched</td>
+		<td>USS ENTERPRISE NCC&#8209;1701&#8209;F Launched</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -7063,7 +7085,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>USS TITAN NCC-80102-A Launched</td>
+		<td>USS TITAN NCC&#8209;80102&#8209;A Launched</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra" onclick="toggleHighlight(this)" style="cursor:pointer;">2397</td>
@@ -7121,8 +7143,8 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>USS ENTERPRISE NCC-1701-F Decommissioned</td>
-		<td class="spoiler PICSpoiler">USS TITAN NCC-80102-A rechristened as <br>USS ENTERPRISE NCC-1701-G</td>
+		<td>USS ENTERPRISE NCC&#8209;1701&#8209;F Decommissioned</td>
+		<td class="spoiler PICSpoiler">USS TITAN NCC&#8209;80102&#8209;A rechristened as <br>USS ENTERPRISE NCC&#8209;1701&#8209;G</td>
 	</tr>
 	<tr class="contentRow">
 		<td><strong>↓</strong></td>
@@ -7271,7 +7293,7 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;">2416</td>
 		<td>&nbsp;</td>
-		<td colspan="2" class="joinLeft">Enterprise-D's subspace message from galaxy M-33 due to be received by Starfleet</td>
+		<td colspan="2" class="joinLeft">Enterprise&#8209;D's subspace message from galaxy M-33 due to be received by Starfleet</td>
 		<td class="minorTimeTravel secondGen joinRight">❱ TNG: Where No One Has Gone Before</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -8996,7 +9018,7 @@
 	<tr class="contentRow">
 		<td><strong>Century</strong></td>
 		<td onclick="toggleHighlight(this)" style="cursor:pointer;"></td>
-		<td class="episodeBox thirdGen" id="calypso"><span style="font-family:Roboto, sans-serif;font-size:12px;">c. 4190:</span> ≈ SHO: &ldquo;Calypso&rdquo; <span style="font-family:Roboto,sans-serif;font-size:12px;">(1x02)</span></td>
+		<td class="episodeBox thirdGen" id="calypso"><span style="font-family:Exo,Roboto,sans-serif, sans-serif;font-size:12px;">c. 4190:</span> ≈ SHO: &ldquo;Calypso&rdquo; <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(1x02)</span></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -9047,6 +9069,8 @@
 <div id="TTDIV">
 	<div id="ExampleTT" class="tooltip" onClick="closeToolTip(this)">Yes, just like that!<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
 	
+	<div id="TrelaneBornTT" class="tooltip" onClick="closeToolTip(this)">This is based on Trelane's statement that he is 8020 years old in the year 2261. However, since Trelane lives outside of normal time as we know it, he really could have come into existence at any point.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
+	
 	<div id="PikeBirthTT" class="tooltip" onClick="closeToolTip(this)">Pike's birth year is not established in canon, but the TOS novel <em>Burning Dreams</em> sets it in this year.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
 
 	<div id="TheCageTT" class="tooltip" onClick="closeToolTip(this)">&ldquo;The Cage&rdquo; was the original, unaired pilot. It starred Christopher Pike as the captain of the Enterprise, before the concept was retooled and a new pilot was written with Kirk in command.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
@@ -9061,7 +9085,7 @@
 	
 	<div id="BorgVideoGameTT" class="tooltip" onClick="closeToolTip(this)">I know it's not canon, and this timeline would be a lot busier if I included every Star Trek video game, but I'm only including this one because it is actually more of an interactive movie that included 2 hours of original footage and starred John de Lancie as Q.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
 	
-	<div id="DLaunchTT" class="tooltip" onClick="closeToolTip(this)">Give or take a year. The launch and/or commissioning date of the Enterprise-D is not entirely certain due to contradictions from official sources. 2363 is the year indicated by the stardate on the second dedication plaque on the ship's bridge, which was used for seasons 5-7. It's also the year calculated by using Data's statement about 1550 days having passed since the ships commissioning, in the episode <a href="../tng/tng-s4.html#e11">TNG 4x11: Data's Day</a>. However, the first dedication plaque that appears in seasons 1-4 lists a commissioning stardate in 2364. Furthermore, a <a href="https://www.instagram.com/p/Coh6YkJNuJk/" target="_blank">video</a> on the official &ldquo;startreklogs&rdquo; Instagram account gives the launch year as 2362.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
+	<div id="DLaunchTT" class="tooltip" onClick="closeToolTip(this)">Give or take a year. The launch and/or commissioning date of the Enterprise&#8209;D is not entirely certain due to contradictions from official sources. 2363 is the year indicated by the stardate on the second dedication plaque on the ship's bridge, which was used for seasons 5-7. It's also the year calculated by using Data's statement about 1550 days having passed since the ships commissioning, in the episode <a href="../tng/tng-s4.html#e11">TNG 4x11: Data's Day</a>. However, the first dedication plaque that appears in seasons 1-4 lists a commissioning stardate in 2364. Furthermore, a <a href="https://www.instagram.com/p/Coh6YkJNuJk/" target="_blank">video</a> on the official &ldquo;startreklogs&rdquo; Instagram account gives the launch year as 2362.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
 </div>
 
 <div id="bottomBorder"></div>

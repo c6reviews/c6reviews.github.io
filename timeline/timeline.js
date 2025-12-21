@@ -488,52 +488,55 @@ function getOffset(el) {
 
 function drawLines(){
 	
+	// Diagonal line between the TOS/TAS series
 	var TOSTAS = getOffset(document.getElementById("TOSTAS"));
 	
+	// Two straight arrows for Tasha Yar-Yesterday's Enterprise timeline
 	var yar1 = getOffset(document.getElementById("altYar1"));
 	var yar1x = yar1.left + ((yar1.right - yar1.left)/2) +10;
 	var yar1y = yar1.top;
-	
 	var yar2 = getOffset(document.getElementById("altYar2"));
 	var yar2x = yar2.left + ((yar2.right - yar2.left)/2) +50;
 	var yar2y = yar2.bottom+4;
-	
 	var yar3 = getOffset(document.getElementById("altYar3"));
 	var yar3x = yar3.left + ((yar3.right - yar3.left)/2);
 	var yar3y = yar3.top-3;
 	
+	// Two curved arrows for VOY Endgame alternate timeline
 	var voyHome1 = getOffset(document.getElementById("voyHome1"));
 	var voyHome1x = voyHome1.right;
 	var voyHome1y = voyHome1.top + ((voyHome1.bottom - voyHome1.top)/2);
-	
 	var voyHome2 = getOffset(document.getElementById("voyHome2"));
 	var voyHome2x = voyHome2.right;
 	var voyHome2y = voyHome2.top;
-	
 	var voyHome3 = getOffset(document.getElementById("voyHome3"));
 	var voyHome3x = voyHome3.left + ((voyHome3.right - voyHome3.left)/2);
 	var voyHome3y = voyHome3.bottom;
 	
+	// One straight arrow for VOY Future's End timeline
 	var futuresEnd1 = getOffset(document.getElementById("futuresEnd1"));
 	var futuresEnd1x = futuresEnd1.left + ((futuresEnd1.right - futuresEnd1.left)/2);
 	var futuresEnd1y = futuresEnd1.bottom;
-	
 	var futuresEnd2 = getOffset(document.getElementById("futuresEnd2"));
 	var futuresEnd2x = futuresEnd2.left + ((futuresEnd2.right - futuresEnd2.left)/2);
 	var futuresEnd2y = futuresEnd2.top - 3;
 	
+	// Large bracket for Starfleet Founded year
 	var SF1 = getOffset(document.getElementById("SFFounded1"));
 	var SF2 = getOffset(document.getElementById("SFFounded2"));
 	var SF3 = getOffset(document.getElementById("SFFounded3"));
 	
+	// Small bracket for Zefram Cochrane goes missing
 	var ZC1 = getOffset(document.getElementById("ZCMissing1"));
 	var ZC2 = getOffset(document.getElementById("ZCMissing2"));
 	var ZC3 = getOffset(document.getElementById("ZCMissing3"));
 	
+	// Large bracket for SHO: The Girl Who Made The Stars
 	var TGWMTS1 = getOffset(document.getElementById("TGWMTS1"));
 	var TGWMTS2 = getOffset(document.getElementById("TGWMTS2"));
 	var TGWMTS3 = getOffset(document.getElementById("TGWMTS3"));
 	
+	// Green dotted line for Kelvin timeline
 	var kelvin1 = getOffset(document.getElementById("kelvin1"));
 	var kelvin2 = getOffset(document.getElementById("kelvin2"));
 	var kelvin3a = getOffset(document.getElementById("kelvin3a"));
@@ -541,19 +544,28 @@ function drawLines(){
 	var kelvin4a = getOffset(document.getElementById("kelvin4a"));
 	var kelvin4b = getOffset(document.getElementById("kelvin4b"));
 	
+	// Small bracket for Zefram Cochrane birthdate
 	var ZCBorn1 = getOffset(document.getElementById("ZCBorn1"));
 	var ZCBorn2 = getOffset(document.getElementById("ZCBorn2"));
 	var ZCBorn3 = getOffset(document.getElementById("ZCBorn3"));
 	
+	// Small double-bracket for 3 episodes of SHO in the 2250s
 	var y2250s1 = getOffset(document.getElementById("2250s1"));
 	var y2250s2 = getOffset(document.getElementById("2250s2"));
 	var y2250s3 = getOffset(document.getElementById("2250s3"));
 	var y2250s4 = getOffset(document.getElementById("2250s4"));
 	
+	// Large bracket for Yvette Picard death
 	var YPDeath1 = getOffset(document.getElementById("YPDeath1"));
 	var YPDeath2 = getOffset(document.getElementById("YPDeath2"));
 	var YPDeath3 = getOffset(document.getElementById("YPDeath3"));
 	
+	// Small bracket for USS Franklin (first Warp 4 ship)
+	var USSFranklin1 = getOffset(document.getElementById("USSFranklin1"));
+	var USSFranklin2 = getOffset(document.getElementById("USSFranklin2"));
+	var USSFranklin3 = getOffset(document.getElementById("USSFranklin3"));
+	
+	// Locations for images
 	var S31 = getOffset(document.getElementById("S31"));
 	var warp1 = getOffset(document.getElementById("warp1"));
 	var twok = getOffset(document.getElementById("TWOK"));
@@ -586,13 +598,15 @@ function drawLines(){
 		<!-- TOS/TAS diagonal line divider -->	
 			<line x1="` + TOSTAS.left + `" y1="` + TOSTAS.bottom + `" x2="` + TOSTAS.right + `" y2="` + TOSTAS.top + `" stroke="#C0C0C0"/>
 		
-		<!-- Two straight arrows for Tasha Yar alternate timeline -->	
+		<!-- Two straight arrows for Tasha Yar-Yesterday's Enterprise timeline -->	
 			<line x1="` + yar1x + `" y1="` + yar1y + `" x2="` + yar2x + `" y2="` + yar2y + `" stroke="#C0C0C077" stroke-dasharray="3" marker-end="url(#arrow)"/>
 			<line x1="` + (yar2x-50) + `" y1="` + yar2y + `" x2="` + yar3x + `" y2="` + yar3y + `" stroke="#C0C0C077" stroke-dasharray="3" marker-end="url(#arrow)"/>
 		
 		<!-- Two curved arrows for VOY Endgame alternate timeline -->
 			<path d="M `+ voyHome1x + ` ` + voyHome1y + ` C ` + (voyHome1x+30) + ` ` + (voyHome1y+30) + `, ` + (voyHome2x+30) + ` ` + (voyHome2y-30) + `, ` + (voyHome2x+3) + ` ` + (voyHome2y-3) + `" stroke="#C0C0C077" fill="none" stroke-dasharray="3" marker-end="url(#arrow)"/>
 			<path d="M `+ voyHome2x + ` ` + (voyHome2y+10) + ` C ` + (voyHome2x+80) + ` ` + (voyHome2y-20) + `, ` + (voyHome3x) + ` ` + (voyHome3y+50) + `, ` + voyHome3x + ` ` + voyHome3y + `" stroke="#C0C0C077" fill="none" stroke-dasharray="3" marker-end="url(#arrow)"/>
+			
+		<!-- One straight arrow for VOY Future's End timeline -->	
 			<line x1="` + futuresEnd1x + `" y1="` + futuresEnd1y + `" x2="` + futuresEnd2x + `" y2="` + futuresEnd2y + `" stroke="#C0C0C077" stroke-dasharray="3" marker-end="url(#arrow)"/>
 			
 		<!-- Large bracket for Starfleet Founded year -->
@@ -604,7 +618,7 @@ function drawLines(){
 		<!-- Large bracket for SHO: The Girl Who Made The Stars -->
 			<polyline points="` + (TGWMTS1.right-40) + `,` + (TGWMTS1.top + ((TGWMTS1.bottom-TGWMTS1.top)/2)) + ` ` + (TGWMTS1.right-20) + `,` + (TGWMTS1.top + ((TGWMTS1.bottom-TGWMTS1.top)/2)) + ` ` + (TGWMTS2.left-20) + `,` + (TGWMTS2.top - 5 + ((TGWMTS2.bottom-TGWMTS2.top)/2)) + ` ` + (TGWMTS2.left) + `,` + (TGWMTS2.top + ((TGWMTS2.bottom-TGWMTS2.top)/2)) + ` ` + (TGWMTS2.left-20) + `,` + (TGWMTS2.top + 5 + ((TGWMTS2.bottom-TGWMTS2.top)/2)) + ` ` + (TGWMTS3.right-20) + `,` + (TGWMTS3.top + ((TGWMTS3.bottom-TGWMTS3.top)/2)) + ` ` + (TGWMTS3.right-40) + `,` + (TGWMTS3.top + ((TGWMTS3.bottom-TGWMTS3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
 		
-		<!-- Green dotted line for Kevlin timeline -->
+		<!-- Green dotted line for Kelvin timeline -->
 			<line x1="` + kelvin1.right + `" y1="` + (kelvin1.top + ((kelvin1.bottom-kelvin1.top)/2)) + `" x2="` + (kelvin2.right - 10) + `" y2="` + (kelvin2.top + ((kelvin2.bottom-kelvin2.top)/2)) + `" stroke="#00B757DD" stroke-dasharray="3" />
 			<line x1="` + (kelvin2.right - 10) + `" y1="` + (kelvin2.top + ((kelvin2.bottom-kelvin2.top)/2)) + `" x2="` + (kelvin4a.right - 10) + `" y2="` + (kelvin4a.top + ((kelvin4a.bottom-kelvin4a.top)/2)) + `" stroke="#00B757DD" stroke-dasharray="3" />
 			<path d="M `+ (kelvin3a.right - 10) + ` ` + (kelvin3a.top + ((kelvin3a.bottom-kelvin3a.top)/2)) + ` C ` + (kelvin3a.right - 60) + ` ` + (kelvin3a.top - 50 + ((kelvin3a.bottom-kelvin3a.top)/2)) + `, ` + (kelvin3b.right+43) + ` ` + (kelvin3b.top-43) + `, ` + (kelvin3b.right+3) + ` ` + (kelvin3b.top) + `" stroke="#00B757DD" fill="none" stroke-dasharray="3" marker-end="url(#greenarrow)"/>
@@ -620,10 +634,13 @@ function drawLines(){
 		<!-- Large bracket for Yvette Picard death -->
 			<polyline points="` + (YPDeath1.right-40) + `,` + (YPDeath1.top + ((YPDeath1.bottom-YPDeath1.top)/2)) + ` ` + (YPDeath1.right-20) + `,` + (YPDeath1.top + ((YPDeath1.bottom-YPDeath1.top)/2)) + ` ` + (YPDeath2.left-20) + `,` + (YPDeath2.top - 5 + ((YPDeath2.bottom-YPDeath2.top)/2)) + ` ` + (YPDeath2.left) + `,` + (YPDeath2.top + ((YPDeath2.bottom-YPDeath2.top)/2)) + ` ` + (YPDeath2.left-20) + `,` + (YPDeath2.top + 5 + ((YPDeath2.bottom-YPDeath2.top)/2)) + ` ` + (YPDeath3.right-20) + `,` + (YPDeath3.top + ((YPDeath3.bottom-YPDeath3.top)/2)) + ` ` + (YPDeath3.right-40) + `,` + (YPDeath3.top + ((YPDeath3.bottom-YPDeath3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
 			
+		<!-- Small bracket for USS Franklin (first Warp 4 ship) -->
+			<polyline points="` + (USSFranklin1.right-20) + `,` + (USSFranklin1.top + ((USSFranklin1.bottom-USSFranklin1.top)/2)) + ` ` + (USSFranklin1.right-10) + `,` + (USSFranklin1.top + ((USSFranklin1.bottom-USSFranklin1.top)/2)) + ` ` + (USSFranklin2.left-10) + `,` + (USSFranklin2.top - 5 + ((USSFranklin2.bottom-USSFranklin2.top)/2)) + ` ` + (USSFranklin2.left) + `,` + (USSFranklin2.top + ((USSFranklin2.bottom-USSFranklin2.top)/2)) + ` ` + (USSFranklin2.left-10) + `,` + (USSFranklin2.top + 5 + ((USSFranklin2.bottom-USSFranklin2.top)/2)) + ` ` + (USSFranklin3.right-10) + `,` + (USSFranklin3.top + ((USSFranklin3.bottom-USSFranklin3.top)/2)) + ` ` + (USSFranklin3.right-20) + `,` + (USSFranklin3.top + ((USSFranklin3.bottom-USSFranklin3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
+			
 			<image href="images/times_arrow.png" x="` + (times_arrow.right - ((times_arrow.right-times_arrow.left)/2) - 104) + `" y="` + (times_arrow.top - 140) + `" opacity="0.9"/>
 			<image href="images/cochrane.png" x="` + (warp1.right - ((warp1.right-warp1.left)/2) - 115) + `" y="` + (warp1.top - 192) + `" opacity="0.9"/>
 			<image href="images/tcoteof.png" x="` + (tcoteof.right - ((tcoteof.right-tcoteof.left)/2) - 93) + `" y="` + (tcoteof.top - 140) + `" opacity="0.8"/>
-			<image href="images/kelvinkirkandspock.png" x="` + (stb.right + 20) + `" y="` + (stb.bottom - 109) + `" opacity="1"/>
+			<image href="images/kelvinkirkandspock.png" x="` + (stb.right) + `" y="` + (stb.top - 109) + `" opacity="1"/>
 			<image href="images/khan.png" x="` + (twok.right - ((twok.right-twok.left)/2) - 62) + `" y="` + (twok.top - 126) + `" opacity="0.9"/>
 			<image href="images/georgiou.png" x="` + (S31.right - ((S31.right-S31.left)/2) - 55) + `" y="` + (S31.top - 113) + `" opacity="0.8"/>
 			<image href="images/garrett.png" x="` + (yar2.left - 5) + `" y="` + (yar2.top - 82) + `" opacity="0.9"/>

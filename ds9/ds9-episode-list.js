@@ -62,6 +62,7 @@ function createTable(array) {
 					cell = cell.replace("🟨",'<span title="Holodeck Episode">🟨</span>');
 					cell = cell.replace("🎭",'<span title="Lighthearted/Comedy">🎭</span>');
 					cell = cell.replace("😱",'<span title="Scary">😱</span>');
+					cell = cell.replace("😢",'<span title="Tear-jerker">😢</span>');
 					cell = cell.replace("🥇",'<span title="1st place episode">🥇</span>');
 					cell = cell.replace("🥈",'<span title="2nd place episode">🥈</span>');
 					cell = cell.replace("🥉",'<span title="3rd place episode">🥉</span>');
@@ -810,7 +811,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 3x25,Facets,,✔ Recommended,4.4
 3x26,The Adversary,,🕶 Must Watch,7.5
 4x01/02 [FL],The Way of the Warrior,🌌V🟡🥈,🕶 ‼ Must Watch/Bare Minimum,9.6
-4x03,The Visitor,🎖,✔+ Highly Recommended,8.6
+4x03,The Visitor,🎖😢,✔+ Highly Recommended,8.6
 4x04,Hippocratic Oath,,-,5.3
 4x05,Indiscretion,,✔ Recommended,6.7
 4x06,Rejoined,,-,5.1
@@ -872,7 +873,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 6x10,The Magnificent Ferengi,,-,6.2
 6x11,Waltz,V🟡,✔+ Highly Recommended,6.1
 6x12,Who Mourns for Morn?,,-,5.4
-6x13,Far Beyond the Stars,🌌🏅,✔+ Highly Recommended,9.0
+6x13,Far Beyond the Stars,🌌🏅😢,✔+ Highly Recommended,9.0
 6x14,One Little Ship,,-,4.8
 6x15,Honor Among Thieves,,-,4.1
 6x16,Change of Heart,,-,3.5

@@ -45,6 +45,7 @@ function drawLines(){
 	var event12 = getOffset(document.getElementById("event12"));
 	var event13 = getOffset(document.getElementById("event13"));
 	var event14 = getOffset(document.getElementById("event14"));
+	var event15 = getOffset(document.getElementById("event15"));
 	
 	var AOT1 = getOffset(document.getElementById("AOT1"));
 	var AOT2 = getOffset(document.getElementById("AOT2"));
@@ -72,7 +73,7 @@ function drawLines(){
 				</marker>
 			</defs>
 
-			<polygon points="` + (AOT1.left)+`,`+(AOT1.top)+` `+(AOT1.right)+`,`+(AOT1.top)+` `+(AOT2.left)+`,`+(AOT2.top)+` `+(AOT3.left)+`,`+(AOT3.top)+` `+(AOT4.left)+`,`+(AOT4.bottom)+` `+(AOT5.left)+`,`+(AOT5.bottom) + `" fill="#55005511" stroke="violet" stroke-width="3px" />
+			<polygon points="` + (AOT1.left)+`,`+(AOT1.top)+` `+(AOT1.right)+`,`+(AOT1.top)+` `+(AOT2.left)+`,`+(AOT2.top)+` `+(AOT3.left)+`,`+(AOT3.top)+` `+(AOT4.left)+`,`+(AOT4.top)+` `+(AOT5.left)+`,`+(AOT5.top) + `" fill="#55005511" stroke="violet" stroke-width="3px" />
 			
 			<polygon points="` + (FT1.left)+`,`+(FT1.top)+` `+(FT1.right)+`,`+(FT1.top)+` `+(FT2.right)+`,`+(FT2.bottom)+` `+(FT3.left)+`,`+(FT3.bottom) + `" fill="#66330022" stroke="orange" stroke-width="3px" />
 			
@@ -120,9 +121,7 @@ function drawLines(){
 			
 			<path d="M `+ (event14.left) + ` ` + (event14.top+30) + ` C ` + (event14.left-1000) + ` ` + (event14.top+250) + `, ` + (PLATL.left-20) + ` ` + (PLATL.bottom+100) + `, ` + (PLATL.left+50) + ` ` + (PLATL.bottom-10) + `" stroke="#9A65F6" stroke-width="2px" fill="none" stroke-dasharray="8" marker-end="url(#purplearrow)"/>
 			
-			
-			
-
+			<line x1="` + (event14.right-10) + `" y1="` + (event14.bottom-((event14.bottom - event14.top)/2)) + `" x2="` + (event15.left+10) + `" y2="` + (event15.bottom-((event15.bottom - event15.top)/2)) + `" stroke="#DF4982" stroke-width="2px" marker-end="url(#pinkarrow)"/>
 			
 	</svg>`;
 		

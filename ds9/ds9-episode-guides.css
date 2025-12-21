@@ -49,7 +49,7 @@
 	font-style: normal;
 }
 
-/* ---------------------------------- FILM CARD ---------------------------------- */
+/* ---------------------------------- OTHER CARDS ---------------------------------- */
 
 .filmCard {
 	position: relative;
@@ -71,7 +71,37 @@
 	height: 250px;
 	margin-right: 25px;
 }
-
+.outsideSeriesCard,.outsideEpisodeCard {
+	position: relative;
+	z-index: 0;
+	margin: auto;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 15px;
+	width: 30%;
+	overflow: clip;
+	min-height: 200px;
+	background-color: #030303;
+	line-height: 1.1;
+	scroll-margin-top: 50px;
+}
+.outsideSeriesCard{
+	padding: 0px 10px 0px 525px;
+}
+.outsideEpisodeCard{
+	padding: 0px 10px 0px 275px;
+}
+.outsideCardImg {
+	position: absolute;
+	z-index:-1;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 200px;
+	width: auto;
+	overflow:hidden;
+	object-fit:contain;
+}
 
 /* ---------------------------------------- ------------ ---------------------------------------- */
 /* ---------------------------------------- EPISODE CARD ---------------------------------------- */

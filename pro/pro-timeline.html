@@ -6,17 +6,20 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	var host = window.location.hostname;
+	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  gtag('config', 'G-DM44X85QLJ');
+		gtag('config', 'G-DM44X85QLJ');
+	}
 </script>
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.4.4">
-<link rel="stylesheet" href="pro.css?v=1.4.4">
+<link rel="stylesheet" href="../main.css?v=1.4.5">
+<link rel="stylesheet" href="pro.css?v=1.4.5">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 
 <meta property="og:title" content="Prodigy Timeline | C6Reviews">
@@ -52,6 +55,25 @@
 	font-size: x-small;
 	color: goldenRod;
 	width: 95%;
+}
+.emptyYear td {
+	font-size: 11px;
+	padding: 0 !important;
+}
+#tableContainer > table > tbody > tr {
+    position: relative
+}
+#tableContainer > table > tbody > tr:hover::after {
+    background: #FFFFFF33;
+    border-radius: 0.1em;
+    content: "";
+    top: 2px;
+	bottom: 3px;
+    left: 42px;
+	right: -3px;
+    position: absolute;
+	transform: skewY(-10deg) rotate(10deg);
+	pointer-events: none;
 }
 
 </style>
@@ -126,16 +148,17 @@
 <div id="tableContainer">
 	<table class="timelineTable" style="margin-left:auto;margin-right:auto;">
 		<tr>
-			<th colspan="7">Universe Timeline<span class="goToTimelineLink">&nbsp;<a href="../timeline/index.html#PRO">Go to full timeline ➡&#xFE0E;</a></span></th>
+			<th colspan="8">Universe Timeline<span class="goToTimelineLink">&nbsp;<a href="../timeline/index.html#PRO">Go to full timeline ➡&#xFE0E;</a></span></th>
 		</tr>
 		<tr>
 			<td style="width: 40px">2362</td>
 			<td style="width: 240px;font-size:large">⭐<br>Start Below</td>
+			<td style="width: 210px">&nbsp;</td>
 			<td style="width: 240px">&nbsp;</td>
-			<td style="width: 240px">&nbsp;</td>
-			<td style="width: 240px">&nbsp;</td>
-			<td style="width: 240px">&nbsp;</td>
-			<td style="width: 240px">&nbsp;</td>
+			<td style="width: 210px">&nbsp;</td>
+			<td style="width: 210px">&nbsp;</td>
+			<td style="width: 210px">&nbsp;</td>
+			<td style="width: 210px">&nbsp;</td>
 		</tr>
 		<tr>
 			<td>2363</td>
@@ -145,10 +168,12 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
 		<tr>
 			<td>2364</td>
 			<td>↓</td>
+			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -163,6 +188,7 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
 		<tr>
 			<td>2366</td>
@@ -172,10 +198,12 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
 		<tr>
 			<td>2367</td>
 			<td>↓</td>
+			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -190,10 +218,12 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
 		<tr>
 			<td>2369</td>
 			<td>↓</td>
+			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -208,12 +238,14 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
 		<tr>
 			<td>2371</td>
 			<td>↓</td>
 			<td>&nbsp;</td>
 			<td rowspan="8" id="VOY" class="seriesBox secondGen" style="vertical-align:middle">STAR TREK<br>VOYAGER</td>
+			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -225,6 +257,7 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
 		<tr>
 			<td>2373</td>
@@ -232,6 +265,7 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<th colspan="2" id="FT1">Fractured Timeline</th>
+			<td>&nbsp;</td>
 		</tr>
 		<tr>
 			<td>2374</td>
@@ -240,10 +274,12 @@
 			<td>&nbsp;</td>
 			<td id="event11">Chakotay returns with the <em>Protostar</em> from the future and maroons himself on Ysida</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
 		<tr>
 			<td>2375</td>
 			<td>↓</td>
+			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -256,10 +292,12 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
 		<tr>
 			<td>2377</td>
 			<td>↓</td>
+			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -272,10 +310,12 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
 		<tr>
 			<td>2379</td>
 			<td style="font-size:x-large">⭐START HERE⭐</td>
+			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -290,12 +330,14 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
 		<tr>
 			<td>2381</td>
 			<th id="AOT1">Alternate Original Timeline</th>
 			<td>&nbsp;</td>
 			<td id="event4b">The Vindicator and her Drednok arrive in their past</td>
+			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -308,12 +350,14 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
 		<tr>
 			<td>2383</td>
 			<td>&nbsp;</td>
 			<td id="AOT2">&nbsp;</td>
-			<td id="event6">Dal finds the <em>Protostar</em> on Tars Lamora<br><span class="episodeReference"><a href="pro-s1.html#e01">PRO 1x01: Lost and Found</a></span></td>
+			<td id="event6" style="border:2px solid yellow"><span style="font-weight:bold;color:yellow;font-family:Exo,Roboto,sans-serif;font-size:14px">SERIES PREMIERE</span><br>Dal finds the <em>Protostar</em> on Tars Lamora<br><span class="episodeReference"><a href="pro-s1.html#e01">PRO 1x01: Lost and Found</a></span></td>
+			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -326,6 +370,7 @@
 			<td id="event8"><span style="color:#27b9fd">Dal &amp; crew take the <em>Infinity</em></span> into the anomaly to the future<br><span class="episodeReference"><a href="pro-s2.html#e02">PRO 2x02: Into the Breach, Part II</a></span></td>
 			<td id="event12">Dal &amp; crew return from the future <br><span class="episodeReference"><a href="pro-s2.html#e04">PRO 2x04: Temporal Mechanics 101</a></span></td>
 			<td id="event13">Dal &amp; crew help Chakotay get the <em>Protostar</em> flying again<br><span class="episodeReference"><a href="pro-s2.html#e12">PRO 2x12: Last Flight of the Protostar, Part II</a></span></td>
+			<td>&nbsp;</td>
 		</tr>
 		<tr>
 			<td>2385</td>
@@ -335,6 +380,7 @@
 			<td>&nbsp;</td>
 			<td id="FT3">&nbsp;</td>
 			<td id="event14" style="padding-top:10px;">The gang sends the <span style="color:#A171EA"><em>Protostar</em></span> back to Tars Lamora, closing the time loop<br><span class="episodeReference"><a href="pro-s2.html#e20">PRO 2x20: Ouroboros, Part II</a></span></td>
+			<td id="event15"><span style="font-size:14px;font-weight:bold">Rogue Synth Attack on Mars</span><br><span class="episodeReference"><a href="pro-s2.html#e20">PRO 2x20: Ouroboros, Part II</a></span></td>
 		</tr>
 		<tr>
 			<td>2386</td>
@@ -343,8 +389,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2387</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -352,8 +399,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2388</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -361,8 +409,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2389</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -370,8 +419,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2390</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -379,8 +429,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2391</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -388,8 +439,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2392</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -397,8 +449,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2393</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -406,8 +459,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2394</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -415,8 +469,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2395</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -424,8 +479,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2396</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -433,8 +489,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2397</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -442,8 +499,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2398</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -451,8 +509,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2399</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -460,8 +519,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2400</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -469,8 +529,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2401</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -478,8 +539,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2402</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -487,8 +549,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2403</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -496,8 +559,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2404</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -505,8 +569,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2405</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -514,8 +579,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2406</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -523,8 +589,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2407</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -532,8 +599,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2408</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -541,8 +609,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2409</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -550,8 +619,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2410</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -559,8 +629,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2411</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -568,8 +639,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2412</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -577,8 +649,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2413</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -586,8 +659,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2414</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -595,8 +669,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2415</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -604,8 +679,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2416</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -613,8 +689,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2417</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -622,8 +699,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2418</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -631,8 +709,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2419</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -640,8 +719,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2420</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -649,8 +729,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2421</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -658,8 +739,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2422</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -667,8 +749,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2423</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -676,8 +759,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2424</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -685,8 +769,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2425</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -694,8 +779,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2426</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -703,8 +789,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2427</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -712,8 +799,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2428</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -721,8 +809,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2429</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -730,8 +819,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2430</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -739,8 +829,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2431</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -748,8 +839,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2432</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -757,8 +849,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2433</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -766,8 +859,9 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2434</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -775,9 +869,11 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2435</td>
+			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -790,24 +886,27 @@
 			<td id="event2">Chakotay arrives in the future, is held prisoner for months, and then stays behind while sending the <span style="color:#A171EA"><em>Protostar</em></span> back in time<br><span class="episodeReference minorTimeTravel"><a href="pro-s1.html#e16">❰&nbsp;&nbsp;PRO 1x16: Preludes (flashback)</a></span></td>
 			<td id="event3"><span style="color:#27b9fd">The Diviner, The Vindicator, and their Drednoks</span> go back in time after the <em>Protostar</em><br><span class="episodeReference minorTimeTravel"><a href="pro-s1.html#e16">❰&nbsp;&nbsp;PRO 1x16: Preludes (flashback)</a></span></td>
 			<td id="AOT3">&nbsp;</td>
-			<td id="event9">Dal &amp; crew arrive in the future. This time, <span style="color:#A171EA">Chakotay is on board the <em>Protostar</em></span> when it enters the anomaly to go back in time<br><span class="episodeReference majorTimeTravel"><a href="pro-s2.html#e03">❱❱&nbsp;&nbsp;PRO 2x03: Who Saves the Saviors</a></span></td>
+			<td id="event9" style="padding-right:8px;">Dal &amp; crew arrive in the future. This time, <span style="color:#A171EA">Chakotay is on board the <em>Protostar</em></span> when it enters the anomaly to go back in time<br><span class="episodeReference majorTimeTravel"><a href="pro-s2.html#e03">❱❱&nbsp;&nbsp;PRO 2x03: Who Saves the Saviors</a></span></td>
 			<td id="event10"><span style="color:#27b9fd">Dal &amp; crew rig the <em>Infinity</em></span> to return to their own time<br><span class="episodeReference majorTimeTravel"><a href="pro-s2.html#e04">❱❱&nbsp;&nbsp;PRO 2x04: Temporal Mechanics 101</a></span></td>
 			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
-		<tr>
+		<tr class="emptyYear">
 			<td>2437</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td>2438</td>
 			<td id="AOT5">&nbsp;</td>
 			<td>&nbsp;</td>
 			<td id="AOT4">&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="emptyYear">
+			<td>2438</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>

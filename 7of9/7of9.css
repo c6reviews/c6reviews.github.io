@@ -171,6 +171,7 @@ input[type=button]:hover {
 
 .filterableRow {
 	width:100%;
+	font-variant-ligatures: none;
 }
 .col_releaseAndTimelineOrder{
 	text-align: right;

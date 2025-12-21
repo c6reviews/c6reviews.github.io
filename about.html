@@ -6,16 +6,20 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	var host = window.location.hostname;
+	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  gtag('config', 'G-DM44X85QLJ');
+		gtag('config', 'G-DM44X85QLJ');
+	}
 </script>
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="main.css?v=1.4.4">
+<link rel="stylesheet" href="main.css?v=1.4.5">
+<link rel="stylesheet" href="tts.css?v=1.4.5">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <meta property="og:title" content="About | C6Reviews">
@@ -23,6 +27,15 @@
 <meta property="og:image" content="https://c6reviews.com/images/ogimage.png">
 <meta property="og:url" content="https://c6reviews.com/about.html">
 <meta property="og:description" content="About C6Reviews.com">
+
+<script src="tts.js"></script>
+<script>
+	function prepTextToSpeech(id)
+	{
+		let text = document.getElementById(id).innerText;
+		return text.replaceAll("monetize","monuhtize").replaceAll(/ko-fi/gi,"Co-fi");
+	}
+</script>
 
 <title>C6Reviews | About</title>
 
@@ -65,9 +78,12 @@
 
 	<h3 style="text-align:center">I had nothing to do with that unfortunate Mars incident.</h3>
 	
-	<div class="sectionHeader">What is C6Reviews.com?</div>
+	<div class="sectionHeader">What is C6Reviews.com?
+		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select id="ttsratemain" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+		<button class="TTSplayButton" id="tts1pb" onclick="textToSpeech('tts1',prepTextToSpeech('tts1'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
+	</div>
 	<img src="images/c6.png" style="float:right;width:300px;margin-bottom:20px;margin-left:10px;margin-top:15px" alt="a smiling, pale-skinned android with C6 tattooed to his forehead">
-	<div class="serif">
+	<div class="serif" id="tts1">
 	<p>C6Reviews.com is created and maintained by one man, as a personal project, primarily for his own entertainment.</p>
 	
 	<p>As <em>Star Trek</em> has entered a new era since the premiere of <em>Star Trek: Discovery</em> in 2017, more and more people are being introduced to the <em>Star Trek</em> Universe. It is my hope that this site can serve as a resource for newcomers and long-time fans alike, to help better understand the events and stories, and to find the links between them. This site operates on the following key principles:</p>
@@ -79,21 +95,30 @@
 	</ul>
 	</div>
 	
-	<div class="sectionHeader">Who is C6?</div>
-	<div class="serif">
-	<p>C6 is just another of many internet denizens who posts his opinions about <em>Star Trek</em> stuff. His opinion is no more important than anyone else's, it's just that he took the time to make this idiotic website. C6 grew up in the 90s with <em>Star Trek</em> shows like <em>The Next Generation</em>, <em>Deep Space Nine</em>, and <em>Voyager</em>, and he's excited that <em>Trek</em> has made a return to television... er, a streaming service. C6 has spent much of his life trying to temper his enthusiasm for <em>Star Trek</em> and not be too &ldquo;nerdy&rdquo; about it, but he's starting to embrace his inner Trekkie as he gets older.</p>
+	<div class="sectionHeader">Who is C6?
+		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+		<button class="TTSplayButton" id="tts2pb" onclick="textToSpeech('tts2',prepTextToSpeech('tts2'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
+	</div>
+	<div id="tts2" class="serif">
+	<p>C6 is just another of many internet denizens who posts his opinions about <em>Star Trek</em> stuff. His opinion is no more important than anyone else's, it's just that he took the time to make this idiotic website. C6 grew up in the 90s with <em>Star Trek</em> shows like <em>The Next Generation</em>, <em>Deep Space Nine</em>, and <em>Voyager</em>, and he's excited that <em>Trek</em> has made a return to television (okay, a streaming service). C6 has spent much of his life trying to temper his enthusiasm for <em>Star Trek</em> and not be too &ldquo;nerdy&rdquo; about it, but he's starting to embrace his inner Trekkie as he gets older.</p>
 	<p>Feel free to reach out to C6 on his Bluesky social media account <a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank">@c6reviews.bsky.social</a>.</p>
 	</div>
 	
-	<div class="sectionHeader">What makes this site any different than IMDb or Memory Alpha?</div>
-	<ul class="serif">
+	<div class="sectionHeader">What makes this site any different than IMDb or Memory Alpha?
+		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+		<button class="TTSplayButton" id="tts3pb" onclick="textToSpeech('tts3',prepTextToSpeech('tts3'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
+	</div>
+	<ul id="tts3" class="serif">
 		<li><strong>Designed for first-time viewers and long-time fans: </strong>This site is designed with the first-time viewer in mind, but also in such a way that long-time fans should also find valuable.</li>
 		<li><strong>Spoiler avoidance: </strong>This site strives to avoid spoiling any episode or show that you haven't watched yet &ndash; even the full timeline has spoilers hidden.</li>
 		<li><strong>Easily find links and references: </strong>This site gets to the point of each episode and makes it easy to find connections to other episodes and series. Everything on the site will eventually be linked together, from each episode to the timeline and back!</li>
 	</ul>
 	
-	<div class="sectionHeader">Support C6</div>
-	<div class="serif">
+	<div class="sectionHeader">Support C6
+		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+		<button class="TTSplayButton" id="tts4pb" onclick="textToSpeech('tts4',prepTextToSpeech('tts4'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
+	</div>
+	<div id="tts4" class="serif">
 	<p>I am certainly not trying to monetize this site, nor do I expect to make any sort of profit off of this. I made this site as a personal project for my own enjoyment and hopefully for the occasional new <em>Star Trek</em> fan who wanders across the site. If you are feeling generous and you like my work, you can visit my Ko-fi page at <a href="https://ko-fi.com/c6reviews/" target="_blank">https://ko-fi.com/c6reviews/</a> and/or use the &ldquo;support&rdquo; link at the top-right of most pages. Proceeds will be used toward the maintenance of this site which includes registration of the domain, storage, etc. Thank you!</p>
 	</div>
 </div>

@@ -6,18 +6,21 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	var host = window.location.hostname;
+	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  gtag('config', 'G-DM44X85QLJ');
+		gtag('config', 'G-DM44X85QLJ');
+	}
 </script>
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.4.4">
-<link rel="stylesheet" href="ds9.css?v=1.4.4">
-<link rel="stylesheet" href="ds9-episode-guides.css?v=1.4.4">
+<link rel="stylesheet" href="../main.css?v=1.4.5">
+<link rel="stylesheet" href="ds9.css?v=1.4.5">
+<link rel="stylesheet" href="ds9-episode-guides.css?v=1.4.5">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 
 <meta property="og:title" content="DS9 Season 3 | C6Reviews">
@@ -1080,6 +1083,15 @@
 			</td></tr>
 		</table>
 	</div>
+	<p>&nbsp;</p>
+	
+	<div class="outsideSeriesCard">
+		<a href="../voy/index.html"><img src="../voy/images/voy-header.png" class="outsideCardImg"></a>
+		<div style="font-family:BB,Roboto,sans-serif;font-size:xx-large;margin-top:15px"><em>Star Trek: Voyager</em> &nbsp;premieres</div>
+		
+		<p>The series <a href="../voy/index.html"><em>Star Trek: Voyager</em></a> premiered on January 16, 1995. Its first episode, <a href="..voy/voy-s1.html#e01">VOY 1x01/02: Caretaker</a>, takes place between these <em>DS9</em> episodes. In it, Harry Kim and Tom Paris can be seen in Quark's bar on DS9 before their ship departs for the badlands.</p>
+	</div>
+	
 	<p>&nbsp;</p>
 	<div id="e13" class="episodeCard">
 		<img src="images/ds9-3x13.png" class="episodeCardBG" alt="Kai Winn and Dr. Bashir talking to Bareil, who is being treated in sickbay">

@@ -6,11 +6,14 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	var host = window.location.hostname;
+	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  gtag('config', 'G-DM44X85QLJ');
+		gtag('config', 'G-DM44X85QLJ');
+	}
 </script>
 
 <style>
@@ -26,7 +29,7 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="main.css?v=1.4.4.1">
+<link rel="stylesheet" href="main.css?v=1.4.5">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <meta property="og:title" content="Updates | C6Reviews">
@@ -69,6 +72,20 @@
 			<th style="width:170px;">Date</th>
 			<th>Version</th>
 			<th style="text-align:left;padding-left: 35px;">Description</th>
+		</tr>
+		<tr>
+			<td><span class="updateDate">December 21, 2025</span></td>
+			<td>1.4.5</td>
+			<td>
+				<ul>
+					<li><span class="newGuideRelease">The film review for <a href="films/beyond.html"><em>Star Trek Beyond</em></a> has been posted!</span></li>
+					<li>Several updates and corrections to the <a href="timeline/index.html">Star Trek Universe Full Timeline</a> were made as a result of re-watching <em>Star Trek Beyond</em>.</li>
+					<li>Added a <strong>&ldquo;tear-jerker&rdquo; designator</strong> to a few episodes in <em>DS9</em> and <em>VOY</em>. There will be some in the upcoming <em>TNG</em> guide, too.</li>
+				</ul>
+				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
+					Minor improvements to the <em>Prodigy</em> series timeline; added two notes in the <em>DS9</em> episodes guides where important events from <em>Voyager</em> overlap; disabled ligatures in searchable episode tables and the main timeline search; added text-to-speech to the About page; improved the look of the TNG-style combadge icon so it doesn't appear quite as flat; tweaked GA code to avoid localhost reporting; and I know you're going to find this hard to believe, but I found more hyphen-work to do, because I couldn't get enough of it last May... this time it involved switching to non-breaking hyphens in all ship registry numbers and/or letter suffixes. Hooray!
+				</div>
+			</td>
 		</tr>
 		<tr>
 			<td><span class="updateDate" style="color:#999">December 13, 2025</span></td>

@@ -6,18 +6,21 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	var host = window.location.hostname;
+	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  gtag('config', 'G-DM44X85QLJ');
+		gtag('config', 'G-DM44X85QLJ');
+	}
 </script>
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.4.4">
-<link rel="stylesheet" href="../tts.css?v=1.4.4">
-<link rel="stylesheet" href="films.css?v=1.4.4">
+<link rel="stylesheet" href="../main.css?v=1.4.5">
+<link rel="stylesheet" href="../tts.css?v=1.4.5">
+<link rel="stylesheet" href="films.css?v=1.4.5">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 
 <meta property="og:title" content="Star Trek Into Darkness | C6Reviews">
@@ -77,7 +80,7 @@
 			</tr>
 			<tr>
 				<td><strong>In-universe year:</strong></td>
-				<td>Kelvin 2259 (primary)</td>
+				<td>Kelvin 2259</td>
 			</tr>
 		</table>
 	</div>
@@ -142,13 +145,13 @@
 			<td class="seriesBox thirdGen" rowspan="3">STAR TREK <br>
 				STRANGE NEW WORLDS (SNW)</td>
 			<td class="kTimelineSplit">¦</td>
-			<td id="STID" class="filmBox kelvin activeBox">INTO DARKNESS</td>
+			<td id="STID" class="filmBox kelvin activeBox" style="border-bottom: dashed 2px !important">INTO DARKNESS</td>
 			<td style="color: #00B757;">↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑</td>
 		</tr>
 		<tr>
 			<td>2260</td>
 			<td class="kTimelineSplit">¦</td>
-			<td>&nbsp;</td>
+			<td class="kelvin activeBox" style="border-top:none !important">5-year mission begins</td>
 			<td style="color: #00B757;">↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑</td>
 		</tr>
 		<tr>
@@ -161,14 +164,14 @@
 			<td>2262</td>
 			<td>&nbsp;</td>
 			<td class="kTimelineSplit">¦</td>
-			<td id="STB" class="filmBox kelvin">BEYOND</td>
+			<td>&nbsp;</td>
 			<td style="color: #00B757;">↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑</td>
 		</tr>
 		<tr>
 			<td>2263</td>
 			<td>&nbsp;</td>
 			<td class="kTimelineSplit">¦</td>
-			<td>&nbsp;</td>
+			<td id="STB" class="filmBox kelvin"><a href="beyond.html">BEYOND</a></td>
 			<td style="color: #00B757;">↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑</td>
 		</tr>
 		<tr>
@@ -215,7 +218,7 @@
 		</tr>
 		<tr>
 			<td>2270</td>
-			<td class="seriesBox firstGen" style="border-top:1px hidden #2F2F39;text-align:left;padding-left:25px;"><span style="font-size:small">THE ANIMATED SERIES (TAS)</span></td>
+			<td class="seriesBox firstGen" style="border-top:1px hidden #2F2F39;text-align:right"><span style="font-size:small">THE ANIMATED SERIES (TAS)</span></td>
 			<td class="kTimelineSplit">¦</td>
 			<td>&nbsp;</td>
 			<td style="color: #00B757;">↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑</td>
@@ -402,7 +405,7 @@
 		<td class="myRatingDescriptionBox" style="width:260px">My rating: </td>			
 		<td class="ratingNumber">3</td>
 		<td>&nbsp;</td>
-		<td class="ScoreBox" rowspan="5">FINAL SCORE<br>
+		<td class="ScoreBox" rowspan="4">FINAL SCORE<br>
 			
 			<strong><span class="xx-large">5.2</span></strong>
 		</td>
@@ -420,10 +423,6 @@
 	<tr>
 		<td class="NIMDBratingDescriptionBox">Normalized IMDb rating:</td>
 		<td class="ratingNumber" style="vertical-align:top">8.6</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td colspan="2" style="font-size:small;font-style:italic;text-align:center">Why the disparity? Remember that Rotten Tomatoes and IMDb effectively rate movies against all other films of its era, whereas ratings from Ex Astris Scientia and myself rate this film only against other <em>Star Trek</em> films. This is a fine film, it's just not a fine Star Trek film.</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr>

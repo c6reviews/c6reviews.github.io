@@ -6,18 +6,21 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	var host = window.location.hostname;
+	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  gtag('config', 'G-DM44X85QLJ');
+		gtag('config', 'G-DM44X85QLJ');
+	}
 </script>
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.4.4">
-<link rel="stylesheet" href="voy.css?v=1.4.4">
-<link rel="stylesheet" href="voy-episode-list.css?v=1.4.4">
+<link rel="stylesheet" href="../main.css?v=1.4.5">
+<link rel="stylesheet" href="voy.css?v=1.4.5">
+<link rel="stylesheet" href="voy-episode-list.css?v=1.4.5">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 
 <meta property="og:title" content="VOY Episode List | C6Reviews">
@@ -95,6 +98,7 @@
 					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="🌎" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon">🌎</span>&nbsp;Episode&nbsp;takes&nbsp;place&nbsp;on&nbsp;Earth</label>
 					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="🟨" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon">🟨</span>&nbsp;Holodeck&nbsp;episodes</label>
 					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="🎭" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon">🎭</span>&nbsp;Comedy/Lighthearted</label>
+					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="😢" onClick="setFilters('tags')" ><span class="checkmark"></span><span class="icon">😢</span>&nbsp;Tear-jerker</label>
 					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="⚑" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon">⚑&#xFE0E;</span>&nbsp;Flagged</label>
 				</div>
 			</td>
