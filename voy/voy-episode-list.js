@@ -65,6 +65,7 @@ function createTable(array) {
 					cell = cell.replace("👬",'<span title="Parallel / Alternate Reality">👬</span>');
 					cell = cell.replace("🎭",'<span title="Lighthearted/Comedy">🎭</span>');
 					cell = cell.replace("😱",'<span title="Scary">😱</span>');
+					cell = cell.replace("😢",'<span title="Tear-jerker">😢</span>');
 					cell = cell.replace("🥇",'<span title="1st place episode">🥇</span>');
 					cell = cell.replace("🥈",'<span title="2nd place episode">🥈</span>');
 					cell = cell.replace("🥉",'<span title="3rd place episode">🥉</span>');
@@ -807,7 +808,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 3x19,Rise,,-,5.2
 3x20,Favorite Son,,-,3.0
 3x21,Before and After,🕖,🕶 Must Watch,7.9
-3x22,Real Life,,-,5.3
+3x22,Real Life,😢,-,5.3
 3x23,Distant Origin,,✔ Recommended,7.6
 3x24,Displaced,,-,5.5
 3x25,Worst Case Scenario,🟨,✔ Recommended,7.7
@@ -868,7 +869,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 6x05,Alice,,-,4.8
 6x06,Riddles,,-,6.3
 6x07,Dragon's Teeth,,-,6.0
-6x08,One Small Step,,✔ Recommended,6.7
+6x08,One Small Step,😢,✔ Recommended,6.7
 6x09,The Voyager Conspiracy,,✔ Recommended,5.9
 6x10,Pathfinder,🌎P⚑V🟡,🕶 ‼ Must Watch/Bare Minimum,7.6
 6x11,Fair Haven,🟨,-,2.4

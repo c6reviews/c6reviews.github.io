@@ -6,16 +6,19 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	var host = window.location.hostname;
+	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  gtag('config', 'G-DM44X85QLJ');
+		gtag('config', 'G-DM44X85QLJ');
+	}
 </script>
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="main.css?v=1.4.4.1">
+<link rel="stylesheet" href="main.css?v=1.4.5">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <meta property="og:title" content="Star Trek reviews and guides | C6Reviews">
@@ -83,8 +86,8 @@
 						<img class="marqueeImg" src="images/ogimage.png" alt="a Starfleet delta with the logo 'C6Reviews'">
 						<div class="marqueeTitle">SITE UPDATES AND NEWS</div>
 						<div class="marqueeSubtitle"></div>
-						<div class="marqueeContent">Last update: November 23 &ndash; <a href="updates.html">Details</a>
-							<br><br>The review of <a href="films/intodarkness.html"><em>Star Trek Into Darkness</em></a> went live on November 23.<br>
+						<div class="marqueeContent">Last update: December 21 &ndash; <a href="updates.html">Details</a>
+							<br><br>The reviews for all three Kelvin Timeline films are finished as of December 21.<br>
 						</div>
 					</div>
 					<div class="marquee-page">

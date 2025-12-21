@@ -6,19 +6,22 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	var host = window.location.hostname;
+	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  gtag('config', 'G-DM44X85QLJ');
+		gtag('config', 'G-DM44X85QLJ');
+	}
 </script>
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.4.4">
-<link rel="stylesheet" href="../tts.css?v=1.4.4">
-<link rel="stylesheet" href="pic.css?v=1.4.4">
-<link rel="stylesheet" href="pic-episode-guides.css?v=1.4.4">
+<link rel="stylesheet" href="../main.css?v=1.4.5">
+<link rel="stylesheet" href="../tts.css?v=1.4.5">
+<link rel="stylesheet" href="pic.css?v=1.4.5">
+<link rel="stylesheet" href="pic-episode-guides.css?v=1.4.5">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 
 <meta property="og:title" content="PIC Season 2 | C6Reviews">
@@ -281,7 +284,7 @@
 								
 								<li>Picard calls Elnor &ldquo;the first fully-Romulan cadet.&rdquo; This could be a nod to a previous cadet, Simon Tarses, who was one-quarter Romulan and a person of interest during an inquiry in <a href="../tng/tng-s4.html#e21">TNG 4x21: The Drumhead</a>.</li>
 								<li>Picard attributes the line, &ldquo;Look up, and let's see what's out there&rdquo; to his mother. Picard's final line in the series premiere of <em>The Next Generation</em>, <a href="../tng/tng-s1.html#e01">TNG 1x01/02: Encounter at Farpoint</a>, is &ldquo;Let's see what's out there. Engage,&rdquo; effectively kicking off the series.</li>
-								<li>Rios's ship is the U.S.S. Stargazer, NCC-82893. Picard's first command was the U.S.S. Stargazer, NCC-2893. Both have the distinguishing four-nacelle layout.</li>
+								<li>Rios's ship is the U.S.S. Stargazer, NCC&#8209;82893. Picard's first command was the U.S.S. Stargazer, NCC&#8209;2893. Both have the distinguishing four-nacelle layout.</li>
 								<li>Picard says he is looking to make changes to the <a href="https://memory-alpha.fandom.com/wiki/Kobayashi_Maru_scenario" target="_blank">Kobayashi Maru</a>, an infamous test for Starfleet cadets that assesses their ability to cope with a no-win scenario. It's established in <a href="../films/thewrathofkhan.html"><em>Star Trek II: The Wrath of Khan</em></a> that James Kirk famously beat the test by reprogramming the scenario. Said Kirk, &ldquo;I don't like to lose.&rdquo;</li>
 								<li>When Picard beams to Los Angeles to visit Guinan at her bar, he first looks at the street sign for &ldquo;Forward Avenue&rdquo; and then walks to the bar, which is number 10 on that street. This is a play on <a href="https://memory-alpha.fandom.com/wiki/Ten_Forward" target="_blank">Ten Forward</a>, the bar and lounge that Guinan ran on the Enterprise&#8209;D. It was on deck ten, forward section.</li>
 								<li>Picard activates the auto-destruct program with authorization code &ldquo;zero-zero-zero-destruct-zero.&rdquo; This is the same code used by James Kirk in <a href="../films/thesearchforspock.html"><em>Star Trek III: The Search for Spock</em></a>.</li>
@@ -298,7 +301,9 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td class="nitpickery" id="tts1d"><ul>
-								<li>About 13 minutes into the episode, when Picard is looking for a book and Laris enters, there is a stone tablet sitting on the table that looks remarkably like the Reckoning Tablet from <a href="../ds9/ds9-s6.html#e21">DS9 6x21: The Reckoning</a>, which is notably an unresolved story. The tablet is also prominently visible in the <a href="https://www.youtube.com/watch?v=xk9F90wklRQ" target="_blank">Season 2 Teaser</a>. However, the tablet is never referenced, nor does it have anything to do with the story. It is mere <em>mise en scène</em>. This makes me wonder if the prop was used intentionally as a red herring for eagle-eyed viewers, or if it was just something in the prop archives that a set designer thought would make an interesting centerpiece, without understanding its origin.</li>
+								<li>About 13 minutes into the episode, when Picard is looking for a book and Laris enters, there is a stone tablet sitting on the table that looks remarkably like the Reckoning Tablet from <a href="../ds9/ds9-s6.html#e21">DS9 6x21: The Reckoning</a>, which is notably an unresolved story. The tablet is also prominently visible in the <a href="https://www.youtube.com/watch?v=xk9F90wklRQ" target="_blank">Season 2 Teaser</a>. However, the tablet is never referenced, nor does it have anything to do with the story. It is mere <em>mise en scène</em>. This makes me wonder if the prop was used intentionally as a red herring for eagle-eyed viewers, or if it was just something in the prop archives that a set designer thought would make an interesting centerpiece, without understanding its origin.<br>
+								<img src="images/pic-2x01-tablet.png" alt="On the left, Captain Sisko standing next to the tablet in the DS9 episode 'The Reckoning'. On the right, Picard and Laris standing over an identical (though broken) tablet in his study" style="margin-top:5px;height:300px"></li>
+								
 								<li>When Picard enters the bar, Guinan starts to talk to him without even turning around. This could be a hint at Guinan's &ldquo;sixth sense&rdquo; about things... orrrrr it could just be that she saw his reflection in the mirrored wall behind the bar. Ha!</li>
 								<li>I can't stop laughing at Rios running back to his captain's chair when the crisis starts. There's just something comical about it, like he can't run the ship unless he's in the chair or something.</li>
 							</ul></td>	
@@ -1262,7 +1267,8 @@
 											<li><em>&ldquo;There! Are! FOUR! Lights!&rdquo;</em> &mdash; after Picard nearly succumbs to psychological manipulation in <a href="../tng/tng-s6.html#e11">TNG 6x11: Chain of Command, Part II</a>.</li>
 										</ul>
 									</li>
-									<li>After Guinan attempts to summon Q, a man enters the bar and Picard asks Guinan, &ldquo;Is it him?&rdquo; She closes her eyes and holds her hands up in a distinctive way, with the thumb, pointer finger, and middle finger extended while the ring and pinkie fingers are curled. This is the same hand position that Guinan uses in <a href="../tng/tng-s2.html#e16">TNG 2x16: Q Who</a>, when she discovers Q on the Enterprise.
+									<li>After Guinan attempts to summon Q, a man enters the bar and Picard asks Guinan, &ldquo;Is it him?&rdquo; She closes her eyes and holds her hands up in a distinctive way, with the thumb, pointer finger, and middle finger extended while the ring and pinkie fingers are curled. This is the same hand position that Guinan uses in <a href="../tng/tng-s2.html#e16">TNG 2x16: Q Who</a>, when she discovers Q on the Enterprise.</li>
+									<span class="spoilerContent"><li>Picard's father makes one brief appearance, as an illusion, in <a href="../tng/tng-s6.html#e15">TNG 6x15: Tapestry</a>.</li></span>
 								</ul>
 							</td>
 						</tr>

@@ -21,7 +21,7 @@ const reviews = [
 ];
 // PIC 3x10 HAS BEEN OMITTED FROM THE ABOVE LIST BECAUSE THE EPISODE PHOTO IS A MAJOR SPOILER
 
-//const reviews = ['pic/pic-s3.html#e07'];
+// const reviews = ['voy/voy-s6.html#e15'];
 
 // Select random Review
 var randomReview = reviews[Math.floor(Math.random() * reviews.length)];
@@ -69,9 +69,9 @@ async function getReviewElement(url, elementId) {
     }
 }
 
-getReviewElement('https://c6reviews.com/' + selectedPage , selectedReview).then(([reviewURL, imageURL, imageALT, series, epNumber, title, myScore, score]) => {
+getReviewElement(selectedPage , selectedReview).then(([reviewURL, imageURL, imageALT, series, epNumber, title, myScore, score]) => {
 
-	document.getElementById('randomReviewImage').innerHTML = "<a href='" + reviewURL + "'><img src='" + imageURL + "' alt='" + imageALT + "'></a>";
+	document.getElementById('randomReviewImage').innerHTML = `<a href="` + reviewURL + `"><img src="` + imageURL + `" alt="` + imageALT + `"></a>`;
 	document.getElementById('randomReviewEpisodeID').innerHTML = series + " " + epNumber;
 	document.getElementById('randomReviewTitle').innerHTML = "<a style='white-space:wrap;' href='" + reviewURL + "'>" + title.replace(/ \(parts i and ii\)/gi,'') + "</a>";
 	

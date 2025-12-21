@@ -55,6 +55,9 @@ function textToSpeech(id,text) {
 			// Characters
 			text = text.replaceAll("La Forge","LaForge").replaceAll("Guinan","Guynan").replaceAll("Data's","Dayta's");
 		
+			// Actors
+			text = text.replaceAll("Takei","Tuh-kay");
+		
 			// Misc
 			text = text.replaceAll(/tricorder/gi,"try-corder").replaceAll(/voyage/gi,"voyij").replaceAll(/\bPart I\b/g,"Part 1").replaceAll(/\bParts I\b/g,"Parts 1").replaceAll(/mythos/gi,"myth-ohhs");
 			

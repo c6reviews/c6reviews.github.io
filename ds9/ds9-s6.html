@@ -6,18 +6,21 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	var host = window.location.hostname;
+	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  gtag('config', 'G-DM44X85QLJ');
+		gtag('config', 'G-DM44X85QLJ');
+	}
 </script>
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="../main.css?v=1.4.4">
-<link rel="stylesheet" href="ds9.css?v=1.4.4">
-<link rel="stylesheet" href="ds9-episode-guides.css?v=1.4.4">
+<link rel="stylesheet" href="../main.css?v=1.4.5">
+<link rel="stylesheet" href="ds9.css?v=1.4.5">
+<link rel="stylesheet" href="ds9-episode-guides.css?v=1.4.5">
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 
 <meta property="og:title" content="DS9 Season 6 | C6Reviews">
@@ -1046,6 +1049,15 @@
 		</table>
 	</div>
 	<p>&nbsp;</p>
+	
+	<div class="outsideEpisodeCard">
+		<img src="../voy/images/voy-4x14.png" class="outsideCardImg">
+		<div style="font-family:BB,Roboto,sans-serif;font-size:xx-large;margin-top:15px">Voyager's Doctor makes contact with Starfleet</div>
+		
+		<p>The <em>Voyager</em> episode <a href="../voy/voy-s4.html#e14">VOY 4x14: Message in a Bottle</a> takes place between these <em>DS9</em> episodes, airing on January 21, 1998. In it, the Doctor makes contact with Starfleet for the first time since the USS Voyager was lost in the Delta Quadrant. This will never be mentioned in the <em>Deep Space Nine</em> series.</p>
+	</div>
+	
+	<p>&nbsp;</p>
 	<div id="e12" class="episodeCard">
 		<img src="images/ds9-6x12.png" class="episodeCardBG" alt="Quark giving a eulogy for Morn in his bar">
 		<table class="episodeCardTable">
@@ -1167,6 +1179,10 @@
 						<tr>
 							<td class="iconBox">🌌</td>
 							<td><div class="iconDescription"><strong>Iconic episode</strong></div></td>
+						</tr>
+						<tr>
+							<td class="iconBox">😢</td>
+							<td><div class="iconDescription"><strong>Tear-jerking episode</strong></td>
 						</tr>
 						<tr>
 							<td class="quote">&ldquo;</td>
@@ -1909,12 +1925,16 @@
 							<td><div class="iconDescription">The tablet was found beneath the lost city of B'hala, which Sisko discovered back in <a href="ds9-s5.html#e10">DS9 5x10: Rapture</a>.</div></td>
 						</tr>
 						<tr>
+							<td class="iconBox">📖</td>
+							<td><div class="icopnDescription"><strong>Unexplored, open story: </strong>This seems to be an unresolved story line, with the battle not coming to a conclusion. Will the <em>Trek</em> franchise continue with this story some day?</div></td>
+						</tr>
+						<tr>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<td class="iconBox"></td>
-							<td><div class="watchRecommendationExplanation"><strong>Watch Recommendation: </strong>I'm not giving this one a recommendation, but it does seem to be an unresolved story line. Will the Trek franchise pick it up some day?</div></td>
+							<td><div class="watchRecommendationExplanation"><strong>Watch Recommendation: </strong>It's a decent episode, but I'm not giving it a recommendation unless they pick up and resolve this storyline sometime in the future.</div></td>
 						</tr>
 					</table>
 				</div>

@@ -6,16 +6,19 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	var host = window.location.hostname;
+	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  gtag('config', 'G-DM44X85QLJ');
+		gtag('config', 'G-DM44X85QLJ');
+	}
 </script>
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="https://c6reviews.com/main.css?v=1.4.4">
+<link rel="stylesheet" href="https://c6reviews.com/main.css?v=1.4.5">
 <link rel="icon" type="image/x-icon" href="https://c6reviews.com/images/favicon.ico">
 
 <meta property="og:title" content="404 Page Not Found | C6Reviews">
@@ -49,9 +52,9 @@
 	
 	<h2> Oops! That page doesn't exist (yet)! </h2>
 
-	<h3> If you clicked a link for another Star Trek series like <em>The Next Generation</em> or <em>Discovery</em>, I haven't created those episode review sites yet... but I will! Some day! </h3>
+	<h3> If you clicked a link for another Star Trek series like <em>The Original Series</em> or <em>Discovery</em>, I haven't created those episode review sites yet... but I will! Eventually! </h3>
 
-	<h3> Just hit your "back" button for now, or return to the <a href="https://c6reviews.com/index.html" style="text-decoration: underline dotted;">home</a> page. </h3>
+	<h3> Just hit your "back" button for now, or return to the <a href="https://c6reviews.com/index.html" style="text-decoration: underline dotted;">home</a> page, or stay here and play this silly mini-game!</h3>
 </div>
 
 <div id="TTDIV"></div>

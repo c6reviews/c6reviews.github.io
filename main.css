@@ -309,7 +309,7 @@ body li {
 	width: 0;
 	height: 4px;
 	border-bottom: 4px solid #e47545;
-	z-index: 3;
+	z-index: 99999;
 	transition: 0.8s;
 }
 
@@ -850,10 +850,12 @@ body li {
 .timelineTable .seriesBox:not(.noIcon)::before{
 	content: "📺";
 	position: absolute;
-	left: -6px;
-	top: -10px;
-	font-size: 28px;
+	left: -8px;
+	top: -6px;
+	font-size: 26px;
+	text-shadow: 0 0 8px #FFF;
 	transform: rotate(-20deg);
+	z-index: 200;
 }
 .timelineTable .episodeBox {
 	position: relative;
@@ -864,12 +866,14 @@ body li {
 	font-size: medium;
 }
 .timelineTable .episodeBox::before{
-	content: "📺";
+	content: "1️⃣";
 	position: absolute;
-	left: -6px;
-	top: -6px;
-	font-size: 28px;
-	transform: rotate(-20deg);
+	left: -2px;
+	top: -2px;
+	font-size: 20px;
+	text-shadow: 0 0 3px #FFF;
+	transform: rotate(-10deg);
+	z-index: 200;
 }
 .timelineTable .filmBox {
 	position: relative;
@@ -883,10 +887,17 @@ body li {
 .timelineTable .filmBox::before{
 	content: "📽️";
 	position: absolute;
-	left: -10px;
+	left: -12px;
 	top: -10px;
-	font-size: 32px;
+	font-size: 30px;
 	transform: rotate(-20deg);
+	z-index: 200;
+}
+.timelineTable .filmBox:not(.kelvin)::before{
+	text-shadow: 0 0 8px #FFF;
+}
+.timelineTable .filmBox:is(.kelvin)::before{
+	text-shadow: 0 0 8px #00B757;
 }
 .timelineTable .activeBox {
 	color: yellow !important;
