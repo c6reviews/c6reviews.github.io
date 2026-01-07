@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	
 	if (year == '2026' && monthAndDate != 'September 8') {
-		track.innerHTML = marqueePage_60thYear + track.innerHTML;
+		track.innerHTML += marqueePage_60thYear;
 	}
 	
 	if (monthAndDate.includes("October")) {
