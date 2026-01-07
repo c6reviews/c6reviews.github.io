@@ -71,7 +71,24 @@
 h2 {
 	font-family: Exo, Roboto, sans-serif;
 }
-
+#articleContent > :first-child::first-letter {
+	initial-letter: 2;
+	font-size: 48px;
+	font-family: BB,serif;
+	float: left;
+	line-height: 1;
+	margin-right: 4px;
+}
+.articleImage {
+	text-align: center;
+	font-family: Roboto, sans-serif;
+	font-style: italic;
+	font-size: small;
+	margin: 8px 12px;
+	padding-bottom: 3px;
+	border-bottom: 1px dotted #C0C0C0;
+	width: fit-content;
+}
 .criticQuote {
 	font-family: CCS, serif;
 	font-size: x-large;
