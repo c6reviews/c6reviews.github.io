@@ -1,0 +1,232 @@
+
+html {
+	scroll-behavior: smooth;
+}
+
+.articleImage {
+	text-align: center;
+	font-family: Roboto, sans-serif;
+	font-style: italic;
+	font-size: small;
+	margin: 8px 12px;
+	padding-bottom: 3px;
+	border-bottom: 1px dotted #C0C0C0;
+	width: fit-content;
+}
+.sectionHeader {
+	display: block;
+	position: relative;
+	color: #E47545;
+	font-family: BB, Roboto, sans-serif;
+	font-size: x-large;
+	margin-top: 40px;
+	border-bottom: 1px solid #E47545;
+	overflow: hidden;
+}
+/* ---------------------------------------- SPOILER TAGS ---------------------------------------- */
+.spoiler{
+	
+}
+.spoilerTag{
+	font-weight: bold;
+	color: orange;
+	cursor: pointer;
+	white-space: nowrap;
+}
+.spoilerTag:hover{
+	background-color: #845600EE;
+	border-radius: 3px;
+}
+.spoilerContent{
+	filter: blur(6px);
+	color: #FFE1CA;
+	transition: 0.5s;
+	user-select: none;
+	pointer-events: none;
+}
+
+/* ---------------------------------------- TABLE SETUP ---------------------------------------- */
+
+#tableContainer {
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 550px;
+	scroll-margin-top: 50px;
+}
+#episodeTable {
+	border: 1px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #181818EE;
+	border-collapse: collapse;
+	width: 90%;
+}
+#episodeTable th {
+	border-top: 1px dotted #DDD;
+	border-bottom: 1px dotted #DDD;
+	background-color: #303030;
+	cursor: pointer;
+}
+#episodeTable td {
+	 border-bottom: 1px dotted #DDD;
+	 padding: 3px 8px;
+}
+
+
+/* ---------------------------------------- PRE-HEADER ROW ---------------------------------------- */
+
+#preHeaderRow {
+	position:sticky;
+	top:0;
+	background-color:#181818;
+	z-index: 5;
+}
+#preHeaderRow::after {
+	content: "";
+	position: absolute;
+	right: -2px;
+	top: 0px;
+	background-color: #181818;
+	width: 2px;
+	height: 100%;
+}
+#filterTotalbox {
+	width: 80px;
+	text-align: center;
+	border: 1px solid #ccc;
+	padding: 3px;
+	background-color: #303030;
+	font-size: small;
+}
+#filterTotal {
+	font-size: large;
+}
+input[type=text] {
+	background-color: #333;
+	color: white;
+	border: 1px solid gray;
+	border-radius: 3px;
+}
+input[type=button] {
+	background-color: #00000000;
+	color: #C0C0C0;
+	border: 1px solid #C0C0C0;
+	cursor: pointer;
+}
+input[type=button]:hover {
+	background-color: #1b8aba;
+	color: white;
+}
+.episodeSearchBoxContainer{
+	display: inline-block;
+}
+.filterModeContainer {
+	font-size: 14px;
+	display: inline-block;
+	position: absolute;
+	right: 8px;
+	top: 0;
+	line-height: 1.4;
+	text-align: right;
+}
+.filterDropdownContainer {
+	padding: 8px;
+	border:1px solid #FFFFFF;
+	border-radius:5px;
+	width:max-content;
+	text-align: left;
+	position: absolute;
+	background-color:black;
+	z-index: 100;
+	display: none;
+}
+.dropdownArrow {
+	width:24px;
+	height:24px;
+	padding-left:4px;
+	padding-top:0px;
+	border-radius:2px;
+	margin-left:2px;
+}
+.textClearButton {
+	width:24px;
+	height:24px;
+	padding-left:6px;
+	padding-top:0px;
+	border-radius:2px;
+	margin-left:2px;
+}
+.resetFiltersButton {
+	height: 24px;
+}
+.icon {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+/* ---------------------------------------- HEADER ROW ---------------------------------------- */
+
+#headerRow{
+	position:sticky;
+	top:72px;
+}
+#headerRow::after {
+	content: "";
+	position: absolute;
+	right: -2px;
+	top: 0px;
+	background-color: #303030;
+	width: 2px;
+	height: 100%;
+}
+.sortarrows {
+	color: #555;
+	font-weight: bold;
+}
+
+
+/* -------------------------------------- REMAINING ROWS -------------------------------------- */
+
+.filterableRow {
+	width:100%;
+	font-variant-ligatures: none;
+}
+.spoilerRow {
+	display:none;
+}
+.col_releaseOrder{
+	text-align: right;
+	padding-right: 15px !important;
+}
+.col_timelineOrder{
+	text-align: right;
+	padding-right: 15px !important;
+}
+.col_series{
+	text-align: center;
+}
+.col_episodeNumber{
+	
+}
+.col_episodeTitle{
+	
+}
+.col_notes {
+
+}
+.col_episodeRecommendation {
+	
+}
+.col_episodeRating {
+	font-weight: bold;
+	text-align: center;
+	border-left: 3px solid #e47545;
+	border-right: 3px solid #e47545;
+}
+
+.mustWatch {
+	color: #66FF66;
+}	
