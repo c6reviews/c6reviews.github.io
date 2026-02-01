@@ -282,7 +282,7 @@ var marqueePage_C6ReviewsDebut = `
 		<img class="marqueeImg" src="images/marquee/c6-anniversary.png">
 		<div class="marqueeTitle">February 1</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
-		<div class="marqueeContent">C6Reviews &ndash; this website &ndash; is <div class="yearDiff">2024</div> old today!</div>
+		<div class="marqueeContent">C6Reviews &ndash; this website &ndash; is <div class="yearDiff">2025</div> old today!</div>
 	</div>`
 	
 var marqueePage_KirkBirthday = `
