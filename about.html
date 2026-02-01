@@ -18,8 +18,8 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="main.css?v=1.4.5">
-<link rel="stylesheet" href="tts.css?v=1.4.5">
+<link rel="stylesheet" href="main.css?v=1.5">
+<link rel="stylesheet" href="tts.css?v=1.5">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <meta property="og:title" content="About | C6Reviews">
@@ -50,6 +50,11 @@
 		border-bottom: 1px solid #E47545;
 		overflow: hidden;
 	}
+	#AIContentTable td {
+		font-family: Exo, Roboto, sans-serif;
+		border-bottom: 1px dotted;
+		padding: 3px;
+	}
 </style>
 </head>
 
@@ -65,7 +70,7 @@
 			<span class="pageSubtitle">About C6Reviews</span>
 		</div>
 	</div>
-	<div class="c6Right"><img src="images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"><a href="index.html" style="margin-top:8px;">HOME</a><a href="about.html">ABOUT</a><a href="updates.html">UPDATES</a>
+	<div class="c6Right"><a href="index.html"><img src="images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="about.html" style="margin-top:8px;">ABOUT</a><a href="updates.html">UPDATES</a><a href="blog/index.html">BLOG</a>
 	
 	<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a>
 	
@@ -119,12 +124,66 @@
 		<button class="TTSplayButton" id="tts4pb" onclick="textToSpeech('tts4',prepTextToSpeech('tts4'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 	</div>
 	<div id="tts4" class="serif">
-	<p>I am certainly not trying to monetize this site, nor do I expect to make any sort of profit off of this. I made this site as a personal project for my own enjoyment and hopefully for the occasional new <em>Star Trek</em> fan who wanders across the site. If you are feeling generous and you like my work, you can visit my Ko-fi page at <a href="https://ko-fi.com/c6reviews/" target="_blank">https://ko-fi.com/c6reviews/</a> and/or use the &ldquo;support&rdquo; link at the top-right of most pages. Proceeds will be used toward the maintenance of this site which includes registration of the domain, storage, etc. Thank you!</p>
+	<p>I am certainly not trying to monetize this site, nor do I expect to make any sort of profit off of this. I made this site as a personal project for my own enjoyment and hopefully for the occasional new <em>Star Trek</em> fan who wanders across the site. If you are feeling generous and you like my work, you can visit my Ko-fi page at <a href="https://ko-fi.com/c6reviews/" target="_blank">https://ko-fi.com/c6reviews/</a> and/or use the &ldquo;support&rdquo; link at the top-right of most pages. Proceeds will be used toward the maintenance of this site which includes registration of the domain, storage, etc.</p>
 	</div>
+	
+	<div class="sectionHeader">AI Policy
+		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+		<button class="TTSplayButton" id="tts5pb" onclick="textToSpeech('tts5',prepTextToSpeech('tts5'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
+	</div>
+	<div id="tts5" class="serif">
+		<br>Generally speaking, the content on this website comes from my own mind and hands, with limited exceptions:
+		<table id="AIContentTable" style="border-collapse:collapse;">
+			<tr>
+				<td style="width:200px;text-align:right">&nbsp;</td>
+				<td style="width:20px">&nbsp;</td>
+				<td style="width:200px">&nbsp;</td>
+				<td style="padding-left: 8px;">&nbsp;</td>
+			</tr>
+			<tr>
+				<td style="text-align:right;font-weight:bold;padding-right:20px">Writing, Opinions, and Other Text Content</td>
+				<td style="text-align:center;">✅</td>
+				<td>0% generative AI</td>
+				<td style="padding-left: 8px;">I would never use AI to write for me, create opinions about <em>Star Trek</em> material, or generate any other text content. All of the written content is my own unless explicitly quoted as being from another source, but that source will never be AI.</td>
+			</tr>
+			<tr>
+				<td style="text-align:right;font-weight:bold;padding-right:20px">Coding</td>
+				<td style="text-align:center;">✅</td>
+				<td>0% generative AI</td>
+				<td style="padding-left: 8px;">This site is entirely hand-coded in HTML, CSS, and JavaScript, using a simple text editor. While AI has sometimes helped me with specific coding questions, I use it to understand and fix problems on my own, and never to just write blocks of code in my stead.</td>
+			</tr>
+			<tr>
+				<td style="text-align:right;font-weight:bold;padding-right:20px">Images of <em>Star Trek</em> characters, ships, etc.</td>
+				<td style="text-align:center;">⚠&#xFE0F;</td>
+				<td>Limited AI image editing</td>
+				<td style="padding-left: 8px;">Images containing <em>Star Trek</em> material always come from legitimate sources (like shows and movies) and are never AI-generated. While I edit most of the site's images by hand, I have used AI for things like upscaling poor-quality images and occasionally for content generation, which is limited to adding style elements or &ldquo;uncropping&rdquo; images that were cut off because of older television aspect ratios. Some examples of these image manipulations are shown below.</td>
+			</tr>
+			<tr>
+				<td style="text-align:right;font-weight:bold;padding-right:20px">Other Images</td>
+				<td style="text-align:center;">❗&#xFE0F;</td>
+				<td>May be AI&#8209;generated</td>
+				<td style="padding-left: 8px;">Obviously the image of the C6 android (seen above and in the site logo) is AI&#8209;generated, although it is loosely based on an actual photo of myself. I generally try to avoid AI-generated content, but it may happen from time to time. This site will <em>never</em> deceptively try to pass off an AI-generated image as something legitimate.</td>
+			</tr>
+		</table>
+		<div style="width:50%;min-height:250px;margin:auto;margin-top:20px;text-align:center;border:1px solid #C0C0C0;padding:6px;">
+			<strong>Uncropping example: </strong> The original photo of Guinan and Data from the episode &ldquo;Time's Arrow&rdquo; cuts off Guinan's right shoulder and a small part of Data's left arm. AI was used to &ldquo;uncrop&rdquo; the photo to make both characters fully visible.<br>
+			<div style="display:inline-block;vertical-align:middle;margin:10px 25px;text-align:center"><img src="images/ai-examples/timesarrow_orig.png" style="border-bottom:1px solid #C0C0C0;border-left:2px dashed red;border-right:2px dashed red;" alt="Guinan and Data in 19th-century clothing (cropped image)"><br>Original</div>
+			<span class="xx-large">➡&#xFE0E;</span>
+			<div style="display:inline-block;vertical-align:middle;margin:10px 25px;text-align:center"><img src="images/ai-examples/timesarrow_uncropped.png" style="border-bottom:1px solid #C0C0C0;border-left:2px dashed green;border-right:2px dashed green;" alt="Guinan and Data in 19th-century clothing (uncropped image)"><br>&ldquo;Uncropped&rdquo;</div>
+		</div>
+		<div style="width:50%;min-height:250px;margin:auto;margin-top:20px;text-align:center;border:1px solid #C0C0C0;padding:6px;">
+			<strong>Style element content generation example: </strong> The photos of Picard and Burnham are taken from legitimate sources and not AI-generated. The &ldquo;vs&rdquo; banner, however, is AI-generated.<br>
+			<div style="display:inline-block;vertical-align:middle;margin:10px 25px;text-align:center"><img src="images/ai-examples/vs.png" style="height:200px" alt="Picard and Burnham with a 'vs' banner in the foreground"><br></div>
+			<span class="xx-large">&nbsp;</span>
+			<div style="display:inline-block;vertical-align:middle;margin:10px 25px;text-align:center"><img src="images/ai-examples/vs-map.png" style="height:200px" alt="Silhouettes of Picard and Burnham with text indicating they are from legitimate sources, with the foreground 'vs' banner highlighted with text indicating that it is AI-generated"><br></div>
+		</div>
+	</div>
+	
+
 </div>
 
 <div class="pageFooter"><img src="images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">HOME</a>&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
-
+<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.</div>
 <div id="TTDIV"></div>
 
 </body>

@@ -1,0 +1,171 @@
+
+html {
+	scrollbar-gutter: stable;
+}
+
+/* ---------------------------------------- TABLE SETUP ---------------------------------------- */
+#tableContainer{
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 550px;
+}
+#episodeTable{
+	border: 1px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #181818EE;
+	border-collapse: collapse;
+	width: 980px;
+}
+#episodeTable th {
+	border-top: 1px dotted #DDD;
+	border-bottom: 1px dotted #DDD;
+	background-color: #303030;
+	cursor: pointer;
+}
+#episodeTable td {
+	 border-bottom: 1px dotted #DDD;
+	 padding: 3px;
+}
+
+
+/* ---------------------------------------- PRE-HEADER ROW ---------------------------------------- */
+#preHeaderRow {
+	position:sticky;
+	top:0;
+	background-color:#181818;z-index:5
+}
+#preHeaderRow::after {
+	content: "";
+	position: absolute;
+	right: -2px;
+	top: 0px;
+	background-color: #181818;
+	width: 2px;
+	height: 100%;
+}
+#filterTotalbox {
+	width: 80px;
+	text-align: center;
+	border: 1px solid #ccc;
+	padding: 3px;
+	background-color: #303030;
+	font-size: small;
+}
+#filterTotal {
+	font-size: large;
+}
+input[type=text] {
+	background-color: #333;
+	color: white;
+	border: 1px solid gray;
+	border-radius: 3px;
+}
+input[type=button] {
+	background-color: #00000000;
+	color: #C0C0C0;
+	border: 1px solid #C0C0C0;
+	cursor: pointer;
+}
+input[type=button]:hover {
+	background-color: #1b8aba;
+	color: white;
+}
+.episodeSearchBoxContainer{
+	display: inline-block;
+}
+.filterModeContainer {
+	font-size: 14px;
+	display: inline-block;
+	position: absolute;
+	right: 8px;
+	top: 0;
+	line-height: 1.4;
+	text-align: right;
+}
+
+.filterDropdownContainer {
+	padding: 8px;
+	border:1px solid #FFFFFF;
+	border-radius:5px;
+	width:max-content;
+	text-align: left;
+	position: absolute;
+	background-color:black;
+	z-index: 10;
+	display: none;
+}
+.dropdownArrow {
+	width:24px;
+	height:24px;
+	padding-left:4px;
+	padding-top:0px;
+	border-radius:2px;
+	margin-left:2px;
+}
+.textClearButton {
+	width:24px;
+	height:24px;
+	padding-left:6px;
+	padding-top:0px;
+	border-radius:2px;
+	margin-left:2px;
+}
+.resetFiltersButton {
+	height: 24px;
+}
+.icon {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+/* ---------------------------------------- HEADER ROW ---------------------------------------- */
+#headerRow{
+	position:sticky;
+	top:64px;
+	height: 32px;
+	vertical-align: bottom;
+}
+#headerRow::after {
+	content: "";
+	position: absolute;
+	right: -2px;
+	top: 0px;
+	background-color: #303030;
+	width: 2px;
+	height: 100%;
+}
+.sortarrows {
+	color: #555;
+	font-weight: bold;
+}
+
+/* -------------------------------------- REMAINING ROWS -------------------------------------- */
+
+.filterableRow {
+	width:100%;
+	font-variant-ligatures: none;
+}
+.col_episodeNumber{
+	
+}
+.col_episodeTitle{
+	
+}
+.col_episodeTags {
+	font-weight: bold;
+	cursor: default;
+}
+.col_episodeRecommendation {
+	
+}
+.col_episodeRating {
+	font-weight: bold;
+	text-align: center;
+	border-left: 3px solid #e47545;
+	border-right: 3px solid #e47545;
+}
+

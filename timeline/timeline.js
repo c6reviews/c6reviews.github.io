@@ -365,6 +365,25 @@ function closeToolTip(caller) {
 	caller.style.display = 'none';
 }
 
+/* -------------------------------------------------- SOURCE POPUP -------------------------------------------------- */
+
+function showSource(caller){
+		var sourceDivContainer = document.getElementById("sourceDivContainer");
+		var sourceDiv = document.getElementById("sourceDiv");
+		var position = caller.getBoundingClientRect();
+
+		sourceDiv.innerHTML = "Source: " + caller.dataset.source;
+		sourceDivContainer.style.top = ((position.top-20) + "px");
+		sourceDivContainer.style.left = (position.left + "px");
+		sourceDivContainer.style.display = 'block';
+		setTimeout(function() {sourceDiv.style.translate = '0 0';},50);
+}
+
+function closeSource() {
+	sourceDivContainer.style.display = 'none';
+	setTimeout(function() {sourceDiv.style.translate = '0 100%';},50);
+}
+
 /* -------------------------------------------------- SCROLL TO TOP/BOTTOM BUTTONS -------------------------------------------------- */
 
 function scrollToTop() {
@@ -544,6 +563,10 @@ function drawLines(){
 	var kelvin4a = getOffset(document.getElementById("kelvin4a"));
 	var kelvin4b = getOffset(document.getElementById("kelvin4b"));
 	
+	// Green dotted line for Star Trek [2009] prologue and primary connection
+	var ST091 = getOffset(document.getElementById("ST09prologue"));
+	var ST092 = getOffset(document.getElementById("ST09"));
+	
 	// Small bracket for Zefram Cochrane birthdate
 	var ZCBorn1 = getOffset(document.getElementById("ZCBorn1"));
 	var ZCBorn2 = getOffset(document.getElementById("ZCBorn2"));
@@ -621,8 +644,11 @@ function drawLines(){
 		<!-- Green dotted line for Kelvin timeline -->
 			<line x1="` + kelvin1.right + `" y1="` + (kelvin1.top + ((kelvin1.bottom-kelvin1.top)/2)) + `" x2="` + (kelvin2.right - 10) + `" y2="` + (kelvin2.top + ((kelvin2.bottom-kelvin2.top)/2)) + `" stroke="#00B757DD" stroke-dasharray="3" />
 			<line x1="` + (kelvin2.right - 10) + `" y1="` + (kelvin2.top + ((kelvin2.bottom-kelvin2.top)/2)) + `" x2="` + (kelvin4a.right - 10) + `" y2="` + (kelvin4a.top + ((kelvin4a.bottom-kelvin4a.top)/2)) + `" stroke="#00B757DD" stroke-dasharray="3" />
-			<path d="M `+ (kelvin3a.right - 10) + ` ` + (kelvin3a.top + ((kelvin3a.bottom-kelvin3a.top)/2)) + ` C ` + (kelvin3a.right - 60) + ` ` + (kelvin3a.top - 50 + ((kelvin3a.bottom-kelvin3a.top)/2)) + `, ` + (kelvin3b.right+43) + ` ` + (kelvin3b.top-43) + `, ` + (kelvin3b.right+3) + ` ` + (kelvin3b.top) + `" stroke="#00B757DD" fill="none" stroke-dasharray="3" marker-end="url(#greenarrow)"/>
+			<path d="M `+ (kelvin3a.right - 10) + ` ` + (kelvin3a.top + ((kelvin3a.bottom-kelvin3a.top)/2) + 15) + ` C ` + (kelvin3a.right - 30) + ` ` + (kelvin3a.top - 20 + ((kelvin3a.bottom-kelvin3a.top)/2)) + `, ` + (kelvin3b.right+43) + ` ` + (kelvin3b.top) + `, ` + (kelvin3b.right+3) + ` ` + (kelvin3b.top + 15) + `" stroke="#00B757DD" fill="none" stroke-dasharray="3" marker-end="url(#greenarrow)"/>
 			<path d="M `+ (kelvin4a.right - 10) + ` ` + (kelvin4a.top + ((kelvin4a.bottom-kelvin4a.top)/2)) + ` C ` + (kelvin4a.right - 60) + ` ` + (kelvin4a.top - 50 + ((kelvin4a.bottom-kelvin4a.top)/2)) + `, ` + (kelvin4b.right+43) + ` ` + (kelvin4b.top-43) + `, ` + (kelvin4b.right+3) + ` ` + (kelvin4b.top) + `" stroke="#00B757DD" fill="none" stroke-dasharray="3" marker-end="url(#greenarrow)"/>
+		
+		<!-- Green dotted line for Kelvin timeline -->
+			<line x1="` + (ST091.left + (ST091.right-ST091.left)/2) + `" y1="` + (ST091.bottom-6) + `" x2="` + (ST092.left + (ST092.right-ST092.left)/2) + `" y2="` + (ST092.top+2) + `" stroke="#00B757DD" stroke-dasharray="3" marker-end="url(#greenarrow)"/>
 		
 		<!-- Small bracket for Zefram Cochrane birthdate -->
 			<polyline points="` + (ZCBorn1.right-20) + `,` + (ZCBorn1.top + ((ZCBorn1.bottom-ZCBorn1.top)/2)) + ` ` + (ZCBorn1.right-10) + `,` + (ZCBorn1.top + ((ZCBorn1.bottom-ZCBorn1.top)/2)) + ` ` + (ZCBorn2.left-10) + `,` + (ZCBorn2.top - 5 + ((ZCBorn2.bottom-ZCBorn2.top)/2)) + ` ` + (ZCBorn2.left) + `,` + (ZCBorn2.top + ((ZCBorn2.bottom-ZCBorn2.top)/2)) + ` ` + (ZCBorn2.left-10) + `,` + (ZCBorn2.top + 5 + ((ZCBorn2.bottom-ZCBorn2.top)/2)) + ` ` + (ZCBorn3.right-10) + `,` + (ZCBorn3.top + ((ZCBorn3.bottom-ZCBorn3.top)/2)) + ` ` + (ZCBorn3.right-20) + `,` + (ZCBorn3.top + ((ZCBorn3.bottom-ZCBorn3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
@@ -915,6 +941,23 @@ function search(dir) {
 
 }
 
+/* ---------------------------------------------- SIMPLIFIED VIEW --------------------------------------------- */
+
+function goSimple() {
+		var rowsToHide = document.getElementById("theTable").querySelectorAll('tr.nonEssential');
+		Array.from(rowsToHide).forEach(row => {
+			row.style.display="none";
+		
+		});
+		var cellsToHide = document.getElementById("theTable").querySelectorAll('tr:not(.nonEssential) td:not(.essential)');
+		Array.from(cellsToHide).forEach(cell => {
+			cell.innerHTML = "";
+			cell.style.backgroundColor = "transparent";
+			cell.style.border = "none";
+			cell.style.borderBottom = "1px dotted #DDD";
+		});
+}
+
 
 /* ------------------------------------------------------------------------------------------------------------
    -------------------------------------------------- ONLOAD --------------------------------------------------
@@ -943,6 +986,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 window.onload = function() {
+
+	//goSimple();
 
 	// Draw the SVG overlay
 	drawLines();
@@ -980,4 +1025,5 @@ window.onload = function() {
 	
 	var bottomBorder = document.getElementById('bottomBorder');
 	setTimeout(function(){bottomBorder.style.width = '100%'},800);
+	
 }

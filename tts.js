@@ -50,16 +50,53 @@ function textToSpeech(id,text) {
 		// ********************************* GLOBAL TEXT REPLACEMENT RULES *********************************
 			
 			// Species and Homeworlds
-			text = text.replaceAll("Romulan","Rahmulin").replaceAll("Ferengi","Fer-ren-gii").replaceAll("Cardassian","Card-ass-ian").replaceAll("Qo'noS","Kro-nohs");
+			text = text.
+				replaceAll("Betazed","Beta-zed").
+				replaceAll("Cardassian","Card-ass-ian").
+				replaceAll("Ferengi","Fer-ren-gii").
+				replaceAll("Ferenginar","Fer-ren-geh-narr").
+				replaceAll("Qo'noS","Kro-nohs").
+				replaceAll("Reman","Reemin").
+				replaceAll("Risa","Ryza").
+				replaceAll("Romulan","Rahmulin").
+				replaceAll("Xahean","zah-HEyan");
 			
 			// Characters
-			text = text.replaceAll("La Forge","LaForge").replaceAll("Guinan","Guynan").replaceAll("Data's","Dayta's");
-		
+			text = text.
+				replaceAll("B'Elanna","Bull-on-uh").
+				replaceAll("B'Etor","bay-tor").
+				replaceAll("Data's","Dayta's").
+				replaceAll("Duras","Duross").
+				replaceAll("Gowron","Gow-ron").
+				replaceAll("Guinan","Guynan").
+				replaceAll("Gul Dukat","Gull Dukaat").
+				replaceAll("Hikaru","Hik-are-ooh").
+				replaceAll("Icheb","E-chehb").
+				replaceAll("La Forge","LaForge").
+				replaceAll("Locutus","locude-us").
+				replaceAll("Martok","Martock").
+				replaceAll("Nagus","Naygus").
+				replaceAll("Sarek","Sareck").
+				replaceAll("Shinzon","Shinzahn").
+				replaceAll("Tuvok","Two-vock");
+
+
 			// Actors
 			text = text.replaceAll("Takei","Tuh-kay");
 		
 			// Misc
-			text = text.replaceAll(/tricorder/gi,"try-corder").replaceAll(/voyage/gi,"voyij").replaceAll(/\bPart I\b/g,"Part 1").replaceAll(/\bParts I\b/g,"Parts 1").replaceAll(/mythos/gi,"myth-ohhs");
+			text = text.
+				replaceAll(/ensign/gi,"ensin").
+				replaceAll("Enterprise‑D's", "Enterprise‑Deez").
+				replaceAll("d'état","d'etat,").
+				replaceAll(/mythos/gi,"myth-ohhs").
+				replaceAll("ol'","oul").
+				replaceAll("PADD","pad").
+				replaceAll(/\bPart I\b/g,"Part 1").
+				replaceAll(/\bParts I\b/g,"Parts 1").
+				replaceAll(/tricorder/gi,"try-corder").
+				replaceAll(/trilithium/gi,"try-lithium").
+				replaceAll(/voyage/gi,"voyij");
 			
 		// *************************************************************************************************
 		

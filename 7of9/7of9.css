@@ -58,7 +58,8 @@ html {
 #preHeaderRow {
 	position:sticky;
 	top:0;
-	background-color:#181818;z-index:5
+	background-color:#181818;
+	z-index: 5;
 }
 #preHeaderRow::after {
 	content: "";
