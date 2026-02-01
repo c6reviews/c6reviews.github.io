@@ -1,65 +1,21 @@
 
 html {
-	scroll-behavior: smooth;
-}
-
-.articleImage {
-	text-align: center;
-	font-family: Roboto, sans-serif;
-	font-style: italic;
-	font-size: small;
-	margin: 8px 12px;
-	padding-bottom: 3px;
-	border-bottom: 1px dotted #C0C0C0;
-	width: fit-content;
-}
-.sectionHeader {
-	display: block;
-	position: relative;
-	color: #E47545;
-	font-family: BB, Roboto, sans-serif;
-	font-size: x-large;
-	margin-top: 40px;
-	border-bottom: 1px solid #E47545;
-	overflow: hidden;
-}
-/* ---------------------------------------- SPOILER TAGS ---------------------------------------- */
-.spoiler{
-	
-}
-.spoilerTag{
-	font-weight: bold;
-	color: orange;
-	cursor: pointer;
-	white-space: nowrap;
-}
-.spoilerTag:hover{
-	background-color: #845600EE;
-	border-radius: 3px;
-}
-.spoilerContent{
-	filter: blur(6px);
-	color: #FFE1CA;
-	transition: 0.5s;
-	user-select: none;
-	pointer-events: none;
+	scrollbar-gutter: stable;
 }
 
 /* ---------------------------------------- TABLE SETUP ---------------------------------------- */
-
-#tableContainer {
+#tableContainer{
 	margin-left: auto;
 	margin-right: auto;
 	min-height: 550px;
-	scroll-margin-top: 50px;
 }
-#episodeTable {
+#episodeTable{
 	border: 1px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #181818EE;
 	border-collapse: collapse;
-	width: 90%;
+	width: 980px;
 }
 #episodeTable th {
 	border-top: 1px dotted #DDD;
@@ -69,17 +25,15 @@ html {
 }
 #episodeTable td {
 	 border-bottom: 1px dotted #DDD;
-	 padding: 3px 8px;
+	 padding: 3px;
 }
 
 
 /* ---------------------------------------- PRE-HEADER ROW ---------------------------------------- */
-
 #preHeaderRow {
 	position:sticky;
 	top:0;
-	background-color:#181818;
-	z-index: 5;
+	background-color:#181818;z-index:5
 }
 #preHeaderRow::after {
 	content: "";
@@ -129,6 +83,7 @@ input[type=button]:hover {
 	line-height: 1.4;
 	text-align: right;
 }
+
 .filterDropdownContainer {
 	padding: 8px;
 	border:1px solid #FFFFFF;
@@ -137,7 +92,7 @@ input[type=button]:hover {
 	text-align: left;
 	position: absolute;
 	background-color:black;
-	z-index: 100;
+	z-index: 10;
 	display: none;
 }
 .dropdownArrow {
@@ -168,10 +123,11 @@ input[type=button]:hover {
 
 
 /* ---------------------------------------- HEADER ROW ---------------------------------------- */
-
 #headerRow{
 	position:sticky;
-	top:72px;
+	top:64px;
+	height: 32px;
+	vertical-align: bottom;
 }
 #headerRow::after {
 	content: "";
@@ -187,26 +143,11 @@ input[type=button]:hover {
 	font-weight: bold;
 }
 
-
 /* -------------------------------------- REMAINING ROWS -------------------------------------- */
 
 .filterableRow {
 	width:100%;
 	font-variant-ligatures: none;
-}
-.spoilerRow {
-	display:none;
-}
-.col_releaseOrder{
-	text-align: right;
-	padding-right: 15px !important;
-}
-.col_timelineOrder{
-	text-align: right;
-	padding-right: 15px !important;
-}
-.col_series{
-	text-align: center;
 }
 .col_episodeNumber{
 	
@@ -214,8 +155,9 @@ input[type=button]:hover {
 .col_episodeTitle{
 	
 }
-.col_notes {
-
+.col_episodeTags {
+	font-weight: bold;
+	cursor: default;
 }
 .col_episodeRecommendation {
 	
@@ -227,6 +169,3 @@ input[type=button]:hover {
 	border-right: 3px solid #e47545;
 }
 
-.mustWatch {
-	color: #66FF66;
-}	

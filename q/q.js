@@ -63,34 +63,6 @@ function csvToNestedArray(csvString) {
 }
 
 async function createTable(showSpoiler) {
-    
-	// ----------------- CSV to ARRAY ----------------
-	
-/*	var csvString = `Spoiler,ReleaseOrder,TimelineOrder,Series,Episode,Title,Notes,Recommendation,Rating
-N,01,02,TOS,1x18,The Squire of Gothos,"<span style='color:goldenrod'>(Brief, retconned appearance; energy form only <span id='SquireNotes' style='cursor:help'>💬</span>)</span><br>Q punishes Trelane for meddling with the Enterprise",-,Not Rated
-N,02,03,TNG,1x01/02,Encounter at Farpoint,Q puts humanity on trial,🕶 Must Watch,5.5
-N,03,04,TNG,1x10,Hide And Q,Q tests Riker by giving him the powers of the Q,-,4.8
-N,04,05,TNG,2x16,Q Who,Q introduces humanity to the Borg,🕶 Must Watch,8.4
-N,05,06,TNG,3x13,Deja Q,Q is banished to the Enterprise when the continuum takes his powers away,✔ Recommended,6.6
-N,06,07,TNG,4x20,Qpid,Q forces the Enterprise crew to participate in a Robin Hood re-creation,✔ Recommended,4.5
-N,07,08,TNG,6x06,True Q,,,
-N,08,09,DS9,1x07,Q-Less,Q causes mischief on DS9 when he returns from the Gamma Quadrant with Vash,✔ Recommended,4.1
-N,09,10,TNG,6x15,Tapestry,,,
-N,10,11,TNG,7x25/26,All Good Things...,,,
-N,11,12,VOY,2x18,Death Wish,"When another Q escapes captivity and wishes to end his life, Q arrives to prevent it",✔ Recommended,7.8
-N,12,13,VOY,3x11,The Q and the Grey,Q entreaties Janeway to mate with him so they might have a child that could end a Q civil war,✔ Recommended,4.7
-N,13,14,VOY,7x19,Q2,"Q leaves his son on Voyager, hoping he'll gain a sense of self-discipline",-,5.2
-N,14,15,LOW,1x08,Veritas,"Q appears briefly in a flashback to toy with the crew of the Cerritos, and again later only to be dismissed by Mariner",-,Not Rated
-N,15,16,PIC,2x01,The Star Gazer<sup> ‡</sup>,A brief appearance at the end of the episode to tell Picard that the Trial Never Ends,-,7.0
-N,16,17,PIC,2x02,Penance<sup> ‡</sup>,Q introduces Picard to his new reality and disappears to leave him to explore,🕶 Must Watch,5.7
-N,17,18,PIC,2x03,Assimilation<sup> ‡</sup>,Q appears only for a moment to taunt Picard,-,5.7
-N,18,19,PIC,2x04,Watcher<sup> ‡</sup>,Q appears at the end just to snap his fingers at Renée Picard,-,5.3
-N,19,20,PIC,2x05,Fly Me to the Moon<sup> ‡</sup>,Q poses as Renée's therapist and also gives Soong incentive to help him stop Renée from going on her mission,-,3.9
-N,20,21,PIC,2x06,Two of One<sup> ‡</sup>,"(flashback, archive footage) Only Soong's memory of his dealings with Q",-,5.4
-N,21,22,PIC,2x08,Mercy<sup> ‡</sup>,Q visits Kore as a simulation and also visits Guinan in the clink,-,3.5
-N,22,23,PIC,2x10,Farewell<sup> ‡</sup>,Q's swan song,🕶 Must Watch,7.3
-Y,23,24,PIC,3x10,The Last Generation<sup> ‡</sup>,Q appears for a moment in a post-credits scene to taunt Jack,-,7.1
-N,24,01,SNW,3x02,Wedding Bell Blues,<span style='color:goldenrod'>(Brief appearance; energy form only)</span>,-,Not Rated`; */
 
 	const csvResponse = await fetch("q.csv");
 	var csvString = await csvResponse.text();
@@ -106,50 +78,9 @@ N,24,01,SNW,3x02,Wedding Bell Blues,<span style='color:goldenrod'>(Brief appeara
 	} else {
 		var rows = '23';
 	}
-	var content = `<tr id="preHeaderRow">
-				<td colspan="2"><div id="filterTotalbox">Showing<br><span id="filterTotal">${rows}</span> of ${rows}<br>episodes</div></td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td style="padding-right:8px;vertical-align:bottom;position:relative;">
-					<div class="episodeSearchBoxContainer">
-						<input type="text" id="episodeSearchBox" placeholder="Title search" onkeyup="filterTitle()" size="26" style="height:21px"><input type="button" value="✖&#xFE0E;" class="textClearButton" onClick="document.getElementById('episodeSearchBox').value='';filterTitle()">
-					</div>
-				</td>
-				<td style="text-align:left;vertical-align:bottom;">
-					&nbsp;
-				</td>
-				<td style="text-align:center;vertical-align:bottom">
-					<input type="text" id="recommendationFilterTextbox" placeholder="Recommendation filter" size="22" onclick="toggleFilterBox('recommendationFilter')" style="height:21px" readonly>
-					<input id="recommendationFilterDropdownArrow" type="button" class="dropdownArrow" value="▼" onclick="toggleFilterBox('recommendationFilter')">
-					<div class="filterDropdownContainer" id="recommendationFilter" style="transform: translateX(15px);">
-						<label class="checkContainer"><input type="checkbox" id="rnfilterall" onClick="setFilters('rnall')" checked><span class="checkmark"></span><span class="icon"></span>&nbsp;All&nbsp;Recommendations</label>
-						<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="🕶&#xFE0E;" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">🕶&#xFE0E;</span>&nbsp;Must&nbsp;Watch</label>
-						<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="✔&#xFE0E;" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">✔&#xFE0E;</span>&nbsp;Recommended</label>
-						<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="♦&#xFE0E;" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">♦&#xFE0E;</span>&nbsp;Optional</label>
-						<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="-" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">-</span>&nbsp;No Recommendation</label>
-						<input type="hidden" class="rnfiltercheckbox" value="None">
-					</div>
-				</td>
-				<td style="text-align:right;vertical-align:bottom;">
-					<input type="button" class="resetFiltersButton" onClick="resetFilters()" value="Clear Filters">
-				</td>
-			</tr>
-			<tr id="headerRow">
-				<th style="width:60px;text-align:left;" onclick="sortTable(0,event)"><span class="small">Release Order</span> <span id="0asc" class="sortarrows">↿</span><span id="0desc" class="sortarrows">⇂</span></th>
-				<th style="width:60px;text-align:left;" onclick="sortTable(1,event)"><span class="small">Timeline Order</span> <span id="1asc" class="sortarrows">↿</span><span id="1desc" class="sortarrows">⇂</span></th>
-				<th style="width:90px;text-align:center" onclick="sortTable(2,event)">Series <span id="2asc" class="sortarrows">↿</span><span id="2desc" class="sortarrows">⇂</span></th>
-				<th style="width:100px;text-align:left" onclick="sortTable(3,event)">Episode <span id="3asc" class="sortarrows">↿</span><span id="3desc" class="sortarrows">⇂</span></th>
-				<th style="width:260px;text-align:left;line-height:0.94" onclick="sortTable(4,event)">
-					<span style="font-weight:normal;font-size:x-small;float:right;text-align:right;line-height:2.1">
-						<label class="radioContainer"><input type="radio" class="sorttype" value="strictaz" name="sorttype" checked >Strict A-Z Sort&nbsp;<span class="radioDot"></span></label><br>
-						<label class="radioContainer"><input type="radio" class="sorttype" value="title" name="sorttype">Title Sort (ignore the, a, an)&nbsp;<span class="radioDot"></span></label>
-					</span>
-					<br>Title <span id="4asc" class="sortarrows">↿</span><span id="4desc" class="sortarrows">⇂</span>
-				</th>
-				<th style="width:auto" onclick="sortTable(5,event)">Notes <span id="sortarrows"><span id="5asc" class="sortarrows">↿</span><span id="5desc" class="sortarrows">⇂</span></span></th>
-				<th style="width:240px" onclick="sortTable(6,event)">Recommendation* <span id="6asc" class="sortarrows">↿</span><span id="6desc" class="sortarrows">⇂</span></th>
-				<th style="width:80px" onclick="sortTable(7,event)">Rating<sup>†</sup> <span id="7asc" class="sortarrows">↿</span><span id="7desc" class="sortarrows">⇂</span></th>
-			</tr>`;
+	var content = ``;
+	
+	document.getElementById("filterTotalbox").innerHTML = `Showing<br><span id="filterTotal">${rows}</span> of ${rows}<br>episodes`;
 	
 	array.slice(1).forEach(function(row) {
         	
@@ -293,6 +224,7 @@ N,24,01,SNW,3x02,Wedding Bell Blues,<span style='color:goldenrod'>(Brief appeara
 	sortArrowOn.style.color = "white";
 	
 	addSeasonSeparator();
+	syncColumnWidths();
 	
 	document.getElementById('SquireNotes').onclick = function(e){
 		var tooltip = document.getElementById('SquireToolTip');
@@ -303,6 +235,22 @@ N,24,01,SNW,3x02,Wedding Bell Blues,<span style='color:goldenrod'>(Brief appeara
 			tooltip.style.display = 'block';
 			tooltip.style.position = 'fixed';
 	}
+}
+
+/* ------------------------------------------------------------ SYNC WIDTHS ------------------------------------------------------------ */
+
+function syncColumnWidths() {
+  const headerRows = document.querySelectorAll("#headerTable th");
+  const bodyRows = document.querySelector("#episodeTable tr");
+
+  if (!bodyRows) return;
+
+  const bodyCols = bodyRows.children;
+
+  headerRows.forEach((th, i) => {
+    const width = bodyCols[i].getBoundingClientRect().width;
+    th.style.width = width + "px";
+  });
 }
 
 /* ------------------------------------------------------------ TABLE SORT ------------------------------------------------------------ */
@@ -334,7 +282,7 @@ async function sortTable(n,event) {
 		rows = table.rows;
 		/* Loop through all table rows (except the
 		first two, which contains table headers): */
-		for (i = 2; i < (rows.length - 1); i++) {
+		for (i = 0; i < (rows.length - 1); i++) {
 			// Start by saying there should be no switching:
 			shouldSwitch = false;
 			/* Get the two elements you want to compare,
@@ -468,6 +416,7 @@ async function sortTable(n,event) {
 		addSeasonSeparator();
 	}
 	
+	
 	sortArrowOn = document.getElementById(G_sortcol + G_sortdir);
 	sortArrowOn.style.color = "white";
 
@@ -543,7 +492,6 @@ function filterTitle(clear) {
 	if (G_sortcol == 0) {
 		addSeasonSeparator();
 	}
-	
 	return;
 }
 
@@ -708,7 +656,6 @@ function resetFilters() {
 	
 	document.getElementById("recommendationFilterTextbox").value = "";
 	document.getElementById("episodeSearchBox").value = "";
-	document.getElementById("hideNonPrimary").checked = false;
 	
 	Array.from(filterallcheckboxes).forEach((checkbox) => {
 		checkbox.checked = true;
@@ -739,7 +686,7 @@ function addSeasonSeparator() {
 	
 	/* Loop through all table rows (except the
 		first and second, which contains filters and table headers): */
-	for (i = 2; i < (rows.length - 1); i++) {
+	for (i = 0; i < (rows.length - 1); i++) {
 		
 		rowstyle = getComputedStyle(rows[i]);
 		if (rowstyle.display == "none") {continue;};	
@@ -778,6 +725,8 @@ function closeToolTip(caller) {
 /* ------------------------------------------------------------------------------------------------------------
    -------------------------------------------------- ONLOAD --------------------------------------------------
    ------------------------------------------------------------------------------------------------------------ */
+
+window.addEventListener("resize", syncColumnWidths);
 
 window.onload = function() {
 	

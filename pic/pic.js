@@ -179,7 +179,7 @@ function displaySpoilerContent(episodeID,caller) {
 			placeholder.style.display = "none";
 		} else {
 			if (placeholder.nodeName == "LI") {
-				placeholder.style.display = "block";
+				placeholder.style.display = "list-item";
 			} else {
 				placeholder.style.display = "inline";
 			}
@@ -189,7 +189,7 @@ function displaySpoilerContent(episodeID,caller) {
 	
 		if (caller.checked) {
 			if (content.nodeName == "LI") {
-				content.style.display = "block";
+				content.style.display = "list-item";
 			} else {
 				content.style.display = "inline";
 			}

@@ -31,6 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		case "January 3":
 			track.innerHTML = marqueePage_DS9Premieres + track.innerHTML;
 			break;
+		case "January 15":
+			track.innerHTML = marqueePage_SAPremieres + track.innerHTML;
+			break;
 		case "January 16":
 			track.innerHTML = marqueePage_VOYPremieres + track.innerHTML;
 			break;
@@ -240,6 +243,14 @@ var marqueePage_DS9Premieres = `
 		<div class="marqueeTitle">January 3</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent"><div class="yearDiff">1993</div> ago on January 3, 1993, <a href="ds9/ds9-s1.html#e01">&ldquo;Emissary&rdquo;</a>, the first episode of <a href="ds9/index.html"><em>Star Trek: Deep Space Nine</em></a> aired!</div>
+	</div>`
+
+var marqueePage_SAPremieres = `
+	<div class="marquee-page">
+		<img class="marqueeImg" src="images/marquee/SAPremieres.png">
+		<div class="marqueeTitle">January 15</div>
+		<div class="marqueeSubtitle">ON THIS DAY</div>
+		<div class="marqueeContent"><div class="yearDiff">2026</div> ago on January 15, 2026, <a href="sa/sa-s1.html#e01">&ldquo;Kids These Days&rdquo;</a>, the first episode of <a href="sa/index.html"><em>Star Trek: Starfleet Academy</em></a> aired!</div>
 	</div>`
 	
 var marqueePage_VOYPremieres = `

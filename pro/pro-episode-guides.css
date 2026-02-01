@@ -39,6 +39,9 @@
 	scroll-margin-top: 50px;
 	padding: 15px;
 	font-style: italic;
+	em {
+		font-style: normal;
+	}
 }
 .seasonName {
 	display: block;

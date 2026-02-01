@@ -301,7 +301,13 @@ body li {
 	font-size: 11px;
 	vertical-align: middle;
 }
-	
+.legalCopy {
+	text-align: center;
+	font-size: x-small;
+	font-style: italic;
+	color: #E47545;
+	margin-top:8px;
+}
 #bottomBorder{
 	position: fixed;
 	bottom: 0;
@@ -647,7 +653,7 @@ body li {
 		z-index: 0;
 		margin: 5px auto 5px auto;
 		border-style: solid;
-		border-width: 2px;
+		border-width: 3px;
 		border-radius: 15px;
 		padding: 1px;
 		width: 500px;
@@ -696,6 +702,16 @@ body li {
 		object-fit:contain;
 		mask-image: linear-gradient(to left, rgba(0,0,0,1),  rgba(0,0,0,0));
 	}
+	.updateNav{
+		display: flex;
+		justify-content: space-between;
+		width: 84%;
+		margin: 4px auto;
+		& span {
+			background-color: #181818EE;
+			padding: 3px;
+		}
+	}
 	.updateDate{
 		font-size: large;
 		font-weight: bold;
@@ -711,7 +727,7 @@ body li {
 		padding: 0px 12px 0px 12px;		
 	}
 	.updateTable .miniUpdate {
-		font-size: medium;
+		font-size: small;
 		color: #999;
 		font-style: italic;
 		margin-top: 15px;
@@ -765,15 +781,25 @@ body li {
 	}
 	.finalVerdict {
 		text-align: center;
+		font-family: Exo, Roboto, sans-serif !important;
 		font-size: x-large;
 		border: 2px solid;
 		padding: 3px;
 		margin: auto;
+		margin-bottom: 20px;
 		width: fit-content;
 		clear: both;
 	}
 	.finalVerdict .tagline {
 		font-size: small;
+	}
+	.WTWN {
+		width: 65%;
+		border: 2px dotted #BB4C1C;
+		border-radius: 10px;
+		padding: 8px 30px;
+		margin: auto;
+		text-align: center;
 	}
 	.understanding-ratings {
 		border-collapse: collapse;
@@ -908,10 +934,6 @@ body li {
 	background-color: #522100;
 	font-weight: bold;
 }
-.timelineTable .alternateReality{
-	border: 2px solid violet !important;
-	color: violet;
-}
 .timelineTable .majorTimeTravel{
 	background-color: #31310C;
 }
@@ -952,6 +974,10 @@ body li {
 	border: 2px solid;
 	border-color: #00B757;
 	color: #00B757;
+}
+.timelineTable .alternateReality{
+	border: 2px solid violet;
+	color: violet;
 }
 .timelineTable .yearGap{
 	border-top-width: 2px;
@@ -1076,6 +1102,11 @@ td.diagonalFalling {
 
 /* ---------------------------------------- GLOBAL: CUSTOM SLIDER ---------------------------------------- */
 /* The switch - the box around the slider */
+.switchWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
 .switch {
   position: relative;
   display: inline-block;

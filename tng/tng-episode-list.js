@@ -64,6 +64,7 @@ function createTable(array) {
 					cell = cell.replace("👬",'<span title="Parallel / Alternate Reality">👬</span>');
 					cell = cell.replace("🎭",'<span title="Lighthearted/Comedy">🎭</span>');
 					cell = cell.replace("😱",'<span title="Scary">😱</span>');
+					cell = cell.replace("😢",'<span title="Tear-jerker">😢</span>');
 					cell = cell.replace("🥇",'<span title="1st place episode">🥇</span>');
 					cell = cell.replace("🥈",'<span title="2nd place episode">🥈</span>');
 					cell = cell.replace("🥉",'<span title="3rd place episode">🥉</span>');
@@ -745,179 +746,179 @@ window.onload = function() {
 
 var csvString = `Episode,Title,Tags,Recommendation,Rating
 1x01/02 [FL],Encounter at Farpoint,Q,🕶 ‼ Must Watch/Bare Minimum,5.5
-1x03,The Naked Now,🎭,,3.6
+1x03,The Naked Now,🎭,-,3.6
 1x04,Code of Honor,R⚑,✖ Notably Bad,1.3
-1x05,The Last Outpost,,,2.0
+1x05,The Last Outpost,,-,2.0
 1x06,Where No One Has Gone Before,,✔ Recommended,5.5
-1x07,Lonely Among Us,,,3.3
-1x08,Justice,,,2.3
+1x07,Lonely Among Us,,-,3.3
+1x08,Justice,,-,2.3
 1x09,The Battle,,✔ Recommended,4.1
 1x10,Hide and Q,Q,✔ Recommended,4.8
-1x11,Haven,,,3.2
-1x12,The Big Goodbye,🟨,,4.6
+1x11,Haven,,-,3.2
+1x12,The Big Goodbye,🟨,-,4.6
 1x13,Datalore,,🕶 Must Watch,5.1
-1x14,Angel One,,,2.3
+1x14,Angel One,,-,2.3
 1x15,11001001,,✔ Recommended,6.3
-1x16,Too Short a Season,,,3.0
-1x17,When the Bough Breaks,,,3.5
-1x18,Home Soil,,,4.7
-1x19,Coming of Age,,,3.8
+1x16,Too Short a Season,,-,3.0
+1x17,When the Bough Breaks,,-,3.5
+1x18,Home Soil,,-,4.7
+1x19,Coming of Age,,-,3.8
 1x20,Heart of Glory,,✔ Recommended,5.5
-1x21,The Arsenal of Freedom,,,5.3
-1x22,Symbiosis,,,3.7
+1x21,The Arsenal of Freedom,,-,5.3
+1x22,Symbiosis,,-,3.7
 1x23,Skin of Evil,,✔ Recommended,3.5
-1x24,We'll Always Have Paris,🕖,✔ Recommended,4.5
-1x25,Conspiracy,🌎,,5.9
-1x26,The Neutral Zone,,,3.0
-2x01,The Child,,,3.5
-2x02,Where Silence Has Lease,,,5.7
+1x24,We'll Always Have Paris,🕖,-,4.5
+1x25,Conspiracy,🌎,✔ Recommended,5.9
+1x26,The Neutral Zone,,-,3.0
+2x01,The Child,,-,3.5
+2x02,Where Silence Has Lease,,-,5.7
 2x03,"Elementary, Dear Data",🟨,✔ Recommended,6.4
-2x04,The Outrageous Okona,,,2.4
-2x05,Loud as a Whisper,,,4.9
-2x06,The Schizoid Man,,,3.7
-2x07,Unnatural Selection,,,4.5
+2x04,The Outrageous Okona,,-,2.4
+2x05,Loud as a Whisper,,-,4.9
+2x06,The Schizoid Man,,-,3.7
+2x07,Unnatural Selection,,-,4.5
 2x08,A Matter of Honor,,✔ Recommended,6.3
 2x09,The Measure of a Man,🌌⚖️V🟡,🕶 Must Watch,8.6
-2x10,The Dauphin,,,3.0
-2x11,Contagion,,,7.5
+2x10,The Dauphin,,-,3.0
+2x11,Contagion,,✔ Recommended,7.5
 2x12,The Royale,,✖ Notably Bad,2.5
-2x13,Time Squared,🕖,,5.9
-2x14,The Icarus Factor,,,3.0
-2x15,Pen Pals,,,5.4
+2x13,Time Squared,🕖,-,5.9
+2x14,The Icarus Factor,,-,3.0
+2x15,Pen Pals,,-,5.4
 2x16,Q Who,Q🤖A🟡,🕶 ‼ Must Watch/Bare Minimum,8.4
-2x17,Samaritan Snare,,,2.9
+2x17,Samaritan Snare,,-,2.9
 2x18,Up the Long Ladder,R⚑,✖ Notably Bad,1.5
-2x19,Manhunt,,,3.3
+2x19,Manhunt,,-,3.3
 2x20,The Emissary,,✔ Recommended,5.7
-2x21,Peak Performance,,,5.9
+2x21,Peak Performance,,-,5.9
 2x22,Shades of Gray,,✖ Notably Bad,0.4
-3x01,Evolution,,,4.5
-3x02,The Ensigns of Command,♥️,,5.5
-3x03,The Survivors,,,4.2
+3x01,Evolution,,-,4.5
+3x02,The Ensigns of Command,♥️,-,5.5
+3x03,The Survivors,,-,4.2
 3x04,Who Watches the Watchers,♥️V🟡,✔+ Highly Recommended,8.0
-3x05,The Bonding,,,3.6
+3x05,The Bonding,,-,3.6
 3x06,Booby Trap,,✔ Recommended,6.9
 3x07,The Enemy,,✔ Recommended,6.6
-3x08,The Price,,,3.2
-3x09,The Vengeance Factor,,,4.6
+3x08,The Price,,-,3.2
+3x09,The Vengeance Factor,,-,4.6
 3x10,The Defector,,✔ Recommended,7.7
-3x11,The Hunted,,,5.7
-3x12,The High Ground,,,4.8
+3x11,The Hunted,,-,5.7
+3x12,The High Ground,,-,4.8
 3x13,Deja Q,Q,✔ Recommended,6.6
-3x14,A Matter of Perspective,⚖️♥️,,7.1
+3x14,A Matter of Perspective,⚖️♥️,-,7.1
 3x15,Yesterday's Enterprise,🌌👬🥇A🟡,🕶 ‼ Must Watch/Bare Minimum,9.7
 3x16,The Offspring,,✔ Recommended,6.9
 3x17,Sins of the Father,,🕶 Must Watch,7.8
-3x18,Allegiance,,,4.8
-3x19,Captain's Holiday,,,4.7
-3x20,Tin Man,,,4.0
+3x18,Allegiance,,-,4.8
+3x19,Captain's Holiday,,♦ Optional,4.7
+3x20,Tin Man,,-,4.0
 3x21,Hollow Pursuits,,✔ Recommended,5.0
-3x22,The Most Toys,,,6.3
+3x22,The Most Toys,,-,6.3
 3x23,Sarek,V🟡,✔+ Highly Recommended,8.7
-3x24,Ménage à Troi,,,3.4
-3x25,Transfigurations,,,4.8
+3x24,Ménage à Troi,,-,3.4
+3x25,Transfigurations,,-,4.8
 3x26,The Best of Both Worlds (Part I),🌌🤖🥈A🟡,🕶 ‼ Must Watch/Bare Minimum,9.9
 4x01,"The Best of Both Worlds, Part II",🌌🤖🥈A🟡,🕶 ‼ Must Watch/Bare Minimum,9.9
 4x02,Family,🌎,✔+ Highly Recommended,6.8
 4x03,Brothers,,🕶 Must Watch,6.8
-4x04,Suddenly Human,,,4.8
+4x04,Suddenly Human,,-,4.8
 4x05,Remember Me,👬♥️,✔ Recommended,7.3
-4x06,Legacy,,,5.2
+4x06,Legacy,,-,5.2
 4x07,Reunion,,🕶 Must Watch,7.7
-4x08,Future Imperfect,👬♥️,✔ Recommended,7.5
-4x09,Final Mission,,,5.1
-4x10,The Loss,,,3.2
+4x08,Future Imperfect,👬♥️,-,7.5
+4x09,Final Mission,,-,5.1
+4x10,The Loss,,-,3.2
 4x11,Data's Day,🎭,✔ Recommended,6.7
-4x12,The Wounded,,🕶 Must Watch,6.7
-4x13,Devil's Due,(⚖),,5.3
+4x12,The Wounded,,✔ Recommended,6.7
+4x13,Devil's Due,(⚖),-,5.3
 4x14,Clues,,✔ Recommended,7.6
 4x15,First Contact,,✔ Recommended,7.8
 4x16,Galaxy's Child,,♦ Optional,4.4
-4x17,Night Terrors,😱,,4.7
-4x18,Identity Crisis,,,5.5
+4x17,Night Terrors,😱,-,4.7
+4x18,Identity Crisis,,-,5.5
 4x19,The Nth Degree,,-,6.2
 4x20,Qpid,Q🎭,✔ Recommended,4.5
 4x21,The Drumhead,⚖️🎖♥️V🟡,✔+ Highly Recommended,8.2
-4x22,Half a Life,,,5.4
-4x23,The Host,,-,2.6
-4x24,The Mind's Eye,,✔ Recommended,5.9
-4x25,In Theory,,,4.2
+4x22,Half a Life,,-,5.4
+4x23,The Host,,-,3.1
+4x24,The Mind's Eye,,-,5.9
+4x25,In Theory,,-,4.2
 4x26,Redemption,,🕶 Must Watch,8.1
 5x01,Redemption II,,🕶 Must Watch,8.1
 5x02,Darmok,🌌V🟡,✔+ Highly Recommended,8.0
 5x03,Ensign Ro,,🕶 Must Watch,6.7
-5x04,Silicon Avatar,,✔ Recommended,4.2
+5x04,Silicon Avatar,,-,4.2
 5x05,Disaster,♥️,✔ Recommended,7.3
-5x06,The Game,,,5.8
+5x06,The Game,,-,5.8
 5x07,Unification I,A🟡,🕶 ‼ Must Watch/Bare Minimum,8.4
 5x08,Unification II,A🟡,🕶 ‼ Must Watch/Bare Minimum,8.4
-5x09,A Matter of Time,,,4.4
-5x10,New Ground,,,3.7
-5x11,Hero Worship,,,3.5
-5x12,Violations,,,2.3
-5x13,The Masterpiece Society,,,4.5
+5x09,A Matter of Time,,-,4.4
+5x10,New Ground,,-,3.7
+5x11,Hero Worship,,-,3.5
+5x12,Violations,,-,2.3
+5x13,The Masterpiece Society,,-,4.5
 5x14,Conundrum,,✔ Recommended,7.6
-5x15,Power Play,,✔ Recommended,6.3
-5x16,Ethics,,,5.0
-5x17,The Outcast,,,5.0
+5x15,Power Play,,-,6.3
+5x16,Ethics,,-,5.0
+5x17,The Outcast,,-,5.0
 5x18,Cause and Effect,🕖♥️,✔+ Highly Recommended,8.7
-5x19,The First Duty,🌎,,7.7
-5x20,Cost of Living,,,3.8
-5x21,The Perfect Mate,,,4.8
-5x22,Imaginary Friend,,,3.0
+5x19,The First Duty,🌎,✔ Recommended,7.7
+5x20,Cost of Living,,-,3.8
+5x21,The Perfect Mate,,-,4.8
+5x22,Imaginary Friend,,-,3.0
 5x23,I Borg,🤖,🕶 ‼ Must Watch/Bare Minimum,7.9
-5x24,The Next Phase,♥️,✔ Recommended,7.5
-5x25,The Inner Light,🌌♥️A🟡,🕶 Must Watch,9.8
+5x24,The Next Phase,♥️,-,7.5
+5x25,The Inner Light,🌌😢♥️A🟡,🕶 Must Watch,9.8
 5x26,Time's Arrow (Part I),🕖🌎♥️,🕶 Must Watch,8.0
 6x01,"Time's Arrow, Part II",🕖🌎♥️,🕶 Must Watch,8.0
-6x02,Realm of Fear,,,4.2
-6x03,Man of the People,,,1.7
+6x02,Realm of Fear,,-,4.2
+6x03,Man of the People,,-,1.7
 6x04,Relics,,✔ Recommended,8.1
-6x05,Schisms,,,7.0
+6x05,Schisms,,-,7.0
 6x06,True Q,Q,✔ Recommended,5.4
-6x07,Rascals,,,4.9
-6x08,A Fistful of Datas,🎭🟨,,5.2
+6x07,Rascals,,-,4.9
+6x08,A Fistful of Datas,🎭🟨,-,5.2
 6x09,The Quality of Life,V🟡,✔ Recommended,5.6
 6x10,"Chain of Command, Part I",🌌🥉A🟡,🕶 Must Watch,9.3
 6x11,"Chain of Command, Part II",🌌🥉A🟡,🕶 Must Watch,9.3
 6x12,Ship in a Bottle,🟨,✔ Recommended,7.9
-6x13,Aquiel,,,4.1
+6x13,Aquiel,,-,4.1
 6x14,Face of the Enemy,,✔ Recommended,7.5
-6x15,Tapestry,🕖QV🟡,✔+ Highly Recommended,8.5
-6x16,"Birthright, Part I",,🕶 Must Watch,7.0
-6x17,"Birthright, Part II",,🕶 Must Watch,7.0
-6x18,Starship Mine,♥️,,7.7
+6x15,Tapestry,🕖QV🟡,🕶 Must Watch,8.5
+6x16,"Birthright, Part I",,✔ Recommended,7.0
+6x17,"Birthright, Part II",,✔ Recommended,7.0
+6x18,Starship Mine,♥️,-,7.7
 6x19,Lessons,,✔ Recommended,6.2
 6x20,The Chase,,✔ Recommended,7.8
-6x21,Frame of Mind,👬,✔ Recommended,8.6
+6x21,Frame of Mind,👬,-,8.6
 6x22,Suspicions,,✔ Recommended,7.0
-6x23,Rightful Heir,,,4.5
+6x23,Rightful Heir,,-,4.5
 6x24,Second Chances,,✔ Recommended,6.1
 6x25,Timescape,🕖♥️,✔ Recommended,9.0
 6x26,Descent (Part I),🤖,🕶 ‼ Must Watch/Bare Minimum,8.2
 7x01,"Descent, Part II",🤖,🕶 ‼ Must Watch/Bare Minimum,8.2
-7x02,Liaisons,,,3.8
-7x03,Interface,,,3.1
+7x02,Liaisons,,-,3.8
+7x03,Interface,,-,3.1
 7x04,"Gambit, Part I",,✔ Recommended,6.7
 7x05,"Gambit, Part II",,✔ Recommended,6.7
-7x06,Phantasms,,,5.0
-7x07,Dark Page,,✔ Recommended,5.5
+7x06,Phantasms,,-,5.0
+7x07,Dark Page,😢,-,5.1
 7x08,Attached,,✔ Recommended,5.3
-7x09,Force of Nature,,,4.4
+7x09,Force of Nature,,-,4.4
 7x10,Inheritance,,✔ Recommended,6.7
-7x11,Parallels,👬♥️,✔ Recommended,8.7
+7x11,Parallels,👬♥️,✔+ Highly Recommended,8.7
 7x12,The Pegasus,,✔ Recommended,8.1
-7x13,Homeward,,,3.4
+7x13,Homeward,,-,3.4
 7x14,Sub Rosa,💩,✖ Notably Bad,1.2
 7x15,Lower Decks,,✔+ Highly Recommended,7.8
-7x16,Thine Own Self,,,5.8
-7x17,Masks,,,2.5
-7x18,Eye of the Beholder,,✔ Recommended,6.3
-7x19,Genesis,😱,,5.0
-7x20,Journey's End,,,2.4
-7x21,Firstborn,,✔ Recommended,5.1
-7x22,Bloodlines,,,3.5
-7x23,Emergence,,,4.6
+7x16,Thine Own Self,,-,6.2
+7x17,Masks,,-,3.4
+7x18,Eye of the Beholder,,-,5.1
+7x19,Genesis,😱,-,5.0
+7x20,Journey's End,,♦ Optional,2.7
+7x21,Firstborn,,-,5.1
+7x22,Bloodlines,,-,3.5
+7x23,Emergence,,-,4.6
 7x24,Preemptive Strike,,✔ Recommended,6.0
 7x25/26 [FL],All Good Things…,🌌🕖Q♥️,🕶 ‼ Must Watch/Bare Minimum,9.7`;
 

@@ -764,7 +764,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 2x01,The Homecoming,,✔ Recommended,5.4
 2x02,The Circle,,✔ Recommended,5.4
 2x03,The Siege,,✔ Recommended,6.3
-2x04,Invasive Procedures,,-,3.8
+2x04,Invasive Procedures,,-,4.5
 2x05,Cardassians,,-,4.5
 2x06,Melora,,-,4.5
 2x07,Rules of Acquisition,,-,4.8
