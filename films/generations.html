@@ -35,7 +35,7 @@
 	function prepTextToSpeech(id)
 	{
 		let text = document.getElementById(id).innerText;
-		return text.replaceAll("—",".").replaceAll("👎","👎,").replaceAll("👍","👍,").replaceAll("🤷‍♂️","🤷‍♂️,").replaceAll("Adonais","Adonnis").replaceAll("MACOs","May-kohs").replaceAll("s***","pucky").replaceAll("fu–","fuh");
+		return text.replaceAll("—",".").replaceAll("👎","👎,").replaceAll("👍","👍,").replaceAll("🤷‍♂️","🤷‍♂️,").replaceAll("Adonais","Adonnis").replaceAll("MACOs","May-kohs").replaceAll("s***","pucky").replaceAll("fu–","fuh").replace("Picard and Kirk having a conversation in Kirk's cabin","");
 	}
 </script>
 
@@ -266,7 +266,7 @@
 			
 			<p>If you don't want to commit to watching the entire <a href="../tng/index.html"><em>The Next Generation</em></a> series, you can click that link to view my <em>TNG</em> episode guides. There's a &ldquo;Must Watch&rdquo; list if you only want to see the essential episodes and a &ldquo;Recommended&rdquo; list if you want to see even more.</p>
 			
-			<p>Again, it's not strictly necessary to watch anything before enjoying this film, but if you've never seen a single episode of <em>TNG</em>, here's a suggested short-list specifically tailored for this movie to give you some background:</p>
+			<p>Again, it's not strictly necessary to watch anything before enjoying this film, but if you've never seen a single episode of <em>TNG</em>, I recommend watching at least the following four episodes on this suggested prerequisite watch list:</p>
 		</div>
 		<table class="suggestedEpisodeTable" style="clear:left">
 			<tr>
@@ -281,7 +281,7 @@
 				<td style="text-align:center"><img src="../images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
 				<td>3x26 &amp; 4x01</td>
 				<td><a href="../tng/tng-s3.html#e26">The Best of Both Worlds (Parts I and II)</a></td>
-				<td>The plot of &ldquo;The Best of Both Worlds&rdquo; is not directly related to <em>Star&nbsp;Trek&nbsp;Generations</em>, but rather than watching something like the series premiere (which was a little rough), this two-part episode will give you a better idea of the TNG crew's dynamics in a much better story. It will also introduce the Enterprise&#8209;D and her capabilities, prepare you for the <em>next</em> movie (<a href="firstcontact.html"><em>Star Trek: First Contact</em></a>), and it provides important information needed for the next suggested prerequisite episode, &ldquo;Family&rdquo;.</td>
+				<td>The plot of &ldquo;The Best of Both Worlds&rdquo; is not directly related to <em>Star&nbsp;Trek&nbsp;Generations</em>, but rather than watching something like the series premiere (which was a little rough), this two-part episode will give you a better idea of the <em>TNG</em> crew's dynamics in a much better story. It will also introduce the Enterprise&#8209;D and her capabilities, prepare you for the <em>next</em> movie (<a href="firstcontact.html"><em>Star Trek: First Contact</em></a>), and it provides important information needed for the next suggested prerequisite episode, &ldquo;Family&rdquo;.</td>
 			</tr>
 			<tr>
 				<td style="text-align:center"><img src="../images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
@@ -401,30 +401,32 @@
 		<button class="TTSplayButton" id="tts5pb" onclick="textToSpeech('tts5',prepTextToSpeech('tts5'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 	</div>
 	<img src="images/generations/lursaandbetor.png" style="width:550px;float:right;margin-top:15px;margin-left:10px" alt="Picard speaking with the Duras sisters on the Enterprise viewscreen">
-	<ul id="tts5" class="serif">
-		<li>The silliness begins almost immediately, with the USS Enterprise NCC&#8209;1701&#8209;B as the only ship in the entire Sol system. The only ship in range of Earth. Earth, where Starfleet is headquartered. I'll say that again: the Enterprise&#8209;B &ndash; with no torpedoes, no tractor beam, and no medical staff &ndash; is the only ship near Starfleet headquarters, and thus the only ship that can respond to the emergency.</li>
-		<li>In the holodeck simulation, why would Riker tell the computer to retract the plank, anyway? There's an entire holographic crew to do that. Asking the computer to do it sort of takes you out of the fantasy, doesn't it? The only conclusion is that Riker did this intentionally so Worf would fall into the water.</li>
-		<li>There are at least 3 inconsistencies with Data's emotion chip.
-			<ul>
-				<li>When it was last seen in <a href="../tng/tng-s7.html#e01">TNG 7x01: Descent, Part II</a>, it was a small, circular wafer, about the size of a dress shirt button. Here, the chip is much larger and looks completely different (obviously this was done to make it look a bit more impressive for film).</li>
-				<li>Also, when it was last seen, it was damaged and non-functional. I suppose it could have been repaired since then...</li>
-				<li>Finally, <a href="../tng/tng-s4.html#e03">TNG 4x03: Brothers</a> shows us that the chip should be installed under Data's ear, but Geordi installs it in the crown of his head. I suppose this could be explained away easily enough if the chip could be installed into any ol' &ldquo;USB port&rdquo; and Data just chose the one on top of his head instead of the one under his ear.</li>
-			</ul>
-		</li>
-		<li>Soran pushes Picard's buttons with the words &ldquo;time is the fire in which we burn&rdquo; and &ldquo;we leave so many things unfinished in our lives&rdquo;, and he ominously follows up with &ldquo;<em>I know you understand.</em>&rdquo; This would seem to indicate that Soran is aware of the death of Picard's brother and nephew &ndash; perhaps even responsible for it. However, there is no other evidence to support that, so is it just a wild coincidence that Soran knows just what to say to get under Picard's skin?</li>
-		<li>Worf determines that the Romulans were looking for trilithium, describing it as an experimental compound they've been working on. However, in <a href="../tng/tng-s6.html#e18">TNG 6x18: Starship Mine</a>, trilithium is just a toxic byproduct of the Enterprise's warp engines.</li>
-		<li>It always bothered me that Picard offers himself in exchange for Geordi on the condition that he can first beam to the surface to talk to Soran. What possible reason would the Duras sisters have to grant that request? I understand that they <em>want</em> Geordi to return so that they can use him as an unknowing spy, but why would they agree to letting Picard meddle with Soran's plans?</li>
-	</ul>
-	<img src="images/generations/picardandkirk.png" style="width:550px;float:left;margin-top:15px;margin-right:20px" alt="Picard and Kirk">
-	<ul>
-		<li>Nevertheless, Picard successfully negotiates that rather than getting Soran's coordinates, he'll beam over to the Klingon ship, and then they can beam him down to the surface. It appears that the Duras sisters took his combadge before beaming him down, but the transporter effect used when he arrives on the surface is that of a Federation transporter, not a Klingon transporter.</li>
-		<li>The Duras sisters match their torpedoes to the Enterprise's shield modulation, allowing them to do massive damage. I can't count the number of times that shields have been &ldquo;remodulated&rdquo; in the series, but that doesn't seem to be an option here.</li>
-		<li>This whole sequence bothers me. Even with no effective shielding, the Enterprise greatly outclasses the old bird of prey, and they should have been able to easily dispatch with it, but instead they have to come up with some obscure technical solution which inexplicably requires Data to rip some panels off the wall of the bridge. After fiddling with the innards of the wall for a bit, they force the Klingon ship to cloak, leaving them vulnerable to a single, dramatic torpedo fired by Commander Riker. Despite the fact that Riker tells Worf to prepare a whole spread of torpedoes because they only get one shot and speed is essential to hit them in a narrow window of time... the action pauses for dramatic effect so Riker can say &ldquo;Fire&rdquo; and he only gets the one torpedo.</li>
-		<li>As the warp core starts to go critical, there’s no mention of attempting to eject the core (though I’m sure that system would have been broken, anyway).</li>
-		<li>Picard chooses to leave the Nexus and return to a time only moments before the probe launch, when, according to Echo-Guinan, he could have chosen any time and place. He could have selected an earlier moment that would have made it much easier to thwart Soran. Or, you know, he could have chosen to travel to Earth, sometime before his brother and nephew died in that fire...</li>
-		<li>There is the question, of course, of whether Picard ever actually left the Nexus, or if the Nexus was just providing him with the fantasy of stopping Soran that he was so eager to play out.</li>
-		<li>In the final scene, while digging through the rubble in his ready room looking for his family album, Picard picks up and then discards a white, porcelain statuette. This is his Kurlan naiskos, gifted to him by his long-time mentor and friend, Professor Galen, in the episode <a href="../tng/tng-s6.html#e20">TNG 6x20: The Chase</a>. At the time, Picard nearly wept at the rarity and significance of the gift, so it seems very strange that he'd just toss it aside like he does here.</li>
-	</ul>
+	<div id="tts5">
+		<ul class="serif">
+			<li>The silliness begins almost immediately, with the USS Enterprise NCC&#8209;1701&#8209;B as the only ship in the entire Sol system. The only ship in range of Earth. Earth, where Starfleet is headquartered. I'll say that again: the Enterprise&#8209;B &ndash; with no torpedoes, no tractor beam, and no medical staff &ndash; is the only ship near Starfleet headquarters, and thus the only ship that can respond to the emergency.</li>
+			<li>In the holodeck simulation, why would Riker tell the computer to retract the plank, anyway? There's an entire holographic crew to do that. Asking the computer to do it sort of takes you out of the fantasy, doesn't it? The only conclusion is that Riker did this intentionally so Worf would fall into the water.</li>
+			<li>There are at least 3 inconsistencies with Data's emotion chip.
+				<ul>
+					<li>When it was last seen in <a href="../tng/tng-s7.html#e01">TNG 7x01: Descent, Part II</a>, it was a small, circular wafer, about the size of a dress shirt button. Here, the chip is much larger and looks completely different (obviously this was done to make it look a bit more impressive for film).</li>
+					<li>Also, when it was last seen, it was damaged and non-functional. I suppose it could have been repaired since then...</li>
+					<li>Finally, <a href="../tng/tng-s4.html#e03">TNG 4x03: Brothers</a> shows us that the chip should be installed under Data's ear, but Geordi installs it in the crown of his head. I suppose this could be explained away easily enough if the chip could be installed into any ol' &ldquo;USB port&rdquo; and Data just chose the one on top of his head instead of the one under his ear.</li>
+				</ul>
+			</li>
+			<li>Soran pushes Picard's buttons with the words &ldquo;time is the fire in which we burn&rdquo; and &ldquo;we leave so many things unfinished in our lives&rdquo;, and he ominously follows up with &ldquo;<em>I know you understand.</em>&rdquo; This would seem to indicate that Soran is aware of the death of Picard's brother and nephew &ndash; perhaps even responsible for it. However, there is no other evidence to support that, so is it just a wild coincidence that Soran knows just what to say to get under Picard's skin?</li>
+			<li>Worf determines that the Romulans were looking for trilithium, describing it as an experimental compound they've been working on. However, in <a href="../tng/tng-s6.html#e18">TNG 6x18: Starship Mine</a>, trilithium is just a toxic byproduct of the Enterprise's warp engines.</li>
+			<li>It always bothered me that Picard offers himself in exchange for Geordi on the condition that he can first beam to the surface to talk to Soran. What possible reason would the Duras sisters have to grant that request? I understand that they <em>want</em> Geordi to return so that they can use him as an unknowing spy, but why would they agree to letting Picard meddle with Soran's plans?</li>
+		</ul>
+		<img src="images/generations/picardandkirk.png" style="width:550px;float:left;margin-top:15px;margin-right:20px" alt="Picard and Kirk having a conversation in Kirk's cabin">
+		<ul class="serif">
+			<li>Nevertheless, Picard successfully negotiates that rather than getting Soran's coordinates, he'll beam over to the Klingon ship, and then they can beam him down to the surface. It appears that the Duras sisters took his combadge before beaming him down, but the transporter effect used when he arrives on the surface is that of a Federation transporter, not a Klingon transporter.</li>
+			<li>The Duras sisters match their torpedoes to the Enterprise's shield modulation, allowing them to do massive damage. I can't count the number of times that shields have been &ldquo;remodulated&rdquo; in the series, but that doesn't seem to be an option here.</li>
+			<li>This whole sequence bothers me. Even with no effective shielding, the Enterprise greatly outclasses the old bird of prey, and they should have been able to easily dispatch with it, but instead they have to come up with some obscure technical solution which inexplicably requires Data to rip some panels off the wall of the bridge. After fiddling with the innards of the wall for a bit, they force the Klingon ship to cloak, leaving them vulnerable to a single, dramatic torpedo fired by Commander Riker. Despite the fact that Riker tells Worf to prepare a whole spread of torpedoes because they only get one shot and speed is essential to hit them in a narrow window of time... the action pauses for dramatic effect so Riker can say &ldquo;Fire&rdquo; and he only gets the one torpedo.</li>
+			<li>As the warp core starts to go critical, there’s no mention of attempting to eject the core (though I’m sure that system would have been broken, anyway).</li>
+			<li>Picard chooses to leave the Nexus and return to a time only moments before the probe launch, when, according to Echo-Guinan, he could have chosen any time and place. He could have selected an earlier moment that would have made it much easier to thwart Soran. Or, you know, he could have chosen to travel to Earth, sometime before his brother and nephew died in that fire...</li>
+			<li>There is the question, of course, of whether Picard ever actually left the Nexus, or if the Nexus was just providing him with the fantasy of stopping Soran that he was so eager to play out.</li>
+			<li>In the final scene, while digging through the rubble in his ready room looking for his family album, Picard picks up and then discards a white, porcelain statuette. This is his Kurlan naiskos, gifted to him by his long-time mentor and friend, Professor Galen, in the episode <a href="../tng/tng-s6.html#e20">TNG 6x20: The Chase</a>. At the time, Picard nearly wept at the rarity and significance of the gift, so it seems very strange that he'd just toss it aside like he does here.</li>
+		</ul>
+	</div>
 	
 	
 	<div class="sectionHeader"><span class="quote">&ldquo;</span> Notable Quotes
