@@ -780,7 +780,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 2x08,A Matter of Honor,,✔ Recommended,6.3
 2x09,The Measure of a Man,🌌⚖️V🟡,🕶 Must Watch,8.6
 2x10,The Dauphin,,-,3.0
-2x11,Contagion,,✔ Recommended,7.5
+2x11,Contagion,,✔ Recommended,7.0
 2x12,The Royale,,✖ Notably Bad,2.5
 2x13,Time Squared,🕖,-,5.9
 2x14,The Icarus Factor,,-,3.0
