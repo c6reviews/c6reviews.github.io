@@ -93,6 +93,8 @@ function toggleSpoilerMenu(){
 }
 
 function openSpoilerMenu() {
+  if (getCookie('consent_preferences') == 'granted') { document.getElementById("saveSettingsNotice").style.display = 'none'; }
+  
   document.getElementById("spoilerMenu").style.width = "320px";
   Array.from(document.getElementsByClassName("sideButton")).forEach(button => {
 	  button.style.right = "320px";
@@ -142,6 +144,9 @@ function toggleALLSpoilers() {
 
 function toggleSpoilers() {
 	
+	const spoilerMenuButton = document.getElementById('spoilerMenuOpenButton');
+	spoilerMenuButton.style.setProperty('--flag-display', 'none');
+	
 	const TOSSpoilerToggle = document.getElementById("TOSSpoilerToggle");
 	const TOSSpoilers = Array.from(document.getElementsByClassName("TOSSpoiler"));
 	const TNGSpoilerToggle = document.getElementById("TNGSpoilerToggle");
@@ -166,13 +171,29 @@ function toggleSpoilers() {
 	const SNWSpoilers = Array.from(document.getElementsByClassName("SNWSpoiler"));
 	
 	const characterDeathToggle = document.getElementById("characterDeathToggle");
-	const characterDeathSpoilers = Array.from(document.getElementsByClassName("characterDeath"));
-	
+	if (getCookie('consent_preferences') == 'granted') {
+		if (characterDeathToggle.checked) {
+			setCookie('timelineDEATHspoilers', 'true', 90);
+			spoilerMenuButton.style.setProperty('--flag-display', 'block');
+		} else {
+			setCookie('timelineDEATHspoilers', 'false', 90);
+		}	
+	}
+
 	const ALLSpoilerToggle = document.getElementById("ALLSpoilerToggle");
+	if (getCookie('consent_preferences') == 'granted') {
+		if (ALLSpoilerToggle.checked) {
+			setCookie('timelineALLspoilers', 'true', 90);
+			spoilerMenuButton.style.setProperty('--flag-display', 'block');
+		} else {
+			setCookie('timelineALLspoilers', 'false', 90);
+		}	
+	}
 
 	TOSSpoilers.forEach((spoiler) => {
 		var display = "inline-block";
 		if (TOSSpoilerToggle.checked) {
+			spoilerMenuButton.style.setProperty('--flag-display', 'block');
 			if (spoiler.classList.contains("TNGSpoiler") && spoiler.classList.contains("characterDeath")){
 				if (TNGSpoilerToggle.checked && characterDeathToggle.checked) {display = "none";}
 			} else if (spoiler.classList.contains("TNGSpoiler")){
@@ -181,9 +202,15 @@ function toggleSpoilers() {
 				if (characterDeathToggle.checked) {display = "none";}
 			} else {
 				display = "none";
-			}				
+			}
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineTOSspoilers', 'true', 90);
+			}
 		} else {
 			ALLSpoilerToggle.checked = false;
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineTOSspoilers', 'false', 90);
+			}
 		}
 		spoiler.style.setProperty("--spoilerDisplay", display);
 	});
@@ -191,15 +218,22 @@ function toggleSpoilers() {
 	TNGSpoilers.forEach((spoiler) => {
 		var display = "inline-block";
 		if (TNGSpoilerToggle.checked) {
+			spoilerMenuButton.style.setProperty('--flag-display', 'block');
 			if (spoiler.classList.contains("TOSSpoiler")){
 				return;
 			} else if (spoiler.classList.contains("characterDeath")){
 				if (characterDeathToggle.checked) {display = "none";}
 			} else {
 				display = "none";
-			}				
+			}		
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineTNGspoilers', 'true', 90);
+			}			
 		} else {
 			ALLSpoilerToggle.checked = false;
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineTNGspoilers', 'false', 90);
+			}	
 		}
 		spoiler.style.setProperty("--spoilerDisplay", display);
 	});
@@ -207,13 +241,20 @@ function toggleSpoilers() {
 	DS9Spoilers.forEach((spoiler) => {
 		var display = "inline-block";
 		if (DS9SpoilerToggle.checked) {
+			spoilerMenuButton.style.setProperty('--flag-display', 'block');
 			if (spoiler.classList.contains("characterDeath")){
 				if (characterDeathToggle.checked) {display = "none";}
 			} else {
 				display = "none";
-			}				
+			}
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineDS9spoilers', 'true', 90);
+			}	
 		} else {
 			ALLSpoilerToggle.checked = false;
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineDS9spoilers', 'false', 90);
+			}	
 		}
 		spoiler.style.setProperty("--spoilerDisplay", display);
 	});
@@ -221,13 +262,20 @@ function toggleSpoilers() {
 	VOYSpoilers.forEach((spoiler) => {
 		var display = "inline-block";
 		if (VOYSpoilerToggle.checked) {
+			spoilerMenuButton.style.setProperty('--flag-display', 'block');
 			if (spoiler.classList.contains("characterDeath")){
 				if (characterDeathToggle.checked) {display = "none";}
 			} else {
 				display = "none";
-			}				
+			}
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineVOYspoilers', 'true', 90);
+			}	
 		} else {
 			ALLSpoilerToggle.checked = false;
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineVOYspoilers', 'false', 90);
+			}
 		}
 		spoiler.style.setProperty("--spoilerDisplay", display);
 	});
@@ -235,13 +283,20 @@ function toggleSpoilers() {
 	ENTSpoilers.forEach((spoiler) => {
 		var display = "inline-block";
 		if (ENTSpoilerToggle.checked) {
+			spoilerMenuButton.style.setProperty('--flag-display', 'block');
 			if (spoiler.classList.contains("characterDeath")){
 				if (characterDeathToggle.checked) {display = "none";}
 			} else {
 				display = "none";
+			}
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineENTspoilers', 'true', 90);
 			}				
 		} else {
 			ALLSpoilerToggle.checked = false;
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineENTspoilers', 'false', 90);
+			}
 		}
 		spoiler.style.setProperty("--spoilerDisplay", display);
 	});
@@ -249,13 +304,20 @@ function toggleSpoilers() {
 	kelvinSpoilers.forEach((spoiler) => {
 		var display = "inline-block";
 		if (kelvinSpoilerToggle.checked) {
+			spoilerMenuButton.style.setProperty('--flag-display', 'block');
 			if (spoiler.classList.contains("characterDeath")){
 				if (characterDeathToggle.checked) {display = "none";}
 			} else {
 				display = "none";
 			}				
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineKELVINspoilers', 'true', 90);
+			}	
 		} else {
 			ALLSpoilerToggle.checked = false;
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineKELVINspoilers', 'false', 90);
+			}
 		}
 		spoiler.style.setProperty("--spoilerDisplay", display);
 	});
@@ -263,13 +325,20 @@ function toggleSpoilers() {
 	DISSpoilers.forEach((spoiler) => {
 		var display = "inline-block";
 		if (DISSpoilerToggle.checked) {
+			spoilerMenuButton.style.setProperty('--flag-display', 'block');
 			if (spoiler.classList.contains("characterDeath")){
 				if (characterDeathToggle.checked) {display = "none";}
 			} else {
 				display = "none";
-			}				
+			}	
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineDISspoilers', 'true', 90);
+			}
 		} else {
 			ALLSpoilerToggle.checked = false;
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineDISspoilers', 'false', 90);
+			}
 		}
 		spoiler.style.setProperty("--spoilerDisplay", display);
 	});
@@ -277,13 +346,20 @@ function toggleSpoilers() {
 	PICSpoilers.forEach((spoiler) => {
 		var display = "inline-block";
 		if (PICSpoilerToggle.checked) {
+			spoilerMenuButton.style.setProperty('--flag-display', 'block');
 			if (spoiler.classList.contains("characterDeath")){
 				if (characterDeathToggle.checked) {display = "none";}
 			} else {
 				display = "none";
-			}				
+			}	
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelinePICspoilers', 'true', 90);
+			}			
 		} else {
 			ALLSpoilerToggle.checked = false;
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelinePICspoilers', 'false', 90);
+			}	
 		}
 		spoiler.style.setProperty("--spoilerDisplay", display);
 	});
@@ -291,13 +367,20 @@ function toggleSpoilers() {
 	LOWSpoilers.forEach((spoiler) => {
 		var display = "inline-block";
 		if (LOWSpoilerToggle.checked) {
+			spoilerMenuButton.style.setProperty('--flag-display', 'block');
 			if (spoiler.classList.contains("characterDeath")){
 				if (characterDeathToggle.checked) {display = "none";}
 			} else {
 				display = "none";
 			}				
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineLOWspoilers', 'true', 90);
+			}	
 		} else {
 			ALLSpoilerToggle.checked = false;
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineLOWspoilers', 'false', 90);
+			}
 		}
 		spoiler.style.setProperty("--spoilerDisplay", display);
 	});
@@ -305,13 +388,20 @@ function toggleSpoilers() {
 	PROSpoilers.forEach((spoiler) => {
 		var display = "inline-block";
 		if (PROSpoilerToggle.checked) {
+			spoilerMenuButton.style.setProperty('--flag-display', 'block');
 			if (spoiler.classList.contains("characterDeath")){
 				if (characterDeathToggle.checked) {display = "none";}
 			} else {
 				display = "none";
-			}				
+			}	
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelinePROspoilers', 'true', 90);
+			}	
 		} else {
 			ALLSpoilerToggle.checked = false;
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelinePROspoilers', 'false', 90);
+			}	
 		}
 		spoiler.style.setProperty("--spoilerDisplay", display);
 	});
@@ -319,23 +409,24 @@ function toggleSpoilers() {
 	SNWSpoilers.forEach((spoiler) => {
 		var display = "inline-block";
 		if (SNWSpoilerToggle.checked) {
+			spoilerMenuButton.style.setProperty('--flag-display', 'block');
 			if (spoiler.classList.contains("characterDeath")){
 				if (characterDeathToggle.checked) {display = "none";}
 			} else {
 				display = "none";
-			}				
+			}
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineSNWspoilers', 'true', 90);
+			}	
 		} else {
 			ALLSpoilerToggle.checked = false;
+			if (getCookie('consent_preferences') == 'granted') {
+				setCookie('timelineSNWspoilers', 'false', 90);
+			}	
 		}
 		spoiler.style.setProperty("--spoilerDisplay", display);
 	});
-	
-	/* Catches for toggles without spoilers */
-	if (!ENTSpoilerToggle.checked || !LOWSpoilerToggle.checked || !SNWSpoilerToggle.checked)
-	{
-		ALLSpoilerToggle.checked = false;
-	}
-	
+
 	autocompleteUpdate(document.getElementById("tableSearch"), compileSuggestions());
 }
 
@@ -1011,10 +1102,26 @@ window.onload = function() {
 		}
 	}
 	
-	// Uncheck all spoiler toggles
+	// Uncheck all spoiler toggles and check for cookie settings
 	Array.from(document.getElementsByClassName("spoilerToggle")).forEach((toggle) => {
 		toggle.checked = false;
 	});
+	if (getCookie('timelineTOSspoilers') == 'true') { document.getElementById("TOSSpoilerToggle").checked = true; }
+	if (getCookie('timelineTNGspoilers') == 'true') { document.getElementById("TNGSpoilerToggle").checked = true; }
+	if (getCookie('timelineDS9spoilers') == 'true') { document.getElementById("DS9SpoilerToggle").checked = true; }
+	if (getCookie('timelineVOYspoilers') == 'true') { document.getElementById("VOYSpoilerToggle").checked = true; }
+	if (getCookie('timelineENTspoilers') == 'true') { document.getElementById("ENTSpoilerToggle").checked = true; }
+	if (getCookie('timelineKELVINspoilers') == 'true') { document.getElementById("kelvinSpoilerToggle").checked = true; }
+	if (getCookie('timelineDISspoilers') == 'true') { document.getElementById("DISSpoilerToggle").checked = true; }
+	if (getCookie('timelinePICspoilers') == 'true') { document.getElementById("PICSpoilerToggle").checked = true; }
+	if (getCookie('timelineLOWspoilers') == 'true') { document.getElementById("LOWSpoilerToggle").checked = true; }
+	if (getCookie('timelinePROspoilers') == 'true') { document.getElementById("PROSpoilerToggle").checked = true; }
+	if (getCookie('timelineSNWspoilers') == 'true') { document.getElementById("SNWSpoilerToggle").checked = true; }
+	if (getCookie('timelineDEATHspoilers') == 'true') { document.getElementById("characterDeathToggle").checked = true; }
+	if (getCookie('timelineALLspoilers') == 'true') { document.getElementById("ALLSpoilerToggle").checked = true; }
+
+	toggleSpoilers();
+	
 	
 	//Get cell contents for search suggestions
 	autocompleteSetup(document.getElementById("tableSearch"), compileSuggestions());

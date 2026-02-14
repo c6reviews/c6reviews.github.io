@@ -1,4 +1,4 @@
-﻿/* File version 1.1.0 */
+﻿
 document.addEventListener('DOMContentLoaded', function() {
 	var bottomBorder = document.getElementById('bottomBorder');
 	setTimeout(function() {bottomBorder.style.width = '74%';}, 100);
@@ -219,7 +219,10 @@ function alwaysShowFullReview(caller) {
 			} else {
 				content.style.display = "inline";
 			}
-		});	
+		});
+		if (getCookie('consent_preferences') == 'granted') {
+			setCookie('PICallSpoilers', 'true', 90);
+		}
 		
 	} else {
 		
@@ -236,6 +239,10 @@ function alwaysShowFullReview(caller) {
 		contents.forEach((content) => {
 			content.style.display = "none";
 		});	
+		
+		if (getCookie('consent_preferences') == 'granted') {
+			setCookie('PICallSpoilers', 'false', 90);
+		}
 		
 	}
 	
@@ -362,6 +369,13 @@ window.onload = function() {
 	// Check status of main spoiler toggle
 	if (document.getElementById("mainToggle"))
 	{
+		let showAllSpoilers = getCookie('PICallSpoilers');
+		if (showAllSpoilers == 'true') {
+			document.getElementById("mainToggle").checked = true;
+		} else {
+			document.getElementById("mainToggle").checked = false;
+		}	
+		
 		alwaysShowFullReview(document.getElementById("mainToggle"));
 	}
 

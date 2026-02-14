@@ -21,6 +21,7 @@ td {
 	display: none;
 	position: fixed;
 	overflow: hidden;
+	z-index: 100;
 }
 #sourceDiv {
 	margin: 0px;
@@ -40,7 +41,7 @@ td {
 	top:3px;
 	right:100px;
 	z-index:99;
-	background-color:#BB4C1C50;
+	background-color:#BB4C1CA0;
 	width:fit-content;
 	height:auto;
 	padding:3px 8px;
@@ -242,13 +243,27 @@ input[type=button]:hover {
 	padding: 4px;
 	border: 2px solid;
 	border-radius: 12px 0px 0px 12px;
-	overflow: hidden;
+	overflow: ;
 	z-index: 99;
 	transition: 0.2s;
 	width: 45px;
 }
 #spoilerMenuOpenButton:hover {
 	background-color: #124054;
+}
+#spoilerMenuOpenButton::before {
+	content:"!";
+	display: var(--flag-display, block);
+	position: absolute;
+	top: 3px;
+	left: -12px;
+	border: 1px solid #D0D0D0;
+	border-radius: 150px;
+	width: 20px;
+	font-weight: bold;
+	background-color: #BB4C1C;
+	box-shadow: 0px 0px 4px white;
+	z-index: 100;
 }
 .spoilerMenu {
   height: 100%;
@@ -285,6 +300,17 @@ input[type=button]:hover {
 	right: -310px;
 	width: 300px;
 }
+#saveSettingsNotice {
+	width: fit-content;
+	text-align: center;
+	font-size: small;
+	margin-top: 24px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2px 8px;
+	border-top: 1px solid #555;
+}
+
 
 /* ------------------------- MISC ------------------------- */
 .tooltip {
@@ -323,7 +349,14 @@ input[type=button]:hover {
 	transform: skewY(-10deg) rotate(10deg);
 	pointer-events: none;
 }
-
+/* Inner tables */
+#theTable table {
+	height:100%;
+}
+#theTable td:has(table){
+	height:100%;
+}
+/* */
 .blinkBox {
 	color: yellow !important;
 	border-color: yellow !important;

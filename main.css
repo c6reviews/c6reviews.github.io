@@ -307,6 +307,12 @@ body li {
 	font-style: italic;
 	color: #E47545;
 	margin-top:8px;
+	& a {
+		color: #E47545;
+		font-style: normal;
+		text-decoration: underline;
+		cursor: pointer;
+	}
 }
 #bottomBorder{
 	position: fixed;
@@ -448,30 +454,40 @@ body li {
 	}
 	
 	
-	.headquote {
+	#headquote {
 		font-family: CCS, Georgia, sans-serif;
 		font-size: 16px;
-		font-style: italic;
 		text-align: center;
-		margin: 10px auto 10px auto;
+		text-wrap: pretty;
+		margin: 0px auto 10px auto;
 		width: 250px;
 		padding: 0px 0px 3px 0px;
 		border: solid #BB4C1C;
 		border-width: 2px 0px 0px 0px;
 		border-radius: 10px;
-		background: linear-gradient(to top, #BB4C1C88, #181818 35% );
+		background: linear-gradient(to top, #BB4C1C88, #181818 35%);
 	}
-	.headquote img {
+	#headquote a[target="_blank"]::after {
+		content:"";
+	}
+	#headquoteText {
+		font-style: italic;
+		em {
+			font-style: normal;
+		}
+	}
+	#headquote img {
 		border-radius: 10px;
 		width: 250px;
 	}
 	#randomReview {
 		border: 3px solid #E47545;
 		border-radius: 8px;
-		width: fit-content;
+		width: 250px;
 		margin: 10px auto 10px auto;
 		text-align: center;
 		background-color: #181818;
+		overflow: hidden;
 	}
 	#randomReviewImage img {
 		width: 250px;
@@ -493,6 +509,10 @@ body li {
 		font-size: large;
 		border-top: 1px solid #505050;
 		line-height: 1;
+	}
+	#randomReviewRecommendation {
+		margin: 5px auto auto auto;
+		width: fit-content;
 	}
 	#randomReviewScore {
 		margin: 5px auto 5px auto;
@@ -881,7 +901,7 @@ body li {
 	font-size: 26px;
 	text-shadow: 0 0 8px #FFF;
 	transform: rotate(-20deg);
-	z-index: 200;
+	z-index: 98;
 }
 .timelineTable .episodeBox {
 	position: relative;
@@ -899,7 +919,7 @@ body li {
 	font-size: 20px;
 	text-shadow: 0 0 3px #FFF;
 	transform: rotate(-10deg);
-	z-index: 200;
+	z-index: 98;
 }
 .timelineTable .filmBox {
 	position: relative;
@@ -917,7 +937,7 @@ body li {
 	top: -10px;
 	font-size: 30px;
 	transform: rotate(-20deg);
-	z-index: 200;
+	z-index: 97;
 }
 .timelineTable .filmBox:not(.kelvin)::before{
 	text-shadow: 0 0 8px #FFF;

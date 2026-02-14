@@ -18,8 +18,8 @@
 
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 	<meta name="darkreader-lock" content="47">
-	<link rel="stylesheet" href="../main.css?v=1.5">
-	<link rel="stylesheet" href="timeline.css?v=1.5">
+	<link rel="stylesheet" href="../main.css?v=1.5.1">
+	<link rel="stylesheet" href="timeline.css?v=1.5.1">
 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	
 	<meta property="og:title" content="Full Star Trek Timeline | C6Reviews">
@@ -29,6 +29,7 @@
 	<meta property="og:description" content="A comprehensive timeline for the entire Star Trek universe. This page is best viewed on a full-size computer screen.">
 
 	<script src="timeline.js"></script>
+	<script src="../cookies.js"></script>
 	<title>C6 | Star Trek Timeline</title>
 </head>
 
@@ -273,6 +274,8 @@
 	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="LOWSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#3E9FE5;font-weight:bold;">Lower Decks</span> spoilers</span></label></div>
 	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="PROSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#3E9FE5;font-weight:bold;">Prodigy</span> spoilers</span></label></div>
 	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="SNWSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#3E9FE5;font-weight:bold;">Strange New Worlds</span> spoilers</span></label></div>
+	
+	<div id="saveSettingsNotice">Save these settings?<br><a onClick="unsetAllCookies()" style="cursor:pointer">Enable Preferences Cookies</a></div>
 </div>
 
 <div onclick="scrollToBottom()" id="toBottomButton" title="Go to bottom" class="sideButton"><span style="font-size: small;">bottom</span><br>🔻</div> 
@@ -325,7 +328,7 @@
 <!-- =============================================================== SEARCH BAR =============================================================== -->
 
 <div class="searchBarContainer">
-	<form autocomplete="off" style="display:inline-block"><div class="autocomplete"><input id="tableSearch" type="text" placeholder="Timeline Search" size="30"></div><input type="button" value="✖&#xFE0E;" style="width:24px;height:24px;padding-left:3px;padding-top:0px;margin-left:3px;" onClick="document.getElementById('tableSearch').value='';document.getElementById('resultCount').innerHTML='';">&nbsp;&nbsp;<input type="button" id="searchDownButton" value="▼" onClick="search('down')" style="width:24px;height:24px;font-size:12px"> <input type="button" value="▲" onClick="search('up')" style="width:24px;height:24px;font-size:12px"><div id="resultCount">&nbsp;</div><br><span style="font-size:x-small;font-style:italic">Spoiler content cannot be searched unless &ldquo;Show all spoilers&rdquo; is selected from the menu.</span></form>
+	<form autocomplete="off" style="display:inline-block"><div class="autocomplete"><input id="tableSearch" type="text" placeholder="Timeline Search" size="30"></div><input type="button" value="✖&#xFE0E;" style="width:24px;height:24px;padding-left:3px;padding-top:0px;margin-left:3px;background-color:#333" onClick="document.getElementById('tableSearch').value='';document.getElementById('resultCount').innerHTML='';">&nbsp;&nbsp;<input type="button" id="searchDownButton" value="▼" onClick="search('down')" style="width:24px;height:24px;font-size:12px;background-color:#333"> <input type="button" value="▲" onClick="search('up')" style="width:24px;height:24px;font-size:12px;background-color:#333"><div id="resultCount">&nbsp;</div><br><span style="font-size:x-small;font-style:italic">Spoiler content cannot be searched unless &ldquo;Show all spoilers&rdquo; is selected from the menu.</span></form>
 </div>
 
 <!-- ========================================================================================================================================= -->
@@ -1476,6 +1479,16 @@
 	<tr class="contentRow nonEssential">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;"></td>
+		<td colspan="2" class="joinLeft">≈ 1665-1666 &ldquo;Quinn&rdquo; jostles a tree causing an apple to fall on Isaac Newton's head</td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="../voy/voy-s2.html#e18">❰ VOY 2x18: Death Wish</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;"></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -1552,7 +1565,7 @@
 	</tr>
 	<tr class="contentRow nonEssential">
 		<td><strong>Century</strong></td>
-		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1880</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1860</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -1563,6 +1576,225 @@
 	</tr>
 	<tr class="contentRow nonEssential">
 		<td><strong>↓</strong></td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1861</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1862</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1863</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1864</td>
+		<td colspan="2" class="joinLeft">&ldquo;Quinn&rdquo; rescues Thaddius Riker at the Battle of Pine Mountain</td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="../voy/voy-s2.html#e18">❰ VOY 2x18: Death Wish</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1865</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1866</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1867</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1868</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1869</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1870</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1871</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1872</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1873</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1874</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1875</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1876</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1877</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1878</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1879</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1880</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1881</td>
 		<td class="minorTimeTravel firstGen joinLeft">❰ TOS: Spectre of the Gun</td>
 		<td class="joinRight">(Oct 26) Gunfight at the O.K. Corral</td>
@@ -2520,8 +2752,8 @@
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1969</td>
 		<td class="majorTimeTravel firstGen">❰❰ TOS: Tomorrow is Yesterday</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td class="joinLeft">&ldquo;Quinn&rdquo; saves Woodstock</td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="../voy/voy-s2.html#e18">❰ VOY 2x18: Death Wish</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 	</tr>
@@ -2784,8 +3016,8 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1994</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td class="joinLeft">Several humans are cryonically frozen and launched into Earth orbit on the SS Birdseye</td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="../tng/tng-s1.html#e26">❰ TNG: The Neutral Zone</a></td>
 		<td class="realLife secondGen essential"><a href="../films/generations.html">Star Trek Generations premieres</a></td>
 	</tr>
 	<tr class="contentRow">
@@ -2859,7 +3091,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td class="realLife secondGen essential"><a href="../films/nemesis.html">Star Trek: Nemesis premieres</a></td>
+		<td class="realLife secondGen essential"><a href="../films/nemesis.html">Star Trek Nemesis premieres</a></td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -3083,11 +3315,11 @@
 				</tr>
 			</table>
 		</td>
-		<td class="essential" style="padding:0">
-			<table class="timelineTable" style="width:100%;border:none;border-width:0;margin:0;padding:0;">
+		<td class="essential" style="padding:0;height:100%">
+			<table class="timelineTable" style="width:100%;height:100%;border:none;border-width:0;margin:0;padding:0;">
 				<tr class="contentRow">
 					<td style="width:50%;border:none">&nbsp;</td>
-					<td style="width:50%" class="realLife thirdGen essential">Discovery S3 airs</td>
+					<td style="width:50%;" class="realLife thirdGen essential">Discovery S3 airs</td>
 				</tr>
 			</table>
 		</td>
@@ -5840,8 +6072,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td class="essential">|</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td colspan="2" data-source="ENT 4x18: In a Mirror, Darkly" onmouseover="showSource(this);" onmouseout="closeSource();">USS DEFIANT NCC&#8209;1764 sent to mirror universe year 2155 or before</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2269</td>
@@ -5850,7 +6081,8 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td class="essential">|</td>
-		<td colspan="2">USS DEFIANT NCC&#8209;1764 sent to mirror universe year 2155 or before</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2270</td>
@@ -6010,7 +6242,7 @@
 		<td id="TSFS" class="filmBox firstGen essential">III: THE SEARCH FOR SPOCK <span class="x-small" style="font-weight:normal;font-family:serif">(1984)</span></td>
 		<td class="episodeBox thirdGen essential">SHO: &ldquo;Ephraim and Dot&rdquo; <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(2x04)</span></td>
 		<td class="spoiler TOSSpoiler characterDeath essential">USS ENTERPRISE NCC&#8209;1701 Destroyed</td>
-		<td>USS RELIANT NCC&#8209;1864 destroyed</td>
+		<td data-source="<em>Star Trek II: The Wrath of Khan</em>" onmouseover="showSource(this);" onmouseout="closeSource();">USS RELIANT NCC&#8209;1864 destroyed</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2286</td>
@@ -6019,7 +6251,7 @@
 		<td>&nbsp;</td>
 		<td id="TVH" class="filmBox firstGen essential">IV: THE VOYAGE HOME <span class="x-small" style="font-weight:normal;font-family:serif">(1986)</span></td>
 		<td>&nbsp;</td>
-		<td class="essential">USS ENTERPRISE NCC&#8209;1701&#8209;A Launched</td>
+		<td class="essential" data-source="<em>Star Trek IV: The Voyage Home</em>" onmouseover="showSource(this);" onmouseout="closeSource();">USS ENTERPRISE NCC&#8209;1701&#8209;A Launched</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -6090,7 +6322,7 @@
 		<td class="joinRight spoiler TOSSpoiler TNGSpoiler characterDeath">Kirk presumed dead (Age 60)</td>
 		<td class="majorEventBox essential">Khitomer Accords Signed</td>
 		<td class="essential">USS ENTERPRISE NCC&#8209;1701&#8209;A <br>Decommissioned</td>
-		<td class="essential">USS ENTERPRISE NCC&#8209;1701&#8209;B <br>Commissioned</td>
+		<td class="essential" data-source="<em>Star Trek Generation</em>" onmouseover="showSource(this);" onmouseout="closeSource();">USS ENTERPRISE NCC&#8209;1701&#8209;B <br>Commissioned</td>
 	</tr>
 	<tr class="contentRow">
 		<td>&nbsp;</td>
@@ -6306,7 +6538,7 @@
 	<tr class="contentRow">
 		<td class="picardEra lostEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2314</td>
 		<td>&nbsp;</td>
-		<td id="YPDeath2" style="text-align:left">≈ Yvette Picard death (year unknown)</td>
+		<td id="YPDeath2" style="text-align:left" data-source="PIC 2x09: Hide and Seek" onmouseover="showSource(this);" onmouseout="closeSource();">≈ Yvette Picard death (year unknown)</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -6544,7 +6776,7 @@
 	<tr class="contentRow">
 		<td class="picardEra lostEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2338</td>
 		<td data-source="TNG 5x14: Conundrum" onmouseover="showSource(this);" onmouseout="closeSource();">Data activated on Omicron Theta (Feb 2)</td>
-		<td>Noonien Soong escapes the Crystalline Entity</td>
+		<td class="spoiler TNGSpoiler">Noonien Soong escapes the Crystalline Entity</td>
 		<td>&nbsp;</td>
 		<td>|</td>
 		<td>|</td>
@@ -6608,7 +6840,7 @@
 		<td class="majorEventBox joinRight"  id="altYar2">Battle at Narendra III</td>
 		<td>|</td>
 		<td>|</td>
-		<td>USS ENTERPRISE NCC&#8209;1701&#8209;C Destroyed</td>
+		<td data-source="TNG 3x15: Yesterday's Enterprise" onmouseover="showSource(this);" onmouseout="closeSource();">USS ENTERPRISE NCC&#8209;1701&#8209;C Destroyed</td>
 		<td>Annika Hansen born</td>
 	</tr>
 	<tr class="contentRow">
@@ -6803,9 +7035,9 @@
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2364</td>
 		<td class="seriesBox secondGen" style="font-size:large;background-image:url('images/picard.png');background-size:100% auto;background-blend-mode:color-dodge" rowspan="7" id="TNG"><a href="../tng/index.html">STAR TREK <br>THE NEXT GENERATION (TNG)</a><br><span class="x-small" style="font-weight:normal;font-family:serif">1987-1994</span></td>
-		<td>McCoy visits the Enterprise D (Age 137)</td>
+		<td data-source="TNG 1x01/02: Encounter at Farpoint" onmouseover="showSource(this);" onmouseout="closeSource();">McCoy visits the Enterprise D (Age 137)</td>
 		<td class="spoiler TNGSpoiler characterDeath">Tasha Yar dies (<span style="font-family:serif">I</span>) (Age 27)</td>
-		<td>USS STARGAZER NCC&#8209;2893 <br>Recovered &amp; Decommissioned</td>
+		<td data-source="TNG 1x09: The Battle" onmouseover="showSource(this);" onmouseout="closeSource();">USS STARGAZER NCC&#8209;2893 <br>Recovered &amp; Decommissioned</td>
 		<td>|</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -6830,7 +7062,7 @@
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2367</td>
 		<td class="majorEventBox">Battle at Wolf 359 (early January)</td>
-		<td>Noonien Soong dies</td>
+		<td class="spoiler TNGSpoiler">Noonien Soong dies</td>
 		<td>Curzon dies, Dax joins with Jadzia</td>
 		<td>Federation-Cardassian treaty signed</td>
 		<td class="majorTimeTravel apocryphal">❰❰ &ldquo;Star Trek: Borg&rdquo; video game*</td>
@@ -6848,7 +7080,7 @@
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2369</td>
 		<td class="seriesBox secondGen" style="font-size:large;background-image:url('images/sisko.png');background-size:100% auto;background-blend-mode:lighten" rowspan="7" id="DS9"><a href="../ds9/index.html">STAR TREK <br>DEEP SPACE NINE (DS9)</a> <br><span class="x-small" style="font-weight:normal;font-family:serif">1993-1999</span></td>
-		<td>Scotty recovered from the Jenolan</td>
+		<td data-source="TNG 6x04: Relics" onmouseover="showSource(this);" onmouseout="closeSource();">Scotty recovered from the Jenolan</td>
 		<td>(Sisko Age 37)</td>
 		<td>Terok Nor becomes DS9</td>
 		<td>&nbsp;</td>
@@ -6873,10 +7105,10 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2372</td>
-		<td>Worf joins DS9 crew</td>
+		<td data-source="DS9 4x01/02: The Way of the Warrior" onmouseover="showSource(this);" onmouseout="closeSource();">Worf joins DS9 crew</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>USS ENTERPRISE NCC&#8209;1701&#8209;E Launched</td>
+		<td data-source="<em>Star Trek: First Contact</em>" onmouseover="showSource(this);" onmouseout="closeSource();">USS ENTERPRISE NCC&#8209;1701&#8209;E Launched</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -6890,7 +7122,7 @@
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2374</td>
 		<td class="spoiler DS9Spoiler characterDeath">Jadzia dies, Dax joins with Ezri</td>
-		<td>Alexander, 8, joins the <em>Rotarran</em></td>
+		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 	</tr>
@@ -6979,7 +7211,7 @@
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2384</td>
 		<td>&nbsp;</td>
-		<td class="mirrorUniverse" style="border-bottom:1px solid black;">Terran Empire has been restored</td>
+		<td class="mirrorUniverse" style="border-bottom:1px solid black;" data-source="PRO 2x14: Cracked Mirror" onmouseover="showSource(this);" onmouseout="closeSource();">Terran Empire has been restored by this year</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -7001,7 +7233,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td class="spoiler characterDeath PICSpoiler">Icheb dies</td>
-		<td>USS ENTERPRISE NCC&#8209;1701&#8209;F Launched</td>
+		<td class="apocryphal" data-source="Star Trek Logs on Instagram" onmouseover="showSource(this);" onmouseout="closeSource();">USS ENTERPRISE NCC&#8209;1701&#8209;F Launched*</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -7093,13 +7325,12 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2396</td>
+		<td class="minorTimeTravel thirdGen joinLeft"><a href="../pic/pic-s3.html#e04">❰ PIC: No Win Scenario</a></td>
+		<td colspan="2" class="joinRight">Picard regales young officers at Ten Forward Ave with stories of his adventures</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>USS TITAN NCC&#8209;80102&#8209;A Launched</td>
+		<td data-source="PIC 3x01: The Next Generation" onmouseover="showSource(this);" onmouseout="closeSource();">USS TITAN NCC&#8209;80102&#8209;A Launched</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2397</td>
@@ -7157,7 +7388,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>USS ENTERPRISE NCC&#8209;1701&#8209;F Decommissioned</td>
+		<td data-source="PIC 3x09: Võx" onmouseover="showSource(this);" onmouseout="closeSource();">USS ENTERPRISE NCC&#8209;1701&#8209;F Decommissioned</td>
 		<td class="spoiler PICSpoiler">USS TITAN NCC&#8209;80102&#8209;A rechristened as <br>USS ENTERPRISE NCC&#8209;1701&#8209;G</td>
 	</tr>
 	<tr class="contentRow">
@@ -7471,7 +7702,7 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2431</td>
 		<td>&nbsp;</td>
-		<td>Planet Meridian due to reappear (DS9)</td>
+		<td data-source="DS9 3x08: Meridian" onmouseover="showSource(this);" onmouseout="closeSource();">Planet Meridian due to reappear</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -7874,7 +8105,8 @@
 	<tr class="contentRow">
 		<td></td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;"></td>
-		<td colspan="2">2664: Humans invited to return to Velara III (TNG: Home Soil)</td>
+		<td data-source="TNG 1x18: Home Soil" onmouseover="showSource(this);" onmouseout="closeSource();">2664: Humans invited to return to Velara III</td>
+		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -7884,7 +8116,7 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;"></td>
-		<td class="mirrorUniverse" colspan="2">c. 2689: Mirror Universe has drifted too far to allow any more crossings</td>
+		<td class="mirrorUniverse" colspan="2" data-source="DIS 3x05: Die Trying" onmouseover="showSource(this);" onmouseout="closeSource();">c. 2689: Mirror Universe has drifted too far to allow any more crossings</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -8288,7 +8520,7 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">3188</td>
 		<td class="seriesBox thirdGen" rowspan="4" style="background-image:url('images/burnhamred.png');background-size:100% auto;background-blend-mode:lighten;" id="DIS2">STAR TREK <br>DISCOVERY (DIS) <br>SEASONS 3, 4, 5 <br><span class="x-small" style="font-weight:normal;font-family:serif">2020-2024</span></td>
-		<td>Burnham arrives from 2258</td>
+		<td data-source="DIS 3x01: That Hope Is You, Part 1" onmouseover="showSource(this);" onmouseout="closeSource();">Burnham arrives from 2258</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -8298,7 +8530,7 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">3189</td>
-		<td>USS Discovery arrives from 2258</td>
+		<td data-source="DIS 3x02:Far From Home" onmouseover="showSource(this);" onmouseout="closeSource();">USS Discovery arrives from 2258</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -9133,8 +9365,9 @@
 
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
 
-<div class="pageFooter"><img src="../images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html">HOME</a>&nbsp;&nbsp;<a href="../about.html">ABOUT</a>&nbsp;&nbsp;<a href="../updates.html">UPDATES</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="../images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
-<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.</div>
+<div class="pageFooter"><a href="../index.html"><img src="../images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../about.html">ABOUT</a>&nbsp;&nbsp;<a href="../updates.html">UPDATES</a>&nbsp;&nbsp;<a href="../blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="../images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
+
 <div id="sourceDivContainer"><div id="sourceDiv"></div></div>
 <div id="TTDIV">
 	<div id="ExampleTT" class="tooltip" onClick="closeToolTip(this)">Yes, just like that!<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
@@ -9159,6 +9392,7 @@
 	
 	<div id="SATT" class="tooltip" onClick="closeToolTip(this)">The dates for the events in Star Trek: Starfleet Academy have not yet been firmly established.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
 </div>
+<div id="seriesWithNoSpoilersFix" style="display:none"><span class="spoiler ENTSpoiler">&nbsp;</span><span class="spoiler LOWSpoiler">&nbsp;</span><span class="spoiler SNWSpoiler">&nbsp;</span></div>
 
 <div id="bottomBorder"></div>
 </body>

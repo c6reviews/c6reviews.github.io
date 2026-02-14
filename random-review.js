@@ -28,7 +28,9 @@ const reviews = [
 ];
 // PIC 3x10 HAS BEEN OMITTED FROM THE ABOVE LIST BECAUSE THE EPISODE PHOTO IS A MAJOR SPOILER
 
-// const reviews = ['voy/voy-s6.html#e15'];
+// const reviews = ['tng/tng-s1.html#e01','tng/tng-s1.html#e03','tng/tng-s1.html#e04'];   //<------ FOR TESTING
+
+var reviewPool = [...reviews];
 
 async function getReviewElement(url, elementId) {
     try {
@@ -55,16 +57,29 @@ async function getReviewElement(url, elementId) {
 		const reviewURL = url + "#" + elementId;
 		const imageURL = subFolder + "/" + element.querySelector('.episodeCardBG').getAttribute('src');
 		const imageALT = element.querySelector('.episodeCardBG').getAttribute('alt');
+		
 		var epNumber = element.querySelector('.seasonEpisodeNumberBox').innerText;
-		if (epNumber.includes('Feature-Length')) {epNumber = epNumber.substring(0,7)}
+		if (epNumber.includes('Feature-Length')) {epNumber = epNumber.split(/\s/)[0]}
 		
 		var title = element.querySelector('.titleBox').innerHTML;
-		if (title.includes('<')) {title = title.substring(0,(title.indexOf('<')))}
+		if (title.includes('Disambiguation')||title.includes('TTScontrols')) {title = title.substring(0,(title.indexOf('<')))}
+		
 				
 		const myScore = element.querySelector('[class^="stars"]').outerHTML;
+		
+		var rmIcon = "";
+		var rmText = "";
+		if (!!element.querySelector('.watchRecommendationBox')){
+			const rmBox = element.querySelector('.watchRecommendationBox');
+			rmIcon = rmBox.querySelector('.x-large').innerText.split(/\s/)[0];
+			if (rmIcon == "-") {rmIcon = ""}
+			rmText = rmBox.querySelector('.large').innerText.replace("Bare Minimum","");
+			if (rmText == "-") {rmText = ""}
+		}
+		
 		const score = element.querySelector('.xx-large').innerText;
 		
-        return [reviewURL, imageURL, imageALT, series, epNumber, title, myScore, score];
+        return [reviewURL, imageURL, imageALT, series, epNumber, title, myScore, rmIcon, rmText, score];
     } catch (error) {
         console.error('Error fetching or parsing page:', url, elementId, error);
         return null;
@@ -74,12 +89,24 @@ async function getReviewElement(url, elementId) {
 
 function generateRandomReview() {
 	// Select random Review
-	var randomReview = reviews[Math.floor(Math.random() * reviews.length)];
+	var randomNo = Math.floor(Math.random() * reviewPool.length);
+	var randomReview = reviewPool[randomNo];
+	if (reviewPool.length > 1) {
+		reviewPool.splice(randomNo, 1);
+	} else {
+		reviewPool = [...reviews];
+	}
+	
 	var selectedPage = randomReview.substring(0,randomReview.indexOf('#'));
 	var selectedReview = randomReview.substring(randomReview.indexOf('#')+1,randomReview.length);
-	getReviewElement(selectedPage , selectedReview).then(([reviewURL, imageURL, imageALT, series, epNumber, title, myScore, score]) => {
+	getReviewElement(selectedPage , selectedReview).then(([reviewURL, imageURL, imageALT, series, epNumber, title, myScore, rmIcon, rmText, score]) => {
 
-		document.getElementById('randomReviewImage').innerHTML = `<a href="` + reviewURL + `"><img src="` + imageURL + `" alt="` + imageALT + `"></a>`;
+		if(series == "PRO" || series == "PIC"){
+			document.getElementById('randomReviewImage').innerHTML = `<a href="` + reviewURL + `"><img src="` + imageURL + `" alt="` + imageALT + `" style="width:350px;margin-left:-50px;"></a>`;
+		} else {
+			document.getElementById('randomReviewImage').innerHTML = `<a href="` + reviewURL + `"><img src="` + imageURL + `" alt="` + imageALT + `"></a>`;
+		}
+		
 		document.getElementById('randomReviewEpisodeID').innerHTML = series + " " + epNumber;
 		document.getElementById('randomReviewTitle').innerHTML = "<a style='white-space:wrap;' href='" + reviewURL + "'>" + title.replace(/ \(parts i and ii\)/gi,'') + "</a>";
 		
@@ -89,42 +116,46 @@ function generateRandomReview() {
 			document.getElementById('randomReviewMyScore').innerHTML += '<br><span class="personalFavorite" style="color:#FF86AD">♥&#xFE0E; <span class="large">Personal Favorite</span></span>';
 		}
 		
-		var scoreColor = "#D0D0D0";
 		
+			rmIcon = rmIcon.replace("🕶","<span style='color:#66FF66;'>🕶</span>").replace("✖","<span style='color: #FF6666'>✖</span>");
+			document.getElementById('randomReviewRecommendation').innerHTML = rmIcon + " " + rmText;
+		
+			
+		var scoreColor = "#D0D0D0";
 		switch (Array.from(score)[0]) {
 				case "0":
-					scoreColor = '#F8393BBF';
+					scoreColor = '#F8393B';
 					break;
 				case "1":
 					if (Array.from(score)[1] == "0") {
-						scoreColor = '#03BE4BBF';
+						scoreColor = '#03BE4B';
 					} else {
-						scoreColor = '#F95350BF';
+						scoreColor = '#F95350';
 					}
 					break;
 				case "2":
-					scoreColor = '#FA6D55BF';
+					scoreColor = '#FA6D55';
 					break;
 				case "3":
-					scoreColor = '#FC975ABF';
+					scoreColor = '#FC975A';
 					break;
 				case "4":
-					scoreColor = '#FDC16FBF';
+					scoreColor = '#FDC16F';
 					break;
 				case "5":
-					scoreColor = '#FFEB74BF';
+					scoreColor = '#FFEB74';
 					break;
 				case "6":
-					scoreColor = '#C0E373BF';
+					scoreColor = '#C0E373';
 					break;
 				case "7":
-					scoreColor = '#91DA71BF';
+					scoreColor = '#91DA71';
 					break;
 				case "8":
-					scoreColor = '#72D06FBF';
+					scoreColor = '#72D06F';
 					break;
 				case "9":
-					scoreColor = '#43C75DBF';
+					scoreColor = '#43C75D';
 					break;
 			}
 		

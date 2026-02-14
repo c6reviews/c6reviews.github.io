@@ -18,7 +18,7 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="main.css?v=1.5">
+<link rel="stylesheet" href="main.css?v=1.5.1">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <meta property="og:title" content="Star Trek reviews and guides | C6Reviews">
@@ -29,6 +29,8 @@
 
 <script src="random-review.js"></script>
 <script src="main-marquee.js"></script>
+<script src="head-quote.js"></script>
+<script src="cookies.js"></script>
 
 <style>
 
@@ -87,7 +89,7 @@
 						<img class="marqueeImg" src="images/ogimage.png" alt="a Starfleet delta with the logo 'C6Reviews'">
 						<div class="marqueeTitle">SITE UPDATES AND NEWS</div>
 						<div class="marqueeSubtitle"></div>
-						<div class="marqueeContent">Last update: February 1 &ndash; <a href="updates.html">Details</a>
+						<div class="marqueeContent">Last update: February 13 &ndash; <a href="updates.html">Details</a>
 							<br><br>On this site's first year anniversary, February 1, the guides for <a href="tng/index.html"><em>The Next Generation</em></a>, <a href="films/generations.html"><em>Star Trek Generations</em></a>, and the entity known as  <a href="q/index.html"><em>Q</em></a> have gone live!
 						</div>
 					</div>
@@ -104,8 +106,7 @@
 		
 		
 		<div id="rightCol">
-			<div class="headquote"><img src="images/headquotes/drumhead.png" alt="Captain Picard and Lieutenant Worf looking through the observation room windows on the Enterprise-D">
-				&ldquo;Villains who twirl their mustaches are easy to spot; those who clothe themselves in good deeds are well-camouflaged. ...Someone like [that] will always be with us, waiting for the right climate in which to flourish, spreading fear in the name of righteousness. Vigilance, Mister Worf, that is the price we have to continually pay.&rdquo;<br>&mdash; <span style="font-style:normal">Captain Jean-Luc Picard, <a href="tng/tng-s4.html#e21" style="font-family:Exo,Roboto,sans-serif;font-weight:bold">TNG 4x21: The Drumhead</a></span>
+			<div id="headquote">
 			</div>
 										
 			<div id="randomReview">
@@ -114,6 +115,7 @@
 				<div id="randomReviewEpisodeID"><div class="skeleton" style="width:35%"></div></div>
 				<div id="randomReviewTitle"><div class="skeleton" style="width:45%"></div></div>
 				<div id="randomReviewMyScore"><div class="skeleton" style="width:85%"></div></div>
+				<div id="randomReviewRecommendation"></div>
 				<div id="randomReviewScore"><div class="skeleton" style="width:75%"></div></div>
 			</div>
 			
@@ -260,6 +262,15 @@
 				</table>
 				<img src="images/coming-someday.png" class="comingSoonFlag" alt="coming someday">
 			</div>
+			<div class="seriesCard" style="border-color:#444">
+				<img src="images/sfa.png" class="seriesCardBG inactive" alt="the Starfleet Academy building at the San Francisco bay">
+				<table class="seriesCardTitle">
+					<tr>
+						<td><img src="images/sfa-title.png" alt="Star Trek: Starfleet Academy" class="inactive" style="width:80%;"></td>
+					</tr>
+				</table>
+				<img src="images/coming-someday.png" class="comingSoonFlag" alt="coming someday">
+			</div>
 		</div>
 
 		<div id="otherGuides">
@@ -337,15 +348,15 @@
 </div>
 
 <div class="pageFooter">
-	<img src="images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="index.html"><img src="images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	
-	<a href="index.html">HOME</a>&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;
+	<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a href="blog/index.html">BLOG</a>&nbsp;&nbsp;
 	
 	<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a>
 	
 	<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span>
 </div>
-<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.</div>
+<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 
 <div id="TTDIV"></div>
 
