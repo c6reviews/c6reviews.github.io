@@ -83,11 +83,11 @@ html {
 
 /* ---------------------------------------- SEASONS TABLE ---------------------------------------- */
 
-.seasonsTable {
+.seasonsTable,.guidesTable {
 	margin:auto;
 }
 .seasonsTable td {
-	border: 1px solid transparent;
+	border: 2px solid transparent;
 	border-image-slice: 1;
 	text-align:center;
 	padding:0px;
@@ -95,12 +95,29 @@ html {
 	font-weight:bold;
 	vertical-align:bottom;
 }
+.guidesTable td {
+	border: 1px solid #1B8ABA88;
+	border-radius: 15px;
+	text-align:center;
+	padding:0px;
+	font-size:large;
+	font-weight:bold;
+	vertical-align:middle;
+}
 .seasonsTable div {
 	text-align:center;
 	padding:8px;
 	font-size:large;
 	font-weight:bold;
 	vertical-align:bottom;
+	height: 100%;
+}
+.guidesTable div {
+	text-align:center;
+	padding:8px;
+	font-size:large;
+	font-weight:bold;
+	vertical-align:middle;
 	height: 100%;
 }
 
