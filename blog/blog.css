@@ -83,8 +83,9 @@ h2 {
 	text-align: center;
 	font-family: Roboto, sans-serif;
 	font-style: italic;
+	em {font-style: normal};
 	font-size: small;
-	margin: 8px 12px;
+	margin: 8px 25px;
 	padding-bottom: 3px;
 	border-bottom: 1px dotted #C0C0C0;
 	width: fit-content;
