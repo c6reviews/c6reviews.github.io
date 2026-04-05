@@ -12,6 +12,7 @@ html {
 	padding-bottom: 3px;
 	border-bottom: 1px dotted #C0C0C0;
 	width: fit-content;
+	em {font-style:normal;}
 }
 .sectionHeader {
 	display: block;

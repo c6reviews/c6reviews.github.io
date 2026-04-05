@@ -217,6 +217,7 @@ td:has(> img.episodeCardBG) {
 			height: auto;
 			width: fit-content;
 			padding: 2px;
+			em { font-style:normal; }
 		}
 		.arcDescription {
 			font-style: normal;

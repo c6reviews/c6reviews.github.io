@@ -86,34 +86,22 @@ function unsetAllCookies(){
 
 function displayConsentDialogue(){
 	const popupBox = document.createElement('div');
-	popupBox.id = 'popup-box';
-	popupBox.style.backgroundColor = '#181818';
-	popupBox.style.padding = '10px';
-	popupBox.style.border = '1px solid #BB4C1C';
-	popupBox.style.borderRadius = '5px';
-	popupBox.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.3)';
-	popupBox.style.height = '300px';
-	popupBox.style.width = '300px';
-	popupBox.style.textAlign = 'center';
-	popupBox.style.position = 'fixed';
-	popupBox.style.bottom = '10px';
-	popupBox.style.left = '20px';
-	popupBox.style.zIndex = '9999';
+	popupBox.id = 'cookiePopup';
 
 	const title = document.createElement('div');
+	title.id = 'cPtitle';
 	title.textContent = 'Cookie Notice';
-	title.style.fontWeight = 'bold';
 	popupBox.appendChild(title);
 
 	const message = document.createElement('div');
+	message.id = 'cPmessage';
 	message.textContent = "This site uses cookies to save your preferences, like whether you want to see spoilers or not! The site also uses Google Analytics, which uses cookies to tell me things like how people use my site and which of the pages are most popular. Settings can be changed at any time by using the 'Reset Cookie Preferences' link at the bottom of any page.";
-	message.style.fontSize='small';
 	popupBox.appendChild(message);
 
 	const detailLink = document.createElement('a');
+	detailLink.id = "cPlink";
 	detailLink.textContent = 'Manage preferences';
-	detailLink.style.fontSize='small';
-	detailLink.style.cursor = 'pointer';
+
 	detailLink.onclick = function() {
 		popupBox.removeChild(message);
 		popupBox.removeChild(detailLink);
@@ -133,15 +121,14 @@ function displayConsentDialogue(){
 		essentialCheck.style.accentColor = 'dimgray';
 		checkboxDiv.appendChild(essentialCheck);
 		const essentialCheckLabel = document.createElement('label');
+		essentialCheckLabel.classList.add('cookieLabel');
 		essentialCheckLabel.setAttribute('for', 'essentialCheck');
 		essentialCheckLabel.textContent = 'Essential cookies';
-		essentialCheckLabel.style.marginLeft = '10px';
 		essentialCheckLabel.style.pointerEvents = 'none';
 		checkboxDiv.appendChild(essentialCheckLabel);
 		const essentialExplanation = document.createElement('div');
+		essentialExplanation.classList.add('cookieExplanation');
 		essentialExplanation.textContent = 'Strictly necessary cookies needed to make the site function correctly.';
-		essentialExplanation.style.marginLeft = '40px';
-		essentialExplanation.style.fontSize = 'x-small';
 		checkboxDiv.appendChild(essentialExplanation);
 		const preferencesCheck = document.createElement('input');
 		preferencesCheck.type = 'checkbox';
@@ -149,14 +136,13 @@ function displayConsentDialogue(){
 		preferencesCheck.checked = true;
 		checkboxDiv.appendChild(preferencesCheck);
 		const preferencesCheckLabel = document.createElement('label');
+		preferencesCheckLabel.classList.add('cookieLabel');
 		preferencesCheckLabel.setAttribute('for', 'preferencesCheck');
 		preferencesCheckLabel.textContent = 'Site preferences';
-		preferencesCheckLabel.style.marginLeft = '10px';
 		checkboxDiv.appendChild(preferencesCheckLabel);
 		const preferencesExplanation = document.createElement('div');
+		preferencesExplanation.classList.add('cookieExplanation');
 		preferencesExplanation.textContent = 'Save settings like whether or not you want to see spoilers on the timeline.';
-		preferencesExplanation.style.marginLeft = '40px';
-		preferencesExplanation.style.fontSize = 'x-small';
 		checkboxDiv.appendChild(preferencesExplanation);
 		const analyticsCheck = document.createElement('input');
 		analyticsCheck.type = 'checkbox';
@@ -164,14 +150,13 @@ function displayConsentDialogue(){
 		analyticsCheck.checked = true;
 		checkboxDiv.appendChild(analyticsCheck);
 		const analyticsCheckLabel = document.createElement('label');
+		analyticsCheckLabel.classList.add('cookieLabel');
 		analyticsCheckLabel.setAttribute('for', 'analyticsCheck');
 		analyticsCheckLabel.textContent = 'Analytics';
-		analyticsCheckLabel.style.marginLeft = '10px';
 		checkboxDiv.appendChild(analyticsCheckLabel);
 		const analyticsExplanation = document.createElement('div');
+		analyticsExplanation.classList.add('cookieExplanation');
 		analyticsExplanation.textContent = 'Google Analytics collects anonymous information that helps me understand how visitors use my site — like which pages are most popular and how people navigate — so that I can improve performance and content.';
-		analyticsExplanation.style.marginLeft = '40px';
-		analyticsExplanation.style.fontSize = 'x-small';
 		checkboxDiv.appendChild(analyticsExplanation);
 		const marketingCheck = document.createElement('input');
 		marketingCheck.type = 'checkbox';
@@ -179,22 +164,18 @@ function displayConsentDialogue(){
 		marketingCheck.checked = true;
 		checkboxDiv.appendChild(marketingCheck);
 		const marketingCheckLabel = document.createElement('label');
+		marketingCheckLabel.classList.add('cookieLabel');
 		marketingCheckLabel.setAttribute('for', 'marketingCheck');
 		marketingCheckLabel.textContent = 'Marketing';
-		marketingCheckLabel.style.marginLeft = '10px';
 		checkboxDiv.appendChild(marketingCheckLabel);
 		const marketingExplanation = document.createElement('div');
+		marketingExplanation.classList.add('cookieExplanation');
 		marketingExplanation.textContent = 'Google Analytics may use these to show relevant ads on other websites.';
-		marketingExplanation.style.marginLeft = '40px';
-		marketingExplanation.style.fontSize = 'x-small';
 		checkboxDiv.appendChild(marketingExplanation);
 		
 		const saveButton = document.createElement('button');
-		saveButton.textContent = 'Save Preferences';
-		saveButton.style.margin = '15px 3px 3px 3px';
-		saveButton.style.padding = '10px 20px';
-		saveButton.style.cursor = 'pointer';
-		saveButton.style.borderRadius = '4px';
+		saveButton.id = "cPsave";
+		saveButton.textContent = 'Save Preferences';	
 		saveButton.onclick = function() {
 			var prefs = 'denied';
 			var ads = 'denied';
@@ -211,38 +192,23 @@ function displayConsentDialogue(){
 	
 
 	const rejectButton = document.createElement('button');
+	rejectButton.id = "cPreject";
 	rejectButton.textContent = 'Essential cookies only';
-	rejectButton.style.display = 'block';
-	rejectButton.style.margin = '3px auto 3px auto';
-	rejectButton.style.padding = '10px 20px';
-	rejectButton.style.cursor = 'pointer';
-	rejectButton.style.backgroundColor = '#181818';
-	rejectButton.style.border = '1px solid #D0D0D0';
-	rejectButton.style.borderRadius = '4px';
-	rejectButton.style.color = '#D0D0D0';
-	rejectButton.style.width = '200px';
-
-	const acceptButton = document.createElement('button');
-	acceptButton.textContent = 'Accept all cookies';
-	acceptButton.style.display = 'block';
-	acceptButton.style.margin = '15px auto 3px auto';
-	acceptButton.style.padding = '10px 20px';
-	acceptButton.style.cursor = 'pointer';
-	acceptButton.style.borderRadius = '4px';
-	acceptButton.style.width = '200px';
-	
 	rejectButton.onclick = function() {
 		setConsent('denied','denied','denied','denied','denied');
 		document.body.removeChild(popupBox);
 	};
+
+	const acceptButton = document.createElement('button');
+	acceptButton.id = "cPaccept";
+	acceptButton.textContent = 'Accept all cookies';
 	acceptButton.onclick = function() {
 		setConsent('granted','granted','granted','granted','granted');
 		document.body.removeChild(popupBox);
 	};
+	
 	popupBox.appendChild(acceptButton);
 	popupBox.appendChild(rejectButton);
-	
-	
 	
 	document.body.appendChild(popupBox);
 }

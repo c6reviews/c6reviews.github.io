@@ -27,7 +27,7 @@ const seriousQuotes = [
 	
 	["images/headquotes/hq-tng-3x16.png","Captain Picard in the Observation Lounge","There are times, sir, when men of good conscience cannot blindly follow orders. You acknowledge their sentience, but you ignore their personal liberties and freedom. Order a man to hand his child over to the state? Not while I am his captain.","Captain Jean-Luc Picard","tng/tng-s3.html#e16","TNG 3x16: The Offspring"],
 	
-	["images/headquotes/hq-tuc-1.png","Spock regarding Valeris in the reflection of his mirror","Logic is the beginning of wisdom... not the end.","Spock","films/vi-tuc.html","<em>Star Trek VI: The Undiscovered Country</em>"],
+	["images/headquotes/hq-tuc-1.png","Spock regarding Valeris in the reflection of his mirror","Logic is the beginning of wisdom, not the end.","Spock","films/vi-tuc.html","<em>Star Trek VI: The Undiscovered Country</em>"],
 	
 	["images/headquotes/hq-pic-2x09.png","Tallinn speaking with Picard in the solarium","Love can be a source of great grief and immense pain, of tremendous guilt, a reason to run from ourselves or away from each other. Love can be a curse, but always and completely... it's a gift.","Tallinn","pic/pic-s2.html#e09","PIC 2x09: Hide and Seek"],
 	
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			quote = ["images/headquotes/hq-voy-3x11.png","Janeway and Q standing in front of a bed with red satin sheets and heart-shaped pillows","The night is young, and the sheets are satin.","<span class='Q'>Q</span>","voy/voy-s3.html#e11","VOY 3x11: The Q and the Grey"];
 			break;
 		case "April 1":
-			quote = ["images/headquotes/hq-aprilfools.png","Patrick Stewart","Use the force, Harry.","Gandalf",'https://tardis.fandom.com/wiki/Genesis_of_the_Daleks_(TV_story)" target="_blank"',"DW 12x04: Genesis of the Daleks"];
+			quote = ["images/headquotes/hq-aprilfools.png","Patrick Stewart","Use the force, Harry.","Gandalf",'https://tardis.fandom.com/wiki/Genesis_of_the_Daleks_(TV_story)" target="_blank',"DW 12x04: Genesis of the Daleks"];
 			break;
 		case "April 5":
 			quote = ["images/headquotes/hq-fc-1.png","A Vulcan performing the traditional Vulcan salute","Live long and prosper.","Unnamed Vulcan","../films/firstcontact.html","<em>Star Trek: First Contact</em>"];

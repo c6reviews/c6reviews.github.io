@@ -327,7 +327,7 @@ function filterTitle() {
 			txtValue = td.textContent || td.innerText;
 			if (txtValue.toLowerCase().indexOf(filter) > -1) {
 				filterrows[i].style.display = "";
-				const regEx = new RegExp(filter, 'gi');
+				const regEx = new RegExp(filter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
 				if (filter != "") {
 					var link = td.querySelector('a');
 					var linktext = link.innerText;

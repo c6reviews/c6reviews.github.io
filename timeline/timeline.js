@@ -755,15 +755,15 @@ function drawLines(){
 			<polyline points="` + (USSFranklin1.right-20) + `,` + (USSFranklin1.top + ((USSFranklin1.bottom-USSFranklin1.top)/2)) + ` ` + (USSFranklin1.right-10) + `,` + (USSFranklin1.top + ((USSFranklin1.bottom-USSFranklin1.top)/2)) + ` ` + (USSFranklin2.left-10) + `,` + (USSFranklin2.top - 5 + ((USSFranklin2.bottom-USSFranklin2.top)/2)) + ` ` + (USSFranklin2.left) + `,` + (USSFranklin2.top + ((USSFranklin2.bottom-USSFranklin2.top)/2)) + ` ` + (USSFranklin2.left-10) + `,` + (USSFranklin2.top + 5 + ((USSFranklin2.bottom-USSFranklin2.top)/2)) + ` ` + (USSFranklin3.right-10) + `,` + (USSFranklin3.top + ((USSFranklin3.bottom-USSFranklin3.top)/2)) + ` ` + (USSFranklin3.right-20) + `,` + (USSFranklin3.top + ((USSFranklin3.bottom-USSFranklin3.top)/2)) + `" style="fill:none;stroke:#C0C0C0AA;"/>
 			
 			<image href="images/times_arrow.png" x="` + (times_arrow.right - ((times_arrow.right-times_arrow.left)/2) - 104) + `" y="` + (times_arrow.top - 140) + `" opacity="0.9"/>
-			<image href="images/cochrane.png" x="` + (warp1.right - ((warp1.right-warp1.left)/2) - 115) + `" y="` + (warp1.top - 192) + `" opacity="0.9"/>
+			<image href="images/cochrane.png" x="` + (warp1.right - ((warp1.right-warp1.left)/2) - 115) + `" y="` + (warp1.top - 157) + `" width="250px" opacity="0.9"/>
 			<image href="images/tcoteof.png" x="` + (tcoteof.right - ((tcoteof.right-tcoteof.left)/2) - 93) + `" y="` + (tcoteof.top - 140) + `" opacity="0.8"/>
-			<image href="images/kelvinkirkandspock.png" x="` + (stb.right) + `" y="` + (stb.top - 109) + `" opacity="1"/>
+			<image href="images/kelvinkirkandspock.png" x="` + (stb.right) + `" y="` + (stb.top - 109) + `" height="109px" opacity="1"/>
 			<image href="images/khan.png" x="` + (twok.right - ((twok.right-twok.left)/2) - 62) + `" y="` + (twok.top - 126) + `" opacity="0.9"/>
 			<image href="images/georgiou.png" x="` + (S31.right - ((S31.right-S31.left)/2) - 55) + `" y="` + (S31.top - 113) + `" opacity="0.8"/>
 			<image href="images/garrett.png" x="` + (yar2.left - 5) + `" y="` + (yar2.top - 82) + `" opacity="0.9"/>
 			<image href="images/calypso.png" x="` + (calypso.right - ((calypso.right-calypso.left)/2) - 28) + `" y="` + (calypso.top - 95) + `" opacity="0.9"/>
 			<image href="images/generations.png" x="` + (generationsPast.left + 5) + `" y="` + (generationsPast.top - 100) + `"/>
-			<image href="images/borgqueen.png" x="` + (FC.right - 60) + `" y="` + (FC.bottom - 106) + `" opacity="0.9"/>
+			<image href="images/borgqueen.png" x="` + (FC.right - 65) + `" y="` + (FC.bottom - 106) + `" opacity="0.9"/>
 				
 	</svg>`;
 		
@@ -834,7 +834,7 @@ function autocompleteSetup(inp, arr) {
 			  /*create a DIV element for each matching element:*/
 			  b = document.createElement("DIV");
 			  /*Highlight matching characters*/
-			  const regEx = new RegExp(val, 'gi');
+			  const regEx = new RegExp(val.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
 			  b.innerHTML = arr[i].replace(regEx, '<span style="color:yellow">$&</span>');
 			  /*insert a input field that will hold the current array item's value:*/
 			  b.innerHTML += "<input type='hidden' value='" + arr[i].replace(/'/g, "&#39;") + "'>";

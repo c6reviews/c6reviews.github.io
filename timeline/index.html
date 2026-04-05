@@ -24,9 +24,9 @@
 
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 	<meta name="darkreader-lock" content="47">
-	<link rel="stylesheet" href="../main.css?v=1.5.1">
-	<link rel="stylesheet" href="timeline.css?v=1.5.1">
-	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	<link rel="stylesheet" href="/main.css?v=1.5.2">
+	<link rel="stylesheet" href="timeline.css?v=1.5.2">
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 	
 	<meta property="og:title" content="Full Star Trek Timeline | C6Reviews">
 	<meta property="og:type" content="website">
@@ -35,13 +35,13 @@
 	<meta property="og:description" content="A comprehensive timeline for the entire Star Trek universe. This page is best viewed on a full-size computer screen.">
 
 	<script src="timeline.js"></script>
-	<script src="../cookies.js"></script>
+	<script src="/cookies.js"></script>
 	<title>C6 | Star Trek Timeline</title>
 </head>
 
 <body>
 
-<div id='kofiframediv'><iframe id="kofiframe" src='../loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
+<div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top" class="sideButton">🔺<br><span class="small">top</span></div> 
 
@@ -251,6 +251,10 @@
 			<td style="text-align:left;border-right:1px solid">PRO: Prodigy</td>
 			<td style="text-align:left">VOY: Voyager</td>
 		</tr>
+		<tr>
+			<td style="text-align:left;border-right:1px solid">SFA: Starfleet Academy</td>
+			<td style="text-align:left">&nbsp;</td>
+		</tr>
 	</table>
 </div>
 
@@ -267,19 +271,21 @@
 	<div class="spoilerSwitch" style="margin-top:15px;margin-bottom:15px"><label class="switch"><input type="checkbox" id="characterDeathToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel" style="font-size:medium;">Show main character deaths</span></label></div>
 	<div style="font-size:12px;text-align:center;font-style:italic;border-bottom: 2px solid #C0C0C0;margin:10px">To see main character deaths, you must also<br>allow the related series spoilers below</div>
 	
-	<div class="spoilerSwitch" style="margin-top:15px;margin-bottom:10px;padding-bottom:10px;border-bottom: 1px dotted;"><label class="switch"><input type="checkbox" id="TOSSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#C0A000;font-weight:bold;">Original/Animated series</span> spoilers</span></label></div>
+	<div class="spoilerSwitch" style="margin-top:15px;margin-bottom:10px;padding-bottom:10px;border-bottom: 1px dotted;"><label class="switch"><input type="checkbox" id="TOSSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#C0A000;font-weight:bold;" title="The Original Series / The Animated Series">TOS/TAS</span> spoilers (4)</span></label></div>
 	
-	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="TNGSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#FF6262;font-weight:bold;">The Next Generation</span> spoilers</span></label></div>
-	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="DS9SpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#FF6262;font-weight:bold;">Deep Space 9</span> spoilers</span></label></div>
-	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="VOYSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#FF6262;font-weight:bold;">Voyager</span> spoilers</span></label></div>
-	<div class="spoilerSwitch" style="margin-bottom:10px;padding-bottom:10px;border-bottom: 1px dotted;"><label class="switch"><input type="checkbox" id="ENTSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#FF6262;font-weight:bold;">Enterprise</span> spoilers</span></label></div>
+	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="TNGSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#FF6262;font-weight:bold;" title="The Next Generation">TNG</span> spoilers (12)</span></label></div>
+	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="DS9SpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#FF6262;font-weight:bold;" title="Deep Space Nine">DS9</span> spoilers (3)</span></label></div>
+	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="VOYSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#FF6262;font-weight:bold;" title="Voyager">VOY</span> spoilers (3)</span></label></div>
+	<div class="spoilerSwitch" style="margin-bottom:10px;padding-bottom:10px;border-bottom: 1px dotted;"><label class="switch"><input type="checkbox" id="ENTSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#FF6262;font-weight:bold;" title="Enterprise">ENT</span> spoilers (0)</span></label></div>
 	
-	<div class="spoilerSwitch" style="margin-bottom:10px;padding-bottom:10px;border-bottom: 1px dotted;"><label class="switch"><input type="checkbox" id="kelvinSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#00B757;font-weight:bold;">Kelvin</span> spoilers</span></label></div>
-	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="DISSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#3E9FE5;font-weight:bold;">Discovery/Short Treks</span> spoilers</span></label></div>
-	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="PICSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#3E9FE5;font-weight:bold;">Picard</span> spoilers</span></label></div>
-	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="LOWSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#3E9FE5;font-weight:bold;">Lower Decks</span> spoilers</span></label></div>
-	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="PROSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#3E9FE5;font-weight:bold;">Prodigy</span> spoilers</span></label></div>
-	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="SNWSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#3E9FE5;font-weight:bold;">Strange New Worlds</span> spoilers</span></label></div>
+	<div class="spoilerSwitch" style="margin-bottom:10px;padding-bottom:10px;border-bottom: 1px dotted;"><label class="switch"><input type="checkbox" id="kelvinSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#00B757;font-weight:bold;">Kelvin</span> spoilers (1)</span></label></div>
+	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="DISSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#3E9FE5;font-weight:bold;" title="Discovery / Short Treks">DIS/SHO</span> spoilers (2)</span></label></div>
+	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="PICSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#3E9FE5;font-weight:bold;" title="Picard">PIC</span> spoilers (5)</span></label></div>
+	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="LOWSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#3E9FE5;font-weight:bold;" title="Lower Decks">LOW</span> spoilers (0)</span></label></div>
+	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="PROSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#3E9FE5;font-weight:bold;" title="Prodigy">PRO</span> spoilers (3)</span></label></div>
+	<div class="spoilerSwitch"><label class="switch"><input type="checkbox" id="SNWSpoilerToggle" class="spoilerToggle" onclick="toggleSpoilers()"><span class="slider round"></span><span class="switchLabel">Show <span style="color:#3E9FE5;font-weight:bold;" title="Strange New Worlds">SNW</span> spoilers (0)</span></label></div>
+	
+	<div style="font-size:12px;text-align:center;font-style:italic;margin:10px">Mouse over abbreviations to see full titles</div>
 	
 	<div id="saveSettingsNotice">Save these settings?<br><a onClick="unsetAllCookies()" style="cursor:pointer">Enable Preferences Cookies</a></div>
 </div>
@@ -290,15 +296,15 @@
 <!-- =============================================================== HEADER =============================================================== -->
 <!-- ====================================================================================================================================== -->
 
-<div class="c6Left"><a href="../index.html"><img src="../images/c6reviews-vert.png" alt="c6reviews"></a></div>
+<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.png" alt="c6reviews"></a></div>
 	<div class="pageTitleImage"><img src="images/timeline-header.png" alt="multiple intersecting colored lines representing a timeline" style="height: 235px;mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
 	<div class="pageTitleContainer">
 		<div class="pageTitle">
-			<a href="../index.html"><img src="../images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br>Star Trek Universe Timeline
+			<a href="/index.html"><img src="/images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br>Star Trek Universe Timeline
 			<span class="pageSubtitle">&nbsp;</span>
 		</div>
 	</div>
-	<div class="c6Right"><a href="../index.html"><img src="../images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="../images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="../about.html" style="margin-top:8px;">ABOUT</a><a href="../updates.html">UPDATES</a><a href="../blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="../images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+	<div class="c6Right"><a href="/index.html"><img src="/images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 <!-- ===================================================================================================================================== -->
 <!-- =============================================================== INTRO =============================================================== -->
@@ -368,7 +374,7 @@
 	<tr class="contentRow nonEssential">
 		<td colspan="2" onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;font-weight:bold">&gt; 10 billion <br>years ago</td>
 		<td class="majorEventBox joinLeft">The Big Bang forms the cosmos</td>
-		<td class="majorTimeTravel secondGen joinRight"><a href="../voy/voy-s2.html#e18">❰❰ VOY: Death Wish</a></td>
+		<td class="majorTimeTravel secondGen joinRight"><a href="/voy/voy-s2.html#e18">❰❰ VOY: Death Wish</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -411,7 +417,7 @@
 	<tr class="contentRow nonEssential">
 		<td colspan="2" onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;font-weight:bold">≈4.5 billion <br>years ago</td>
 		<td colspan="3" class="joinLeft">The Progenitors seed many worlds with their own DNA codes, directing the evolution of life</td>
-		<td class="minorTimeTravel secondGen joinMiddle"><a href="../tng/tng-s6.html#e20">❰ TNG: The Chase</a></td>
+		<td class="minorTimeTravel secondGen joinMiddle"><a href="/tng/tng-s6.html#e20">❰ TNG: The Chase</a></td>
 		<td class="minorTimeTravel thirdGen joinRight">❰ DIS: Red Directive</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -431,7 +437,7 @@
 		<td colspan="2" onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;font-weight:bold">≈3.5 billion <br>years ago</td>
 		<td>Life forms for the first time on Earth</td>
 		<td colspan="2" class="alternateReality joinLeft">Q transports Picard to witness the (aborted) birth of life on Earth</td>
-		<td class="alternateReality majorTimeTravel joinRight"><a href="../tng/tng-s7.html#e25">❰❰ TNG: All Good Things...</a></td>
+		<td class="alternateReality majorTimeTravel joinRight"><a href="/tng/tng-s7.html#e25">❰❰ TNG: All Good Things...</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -472,7 +478,7 @@
 	<tr class="contentRow nonEssential">
 		<td colspan="2" onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;font-weight:bold">≈65 million <br>years ago</td>
 		<td colspan="3" class="joinLeft">Some dinosaurs belonging to the hadrosaur genus leave Earth and eventually become the Voth civilization</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../voy/voy-s3.html#e23">❰ VOY: Distant Origin</a></td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/voy/voy-s3.html#e23">❰ VOY: Distant Origin</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -1340,7 +1346,7 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;"></td>
 		<td colspan="3" class="joinLeft">Year unknown: Before their sun goes nova, the inhabitants of Kataan launch a probe containing a record of their civilization</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../tng/tng-s5.html#e25">❰ TNG: The Inner Light</a></td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/tng/tng-s5.html#e25">❰ TNG: The Inner Light</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -1391,7 +1397,7 @@
 		<td><strong>Century</strong></td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;"></td>
 		<td colspan="3" class="joinLeft">1484: The Vaadwaur go into stasis underground after their planet is rendered uninhabitable by the Turei</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../voy/voy-s6.html#e07">❰ VOY: Dragon's Teeth</a></td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/voy/voy-s6.html#e07">❰ VOY: Dragon's Teeth</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -1433,7 +1439,7 @@
 		<td><strong>Century</strong></td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;"></td>
 		<td colspan="3" class="joinLeft">1571: Bajor achieves its first interstellar flight with a solar-sail craft which crash-landed on Cardassia</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../ds9/ds9-s3.html#e22">❰ DS9: Explorers</a></td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/ds9/ds9-s3.html#e22">❰ DS9: Explorers</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -1486,7 +1492,7 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;"></td>
 		<td colspan="2" class="joinLeft">≈ 1665-1666 &ldquo;Quinn&rdquo; jostles a tree causing an apple to fall on Isaac Newton's head</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../voy/voy-s2.html#e18">❰ VOY 2x18: Death Wish</a></td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/voy/voy-s2.html#e18">❰ VOY 2x18: Death Wish</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -1617,7 +1623,7 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1864</td>
 		<td colspan="2" class="joinLeft">&ldquo;Quinn&rdquo; rescues Thaddius Riker at the Battle of Pine Mountain</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../voy/voy-s2.html#e18">❰ VOY 2x18: Death Wish</a></td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/voy/voy-s2.html#e18">❰ VOY 2x18: Death Wish</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -1934,7 +1940,7 @@
 	<tr class="contentRow nonEssential">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1893</td>
-		<td id="time's_arrow" class="majorTimeTravel secondGen"><a href="../tng/tng-s5.html#e26">❰❰ TNG: Time's Arrow</a></td>
+		<td id="time's_arrow" class="majorTimeTravel secondGen"><a href="/tng/tng-s5.html#e26">❰❰ TNG: Time's Arrow</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -2415,7 +2421,7 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1937</td>
 		<td class="joinLeft" colspan="2">Amelia Earhart disappears over the Pacific Ocean</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../voy/voy-s2.html#e01">❰ VOY: The 37's</a></td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/voy/voy-s2.html#e01">❰ VOY: The 37's</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -2517,7 +2523,7 @@
 	<tr class="contentRow nonEssential">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1947</td>
-		<td class="majorTimeTravel secondGen" id="DS9LittleGreenMen"><a href="../ds9/ds9-s4.html#e08">❰❰ DS9: Little Green Men</a></td>
+		<td class="majorTimeTravel secondGen" id="DS9LittleGreenMen"><a href="/ds9/ds9-s4.html#e08">❰❰ DS9: Little Green Men</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -2583,7 +2589,7 @@
 	<tr class="contentRow nonEssential">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1953</td>
-		<td class="minorTimeTravel alternateReality"><a href="../ds9/ds9-s6.html#e13">❰ DS9: Far Beyond the Stars (Sept)</a></td>
+		<td class="minorTimeTravel alternateReality"><a href="/ds9/ds9-s6.html#e13">❰ DS9: Far Beyond the Stars (Sept)</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -2737,7 +2743,7 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1967</td>
 		<td>&nbsp;</td>
-		<td class="minorTimeTravel secondGen joinLeft" id="futuresEnd1"><a href="../voy/voy-s3.html#e08">❰ VOY: Future's End</a></td>
+		<td class="minorTimeTravel secondGen joinLeft" id="futuresEnd1"><a href="/voy/voy-s3.html#e08">❰ VOY: Future's End</a></td>
 		<td class="joinRight">Braxton arrives from 2373</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -2759,7 +2765,7 @@
 		<td class="majorTimeTravel firstGen">❰❰ TOS: Tomorrow is Yesterday</td>
 		<td>&nbsp;</td>
 		<td class="joinLeft">&ldquo;Quinn&rdquo; saves Woodstock</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../voy/voy-s2.html#e18">❰ VOY 2x18: Death Wish</a></td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/voy/voy-s2.html#e18">❰ VOY 2x18: Death Wish</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 	</tr>
@@ -2957,7 +2963,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td rowspan="8" class="realLife secondGen essential"><a href="../tng/index.html">Star Trek <br>The Next Generation <br>airs</a></td>
+		<td rowspan="8" class="realLife secondGen essential"><a href="/tng/index.html">Star Trek <br>The Next Generation <br>airs</a></td>
 	</tr>
 	<tr class="contentRow">
 		<td>&nbsp;</td>
@@ -3016,15 +3022,15 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td rowspan="7" class="realLife secondGen essential"><a href="../ds9/index.html">Star Trek <br>Deep Space 9 <br>airs</a></td>
+		<td rowspan="7" class="realLife secondGen essential"><a href="/ds9/index.html">Star Trek <br>Deep Space 9 <br>airs</a></td>
 	</tr>
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1994</td>
 		<td>&nbsp;</td>
-		<td class="joinLeft">Several humans are cryonically frozen and launched into Earth orbit on the SS Birdseye</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../tng/tng-s1.html#e26">❰ TNG: The Neutral Zone</a></td>
-		<td class="realLife secondGen essential"><a href="../films/generations.html">Star Trek Generations premieres</a></td>
+		<td class="joinLeft">Several humans are cryonically frozen and launched into Earth orbit on the SS <em>Birdseye</em></td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/tng/tng-s1.html#e26">❰ TNG: The Neutral Zone</a></td>
+		<td class="realLife secondGen essential"><a href="/films/generations.html">Star Trek Generations premieres</a></td>
 	</tr>
 	<tr class="contentRow">
 		<td>&nbsp;</td>
@@ -3033,14 +3039,14 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td rowspan="7" class="realLife secondGen essential"><a href="../voy/index.html">Star Trek <br>Voyager <br>airs</a></td>
+		<td rowspan="7" class="realLife secondGen essential"><a href="/voy/index.html">Star Trek <br>Voyager <br>airs</a></td>
 	</tr>
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">1996</td>
-		<td class="majorTimeTravel secondGen joinLeft" id="futuresEnd2"><a href="../voy/voy-s3.html#e08">❰❰ VOY: Future's End</a></td>
-		<td class="joinRight">Voyager arrives from 2373</td>
-		<td class="alternateReality" data-source="<em>Star Trek II: The Wrath of Khan" onmouseover="showSource(this);" onmouseout="closeSource();">Khan launches the SS Botany Bay</td>
+		<td class="majorTimeTravel secondGen joinLeft" id="futuresEnd2"><a href="/voy/voy-s3.html#e08">❰❰ VOY: Future's End</a></td>
+		<td class="joinRight"><em>Voyager</em> arrives from 2373</td>
+		<td class="alternateReality" data-source="<em>Star Trek II: The Wrath of Khan" onmouseover="showSource(this);" onmouseout="closeSource();">Khan launches the SS <em>Botany Bay</em></td>
 		<td class="realLife secondGen essential">Star Trek: First Contact premieres</td>
 	</tr>
 	<tr class="contentRow">
@@ -3073,7 +3079,7 @@
 	<tr class="contentRow">
 		<td class="centuryEnd">&nbsp;</td>
 		<td id="2000" onclick="toggleHighlight(this)" class="centuryEnd essential" style="cursor:pointer;">2000</td>
-		<td class="centuryEnd minorTimeTravel secondGen"><a href="../voy/voy-s5.html#e23">❰ VOY: 11:59</a></td>
+		<td class="centuryEnd minorTimeTravel secondGen"><a href="/voy/voy-s5.html#e23">❰ VOY: 11:59</a></td>
 		<td class="centuryEnd">&nbsp;</td>
 		<td class="centuryEnd">&nbsp;</td>
 		<td class="centuryEnd">&nbsp;</td>
@@ -3097,7 +3103,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td class="realLife secondGen essential"><a href="../films/nemesis.html">Star Trek Nemesis premieres</a></td>
+		<td class="realLife secondGen essential"><a href="/films/nemesis.html">Star Trek Nemesis premieres</a></td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -3172,7 +3178,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td class="realLife kelvin essential"><a href="../films/startrek2009.html">Star Trek [2009] premieres</a></td>
+		<td class="realLife kelvin essential"><a href="/films/startrek2009.html">Star Trek [2009] premieres</a></td>
 	</tr>
 	<tr class="contentRow">
 		<td>&nbsp;</td>
@@ -3216,7 +3222,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td class="realLife kelvin essential"><a href="../films/intodarkness.html">Star Trek: Into Darkness premieres</a></td>
+		<td class="realLife kelvin essential"><a href="/films/intodarkness.html">Star Trek: Into Darkness premieres</a></td>
 	</tr>
 	<tr class="contentRow">
 		<td>&nbsp;</td>
@@ -3249,7 +3255,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td class="realLife kelvin essential"><a href="../films/beyond.html">Star Trek: Beyond premieres</a></td>
+		<td class="realLife kelvin essential"><a href="/films/beyond.html">Star Trek: Beyond premieres</a></td>
 	</tr>
 	<tr class="contentRow">
 		<td>&nbsp;</td>
@@ -3317,7 +3323,7 @@
 			<table class="timelineTable" style="width:100%;border:none;border-width:0;margin:0;padding:0;">
 				<tr class="contentRow">
 					<td style="width:50%;border-top:double 3px !important;" class="realLife thirdGen essential">Lower Decks S1 airs</td>
-					<td style="width:50%;border-top:double 3px !important;" class="realLife thirdGen essential"><a href="../pic/index.html">Picard S1 airs</a></td>
+					<td style="width:50%;border-top:double 3px !important;" class="realLife thirdGen essential"><a href="/pic/index.html">Picard S1 airs</a></td>
 				</tr>
 			</table>
 		</td>
@@ -3341,7 +3347,7 @@
 			<table class="timelineTable" style="width:100%;border:none;border-width:0;margin:0;padding:0;">
 				<tr class="contentRow">
 					<td style="width:50%;border:none">&nbsp;</td>
-					<td style="width:50%;border-top:double 3px !important;" class="realLife thirdGen essential"><a href="../pro/index.html">Prodigy S1.1 airs</a></td>
+					<td style="width:50%;border-top:double 3px !important;" class="realLife thirdGen essential"><a href="/pro/index.html">Prodigy S1.1 airs</a></td>
 				</tr>
 			</table>
 		</td>
@@ -3372,7 +3378,7 @@
 			<table class="timelineTable" style="width:100%;border:none;border-width:0;margin:0;padding:0;">
 				<tr class="contentRow">
 					<td style="width:50%;border:none">&nbsp;</td>
-					<td style="width:50%" class="realLife thirdGen essential"><a href="../pro/index.html">Prodigy S1.2 airs</a></td>
+					<td style="width:50%" class="realLife thirdGen essential"><a href="/pro/index.html">Prodigy S1.2 airs</a></td>
 				</tr>
 			</table>
 		</td>
@@ -3380,7 +3386,7 @@
 			<table class="timelineTable" style="width:100%;border:none;border-width:0;margin:0;padding:0;">
 				<tr class="contentRow">
 					<td style="width:50%" class="realLife thirdGen essential">Lower Decks S3 airs</td>
-					<td style="width:50%" class="realLife thirdGen essential"><a href="../pic/index.html">Picard S2 airs</a></td>
+					<td style="width:50%" class="realLife thirdGen essential"><a href="/pic/index.html">Picard S2 airs</a></td>
 				</tr>
 			</table>
 		</td>
@@ -3419,7 +3425,7 @@
 			<table class="timelineTable" style="width:100%;border:none;border-width:0;margin:0;padding:0;">
 				<tr class="contentRow">
 					<td style="width:50%" class="realLife thirdGen essential">Lower Decks S4 airs</td>
-					<td style="width:50%;border-bottom:double 3px !important;" class="realLife thirdGen essential"><a href="../pic/index.html">Picard S3 airs</a></td>
+					<td style="width:50%;border-bottom:double 3px !important;" class="realLife thirdGen essential"><a href="/pic/index.html">Picard S3 airs</a></td>
 				</tr>
 			</table>
 		</td>
@@ -3435,15 +3441,15 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2024</td>
-		<td class="majorTimeTravel alternateReality"><a href="../pic/pic-s2.html">❰❰ PIC: Season 2 (April)</a></td>
+		<td class="majorTimeTravel alternateReality"><a href="/pic/pic-s2.html">❰❰ PIC: Season 2 (April)</a></td>
 		<td class="majorEventBox joinLeft essential">Bell Riots (September 1st-3rd)</td>
-		<td id="DS9PastTense" class="majorTimeTravel secondGen joinRight essential"><a href="../ds9/ds9-s3.html#e11">❰❰ DS9: Past Tense</a></td>
+		<td id="DS9PastTense" class="majorTimeTravel secondGen joinRight essential"><a href="/ds9/ds9-s3.html#e11">❰❰ DS9: Past Tense</a></td>
 		<td data-source="TNG 3x12: The High Ground" onmouseover="showSource(this);" onmouseout="closeSource();">Ireland unites</td>
 		<td class="essential" style="padding:0">
 			<table class="timelineTable" style="width:100%;border:none;border-width:0;margin:0;padding:0;">
 				<tr class="contentRow">
 					<td style="width:50%;border:none">&nbsp;</td>
-					<td style="width:50%;border-bottom:double 3px !important;" class="realLife thirdGen essential"><a href="../pro/index.html">Prodigy S2 airs</a></td>
+					<td style="width:50%;border-bottom:double 3px !important;" class="realLife thirdGen essential"><a href="/pro/index.html">Prodigy S2 airs</a></td>
 				</tr>
 			</table>
 		</td>
@@ -3546,15 +3552,15 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td id="ZCBorn2" style="text-align:left">≈ Zefram Cochrane Born (year unknown)</td>
+		<td id="ZCBorn2" style="text-align:left">≈ Zefram Cochrane born (year unknown)</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2032</td>
-		<td class="minorTimeTravel secondGen joinLeft"><a href="../voy/voy-s6.html#e08">❰ VOY: One Small Step</a></td>
-		<td class="joinRight">Ares IV manned mission to Mars</td>
+		<td class="minorTimeTravel secondGen joinLeft"><a href="/voy/voy-s6.html#e08">❰ VOY: One Small Step</a></td>
+		<td class="joinRight"><em>Ares IV</em> manned mission to Mars</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -3607,7 +3613,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td class="joinLeft">The <em>Charybdis</em> is launched</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../tng/tng-s2.html#e12">❰ TNG: The Royale</a></td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/tng/tng-s2.html#e12">❰ TNG: The Royale</a></td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -3677,7 +3683,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td class="joinLeft">The <em>Charybdis</em> is destroyed</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../tng/tng-s2.html#e12">❰ TNG: The Royale</a></td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/tng/tng-s2.html#e12">❰ TNG: The Royale</a></td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -3872,7 +3878,7 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2063</td>
 		<td class="majorEventBox joinLeft essential">April 5: First Contact</td>
-		<td id="warp1" class="majorEventBox joinMiddle essential">Zefram Cochrane breaks Warp 1</td>
+		<td id="warp1" class="majorEventBox joinMiddle essential">Zefram Cochrane makes first Warp 1 flight</td>
 		<td class="filmBox majorTimeTravel secondGen joinMiddle essential">❰❰ Star Trek: First Contact</td>
 		<td class="minorTimeTravel secondGen joinRight">❰ ENT: Regeneration</td>
 		<td>&nbsp;</td>
@@ -3893,7 +3899,7 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2065</td>
-		<td class="joinLeft">SS Valiant lost to the galactic barrier</td>
+		<td class="joinLeft">SS <em>Valiant</em> lost to the galactic barrier</td>
 		<td class="minorTimeTravel firstGen joinRight">❰ TOS: Where No Man Has Gone Before</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -3915,8 +3921,8 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2067</td>
-		<td class="joinLeft">Friendship One Launched</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../voy/voy-s7.html#e21">❰ VOY: Friendship One</a></td>
+		<td class="joinLeft"><em>Friendship 1</em> Launched</td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/voy/voy-s7.html#e21">❰ VOY: Friendship One</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4048,8 +4054,8 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2079</td>
 		<td colspan="2" class="joinLeft">Q re-creates a courtroom from this year when he puts humanity on trial</td>
-		<td class="minorTimeTravel secondGen joinMiddle"><a href="../tng/tng-s1.html#e01">❰ TNG: Encounter at Farpoint</a></td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../tng/tng-s7.html#e25">❰ TNG: All Good Things...</a></td>
+		<td class="minorTimeTravel secondGen joinMiddle"><a href="/tng/tng-s1.html#e01">❰ TNG: Encounter at Farpoint</a></td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/tng/tng-s7.html#e25">❰ TNG: All Good Things...</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4084,7 +4090,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td class="joinLeft">Col. S. Richey dies</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../tng/tng-s2.html#e12">❰ TNG: The Royale</a></td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/tng/tng-s2.html#e12">❰ TNG: The Royale</a></td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -4532,8 +4538,8 @@
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2123</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td class="joinLeft"><em>SS Mariposa</em> is launched</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../tng/tng-s2.html#e18">❰ TNG: Up the Long Ladder</a></td>
+		<td class="joinLeft">SS <em>Mariposa</em> is launched</td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/tng/tng-s2.html#e18">❰ TNG: Up the Long Ladder</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4806,7 +4812,7 @@
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2148</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td id="USSFranklin2" colspan="2" class="majorEventBox essential" data-source="<em>Star Trek Beyond</em>" onmouseover="showSource(this);" onmouseout="closeSource();">≈ USS Franklin NX&#8209;326, Earth's first Warp 4 ship, launched (year unknown)</td>
+		<td id="USSFranklin2" colspan="2" class="majorEventBox essential" data-source="<em>Star Trek Beyond</em>" onmouseover="showSource(this);" onmouseout="closeSource();">≈ USS <em>Franklin</em> NX&#8209;326, Earth's first Warp 4 ship, launched (year unknown)</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -4836,12 +4842,12 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2151</td>
-		<td rowspan="5" class="seriesBox secondGen essential" style="background-image:url('images/archer.png');background-size:100% auto;" id="ENT">STAR TREK <br>ENTERPRISE (ENT) <br><span class="x-small" style="font-weight:normal;font-family:serif">2001-2005</span></td>
+		<td rowspan="5" class="seriesBox secondGen essential" style="background-image:url('images/archer-bg.png');background-size:100% auto;" id="ENT">STAR TREK <br>ENTERPRISE (ENT) <br><span class="x-small" style="font-weight:normal;font-family:serif">2001-2005</span></td>
 		<td id="USSFranklin3">&nbsp;</td>
 		<td>•</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td class="essential">ENTERPRISE NX&#8209;01 launched</td>
+		<td class="essential"><em>ENTERPRISE</em> NX&#8209;01 launched</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -4946,7 +4952,7 @@
 		<td>•</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td class="essential">ENTERPRISE NX&#8209;01 decommissioned</td>
+		<td class="essential"><em>ENTERPRISE</em> NX&#8209;01 decommissioned</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -4976,7 +4982,7 @@
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2164</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td colspan="2" data-source="<em>Star Trek Beyond</em>" onmouseover="showSource(this);" onmouseout="closeSource();">USS Franklin NX&#8209;326 vanishes while on a mission in the Gagarin Radiation Belt</td>
+		<td colspan="2" data-source="<em>Star Trek Beyond</em>" onmouseover="showSource(this);" onmouseout="closeSource();">USS <em>Franklin</em> NX&#8209;326 vanishes while on a mission in the Gagarin Radiation Belt</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5006,8 +5012,8 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2167</td>
-		<td class="minorTimeTravel secondGen joinLeft"><a href="../tng/tng-s5.html#e15">❰ TNG: Power Play</a></td>
-		<td class="joinRight">USS Essex NCC-173 lost at Mab-Bu VI</td>
+		<td class="minorTimeTravel secondGen joinLeft"><a href="/tng/tng-s5.html#e15">❰ TNG: Power Play</a></td>
+		<td class="joinRight">USS <em>Essex</em> NCC-173 lost at Mab-Bu VI</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5072,7 +5078,7 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2173</td>
-		<td colspan="2" class="minorTimeTravel alternateReality"><a href="../ds9/ds9-s5.html#e22">≈ The <em>Defiant</em> NX&#8209;74205 crash-lands and becomes stranded (DS9: Children of Time)</a></td>
+		<td colspan="2" class="minorTimeTravel alternateReality"><a href="/ds9/ds9-s5.html#e22">≈ The <em>Defiant</em> NX&#8209;74205 crash-lands and becomes stranded (DS9: Children of Time)</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5734,7 +5740,7 @@
 		<td class="essential" data-source="numerous" onmouseover="showSource(this);" onmouseout="closeSource();">Kirk born (March 22)</td>
 		<td class="apocryphal">(Pike Age 28)*</td>
 		<td>&nbsp;</td>
-		<td class="majorTimeTravel kelvin joinLeft essential"><a href="../films/startrek2009.html">❰❰ STAR TREK [2009]</a></td>
+		<td class="majorTimeTravel kelvin joinLeft essential"><a href="/films/startrek2009.html">❰❰ STAR TREK [2009]</a></td>
 		<td id="kelvin4b" class="kelvin joinRight essential">Nero arrives from 2387</td>
 		<td data-source="SNW 2x04: Among the Lotus Eaters" onmouseover="showSource(this);" onmouseout="closeSource();">Ortegas born (May 23)</td>
 		<td id="kelvin4a">Tilly born</td>
@@ -5855,7 +5861,7 @@
 		<td data-source="TOS 2x13: The Trouble with Tribbles" onmouseover="showSource(this);" onmouseout="closeSource();">Battle of Donatu V</td>
 		<td data-source="DS9 5x06: Trials and Tribble-ations" onmouseover="showSource(this);" onmouseout="closeSource();">Emony Dax meets Dr. McCoy (speculative)</td>
 		<td>&nbsp;</td>
-		<td class="essential" data-source="DIS 2x01: Brother" onmouseover="showSource(this);" onmouseout="closeSource();">USS ENTERPRISE NCC&#8209;1701 <br>Launched on April 11</td>
+		<td class="essential" data-source="DIS 2x01: Brother" onmouseover="showSource(this);" onmouseout="closeSource();">USS <em>ENTERPRISE</em> NCC&#8209;1701 <br>Launched on April 11</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -5880,8 +5886,8 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2248</td>
-		<td class="joinLeft">Earth loses contact with Friendship One</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../voy/voy-s7.html#e21">❰ VOY: Friendship One</a></td>
+		<td class="joinLeft">Earth loses contact with <em>Friendship 1</em></td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/voy/voy-s7.html#e21">❰ VOY: Friendship One</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5892,7 +5898,7 @@
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2249</td>
 		<td class="minorTimeTravel thirdGen joinLeft">❰ DIS: Battle at the Binary Stars</td>
 		<td colspan="2" class="joinRight">Michael Burnham graduates from the Vulcan Science 
-		Academy and joins the Shenzhou</td>
+		Academy and joins the <em>Shenzhou</em></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5928,7 +5934,7 @@
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2253</td>
 		<td class="episodeBox thirdGen joinLeft essential">SHO: &ldquo;Q&amp;A&rdquo; <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(2x01)</span></td>
-		<td class="joinRight essential">Spock joins the USS Enterprise</td>
+		<td class="joinRight essential">Spock joins the USS <em>Enterprise</em></td>
 		<td>(Kirk Age 20)</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5948,7 +5954,7 @@
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2255</td>
 		<td data-source="TNG 3x02: The Ensigns of Command" onmouseover="showSource(this);" onmouseout="closeSource();">Last contact with the Sheliak until 2366</td>
-		<td data-source="SNW 2x06: Lost in Translation" onmouseover="showSource(this);" onmouseout="closeSource();">Lt. Kirk assigned to USS Farragut</td>
+		<td data-source="SNW 2x06: Lost in Translation" onmouseover="showSource(this);" onmouseout="closeSource();">Lt. Kirk assigned to USS <em>Farragut</em></td>
 		<td class="mirrorUniverse spoiler DISSpoiler">Lorca transported to Prime Universe</td>
 		<td class="kelvin" id="ST09prologue">Kirk joins Starfleet Academy</td>
 		<td>&nbsp;</td>
@@ -5957,7 +5963,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2256</td>
-		<td class="seriesBox thirdGen essential" rowspan="3" style="background-image:url('images/burnhamblue.png');background-size:100% auto;" id="DIS1">STAR TREK <br>
+		<td class="seriesBox thirdGen essential" rowspan="3" style="background-image:url('images/burnhamblue-bg.png');background-size:100% auto;" id="DIS1">STAR TREK <br>
 		DISCOVERY (DIS) <br>
 		SEASONS 1 &amp; 2 <br><span class="x-small" style="font-weight:normal;font-family:serif">2017-2019</span></td>
 		<td rowspan="2" class="majorEventBox essential">Federation-Klingon War</td>
@@ -5979,18 +5985,18 @@
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2258</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td id="ST09" class="filmBox kelvin joinLeft essential"><a href="../films/startrek2009.html">STAR TREK [2009] <span class="x-small" style="font-weight:normal;font-family:serif">(#11)</span></a></td>
+		<td id="ST09" class="filmBox kelvin joinLeft essential"><a href="/films/startrek2009.html">STAR TREK [2009] <span class="x-small" style="font-weight:normal;font-family:serif">(#11)</span></a></td>
 		<td id="kelvin3b" class="kelvin joinRight essential">Spock (Prime) arrives from 2387</td>
 		<td>&nbsp;</td>
 		<td id="kelvin3a">&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2259</td>
-		<td class="seriesBox thirdGen essential" style="background-image:url('images/pike.png');background-size:100% auto;background-blend-mode:lighten;padding-right:20px" rowspan="3" id="SNW">STAR TREK <br>
+		<td class="seriesBox thirdGen essential" style="background-image:url('images/pike-bg.png');background-size:100% auto;background-blend-mode:lighten;padding-right:20px" rowspan="3" id="SNW">STAR TREK <br>
 		STRANGE NEW WORLDS (SNW) <br><span class="x-small" style="font-weight:normal;font-family:serif">2022-Present</span></td>
 		<td class="apocryphal">(Pike Age 54)*</td>
 		<td>&nbsp;</td>
-		<td id="STID" class="filmBox kelvin essential" style="border-bottom: dashed 2px"><a href="../films/intodarkness.html">INTO DARKNESS <span class="x-small" style="font-weight:normal;font-family:serif">(2013, #12)</span></a></td>
+		<td id="STID" class="filmBox kelvin essential" style="border-bottom: dashed 2px;border-radius: 10px 10px 0px 0px"><a href="/films/intodarkness.html">INTO DARKNESS <span class="x-small" style="font-weight:normal;font-family:serif">(2013, #12)</span></a></td>
 		<td id="2250s3">&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5999,7 +6005,7 @@
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2260</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td class="kelvin essential" style="border-top:none">The Enterprise embarks on its 5-year mission</td>
+		<td class="kelvin essential" style="border-top:none;border-radius:0px 0px 10px 10px;">The <em>Enterprise</em> embarks on its 5-year mission</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -6028,8 +6034,8 @@
 		<td>(Kirk Age 30)</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td id="STB" class="filmBox kelvin joinLeft essential"><a href="../films/beyond.html">BEYOND <span class="x-small" style="font-weight:normal;font-family:serif">(2016, #13)</span></a></td>
-		<td class="kelvin joinMiddle">USS Franklin NX&#8209;326, lost in 2164, found</td>
+		<td id="STB" class="filmBox kelvin joinLeft essential"><a href="/films/beyond.html">BEYOND <span class="x-small" style="font-weight:normal;font-family:serif">(2016, #13)</span></a></td>
+		<td class="kelvin joinMiddle">USS <em>Franklin</em> NX&#8209;326, lost in 2164, found</td>
 		<td class="kelvin spoiler kelvinSpoiler characterDeath joinRight">Spock (Prime) dies (<span style="font-family: serif">II</span>) (Age 161)</td>
 		<td>&nbsp;</td>
 	</tr>
@@ -6041,12 +6047,12 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>USS RELIANT NCC&#8209;1864 Launched</td>
+		<td>USS <em>RELIANT</em> NCC&#8209;1864 Launched</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2265</td>
-		<td rowspan="4" class="seriesBox firstGen essential" style="border-bottom:1px hidden #2F2F39;background-image:url('images/kirk.png');background-size:100% auto;background-blend-mode:lighten;padding-right:28px" id="TOS"> STAR TREK <br>
-			[THE ORIGINAL SERIES] (TOS) <br><span class="x-small" style="font-weight:normal;font-family:serif">1966-1969</span>
+		<td rowspan="4" class="seriesBox firstGen essential" style="border-bottom:1px hidden #2F2F39;border-radius: 10px 10px 0px 0px;background-image:url('images/kirk-bg.png');background-size:100% auto;background-blend-mode:lighten;padding-right:28px" id="TOS"> STAR TREK <br>
+		THE ORIGINAL SERIES (TOS) <br><span class="x-small" style="font-weight:normal;font-family:serif">1966-1969</span>
 		</td>
 		<td class="apocryphal">(Pike Age 60)*</td>
 		<td>&nbsp;</td>
@@ -6066,7 +6072,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2267</td>
-		<td class="majorTimeTravel secondGen" id="DS9TrialsAndTribbleations"><a href="../ds9/ds9-s5.html#e06">❰❰ DS9: Trials and Tribble-ations</a></td>
+		<td class="majorTimeTravel secondGen" id="DS9TrialsAndTribbleations"><a href="/ds9/ds9-s5.html#e06">❰❰ DS9: Trials and Tribble-ations</a></td>
 		<td data-source="TOS 1x24: Space Seed" onmouseover="showSource(this);" onmouseout="closeSource();">Khan revived; marooned on Ceti Alpha</td>
 		<td class="mirrorUniverse" data-source="TOS 2x10: Mirror, Mirror" onmouseover="showSource(this);" onmouseout="closeSource();">Kirk crosses over to Mirror Universe</td>
 		<td>|</td>
@@ -6078,11 +6084,11 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td class="essential">|</td>
-		<td colspan="2" data-source="ENT 4x18: In a Mirror, Darkly" onmouseover="showSource(this);" onmouseout="closeSource();">USS DEFIANT NCC&#8209;1764 sent to mirror universe year 2155 or before</td>
+		<td colspan="2" data-source="ENT 4x18: In a Mirror, Darkly" onmouseover="showSource(this);" onmouseout="closeSource();">USS <em>DEFIANT</em> NCC&#8209;1764 sent to mirror universe year 2155 or before</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2269</td>
-		<td class="seriesBox firstGen noIcon essential" id="TOSTAS" style="border-top: 0px hidden; border-bottom: 0px hidden;text-align:right;vertical-align:bottom;font-size:x-small;background-image:url('images/kirkslice.png');background-size:100% auto;background-blend-mode:lighten;">&nbsp;</td>
+		<td class="seriesBox firstGen noIcon essential" id="TOSTAS" style="border-top: 0px hidden; border-bottom: 0px hidden;border-radius: 0px;text-align:right;vertical-align:bottom;font-size:x-small;background-image:url('images/kirkslice.png');background-size:100% auto;background-blend-mode:lighten;">&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -6092,7 +6098,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2270</td>
-		<td class="seriesBox firstGen essential" style="border-top:1px hidden #2F2F39;text-align:left;line-height:1;padding-left:36px;background-image:url('images/tascrew.png');background-size:100% auto;background-blend-mode:lighten;" id="TAS"><span style="font-size:small">THE ANIMATED SERIES<br>(TAS)</span> <span class="x-small" style="font-weight:normal;font-family:serif">1973-74</span></td>
+		<td class="seriesBox firstGen essential" style="border-top:1px hidden #2F2F39;border-radius:0px 0px 10px 10px;text-align:left;line-height:1;padding-left:36px;background-image:url('images/tascrew.png');background-size:100% auto;background-blend-mode:lighten;" id="TAS"><span style="font-size:small">THE ANIMATED SERIES<br>(TAS)</span> <span class="x-small" style="font-weight:normal;font-family:serif">1973-74</span></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -6133,8 +6139,8 @@
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2274</td>
 		<td>&nbsp;</td>
-		<td class="joinLeft">SS Artemis launched</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../tng/tng-s3.html#e02">❰ TNG: The Ensigns of Command</a></td>
+		<td class="joinLeft">SS <em>Artemis</em> launched</td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/tng/tng-s3.html#e02">❰ TNG: The Ensigns of Command</a></td>
 		<td>&nbsp;</td>
 		<td class="essential">|</td>
 		<td>&nbsp;</td>
@@ -6173,8 +6179,8 @@
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2278</td>
 		<td>&nbsp;</td>
-		<td id="TNGCauseAndEffect" class="minorTimeTravel secondGen joinLeft"><a href="../tng/tng-s5.html#e18">❰ TNG: Cause And Effect</a></td>
-		<td class="joinRight">USS Bozeman lost in time loop</td>
+		<td class="joinLeft">USS <em>Bozeman</em> lost in time loop</td>
+		<td id="TNGCauseAndEffect" class="minorTimeTravel secondGen joinRight"><a href="/tng/tng-s5.html#e18">❰ TNG: Cause And Effect</a></td>
 		<td>&nbsp;</td>
 		<td class="essential">|</td>
 		<td>&nbsp;</td>
@@ -6237,7 +6243,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td class="essential">|</td>
-		<td class="moreInfo" onclick="openToolTip(event,'ExcelsiorTT')">≈ USS EXCELSIOR NCC&#8209;2000 Launched</td>
+		<td class="moreInfo" onclick="openToolTip(event,'ExcelsiorTT')">≈ USS <em>EXCELSIOR</em> NCC&#8209;2000 Launched</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -6247,8 +6253,8 @@
 		<td id="TWOK" class="filmBox firstGen joinRight essential">II: THE WRATH OF KHAN <span class="x-small" style="font-weight:normal;font-family:serif">(1982)</span></td>
 		<td id="TSFS" class="filmBox firstGen essential">III: THE SEARCH FOR SPOCK <span class="x-small" style="font-weight:normal;font-family:serif">(1984)</span></td>
 		<td class="episodeBox thirdGen essential">SHO: &ldquo;Ephraim and Dot&rdquo; <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(2x04)</span></td>
-		<td class="spoiler TOSSpoiler characterDeath essential">USS ENTERPRISE NCC&#8209;1701 Destroyed</td>
-		<td data-source="<em>Star Trek II: The Wrath of Khan</em>" onmouseover="showSource(this);" onmouseout="closeSource();">USS RELIANT NCC&#8209;1864 destroyed</td>
+		<td class="spoiler TOSSpoiler characterDeath essential">USS <em>ENTERPRISE</em> NCC&#8209;1701 Destroyed</td>
+		<td data-source="<em>Star Trek II: The Wrath of Khan</em>" onmouseover="showSource(this);" onmouseout="closeSource();">USS <em>RELIANT</em> NCC&#8209;1864 destroyed</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2286</td>
@@ -6257,7 +6263,7 @@
 		<td>&nbsp;</td>
 		<td id="TVH" class="filmBox firstGen essential">IV: THE VOYAGE HOME <span class="x-small" style="font-weight:normal;font-family:serif">(1986)</span></td>
 		<td>&nbsp;</td>
-		<td class="essential" data-source="<em>Star Trek IV: The Voyage Home</em>" onmouseover="showSource(this);" onmouseout="closeSource();">USS ENTERPRISE NCC&#8209;1701&#8209;A Launched</td>
+		<td class="essential" data-source="<em>Star Trek IV: The Voyage Home</em>" onmouseover="showSource(this);" onmouseout="closeSource();">USS <em>ENTERPRISE</em> NCC&#8209;1701&#8209;A Launched</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -6323,19 +6329,19 @@
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2293</td>
 		<td id="TUC" class="filmBox firstGen joinLeft essential">VI: THE UNDISCOVERED COUNTRY <span class="x-small" style="font-weight:normal;font-family:serif">(1991)</span></td>
-		<td class="majorTimeTravel secondGen joinRight" id="Flashback"><a href="../voy/voy-s3.html#e02">❰❰ VOY: Flashback</a></td>
-		<td class="majorTimeTravel secondGen joinLeft essential" id="GenerationsPast"><a href="../films/generations.html">❰❰ Star Trek Generations</a></td>
+		<td class="majorTimeTravel secondGen joinRight" id="Flashback"><a href="/voy/voy-s3.html#e02">❰❰ VOY: Flashback</a></td>
+		<td class="majorTimeTravel secondGen joinLeft essential filmBox" id="GenerationsPast"><a href="/films/generations.html">❰❰ Star Trek Generations<br><span style="font-family:Exo,Roboto,sans-serif;font-size:small">(first few scenes only)</span></a></td>
 		<td class="joinRight spoiler TOSSpoiler TNGSpoiler characterDeath">Kirk presumed dead (Age 60)</td>
 		<td class="majorEventBox essential">Khitomer Accords Signed</td>
-		<td class="essential">USS ENTERPRISE NCC&#8209;1701&#8209;A <br>Decommissioned</td>
-		<td class="essential" data-source="<em>Star Trek Generation</em>" onmouseover="showSource(this);" onmouseout="closeSource();">USS ENTERPRISE NCC&#8209;1701&#8209;B <br>Commissioned</td>
+		<td class="essential">USS <em>ENTERPRISE</em> NCC&#8209;1701&#8209;A <br>Decommissioned</td>
+		<td class="essential" data-source="<em>Star Trek Generation</em>" onmouseover="showSource(this);" onmouseout="closeSource();">USS <em>ENTERPRISE</em> NCC&#8209;1701&#8209;B <br>Commissioned</td>
 	</tr>
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="lostEra essential" style="cursor:pointer;">2294</td>
 		<td class="essential" style="color:#606060">Start of Trek's &ldquo;lost era&rdquo;</td>
-		<td class="joinLeft" colspan="2">Scotty placed in transporter buffer on USS Jenolan</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../tng/tng-s6.html#e04">❰ TNG: Relics</a></td>
+		<td class="joinLeft" colspan="2">Scotty placed in transporter buffer on USS <em>Jenolan</em></td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/tng/tng-s6.html#e04">❰ TNG: Relics</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -6608,7 +6614,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>|</td>
-		<td colspan="2" data-source="PIC 2x01: The Star Gazer" onmouseover="showSource(this);" onmouseout="closeSource();">USS EXCELSIOR NCC&#8209;2000 Decommissioned</td>
+		<td colspan="2" data-source="PIC 2x01: The Star Gazer" onmouseover="showSource(this);" onmouseout="closeSource();">USS <em>EXCELSIOR</em> NCC&#8209;2000 Decommissioned</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra lostEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2321</td>
@@ -6644,7 +6650,7 @@
 		<td class="picardEra lostEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2324</td>
 		<td colspan="2" data-source="TNG 5x14: Conundrum" onmouseover="showSource(this);" onmouseout="closeSource();">Beverly Crusher (née Howard) born (October 13)</td>
 		<td>&nbsp;</td>
-		<td id="S31" class="filmBox thirdGen"><a href="../s31.html">SECTION 31 <span class="x-small" style="font-weight:normal;font-family:serif">(2025, #14, straight-to-streaming)</span></a></td>
+		<td id="S31" class="filmBox thirdGen"><a href="/s31.html">SECTION 31 <span class="x-small" style="font-weight:normal;font-family:serif">(2025, #14, straight-to-streaming)</span></a></td>
 		<td>|</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -6664,14 +6670,14 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td data-source="TNG 1x09: The Battle" onmouseover="showSource(this);" onmouseout="closeSource();">USS STARGAZER NCC&#8209;2893 Commissioned</td>
+		<td data-source="TNG 1x09: The Battle" onmouseover="showSource(this);" onmouseout="closeSource();">USS <em>STARGAZER</em> NCC&#8209;2893 Commissioned</td>
 		<td>|</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra lostEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2327</td>
-		<td class="majorTimeTravel secondGen joinLeft"><a href="../tng/tng-s6.html#e15">❰❰ TNG: Tapestry</a></td>
+		<td class="majorTimeTravel secondGen joinLeft"><a href="/tng/tng-s6.html#e15">❰❰ TNG: Tapestry</a></td>
 		<td class="joinRight">Picard's bar fight</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -6734,7 +6740,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>Picard takes command of the USS Stargazer</td>
+		<td>Picard takes command of the USS <em>Stargazer</em></td>
 		<td>|</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -6841,12 +6847,12 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra lostEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2344</td>
-		<td class="minorTimeTravel secondGen"><a href="../voy/voy-s2.html#e09">❰ VOY: Tattoo</a></td>
-		<td id="TNGYesterdaysEnterprise" class="minorTimeTravel secondGen joinLeft"><a href="../tng/tng-s3.html#e15">❰ TNG: Yesterday's Enterprise</a></td>
+		<td class="minorTimeTravel secondGen"><a href="/voy/voy-s2.html#e09">❰ VOY: Tattoo</a></td>
+		<td id="TNGYesterdaysEnterprise" class="minorTimeTravel secondGen joinLeft"><a href="/tng/tng-s3.html#e15">❰ TNG: Yesterday's Enterprise</a></td>
 		<td class="majorEventBox joinRight"  id="altYar2">Battle at Narendra III</td>
 		<td>|</td>
 		<td>|</td>
-		<td data-source="TNG 3x15: Yesterday's Enterprise" onmouseover="showSource(this);" onmouseout="closeSource();">USS ENTERPRISE NCC&#8209;1701&#8209;C Destroyed</td>
+		<td data-source="TNG 3x15: Yesterday's Enterprise" onmouseover="showSource(this);" onmouseout="closeSource();">USS <em>ENTERPRISE</em> NCC&#8209;1701&#8209;C Destroyed</td>
 		<td>Annika Hansen born</td>
 	</tr>
 	<tr class="contentRow">
@@ -6861,7 +6867,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra lostEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2346</td>
-		<td class="minorTimeTravel secondGen"><a href="../ds9/ds9-s6.html#e17">❰ DS9: Wrongs Darker Than Death or Night</a></td>
+		<td class="minorTimeTravel secondGen"><a href="/ds9/ds9-s6.html#e17">❰ DS9: Wrongs Darker Than Death or Night</a></td>
 		<td class="majorEventBox">Khitomer Massacre</td>
 		<td>&nbsp;</td>
 		<td>|</td>
@@ -6901,7 +6907,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra lostEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2350</td>
-		<td class="minorTimeTravel secondGen"><a href="../voy/voy-s5.html#e15">❰ VOY: Dark Frontier</a></td>
+		<td class="minorTimeTravel secondGen"><a href="/voy/voy-s5.html#e15">❰ VOY: Dark Frontier</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>|</td>
@@ -6911,7 +6917,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra lostEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2351</td>
-		<td class="minorTimeTravel secondGen"><a href="../voy/voy-s1.html#e07">❰ VOY: Eye of the Needle</a></td>
+		<td class="minorTimeTravel secondGen"><a href="/voy/voy-s1.html#e07">❰ VOY: Eye of the Needle</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>|</td>
@@ -6954,7 +6960,7 @@
 		<td>(Picard Age 50)</td>
 		<td>Jake Sisko born</td>
 		<td>&nbsp;</td>
-		<td>USS STARGAZER NCC&#8209;2893 Abandoned</td>
+		<td>USS <em>STARGAZER</em> NCC&#8209;2893 Abandoned</td>
 		<td>|</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -7013,7 +7019,7 @@
 		<td class="picardEra lostEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2361</td>
 		<td>&nbsp;</td>
 		<td class="joinLeft spoiler TNGSpoiler">Riker Duplicated</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../tng/tng-s6.html#e24">❰ TNG: Second Chances</a></td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/tng/tng-s6.html#e24">❰ TNG: Second Chances</a></td>
 		<td>•</td>
 		<td>|</td>
 		<td>&nbsp;</td>
@@ -7023,7 +7029,7 @@
 		<td class="picardEra lostEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2362</td>
 		<td style="color:#606060">↓</td>
 		<td class="joinLeft">La Forge investigates Tarchannen III disappearances</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../tng/tng-s4.html#e18">❰ TNG: Identity Crisis</a></td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/tng/tng-s4.html#e18">❰ TNG: Identity Crisis</a></td>
 		<td>•</td>
 		<td>|</td>
 		<td>&nbsp;</td>
@@ -7036,14 +7042,14 @@
 		<td>&nbsp;</td>
 		<td>•</td>
 		<td>|</td>
-		<td class="moreInfo" colspan="2" onClick="openToolTip(event,'DLaunchTT')">USS ENTERPRISE NCC&#8209;1701&#8209;D Launched</td>
+		<td class="moreInfo" colspan="2" onClick="openToolTip(event,'DLaunchTT')">USS <em>ENTERPRISE</em> NCC&#8209;1701&#8209;D Launched</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2364</td>
-		<td class="seriesBox secondGen" style="font-size:large;background-image:url('images/picard.png');background-size:100% auto;background-blend-mode:color-dodge" rowspan="7" id="TNG"><a href="../tng/index.html">STAR TREK <br>THE NEXT GENERATION (TNG)</a><br><span class="x-small" style="font-weight:normal;font-family:serif">1987-1994</span></td>
-		<td data-source="TNG 1x01/02: Encounter at Farpoint" onmouseover="showSource(this);" onmouseout="closeSource();">McCoy visits the Enterprise D (Age 137)</td>
+		<td class="seriesBox secondGen" style="font-size:large;background-image:url('images/picardred-bg.png');background-size:100% auto;background-blend-mode:color-dodge" rowspan="7" id="TNG"><a href="/tng/index.html">STAR TREK <br>THE NEXT GENERATION (TNG)</a><br><span class="x-small" style="font-weight:normal;font-family:serif">1987-1994</span></td>
+		<td data-source="TNG 1x01/02: Encounter at Farpoint" onmouseover="showSource(this);" onmouseout="closeSource();">McCoy visits the <em>Enterprise</em>&#8209;D (Age 137)</td>
 		<td class="spoiler TNGSpoiler characterDeath">Tasha Yar dies (<span style="font-family:serif">I</span>) (Age 27)</td>
-		<td data-source="TNG 1x09: The Battle" onmouseover="showSource(this);" onmouseout="closeSource();">USS STARGAZER NCC&#8209;2893 <br>Recovered &amp; Decommissioned</td>
+		<td data-source="TNG 1x09: The Battle" onmouseover="showSource(this);" onmouseout="closeSource();">USS <em>STARGAZER</em> NCC&#8209;2893 <br>Recovered &amp; Decommissioned</td>
 		<td>|</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -7085,8 +7091,8 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2369</td>
-		<td class="seriesBox secondGen" style="font-size:large;background-image:url('images/sisko.png');background-size:100% auto;background-blend-mode:lighten" rowspan="7" id="DS9"><a href="../ds9/index.html">STAR TREK <br>DEEP SPACE NINE (DS9)</a> <br><span class="x-small" style="font-weight:normal;font-family:serif">1993-1999</span></td>
-		<td data-source="TNG 6x04: Relics" onmouseover="showSource(this);" onmouseout="closeSource();">Scotty recovered from the Jenolan</td>
+		<td class="seriesBox secondGen" style="font-size:large;background-image:url('images/sisko-bg.png');background-size:100% auto;background-blend-mode:lighten" rowspan="7" id="DS9"><a href="/ds9/index.html">STAR TREK <br>DEEP SPACE NINE (DS9)</a> <br><span class="x-small" style="font-weight:normal;font-family:serif">1993-1999</span></td>
+		<td data-source="TNG 6x04: Relics" onmouseover="showSource(this);" onmouseout="closeSource();">Scotty recovered from the <em>Jenolan</em></td>
 		<td>(Sisko Age 37)</td>
 		<td>Terok Nor becomes DS9</td>
 		<td>&nbsp;</td>
@@ -7098,23 +7104,23 @@
 		<td>&nbsp;</td>
 		<td class="mirrorUniverse">Terran Empire has fallen by this year</td>
 		<td>&nbsp;</td>
-		<td>USS DEFIANT NX&#8209;74205 Launched</td>
+		<td>USS <em>DEFIANT</em> NX&#8209;74205 Launched</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2371</td>
-		<td class="seriesBox secondGen" style="font-size:large;background-image:url('images/janeway.png');background-size:100% auto;background-blend-mode:lighten" rowspan="8" id="VOY"><a href="../voy/index.html">STAR TREK <br>VOYAGER (VOY)</a> <br><span class="x-small" style="font-weight:normal;font-family:serif">1995-2001</span></td>
+		<td class="seriesBox secondGen" style="font-size:large;background-image:url('images/janeway-bg.png');background-size:100% auto;background-blend-mode:lighten" rowspan="8" id="VOY"><a href="/voy/index.html">STAR TREK <br>VOYAGER (VOY)</a> <br><span class="x-small" style="font-weight:normal;font-family:serif">1995-2001</span></td>
 		<td class="apocryphal moreInfo" onClick="openToolTip(event,'JanewayTT')">(Janeway Age 35)*</td>
-		<td id="GEN" class="filmBox secondGen joinLeft" style="text-align:left;padding-left:32px;"><a href="../films/generations.html">GENERATIONS <span class="x-small" style="font-weight:normal;font-family:serif">(1994, #7)</span></a></td>
+		<td id="GEN" class="filmBox secondGen joinLeft" style="text-align:left;padding-left:32px;"><a href="/films/generations.html">GENERATIONS <span class="x-small" style="font-weight:normal;font-family:serif">(1994, #7)</span></a></td>
 		<td class="joinMiddle spoiler TOSSpoiler TNGSpoiler characterDeath">Kirk dies (Age 60)</td>
-		<td class="joinRight spoiler TNGSpoiler characterDeath">USS ENTERPRISE NCC&#8209;1701&#8209;D Destroyed</td>
-		<td>USS VOYAGER NCC&#8209;74656 Launched</td>
+		<td class="joinRight spoiler TNGSpoiler characterDeath">USS <em>ENTERPRISE</em> NCC&#8209;1701&#8209;D Destroyed</td>
+		<td>USS <em>VOYAGER</em> NCC&#8209;74656 Launched</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2372</td>
-		<td data-source="DS9 4x01/02: The Way of the Warrior" onmouseover="showSource(this);" onmouseout="closeSource();">Worf joins DS9 crew</td>
+		<td data-source="DS9 4x01/02: The Way of the Warrior" onmouseover="showSource(this);" onmouseout="closeSource();">Worf joins the DS9 crew</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td data-source="<em>Star Trek: First Contact</em>" onmouseover="showSource(this);" onmouseout="closeSource();">USS ENTERPRISE NCC&#8209;1701&#8209;E Launched</td>
+		<td data-source="<em>Star Trek: First Contact</em>" onmouseover="showSource(this);" onmouseout="closeSource();">USS <em>ENTERPRISE</em> NCC&#8209;1701&#8209;E Launched</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -7136,8 +7142,8 @@
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2375</td>
 		<td>&nbsp;</td>
 		<td id="INS" class="filmBox secondGen" style="text-align:left;padding-left:32px;">INSURRECTION <span class="x-small" style="font-weight:normal;font-family:serif">(1998, #9)</span></td>
-		<td class="spoiler DS9Spoiler characterDeath">USS DEFIANT NX&#8209;74205 Destroyed</td>
-		<td class="spoiler DS9Spoiler characterDeath">USS DEFIANT NX&#8209;74205 (2) Launched</td>
+		<td class="spoiler DS9Spoiler characterDeath">USS <em>DEFIANT</em> NX&#8209;74205 Destroyed</td>
+		<td class="spoiler DS9Spoiler characterDeath">USS <em>DEFIANT</em> NX&#8209;74205 (2) Launched</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2376</td>
@@ -7154,12 +7160,12 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td class="apocryphal moreInfo" style="position:relative;border:1px solid #C0C0C0" onClick="openToolTip(event,'BorgVideoGameTT')"><div style="position: absolute;left: -10px;top: -6px;font-size: x-large;transform: rotate(-20deg);">🎮</div>&ldquo;Star Trek: Borg&rdquo; video game*</td>
+		<td class="apocryphal moreInfo" style="position:relative;border:1px solid #C0C0C0;border-radius: 10px;" onClick="openToolTip(event,'BorgVideoGameTT')"><div style="position: absolute;left: -10px;top: -6px;font-size: x-large;transform: rotate(-20deg);">🎮</div>&ldquo;Star Trek: Borg&rdquo; video game*</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2378</td>
-		<td class="spoiler VOYSpoiler" id="voyHome3">Voyager Returns to Earth (<span style="font-family:serif">II</span>)</td>
+		<td class="spoiler VOYSpoiler" id="voyHome3"><em>Voyager</em> Returns to Earth (<span style="font-family:serif">II</span>)</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -7171,14 +7177,14 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td id="NEM" class="filmBox secondGen joinLeft" style="text-align:left;padding-left:32px;"><a href="../films/nemesis.html">NEMESIS <span class="x-small" style="font-weight:normal;font-family:serif">(2002, #10)</span></a></td>
+		<td id="NEM" class="filmBox secondGen joinLeft" style="text-align:left;padding-left:32px;"><a href="/films/nemesis.html">NEMESIS <span class="x-small" style="font-weight:normal;font-family:serif">(2002, #10)</span></a></td>
 		<td class="joinRight spoiler TNGSpoiler characterDeath">Data dies (<span style="font-family:serif">I</span>) (41 yrs since activation)</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2380</td>
-		<td class="seriesBox thirdGen"  style="background-image:url('images/mariner&boimler.png');background-size:100% auto;background-blend-mode:screen" rowspan="3" id="LOW">STAR TREK <br>LOWER DECKS (LOW) <br><span class="x-small" style="font-weight:normal;font-family:serif">2020-2024</span></td>
+		<td class="seriesBox thirdGen"  style="background-image:url('images/mariner&boimler-bg.png');background-size:100% auto;background-blend-mode:screen" rowspan="3" id="LOW">STAR TREK <br>LOWER DECKS (LOW) <br><span class="x-small" style="font-weight:normal;font-family:serif">2020-2024</span></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -7206,7 +7212,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2383</td>
-		<td class="seriesBox thirdGen" style="background-image:url('images/dal&gang.png');background-size:100% auto;background-blend-mode:lighten" rowspan="3" id="PRO"><a href="../pro/index.html">STAR TREK <br>PRODIGY (PRO) </a><br><span class="x-small" style="font-weight:normal;font-family:serif">2021-2024</span></td>
+		<td class="seriesBox thirdGen" style="background-image:url('images/dal&gang-bg.png');background-size:100% auto;background-blend-mode:lighten" rowspan="3" id="PRO"><a href="/pro/index.html">STAR TREK <br>PRODIGY (PRO) </a><br><span class="x-small" style="font-weight:normal;font-family:serif">2021-2024</span></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -7227,7 +7233,7 @@
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2385</td>
 		<td class="majorEventBox joinLeft">Rogue Synth Attack on Mars (April 5)</td>
 		<td class="episodeBox thirdGen joinMiddle" style="border-left:0px;border-right:0px;">SHO: &ldquo;Children of Mars&rdquo; <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(2x06)</span></td>
-		<td class="minorTimeTravel thirdGen joinMiddle"><a href="../pic/pic-s1.html#e02">❰ PIC: Maps and Legends</a></td>
+		<td class="minorTimeTravel thirdGen joinMiddle"><a href="/pic/pic-s1.html#e02">❰ PIC: Maps and Legends</a></td>
 		<td class="joinRight spoiler PICSpoiler">Picard resigns from Starfleet</td>		
 		<td>(Picard Age 80)</td>
 		<td>&nbsp;</td>
@@ -7239,7 +7245,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td class="spoiler characterDeath PICSpoiler">Icheb dies</td>
-		<td class="apocryphal" data-source="Star Trek Logs on Instagram" onmouseover="showSource(this);" onmouseout="closeSource();">USS ENTERPRISE NCC&#8209;1701&#8209;F Launched*</td>
+		<td class="apocryphal" data-source="Star Trek Logs on Instagram" onmouseover="showSource(this);" onmouseout="closeSource();">USS <em>ENTERPRISE</em> NCC&#8209;1701&#8209;F Launched*</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
@@ -7273,9 +7279,9 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2390</td>
-		<td class="alternateReality minorTimeTravel"><a href="../voy/voy-s5.html#e06">❱ VOY: Timeless</a></td>
+		<td class="alternateReality minorTimeTravel"><a href="/voy/voy-s5.html#e06">❱ VOY: Timeless</a></td>
 		<td>&nbsp;</td>
-		<td class="minorTimeTravel thirdGen joinLeft"><a href="../pic/pic-s1.html#e08">❰ PIC: Broken Pieces</a></td>
+		<td class="minorTimeTravel thirdGen joinLeft"><a href="/pic/pic-s1.html#e08">❰ PIC: Broken Pieces</a></td>
 		<td colspan="2" class="joinRight">The <em>ibn Majid</em> picks up two people in the Vayt sector; Rios is traumatized</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -7312,16 +7318,16 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2394</td>
-		<td class="alternateReality spoiler VOYSpoiler" id="voyHome1">Voyager Returns to Earth (<span style="font-family:serif">I</span>)</td>
+		<td class="alternateReality spoiler VOYSpoiler" id="voyHome1"><em>Voyager</em> Returns to Earth (<span style="font-family:serif">I</span>)</td>
 		<td>&nbsp;</td>		
-		<td class="alternateReality majorTimeTravel joinLeft"><a href="../voy/voy-s7.html#e11">❱❱ VOY: Shattered</a></td>
+		<td class="alternateReality majorTimeTravel joinLeft"><a href="/voy/voy-s7.html#e11">❱❱ VOY: Shattered</a></td>
 		<td class="alternateReality joinRight" colspan="2">Naomi and Icheb man Astrometrics in an alternate future</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2395</td>
-		<td class="alternateReality majorTimeTravel"><a href="../tng/tng-s7.html#e25">❱❱ TNG: All Good Things...</a></td>
+		<td class="alternateReality majorTimeTravel"><a href="/tng/tng-s7.html#e25">❱❱ TNG: All Good Things...</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -7331,12 +7337,12 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2396</td>
-		<td class="minorTimeTravel thirdGen joinLeft"><a href="../pic/pic-s3.html#e04">❰ PIC: No Win Scenario</a></td>
+		<td class="minorTimeTravel thirdGen joinLeft"><a href="/pic/pic-s3.html#e04">❰ PIC: No Win Scenario</a></td>
 		<td colspan="2" class="joinRight">Picard regales young officers at Ten Forward Ave with stories of his adventures</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td data-source="PIC 3x01: The Next Generation" onmouseover="showSource(this);" onmouseout="closeSource();">USS TITAN NCC&#8209;80102&#8209;A Launched</td>
+		<td data-source="PIC 3x01: The Next Generation" onmouseover="showSource(this);" onmouseout="closeSource();">USS <em>TITAN</em> NCC&#8209;80102&#8209;A Launched</td>
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2397</td>
@@ -7360,7 +7366,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2399</td>
-		<td class="seriesBox thirdGen" style="background-image:url('images/picard2.png');background-size:100% auto;background-blend-mode:lighten" rowspan="4" id="PIC"><a href="../pic/index.html">STAR TREK <br>PICARD (PIC)</a><br><span class="x-small" style="font-weight:normal;font-family:serif">2020-2023</span></td>
+		<td class="seriesBox thirdGen" style="background-image:url('images/picardblue-bg.png');background-size:100% auto;background-blend-mode:lighten" rowspan="4" id="PIC"><a href="/pic/index.html">STAR TREK <br>PICARD (PIC)</a><br><span class="x-small" style="font-weight:normal;font-family:serif">2020-2023</span></td>
 		<td class="spoiler PICSpoiler characterDeath">Picard dies (<span style="font-family:serif">I</span>) (Age 94)</td>
 		<td class="spoiler PICSpoiler characterDeath">Data dies (<span style="font-family:serif">II</span>) (61 yrs since activation)</td>
 		<td>&nbsp;</td>
@@ -7394,8 +7400,8 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td data-source="PIC 3x09: Võx" onmouseover="showSource(this);" onmouseout="closeSource();">USS ENTERPRISE NCC&#8209;1701&#8209;F Decommissioned</td>
-		<td class="spoiler PICSpoiler">USS TITAN NCC&#8209;80102&#8209;A rechristened as <br>USS ENTERPRISE NCC&#8209;1701&#8209;G</td>
+		<td data-source="PIC 3x09: Võx" onmouseover="showSource(this);" onmouseout="closeSource();">USS <em>ENTERPRISE</em> NCC&#8209;1701&#8209;F Decommissioned</td>
+		<td class="spoiler PICSpoiler">USS <em>TITAN</em> NCC&#8209;80102&#8209;A rechristened as <br>USS <em>ENTERPRISE</em> NCC&#8209;1701&#8209;G</td>
 	</tr>
 	<tr class="contentRow">
 		<td><strong>↓</strong></td>
@@ -7411,7 +7417,7 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2404</td>
-		<td class="alternateReality majorTimeTravel" id="voyHome2"><a href="../voy/voy-s7.html#e25">❱❱ VOY: Endgame</a></td>
+		<td class="alternateReality majorTimeTravel" id="voyHome2"><a href="/voy/voy-s7.html#e25">❱❱ VOY: Endgame</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -7479,7 +7485,7 @@
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2410</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td class="minorTimeTravel alternateReality joinLeft"><a href="../tng/tng-s7.html#e21">❱ TNG: Firstborn</a></td>
+		<td class="minorTimeTravel alternateReality joinLeft"><a href="/tng/tng-s7.html#e21">❱ TNG: Firstborn</a></td>
 		<td class="alternateReality joinRight spoiler TNGSpoiler">Alexander, 44, goes back in time to 2370</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -7544,8 +7550,8 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2416</td>
 		<td>&nbsp;</td>
-		<td colspan="2" class="joinLeft">Enterprise&#8209;D's subspace message from galaxy M-33 due to be received by Starfleet</td>
-		<td class="minorTimeTravel secondGen joinRight"><a href="../tng/tng-s1.html#e06">❱ TNG: Where No One Has Gone Before</a></td>
+		<td colspan="2" class="joinLeft"><em>Enterprise</em>&#8209;D's subspace message from galaxy M-33 due to be received by Starfleet</td>
+		<td class="minorTimeTravel secondGen joinRight"><a href="/tng/tng-s1.html#e06">❱ TNG: Where No One Has Gone Before</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -7762,11 +7768,11 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2436</td>
-		<td class="minorTimeTravel thirdGen alternateReality joinLeft"><a href="../pro/pro-s1.html#e16">❱ PRO: Preludes</a></td>
-		<td class="alternateReality joinMiddle spoiler PROSpoiler ">Chakotay sends the Protostar back in time</td>
-		<td colspan="2" class="alternateReality joinRight spoiler PROSpoiler">The Diviner, The Vindicator, and their Drednoks go back in time after the Protostar</td>
-		<td class="majorTimeTravel thirdGen joinLeft"><a href="../pro/pro-s2.html#e03">❱❱ PRO: Who Saves the Saviors</a></td>
-		<td colspan="2" class="spoiler PROSpoiler joinRight">Dal &amp; crew alter events so Chakotay returns to his time with the Protostar</td>
+		<td class="minorTimeTravel thirdGen alternateReality joinLeft"><a href="/pro/pro-s1.html#e16">❱ PRO: Preludes</a></td>
+		<td class="alternateReality joinMiddle spoiler PROSpoiler ">Chakotay sends the <em>Protostar</em> back in time</td>
+		<td colspan="2" class="alternateReality joinRight spoiler PROSpoiler">The Diviner, The Vindicator, and their Drednoks go back in time after the <em>Protostar</em></td>
+		<td class="majorTimeTravel thirdGen joinLeft"><a href="/pro/pro-s2.html#e03">❱❱ PRO: Who Saves the Saviors</a></td>
+		<td colspan="2" class="spoiler PROSpoiler joinRight">Dal &amp; crew alter events so Chakotay returns to his time with the <em>Protostar</em></td>
 	</tr>
 	<tr class="contentRow">
 		<td>&nbsp;</td>
@@ -7914,7 +7920,7 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2450</td>
-		<td class="majorTimeTravel alternateReality"><a href="../ds9/ds9-s4.html#e03">❱❱ DS9: The Visitor</a></td>
+		<td class="majorTimeTravel alternateReality"><a href="/ds9/ds9-s4.html#e03">❱❱ DS9: The Visitor</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -8101,7 +8107,7 @@
 	<tr class="contentRow">
 		<td><strong>Century</strong></td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;"></td>
-		<td class="minorTimeTravel secondGen joinLeft"><a href="../tng/tng-s3.html#e19">Year unknown: ≈ ❱ TNG: Captain's Holiday</a></td>
+		<td class="minorTimeTravel secondGen joinLeft"><a href="/tng/tng-s3.html#e19">Year unknown: ≈ ❱ TNG: Captain's Holiday</a></td>
 		<td class="joinRight spoiler TNGSpoiler" colspan="2">Vorgons from this century go back to 2366 in an attempt to steal the Tox Uthat</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -8209,8 +8215,8 @@
 	<tr class="contentRow">
 		<td><strong>Century</strong></td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;"></td>
-		<td class="minorTimeTravel secondGen joinLeft"><a href="../voy/voy-s3.html#e08">≈ ❱ VOY: Future's End</a></td>
-		<td class="joinRight" colspan="2">Year unknown: Braxton goes back to 2373 to prevent Voyager from causing a catastrophe</td>
+		<td class="minorTimeTravel secondGen joinLeft"><a href="/voy/voy-s3.html#e08">≈ ❱ VOY: Future's End</a></td>
+		<td class="joinRight" colspan="2">Year unknown: Braxton goes back to 2373 to prevent <em>Voyager</em> from causing a catastrophe</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -8219,7 +8225,7 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;"></td>
-		<td class="majorTimeTravel secondGen joinLeft"><a href="../voy/voy-s5.html#e24">≈ ❱❱ VOY: Relativity</a></td>
+		<td class="majorTimeTravel secondGen joinLeft"><a href="/voy/voy-s5.html#e24">≈ ❱❱ VOY: Relativity</a></td>
 		<td class="joinRight" colspan="2">30 years later: Braxton enlists Seven from 2375 to help correct changes in the timeline</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -8229,8 +8235,8 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;"></td>
-		<td class="minorTimeTravel secondGen joinLeft"><a href="../voy/voy-s5.html#e24">≈ ❱ VOY: Relativity</a></td>
-		<td class="joinRight spoiler VOYSpoiler" colspan="2">A few years after that: Braxton, desperate and broken, returns to 2372 to destroy Voyager</td>
+		<td class="minorTimeTravel secondGen joinLeft"><a href="/voy/voy-s5.html#e24">≈ ❱ VOY: Relativity</a></td>
+		<td class="joinRight spoiler VOYSpoiler" colspan="2">A few years after that: Braxton, desperate and broken, returns to 2372 to destroy <em>Voyager</em></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -8349,7 +8355,7 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;"></td>
-		<td class="majorTimeTravel secondGen" id="LivingWitness"><a href="../voy/voy-s4.html#e23">c. 3074: ≈ ❱❱ VOY: Living Witness</a></td>
+		<td class="majorTimeTravel secondGen" id="LivingWitness"><a href="/voy/voy-s4.html#e23">c. 3074: ≈ ❱❱ VOY: Living Witness</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -8525,7 +8531,7 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">3188</td>
-		<td class="seriesBox thirdGen" rowspan="4" style="background-image:url('images/burnhamred.png');background-size:100% auto;background-blend-mode:lighten;" id="DIS2">STAR TREK <br>DISCOVERY (DIS) <br>SEASONS 3, 4, 5 <br><span class="x-small" style="font-weight:normal;font-family:serif">2020-2024</span></td>
+		<td class="seriesBox thirdGen" rowspan="4" style="background-image:url('images/burnhamred-bg.png');background-size:100% auto;background-blend-mode:lighten;" id="DIS2">STAR TREK <br>DISCOVERY (DIS) <br>SEASONS 3, 4, 5 <br><span class="x-small" style="font-weight:normal;font-family:serif">2020-2024</span></td>
 		<td data-source="DIS 3x01: That Hope Is You, Part 1" onmouseover="showSource(this);" onmouseout="closeSource();">Burnham arrives from 2258</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -8536,7 +8542,7 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">3189</td>
-		<td data-source="DIS 3x02:Far From Home" onmouseover="showSource(this);" onmouseout="closeSource();">USS Discovery arrives from 2258</td>
+		<td data-source="DIS 3x02:Far From Home" onmouseover="showSource(this);" onmouseout="closeSource();">USS <em>Discovery</em> arrives from 2258</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -8566,7 +8572,7 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">3192</td>
-		<td class="seriesBox thirdGen" id="SFA">Starfleet Academy (SFA) <span class="x-small" style="font-weight:normal;font-family:serif">2026-</span></td>
+		<td rowspan="2" class="seriesBox thirdGen" id="SFA">Starfleet Academy (SFA) <span class="x-small" style="font-weight:normal;font-family:serif">2026-</span></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -8577,7 +8583,6 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">3193</td>
-		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -8930,7 +8935,7 @@
 		<td><strong>Century</strong></td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;"></td>
 		<td class="majorTimeTravel thirdGen joinLeft">Year Unknown: ≈ ❱❱ DIS: Life, Itself</td>
-		<td class="joinRight spoiler DISSpoiler">USS DISCOVERY downgraded &amp; abandoned</td>
+		<td class="joinRight spoiler DISSpoiler">USS <em>DISCOVERY</em> downgraded &amp; abandoned</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -9371,7 +9376,7 @@
 
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
 
-<div class="pageFooter"><a href="../index.html"><img src="../images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../about.html">ABOUT</a>&nbsp;&nbsp;<a href="../updates.html">UPDATES</a>&nbsp;&nbsp;<a href="../blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="../images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 
 <div id="sourceDivContainer"><div id="sourceDiv"></div></div>
@@ -9394,7 +9399,7 @@
 	
 	<div id="BorgVideoGameTT" class="tooltip" onClick="closeToolTip(this)">I know it's not canon, and this timeline would be a lot busier if I included every Star Trek video game, but I'm only including this one because it is actually more of an interactive movie that included 2 hours of original footage and starred John de Lancie as Q.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
 	
-	<div id="DLaunchTT" class="tooltip" onClick="closeToolTip(this)">Give or take a year. The launch and/or commissioning date of the Enterprise&#8209;D is not entirely certain due to contradictions from official sources. 2363 is the year indicated by the stardate on the second dedication plaque on the ship's bridge, which was used for seasons 5-7. It's also the year calculated by using Data's statement about 1550 days having passed since the ships commissioning, in the episode <a href="../tng/tng-s4.html#e11">TNG 4x11: Data's Day</a>. However, the first dedication plaque that appears in seasons 1-4 lists a commissioning stardate in 2364. Furthermore, a <a href="https://www.instagram.com/p/Coh6YkJNuJk/" target="_blank">video</a> on the official &ldquo;startreklogs&rdquo; Instagram account gives the launch year as 2362.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
+	<div id="DLaunchTT" class="tooltip" onClick="closeToolTip(this)">Give or take a year. The launch and/or commissioning date of the Enterprise&#8209;D is not entirely certain due to contradictions from official sources. 2363 is the year indicated by the stardate on the second dedication plaque on the ship's bridge, which was used for seasons 5-7. It's also the year calculated by using Data's statement about 1550 days having passed since the ships commissioning, in the episode <a href="/tng/tng-s4.html#e11">TNG 4x11: Data's Day</a>. However, the first dedication plaque that appears in seasons 1-4 lists a commissioning stardate in 2364. Furthermore, a <a href="https://www.instagram.com/p/Coh6YkJNuJk/" target="_blank">video</a> on the official &ldquo;startreklogs&rdquo; Instagram account gives the launch year as 2362.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>
 	
 </div>
 <div id="seriesWithNoSpoilersFix" style="display:none"><span class="spoiler ENTSpoiler">&nbsp;</span><span class="spoiler LOWSpoiler">&nbsp;</span><span class="spoiler SNWSpoiler">&nbsp;</span></div>

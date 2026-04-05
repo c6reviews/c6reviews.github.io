@@ -346,7 +346,7 @@ function filterTitle(clear) {
 			txtValue = td.textContent || td.innerText;
 			if (txtValue.toLowerCase().indexOf(filter) > -1) {
 				filterrows[i].style.display = "";
-				const regEx = new RegExp(filter, 'gi');
+				const regEx = new RegExp(filter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
 				if (filter != "") {
 					var link = td.querySelector('a');
 					var linktext = link.innerText;
@@ -641,7 +641,7 @@ var csvString = `ReleaseAndTimelineOrder,Series,Episode,Title,Notes,Recommendati
 045,VOY,5x21,Juggernaut,-,-,5
 046,VOY,5x22,Someone to Watch Over Me,The Doctor tutors Seven when she expresses interest in exploring romance,✔ Recommended,6.4
 047,VOY,5x23,11:59,-,-,3.8
-048,VOY,5x24,Relativity,Seven is recruited by time travelers to thwart an attack on Voyager,✔ Recommended,9.2
+048,VOY,5x24,Relativity,Seven is recruited by time travelers to thwart an attack on <em>Voyager</em>,✔ Recommended,9.2
 049,VOY,5x25,Warhead,-,-,6.6
 050,VOY,5x26,Equinox (Part I),-,-,7.5
 051,VOY,6x01,"Equinox, Part II",-,-,7.5
@@ -681,7 +681,7 @@ var csvString = `ReleaseAndTimelineOrder,Series,Episode,Title,Notes,Recommendati
 085,VOY,7x09/10 [FL],Flesh and Blood,-,-,6.4
 086,VOY,7x11,Shattered,-,-,6.9
 087,VOY,7x12,Lineage,-,-,5.7
-088,VOY,7x13,Repentance,"When Voyager ferries a group of inmates, Seven feels guilt for her actions as a drone",-,5.8
+088,VOY,7x13,Repentance,"When <em>Voyager</em> ferries a group of inmates, Seven feels guilt for her actions as a drone",-,5.8
 089,VOY,7x14,Prophecy,-,-,4.8
 090,VOY,7x15,The Void,-,-,7
 091 & 092,VOY,7x16 & 17,Workforce (Parts I and II),-,-,7.3
@@ -698,7 +698,7 @@ var csvString = `ReleaseAndTimelineOrder,Series,Episode,Title,Notes,Recommendati
 103,PIC,1x08,Broken Pieces<sup> ‡</sup>,Seven takes control of a Borg cube and its inhabitants in order to expel the Romulans,✔ Recommended,6.1
 104,PIC,1x09,"Et in Arcadia Ego, Part I<sup> ‡</sup>",<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven survives the cube crash and stays behind to clean things up,-,4.5
 105,PIC,1x10,"Et in Arcadia Ego, Part II<sup> ‡</sup>",<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven fights Narissa and mourns the death of a colleague,-,5.7
-106,PIC,2x01,The Star Gazer<sup> ‡</sup>,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven joins Rios and Picard on the Stargazer after an anomaly appears,-,7.0
+106,PIC,2x01,The Star Gazer<sup> ‡</sup>,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven joins Rios and Picard on the <em>Stargazer</em> after an anomaly appears,-,7.0
 107,PIC,2x02,Penance<sup> ‡</sup>,Seven awakes as Annika &ndash; President of a totalitarian xenophobic human empire,✔ Recommended,5.7
 108,PIC,2x03,Assimilation<sup> ‡</sup>,"Seven accompanies Raffi to find the Watcher, and enjoys what it feels like to be human",-,5.7
 109,PIC,2x04,Watcher<sup> ‡</sup>,Seven drives a stolen police car in a high-stakes chase,-,5.3
@@ -713,11 +713,11 @@ var csvString = `ReleaseAndTimelineOrder,Series,Episode,Title,Notes,Recommendati
 118,PIC,3x03,Seventeen Seconds<sup> ‡</sup>,Seven broods while confined to quarters until she escapes to help track down a verterium leak,-,6.7
 119,PIC,3x04,No Win Scenario<sup> ‡</sup>,Seven launches an investigation to find the Changeling saboteur,-,8.5
 120,PIC,3x05,Imposters<sup> ‡</sup>,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven doesn't really do much in this episode,-,8.8
-121,PIC,3x06,The Bounty<sup> ‡</sup>,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven reminisces about Voyager but otherwise doesn't do much here,-,7.2
+121,PIC,3x06,The Bounty<sup> ‡</sup>,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven reminisces about <em>Voyager</em> but otherwise doesn't do much here,-,7.2
 122,PIC,3x07,Dominion<sup> ‡</sup>,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven reaches out to an old friend,-,7.7
 123,PIC,3x08,Surrender<sup> ‡</sup>,Seven mostly gets angry about being a prisoner on her own ship and then finally delivers the line &ldquo;Get off my bridge!&rdquo;,-,8.6
 124,PIC,3x09,Võx<sup> ‡</sup>,<span style='color:#858585;font-style:italic;font-size:small'>(Minor appearance)</span> Seven helps the gang escape,-,7.3
-125,PIC,3x10,The Last Generation<sup> ‡</sup>,Seven takes command of the Titan and inspires a skeleton crew to do their best work,✔ Recommended,7.1`;
+125,PIC,3x10,The Last Generation<sup> ‡</sup>,Seven takes command of the <em>Titan</em> and inspires a skeleton crew to do their best work,✔ Recommended,7.1`;
 
 	var array = csvToNestedArray(csvString);
 	

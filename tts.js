@@ -59,6 +59,7 @@ function textToSpeech(id,text) {
 				replaceAll("Reman","Reemin").
 				replaceAll("Risa","Ryza").
 				replaceAll("Romulan","Rahmulin").
+				replaceAll("Talaxian","Tal-ax-ian").
 				replaceAll("Xahean","zah-HEyan");
 			
 			// Characters
@@ -78,7 +79,8 @@ function textToSpeech(id,text) {
 				replaceAll("Nagus","Naygus").
 				replaceAll("Sarek","Sareck").
 				replaceAll("Shinzon","Shinzahn").
-				replaceAll("Tuvok","Two-vock");
+				replaceAll("Tuvok","Two-vock").
+				replaceAll("Zefram","Zefrum");
 
 
 			// Actors

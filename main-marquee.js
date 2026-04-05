@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			track.innerHTML = marqueePage_KirkBirthday + track.innerHTML;
 			break;
 		case "April 5":
-			track.innerHTML = marqueePage_DayOfHonor + track.innerHTML;
+			track.innerHTML = marqueePage_FirstContactDay + track.innerHTML;
 			break;
 		case "April 22":
 			track.innerHTML = marqueePage_AncestorsEve + track.innerHTML;
@@ -84,12 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			break;
 		case "July 22":
 			track.innerHTML = marqueePage_beyondReleased + track.innerHTML;
-			break;
-		case "August 6":
-			track.innerHTML = marqueePage_LOWPremieres + track.innerHTML;
-			break;
-		case "August 6":
-			track.innerHTML = marqueePage_LOWPremieres + track.innerHTML;
 			break;
 		case "August 6":
 			track.innerHTML = marqueePage_LOWPremieres + track.innerHTML;
@@ -370,7 +364,7 @@ var marqueePage_CaptainPicardDay = `
 		<img class="marqueeImg" src="images/marquee/CaptainPicardDay.png">
 		<div class="marqueeTitle">June 16 &ndash; Captain Picard Day</div>
 		<div class="marqueeSubtitle">ON THIS DAY*</div>
-		<div class="marqueeContent"><p>Happy Captain Picard Day! This was an annual event held aboard the Enterprise-D for the ship's children, as seen in <a href="tng/tng-s7.html#e12">TNG 7x12: The Pegasus</a>.</p><p style="font-size:small;font-style:italic">* Although the date is not officially confirmed by a canon source, fans calculated the stardate given in the episode &ldquo;The Pegasus&rdquo; to be equivalent to June 16.</div>
+		<div class="marqueeContent"><p>Happy Captain Picard Day! This was an annual event held aboard the <em>Enterprise</em>&#8209;D for the ship's children, as seen in <a href="tng/tng-s7.html#e12">TNG 7x12: The Pegasus</a>.</p><p style="font-size:small;font-style:italic">* Although the date is not officially confirmed by a canon source, fans calculated the stardate given in the episode &ldquo;The Pegasus&rdquo; to be equivalent to June 16.</div>
 	</div>`	
 	
 var marqueePage_PicardBirthday = `

@@ -39,6 +39,9 @@
 	scroll-margin-top: 50px;
 	padding: 15px;
 	font-style: italic;
+	& em {
+		font-style: normal;
+	}
 }
 .seasonName {
 	display: block;
@@ -219,6 +222,9 @@
 			height: auto;
 			width: fit-content;
 			padding: 2px;
+			& em {
+				font-style: normal;
+			}
 		}
 		.arcDescription {
 			font-style: normal;

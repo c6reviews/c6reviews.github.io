@@ -326,7 +326,7 @@ function filterTitle() {
 			txtValue = td.textContent || td.innerText;
 			if (txtValue.toLowerCase().indexOf(filter) > -1) {
 				filterrows[i].style.display = "";
-				const regEx = new RegExp(filter, 'gi');
+				const regEx = new RegExp(filter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
 				if (filter != "") {
 					var link = td.querySelector('a');
 					var linktext = link.innerText;
@@ -831,7 +831,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 4x20,Shattered Mirror,♊,✔ Recommended,6.5
 4x21,The Muse,,-,1.1
 4x22,For the Cause,V🟡,🕶 Must Watch,7.4
-4x23,To The Death,,-,6.2
+4x23,To The Death,,-,6.3
 4x24,The Quickening,♥️,-,5.1
 4x25,Body Parts,,✔ Recommended,4.2
 4x26,Broken Link,,🕶 Must Watch,6.6

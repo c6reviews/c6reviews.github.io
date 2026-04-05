@@ -253,7 +253,7 @@ input[type=button]:hover {
 }
 #spoilerMenuOpenButton::before {
 	content:"!";
-	display: var(--flag-display, block);
+	display: var(--flag-display, none);
 	position: absolute;
 	top: 3px;
 	left: -12px;

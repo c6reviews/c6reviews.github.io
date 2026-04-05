@@ -2,7 +2,7 @@
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	font-size: large;
+	font-size: 1.125rem;
 	font-style: normal;
 	color: #D0D0D0;
 	margin-left: 100px;
@@ -24,21 +24,28 @@
 	background-color: #00000000;
 	color: #D0D0D0;
 	width: 42px;
+	height: 24px;
 	padding: 0px 2px;
 	cursor: pointer;
+	transform: translateY(-3px);
+	@media (max-width: 1000px) and (pointer: coarse) {
+		width: 100px;
+		height: 48px;
+		font-size: 40px;
+	}
 }
 .TTScontrols option {
 	background-color: #181818;
 	border:none;
 }
 .TTSstopButton {
-	font-size:large;
+	font-size:1.125rem;
 }
 .TTSstopButton:hover {
 	color: darkred;
 }
 .TTSplayButton {
-	font-size:x-large;
+	font-size:1.5rem;
 }
 .TTSplayButton:hover {
 	color: green;
