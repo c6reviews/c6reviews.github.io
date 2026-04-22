@@ -3,7 +3,6 @@
 
 <head>
 
-<script defer src="https://umami-production-bb03.up.railway.app/script.js" data-website-id="6a2b4a9c-d106-4539-bc0a-3c554cab7b47"></script>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
 <link rel="stylesheet" href="main.css?v=1.5.2">
@@ -24,6 +23,11 @@
 	});
 	var host = window.location.hostname;
 	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
 		gtag('js', new Date());
 		gtag('config', 'G-DM44X85QLJ');
 	}
