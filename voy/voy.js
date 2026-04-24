@@ -181,6 +181,37 @@ function displaySpoiler(caller) {
 	}
 }
 
+/* -------------------------------------------------- EXPANDABLE SECTIONS -------------------------------------------------- */
+
+function toggleKeepReadingSection(caller,closedHeight) {
+	let ele = caller.parentNode.querySelector('.expandable');
+	
+	// transition: max-height 0.8s ease-in-out;
+	
+	if (caller.innerHTML.includes('▼')) {
+		ele.style.transition = '';
+		ele.style.maxHeight = 'fit-content';
+		let openHeight = ele.offsetHeight;
+		ele.style.maxHeight = closedHeight + "px";
+		ele.style.transition = 'max-height 0.8s ease-in-out';
+		
+		setTimeout(function(){ele.style.maxHeight = (openHeight+1) + "px";},100);
+		//Animation doesn't work with fit-content. This value must be larger than its possible max.
+		
+		caller.innerHTML = "▲ Collapse Section ▲";
+		setTimeout(function(){ele.style.maskImage = 'none';},600);
+	} else {
+		let openHeight = ele.offsetHeight;
+		ele.style.maxHeight = closedHeight + "px";
+		caller.innerHTML = "▼ Keep Reading ▼";
+		setTimeout(function(){
+			ele.style.maskImage = 'linear-gradient(180deg, #000 60%, transparent 90%)';
+			if (openHeight > window.innerHeight) {
+				caller.scrollIntoView({block: 'center'});
+			}
+		},600);
+	}
+}
 
 /* -------------------------------------------------- ONSCROLL -------------------------------------------------- */
    

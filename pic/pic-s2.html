@@ -3,6 +3,7 @@
 
 <head>
 
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
@@ -17,6 +18,11 @@
 	});
 	var host = window.location.hostname;
 	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
 		gtag('js', new Date());
 		gtag('config', 'G-DM44X85QLJ');
 	}
@@ -24,15 +30,15 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="/main.css?v=1.5.2">
-<link rel="stylesheet" href="/tts.css?v=1.5.2">
-<link rel="stylesheet" href="pic.css?v=1.5.2">
-<link rel="stylesheet" href="pic-episode-guides.css?v=1.5.2">
+<link rel="stylesheet" href="/main.css?v=1.6">
+<link rel="stylesheet" href="/tts.css?v=1.6">
+<link rel="stylesheet" href="pic.css?v=1.6">
+<link rel="stylesheet" href="pic-episode-guides.css?v=1.6">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <meta property="og:title" content="PIC Season 2 | C6Reviews">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://c6reviews.com/pic/images/ogimage.png">
+<meta property="og:image" content="https://c6reviews.com/pic/images/ogimage.webp">
 <meta property="og:url" content="https://c6reviews.com/pic/pic-s2.html">
 <meta property="og:description" content="Episode reviews and guides for Star Trek: Picard, Season 2.">
 
@@ -46,9 +52,9 @@
 }
 </style>
 
-<script src="pic.js"></script>
-<script src="/tts.js"></script>
-<script src="/cookies.js"></script>
+<script src="pic.js?v=1.6"></script>
+<script src="/tts.js?v=1.6"></script>
+<script src="/cookies.js?v=1.6"></script>
 <script>
 	function prepTextToSpeech(id)
 	{
@@ -64,15 +70,15 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.png" alt="c6reviews"></a></div>
-<div class="pageTitleImage"><img src="images/pic-header.png" alt="Star Trek: Picard title header"></div>
+<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+<div class="pageTitleImage"><img src="images/pic-header.webp" alt="Star Trek: Picard title header"></div>
 <div class="pageTitleContainer">
 	<div class="pageTitle">
-		<a href="/index.html"><img src="/images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br>Star Trek: Picard
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>Star Trek: Picard
 		<span class="pageSubtitle">Season 2 Episode Guides</span>
 	</div>
 </div>
-<div class="c6Right"><a href="/index.html"><img src="/images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 <h3 class="seasonNav"><a href="pic-episode-list.html">Full Episode List</a><br><a href="pic-s1.html">Season 1</a> • <span class="activeSeason"><a href="pic-s2.html">Season 2</a></span> • <a href="pic-s3.html">Season 3</a></h3>
 
@@ -84,7 +90,7 @@
 <div id="mainSidenav" class="sidenav">
 	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	<a href="index.html"><span style="font-size:large">←</span> PIC Episode Guide Home</a><br>
-	<a href="index.html"><img src="/images/pic-title.png" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="pic logo"></a><br>
+	<a href="index.html"><img src="/images/pic-title.webp" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="pic logo"></a><br>
 	<a href="pic-episode-list.html" style="text-align:center">Full Episode List</a>
 	<div class="sidenavseasons">
 		Season: 
@@ -109,7 +115,7 @@
 <div class="content">
 
 	<div class="seasonSummary">
-		<img src="images/s2_poster.png" class="seasonPoster"  alt="a poster featuring the cast of Season 2">
+		<img src="images/s2_poster.webp" class="seasonPoster"  alt="a poster featuring the cast of Season 2">
 		<div class="seasonName">Season 2</div>
 		<div class="serif">
 			<p>Season 2 is going to require a healthy dose of suspension of disbelief, because the show has reused the same actors from season one to play entirely different parts. You remember Soji? Well, she's Kore now. A completely unrelated, non-android character. And Laris? She'll be playing Tallinn. And Brent Spiner will be back as Yetanother Soong. Got it? Great.</p>
@@ -129,31 +135,31 @@
 					<th style="width: 620px">Description / Relevance</th>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+					<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 					<td>1x01/02</td>
 					<td><a href="/tng/tng-s1.html#e01">Encounter at Farpoint</a></td>
 					<td>Q's first appearance (<em>TNG</em>&nbsp;Series&nbsp;Premiere)</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+					<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 					<td>2x16</td>
 					<td><a href="/tng/tng-s2.html#e16">Q Who</a></td>
 					<td>Guinan crosses paths with Q; first appearance of the Borg</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+					<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 					<td>3x15</td>
 					<td><a href="/tng/tng-s3.html#e15">Yesterday's Enterprise</a></td>
 					<td>Guinan's sixth sense</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+					<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 					<td>5x26 &amp; 6x01</td>
 					<td><a href="/tng/tng-s5.html#e26">Time's Arrow</a></td>
 					<td>Guinan's connection to Picard</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+					<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 					<td>6x15</td>
 					<td><a href="/tng/tng-s6.html#e15">Tapestry</a></td>
 					<td>Q gives Picard a second chance at life by letting him change his own past</td>
@@ -176,25 +182,25 @@
 					<th style="width: 620px">Description / Relevance</th>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tos-abbr.png" style="height:20px;" alt="TOS"></td>
+					<td style="text-align:center"><img src="/images/tos-abbr.webp" style="height:20px;" alt="TOS"></td>
 					<td>2x26</td>
 					<td><a href="/tos/tos-s2.html#e26">Assignment: Earth</a></td>
 					<td>Original reference to &ldquo;watchers&rdquo; and/or &ldquo;supervisors&rdquo;</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+					<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 					<td>1x06</td>
 					<td><a href="/tng/tng-s1.html#e06">Where No One Has Gone Before</a></td>
 					<td>Wesley first meets the Traveler and, in a brief scene, Picard imagines his mother as an old woman</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+					<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 					<td>3x13</td>
 					<td><a href="/tng/tng-s3.html#e13">Deja Q</a></td>
 					<td>More Q/Guinan rivalry</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+					<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 					<td>7x25/26</td>
 					<td><a href="/tng/tng-s7.html#e25">All Good Things...</a></td>
 					<td>Q's last interaction with Picard (<em>TNG</em>&nbsp;Series&nbsp;Finale)</td>
@@ -204,13 +210,13 @@
 	</div>
 
 	<div id="e01" class="episodeCard">
-		<img src="images/pic-2x01.png" class="episodeCardBG" alt="Picard, Rios, Jurati, and Seven on the bridge of a starship, with an ominous black-cloaked figure standing before them, and a dozen Starfleet officers pointing weapons at the figure">
-		<img src="images/pic-2x01b.png" class="episodeCardBG2" alt="A young boy with a beret entering a large solarium">
+		<img src="images/pic-2x01.webp" class="episodeCardBG" alt="Picard, Rios, Jurati, and Seven on the bridge of a starship, with an ominous black-cloaked figure standing before them, and a dozen Starfleet officers pointing weapons at the figure">
+		<img src="images/pic-2x01b.webp" class="episodeCardBG2" alt="A young boy with a beret entering a large solarium">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.png" width="42"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.webp" width="42"></td>
 						<td class="seasonEpisodeNumberBox">2x01</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>3 Mar 2022</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>11</strong></td>
@@ -283,10 +289,10 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td class="references" id="tts1c"><ul>
-								<li>Whoopi Goldberg reprises her role as <strong>Guinan</strong> from <a href="/tng/index.html"><em>Star Trek: The Next Generation</em></a>.</li>
-								<li>John de Lancie reprises his role as <span class="Q">Q</span> from <a href="/tng/index.html"><em>Star Trek: The Next Generation</em></a>.</li>
+								<li><a href="https://memory-alpha.fandom.com/wiki/Whoopi_Goldberg" target="_blank">Whoopi Goldberg</a> reprises her role as <strong>Guinan</strong> from <a href="/tng/index.html"><em>Star Trek: The Next Generation</em></a>.</li>
+								<li><a href="https://memory-alpha.fandom.com/wiki/John_de_Lancie" target="_blank">John de Lancie</a> reprises his role as <span class="Q">Q</span> from <a href="/tng/index.html"><em>Star Trek: The Next Generation</em></a>.</li>
 								<li>Barely visible in Picard's château study is a Promellian battle cruiser model in a bottle. In <a href="/tng/tng-s3.html#e06">TNG 3x06: Booby Trap</a>, Picard got the opportunity to see a Promellian battle cruiser in person. At the time, he remarked that he built ships in bottles as a boy, and that he thought he even had a model of this class, as well.<br>
-								<img src="images/pic-2x01-shipbottle.png" alt="A ship in a bottle on a mantle in Picard's study, next to a close-up shot of the same model" style="margin-top:5px">
+								<img src="images/pic-2x01-shipbottle.webp" alt="A ship in a bottle on a mantle in Picard's study, next to a close-up shot of the same model" style="margin-top:5px">
 								</li>
 								
 								<li>Picard calls Elnor &ldquo;the first fully-Romulan cadet&rdquo;. This could be a nod to a previous cadet, Simon Tarses, who was one-quarter Romulan and a person of interest during an inquiry in <a href="/tng/tng-s4.html#e21">TNG 4x21: The Drumhead</a>.</li>
@@ -309,7 +315,7 @@
 							<td>&nbsp;</td>
 							<td class="nitpickery" id="tts1d"><ul>
 								<li>About 13 minutes into the episode, when Picard is looking for a book and Laris enters, there is a stone tablet sitting on the table that looks remarkably like the Reckoning Tablet from <a href="/ds9/ds9-s6.html#e21">DS9 6x21: The Reckoning</a>, which is notably an unresolved story. The tablet is also prominently visible in the <a href="https://www.youtube.com/watch?v=xk9F90wklRQ" target="_blank">Season 2 Teaser</a>. However, the tablet is never referenced, nor does it have anything to do with the story. It is mere <em>mise en scène</em>. This makes me wonder if the prop was used intentionally as a red herring for eagle-eyed viewers, or if it was just something in the prop archives that a set designer thought would make an interesting centerpiece, without understanding its origin.<br>
-								<img src="images/pic-2x01-tablet.png" alt="On the left, Captain Sisko standing next to the tablet in the DS9 episode 'The Reckoning'. On the right, Picard and Laris standing over an identical (though broken) tablet in his study" style="margin-top:5px;height:300px"></li>
+								<img src="images/pic-2x01-tablet.webp" alt="On the left, Captain Sisko standing next to the tablet in the DS9 episode 'The Reckoning'. On the right, Picard and Laris standing over an identical (though broken) tablet in his study" style="margin-top:5px;height:300px"></li>
 								
 								<li>When Picard enters the bar, Guinan starts to talk to him without even turning around. This could be a hint at Guinan's &ldquo;sixth sense&rdquo; about things... orrrrr it could just be that she saw his reflection in the mirrored wall behind the bar. Ha!</li>
 								<li>I can't stop laughing at Rios running back to his captain's chair when the crisis starts. There's just something comical about it, like he can't run the ship unless he's in the chair or something.</li>
@@ -322,7 +328,7 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td>
-								<div class="distinctions"><img src="images/tng.png" height="180" alt="A Starfleet Delta labeled 'The Nostalgic Generation' with an image of Picard hugging Riker and Troi"><img src="images/sgs-guinan.png" height="180" alt="A Starfleet Delta labeled 'Special Guest Star' with an image of Guinan"></div>
+								<div class="distinctions"><img src="images/tng.webp" height="180" alt="A Starfleet Delta labeled 'The Nostalgic Generation' with an image of Picard hugging Riker and Troi"><img src="images/sgs-guinan.webp" height="180" alt="A Starfleet Delta labeled 'Special Guest Star' with an image of Guinan"></div>
 								<div class="distinctionDescriptions">
 									<strong>The Nostalgic Generation: </strong>The <em>Stargazer</em>, Guinan, and Q<br><br>
 									<span style="color:#eea432"><strong>Special Guest Star: </strong>Guinan</span><br><br>
@@ -351,7 +357,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-4.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 4"><br>
+							<img src="images/nm-4.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 4"><br>
 							<span class="nostalgiaText4">10 Forward Ave</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -375,13 +381,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e02" class="episodeCard">
-		<img src="images/pic-2x02.png" class="episodeCardBG" alt="Picard, wearing all black and with a strange combadge, standing on a stage lined with red banners">
-		<img src="images/pic-2x02b.png" class="episodeCardBG2" alt="Q showing Picard seven pedestals, each with a skull on it">
+		<img src="images/pic-2x02.webp" class="episodeCardBG" alt="Picard, wearing all black and with a strange combadge, standing on a stage lined with red banners">
+		<img src="images/pic-2x02b.webp" class="episodeCardBG2" alt="Q showing Picard seven pedestals, each with a skull on it">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.png" width="42"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.webp" width="42"></td>
 						<td class="seasonEpisodeNumberBox">2x02</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>10 Mar 2022</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>12</strong></td>
@@ -424,7 +430,7 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td><div class="thoughts" id="tts2b">
-								<p>This episode feels a lot like the evil &ldquo;Mirror Universe,&rdquo; but it's actually just our universe that has been changed because of something that Q altered in the past. In this version of events, Picard has become a ruthless general in a xenophobic regime. This is the second time that <em>Trek</em> has floated the idea that &ldquo;if things had just been a little different&rdquo; Picard would grow up to be some sort of monster. The first time was <a href="/films/nemesis.html"><em>Star Trek Nemesis</em></a> where a clone of Picard was subjected to cruel conditions growing up, and he turned out to be pretty evil. I'm all for exploring this idea of nature versus nurture, but I think at this point the writers are just suggesting that it's pure luck that in the Prime Timeline/Universe, Picard has grown to be a morally-centered, skilled diplomat who is part of a humanitarian, inclusive Starfleet.</p>
+								<p>This episode feels a lot like the evil &ldquo;Mirror Universe&rdquo;, but it's actually just our universe that has been changed because of something that Q altered in the past. In this version of events, Picard has become a ruthless general in a xenophobic regime. This is the second time that <em>Trek</em> has floated the idea that &ldquo;if things had just been a little different&rdquo; Picard would grow up to be some sort of monster. The first time was <a href="/films/nemesis.html"><em>Star Trek Nemesis</em></a> where a clone of Picard was subjected to cruel conditions growing up, and he turned out to be pretty evil. I'm all for exploring this idea of nature versus nurture, but I think at this point the writers are just suggesting that it's pure luck that in the Prime Timeline/Universe, Picard has grown to be a morally-centered, skilled diplomat who is part of a humanitarian, inclusive Starfleet.</p>
 								
 								<p>Anyway, it's kind of fun to see everyone coping with this new reality and coming together to formulate a plan, but I think Jurati's &ldquo;comedy relief&rdquo; is over the top and pulls us out of the story. It might have been more realistic if someone had just said &ldquo;shut up&rdquo; during her long, rambling explanation. There's another few instances where it feels a little implausible that our heroes somehow managed to blend in so quickly without raising suspicion, but let's just say that Q quietly helped them along the way and move on.</p>
 								
@@ -453,13 +459,13 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td class="references" id="tts2c"><ul>
-								<li>Q bends the fourth wall by mentioning several past episode titles. He says, &ldquo;How yesterday's <em>Enterprise</em> of you,&rdquo; which is a reference to <a href="/tng/tng-s3.html#e15">TNG 3x15: Yesterday's Enterprise</a>. He also says, &ldquo;Through a mirror darkly, and here the man who holds the glass is darker still,&rdquo; which is a Biblical reference to 1 Corinthians 13:12, &ldquo; <sup>12</sup>For now we see through a glass, darkly; but then face to face: now I know in part; but then shall I know even as also I am known.&rdquo; This also references episode titles <a href="/ent/ent-s4.html#e18">ENT 4x18 &amp; 4x19: In a Mirror, Darkly</a> and <a href="/ds9/ds9-s3.html#e19">DS9 3x19: Through the Looking Glass</a>. All three of these referenced episodes involve alternate universes that are darker and &ldquo;eviler&rdquo; than our own. Picard also quotes the Bible verse in <a href="/films/nemesis.html"><em>Star Trek Nemesis</em></a> in reference to his &ldquo;eviler&rdquo; self, Shinzon.</li>
-								<li>When Picard first enters his study-turned-menagerie, the camera quickly pans by a large, armored suit standing in front of a window. This is an early Klingon EVA-suit, circa 2256, first seen by Michael Burnham on the Torchbearer's ship in <a href="dis/dis-s1.html#e01">DIS 1x01: The Vulcan Hello</a>.<br><img src="images/pic-2x02-suit.png" style="margin-top:8px;width:700px" alt="On the left, an image of the suit displayed in Picard's menagerie from this episode. On the right, an image of the suit being worn by a Klingon as witnessed by Burnham in the first episode of Star Trek: Discovery"></li>
+								<li>Q bends the fourth wall by mentioning several past episode titles. He says, &ldquo;How yesterday's <em>Enterprise</em> of you&rdquo;, which is a reference to <a href="/tng/tng-s3.html#e15">TNG 3x15: Yesterday's Enterprise</a>. He also says, &ldquo;Through a mirror darkly, and here the man who holds the glass is darker still&rdquo;, which is a Biblical reference to 1 Corinthians 13:12, &ldquo; <sup>12</sup>For now we see through a glass, darkly; but then face to face: now I know in part; but then shall I know even as also I am known.&rdquo; This also references episode titles <a href="/ent/ent-s4.html#e18">ENT 4x18 &amp; 4x19: In a Mirror, Darkly</a> and <a href="/ds9/ds9-s3.html#e19">DS9 3x19: Through the Looking Glass</a>. All three of these referenced episodes involve alternate universes that are darker and &ldquo;eviler&rdquo; than our own. Picard also quotes the Bible verse in <a href="/films/nemesis.html"><em>Star Trek Nemesis</em></a> in reference to his &ldquo;eviler&rdquo; self, Shinzon.</li>
+								<li>When Picard first enters his study-turned-menagerie, the camera quickly pans by a large, armored suit standing in front of a window. This is an early Klingon EVA-suit, circa 2256, first seen by Michael Burnham on the Torchbearer's ship in <a href="dis/dis-s1.html#e01">DIS 1x01: The Vulcan Hello</a>.<br><img src="images/pic-2x02-suit.webp" style="margin-top:8px;width:700px" alt="On the left, an image of the suit displayed in Picard's menagerie from this episode. On the right, an image of the suit being worn by a Klingon as witnessed by Burnham in the first episode of Star Trek: Discovery"></li>
 								<li>As Q tours the skulls in Picard's menagerie, he points out Gul Dukat and General Martok, both prominent characters from <a href="/ds9/index.html"><em>Star Trek: Deep Space Nine</em></a>. Next, he points out Sarek, Spock's father. Also among them is a Ferengi skull, the pedestal adorned with the staff of the Grand Nagus. The skull likely belongs to Grand Nagus Zek, also from <a href="/ds9/index.html"><em>Star Trek: Deep Space Nine</em></a>.
 								<li>In evil-Picard's recorded speech he says, &ldquo;We sought out and subjugated savage civilizations, boldly conquered war-like alien worlds, increased the wealth and resources for future generations of humanity.&rdquo; This is a play on the preamble from <em>The Original Series</em> and <em>The Next Generation</em>: &ldquo;To explore strange new worlds, to seek out new life and new civilizations, to boldly go where no one has gone before.&rdquo;</li>
 								<li>General Sisko is mentioned, presumably this reality's version of Benjamin Sisko from <a href="/ds9/index.html"><em>Star Trek: Deep Space Nine</em></a>.</li>
-								<li>The Borg Queen calls Seven &ldquo;Tertiary Adjunct of Unimatrix 01,&rdquo; which is part of her original full Borg designation as defined in her first appearance in <a href="/voy/voy-s4.html#e01">VOY 4x01: Scorpion, Part II</a>.</li>
-								<li>Raffi calls Q &ldquo;Mister Alphabet,&rdquo; possibly a reference to <a href="/tng/tng-s7.html#e25">TNG 7x25/26: All Good Things...</a>, in which an alternate Tasha Yar doesn't understand why Picard is yelling &ldquo;Q!&rdquo; when, as far as she knows, it's only a letter of the alphabet.</li>
+								<li>The Borg Queen calls Seven &ldquo;Tertiary Adjunct of Unimatrix 01&rdquo;, which is part of her original full Borg designation as defined in her first appearance in <a href="/voy/voy-s4.html#e01">VOY 4x01: Scorpion, Part II</a>.</li>
+								<li>Raffi calls Q &ldquo;Mister Alphabet&rdquo;, possibly a reference to <a href="/tng/tng-s7.html#e25">TNG 7x25/26: All Good Things...</a>, in which an alternate Tasha Yar doesn't understand why Picard is yelling &ldquo;Q!&rdquo; when, as far as she knows, it's only a letter of the alphabet.</li>
 								<li>Picard speaks of a slingshot maneuver used on more than one occasion by Kirk's <em>Enterprise</em> to effect time travel. Indeed, the maneuver was used at least three times, in <a href="/tos/tos-s1.html#e21">TOS 1x21: Tomorrow is Yesterday</a>, <a href="/tos/tos-s2.html#e26">TOS 2x26: Assignment: Earth</a>, and <a href="/films/iv-tvh.html"><em>Star Trek IV: The Voyage Home</em></a>.
 							</ul></td>
 						</tr>
@@ -481,7 +487,7 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td>
-								<div class="distinctions"><img src="images/4thwall.png" height="180" alt="A Starfleet Delta labeled '4th wall' with a photo of Picard looking into the camera"></div>
+								<div class="distinctions"><img src="images/4thwall.webp" height="180" alt="A Starfleet Delta labeled '4th wall' with a photo of Picard looking into the camera"></div>
 								<div class="distinctionDescriptions">
 									<strong>4th wall: </strong> Yesterday's Enterprise, In a Mirror Darkly, Through the Looking Glass<br><br>
 									👑 <strong>Borg Queen #4 </strong>played by <a href="https://memory-alpha.fandom.com/wiki/Annie_Wersching" target="_blank">Annie Wersching</a>
@@ -508,7 +514,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-3.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 3"><br>
+							<img src="images/nm-3.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 3"><br>
 							<span class="nostalgiaText3">Through a mirror darkly</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -532,13 +538,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e03" class="episodeCard">
-		<img src="images/pic-2x03.png" class="episodeCardBG" alt="A legless Borg Queen suspended from the ceiling with green glowing lights behind her">
-		<img src="images/pic-2x03b.png" class="episodeCardBG2" alt="An upset Raffi looking after an injured Elnor">
+		<img src="images/pic-2x03.webp" class="episodeCardBG" alt="A legless Borg Queen suspended from the ceiling with green glowing lights behind her">
+		<img src="images/pic-2x03b.webp" class="episodeCardBG2" alt="An upset Raffi looking after an injured Elnor">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.png" width="42"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.webp" width="42"></td>
 						<td class="seasonEpisodeNumberBox">2x03</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>17 Mar 2022</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>13</strong></td>
@@ -581,7 +587,7 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td><div class="thoughts" id="tts3b">
-								<p>There are a few episodes this season that, while still perfectly enjoyable, just sort of feel like &ldquo;and then this happened, and then this happened, and then this happened,&rdquo; and this is one of them. So let's see, we get out of a sticky situation and manage to travel back to 2024, check. By the way, there is something unintentionally hilarious about the Borg Queen just tipping over like that.</p>
+								<p>There are a few episodes this season that, while still perfectly enjoyable, just sort of feel like &ldquo;and then this happened, and then this happened, and then this happened&rdquo;, and this is one of them. So let's see, we get out of a sticky situation and manage to travel back to 2024, check. By the way, there is something unintentionally hilarious about the Borg Queen just tipping over like that.</p>
 								
 								<p>Next, they crash-land on Earth and deal with their casualties and repairs, check.<span class="spoilerContent"> The scene with Raffi and Elnor is, of course, tragic. I get that Raffi is emotional and upset, but her anger seems a bit misplaced.</span> The gang split up, with some of them going to find the Watcher and others staying behind to try reviving the Borg Queen, check. Raffi taking out that mugger was actually pretty funny. And then Rios is injured. And then he's treated. And then he's arrested. Check, check, check. Borg Queen revived, check. The end!</p>
 								
@@ -635,7 +641,7 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td>
-								<div class="distinctions"><img src="images/4thwall.png" height="180" alt="A Starfleet Delta labeled '4th wall' with a photo of Picard looking into the camera"></div>
+								<div class="distinctions"><img src="images/4thwall.webp" height="180" alt="A Starfleet Delta labeled '4th wall' with a photo of Picard looking into the camera"></div>
 								<div class="distinctionDescriptions">
 									<strong>4th wall: </strong> Château Coordinates<br><br>
 									👑 <strong>Borg Queen #4 </strong>played by <a href="https://memory-alpha.fandom.com/wiki/Annie_Wersching" target="_blank">Annie Wersching</a>
@@ -661,7 +667,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-1.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 1"><br>
+							<img src="images/nm-1.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 1"><br>
 							<span class="nostalgiaText1">Halfway to Hell</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -685,13 +691,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e04" class="episodeCard">
-		<img src="images/pic-2x04.png" class="episodeCardBG" alt="A young Guinan pointing a shotgun at Picard">
-		<img src="images/pic-2x04b.png" class="episodeCardBG2" alt="Seven driving a car with Raffi in the passenger seat, both looking apprehensive">
+		<img src="images/pic-2x04.webp" class="episodeCardBG" alt="A young Guinan pointing a shotgun at Picard">
+		<img src="images/pic-2x04b.webp" class="episodeCardBG2" alt="Seven driving a car with Raffi in the passenger seat, both looking apprehensive">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.png" width="42"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.webp" width="42"></td>
 						<td class="seasonEpisodeNumberBox">2x04</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>24 Mar 2022</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>14</strong></td>
@@ -762,8 +768,8 @@
 							<td>&nbsp;</td>
 							<td class="references" id="tts4c">
 								<ul>
-									<li>Jurati imagines a young Picard saying &ldquo;milk, chocolate, hot,&rdquo; a reference to his iconic beverage order as an adult, &ldquo;tea, Earl Grey, hot&rdquo;.</li>
-									<li>Jurati calls Picard &ldquo;Dixon Hill,&rdquo; a doubly-fictional private investigator (that is, he is fictional within the already fictional <em>Star Trek</em> universe). Hill is one of Picard's favorite characters to play on the holodeck, first appearing in <a href="/tng/tng-s1.html#e12">TNG 1x12: The Big Goodbye</a>. The woman at the end of this episode can also be seen reading a Dixon Hill novel.</li>
+									<li>Jurati imagines a young Picard saying &ldquo;milk, chocolate, hot&rdquo;, a reference to his iconic beverage order as an adult, &ldquo;tea, Earl Grey, hot&rdquo;.</li>
+									<li>Jurati calls Picard &ldquo;Dixon Hill&rdquo;, a doubly-fictional private investigator (that is, he is fictional within the already fictional <em>Star Trek</em> universe). Hill is one of Picard's favorite characters to play on the holodeck, first appearing in <a href="/tng/tng-s1.html#e12">TNG 1x12: The Big Goodbye</a>. The woman at the end of this episode can also be seen reading a Dixon Hill novel.</li>
 									<li><a href="https://memory-alpha.fandom.com/wiki/Kirk_Randolph_Thatcher" target="_blank">Kirk Randolph Thatcher</a> reprises his role as <strong>&ldquo;Mohawk Punk&rdquo;</strong> from <a href="/films/iv-tvh.html"><em>Star Trek IV: The Voyage Home</em></a>. In his original appearance, he listens to the song &ldquo;I Hate You&rdquo; and in this appearance, he listens to &ldquo;I Still Hate You&rdquo;.</li>
 									<li>The word &ldquo;Af-kelt&rdquo; has never been mentioned in <em>Star Trek</em> canon before, but it is likely the same feeling Guinan had in the episode <a href="/tng/tng-s3.html#e15">TNG 3x15: Yesterday's Enterprise</a> after the timeline had been altered.</li>
 									<li>Rios repeats part of the preamble from <em>The Original Series</em> and <em>The Next Generation</em> in his explanation to the ICE officer about his occupation. &ldquo;I'm on an ongoing mission to explore strange new worlds, seek out new life and civilizations...&rdquo;</li>
@@ -794,7 +800,7 @@
 							<td>&nbsp;</td>
 							<td class="nerdery" id="tts4d">
 								<p>There is a reason that young Guinan doesn't recognize Picard. Fans will remember that Guinan first met Picard in 1893 during the events of <a href="/tng/tng-s5.html#e26">TNG 5x26 &amp; 5x27: Time's Arrow</a>. But while Guinan was just living her normal life at that time, Picard had to travel back in time in order to meet her there. Because of Q's change to the timeline (even though the change hasn't happened yet) THIS Guinan's future is one where the Federation doesn't exist and is instead replaced with the Confederation. So, the events of &ldquo;Time's Arrow&rdquo; never happen, and Picard never goes back to the year 1893 to meet her. Now, that makes enough logical sense to me, and I highly recommend accepting the explanation and enjoying the episode as presented.</p>
-								<p>Because, you see, if you want to start analyzing time paradoxes, you're probably just going to get a headache like Janeway does when she has to deal with time travel. In this case, it really just depends what you consider to have happened &ldquo;before&rdquo; or &ldquo;after&rdquo; other events. One might argue that since Q doesn't alter the timeline for another three days, this Guinan's future is still intact, and therefore she still should have met Picard in 1893. On the other hand, Picard came from a future that was already altered by Q, and by jumping back in time to before that alteration, he is still in the &ldquo;altered&rdquo; timeline... I mean, it's not all one thing, right? There's a reality where Q makes the change and a reality where Q doesn't make the change. In this reality where Q makes the change, Guinan doesn't meet Picard in 1893... he might not have made the change &ldquo;yet,&rdquo; but &ldquo;yet&rdquo; is relative. I wrote this second paragraph to be purposely confusing in order to make a point: time travel causes paradoxes that we can't easily explain. The thing is, whether Guinan recognizes Picard or doesn't recognize Picard &ndash; whether she met him in 1893 or didn't meet him in 1893 &ndash; both of these scenarios can both be proved and disproved logically. That's why it's called a paradox; now go enjoy the show!</p>
+								<p>Because, you see, if you want to start analyzing time paradoxes, you're probably just going to get a headache like Janeway does when she has to deal with time travel. In this case, it really just depends what you consider to have happened &ldquo;before&rdquo; or &ldquo;after&rdquo; other events. One might argue that since Q doesn't alter the timeline for another three days, this Guinan's future is still intact, and therefore she still should have met Picard in 1893. On the other hand, Picard came from a future that was already altered by Q, and by jumping back in time to before that alteration, he is still in the &ldquo;altered&rdquo; timeline... I mean, it's not all one thing, right? There's a reality where Q makes the change and a reality where Q doesn't make the change. In this reality where Q makes the change, Guinan doesn't meet Picard in 1893... he might not have made the change &ldquo;yet&rdquo;, but &ldquo;yet&rdquo; is relative. I wrote this second paragraph to be purposely confusing in order to make a point: time travel causes paradoxes that we can't easily explain. The thing is, whether Guinan recognizes Picard or doesn't recognize Picard &ndash; whether she met him in 1893 or didn't meet him in 1893 &ndash; both of these scenarios can both be proved and disproved logically. That's why it's called a paradox; now go enjoy the show!</p>
 							</td>
 						</tr>
 						<tr>
@@ -833,7 +839,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-4.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 4"><br>
+							<img src="images/nm-4.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 4"><br>
 							<span class="nostalgiaText4">I just like that song</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -857,13 +863,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e05" class="episodeCard">
-		<img src="images/pic-2x05.png" class="episodeCardBG" alt="Picard and Tallinn reviewing video footage of Renée Picard">
-		<img src="images/pic-2x05b.png" class="episodeCardBG2" alt="Q and Soong having a conversation in a diner booth">
+		<img src="images/pic-2x05.webp" class="episodeCardBG" alt="Picard and Tallinn reviewing video footage of Renée Picard">
+		<img src="images/pic-2x05b.webp" class="episodeCardBG2" alt="Q and Soong having a conversation in a diner booth">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.png" width="42"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.webp" width="42"></td>
 						<td class="seasonEpisodeNumberBox">2x05</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>31 Mar 2022</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>15</strong></td>
@@ -970,7 +976,7 @@
 							<td>&nbsp;</td>
 							<td>
 								<div class="distinctions">
-									<img src="images/f-bomb.png" height="180" alt="A Starfleet Delta labeled 'F-Bomb' with a photo of Admiral Clancy yelling">
+									<img src="images/f-bomb.webp" height="180" alt="A Starfleet Delta labeled 'F-Bomb' with a photo of Admiral Clancy yelling">
 								</div>
 								<div class="distinctionDescriptions">
 									<strong>F-Bomb: </strong>Soong<br><br>
@@ -998,7 +1004,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-1.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 1"><br>
+							<img src="images/nm-1.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 1"><br>
 							<span class="nostalgiaText1">Crackpot talk!</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -1022,13 +1028,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e06" class="episodeCard">
-		<img src="images/pic-2x06.png" class="episodeCardBG" alt="Dr. Jurati singing a song in a red dress with a small band behind her">
-		<img src="images/pic-2x06b.png" class="episodeCardBG2" alt="Picard, in a tuxedo, having a conversation with Renée Picard">
+		<img src="images/pic-2x06.webp" class="episodeCardBG" alt="Dr. Jurati singing a song in a red dress with a small band behind her">
+		<img src="images/pic-2x06b.webp" class="episodeCardBG2" alt="Picard, in a tuxedo, having a conversation with Renée Picard">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.png" width="42"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.webp" width="42"></td>
 						<td class="seasonEpisodeNumberBox">2x06</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>7 Apr 2022</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>16</strong></td>
@@ -1131,7 +1137,7 @@
 							<td>&nbsp;</td>
 							<td>
 								<div class="distinctions">
-									<img src="images/speech.png" height="180" alt="A Starfleet Delta labeled 'Patented Picard Speech' with a picture of Picard at a podium orating">
+									<img src="images/speech.webp" height="180" alt="A Starfleet Delta labeled 'Patented Picard Speech' with a picture of Picard at a podium orating">
 								</div>
 								<div class="distinctionDescriptions">
 									<strong>Patented Picard Speech: </strong>Picard restores Renée's mojo and saves the timeline with just a few words<br><br>
@@ -1159,7 +1165,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-1.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 1"><br>
+							<img src="images/nm-1.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 1"><br>
 							<span class="nostalgiaText1">Shadows of the night</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -1183,13 +1189,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e07" class="episodeCard">
-		<img src="images/pic-2x07.png" class="episodeCardBG" alt="Picard confronting a memory of his father">
-		<img src="images/pic-2x07b.png" class="episodeCardBG2" alt="A young Picard and his mother holding hands in the solarium">
+		<img src="images/pic-2x07.webp" class="episodeCardBG" alt="Picard confronting a memory of his father">
+		<img src="images/pic-2x07b.webp" class="episodeCardBG2" alt="A young Picard and his mother holding hands in the solarium">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.png" width="42"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.webp" width="42"></td>
 						<td class="seasonEpisodeNumberBox">2x07</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>14 Apr 2022</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>17</strong></td>
@@ -1235,13 +1241,13 @@
 								
 								<p>Since this is the lowest-rated episode of the series on IMDb, and I ended up giving it an above-average rating, I had to do some research into what people objected to, specifically, about the episode. I read a lot of the reviews and I found a number of trends. First, I had to sift through quite a few negative reviews that just said &ldquo;this isn't Star Trek&rdquo; without providing any specific explanation as to what they meant. This is a common line that people throw out about a lot of <em>Trek</em> since 2017, and often times it doesn't come with further explanation. There were also numerous reviews that cited &ldquo;bad writing&rdquo; without actually explaining what was &ldquo;bad&rdquo; about it.</p>
 								
-								<p>A few reviews called out one of the actors in this episode previously having been on Battlestar Galactica, but I don't think they were necessarily objecting to it. Several reviews called the episode &ldquo;filler,&rdquo; which I patently disagree with. It's true that it didn't focus on the larger season story arc, but it was very much an intentional story that the storytellers wanted to impart. It provides important backstory to an already well-established character; it's not just a random adventure-of-the-week. And quite a few reviews found young-Guinan's weird performative summoning act toward the end to be ridiculous... now, that one I agree with, but I don't think it ruins the entire episode.</p>
+								<p>A few reviews called out one of the actors in this episode previously having been on Battlestar Galactica, but I don't think they were necessarily objecting to it. Several reviews called the episode &ldquo;filler&rdquo;, which I patently disagree with. It's true that it didn't focus on the larger season story arc, but it was very much an intentional story that the storytellers wanted to impart. It provides important backstory to an already well-established character; it's not just a random adventure-of-the-week. And quite a few reviews found young-Guinan's weird performative summoning act toward the end to be ridiculous... now, that one I agree with, but I don't think it ruins the entire episode.</p>
 								
-								<p>The biggest trend I saw in the negative reviews was that viewers did not care about or did not understand Picard's childhood story, they objected to excessive &ldquo;psychobabble,&rdquo; and they disapproved of the show &ldquo;going the way of <em>Star Trek: Discovery</em>&rdquo; in terms of its focus on introspection and personal journeys. I think this perspective is a real shame. I get that this episode was not a trek through the stars, but if anything, the perfect complement to exploring the final frontier is the exploration of one's self, and that is exactly the kind of parallel this episode was trying to shine a spotlight on, via our hero, Picard.</p>
+								<p>The biggest trend I saw in the negative reviews was that viewers did not care about or did not understand Picard's childhood story, they objected to excessive &ldquo;psychobabble&rdquo;, and they disapproved of the show &ldquo;going the way of <em>Star Trek: Discovery</em>&rdquo; in terms of its focus on introspection and personal journeys. I think this perspective is a real shame. I get that this episode was not a trek through the stars, but if anything, the perfect complement to exploring the final frontier is the exploration of one's self, and that is exactly the kind of parallel this episode was trying to shine a spotlight on, via our hero, Picard.</p>
 								
 								<p>Of the reviewers that rated the episode favorably, they seemed to better understand and appreciate the meaning behind the story and the impact it has on Picard's life. This episode might seem more than a little strange if this is your first time watching since you don't know the whole story yet. In fact, a lot of the elements are probably very confusing the first time through... but in the context of the entire season (particularly episode 9), this story makes a lot more sense. I'd recommend watching the rest of the season and then maybe coming back and watching this one again. This is certainly no &ldquo;filler&rdquo; story, it's a vital part of the man for whom this series is named: Jean-Luc Picard.</p>
 								
-								<p>Finally, on an entirely separate note, one reviewer was so confused by the Laris/Tallinn thing that they incorrectly thought that the Romulans were in charge of the Watchers. This is completely understandable, especially considering Tallinn's line, &ldquo;Usually, we're recruited to watch over our own, but on occasion, a similar species,&rdquo; which does make it sound like the Watchers are a uniquely Romulan phenomenon at first blush. On further consideration, she didn't necessarily say that the Romulans were the ones doing the recruiting, nor did she say that Romulans were the only species being recruited. It is confusing, to be sure, but there is a story thread in season 2 of <a href="/pro/index.html"><em>Star&nbsp;Trek:&nbsp;Prodigy</em></a> that removes some of the mystery surrounding the Watchers.</p>
+								<p>Finally, on an entirely separate note, one reviewer was so confused by the Laris/Tallinn thing that they incorrectly thought that the Romulans were in charge of the Watchers. This is completely understandable, especially considering Tallinn's line, &ldquo;Usually, we're recruited to watch over our own, but on occasion, a similar species&rdquo;, which does make it sound like the Watchers are a uniquely Romulan phenomenon at first blush. On further consideration, she didn't necessarily say that the Romulans were the ones doing the recruiting, nor did she say that Romulans were the only species being recruited. It is confusing, to be sure, but there is a story thread in season 2 of <a href="/pro/index.html"><em>Star&nbsp;Trek:&nbsp;Prodigy</em></a> that removes some of the mystery surrounding the Watchers.</p>
 							</div></td>
 						</tr>
 						<tr>
@@ -1337,7 +1343,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-2.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 2"><br>
+							<img src="images/nm-2.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 2"><br>
 							<span class="nostalgiaText2">There are FOUR lights!</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -1361,13 +1367,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e08" class="episodeCard">
-		<img src="images/pic-2x08.png" class="episodeCardBG" alt="FBI Agent Wells considering his next move in an interrogation room with Picard and Guinan">
-		<img src="images/pic-2x08b.png" class="episodeCardBG2" alt="Jurati running atop several parked cars in a tattered red dress and black boots">
+		<img src="images/pic-2x08.webp" class="episodeCardBG" alt="FBI Agent Wells considering his next move in an interrogation room with Picard and Guinan">
+		<img src="images/pic-2x08b.webp" class="episodeCardBG2" alt="Jurati running atop several parked cars in a tattered red dress and black boots">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.png" width="42"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.webp" width="42"></td>
 						<td class="seasonEpisodeNumberBox">2x08</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>21 Apr 2022</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>18</strong></td>
@@ -1497,7 +1503,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-1.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 1"><br>
+							<img src="images/nm-1.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 1"><br>
 							<span class="nostalgiaText1">*snap, snap, snap*</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -1521,13 +1527,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e09" class="episodeCard">
-		<img src="images/pic-2x09.png" class="episodeCardBG" alt="Dr. Jurati directly confronting the Borg Queen">
-		<img src="images/pic-2x09b.png" class="episodeCardBG2" alt="A close-up of an intricately-designed ward key">
+		<img src="images/pic-2x09.webp" class="episodeCardBG" alt="Dr. Jurati directly confronting the Borg Queen">
+		<img src="images/pic-2x09b.webp" class="episodeCardBG2" alt="A close-up of an intricately-designed ward key">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.png" width="42"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.webp" width="42"></td>
 						<td class="seasonEpisodeNumberBox">2x09</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>28 Apr 2022</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>19</strong></td>
@@ -1648,8 +1654,8 @@
 							<td>&nbsp;</td>
 							<td>
 								<div class="distinctions">
-									<img src="images/facepalm.png" height="180" alt="A Starfleet Delta labeled 'Cosmic Facepalm' with a picture of Picard facepalming">
-									<span class="spoilerContent"><img src="images/wherenoone.png" height="180" alt="A Starfleet Delta labeled 'Where No One Has Gone Before' with a picture of an aged Yvette Picard"></span>
+									<img src="images/facepalm.webp" height="180" alt="A Starfleet Delta labeled 'Cosmic Facepalm' with a picture of Picard facepalming">
+									<span class="spoilerContent"><img src="images/wherenoone.webp" height="180" alt="A Starfleet Delta labeled 'Where No One Has Gone Before' with a picture of an aged Yvette Picard"></span>
 								</div>
 								<div class="distinctionDescriptions">
 									<strong>Cosmic Facepalm: </strong>The Borg Queen is just lonely! All she needed was a friend! Ugh.
@@ -1682,7 +1688,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-1.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 1"><br>
+							<img src="images/nm-1.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 1"><br>
 							<span class="nostalgiaText1" style="font-size:small">an echo of a star that has long since faded</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -1706,13 +1712,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e10" class="episodeCard">
-		<img src="images/pic-2x10.png" class="episodeCardBG" alt="Picard and Q having a conversation while sitting in the solarium">
-		<img src="images/pic-2x10b.png" class="episodeCardBG2" alt="Picard looking up at Q as Q touches Picard's face gently">
+		<img src="images/pic-2x10.webp" class="episodeCardBG" alt="Picard and Q having a conversation while sitting in the solarium">
+		<img src="images/pic-2x10b.webp" class="episodeCardBG2" alt="Picard looking up at Q as Q touches Picard's face gently">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.png" width="42"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="Alternate universe combadge" src="images/alt_u_combadge.webp" width="42"></td>
 						<td class="seasonEpisodeNumberBox">2x10</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>5 May 2022</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>20</strong></td>
@@ -1729,7 +1735,7 @@
 					</tr>
 					<tr>
 						<td class="summaryBox"><div class="summary" id="tts10a">
-							The gang must stop Soong in order to save Renée and the Europa mission. They succeed in a combined effort<span class="spoilerContent">, but Tallinn sacrifices herself to get the job done. A defeated Soong decides to look into something called &ldquo;Project Khan,&rdquo; and his estranged daughter Kore is recruited into the Travelers by Wesley Crusher</span>. Picard forgives himself for his past, placing the skeleton key back in its hiding place in the wall for his future, younger self to find. Q shows up, congratulating him on the decision, and explaining that he wanted to give Picard the gift of forgiveness.<span class="spoilerContent"> In his final act, Q uses his last bit of power to return the gang (sans Rios) back to their time, but not before a heartfelt embrace with Picard.</span> Back in Episode 1 with the Borg Queen assimilating all the ships, she lowers her mask...<span class="spoilerContent"> to reveal that it's Dr. Jurati. There's a Big Nasty Space MacGuffin (BNSM) about to blow up the quadrant, so they work together to make a Big Nasty Space MacGuffin Shield (BNSMS) to stop it. With that business taken care of, Picard wraps things up with the gang, with Guinan, and finally with Laris. <em>Fin.</em></span>
+							The gang must stop Soong in order to save Renée and the Europa mission. They succeed in a combined effort<span class="spoilerContent">, but Tallinn sacrifices herself to get the job done. A defeated Soong decides to look into something called &ldquo;Project Khan&rdquo;, and his estranged daughter Kore is recruited into the Travelers by Wesley Crusher</span>. Picard forgives himself for his past, placing the skeleton key back in its hiding place in the wall for his future, younger self to find. Q shows up, congratulating him on the decision, and explaining that he wanted to give Picard the gift of forgiveness.<span class="spoilerContent"> In his final act, Q uses his last bit of power to return the gang (sans Rios) back to their time, but not before a heartfelt embrace with Picard.</span> Back in Episode 1 with the Borg Queen assimilating all the ships, she lowers her mask...<span class="spoilerContent"> to reveal that it's Dr. Jurati. There's a Big Nasty Space MacGuffin (BNSM) about to blow up the quadrant, so they work together to make a Big Nasty Space MacGuffin Shield (BNSMS) to stop it. With that business taken care of, Picard wraps things up with the gang, with Guinan, and finally with Laris. <em>Fin.</em></span>
 						</div></td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1808,7 +1814,7 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td>
-								<div class="distinctions"><span class="spoilerContent"><img src="images/laz-bw.png" height="180" alt="A Starfleet Delta labeled 'Unceremonious Lazarus' with a picture of Picard waking up in his new golem body"><img src="images/ceremonious2.png" height="180" alt="A Starfleet Delta labeled 'Ceremonious End' with a picture of Q"></span></div>
+								<div class="distinctions"><span class="spoilerContent"><img src="images/laz-bw.webp" height="180" alt="A Starfleet Delta labeled 'Unceremonious Lazarus' with a picture of Picard waking up in his new golem body"><img src="images/ceremonious2.webp" height="180" alt="A Starfleet Delta labeled 'Ceremonious End' with a picture of Q"></span></div>
 								<div class="distinctionDescriptions">
 									<span class="spoilerPlaceholder">( +2 spoilers )</span>
 									<span class="spoilerContent">
@@ -1840,7 +1846,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-5.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 5"><br>
+							<img src="images/nm-5.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 5"><br>
 							<span class="nostalgiaText5">See you out there</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -1879,19 +1885,19 @@
 		
 		<p>The <span class="highlight">Raffi/Seven (and lack of Elnor)</span> adventure was just okay, I think. Clearly they both have some things to work through, but I actually don't think they spent <em>enough</em> time on their story to do it justice. First of all, Raffi's reaction to Elnor's death isn't fully explained until five episodes later, and then she just trauma-dumps on a <em>hologram</em> of Elnor, which probably isn't too healthy, psychologically speaking. There needed to be a follow-up with Raffi and the real Elnor when they get back to the future, but that doesn't happen. Seven is clearly enjoying her time being free of her Borg implants, which is a great avenue to explore! But then she gets annoyed with Raffi in episode 8 for reasons I can't decipher. It's clear the two have a history, but we weren't privy to it, so it's hard to determine what exactly is going on between them. Still, it's all okay, I think it just needed a little <em>more</em>.</p>
 		
-		<img src="images/s2_guinan.png" style="width:600px;float:left;margin-right:16px;margin-top:20px;" alt="A young Guinan reacting to Picard telling her his name">
+		<img src="images/s2_guinan.webp" style="width:600px;float:left;margin-right:16px;margin-top:20px;" alt="A young Guinan reacting to Picard telling her his name">
 		
 		<p><span class="highlight">Agent Wells</span> was unnecessary. Did they just need another delay from our heroes making progress? His little childhood story was okay, but it just didn't add anything to the season. If they wanted something else to block out more time, I think there could have been a better story here with deeper ties into the <em>Trek</em> lore.</p>
 		
-		<p><span class="highlight">Young Guinan</span> was fun, I enjoyed her, and I think actor Ito Aghayere did a fine job stepping into the role. If anything, at least the Agent Wells story let us see more of her. There were two points I didn't particularly like, though. One was the silly &ldquo;summoning&rdquo; ritual, and the other was her appearing to Picard as an apparition while they were in Agent Wells' custody. Guinan and her species, the El-Aurians, were never previously depicted as having &ldquo;powers&rdquo; of any kind like that. Their main characteristics are that they're &ldquo;listeners,&rdquo; that they are sensitive to changes in the timeline, and that they live very long lives. This always gave them a sense of subtle mystery, so I'm not a fan of them suddenly having overt superpowers.</p>
+		<p><span class="highlight">Young Guinan</span> was fun, I enjoyed her, and I think actor Ito Aghayere did a fine job stepping into the role. If anything, at least the Agent Wells story let us see more of her. There were two points I didn't particularly like, though. One was the silly &ldquo;summoning&rdquo; ritual, and the other was her appearing to Picard as an apparition while they were in Agent Wells' custody. Guinan and her species, the El-Aurians, were never previously depicted as having &ldquo;powers&rdquo; of any kind like that. Their main characteristics are that they're &ldquo;listeners&rdquo;, that they are sensitive to changes in the timeline, and that they live very long lives. This always gave them a sense of subtle mystery, so I'm not a fan of them suddenly having overt superpowers.</p>
 		
 		<p>Okay, five more topics to go. Next we have the <span class="highlight">Tallinn/Renée</span> storyline. This was integral to the overall story, since Renée is the focal point of the change that Q makes in the timeline. I liked the story for the most part, and having Tallinn be able to really meet Renée at the end was a nice touch, but it might have had a little more impact if we had felt Tallinn's connection to Renée a little more deeply. Perhaps some flashback scenes showing Tallinn watching over Renée at various times in the past, watching her grow up over the years, rather than just having Tallinn tell us about it. It's also a bit of a stretch that this one small change in the timeline would cause the future to turn entirely upside-down and be purely evil, but I suppose that is part of the running theme about the butterfly effect, so I'll allow it.</p>
 		
 		<p><span class="highlight">Adam Soong and Kore</span>. Listen, I want Brent Spiner and Isa Briones to be involved as much as anyone, but I've already said my piece about them playing completely different characters. Spiner playing another Soong is almost forgivable, but Briones playing an entirely different character is just distracting. Furthermore, Kore only serves as Soong's motivation to side with Q against Picard, so I found myself sort of not caring when she liberated herself and made a big fuss about it. Then she came back just to delete all of Soong's work out of spite and then &ndash; completely out of the blue &ndash; she randomly gets whisked away by... <em>(rolls dice)</em> Wesley Crusher?? Okay, sure. Back to Soong, he starts off as a sort of &ldquo;mad scientist&rdquo; but later turns into the owner of a small Borg army, because why not. Then after all of his efforts fail, he has to pull out one more gimmicky plan: the totally unnecessary Khan reference. It was just too much.</p>
 		
-		<p>For a moment, let's imagine if Soong and Kore were entirely absent from this season. What would happen? Well, first of all, Q wouldn't have been able to recruit him to help thwart Picard. Instead of Soong trying to sic security on Picard and then running him over with a car, the antagonist at the swanky ball could have been Q, himself! I suspect it might have been even more fun to have the gang contending with some of Q's shenanigans at the ball instead of Soong. I mean, imagine Q trying to snap his fingers and things all go slightly wrong because his powers are so weakened. Next, Borg Queen Jurati wouldn't have been able to use Soong's resources to amass a small Borg army. Well, that is fixed easily enough by writing literally any other reason that she's able to find enough people to round up and assimilate into an army. I don't think they need to be &ldquo;ex-special forces,&rdquo; it could have just been anyone whose abilities she enhanced through assimilation. Then, without Soong around to attempt to poison Renée before the Europa mission launch... oh, well, he was acting with his own motivations at that point, so I guess Tallinn wouldn't have had to die! I don't know, I suppose that part of the story would have changed, but we could have just come up with a different bad guy, maybe? Finally, if Soong and Kore weren't part of this story, there would be no one to get recruited by Wesley Crusher and no one to ominously pull out a folder marked &ldquo;Project Khan&rdquo; for no reason... and since neither of those things matter, that's no big loss. So, it seems to me that Soong and Kore's stories aren't really crucial to the overall story, and they <em>do</em> feel out of place here because they aren't well-linked to the rest.</p>
+		<p>For a moment, let's imagine if Soong and Kore were entirely absent from this season. What would happen? Well, first of all, Q wouldn't have been able to recruit him to help thwart Picard. Instead of Soong trying to sic security on Picard and then running him over with a car, the antagonist at the swanky ball could have been Q, himself! I suspect it might have been even more fun to have the gang contending with some of Q's shenanigans at the ball instead of Soong. I mean, imagine Q trying to snap his fingers and things all go slightly wrong because his powers are so weakened. Next, Borg Queen Jurati wouldn't have been able to use Soong's resources to amass a small Borg army. Well, that is fixed easily enough by writing literally any other reason that she's able to find enough people to round up and assimilate into an army. I don't think they need to be &ldquo;ex-special forces&rdquo;, it could have just been anyone whose abilities she enhanced through assimilation. Then, without Soong around to attempt to poison Renée before the Europa mission launch... oh, well, he was acting with his own motivations at that point, so I guess Tallinn wouldn't have had to die! I don't know, I suppose that part of the story would have changed, but we could have just come up with a different bad guy, maybe? Finally, if Soong and Kore weren't part of this story, there would be no one to get recruited by Wesley Crusher and no one to ominously pull out a folder marked &ldquo;Project Khan&rdquo; for no reason... and since neither of those things matter, that's no big loss. So, it seems to me that Soong and Kore's stories aren't really crucial to the overall story, and they <em>do</em> feel out of place here because they aren't well-linked to the rest.</p>
 		
-		<img src="images/s2_q.png" style="width:400px;float:right;margin-left:16px;" alt="A younger-looking Q about to snap his fingers">
+		<img src="images/s2_q.webp" style="width:400px;float:right;margin-left:16px;" alt="A younger-looking Q about to snap his fingers">
 		
 		<p>And that brings us to the story about <span class="highlight">Picard's childhood</span>. The boy, the key, and the solarium. It's the story that seems to be polarizing &ndash; fans either love it or hate it, with not much in between. But if one can expand their definition of <em>Star Trek</em> beyond flying around in spaceships, one can come to appreciate the journey within being the perfect complement to the exploration of outer space. This story adds a wonderful new dimension to a very well-established and beloved character, and it colors Picard's motivations for all of his previous adventures. It gives us a whole new way to look at his actions throughout <em>The Next Generation</em>. But we need to take a look at how we got here: <span class="highlight Q">Q</span>. When you lay out the story elements simply, it seems stupidly over-complicated. Q is dying, and as one of his lasts acts (because he likes Picard so much), he wants to give Picard the gift of forgiveness by allowing him to discover the truth about his mother's death: that he was not responsible. Q does this by making a change in 2024: causing Renée Picard to not go on the Europa mission. This leads to a future where Picard is a warmonger, so he and the gang decide to go back to 2024 to fix the timeline. Nothing so far seems to have anything to do with Picard's memory. While in 2024, Picard gets hit by a car driven by Soong, because Q recruited him to thwart Picard's plans... and THAT is what leads to Tallinn psychically entering Picard's mind to help him through the first part of the memory. Taking an awfully circuitous route to make a point, aren't we, Q? Later, Picard is forced to go down into the tunnels under the château by a small army amassed by the Borg Queen (who is now Jurati) and Soong. There, in the catacombs, Picard faces the rest of his memory and, finally, puts the skeleton key back in place for his future young self to find it again. Phew! Couldn't Q have helped Picard without all the collateral? (All right, admittedly, this is very much Q's style.) With the full loop completed, Picard gives Q a warm embrace before they say goodbye in an emotional scene.</p>
 		
@@ -1919,7 +1925,7 @@
 				</td>
 				<td>&nbsp;</td>
 				<td class="ScoreBox" style="background-color:#333;width:150px;color:white">FINAL VERDICT<br>
-					<img src="images/2nd.png" style="height:150px" alt="a red, second-place ribbon"><br>
+					<img src="images/2nd.webp" style="height:150px" alt="a red, second-place ribbon"><br>
 					Second Place<br>
 					out of 3 seasons
 				</td>
@@ -1933,7 +1939,7 @@
 <a href="pic-s3.html">Season 3</a></h3>
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
 
-<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 <div id="TTDIV">
 	<div id="FepisodeToolTip" class="tooltip" onClick="closeToolTip(this)">"Franchise Episode" tells you the order in which episodes from ANY/ALL Star Trek television shows aired or streamed for the first time. This number excludes movies, TOS's "The Cage", and the "Very Short Treks" web shorts.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>

@@ -70,10 +70,10 @@ function textToSpeech(id,text) {
 				replaceAll("Duras","Duross").
 				replaceAll("Gowron","Gow-ron").
 				replaceAll("Guinan","Guynan").
-				replaceAll("Gul Dukat","Gull Dukaat").
+				replaceAll(/Gul\sDukat/g,"Gull Dukaat").
 				replaceAll("Hikaru","Hik-are-ooh").
 				replaceAll("Icheb","E-chehb").
-				replaceAll("La Forge","LaForge").
+				replaceAll(/La\sForge/g,"LaForge").
 				replaceAll("Locutus","locude-us").
 				replaceAll("Martok","Martock").
 				replaceAll("Nagus","Naygus").
@@ -94,12 +94,13 @@ function textToSpeech(id,text) {
 				replaceAll(/mythos/gi,"myth-ohhs").
 				replaceAll("ol'","oul").
 				replaceAll("PADD","pad").
-				replaceAll(/\bPart I\b/g,"Part 1").
-				replaceAll(/\bParts I\b/g,"Parts 1").
+				replaceAll(/\bPart\sI\b/g,"Part 1").
+				replaceAll(/\bParts\sI\b/g,"Parts 1").
 				replaceAll(/tricorder/gi,"try-corder").
 				replaceAll(/trilithium/gi,"try-lithium").
-				replaceAll(/voyage/gi,"voyij");
-			
+				replaceAll(/voyage/gi,"voyij").
+				replaceAll(/Wolf\s359/g,"Wolf 3 5 9");
+				
 		// *************************************************************************************************
 		
 		setTimeout(() => {

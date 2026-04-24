@@ -3,6 +3,7 @@
 
 <head>
 
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
@@ -17,6 +18,11 @@
 	});
 	var host = window.location.hostname;
 	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
 		gtag('js', new Date());
 		gtag('config', 'G-DM44X85QLJ');
 	}
@@ -24,29 +30,62 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="main.css?v=1.5.2">
-<link rel="stylesheet" href="tts.css?v=1.5.2">
+<link rel="stylesheet" href="main.css?v=1.6">
+<link rel="stylesheet" href="tts.css?v=1.6">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <meta property="og:title" content="About | C6Reviews">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://c6reviews.com/images/ogimage.png">
+<meta property="og:image" content="https://c6reviews.com/images/ogimage.webp">
 <meta property="og:url" content="https://c6reviews.com/about.html">
 <meta property="og:description" content="About C6Reviews.com">
 
-<script src="tts.js"></script>
-<script src="cookies.js"></script>
+<script src="tts.js?v=1.6"></script>
+<script src="cookies.js?v=1.6"></script>
 <script>
 	function prepTextToSpeech(id)
 	{
 		let text = document.getElementById(id).innerText;
 		return text.replaceAll("monetize","monuhtize").replaceAll(/ko-fi/gi,"Co-fi").replaceAll("✅",";").replaceAll("⚠",";").replaceAll("❗",";").replaceAll("JavaScript","java-script").replace("Original ➡︎","").replace("“Uncropped”","");
 	}
+	
+	/* -------------------------------------------------- SCROLL TO TOP BUTTON -------------------------------------------------- */
+
+function scrollToTop() {
+	window.scrollTo({
+		top: 0,
+		behavior: "smooth",
+	});
+} 
+
+
+/* -------------------------------------------------------- ONSCROLL -------------------------------------------------------- */
+   
+window.onscroll = function scrollFunction() {
+
+	// Show or Hide "Scroll to top" button
+		let toTopButton = document.getElementById("toTopButton");
+		
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			toTopButton.style.display = "block";
+		} else {
+			toTopButton.style.display = "none";
+		}
+}
 </script>
 
 <title>C6Reviews | About</title>
 
 <style>
+	html {
+		scroll-behavior: smooth;
+	}
+	#TOC {
+		float:left;
+		border: 1px solid #E47545;
+		padding: 6px;
+		margin: 0px 0px 25px 0px;
+	}
 	.sectionHeader {
 		display: block;
 		position: relative;
@@ -56,6 +95,7 @@
 		margin-top: 40px;
 		border-bottom: 1px solid #E47545;
 		overflow: hidden;
+		scroll-margin-top: 50px;
 	}
 	#AIContentTable td {
 		font-family: Exo, Roboto, sans-serif;
@@ -69,32 +109,41 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="index.html"><img src="images/c6reviews-vert.png" alt="c6reviews"></a></div>
-	<div class="pageTitleImage"><img src="images/main-header.png" alt="Starfleet delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
+<div class="c6Left"><a href="index.html"><img src="images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+	<div class="pageTitleImage"><img src="images/main-header.webp" alt="Starfleet delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
 	<div class="pageTitleContainer">
 		<div class="pageTitle">
-			<a href="index.html"><img src="images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br>Star Trek Episode Guides
+			<a href="index.html"><img src="images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>Star Trek Episode Guides
 			<span class="pageSubtitle">About C6Reviews</span>
 		</div>
 	</div>
-	<div class="c6Right"><a href="index.html"><img src="images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="about.html" style="margin-top:8px;">ABOUT</a><a href="updates.html">UPDATES</a><a href="blog/index.html">BLOG</a>
+	<div class="c6Right"><a href="index.html"><img src="images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="about.html" style="margin-top:8px;">ABOUT</a><a href="updates.html">UPDATES</a><a href="blog/index.html">BLOG</a>
 	
 	<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a>
 	
-	<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+	<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div>
 
 <div class="content">
 
+	<div id="TOC">
+		<a href="#whatis">❱ What is C6Reviews.com?</a><br>
+		<a href="#whois">❱ Who is C6?</a><br>
+		<a href="#whatmakes">❱ What makes this site different?</a><br>
+		<a href="#support">❱ Support C6</a><br>
+		<a href="#aipolicy">❱ AI Policy</a><br>
+		<a href="#conventions">❱ Conventions used on this site</a>
+	</div>
+	
 	<h3 style="text-align:center">I had nothing to do with that unfortunate Mars incident.</h3>
 	
-	<div class="sectionHeader">What is C6Reviews.com?
+	<div id="whatis" class="sectionHeader" style="clear:left">What is C6Reviews.com?
 		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select id="ttsratemain" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 		<button class="TTSplayButton" id="tts1pb" onclick="textToSpeech('tts1',prepTextToSpeech('tts1'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 	</div>
-	<img src="images/c6.png" style="float:right;width:300px;margin-bottom:20px;margin-left:10px;margin-top:15px" alt="a smiling, pale-skinned android with C6 tattooed to his forehead">
+	<img src="images/c6.webp" style="float:right;width:300px;margin-bottom:20px;margin-left:10px;margin-top:15px" alt="a smiling, pale-skinned android with C6 tattooed to his forehead">
 	<div class="serif" id="tts1">
 	<p>C6Reviews.com is created and maintained by one man, as a personal project, primarily for his own entertainment.</p>
 	
@@ -107,7 +156,7 @@
 	</ul>
 	</div>
 	
-	<div class="sectionHeader">Who is C6?
+	<div id="whois" class="sectionHeader">Who is C6?
 		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 		<button class="TTSplayButton" id="tts2pb" onclick="textToSpeech('tts2',prepTextToSpeech('tts2'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 	</div>
@@ -116,7 +165,7 @@
 	<p>Feel free to reach out to C6 on his Bluesky social media account <a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank">@c6reviews.bsky.social</a>.</p>
 	</div>
 	
-	<div class="sectionHeader">What makes this site any different than IMDb or Memory Alpha?
+	<div id="whatmakes" class="sectionHeader">What makes this site any different than IMDb or Memory Alpha?
 		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 		<button class="TTSplayButton" id="tts3pb" onclick="textToSpeech('tts3',prepTextToSpeech('tts3'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 	</div>
@@ -126,7 +175,7 @@
 		<li><strong>Easily find links and references: </strong>This site gets to the point of each episode and makes it easy to find connections to other episodes and series. Everything on the site will eventually be linked together, from each episode to the timeline and back!</li>
 	</ul>
 	
-	<div class="sectionHeader">Support C6
+	<div id="support" class="sectionHeader">Support C6
 		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 		<button class="TTSplayButton" id="tts4pb" onclick="textToSpeech('tts4',prepTextToSpeech('tts4'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 	</div>
@@ -134,7 +183,7 @@
 	<p>I am certainly not trying to monetize this site, nor do I expect to make any sort of profit off of this. I made this site as a personal project for my own enjoyment and hopefully for the occasional new <em>Star Trek</em> fan who wanders across the site. If you are feeling generous and you like my work, you can visit my Ko-fi page at <a href="https://ko-fi.com/c6reviews/" target="_blank">https://ko-fi.com/c6reviews/</a> and/or use the &ldquo;support&rdquo; link at the top-right of most pages. Proceeds will be used toward the maintenance of this site which includes registration of the domain, storage, etc.</p>
 	</div>
 	
-	<div class="sectionHeader">AI Policy
+	<div id="aipolicy" class="sectionHeader">AI Policy
 		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 		<button class="TTSplayButton" id="tts5pb" onclick="textToSpeech('tts5',prepTextToSpeech('tts5'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 	</div>
@@ -174,21 +223,44 @@
 		</table>
 		<div style="width:50%;min-height:250px;margin:auto;margin-top:20px;text-align:center;border:1px solid #C0C0C0;padding:6px;">
 			<strong>Uncropping example: </strong> The original photo of Guinan and Data from the episode &ldquo;Time's Arrow&rdquo; cuts off Guinan's right shoulder and a small part of Data's left arm. AI was used to &ldquo;uncrop&rdquo; the photo to make both characters fully visible.<br>
-			<div style="display:inline-block;vertical-align:middle;margin:10px 25px;text-align:center"><img src="images/ai-examples/timesarrow_orig.png" style="border-bottom:1px solid #C0C0C0;border-left:2px dashed red;border-right:2px dashed red;" alt="Guinan and Data in 19th-century clothing (cropped image)"><br>Original</div>
-			<span class="xx-large">➡&#xFE0E;</span><div style="display:inline-block;vertical-align:middle;margin:10px 25px;text-align:center"><img src="images/ai-examples/timesarrow_uncropped.png" style="border-bottom:1px solid #C0C0C0;border-left:2px dashed green;border-right:2px dashed green;" alt="Guinan and Data in 19th-century clothing (uncropped image)"><br>&ldquo;Uncropped&rdquo;</div>
+			<div style="display:inline-block;vertical-align:middle;margin:10px 25px;text-align:center"><img src="images/ai-examples/timesarrow_orig.webp" style="border-bottom:1px solid #C0C0C0;border-left:2px dashed red;border-right:2px dashed red;" alt="Guinan and Data in 19th-century clothing (cropped image)"><br>Original</div>
+			<span class="xx-large">➡&#xFE0E;</span><div style="display:inline-block;vertical-align:middle;margin:10px 25px;text-align:center"><img src="images/ai-examples/timesarrow_uncropped.webp" style="border-bottom:1px solid #C0C0C0;border-left:2px dashed green;border-right:2px dashed green;" alt="Guinan and Data in 19th-century clothing (uncropped image)"><br>&ldquo;Uncropped&rdquo;</div>
 		</div>
 		<div style="width:50%;min-height:250px;margin:auto;margin-top:20px;text-align:center;border:1px solid #C0C0C0;padding:6px;">
 			<strong>Style element content generation example: </strong> The photos of Picard and Burnham are taken from legitimate sources and not AI-generated. The &ldquo;vs&rdquo; banner, however, is AI-generated.<br>
-			<div style="display:inline-block;vertical-align:middle;margin:10px 25px;text-align:center"><img src="images/ai-examples/vs.png" style="height:200px" alt="Picard and Burnham with a 'vs' banner in the foreground"><br></div>
+			<div style="display:inline-block;vertical-align:middle;margin:10px 25px;text-align:center"><img src="images/ai-examples/vs.webp" style="height:200px" alt="Picard and Burnham with a 'vs' banner in the foreground"><br></div>
 			<span class="xx-large">&nbsp;</span>
-			<div style="display:inline-block;vertical-align:middle;margin:10px 25px;text-align:center"><img src="images/ai-examples/vs-map.png" style="height:200px" alt="Silhouettes of Picard and Burnham with text indicating they are from legitimate sources, with the foreground 'vs' banner highlighted with text indicating that it is AI-generated"><br></div>
+			<div style="display:inline-block;vertical-align:middle;margin:10px 25px;text-align:center"><img src="images/ai-examples/vs-map.webp" style="height:200px" alt="Silhouettes of Picard and Burnham with text indicating they are from legitimate sources, with the foreground 'vs' banner highlighted with text indicating that it is AI-generated"><br></div>
 		</div>
 	</div>
 	
+	<div id="conventions" class="sectionHeader">Conventions used on this site
+		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+		<button class="TTSplayButton" id="tts6pb" onclick="textToSpeech('tts6',prepTextToSpeech('tts6'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
+	</div>
+	<div id="tts6" class="serif">
+	<p>Here are some conventions I use on the site that may raise an eyebrow, so I figured it would be worth acknowledging them:</p>
+	<ul>
+		<li><strong><em>Star Trek</em> &ldquo;Generations&rdquo;</strong><br>Not to be confused with the film <em>Star Trek Generations</em>, I use the terms <span style="color:#C0A000">First Gen</span>, <span style="color:#FF6262">Second Gen</span>, and <span style="color:#3E9FE5">Third Gen</span> to refer to <em>Star Trek</em> productions made in certain year ranges. These are my own designations and are NOT &ldquo;official&rdquo; by any means. I use these designations because I don't like naming them after the executive producer of those eras &ndash; I don't think it's fair to give all the credit or all the blame to a single person when it comes to evaluating the content.
+			<ul style="margin-top:10px">
+				<li><strong style="color:#C0A000">First Gen <em>Trek</em> (1966&ndash;1991)</strong> includes <a href="/tos/index.html"><em>The Original Series</em></a>, <a href="/tas/index.html"><em>The Animated Series</em></a>, and <a href="/films/index.html">films</a> #1&ndash;#6.</li>
+				<li>The first and second generations overlap (1987-1991) because <em>The Next Generation</em> premiered while two more films with the original cast were still on the way, and the ethos of the <em>Original Series</em> was still very much an influence in the early seasons of <em>TNG</em>.</li>
+				<li><strong style="color:#FF6262">Second Gen <em>Trek</em> (1987&ndash;2005)</strong> includes <a href="/tng/index.html"><em>The Next Generation</em></a>, <a href="/ds9/index.html"><em>Deep Space Nine</em></a>, <a href="/voy/index.html"><em>Voyager</em></a>, <a href="/ent/index.html"><em>Enterprise</em></a>, and <a href="/films/index.html">films</a> #7&ndash;#10. Commonly referred to as the &ldquo;Berman&nbsp;Era&rdquo;, named after the executive producer of the time.</li>
+				<li>During the long television hiatus between 2005 and 2017, the <span style="color: #00B757;">&ldquo;Kelvin Trilogy&rdquo;</span> of films (#11-#13) were released. Since they take place in an alternate timeline, I don't consider them part of either the Second or Third generations of <em>Trek</em>. They are their own thing. These films are sometimes referred to as the &ldquo;Abrams-verse&rdquo;, named after the producer, J.J. Abrams.</li>
+				<li><strong style="color:#3E9FE5">Third Gen <em>Trek</em> (2017&ndash;ongoing)</strong> includes <a href="/dis/index.html"><em>Discovery</em></a>, <a href="/dis/index.html"><em>Short Treks</em></a>, <a href="/pic/index.html"><em>Picard</em></a>, <a href="/low/index.html"><em>Lower Decks</em></a>, <a href="/pro/index.html"><em>Prodigy</em></a>, <a href="/snw/index.html"><em>Strange New Worlds</em></a>, <a href="/sfa/index.html"><em>Starfleet Academy</em></a>, and <a href="/films/index.html">film</a> #14. Commonly referred to as the &ldquo;Kurtzman&nbsp;Era&rdquo;, named after the executive producer of the time.</li>
+			</ul>
+		</li>
+		<li><strong>No capitalization of &ldquo;easter egg&rdquo;</strong><br>When talking about little things hidden in a TV show or movie intended for fans to find and enjoy, like an in-joke or background set piece, the term &ldquo;easter egg&rdquo; is commonly used. I choose not to capitalize &ldquo;Easter&rdquo; in this case because the term has nothing to do with the holiday and is referring more to the idea of a &ldquo;hidden egg&rdquo;. Not capitalizing the word is actually meant to be out of respect for the holiday, since its use in this context would take way from the meaning of the upper-case &ldquo;Easter&rdquo;.</li>
+		<li><strong>Punctuation kept outside of quotation marks</strong><br>Though I am American, myself, I have chosen to use the British convention of keeping ending punctuation outside of quotation marks, unless the punctuation is specifically part of the quote. Putting periods and commas inside closing quotations marks is an aesthetic choice, but I prefer the logical order of the British convention. I would argue that reversing the quote and punctuation mark would look aesthetically acceptable to us if that is what we were used to seeing.</li>
+		
+	</ul>
+	</div>
+	
+	<div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
 
 </div>
 
-<div class="pageFooter"><a href="index.html"><img src="images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a href="blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="index.html"><img src="images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a href="blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 <div id="TTDIV"></div>
 

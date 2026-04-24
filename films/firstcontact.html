@@ -3,6 +3,7 @@
 
 <head>
 
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
@@ -17,6 +18,11 @@
 	});
 	var host = window.location.hostname;
 	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
 		gtag('js', new Date());
 		gtag('config', 'G-DM44X85QLJ');
 	}
@@ -24,20 +30,20 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="/main.css?v=1.5.2">
-<link rel="stylesheet" href="/tts.css?v=1.5.2">
-<link rel="stylesheet" href="films.css?v=1.5.2">
+<link rel="stylesheet" href="/main.css?v=1.6">
+<link rel="stylesheet" href="/tts.css?v=1.6">
+<link rel="stylesheet" href="films.css?v=1.6">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <meta property="og:title" content="Star Trek: First Contact | C6Reviews">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://c6reviews.com/films/images/firstcontact/ogimage.png">
+<meta property="og:image" content="https://c6reviews.com/films/images/firstcontact/ogimage.webp">
 <meta property="og:url" content="https://c6reviews.com/films/firstcontact.html">
 <meta property="og:description" content='Movie review and guide for the film "Star Trek: First Contact".'>
 
-<script src="films.js"></script>
-<script src="/tts.js"></script>
-<script src="/cookies.js"></script>
+<script src="films.js?v=1.6"></script>
+<script src="/tts.js?v=1.6"></script>
+<script src="/cookies.js?v=1.6"></script>
 <script>
 	function prepTextToSpeech(id)
 	{
@@ -53,15 +59,15 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.png" alt="c6reviews"></a></div>
-	<div class="pageTitleImage"><img src="images/firstcontact/firstcontact-header.png" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 75%, rgba(0,0,0,0))" alt="Picard as Locutus, and the Borg Queen standing together"></div>
+<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+	<div class="pageTitleImage"><img src="images/firstcontact/firstcontact-header.webp" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 75%, rgba(0,0,0,0))" alt="Picard as Locutus, and the Borg Queen standing together"></div>
 	<div class="pageTitleContainer">
 		<div class="pageTitle">
-			<a href="/index.html"><img src="/images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br>Star Trek: First Contact
+			<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>Star Trek: First Contact
 			<span class="pageSubtitle" style="color:red;font-size:large">&nbsp;</span>
 		</div>
 	</div>
-	<div class="c6Right"><a href="/index.html"><img src="/images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+	<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div>
@@ -75,7 +81,7 @@
 				<th colspan=2 style="font-size:16px">Star Trek: First Contact</th>
 			</tr>
 			<tr>
-				<td colspan=2 style="text-align:center"><img src="images/firstcontact/firstcontact-poster.png" style="width:300px" alt="Star Trek: First Contact movie poster"></td>
+				<td colspan=2 style="text-align:center"><img src="images/firstcontact/firstcontact-poster.webp" style="width:300px" alt="Star Trek: First Contact movie poster"></td>
 			</tr>
 			<tr>
 				<td><strong>Film number:</strong></td>
@@ -247,7 +253,7 @@
 	</table>
 	
 	<div class="sectionHeader" style="margin-top:0px">
-		<img src="images/ds9_voy_combadge.png" style="width:25px;" alt="A Starfleet Delta"> <em>Star Trek: First Contact</em>
+		<img src="images/ds9_voy_combadge.webp" style="width:25px;" alt="A Starfleet Delta"> <em>Star Trek: First Contact</em>
 		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select id="ttsratemain" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 		<button class="TTSplayButton" id="tts1pb" onclick="textToSpeech('tts1',prepTextToSpeech('tts1'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 	</div>
@@ -283,7 +289,7 @@
 				<th style="width: auto">Description / Relevance</th>
 			</tr>
 			<tr>
-				<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+				<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 				<td>3x26 &amp; 4x01</td>
 				<td><a href="/tng/tng-s3.html#e26">The Best of Both Worlds (Parts I and II)</a></td>
 				<td>If you haven't watched this iconic two-parter yet, I <em>highly</em> recommend you do before watching this movie. It tells the story that explains Picard's past with the Borg and his obsession with defeating them.</td>
@@ -300,7 +306,7 @@
 				<th style="width: auto">Description / Relevance</th>
 			</tr>
 			<tr>
-				<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+				<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 				<td>4x02</td>
 				<td><a href="/tng/tng-s4.html#e02">Family</a></td>
 				<td><strong>Suggested prereq:</strong> Often considered &ldquo;Part 3&rdquo; to the two-part episode &ldquo;The Best of Both Worlds&rdquo;, this episode tells the story of what happens immediately after the Borg incident and begins to show the deep trauma that Picard suffered.</td>
@@ -312,13 +318,13 @@
 					<td><strong>Suggested prereq:</strong> This is the first <em>TNG</em> movie, which takes place 2 years before this one. The two stories are separate and distinct, but if you want to watch them in order, you should see this one first.</td>
 			</tr>
 			<tr>
-				<td style="text-align:center"><img src="/images/tos-abbr.png" style="height:20px;" alt="TOS"></td>
+				<td style="text-align:center"><img src="/images/tos-abbr.webp" style="height:20px;" alt="TOS"></td>
 				<td>2x09</td>
 				<td><a href="/tos/tos-s2.html#e09">Metamorphosis</a></td>
 				<td>Kirk finds Zefram Cochrane on an isolated asteroid after he had been missing for 150 years.</td>
 			</tr>
 			<tr>
-				<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+				<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 				<td>2x16</td>
 				<td><a href="/tng/tng-s2.html#e16">Q Who</a></td>
 				<td>Humanity's first encounter with the Borg.</td>
@@ -348,14 +354,14 @@
 		<p>The other common criticism is the introduction of the Borg Queen, but I'll discuss that a little more in the &ldquo;Pros and Cons&rdquo; section below. All in all, this film brings together pieces that really work well together. The enemy is well-established in <em>Trek</em> lore and not just some new made-up &ldquo;bad guy&rdquo; that doesn't quite have the same impact (I'm thinking Shinzon and Nero, to name a few). It brings back the very real trauma Picard suffered at the hand of that enemy and provides a palpable conflict between the two. And the film tells the story of First Contact and Earth's first warp flight, something that feels very <em>important</em> to the overall <em>Trek</em> lore, and not just a story-of-the-week. <em>Star&nbsp;Trek:&nbsp;First&nbsp;Contact</em> is undoubtedly one of the best films of the franchise.</p>
 		
 	</div>
-	<div style="margin:20px auto 0px auto;width:fit-content;font-style:italic;text-align:center;font-size:small"><img src="images/firstcontact/crewonthebridge.png" style="width:800px" alt="Picard, Riker, Worf, La Forge, Data, Troi, and Crusher on the bridge of the Enterprise-E"></div>
+	<div style="margin:20px auto 0px auto;width:fit-content;font-style:italic;text-align:center;font-size:small"><img src="images/firstcontact/crewonthebridge.webp" style="width:800px" alt="Picard, Riker, Worf, La Forge, Data, Troi, and Crusher on the bridge of the Enterprise-E"></div>
 	
 	<div class="sectionHeader">
 		🔗 References &amp; Connections
 		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 		<button class="TTSplayButton" id="tts3pb" onclick="textToSpeech('tts3',prepTextToSpeech('tts3'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 	</div>
-	<figure style="float:right;font-style:italic;text-align:center;margin-top:15px;margin-left:10px"><img src="images/firstcontact/whynot.png" style="width:550px;" alt="Cochrane looking pensively into the night sky as Riker, La Forge, and Troi look on"><figcaption>&ldquo;Why not?&rdquo;</figcaption></figure>
+	<figure style="float:right;font-style:italic;text-align:center;margin-top:15px;margin-left:10px"><img src="images/firstcontact/whynot.webp" style="width:550px;" alt="Cochrane looking pensively into the night sky as Riker, La Forge, and Troi look on"><figcaption>&ldquo;Why not?&rdquo;</figcaption></figure>
 	<ul id="tts3" class="serif">
 		<li>When escaping sickbay, Dr. Crusher activates the EMH program (a.k.a. the Emergency Medical Holographic program) as a distraction. <a href="https://memory-alpha.fandom.com/wiki/Robert_Picardo" target="_blank">Robert Picardo</a> makes this cameo appearance as the counterpart to the holographic doctor from <a href="/voy/index.html"><em>Star Trek: Voyager</em></a>.</li>
 		<li>When looking to get information from one of the Borg drones, Picard starts one of the Dixon Hill novels in the holodeck as a distraction (and to get his hands on a tommy gun). Dixon Hill is a fictional detective from several novels, and Picard enjoys playing the part of Hill in the holodeck re-creations. Picard was first seen playing in a Dixon Hill holodeck story in <a href="/tng/tng-s1.html#e12">TNG 1x12: The Big Goodbye</a>.</li>
@@ -370,7 +376,7 @@
 		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 		<button class="TTSplayButton" id="tts4pb" onclick="textToSpeech('tts4',prepTextToSpeech('tts4'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 	</div>
-	<div style="float:left;font-style:italic;text-align:center;margin-top:25px;margin-right:20px"><img src="images/firstcontact/phoenix-fore.png" style="width:400px;" alt="the Phoenix, front view"><br><img src="images/firstcontact/phoenix-aft.png" style="width:400px;" alt="the Phoenix, rear view"></div>
+	<div style="float:left;font-style:italic;text-align:center;margin-top:25px;margin-right:20px"><img src="images/firstcontact/phoenix-fore.webp" style="width:400px;" alt="the Phoenix, front view"><br><img src="images/firstcontact/phoenix-aft.webp" style="width:400px;" alt="the Phoenix, rear view"></div>
 	<div id="tts4" class="serif" style="margin-left:460px;">
 
 		<p><strong><span style="font-size:large;text-shadow: green 2px 2px 8px">👍 </span>The USS <em>Enterprise</em> NCC&#8209;1701&#8209;E</strong> &mdash; Picard's new ship is sleek and impressive! The movie-budget sets are obviously an improvement over the TV-budget <em>Enterprise</em>&#8209;D sets. The bridge, for example, is a bit more expansive with a lot more computer displays. This is a bit more believable for the command center of a starship versus that comparatively spartan bridge on the <em>Enterprise</em>&#8209;D. Similarly, the warp core in engineering is humongous and more fitting as the power source for a massive vessel.</p>
@@ -394,7 +400,7 @@
 		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 		<button class="TTSplayButton" id="tts5pb" onclick="textToSpeech('tts5',prepTextToSpeech('tts5'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 	</div>
-	<img src="images/firstcontact/lilyandpicard.png" style="width:550px;float:right;margin-top:15px;margin-left:10px" alt="Lily wearing a satin dress and Picard in a white suit in a smoky ballroom">
+	<img src="images/firstcontact/lilyandpicard.webp" style="width:550px;float:right;margin-top:15px;margin-left:10px" alt="Lily wearing a satin dress and Picard in a white suit in a smoky ballroom">
 	<div id="tts5">
 		<ul class="serif">
 			<li>The silly juxtaposition of these lines has always bugged me: (emphasis added)<br>
@@ -416,7 +422,7 @@
 		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 		<button class="TTSplayButton" id="tts6pb" onclick="textToSpeech('tts6',prepTextToSpeech('tts6'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 	</div>
-	<figure style="float:left;font-style:italic;text-align:center;margin-top:15px;margin-right:20px;margin-bottom:20px;"><img src="images/firstcontact/thelinemustbedrawnhere.png" style="width:550px;float:left;" alt="Picard emotionally telling Lily about the Borg"><br><figcaption>&ldquo;And I will make them pay for what they've done!&rdquo;</figcaption></figure>
+	<figure style="float:left;font-style:italic;text-align:center;margin-top:15px;margin-right:20px;margin-bottom:20px;"><img src="images/firstcontact/thelinemustbedrawnhere.webp" style="width:550px;float:left;" alt="Picard emotionally telling Lily about the Borg"><br><figcaption>&ldquo;And I will make them pay for what they've done!&rdquo;</figcaption></figure>
 	<ul class="serif" id="tts6">
 		<li>&ldquo;<em>TIMELINE?!</em> This is no <em>TIME</em> to argue about <em>TIME</em>! We don’t have the <em>TIME</em>!&rdquo; &mdash; a drunken Deanna Troi.</li>
 		<li>&ldquo;And you people, you’re all astronauts on... some kind of star trek.&rdquo; &mdash; Zefram Cochrane.</li>
@@ -426,7 +432,7 @@
 		<li>&ldquo;The line must be drawn here, this far, no farther!&rdquo; &mdash; Jean-Luc Picard.</li>
 	</ul>
 	<hr style="clear:left;color:#E47545">
-<div class="finalGraphic"><img src="images/firstcontact/firstcontact-cap.png" style="width:100%" alt="Zefram Cochrane in the Phoenix cockpit, screaming as they jump to warp"></div>
+<div class="finalGraphic"><img src="images/firstcontact/firstcontact-cap.webp" style="width:100%" alt="Zefram Cochrane in the Phoenix cockpit, screaming as they jump to warp"></div>
 <table class="ratingBlock">
 	<tr>
 		<td class="myRatingDescriptionBox" style="width:260px">My rating: </td>			
@@ -478,7 +484,7 @@
 	
 </div>
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
-<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 <div id="TTDIV">
 	<div id="SFDToolTip" class="tooltip" onClick="closeToolTip(this)">SF Debris is an independent comedic reviewer who rates <em>Star Trek</em> episodes on a scale of 0 to 10. Visit his site to enjoy funny video-reviews at <span style="white-space:nowrap;"><a href="https://sfdebris.com" target="_blank">sfdebris.com</a></span>.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>

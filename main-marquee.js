@@ -198,15 +198,15 @@ function pauseMarquee(ele) {
 
 var marqueePage_60thYear = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="images/main-header60.png">
+		<img class="marqueeImg" src="images/main-header60.webp">
 		<div class="marqueeTitle">2026 is Star Trek's 60th Anniversary year!</div>
 		<div class="marqueeSubtitle"></div>
-		<div class="marqueeContent"><em>Star Trek</em> is celebrating it's 60th Anniversary all year long, in honor of September 8, 1966, when the first episode of <em>Star Trek: The Original Series</em> aired, bringing <em>Trek</em> to the world for the very first time!</div>
+		<div class="marqueeContent"><em>Star Trek</em> is celebrating it's 60th Anniversary all year long, in honor of September 8, 1966, when the first episode of <em>Star&nbsp;Trek:&nbsp;The&nbsp;Original&nbsp;Series</em> aired, bringing <em>Trek</em> to the world for the very first time!</div>
 	</div>`
 
 var marqueePage_STARTREK60TH = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="images/main-header60.png">
+		<img class="marqueeImg" src="images/main-header60.webp">
 		<div class="marqueeTitle">STAR TREK 60<SUP style="font-size:20px">TH</SUP> ANNIVERSARY!</div>
 		<div class="marqueeSubtitle">September 8, 2026</div>
 		<div class="marqueeContent">60 years ago today, the first episode of the Original Series aired on television, bringing <em>Star Trek</em> to the world for the very first time!</div>
@@ -218,7 +218,7 @@ var marqueePage_STARTREK60TH = `
 
 var marqueePage_SpookyOctober = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="blog/images/2025-10-31/allthosewhowander.png">
+		<img class="marqueeImg" src="blog/images/2025-10-31/allthosewhowander.webp">
 		<div class="marqueeTitle">HALLOWEEN EPISODE WATCH-LIST</div>
 		<div class="marqueeSubtitle">🎃👻🧛‍♂️</div>
 		<div class="marqueeContent">Whether haunting or disturbing or downright chilling, <a href="blog/2025-10-31-Halloween_Episode_Watch-List.html">here are twelve</a> of the best episodes of the Star Trek franchise to watch for the Halloween spooky season!
@@ -233,7 +233,7 @@ var marqueePage_SpookyOctober = `
 
 var marqueePage_DS9Premieres = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="ds9/images/ds9-1x01.png">
+		<img class="marqueeImg" src="ds9/images/ds9-1x01.webp">
 		<div class="marqueeTitle">January 3</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent"><div class="yearDiff">1993</div> ago on January 3, 1993, <a href="ds9/ds9-s1.html#e01">&ldquo;Emissary&rdquo;</a>, the first episode of <a href="ds9/index.html"><em>Star Trek: Deep Space Nine</em></a> aired!</div>
@@ -241,7 +241,7 @@ var marqueePage_DS9Premieres = `
 
 var marqueePage_SAPremieres = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="images/marquee/SAPremieres.png">
+		<img class="marqueeImg" src="images/marquee/SAPremieres.webp">
 		<div class="marqueeTitle">January 15</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent"><div class="yearDiff">2026</div> ago on January 15, 2026, <a href="sa/sa-s1.html#e01">&ldquo;Kids These Days&rdquo;</a>, the first episode of <a href="sa/index.html"><em>Star Trek: Starfleet Academy</em></a> aired!</div>
@@ -249,7 +249,7 @@ var marqueePage_SAPremieres = `
 	
 var marqueePage_VOYPremieres = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="voy/images/voy-1x01.png">
+		<img class="marqueeImg" src="voy/images/voy-1x01.webp">
 		<div class="marqueeTitle">January 16</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent"><div class="yearDiff">1995</div> ago on January 16, 1995, <a href="voy/voy-s1.html#e01">&ldquo;Caretaker&rdquo;</a>, the first episode of <a href="voy/index.html"><em>Star Trek: Voyager</em></a> aired!</div>
@@ -257,7 +257,7 @@ var marqueePage_VOYPremieres = `
 	
 var marqueePage_PICPremieres = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="images/marquee/pic1x01-43.png">
+		<img class="marqueeImg" src="images/marquee/pic1x01-43.webp">
 		<div class="marqueeTitle">January 23</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent"><div class="yearDiff">2020</div> ago on January 23, 2020, <a href="pic/pic-s1.html#e01">&ldquo;Remembrance&rdquo;</a>, the first episode of <a href="pic/index.html"><em>Star Trek: Picard</em></a> aired!</div>
@@ -265,7 +265,7 @@ var marqueePage_PICPremieres = `
 	
 var marqueePage_S31Released = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="images/marquee/section31.png">
+		<img class="marqueeImg" src="images/marquee/section31.webp">
 		<div class="marqueeTitle">January 24</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent"><div class="yearDiff">2025</div> ago on January 24, 2025, the straight-to-streaming film <a href="films/section31.html"><em>Star Trek: Section 31</em></a> was released.</div>
@@ -273,7 +273,7 @@ var marqueePage_S31Released = `
 
 var marqueePage_C6ReviewsDebut = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="images/marquee/c6-anniversary.png">
+		<img class="marqueeImg" src="images/marquee/c6-anniversary.webp">
 		<div class="marqueeTitle">February 1</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent">C6Reviews &ndash; this website &ndash; is <div class="yearDiff">2025</div> old today!</div>
@@ -281,7 +281,7 @@ var marqueePage_C6ReviewsDebut = `
 	
 var marqueePage_KirkBirthday = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="images/marquee/kirk.png" style="margin-left:60px;">
+		<img class="marqueeImg" src="images/marquee/kirk.webp" style="margin-left:60px;">
 		<div class="marqueeTitle">March 22 &ndash; James T. Kirk's Birthday</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent">On March 22, 2233, James T. Kirk is born! Happy Birthday!</div>
@@ -289,7 +289,7 @@ var marqueePage_KirkBirthday = `
 
 var marqueePage_FirstContactDay = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="images/marquee/FirstContactDay.png">
+		<img class="marqueeImg" src="images/marquee/FirstContactDay.webp">
 		<div class="marqueeTitle">April 5 &ndash; First Contact Day</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent">On April 5th, 2063, the Vulcans make First Contact with Earth. This story is told in the film <a href="films/firstcontact.html"><em>Star Trek: First Contact</em></a>.</div>
@@ -297,7 +297,7 @@ var marqueePage_FirstContactDay = `
 	
 var marqueePage_AncestorsEve = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="voy/images/voy-5x23.png">
+		<img class="marqueeImg" src="voy/images/voy-5x23.webp">
 		<div class="marqueeTitle">April 22 - Ancestors' Eve</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent">Ancestors' Eve was an impromptu holiday created by the <em>Voyager</em> crew on April 22, 2375, celebrating those who have come before. The holiday was conceived after Janeway told the story of her ancestor, Shannon O'Donnel, in <a href="voy/voy-s5.html#e23">VOY 5x23: 11:59</a>.</div>
@@ -305,7 +305,7 @@ var marqueePage_AncestorsEve = `
 	
 var marqueePage_SNWPremieres = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="images/marquee/snw1x01-43.png">
+		<img class="marqueeImg" src="images/marquee/snw1x01-43.webp">
 		<div class="marqueeTitle">May 5</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent"><div class="yearDiff">2022</div> ago on May 5, 2022, <a href="snw/snw-s1.html#e01">&ldquo;Strange New Worlds&rdquo;</a>, the first episode of <a href="snw/index.html"><em>Star Trek: Strange New Worlds</em></a> aired!</div>
@@ -329,7 +329,7 @@ var marqueePage_intodarknessReleased = `
 	
 var marqueePage_JanewayBirthday = `
 	<div class="marquee-page">
-		<img class="marqueeImg"  src="images/marquee/janeway.png" style="margin-left:60px;mask-image:unset">
+		<img class="marqueeImg"  src="images/marquee/janeway.webp" style="margin-left:60px;mask-image:unset">
 		<div class="marqueeTitle">May 20 &ndash; Kathryn Janeway's Birthday</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent">On May 20, sometime in the 2330s, Kathryn Janeway is born! Happy Birthday!</div>
@@ -361,7 +361,7 @@ var marqueePage_tffReleased = `
 
 var marqueePage_CaptainPicardDay = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="images/marquee/CaptainPicardDay.png">
+		<img class="marqueeImg" src="images/marquee/CaptainPicardDay.webp">
 		<div class="marqueeTitle">June 16 &ndash; Captain Picard Day</div>
 		<div class="marqueeSubtitle">ON THIS DAY*</div>
 		<div class="marqueeContent"><p>Happy Captain Picard Day! This was an annual event held aboard the <em>Enterprise</em>&#8209;D for the ship's children, as seen in <a href="tng/tng-s7.html#e12">TNG 7x12: The Pegasus</a>.</p><p style="font-size:small;font-style:italic">* Although the date is not officially confirmed by a canon source, fans calculated the stardate given in the episode &ldquo;The Pegasus&rdquo; to be equivalent to June 16.</div>
@@ -369,7 +369,7 @@ var marqueePage_CaptainPicardDay = `
 	
 var marqueePage_PicardBirthday = `
 	<div class="marquee-page">
-		<img class="marqueeImg"  src="images/marquee/picard.png" style="margin-left:60px;mask-image:unset">
+		<img class="marqueeImg"  src="images/marquee/picard.webp" style="margin-left:60px;mask-image:unset">
 		<div class="marqueeTitle">July 13 &ndash; Jean-Luc Picard's Birthday</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent">On July 13, 2305, Jean-Luc Picard is born! Happy Birthday!</div>
@@ -385,7 +385,7 @@ var marqueePage_beyondReleased = `
 
 var marqueePage_LOWPremieres = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="images/marquee/low1x01-43.png">
+		<img class="marqueeImg" src="images/marquee/low1x01-43.webp">
 		<div class="marqueeTitle">August 6</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent"><div class="yearDiff">2020</div> ago on August 6, 2020, <a href="low/low-s1.html#e01">&ldquo;Second Contact&rdquo;</a>, the first episode of <a href="low/index.html"><em>Star Trek: Lower Decks</em></a> aired!</div>
@@ -393,7 +393,7 @@ var marqueePage_LOWPremieres = `
 	
 var marqueePage_StarTrekDay = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="images/main-header.png">
+		<img class="marqueeImg" src="images/main-header.webp">
 		<div class="marqueeTitle">STAR TREK DAY!</div>
 		<div class="marqueeSubtitle">September 8, 1966</div>
 		<div class="marqueeContent"><div class="yearDiff">1966</div> ago today, the first episode of <a href="tos/index.html"><em>Star Trek: The Original Series</em></a> aired on television, bringing <em>Star Trek</em> to the world for the first time. Also, <div class="yearDiff">1973</div> ago today, on September 8, 1973, the first episode of <a href="tas/index.html"><em>Star Trek: The Animated Series</em></a> aired.</div>
@@ -401,7 +401,7 @@ var marqueePage_StarTrekDay = `
 	
 var marqueePage_DISPremieres = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="images/marquee/dis1x01-43.png">
+		<img class="marqueeImg" src="images/marquee/dis1x01-43.webp">
 		<div class="marqueeTitle">August 24</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent"><div class="yearDiff">2017</div> ago on August 24, 2017, <a href="dis/dis-s1.html#e01">&ldquo;The Vulcan Hello&rdquo;</a>, the first episode of <a href="dis/index.html"><em>Star Trek: Discovery</em></a> aired, bringing <em>Star Trek</em> back to the small screen for the first time since 2005!</div>
@@ -409,7 +409,7 @@ var marqueePage_DISPremieres = `
 	
 var marqueePage_ENTPremieres = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="images/marquee/ent1x01-43.png">
+		<img class="marqueeImg" src="images/marquee/ent1x01-43.webp">
 		<div class="marqueeTitle">September 26</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent"><div class="yearDiff">2001</div> ago on September 26, 2001, <a href="ent/ent-s1.html#e01">&ldquo;Broken Bow&rdquo;</a>, the first episode of <a href="ent/index.html"><em>Star Trek: Enterprise</em></a> aired!</div>
@@ -417,7 +417,7 @@ var marqueePage_ENTPremieres = `
 	
 var marqueePage_TNGPremieres = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="tng/images/tng-1x01.png">
+		<img class="marqueeImg" src="tng/images/tng-1x01.webp">
 		<div class="marqueeTitle">September 28</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent"><div class="yearDiff">1987</div> ago on September 28, 1987, <a href="tng/tng-s1.html#e01">&ldquo;Encounter at Farpoint&rdquo;</a>, the first episode of <a href="tng/index.html"><em>Star Trek: The Next Generation</em></a> aired!</div>
@@ -425,7 +425,7 @@ var marqueePage_TNGPremieres = `
 	
 var marqueePage_PROPremieres = `
 	<div class="marquee-page">
-		<img class="marqueeImg" src="images/marquee/pro1x01-43.png">
+		<img class="marqueeImg" src="images/marquee/pro1x01-43.webp">
 		<div class="marqueeTitle">October 28</div>
 		<div class="marqueeSubtitle">ON THIS DAY</div>
 		<div class="marqueeContent"><div class="yearDiff">2021</div> ago on October 28, 2021, <a href="pro/pro-s1.html#e01">&ldquo;Lost and Found&rdquo;</a>, the first episode of <a href="pro/index.html"><em>Star Trek: Prodigy</em></a> aired!</div>

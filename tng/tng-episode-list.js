@@ -48,8 +48,8 @@ function createTable(array) {
 					cell = cell.replace("P⚑",'<span style="color:yellow" title="Penalty Flag">⚑&#xFE0E;</span>');
 					
 					// Replace pips
-					cell = cell.replace("A🟡",'<img alt="admiral insignia" title="Full Admiral Pips" src="images/admiral.png" width="29" >');
-					cell = cell.replace("V🟡",'<img alt="vice admiral insignia" title="Vice Admiral Pips" src="images/vice_admiral.png" width="26" >');
+					cell = cell.replace("A🟡",'<img alt="admiral insignia" title="Full Admiral Pips" src="images/admiral.webp" width="29" >');
+					cell = cell.replace("V🟡",'<img alt="vice admiral insignia" title="Vice Admiral Pips" src="images/vice_admiral.webp" width="26" >');
 					
 					// Add titles to remaining tags
 					cell = cell.replace("♥",'<span title="Personal Favorite">♥&#xFE0F;</span>');
@@ -830,7 +830,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 4x10,The Loss,,-,3.2
 4x11,Data's Day,🎭,✔ Recommended,6.7
 4x12,The Wounded,,✔ Recommended,6.7
-4x13,Devil's Due,(⚖),-,5.3
+4x13,Devil's Due,<span style="font-weight:normal">(⚖)</span>,-,5.3
 4x14,Clues,,✔ Recommended,7.6
 4x15,First Contact,,✔ Recommended,7.8
 4x16,Galaxy's Child,,♦ Optional,4.4

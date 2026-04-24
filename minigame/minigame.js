@@ -26,31 +26,31 @@ var therearefivelights = new Audio('therearefivelights.mp3');
 //Define images to use
 //********************************************************************************************
 var dude = new Image();
-dude.src = "dude.png";
+dude.src = "dude.webp";
 
 var dude1 = new Image();
-dude1.src = "dude1.png";
+dude1.src = "dude1.webp";
 
 var dude2 = new Image();
-dude2.src = "dude2.png";
+dude2.src = "dude2.webp";
 
 var waypoint = new Image();
-waypoint.src = "waypoint.png";
+waypoint.src = "waypoint.webp";
 
 var tarpit = new Image();
-tarpit.src = "tarpit.png";
+tarpit.src = "tarpit.webp";
 
 var htarpit = new Image();
-htarpit.src = "htarpit.png";
+htarpit.src = "htarpit.webp";
 
 var tarpit5 = new Image();
-tarpit5.src = "tarpit5.png";
+tarpit5.src = "tarpit5.webp";
 
 var biff = new Image();
-biff.src = "biff.png";
+biff.src = "biff.webp";
 
 var mushroom = new Image();
-mushroom.src = "spookymushroom.png"
+mushroom.src = "spookymushroom.webp"
 
 //********************************************************************************************
 //Variables to define the next waypoint, whether the player is frozen,

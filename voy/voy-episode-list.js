@@ -48,14 +48,14 @@ function createTable(array) {
 					cell = cell.replace("P⚑",'<span style="color:yellow" title="Penalty Flag">⚑&#xFE0E;</span>');
 					
 					// Replace pips
-					cell = cell.replace("A🟡",'<img alt="admiral insignia" title="Full Admiral Pips" src="images/admiral.png" width="29" >');
-					cell = cell.replace("V🟡",'<img alt="vice admiral insignia" title="Vice Admiral Pips" src="images/vice_admiral.png" width="26" >');
+					cell = cell.replace("A🟡",'<img alt="admiral insignia" title="Full Admiral Pips" src="images/admiral.webp" width="29" >');
+					cell = cell.replace("V🟡",'<img alt="vice admiral insignia" title="Vice Admiral Pips" src="images/vice_admiral.webp" width="26" >');
 					
 					// Add titles to remaining tags
 					cell = cell.replace("♥",'<span title="Personal Favorite">♥</span>');
 					cell = cell.replace("🕖",'<span title="Time Travel Episode">🕖</span>');
 					cell = cell.replace("🤖",'<span title="Proper Borg Episode">🤖</span>');
-					cell = cell.replace('(<span title="Proper Borg Episode">🤖</span>)','<span title="Episode involves the Borg">(🤖)</span>');
+					cell = cell.replace('(<span title="Proper Borg Episode">🤖</span>)','<span style="font-weight:normal">(<span style="filter: grayscale(80%) brightness(60%);" title="Episode involves the Borg">🤖</span>)</span>');
 					cell = cell.replace("Q",'<span title="Q Episode" class="Q">Q</span>');
 					cell = cell.replace("31",'<span title="Section 31" style="border:1px solid #C0C0C0;border-radius:10px;">31</span>');
 					cell = cell.replace("⚖",'<span title="Courtroom Episode">⚖&#xFE0F;</span>');
@@ -776,7 +776,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 2x12,Resistance,♥️,-,5.8
 2x13,Prototype,,✔ Recommended,6.1
 2x14,Alliances,,✔ Recommended,6.0
-2x15,Threshold,<span class="notablyBad">[🌌]</span>💩,✖ Notably Bad,0.5
+2x15,Threshold,<span class="notablyBad" style="font-weight:normal">[🌌]</span>💩,✖ Notably Bad,0.5
 2x16,Meld,,✔ Recommended,7.0
 2x17,Dreadnought,♥️,-,7.4
 2x18,Death Wish,Q⚖️,✔ Recommended,7.8

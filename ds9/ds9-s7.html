@@ -3,6 +3,7 @@
 
 <head>
 
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
@@ -17,6 +18,11 @@
 	});
 	var host = window.location.hostname;
 	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
 		gtag('js', new Date());
 		gtag('config', 'G-DM44X85QLJ');
 	}
@@ -24,14 +30,14 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="/main.css?v=1.5.2">
-<link rel="stylesheet" href="ds9.css?v=1.5.2">
-<link rel="stylesheet" href="ds9-episode-guides.css?v=1.5.2">
+<link rel="stylesheet" href="/main.css?v=1.6">
+<link rel="stylesheet" href="ds9.css?v=1.6">
+<link rel="stylesheet" href="ds9-episode-guides.css?v=1.6">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <meta property="og:title" content="DS9 Season 7 | C6Reviews">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://c6reviews.com/ds9/images/ogimage.png">
+<meta property="og:image" content="https://c6reviews.com/ds9/images/ogimage.webp">
 <meta property="og:url" content="https://c6reviews.com/ds9/ds9-s7.html">
 <meta property="og:description" content="Episode reviews and guides for Star Trek: Deep Space Nine, Season 7.">
 
@@ -86,8 +92,8 @@
 }
 </style>
 
-<script src="ds9.js"></script>
-<script src="/cookies.js"></script>
+<script src="ds9.js?v=1.6"></script>
+<script src="/cookies.js?v=1.6"></script>
 <title>C6 | DS9 Season 7</title>
 </head>
 
@@ -95,15 +101,15 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.png" alt="c6reviews"></a></div>
-<div class="pageTitleImage"><img src="images/ds9-header.png" alt="Deep Space Nine station and title"></div>
+<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+<div class="pageTitleImage"><img src="images/ds9-header.webp" alt="Deep Space Nine station and title"></div>
 <div class="pageTitleContainer">
 	<div class="pageTitle">
-		<a href="/index.html"><img src="/images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br><em>Star Trek: Deep Space Nine</em>
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br><em>Star Trek: Deep Space Nine</em>
 		<span class="pageSubtitle">Season 7 Episode Guides</span>
 	</div>
 </div>
-<div class="c6Right"><a href="/index.html"><img src="/images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 <h3 class="seasonNav"><a href="ds9-episode-list.html">Full Episode List</a><br><a href="ds9-s1.html">Season 1</a> • <a href="ds9-s2.html">Season 2</a> • 
 <a href="ds9-s3.html">Season 3</a> • <a href="ds9-s4.html">Season 4</a> • <a href="ds9-s5.html">Season 5</a> • <a href="ds9-s6.html">Season 6</a> • <span class="activeSeason"><a href="ds9-s7.html">Season 7</a></span></h3>
@@ -116,7 +122,7 @@
 <div id="mainSidenav" class="sidenav">
 	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	<a href="index.html"><span style="font-size:large">←</span> DS9 Episode Guide Home</a><br>
-	<a href="index.html"><img src="/images/ds9-title.png" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="ds9 logo"></a><br>
+	<a href="index.html"><img src="/images/ds9-title.webp" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="ds9 logo"></a><br>
 	<a href="ds9-episode-list.html" style="text-align:center">Full Episode List</a>
 	<div class="sidenavseasons">
 		Season: 
@@ -158,7 +164,7 @@
 	</div>
 
 	<div id="e01" class="episodeCard">
-		<img src="images/ds9-7x01.png" class="episodeCardBG" alt="Sisko cleaning clams in an alley behind his father's restaurant">
+		<img src="images/ds9-7x01.webp" class="episodeCardBG" alt="Sisko cleaning clams in an alley behind his father's restaurant">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -170,7 +176,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>519</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">Image in the Sand</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -250,7 +256,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e02" class="episodeCard">
-		<img src="images/ds9-7x02.png" class="episodeCardBG" alt="Sisko, in a desert with Jake and Ezri, looking confused at a pencil in his hand">
+		<img src="images/ds9-7x02.webp" class="episodeCardBG" alt="Sisko, in a desert with Jake and Ezri, looking confused at a pencil in his hand">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -262,7 +268,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>520</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">Shadows and Symbols</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -334,7 +340,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e03" class="episodeCard">
-		<img src="images/ds9-7x03.png" class="episodeCardBG" alt="Ezri and Garak looking at each other">
+		<img src="images/ds9-7x03.webp" class="episodeCardBG" alt="Ezri and Garak looking at each other">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -346,7 +352,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>522</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">Afterimage</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -417,7 +423,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e04" class="episodeCard">
-		<img src="images/ds9-7x04.png" class="episodeCardBG" alt="Sisko and Leeta wearing baseball uniforms">
+		<img src="images/ds9-7x04.webp" class="episodeCardBG" alt="Sisko and Leeta wearing baseball uniforms">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -429,7 +435,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>524</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">Take Me Out to the Holosuite</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -509,7 +515,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e05" class="episodeCard">
-		<img src="images/ds9-7x05.png" class="episodeCardBG" alt="Bashir and three others in Starfleet uniforms discussing treatment for a patient">
+		<img src="images/ds9-7x05.webp" class="episodeCardBG" alt="Bashir and three others in Starfleet uniforms discussing treatment for a patient">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -521,7 +527,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>526</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">Chrysalis</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -593,7 +599,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e06" class="episodeCard">
-		<img src="images/ds9-7x06.png" class="episodeCardBG" alt="O'Brien and Nog talking while performing maintenance on the Promenade">
+		<img src="images/ds9-7x06.webp" class="episodeCardBG" alt="O'Brien and Nog talking while performing maintenance on the Promenade">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -605,7 +611,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>528</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">Treachery, Faith and the Great River</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -685,7 +691,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e07" class="episodeCard">
-		<img src="images/ds9-7x07.png" class="episodeCardBG" alt="Worf and Martok listening to Kor tell a story">
+		<img src="images/ds9-7x07.webp" class="episodeCardBG" alt="Worf and Martok listening to Kor tell a story">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -697,7 +703,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>530</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">Once More Unto the Breach</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -770,8 +776,8 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e08" class="episodeCard">
-		<img src="images/ds9-7x08.png" class="episodeCardBG" alt="Sisko and another officer firing phasers from behind cover">
-		<img src="images/lensflare-silver.png" class="episodeCardFlare" alt="a silver lens flare effect">
+		<img src="images/ds9-7x08.webp" class="episodeCardBG" alt="Sisko and another officer firing phasers from behind cover">
+		<img src="images/lensflare-silver.webp" class="episodeCardFlare" alt="a silver lens flare effect">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -783,8 +789,8 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>532</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ><br>
-						<img alt="vice admiral insignia" src="images/vice_admiral.png" width="32" style="opacity:0.7"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ><br>
+						<img alt="vice admiral insignia" src="images/vice_admiral.webp" width="32" style="opacity:0.7"></td>
 						<td class="titleBox">The Siege of AR-558</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -805,7 +811,7 @@
 				<div class="detailBlock">
 					<table>
 						<tr>
-							<td class="iconBox"><img alt="vice admiral insignia" src="images/vice_admiral.png" width="32" style="transform: rotate(90deg);" ></td>
+							<td class="iconBox"><img alt="vice admiral insignia" src="images/vice_admiral.webp" width="32" style="transform: rotate(90deg);" ></td>
 							<td><div class="iconDescription"><strong>Vice-Admiral Pips: </strong>Pips are awarded to episodes that are the most stand-out, representative examples of the series as a whole.</div></td>
 						</tr>
 						<tr>
@@ -868,7 +874,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e09" class="episodeCard">
-		<img src="images/ds9-7x09.png" class="episodeCardBG" alt="Dukat wearing a red arm-band and talking face-to-face with Kira">
+		<img src="images/ds9-7x09.webp" class="episodeCardBG" alt="Dukat wearing a red arm-band and talking face-to-face with Kira">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -880,7 +886,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>534</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">Covenant</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -957,7 +963,7 @@
 	
 	<p>&nbsp;</p>
 	<div id="e10" class="episodeCard">
-		<img src="images/ds9-7x10.png" class="episodeCardBG" alt="Nog using paper, pencil, and an adding machine as Vic looks over his shoulder approvingly">
+		<img src="images/ds9-7x10.webp" class="episodeCardBG" alt="Nog using paper, pencil, and an adding machine as Vic looks over his shoulder approvingly">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -969,7 +975,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>538</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">It's Only a Paper Moon</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1041,7 +1047,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e11" class="episodeCard">
-		<img src="images/ds9-7x11.png" class="episodeCardBG" alt="Ezri standing in her family's home">
+		<img src="images/ds9-7x11.webp" class="episodeCardBG" alt="Ezri standing in her family's home">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1053,7 +1059,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>539</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">Prodigal Daughter</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1083,7 +1089,7 @@
 						</tr>
 						<tr>
 							<td>&nbsp;</td>
-							<td><div class="thoughtsSection">This episode gets a <span style="color:yellow">⚑&#xFE0E; penalty flag</span> because it's so far departed from anything that makes DS9 familiar. The main story is an attempt at character development for Ezri, but it centers around her family back at her home &ndash; new characters and a new location that isn't important to us as the audience. And the story is just a little mystery about Ezri's family, again something that isn't important to the audience. The only way they connected it back to a DS9 story was that they picked back up on the Season 6 episode &ldquo;Honor Among Thieves,&rdquo; which was already a story that was quite far departed from the primary focus of the series. The episode wasn't &ldquo;bad&rdquo; per se, it just seems like an episode of an entirely different show.</div></td>
+							<td><div class="thoughtsSection">This episode gets a <span style="color:yellow">⚑&#xFE0E; penalty flag</span> because it's so far departed from anything that makes DS9 familiar. The main story is an attempt at character development for Ezri, but it centers around her family back at her home &ndash; new characters and a new location that isn't important to us as the audience. And the story is just a little mystery about Ezri's family, again something that isn't important to the audience. The only way they connected it back to a DS9 story was that they picked back up on the Season 6 episode &ldquo;Honor Among Thieves&rdquo;, which was already a story that was quite far departed from the primary focus of the series. The episode wasn't &ldquo;bad&rdquo; per se, it just seems like an episode of an entirely different show.</div></td>
 						</tr>
 						<tr>
 							<td class="iconBox"></td>
@@ -1129,7 +1135,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e12" class="episodeCard">
-		<img src="images/ds9-7x12.png" class="episodeCardBG" alt="Ezri, clad in all black, standing in a holding cell with Quark and Rom">
+		<img src="images/ds9-7x12.webp" class="episodeCardBG" alt="Ezri, clad in all black, standing in a holding cell with Quark and Rom">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1210,7 +1216,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e13" class="episodeCard">
-		<img src="images/ds9-7x13.png" class="episodeCardBG" alt="Ezri aiming a rifle as another Trill looks over her shoulder">
+		<img src="images/ds9-7x13.webp" class="episodeCardBG" alt="Ezri aiming a rifle as another Trill looks over her shoulder">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1222,7 +1228,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>545</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">Field of Fire</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1302,7 +1308,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e14" class="episodeCard">
-		<img src="images/ds9-7x14.png" class="episodeCardBG" alt="A changeling gesturing out the window as he talks to Odo">
+		<img src="images/ds9-7x14.webp" class="episodeCardBG" alt="A changeling gesturing out the window as he talks to Odo">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1314,7 +1320,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>547</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">Chimera</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1394,7 +1400,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e15" class="episodeCard">
-		<img src="images/ds9-7x15.png" class="episodeCardBG" alt="O'Brien, Bashir, Kasidy, Sisko, Kira, Odo, Ezri, and Nog strolling down the promenade wearing 1960's-style tuxedos, suits, and dresses">
+		<img src="images/ds9-7x15.webp" class="episodeCardBG" alt="O'Brien, Bashir, Kasidy, Sisko, Kira, Odo, Ezri, and Nog strolling down the promenade wearing 1960's-style tuxedos, suits, and dresses">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1406,7 +1412,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>549</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">Badda-Bing, Badda-Bang</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1483,8 +1489,8 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e16" class="episodeCard">
-		<img src="images/ds9-7x16.png" class="episodeCardBG" alt="Bashir and Sloan discussing a hologram of a Romulan official">
-		<img src="images/lensflare-silver.png" class="episodeCardFlare" alt="a silver lens flare effect">
+		<img src="images/ds9-7x16.webp" class="episodeCardBG" alt="Bashir and Sloan discussing a hologram of a Romulan official">
+		<img src="images/lensflare-silver.webp" class="episodeCardFlare" alt="a silver lens flare effect">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1496,7 +1502,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>551</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ><br><img alt="vice admiral insignia" src="images/vice_admiral.png" width="32" style="opacity:0.7"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ><br><img alt="vice admiral insignia" src="images/vice_admiral.webp" width="32" style="opacity:0.7"></td>
 						<td class="titleBox">Inter Arma Enim Silent Leges</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1525,7 +1531,7 @@
 							<td><div class="iconDescription">Koval's interest in the Quickening, and Bashir's briefing on the disease, refers to <a href="ds9-s4.html#e24">DS9 4x24: The Quickening</a>.</div></td>
 						</tr>
 						<tr>
-							<td class="iconBox"><img alt="vice admiral insignia" src="images/vice_admiral.png" width="32" style="transform: rotate(90deg);" ></td>
+							<td class="iconBox"><img alt="vice admiral insignia" src="images/vice_admiral.webp" width="32" style="transform: rotate(90deg);" ></td>
 							<td><div class="iconDescription"><strong>Vice-Admiral Pips: </strong>Pips are awarded to episodes that are the most stand-out, representative examples of the series as a whole.</div></td>
 						</tr>
 						<tr>
@@ -1641,7 +1647,7 @@
 	
 	<p>&nbsp;</p>
 	<div id="e17" class="episodeCard">
-		<img src="images/ds9-7x17.png" class="episodeCardBG" alt="Ezri tending to a wound on Worf's face">
+		<img src="images/ds9-7x17.webp" class="episodeCardBG" alt="Ezri tending to a wound on Worf's face">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1653,7 +1659,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>554</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">Penumbra</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1722,7 +1728,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e18" class="episodeCard">
-		<img src="images/ds9-7x18.png" class="episodeCardBG" alt="Winn and Dukat looking tenderly into each other's eyes">
+		<img src="images/ds9-7x18.webp" class="episodeCardBG" alt="Winn and Dukat looking tenderly into each other's eyes">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1734,7 +1740,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>555</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">'Til Death Do Us Part</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1743,7 +1749,7 @@
 					<tr>
 						<td>&nbsp;</td>
 						<td class="summaryBox"><div class="summary">
-							Ezri and Worf are interrogated by the Breen; Winn receives a vision telling her to await a &ldquo;guide,&rdquo; a role which Dukat gladly fills.<br><br>
+							Ezri and Worf are interrogated by the Breen; Winn receives a vision telling her to await a &ldquo;guide&rdquo;, a role which Dukat gladly fills.<br><br>
 							<span class="arcDescription">Arc: The Final Chapter (Part 2 of 9)</span>
 						</div></td>
 						<td>&nbsp;</td>
@@ -1803,7 +1809,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e19" class="episodeCard">
-		<img src="images/ds9-7x19.png" class="episodeCardBG" alt="Ezri and Worf hanging upside down in a Breen prison cell">
+		<img src="images/ds9-7x19.webp" class="episodeCardBG" alt="Ezri and Worf hanging upside down in a Breen prison cell">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1815,7 +1821,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>556</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">Strange Bedfellows</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1888,7 +1894,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e20" class="episodeCard">
-		<img src="images/ds9-7x20.png" class="episodeCardBG" alt="Kai Winn looking concerned at a book wrapped in black cloth on her desk, as Dukat watches over her shoulder">
+		<img src="images/ds9-7x20.webp" class="episodeCardBG" alt="Kai Winn looking concerned at a book wrapped in black cloth on her desk, as Dukat watches over her shoulder">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1900,7 +1906,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>559</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">The Changing Face of Evil</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1969,7 +1975,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e21" class="episodeCard">
-		<img src="images/ds9-7x21.png" class="episodeCardBG" alt="Garak, Kira, Odo, and Damar discussing strategy in an underground resistance base">
+		<img src="images/ds9-7x21.webp" class="episodeCardBG" alt="Garak, Kira, Odo, and Damar discussing strategy in an underground resistance base">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1981,7 +1987,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>561</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">When It Rains...</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -2058,7 +2064,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e22" class="episodeCard">
-		<img src="images/ds9-7x22.png" class="episodeCardBG" alt="Gowron discussing battle plans at the head of a conference table surrounded by other Klingons">
+		<img src="images/ds9-7x22.webp" class="episodeCardBG" alt="Gowron discussing battle plans at the head of a conference table surrounded by other Klingons">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -2070,7 +2076,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>563</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">Tacking Into the Wind</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -2146,7 +2152,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e23" class="episodeCard">
-		<img src="images/ds9-7x23.png" class="episodeCardBG" alt="Bashir, O'Brien, and Sloan talking">
+		<img src="images/ds9-7x23.webp" class="episodeCardBG" alt="Bashir, O'Brien, and Sloan talking">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -2158,7 +2164,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>565</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ></td>
 						<td class="titleBox">Extreme Measures</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -2231,8 +2237,8 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e24" class="episodeCard">
-		<img src="images/ds9-7x24.png" class="episodeCardBG" alt="Garak, Damar, and Kira hiding in a dark cellar">
-		<img src="images/lensflare-silver.png" class="episodeCardFlare" alt="a silver lens flare effect">
+		<img src="images/ds9-7x24.webp" class="episodeCardBG" alt="Garak, Damar, and Kira hiding in a dark cellar">
+		<img src="images/lensflare-silver.webp" class="episodeCardFlare" alt="a silver lens flare effect">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -2244,7 +2250,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>567</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ><br><img alt="admiral insignia" src="images/admiral.png" width="32" style="opacity:0.7"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ><br><img alt="admiral insignia" src="images/admiral.webp" width="32" style="opacity:0.7"></td>
 						<td class="titleBox">The Dogs of War</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -2270,7 +2276,7 @@
 							<td><div class="quoteDescription"><em>The line has to be drawn here; this far, and no further!</em> &mdash; This phrase from Quark's impassioned speech is a tribute to Jean-Luc Picard's nearly identical line from the film <em>Star Trek: First Contact</em>, which was released two and a half years prior to this episode airing.</div></td>
 						</tr>
 						<tr>
-							<td class="iconBox"><img alt="admiral insignia" src="images/admiral.png" width="32" style="transform: rotate(90deg);" ></td>
+							<td class="iconBox"><img alt="admiral insignia" src="images/admiral.webp" width="32" style="transform: rotate(90deg);" ></td>
 							<td><div class="iconDescription"><strong>Admiral Pips: </strong>Pips are awarded to episodes that are the most stand-out, representative examples of the series as a whole.</div></td>
 						</tr>
 						<tr>
@@ -2320,8 +2326,8 @@
 		</table>
 	</div>
 	<p>&nbsp;</p><div id="e25" class="episodeCard">
-		<img src="images/ds9-7x25.png" class="episodeCardBG" alt="Humans, Bajorans, Klingons, and Romulans standing across a conference table from Founders, Vorta, and Jem'Hadar">
-		<img src="images/lensflare-silver.png" class="episodeCardFlare" alt="a silver lens flare effect">
+		<img src="images/ds9-7x25.webp" class="episodeCardBG" alt="Humans, Bajorans, Klingons, and Romulans standing across a conference table from Founders, Vorta, and Jem'Hadar">
+		<img src="images/lensflare-silver.webp" class="episodeCardFlare" alt="a silver lens flare effect">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -2333,7 +2339,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>568</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ><br><img alt="admiral insignia" src="images/admiral.png" width="32" style="opacity:0.7"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ><br><img alt="admiral insignia" src="images/admiral.webp" width="32" style="opacity:0.7"></td>
 						<td class="titleBox">What You Leave Behind</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -2363,7 +2369,7 @@
 							<td><div class="iconDescription">It's time for the 90's <em>Star Trek</em> trope: <strong>The Season 7 Relationship that Nobody Asked For!™</strong><br>We almost made it through the series without this happening. Bashir and Ezri hooking up does absolutely nothing for the show.</div></td>
 						</tr>
 						<tr>
-							<td class="iconBox"><img alt="admiral insignia" src="images/admiral.png" width="32" style="transform: rotate(90deg);" ></td>
+							<td class="iconBox"><img alt="admiral insignia" src="images/admiral.webp" width="32" style="transform: rotate(90deg);" ></td>
 							<td><div class="iconDescription"><strong>Admiral Pips: </strong>Pips are awarded to episodes that are the most stand-out, representative examples of the series as a whole.</div></td>
 						</tr>
 						<tr>
@@ -2444,7 +2450,7 @@
 <a href="ds9-s3.html">Season 3</a> • <a href="ds9-s4.html">Season 4</a> • <a href="ds9-s5.html">Season 5</a> • <a href="ds9-s6.html">Season 6</a> • <span class="activeSeason"><a href="ds9-s7.html">Season 7</a></span></h3>
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
 
-<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 <div id="TTDIV">
 

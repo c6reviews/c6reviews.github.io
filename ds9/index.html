@@ -3,6 +3,7 @@
 
 <head>
 
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
@@ -17,6 +18,11 @@
 	});
 	var host = window.location.hostname;
 	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
 		gtag('js', new Date());
 		gtag('config', 'G-DM44X85QLJ');
 	}
@@ -24,18 +30,18 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="/main.css?v=1.5.2">
-<link rel="stylesheet" href="ds9.css?v=1.5.2">
+<link rel="stylesheet" href="/main.css?v=1.6">
+<link rel="stylesheet" href="ds9.css?v=1.6">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <meta property="og:title" content="DS9 Episode Guides | C6Reviews">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://c6reviews.com/ds9/images/ogimage.png">
+<meta property="og:image" content="https://c6reviews.com/ds9/images/ogimage.webp">
 <meta property="og:url" content="https://c6reviews.com/ds9/">
 <meta property="og:description" content="Episode reviews and guides for Star Trek: Deep Space Nine.">
 
-<script src="ds9.js"></script>
-<script src="/cookies.js"></script>
+<script src="ds9.js?v=1.6"></script>
+<script src="/cookies.js?v=1.6"></script>
 <title>C6 | Deep Space Nine</title>
 </head>
 
@@ -43,15 +49,15 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-	<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.png" alt="c6reviews"></a></div>
-	<div class="pageTitleImage"><img src="images/ds9-header.png" alt="Deep Space Nine station and title"></div>
+	<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+	<div class="pageTitleImage"><img src="images/ds9-header.webp" alt="Deep Space Nine station and title"></div>
 	<div class="pageTitleContainer">
 		<div class="pageTitle">
-			<a href="/index.html"><img src="/images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br><em>Star Trek: Deep Space Nine</em>
+			<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br><em>Star Trek: Deep Space Nine</em>
 			<span class="pageSubtitle">&nbsp;</span>
 		</div>
 	</div>
-	<div class="c6Right"><a href="/index.html"><img src="/images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+	<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺 top</div>
@@ -60,7 +66,7 @@
 <div id="mainSidenav" class="sidenav">
 	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	<a href="/index.html"><span style="font-size:large">←</span> Star Trek Home</a><br>
-	<a href="index.html"><img src="/images/ds9-title.png" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="ds9 logo"></a><br>
+	<a href="index.html"><img src="/images/ds9-title.webp" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="ds9 logo"></a><br>
 	<a href="ds9-episode-list.html" style="text-align:center">Full Episode List</a>
 	<div class="sidenavseasons">
 		Season: 
@@ -77,7 +83,7 @@
 				<th colspan=2 style="font-size:16px">Star Trek: Deep Space Nine</th>
 			</tr>
 			<tr>
-				<td colspan=2 style="text-align:center"><img src="images/ds9-cast.png" style="width:300px" alt="Deep Space Nine cast photo"></td>
+				<td colspan=2 style="text-align:center"><img src="images/ds9-cast.webp" style="width:300px" alt="Deep Space Nine cast photo"></td>
 			</tr>
 			<tr>
 				<td><strong>Abbreviation:</strong></td>
@@ -247,13 +253,13 @@
 		
 		<table class="seasonsTable">
 			<tr>
-				<td><a href="ds9-s1.html"><div><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"><br>Season 1</div></a></td>
-				<td><a href="ds9-s2.html"><div><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"><br>Season 2</div></a></td>
-				<td><a href="ds9-s3.html"><div><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ><br>Season 3</div></a></td>
-				<td><a href="ds9-s4.html"><div><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ><br>Season 4</div></a></td>
-				<td><a href="ds9-s5.html"><div><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ><br>Season 5</div></a></td>
-				<td><a href="ds9-s6.html"><div><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ><br>Season 6</div></a></td>
-				<td><a href="ds9-s7.html"><div><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.png" width="32" ><br>Season 7</div></a></td>
+				<td><a href="ds9-s1.html"><div><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"><br>Season 1</div></a></td>
+				<td><a href="ds9-s2.html"><div><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"><br>Season 2</div></a></td>
+				<td><a href="ds9-s3.html"><div><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ><br>Season 3</div></a></td>
+				<td><a href="ds9-s4.html"><div><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ><br>Season 4</div></a></td>
+				<td><a href="ds9-s5.html"><div><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ><br>Season 5</div></a></td>
+				<td><a href="ds9-s6.html"><div><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ><br>Season 6</div></a></td>
+				<td><a href="ds9-s7.html"><div><img alt="ds9 combadge" height="37" src="images/ds9_voy_combadge.webp" width="32" ><br>Season 7</div></a></td>
 			</tr>
 		</table>
 		<table class="guidesTable">
@@ -332,7 +338,7 @@
 			</td>
 			<td>
 				<ul>
-					<li><span style="text-decoration:underline;font-style:italic">Scores are relative to the series, not to the entire <em>Star Trek</em> franchise.</span></li>				
+					<li><span style="text-decoration:underline;font-style:italic">Scores are relative to the series, not to the entire <span style="font-style:normal">Star Trek</span> franchise.</span></li>				
 					<li>For simplicity, I rate episodes on a 1&ndash;5 star scale, with 3 stars representing an "average" episode. It is possible for especially bad episodes to get zero stars.</li>
 					<li>Occasionally, I may add or remove a half-star from a rating for a certain reason, which I will usually explain in the review.</li>
 				</ul>
@@ -412,14 +418,14 @@
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;font-size:x-large;border-bottom:0px"><span class="award"><img alt="admiral insignia" src="images/admiral.png" width="36"></span></td>
+			<td style="text-align:center;font-size:x-large;border-bottom:0px"><span class="award"><img alt="admiral insignia" src="images/admiral.webp" width="36"></span></td>
 			<td style="border-bottom:0px"><span class="award"><span class="large">Admiral Pips</span></span></td>
 			<td rowspan=2>
 				Pips are awarded to episodes that are the most stand-out, representative examples of the series as a whole.
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;font-size:x-large"><span class="award"><img alt="vice admiral insignia" src="images/vice_admiral.png" width="30"></span></td>
+			<td style="text-align:center;font-size:x-large"><span class="award"><img alt="vice admiral insignia" src="images/vice_admiral.webp" width="30"></span></td>
 			<td><span class="award"><span class="large">Vice Admiral Pips</span></span></td>
 		</tr>
 		<tr>
@@ -538,7 +544,7 @@
 
 </div>
 
-<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 <div id="TTDIV"></div>
 

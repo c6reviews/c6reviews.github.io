@@ -3,6 +3,7 @@
 
 <head>
 
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
@@ -17,6 +18,11 @@
 	});
 	var host = window.location.hostname;
 	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
 		gtag('js', new Date());
 		gtag('config', 'G-DM44X85QLJ');
 	}
@@ -24,15 +30,15 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="/main.css?v=1.5.2">
-<link rel="stylesheet" href="/tts.css?v=1.5.2">
-<link rel="stylesheet" href="pic.css?v=1.5.2">
-<link rel="stylesheet" href="pic-episode-guides.css?v=1.5.2">
+<link rel="stylesheet" href="/main.css?v=1.6">
+<link rel="stylesheet" href="/tts.css?v=1.6">
+<link rel="stylesheet" href="pic.css?v=1.6">
+<link rel="stylesheet" href="pic-episode-guides.css?v=1.6">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <meta property="og:title" content="PIC Season 1 | C6Reviews">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://c6reviews.com/pic/images/ogimage.png">
+<meta property="og:image" content="https://c6reviews.com/pic/images/ogimage.webp">
 <meta property="og:url" content="https://c6reviews.com/pic/pic-s1.html">
 <meta property="og:description" content="Episode reviews and guides for Star Trek: Picard, Season 1.">
 
@@ -42,9 +48,9 @@
 }
 </style>
 
-<script src="pic.js"></script>
-<script src="/tts.js"></script>
-<script src="/cookies.js"></script>
+<script src="pic.js?v=1.6"></script>
+<script src="/tts.js?v=1.6"></script>
+<script src="/cookies.js?v=1.6"></script>
 <script>
 	function prepTextToSpeech(id)
 	{
@@ -60,15 +66,15 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.png" alt="c6reviews"></a></div>
-<div class="pageTitleImage"><img src="images/pic-header.png" alt="Star Trek: Picard title header"></div>
+<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+<div class="pageTitleImage"><img src="images/pic-header.webp" alt="Star Trek: Picard title header"></div>
 <div class="pageTitleContainer">
 	<div class="pageTitle">
-		<a href="/index.html"><img src="/images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br>Star Trek: Picard
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>Star Trek: Picard
 		<span class="pageSubtitle">Season 1 Episode Guides</span>
 	</div>
 </div>
-<div class="c6Right"><a href="/index.html"><img src="/images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 <h3 class="seasonNav"><a href="pic-episode-list.html">Full Episode List</a><br><span class="activeSeason"><a href="pic-s1.html">Season 1</a></span> • <a href="pic-s2.html">Season 2</a> • <a href="pic-s3.html">Season 3</a></h3>
 
@@ -80,7 +86,7 @@
 <div id="mainSidenav" class="sidenav">
 	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	<a href="index.html"><span style="font-size:large">←</span> PIC Episode Guide Home</a><br>
-	<a href="index.html"><img src="/images/pic-title.png" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="pic logo"></a><br>
+	<a href="index.html"><img src="/images/pic-title.webp" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="pic logo"></a><br>
 	<a href="pic-episode-list.html" style="text-align:center">Full Episode List</a>
 	<div class="sidenavseasons">
 		Season: 
@@ -105,7 +111,7 @@
 <div class="content">
 
 	<div class="seasonSummary">
-		<img src="images/s1_poster.png" class="seasonPoster" alt="a poster featuring the cast of Season 1">
+		<img src="images/s1_poster.webp" class="seasonPoster" alt="a poster featuring the cast of Season 1">
 		<div class="seasonName">Season 1</div>
 			<div class="serif">
 			<p>Season 1 of <em>Star Trek: Picard</em> tells the story of a retired Admiral Jean-Luc Picard, about 20 years after we last saw him in <a href="/films/nemesis.html"><em>Star Trek Nemesis</em></a>. He meets a young android woman who is a sort of daughter to his late friend, Data. Picard embarks on a quest to find her creator, a cyberneticist named Bruce Maddox, and to uncover why a shadowy sect of the Romulan secret police are hellbent on her destruction.</p>
@@ -122,31 +128,31 @@
 					<th style="width: 620px">Description / Relevance</th>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+					<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 					<td>1x13</td>
 					<td><a href="/tng/tng-s1.html#e13">Datalore</a></td>
 					<td>Data's origins</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+					<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 					<td>3x26 &amp; 4x01</td>
 					<td><a href="/tng/tng-s3.html#e26">The Best of Both Worlds</a></td>
 					<td>Picard is captured and assimilated by the Borg, transformed into Locutus</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+					<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 					<td>5x23</td>
 					<td><a href="/tng/tng-s5.html#e23">I Borg</a></td>
 					<td>Hugh's origins</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/voy-abbr.png" style="height:15px;" alt="VOY"></td>
+					<td style="text-align:center"><img src="/images/voy-abbr.webp" style="height:15px;" alt="VOY"></td>
 					<td>4x01</td>
 					<td><a href="/voy/voy-s4.html#e01">Scorpion, Part II</a></td>
 					<td>Seven's origins</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/voy-abbr.png" style="height:15px;" alt="VOY"></td>
+					<td style="text-align:center"><img src="/images/voy-abbr.webp" style="height:15px;" alt="VOY"></td>
 					<td>4x06</td>
 					<td><a href="/voy/voy-s4.html#e06">The Raven</a></td>
 					<td>Seven's assimilation into the Borg as a child</td>
@@ -169,37 +175,37 @@
 					<th style="width: 620px">Description / Relevance</th>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+					<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 					<td>2x09</td>
 					<td><a href="/tng/tng-s2.html#e09">The Measure of a Man</a></td>
 					<td>Data meets cyberneticist Bruce Maddox, and Data's rights as an android are litigated</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+					<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 					<td>3x16</td>
 					<td><a href="/tng/tng-s3.html#e16">The Offspring</a></td>
 					<td>Data creates an android daughter named Lal</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+					<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 					<td>6x26 &amp; 7x01</td>
 					<td><a href="/tng/tng-s6.html#e26">Descent</a></td>
 					<td>Data's brother, Lore, manipulates him and a group of rogue Borg; Hugh returns</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/voy-abbr.png" style="height:15px;" alt="VOY"></td>
+					<td style="text-align:center"><img src="/images/voy-abbr.webp" style="height:15px;" alt="VOY"></td>
 					<td>6x16</td>
 					<td><a href="/voy/voy-s6.html#e16">Collective</a></td>
 					<td>Icheb's first appearance</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/voy-abbr.png" style="height:15px;" alt="VOY"></td>
+					<td style="text-align:center"><img src="/images/voy-abbr.webp" style="height:15px;" alt="VOY"></td>
 					<td>6x19</td>
 					<td><a href="/voy/voy-s6.html#e19">Child's Play</a></td>
 					<td>Icheb's origins and connection to Seven</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/voy-abbr.png" style="height:15px;" alt="VOY"></td>
+					<td style="text-align:center"><img src="/images/voy-abbr.webp" style="height:15px;" alt="VOY"></td>
 					<td>7x02</td>
 					<td><a href="/voy/voy-s7.html#e02">Imperfection</a></td>
 					<td>Icheb sacrifices his cortical node so Seven can live</td>
@@ -209,13 +215,13 @@
 	</div>
 
 	<div id="e01" class="episodeCard">
-		<img src="images/pic-1x01.png" class="episodeCardBG" alt="Picard and Dahj talking to each other at Picard's vineyard">
-		<img src="images/pic-1x01b.png" class="episodeCardBG2" alt="a pale-white hand with a yellow sleeve giving a paintbrush to another hand with a red sleeve">
+		<img src="images/pic-1x01.webp" class="episodeCardBG" alt="Picard and Dahj talking to each other at Picard's vineyard">
+		<img src="images/pic-1x01b.webp" class="episodeCardBG2" alt="a pale-white hand with a yellow sleeve giving a paintbrush to another hand with a red sleeve">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.png" width="36"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.webp" width="36"></td>
 						<td class="seasonEpisodeNumberBox">1x01</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>23 Jan 2020</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>1</strong></td>
@@ -316,13 +322,13 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td>
-								<div class="distinctions"><img src="images/tng.png" height="180" alt="A Starfleet Delta labeled 'The Nostalgic Generation' with an image of Picard hugging Riker and Troi"><span class="spoilerContent"><img src="images/unceremonious.png" style="height:180px" alt="A Starfleet Delta labeled 'Unceremonious End' with a photo of B-4's body in a drawer"></span></div>
+								<div class="distinctions"><img src="images/tng.webp" height="180" alt="A Starfleet Delta labeled 'The Nostalgic Generation' with an image of Picard hugging Riker and Troi"><span class="spoilerContent"><img src="images/unceremonious.webp" style="height:180px" alt="A Starfleet Delta labeled 'Unceremonious End' with a photo of B-4's body in a drawer"></span></div>
 								<div class="distinctionDescriptions">
 									<strong>The Nostalgic Generation: </strong>Number One and &ldquo;Tea, Earl Grey, Decaf&rdquo;<br><br>
 									<span class="spoilerPlaceholder">( +1 spoiler )</span>
 									<span class="spoilerContent">
 										<strong>Unceremonious End: </strong> B-4<br>
-										<span style="font-size:small;font-style:italic">When we last saw B-4 in <a href="/films/nemesis.html"><span style="font-style:normal">Star Trek Nemesis</span></a>, he started to sing &ldquo;Blue Skies,&rdquo; giving us a glimmer of hope that Data was still somehow alive within him. Now he's just been taken apart and shoved in a drawer. Oh well!</span>
+										<span style="font-size:small;font-style:italic">When we last saw B-4 in <a href="/films/nemesis.html"><span style="font-style:normal">Star Trek Nemesis</span></a>, he started to sing &ldquo;Blue Skies&rdquo;, giving us a glimmer of hope that Data was still somehow alive within him. Now he's just been taken apart and shoved in a drawer. Oh well!</span>
 									</span>
 								</div>
 							</td>
@@ -347,7 +353,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-4.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 4"><br>
+							<img src="images/nm-4.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 4"><br>
 							<span class="nostalgiaText4">Right in the feels</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -371,13 +377,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e02" class="episodeCard">
-		<img src="images/pic-1x02.png" class="episodeCardBG" alt="Picard having an argument with the Fleet Admiral over her desk">
-		<img src="images/pic-1x02b.png" class="episodeCardBG2" alt="A Romulan speaking to a crowd from a balcony on the Borg cube">
+		<img src="images/pic-1x02.webp" class="episodeCardBG" alt="Picard having an argument with the Fleet Admiral over her desk">
+		<img src="images/pic-1x02b.webp" class="episodeCardBG2" alt="A Romulan speaking to a crowd from a balcony on the Borg cube">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.png" width="36"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.webp" width="36"></td>
 						<td class="seasonEpisodeNumberBox">1x02</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>30 Jan 2020</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>2</strong></td>
@@ -394,7 +400,7 @@
 					</tr>
 					<tr>
 						<td class="summaryBox"><div class="summary" id="tts2a">
-							After a flashback featuring the rogue synth attack on Mars 14 years prior, Picard and Laris investigate Dahj's death. Laris suspects the &ldquo;Zhat Vash,&rdquo; a Romulan cabal even more enigmatic than the Tal Shiar, the Romulan secret police. They determine that Dahj's twin sister is not on Earth, so Picard makes preparations to go off-world, including a medical clearance and a request to the Starfleet CinC to be reinstated. Meanwhile, Soji befriends a new recruit and has become intimate with Narek as she begins her work on the Borg artifact: disassembling Borg drones.<span class="spoilerContent"> When Picard's request for reinstatement is summarily dismissed, he is forced to reach out to a former colleague named Raffi for a less-official means of getting off the planet, and the CinC briefs Starfleet security about his claims of clandestine Romulan operations happening on Earth. Unfortunately, it seems that the head of security and her lieutenant are both in on the Romulan plot.</span>
+							After a flashback featuring the rogue synth attack on Mars 14 years prior, Picard and Laris investigate Dahj's death. Laris suspects the &ldquo;Zhat Vash&rdquo;, a Romulan cabal even more enigmatic than the Tal Shiar, the Romulan secret police. They determine that Dahj's twin sister is not on Earth, so Picard makes preparations to go off-world, including a medical clearance and a request to the Starfleet CinC to be reinstated. Meanwhile, Soji befriends a new recruit and has become intimate with Narek as she begins her work on the Borg artifact: disassembling Borg drones.<span class="spoilerContent"> When Picard's request for reinstatement is summarily dismissed, he is forced to reach out to a former colleague named Raffi for a less-official means of getting off the planet, and the CinC briefs Starfleet security about his claims of clandestine Romulan operations happening on Earth. Unfortunately, it seems that the head of security and her lieutenant are both in on the Romulan plot.</span>
 						</div></td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -494,7 +500,7 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td>
-								<div class="distinctions"><img src="images/f-bomb.png" height="180" alt="A Starfleet Delta labeled 'F-Bomb' with a photo of Admiral Clancy yelling"></div>
+								<div class="distinctions"><img src="images/f-bomb.webp" height="180" alt="A Starfleet Delta labeled 'F-Bomb' with a photo of Admiral Clancy yelling"></div>
 								<div class="distinctionDescriptions">
 									<strong>F-Bomb: </strong> Laris and Admiral Clancy<br>
 								</div>
@@ -521,7 +527,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-2.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 2"><br>
+							<img src="images/nm-2.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 2"><br>
 							<span class="nostalgiaText2">Request Denied</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -545,13 +551,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e03" class="episodeCard">
-		<img src="images/pic-1x03.png" class="episodeCardBG" alt="Picard speaking to a dejected-looking Raffi at the Vasquez Rocks">
-		<img src="images/pic-1x03b.png" class="episodeCardBG2" alt="Hands holding a triangular puzzle piece featuring a drawn image of twin sisters">
+		<img src="images/pic-1x03.webp" class="episodeCardBG" alt="Picard speaking to a dejected-looking Raffi at the Vasquez Rocks">
+		<img src="images/pic-1x03b.webp" class="episodeCardBG2" alt="Hands holding a triangular puzzle piece featuring a drawn image of twin sisters">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.png" width="36"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.webp" width="36"></td>
 						<td class="seasonEpisodeNumberBox">1x03</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>6 Feb 2020</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>3</strong></td>
@@ -568,7 +574,7 @@
 					</tr>
 					<tr>
 						<td class="summaryBox"><div class="summary" id="tts3a">
-							Raffi's life has been falling apart in the last 14 years and she is not at all happy to be speaking with Picard again. Still, he pushes her on the urgency of the situation and implores her for her help in procuring a ship and pilot. She reluctantly arranges for him to meet with Rios, a somewhat-tortured former Starfleet commander. Meanwhile, Soji is given the opportunity to interview Ramdha, a Romulan ex-Borg who seems quite disturbed by Soji's visit.<span class="spoilerContent"> Ramdha calls her &ldquo;The Destroyer,&rdquo; as does another Romulan member of a hit squad sent to attack Picard at his château.</span> Jurati is questioned by Commodore Oh and decides that she's going to join Picard on his search for Bruce Maddox, and Raffi hitches a ride, as well, because she wants passage to Freecloud for reasons she won't discuss. So, the gang assembles on Rios' ship, <em>La&nbsp;Sirena</em>, and they warp off to adventure.
+							Raffi's life has been falling apart in the last 14 years and she is not at all happy to be speaking with Picard again. Still, he pushes her on the urgency of the situation and implores her for her help in procuring a ship and pilot. She reluctantly arranges for him to meet with Rios, a somewhat-tortured former Starfleet commander. Meanwhile, Soji is given the opportunity to interview Ramdha, a Romulan ex-Borg who seems quite disturbed by Soji's visit.<span class="spoilerContent"> Ramdha calls her &ldquo;The Destroyer&rdquo;, as does another Romulan member of a hit squad sent to attack Picard at his château.</span> Jurati is questioned by Commodore Oh and decides that she's going to join Picard on his search for Bruce Maddox, and Raffi hitches a ride, as well, because she wants passage to Freecloud for reasons she won't discuss. So, the gang assembles on Rios' ship, <em>La&nbsp;Sirena</em>, and they warp off to adventure.
 						</div></td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -645,7 +651,7 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td>
-								<div class="distinctions"><span class="spoilerContent"><img src="images/gs-hugh.png" style="height:180px" alt="A Starfleet Delta labeled 'Guest Star' with a photo of Hugh as a Borg drone"></span></div>
+								<div class="distinctions"><span class="spoilerContent"><img src="images/gs-hugh.webp" style="height:180px" alt="A Starfleet Delta labeled 'Guest Star' with a photo of Hugh as a Borg drone"></span></div>
 								<div class="distinctionDescriptions">
 										<span class="spoilerPlaceholder">( +1 spoiler )</span>
 										<span class="spoilerContent"  style="color:#eea432"><strong>Guest Star: </strong> Hugh</span>
@@ -671,7 +677,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-3.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 3"><br>
+							<img src="images/nm-3.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 3"><br>
 							<span class="nostalgiaText3">I Got Hugh Under My Skin</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -695,13 +701,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e04" class="episodeCard">
-		<img src="images/pic-1x04.png" class="episodeCardBG" alt="Picard and Elnor having a conversation">
-		<img src="images/pic-1x04b.png" class="episodeCardBG2" alt="Picard and a Romulan preparing to have a sword fight">
+		<img src="images/pic-1x04.webp" class="episodeCardBG" alt="Picard and Elnor having a conversation">
+		<img src="images/pic-1x04b.webp" class="episodeCardBG2" alt="Picard and a Romulan preparing to have a sword fight">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.png" width="36"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.webp" width="36"></td>
 						<td class="seasonEpisodeNumberBox">1x04</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>13 Feb 2020</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>4</strong></td>
@@ -813,7 +819,7 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td>
-								<div class="distinctions"><img src="images/f-bomb.png" height="180" alt="A Starfleet Delta labeled 'F-Bomb' with a photo of Admiral Clancy yelling"></div>
+								<div class="distinctions"><img src="images/f-bomb.webp" height="180" alt="A Starfleet Delta labeled 'F-Bomb' with a photo of Admiral Clancy yelling"></div>
 								<div class="distinctionDescriptions">
 									<strong>F-Bomb: </strong> Rios<br>
 								</div>
@@ -839,7 +845,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-1.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 1"><br>
+							<img src="images/nm-1.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 1"><br>
 							<span class="nostalgiaText1">Don't bring a sword to a phaser fight</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -863,13 +869,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e05" class="episodeCard">
-		<img src="images/pic-1x05.png" class="episodeCardBG" alt="Picard, with an eye patch and beret, speaking with disgust about Seven of Nine">
-		<img src="images/pic-1x05b.png" class="episodeCardBG2" alt="Seven of Nine holding two phaser rifles">
+		<img src="images/pic-1x05.webp" class="episodeCardBG" alt="Picard, with an eye patch and beret, speaking with disgust about Seven of Nine">
+		<img src="images/pic-1x05b.webp" class="episodeCardBG2" alt="Seven of Nine holding two phaser rifles">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.png" width="36"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.webp" width="36"></td>
 						<td class="seasonEpisodeNumberBox">1x05</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>20 Feb 2020</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>5</strong></td>
@@ -983,9 +989,9 @@
 							<td>&nbsp;</td>
 							<td>
 								<div class="distinctions">
-									<img src="images/tng.png" height="180" alt="A Starfleet Delta labeled 'The Nostalgic Generation' with an image of Picard hugging Riker and Troi">
-									<span class="spoilerContent"><img src="images/unceremonious.png" style="height:180px" alt="A Starfleet Delta labeled 'Unceremonious End' with a photo of B-4's body in a drawer"></span>
-									<img src="images/subtle.png" height="180" alt="A Starfleet Delta labeled 'Subtle Continuity' with a photo of a cortical node">
+									<img src="images/tng.webp" height="180" alt="A Starfleet Delta labeled 'The Nostalgic Generation' with an image of Picard hugging Riker and Troi">
+									<span class="spoilerContent"><img src="images/unceremonious.webp" style="height:180px" alt="A Starfleet Delta labeled 'Unceremonious End' with a photo of B-4's body in a drawer"></span>
+									<img src="images/subtle.webp" height="180" alt="A Starfleet Delta labeled 'Subtle Continuity' with a photo of a cortical node">
 								</div>
 								<div class="distinctionDescriptions">
 									<strong>The Nostalgic Generation: </strong><em>Voyager</em> Theme Song<br><br>
@@ -1018,7 +1024,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-4.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 4"><br>
+							<img src="images/nm-4.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 4"><br>
 							<span class="nostalgiaText4">Seven out of Nine</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -1042,13 +1048,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e06" class="episodeCard">
-		<img src="images/pic-1x06.png" class="episodeCardBG" alt="a closeup of Soji's face, with Narek not far behind">
-		<img src="images/pic-1x06b.png" class="episodeCardBG2" alt="parts of a human-sized wooden doll lying on a table with Soji's face">
+		<img src="images/pic-1x06.webp" class="episodeCardBG" alt="a closeup of Soji's face, with Narek not far behind">
+		<img src="images/pic-1x06b.webp" class="episodeCardBG2" alt="parts of a human-sized wooden doll lying on a table with Soji's face">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.png" width="36"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.webp" width="36"></td>
 						<td class="seasonEpisodeNumberBox">1x06</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>27 Feb 2020</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>6</strong></td>
@@ -1159,7 +1165,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-2.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 2"><br>
+							<img src="images/nm-2.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 2"><br>
 							<span class="nostalgiaText2">xB besties!</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -1183,13 +1189,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e07" class="episodeCard">
-		<img src="images/pic-1x07.png" class="episodeCardBG" alt="Picard, Soji, Kestra, and two others, sitting around a candle-lit dinner table">
-		<img src="images/pic-1x07b.png" class="episodeCardBG2" alt="Picard and Riker sitting on a bench on a short pier on a lake">
+		<img src="images/pic-1x07.webp" class="episodeCardBG" alt="Picard, Soji, Kestra, and two others, sitting around a candle-lit dinner table">
+		<img src="images/pic-1x07b.webp" class="episodeCardBG2" alt="Picard and Riker sitting on a bench on a short pier on a lake">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.png" width="36"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.webp" width="36"></td>
 						<td class="seasonEpisodeNumberBox">1x07</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>5 Mar 2020</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>7</strong></td>
@@ -1265,7 +1271,7 @@
 									<li>Kestra says that Data wanted to have dreams, tell jokes, and learn how to ballroom dance. Data did all three of these things in the episodes <a href="/tng/tng-s6.html#e16">TNG 6x16: Birthright, Part I</a>, <a href="/tng/tng-s2.html#e04">TNG 2x04: The Outrageous Okona</a>, and <a href="/tng/tng-s4.html#e11">TNG 4x11: Data's Day</a>, respectively.</li>
 									<li class="spoilerPlaceholder">( +3 spoilers )</li>
 									<li class="spoilerContent">Will and Deanna's daughter Kestra is named after Deanna's older sister who died at age six, when Deanna was just a baby. The story of this tragic loss is told in <a href="/tng/tng-s7.html#e07">TNG 7x07: Dark Page</a>.</li>
-									<li class="spoilerContent">Riker calls Deanna &ldquo;imzadi,&rdquo; a word that means &ldquo;beloved&rdquo; in Deanna's native language from her homeworld of Betazed. Deanna calls Riker imzadi in the very first episode of <em>The&nbsp;Next&nbsp;Generation</em>, <a href="/tng/tng-s1.html#e01">TNG 1x01/02: Encounter at Farpoint</a>.</li>
+									<li class="spoilerContent">Riker calls Deanna &ldquo;imzadi&rdquo;, a word that means &ldquo;beloved&rdquo; in Deanna's native language from her homeworld of Betazed. Deanna calls Riker imzadi in the very first episode of <em>The&nbsp;Next&nbsp;Generation</em>, <a href="/tng/tng-s1.html#e01">TNG 1x01/02: Encounter at Farpoint</a>.</li>
 									<li class="spoilerContent">Non-reference: The last we saw Riker and Troi was in <a href="/films/nemesis.html"><em>Star Trek Nemesis</em></a>, just after they had been married. So all of the story behind their two children, Thad and Kestra, is all new material.</li>
 								</ul>
 							</td>
@@ -1291,7 +1297,7 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td>
-								<div class="distinctions"><img src="images/f-bomb.png" height="180" alt="A Starfleet Delta labeled 'F-Bomb' with a photo of Admiral Clancy yelling"><span class="spoilerContent"><img src="images/unceremonious.png" style="height:180px" alt="A Starfleet Delta labeled 'Unceremonious End' with a photo of B-4's body in a drawer"><img src="images/rts-riker.png" style="height:180px" alt="A Starfleet Delta labeled 'Return To Service' with a photo of Will Riker"><img src="images/rts-troi.png" style="height:180px" alt="A Starfleet Delta labeled 'Return To Service' with a photo of Deanna Troi"></span></div>
+								<div class="distinctions"><img src="images/f-bomb.webp" height="180" alt="A Starfleet Delta labeled 'F-Bomb' with a photo of Admiral Clancy yelling"><span class="spoilerContent"><img src="images/unceremonious.webp" style="height:180px" alt="A Starfleet Delta labeled 'Unceremonious End' with a photo of B-4's body in a drawer"><img src="images/rts-riker.webp" style="height:180px" alt="A Starfleet Delta labeled 'Return To Service' with a photo of Will Riker"><img src="images/rts-troi.webp" style="height:180px" alt="A Starfleet Delta labeled 'Return To Service' with a photo of Deanna Troi"></span></div>
 								<div class="distinctionDescriptions">
 									<strong>F-Bomb: </strong>Jurati<br><br>
 									<span class="spoilerPlaceholder">( +3 spoilers )</span>
@@ -1324,7 +1330,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-5.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 5"><br>
+							<img src="images/nm-5.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 5"><br>
 							<span class="nostalgiaText5">So many hugs!</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -1348,13 +1354,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e08" class="episodeCard">
-		<img src="images/pic-1x08.png" class="episodeCardBG" alt="Eleven black-hooded figures stand around a glowing altar on a dusty planet">
-		<img src="images/pic-1x08b.png" class="episodeCardBG2" alt="a closeup of Seven of Nine with green-glowing eyes">
+		<img src="images/pic-1x08.webp" class="episodeCardBG" alt="Eleven black-hooded figures stand around a glowing altar on a dusty planet">
+		<img src="images/pic-1x08b.webp" class="episodeCardBG2" alt="a closeup of Seven of Nine with green-glowing eyes">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.png" width="36"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.webp" width="36"></td>
 						<td class="seasonEpisodeNumberBox">1x08</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>12 Mar 2020</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>8</strong></td>
@@ -1371,7 +1377,7 @@
 					</tr>
 					<tr>
 						<td class="summaryBox"><div class="summary" id="tts8a"> 
-							14 years ago, in an octonary star system, on Aia, &ldquo;The Grief World,&rdquo; eleven figures in black cloaks encircle a glowing altar. Among them are Narissa and Ramdha, and they experience what the Romulans call &ldquo;The Admonition&rdquo;. It warns of the Destroyers and the synthetic life forms that gave rise to them thousands of centuries ago. Narissa and Ramdha, as members of the Zhat Vash, are vowed to prevent it from happening again. The Admonition is the vision that Commodore Oh showed to Jurati and it has been the driving force behind her behavior until now. She awakens in sickbay on <em>La&nbsp;Sirena</em>, and she agrees to turn herself in for the murder of Bruce Maddox. Meanwhile, Rios has gone into hiding in his cabin immediately after beaming up Picard and Soji from Nepenthe. Something about the sight of Soji sent him on a downward spiral, and Raffi interrogates the five emergency holograms that run the ship to try and get to the bottom of it. Over on the Artifact, Seven of Nine takes control of the cube and the remaining Borg on board, in order to oust the Romulans.<span class="spoilerContent"> Unfortunately, most of the Borg are killed before the Romulans leave for Soji's homeworld, anyway. Rios finally explains that on the <em>ibn Majid</em>, he and his captain picked up two people in the Vayt sector, when suddenly the captain shot and killed them both, and later killed himself, as well. One of those two passengers was named Jana, and she looked identical to Soji. The gang discuss everything they've learned up to this point, and finally they change course and also head for Soji's homeworld.</span>
+							14 years ago, in an octonary star system, on Aia, &ldquo;The Grief World&rdquo;, eleven figures in black cloaks encircle a glowing altar. Among them are Narissa and Ramdha, and they experience what the Romulans call &ldquo;The Admonition&rdquo;. It warns of the Destroyers and the synthetic life forms that gave rise to them thousands of centuries ago. Narissa and Ramdha, as members of the Zhat Vash, are vowed to prevent it from happening again. The Admonition is the vision that Commodore Oh showed to Jurati and it has been the driving force behind her behavior until now. She awakens in sickbay on <em>La&nbsp;Sirena</em>, and she agrees to turn herself in for the murder of Bruce Maddox. Meanwhile, Rios has gone into hiding in his cabin immediately after beaming up Picard and Soji from Nepenthe. Something about the sight of Soji sent him on a downward spiral, and Raffi interrogates the five emergency holograms that run the ship to try and get to the bottom of it. Over on the Artifact, Seven of Nine takes control of the cube and the remaining Borg on board, in order to oust the Romulans.<span class="spoilerContent"> Unfortunately, most of the Borg are killed before the Romulans leave for Soji's homeworld, anyway. Rios finally explains that on the <em>ibn Majid</em>, he and his captain picked up two people in the Vayt sector, when suddenly the captain shot and killed them both, and later killed himself, as well. One of those two passengers was named Jana, and she looked identical to Soji. The gang discuss everything they've learned up to this point, and finally they change course and also head for Soji's homeworld.</span>
 						</div></td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1447,7 +1453,7 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td>
-								<div class="distinctions"><img src="images/f-bomb.png" height="180" alt="A Starfleet Delta labeled 'F-Bomb' with a photo of Admiral Clancy yelling"></div>
+								<div class="distinctions"><img src="images/f-bomb.webp" height="180" alt="A Starfleet Delta labeled 'F-Bomb' with a photo of Admiral Clancy yelling"></div>
 								<div class="distinctionDescriptions">
 									<strong>F-Bomb: </strong>Admiral Clancy, Jurati<br><br>
 								</div>
@@ -1473,7 +1479,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-2.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 2"><br>
+							<img src="images/nm-2.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 2"><br>
 							<span class="nostalgiaText2">We are Borg</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -1497,13 +1503,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e09" class="episodeCard">
-		<img src="images/pic-1x09.png" class="episodeCardBG" alt="Sutra speaking with Soji while others observe">
-		<img src="images/pic-1x09b.png" class="episodeCardBG2" alt="General Oh on the bridge of a Romulan ship">
+		<img src="images/pic-1x09.webp" class="episodeCardBG" alt="Sutra speaking with Soji while others observe">
+		<img src="images/pic-1x09b.webp" class="episodeCardBG2" alt="General Oh on the bridge of a Romulan ship">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.png" width="36"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.webp" width="36"></td>
 						<td class="seasonEpisodeNumberBox">1x09</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>19 Mar 2020</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>9</strong></td>
@@ -1613,7 +1619,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-2.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 2"><br>
+							<img src="images/nm-2.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 2"><br>
 							<span class="nostalgiaText2">*.Soong</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -1637,13 +1643,13 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e10" class="episodeCard">
-		<img src="images/pic-1x10.png" class="episodeCardBG" alt="Picard, looking stressed as he pilots La Sirena">
-		<img src="images/pic-1x10b.png" class="episodeCardBG2" alt="Picard, sitting alone in his study, with a dark grey pall over everything">
+		<img src="images/pic-1x10.webp" class="episodeCardBG" alt="Picard, looking stressed as he pilots La Sirena">
+		<img src="images/pic-1x10b.webp" class="episodeCardBG2" alt="Picard, sitting alone in his study, with a dark grey pall over everything">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
 					<tr>
-						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.png" width="36"></td>
+						<td rowspan="3" class="combadgeBox"><img alt="La Sirena insignia" src="images/la_sirena_insignia.webp" width="36"></td>
 						<td class="seasonEpisodeNumberBox">1x10</td>
 						<td class="airDateBox"><span class="x-small">Original Air Date</span><br><strong>26 Mar 2020</strong></td>
 						<td class="SepisodeNumberBox"><span class="x-small">Series Episode</span><br><strong>10</strong></td>
@@ -1660,7 +1666,7 @@
 					</tr>
 					<tr>
 						<td class="summaryBox"><div class="summary" id="tts10a">
-							<p><span class="spoilerContent"><strong>Act I:</strong> </span>The synths, specifically Soji, are building a beacon tower in order to contact the &ldquo;uber-synths,&rdquo; and Picard has been locked away so he can't meddle with the effort. Fortunately, Narek has had a change of heart and after collecting some grenades from the Borg Artifact, he meets with Rios and Raffi at <em>La&nbsp;Sirena</em> and suggests they work together to destroy the beacon. As they regain access to the settlement with a concealed grenade, Jurati has engineered a prison break for Picard and they head back to <em>La&nbsp;Sirena</em>. The Romulans are only minutes away, so Picard takes the ship into orbit, hoping to find some way to delay them until Starfleet can arrive.<span class="spoilerContent"> With time running out, Rios launches the grenade, but Soji is able to intercept it and prevent any damage to the tower. As the Romulan fleet arrives, some of the giant orchid defenses rise up to keep them busy for a little while, and Soji activates the beacon, opening a portal. Once the orchids are defeated, Jurati finds a way to create hundreds of echoes of <em>La&nbsp;Sirena</em>, again delaying the Romulan assault. When that ruse fails, Picard makes one last entreaty for Soji to change her mind. She does, shutting down the portal and preventing some nasty-looking mechanical tentacles from invading, and just in time for a fleet of Starfleet ships to arrive and protect the planet from the Romulans.</span></p>
+							<p><span class="spoilerContent"><strong>Act I:</strong> </span>The synths, specifically Soji, are building a beacon tower in order to contact the &ldquo;uber-synths&rdquo;, and Picard has been locked away so he can't meddle with the effort. Fortunately, Narek has had a change of heart and after collecting some grenades from the Borg Artifact, he meets with Rios and Raffi at <em>La&nbsp;Sirena</em> and suggests they work together to destroy the beacon. As they regain access to the settlement with a concealed grenade, Jurati has engineered a prison break for Picard and they head back to <em>La&nbsp;Sirena</em>. The Romulans are only minutes away, so Picard takes the ship into orbit, hoping to find some way to delay them until Starfleet can arrive.<span class="spoilerContent"> With time running out, Rios launches the grenade, but Soji is able to intercept it and prevent any damage to the tower. As the Romulan fleet arrives, some of the giant orchid defenses rise up to keep them busy for a little while, and Soji activates the beacon, opening a portal. Once the orchids are defeated, Jurati finds a way to create hundreds of echoes of <em>La&nbsp;Sirena</em>, again delaying the Romulan assault. When that ruse fails, Picard makes one last entreaty for Soji to change her mind. She does, shutting down the portal and preventing some nasty-looking mechanical tentacles from invading, and just in time for a fleet of Starfleet ships to arrive and protect the planet from the Romulans.</span></p>
 							
 							<div class="spoilerContent"><p><strong>Act II:</strong> Picard's heroism has come at a cost: his brain abnormality has finally reached a critical point. After the battle, he collapses and is beamed down to the planet where he can say his goodbyes before closing his eyes for the last time. Oddly, he opens them again in his château study, but there's a dark gray pall over everything. There, he meets Data, who explains that his consciousness has been reconstituted from a single neuron from B-4, by Bruce Maddox. They talk for a time, and Data finally says that Soong and Jurati have successfully transferred Picard's consciousness to the golem, so it is time for him to go. Data asks one last favor: to end his consciousness – he wants to experience the finiteness of life. And so, with his new android body, Picard grants his dear friend's request, disconnecting the components from the machine as Data listens to &ldquo;Blue Skies&rdquo; one last time. Finally, everyone gathers back on <em>La&nbsp;Sirena</em> and warps off to new adventures.</p></div>
 						</div></td>
@@ -1688,7 +1694,7 @@
 							<td>&nbsp;</td>
 							<td><div class="thoughts" id="tts10b">
 								<p>Ooof, okay, let's get into this, shall we? We sort of have the elements of a finale, here. A big bad space fleet is on the way, time is running out, yadda yadda... but somehow it just doesn't quite feel right.</p>
-								<p><span class="spoilerPlaceholder">Since this is the series finale, the rest of my thoughts are probably going to be spoilers.</span><span class="spoilerContent">First we have Soji, who was at first very skeptical at the idea of contacting the &ldquo;uber-synths,&rdquo; but is now hellbent on doing it for some reason. We have Elnor and Narek's really bad plan to do hand-to-hand combat with androids in order to distract them from Rios hesitating to throw a bomb, and they ultimately just fail. We have Jurati who is really angry at Soong for some reason, and who uses a magic ocarina-looking thing to conjure up hundreds of fake ships. And of course we have Soji who changes her mind <em>again</em> at the last moment, saving everyone from certain doom. Even General Oh, who has devoted her life to this very moment, a cause so deeply ingrained one might even call it &ldquo;spiritual&rdquo; &ndash; even she decides to give up on the culmination of her life's work and just retreat back home. I don't believe that for a second. I believe she would have gone down fighting for her cause.</span></p>
+								<p><span class="spoilerPlaceholder">Since this is the series finale, the rest of my thoughts are probably going to be spoilers.</span><span class="spoilerContent">First we have Soji, who was at first very skeptical at the idea of contacting the &ldquo;uber-synths&rdquo;, but is now hellbent on doing it for some reason. We have Elnor and Narek's really bad plan to do hand-to-hand combat with androids in order to distract them from Rios hesitating to throw a bomb, and they ultimately just fail. We have Jurati who is really angry at Soong for some reason, and who uses a magic ocarina-looking thing to conjure up hundreds of fake ships. And of course we have Soji who changes her mind <em>again</em> at the last moment, saving everyone from certain doom. Even General Oh, who has devoted her life to this very moment, a cause so deeply ingrained one might even call it &ldquo;spiritual&rdquo; &ndash; even she decides to give up on the culmination of her life's work and just retreat back home. I don't believe that for a second. I believe she would have gone down fighting for her cause.</span></p>
 								
 								<div class="spoilerContent"><p>Then, of course, we have Picard's death... but there's going to be 2 more seasons of <em>Star Trek: Picard</em> so obviously he can't <em>STAY</em> dead. It's a good thing Jurati was able to finish Maddox's work on memory transfer in the few hours she was there. I'm just not sure what the benefit is to the overall story to do a dead-but-not-dead thing. Oh well. Finally, we do have a more fitting end for Data &ndash; at least, it provides more satisfying closure than his original death in <a href="/films/nemesis.html"><em>Star Trek Nemesis</em></a>. I will give the writers props for that.</p>
 								
@@ -1717,11 +1723,11 @@
 							<td>&nbsp;</td>
 							<td class="references" id="tts10c">
 								<ul>
-									<li>Jurati says, &ldquo;Make it so,&rdquo; which is one of Picard's signature orders from his time on the <em>Enterprise</em>.</li>
-									<li>Jurati brings up the &ldquo;Picard Maneuver,&rdquo; a battle tactic where Picard made the <em>Stargazer</em> appear to be in two places at once, fooling his enemy. The story of this battle is told in <a href="/tng/tng-s1.html#e09">TNG 1x09: The Battle</a>.</li>
+									<li>Jurati says, &ldquo;Make it so&rdquo;, which is one of Picard's signature orders from his time on the <em>Enterprise</em>.</li>
+									<li>Jurati brings up the &ldquo;Picard Maneuver&rdquo;, a battle tactic where Picard made the <em>Stargazer</em> appear to be in two places at once, fooling his enemy. The story of this battle is told in <a href="/tng/tng-s1.html#e09">TNG 1x09: The Battle</a>.</li>
 									<li>The Treaty of Algeron is invoked when confronting General Oh. The treaty was signed 88 years prior, establishing the neutral zone between the United Federation of Planets and the Romulan Star Empire.</li>
 									<li class="spoilerPlaceholder">( +1 spoiler )</li>
-									<li class="spoilerContent">Data listens to &ldquo;Blue Skies&rdquo; in his final scene. He sang this song at Riker and Troi's wedding in <a href="/films/nemesis.html"><em>Star Trek Nemesis</em></a>, a few days before his (first) death. The version of the song he listens to here is sung by <a href="https://memory-alpha.fandom.com/wiki/Isa_Briones" target="_blank">Isa Briones</a>, the actor who plays Data's &ldquo;daughters,&rdquo; Dahj and Soji.</li>
+									<li class="spoilerContent">Data listens to &ldquo;Blue Skies&rdquo; in his final scene. He sang this song at Riker and Troi's wedding in <a href="/films/nemesis.html"><em>Star Trek Nemesis</em></a>, a few days before his (first) death. The version of the song he listens to here is sung by <a href="https://memory-alpha.fandom.com/wiki/Isa_Briones" target="_blank">Isa Briones</a>, the actor who plays Data's &ldquo;daughters&rdquo;, Dahj and Soji.</li>
 									<li>In the final scene, Picard does his signature &ldquo;engage&rdquo; maneuver as the theme music from <a href="/tng/index.html"><em>Star Trek: The Next Generation</em></a> plays.
 								</ul>
 							</td>
@@ -1764,7 +1770,7 @@
 						<tr>
 							<td>&nbsp;</td>
 							<td>
-								<div class="distinctions"><img src="images/f-bomb.png" height="180" alt="A Starfleet Delta labeled 'F-Bomb' with a photo of Admiral Clancy yelling"><span class="spoilerContent"><img src="images/tng.png" height="180" alt="A Starfleet Delta labeled 'The Nostalgic Generation' with an image of Picard hugging Riker and Troi"><img src="images/laz-bw.png" height="180" alt="A Starfleet Delta labeled 'Unceremonious Lazarus' with a picture of Picard waking up in his new golem body"><img src="images/ceremonious.png" height="180" alt="A Starfleet Delta labeled 'Ceremonious End' with a photo of Data in a smoking jacket enjoying a drink"></span></div>
+								<div class="distinctions"><img src="images/f-bomb.webp" height="180" alt="A Starfleet Delta labeled 'F-Bomb' with a photo of Admiral Clancy yelling"><span class="spoilerContent"><img src="images/tng.webp" height="180" alt="A Starfleet Delta labeled 'The Nostalgic Generation' with an image of Picard hugging Riker and Troi"><img src="images/laz-bw.webp" height="180" alt="A Starfleet Delta labeled 'Unceremonious Lazarus' with a picture of Picard waking up in his new golem body"><img src="images/ceremonious.webp" height="180" alt="A Starfleet Delta labeled 'Ceremonious End' with a photo of Data in a smoking jacket enjoying a drink"></span></div>
 								<div class="distinctionDescriptions">
 									<strong>F-Bomb: </strong>Narissa, Rios<br><br>
 									<span class="spoilerPlaceholder">( +3 spoilers )</span>
@@ -1804,7 +1810,7 @@
 						<td>&nbsp;</td>
 						<td class="nostalgiaMeterBox" rowspan="3">
 							<span class="nostalgiaMeterTitle">Nostalgia Meter</span><br>
-							<img src="images/nm-5.png" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 5"><br>
+							<img src="images/nm-5.webp" style="width:100px;margin-top:6px" alt="a meter ranging from 1-5 with a pointer indicating number 5"><br>
 							<span class="nostalgiaText5">Nothing but blue skies</span>
 						</td>
 						<td class="ScoreBox" rowspan="3">FINAL SCORE<br>
@@ -1838,7 +1844,7 @@
 		
 		<div class="serif" id="tts1">
 		
-		<img src="images/s1_daughter.png" style="width:350px;float:right;margin-left:16px;" alt="A close-up of Data's painting titled 'Daughter'">
+		<img src="images/s1_daughter.webp" style="width:350px;float:right;margin-left:16px;" alt="A close-up of Data's painting titled 'Daughter'">
 		
 		<p>Season One of <em>Picard</em> suffers from jumbled storytelling and the introduction of elements that exist only long enough to further the plot. One example of the latter includes Doctor Naáshala Kunamadéstifee, who gets an introduction and a decent amount of screen-time in one episode, but is never seen again. Another example are the &ldquo;gradient badges&rdquo; worn by the workers on the Borg artifact. They were introduced and then never used, violating the <a href="https://en.wikipedia.org/wiki/Chekhov%27s_gun" target="_blank"><em>Chekhov's gun</em></a> principle. There is a split second where one of the badges lights up, so I suspect that their intended use for the story ended up on the cutting room floor. There's also that little Fenris SOS dongle that is introduced, just so we know what it is when Elnor conveniently finds another one on the Borg cube. Even poor Icheb was brought in, just to be thrown away again once he established Seven's motivations. And of course, there are the stupidly-convenient elements needed for the two-part finale, including the handheld magic imagination device, and the fact that a non-Vulcan android can somehow perform a Vulcan mind-meld.</p>
 		
@@ -1868,7 +1874,7 @@
 				</td>
 				<td>&nbsp;</td>
 				<td class="SeasonPlaceBox" style="">FINAL VERDICT<br>
-					<img src="images/3rd.png" style="height:150px" alt="a white, third-place ribbon"><br>
+					<img src="images/3rd.webp" style="height:150px" alt="a white, third-place ribbon"><br>
 					Third Place<br>
 					out of 3 seasons
 				</td>
@@ -1882,7 +1888,7 @@
 <a href="pic-s3.html">Season 3</a></h3>
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
 
-<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 <div id="TTDIV">
 	<div id="FepisodeToolTip" class="tooltip" onClick="closeToolTip(this)">"Franchise Episode" tells you the order in which episodes from ANY/ALL Star Trek television shows aired or streamed for the first time. This number excludes movies, TOS's "The Cage", and the "Very Short Treks" web shorts.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>

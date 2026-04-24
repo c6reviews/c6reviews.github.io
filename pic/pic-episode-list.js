@@ -45,15 +45,15 @@ function createTable(array) {
 				case 2:
 					cellClass = "col_distinctions";
 					cell = "<div style='display:flex;align-items:center;gap:8px'><div>" + cell;
-					cell = cell.replaceAll("(GD)","<img src='images/minidelta-gold.png' style='margin:0px 2px;' alt='a small, gold Starfleet Delta '>");
-					cell = cell.replaceAll("(SD)","<img src='images/minidelta-silver.png' style='margin:0px 2px;' alt='a small, silver Starfleet Delta '>");
+					cell = cell.replaceAll("(GD)","<img src='images/minidelta-gold.webp' style='margin:0px 2px;' alt='a small, gold Starfleet Delta '>");
+					cell = cell.replaceAll("(SD)","<img src='images/minidelta-silver.webp' style='margin:0px 2px;' alt='a small, silver Starfleet Delta '>");
 					cell = cell.replaceAll("|","</div><div>");
 					cell += "</div>"
 					break;
 				case 3:
 					cellClass = "col_nostalgiaMeter";
 					let num = cell;
-					cell = "<img src='images/nm-"+num+".png' style='width:75px;margin:0;' alt='a meter ranging from 1-5 with a pointer indicating number "+num+"'>";
+					cell = "<img src='images/nm-"+num+".webp' style='width:75px;margin:0;' alt='a meter ranging from 1-5 with a pointer indicating number "+num+"'>";
 					break;
 				case 4:
 					cellClass = "col_episodeRating";

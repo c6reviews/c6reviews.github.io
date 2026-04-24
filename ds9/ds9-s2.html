@@ -3,6 +3,7 @@
 
 <head>
 
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
@@ -17,6 +18,11 @@
 	});
 	var host = window.location.hostname;
 	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
 		gtag('js', new Date());
 		gtag('config', 'G-DM44X85QLJ');
 	}
@@ -24,19 +30,19 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="/main.css?v=1.5.2">
-<link rel="stylesheet" href="ds9.css?v=1.5.2">
-<link rel="stylesheet" href="ds9-episode-guides.css?v=1.5.2">
+<link rel="stylesheet" href="/main.css?v=1.6">
+<link rel="stylesheet" href="ds9.css?v=1.6">
+<link rel="stylesheet" href="ds9-episode-guides.css?v=1.6">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <meta property="og:title" content="DS9 Season 2 | C6Reviews">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://c6reviews.com/ds9/images/ogimage.png">
+<meta property="og:image" content="https://c6reviews.com/ds9/images/ogimage.webp">
 <meta property="og:url" content="https://c6reviews.com/ds9/ds9-s2.html">
 <meta property="og:description" content="Episode reviews and guides for Star Trek: Deep Space Nine, Season 2.">
 
-<script src="ds9.js"></script>
-<script src="/cookies.js"></script>
+<script src="ds9.js?v=1.6"></script>
+<script src="/cookies.js?v=1.6"></script>
 <title>C6 | DS9 Season 2</title>
 </head>
 
@@ -44,15 +50,15 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.png" alt="c6reviews"></a></div>
-<div class="pageTitleImage"><img src="images/ds9-header.png" alt="Deep Space Nine station and title"></div>
+<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+<div class="pageTitleImage"><img src="images/ds9-header.webp" alt="Deep Space Nine station and title"></div>
 <div class="pageTitleContainer">
 	<div class="pageTitle">
-		<a href="/index.html"><img src="/images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br><em>Star Trek: Deep Space Nine</em>
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br><em>Star Trek: Deep Space Nine</em>
 		<span class="pageSubtitle">Season 2 Episode Guides</span>
 	</div>
 </div>
-<div class="c6Right"><a href="/index.html"><img src="/images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 <h3 class="seasonNav"><a href="ds9-episode-list.html">Full Episode List</a><br><a href="ds9-s1.html">Season 1</a> • <span class="activeSeason"><a href="ds9-s2.html">Season 2</a></span> • 
 <a href="ds9-s3.html">Season 3</a> • <a href="ds9-s4.html">Season 4</a> • <a href="ds9-s5.html">Season 5</a> • <a href="ds9-s6.html">Season 6</a> • <a href="ds9-s7.html">Season 7</a></h3>
@@ -65,7 +71,7 @@
 <div id="mainSidenav" class="sidenav">
 	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	<a href="index.html"><span style="font-size:large">←</span> DS9 Episode Guide Home</a><br>
-	<a href="index.html"><img src="/images/ds9-title.png" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="ds9 logo"></a><br>
+	<a href="index.html"><img src="/images/ds9-title.webp" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="ds9 logo"></a><br>
 	<a href="ds9-episode-list.html" style="text-align:center">Full Episode List</a>
 	<div class="sidenavseasons">
 		Season: 
@@ -106,7 +112,7 @@
 	</div>
 	
 	<div id="e01" class="episodeCard">
-		<img src="images/ds9-2x01.png" class="episodeCardBG" alt="Kira helping stumbling prisoners escape">
+		<img src="images/ds9-2x01.webp" class="episodeCardBG" alt="Kira helping stumbling prisoners escape">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -118,7 +124,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>273</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">The Homecoming</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -194,7 +200,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e02" class="episodeCard">
-		<img src="images/ds9-2x02.png" class="episodeCardBG" alt="Sisko observing a Bajoran military general">
+		<img src="images/ds9-2x02.webp" class="episodeCardBG" alt="Sisko observing a Bajoran military general">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -206,7 +212,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>275</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">The Circle</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -283,7 +289,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e03" class="episodeCard">
-		<img src="images/ds9-2x03.png" class="episodeCardBG" alt="Bashir, Quark, and others in a cramped maintenance tube">
+		<img src="images/ds9-2x03.webp" class="episodeCardBG" alt="Bashir, Quark, and others in a cramped maintenance tube">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -295,7 +301,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>277</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">The Siege</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -375,7 +381,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e04" class="episodeCard">
-		<img src="images/ds9-2x04.png" class="episodeCardBG" alt="Jadzia Dax and another Trill in sickbay awaiting surgery">
+		<img src="images/ds9-2x04.webp" class="episodeCardBG" alt="Jadzia Dax and another Trill in sickbay awaiting surgery">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -387,7 +393,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>279</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Invasive Procedures</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -467,7 +473,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e05" class="episodeCard">
-		<img src="images/ds9-2x05.png" class="episodeCardBG" alt="A Cardassian boy watching Sisko and Dukat argue">
+		<img src="images/ds9-2x05.webp" class="episodeCardBG" alt="A Cardassian boy watching Sisko and Dukat argue">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -479,7 +485,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>281</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Cardassians</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -559,7 +565,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e06" class="episodeCard">
-		<img src="images/ds9-2x06.png" class="episodeCardBG" alt="Bashir and Melora floating in zero-G">
+		<img src="images/ds9-2x06.webp" class="episodeCardBG" alt="Bashir and Melora floating in zero-G">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -571,7 +577,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>283</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Melora</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -644,7 +650,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e07" class="episodeCard">
-		<img src="images/ds9-2x07.png" class="episodeCardBG" alt="Quark and his assistant negotiating with two aliens">
+		<img src="images/ds9-2x07.webp" class="episodeCardBG" alt="Quark and his assistant negotiating with two aliens">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -656,7 +662,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>285</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Rules of Acquisition</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -724,7 +730,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e08" class="episodeCard">
-		<img src="images/ds9-2x08.png" class="episodeCardBG" alt="Odo questioning a mysterious woman">
+		<img src="images/ds9-2x08.webp" class="episodeCardBG" alt="Odo questioning a mysterious woman">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -736,7 +742,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>287</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Necessary Evil</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -813,7 +819,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e09" class="episodeCard">
-		<img src="images/ds9-2x09.png" class="episodeCardBG" alt="Sisko and a young woman enjoying a view of the station">
+		<img src="images/ds9-2x09.webp" class="episodeCardBG" alt="Sisko and a young woman enjoying a view of the station">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -825,7 +831,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>289</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Second Sight</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -905,7 +911,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e10" class="episodeCard">
-		<img src="images/ds9-2x10.png" class="episodeCardBG" alt="Several aliens asking Kira for help">
+		<img src="images/ds9-2x10.webp" class="episodeCardBG" alt="Several aliens asking Kira for help">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -917,7 +923,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>291</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Sanctuary</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -997,7 +1003,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e11" class="episodeCard">
-		<img src="images/ds9-2x11.png" class="episodeCardBG" alt="A man showing Quark a strange hand-held device from across the bar">
+		<img src="images/ds9-2x11.webp" class="episodeCardBG" alt="A man showing Quark a strange hand-held device from across the bar">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1009,7 +1015,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>293</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Rivals</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1081,7 +1087,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e12" class="episodeCard">
-		<img src="images/ds9-2x12.png" class="episodeCardBG" alt="Odo and Dr. Mora analyzing an unknown sample">
+		<img src="images/ds9-2x12.webp" class="episodeCardBG" alt="Odo and Dr. Mora analyzing an unknown sample">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1093,7 +1099,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>294</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">The Alternate</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1167,7 +1173,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e13" class="episodeCard">
-		<img src="images/ds9-2x13.png" class="episodeCardBG" alt="O'Brien and Bashir in a laboratory">
+		<img src="images/ds9-2x13.webp" class="episodeCardBG" alt="O'Brien and Bashir in a laboratory">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1179,7 +1185,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>297</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Armageddon Game</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1252,7 +1258,7 @@
 	<p>&nbsp;</p>
 	
 	<div class="outsideEpisodeCard">
-		<a href="/tng/tng-s7.html#e15"><img src="images/tng-7x15.png" class="outsideCardImg" alt="Sito Jaxa and a Cardassian piloting a Starfleet shuttlecraft"></a>
+		<a href="/tng/tng-s7.html#e15"><img src="images/tng-7x15.webp" class="outsideCardImg" alt="Sito Jaxa and a Cardassian piloting a Starfleet shuttlecraft"></a>
 		<div style="font-family:BB,Roboto,sans-serif;font-size:xx-large;margin-top:15px">Bajoran Sito Jaxa helps a Cardassian asset to get home</div>
 		
 		<p>The <em>TNG</em> episode <a href="/tng/tng-s7.html#e15">TNG 7x15: Lower Decks</a> takes place between these two <em>DS9</em> episodes. In it, Starfleet Ensign Sito Jaxa, a Bajoran, takes on a very risky mission to help a Cardassian, who is serving as a Federation asset, to get back to his homeworld.</p>
@@ -1260,7 +1266,7 @@
 	
 	<p>&nbsp;</p>
 	<div id="e14" class="episodeCard">
-		<img src="images/ds9-2x14.png" class="episodeCardBG" alt="O'Brien rolling his eyes while Bashir performs a medical exam on him">
+		<img src="images/ds9-2x14.webp" class="episodeCardBG" alt="O'Brien rolling his eyes while Bashir performs a medical exam on him">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1272,7 +1278,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>299</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Whispers</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1344,7 +1350,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e15" class="episodeCard">
-		<img src="images/ds9-2x15.png" class="episodeCardBG" alt="O'Brien and Sisko standing outside with two farm workers">
+		<img src="images/ds9-2x15.webp" class="episodeCardBG" alt="O'Brien and Sisko standing outside with two farm workers">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1356,7 +1362,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>301</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Paradise</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1424,7 +1430,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e16" class="episodeCard">
-		<img src="images/ds9-2x16.png" class="episodeCardBG" alt="Odo and Dax standing with two men dressed in beige robes and beads">
+		<img src="images/ds9-2x16.webp" class="episodeCardBG" alt="Odo and Dax standing with two men dressed in beige robes and beads">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1436,7 +1442,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>303</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Shadowplay</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1506,7 +1512,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e17" class="episodeCard">
-		<img src="images/ds9-2x17.png" class="episodeCardBG" alt="A man staring into his drink while Dax watches">
+		<img src="images/ds9-2x17.webp" class="episodeCardBG" alt="A man staring into his drink while Dax watches">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1518,7 +1524,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>305</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Playing God</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1590,7 +1596,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e18" class="episodeCard">
-		<img src="images/ds9-2x18.png" class="episodeCardBG" alt="Quark and a Cardassian having a discussion">
+		<img src="images/ds9-2x18.webp" class="episodeCardBG" alt="Quark and a Cardassian having a discussion">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1602,7 +1608,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>307</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="combadge" height="37" src="images/tng_combadge.png" width="36" ></td>
+						<td class="combadgeBox"><img alt="combadge" height="37" src="images/tng_combadge.webp" width="36" ></td>
 						<td class="titleBox">Profit and Loss</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1670,7 +1676,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e19" class="episodeCard">
-		<img src="images/ds9-2x19.png" class="episodeCardBG" alt="Dax in a cave with three Klingons">
+		<img src="images/ds9-2x19.webp" class="episodeCardBG" alt="Dax in a cave with three Klingons">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1682,7 +1688,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>309</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Blood Oath</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1756,7 +1762,7 @@
 	<p>&nbsp;</p>
 	
 	<div class="outsideEpisodeCard">
-		<a href="/tng/tng-s7.html#e20"><img src="/tng/images/tng-7x20.png" class="outsideCardImg" alt="Picard addressing the leaders of an American Indian colony"></a>
+		<a href="/tng/tng-s7.html#e20"><img src="/tng/images/tng-7x20.webp" class="outsideCardImg" alt="Picard addressing the leaders of an American Indian colony"></a>
 		<div style="font-family:BB,Roboto,sans-serif;font-size:xx-large;margin-top:15px">New Federation-Cardassian Border Established</div>
 		
 		<p>In <a href="/tng/tng-s7.html#e20">TNG 7x20: Journey's End</a>, Admiral Nechayev informs Picard that after negotiations, a new Federation-Cardassian border has been established, creating a DMZ and placing several colonies on the &ldquo;wrong side&rdquo;. This almost immediately leads to border skirmishes that Sisko must address in the next episode, &ldquo;The Maquis&rdquo;.</p>
@@ -1764,7 +1770,7 @@
 	
 	<p>&nbsp;</p>
 	<div id="e20" class="episodeCard">
-		<img src="images/ds9-2x20.png" class="episodeCardBG" alt="Dukat, Sisko, and Cal Hudson looking concerned">
+		<img src="images/ds9-2x20.webp" class="episodeCardBG" alt="Dukat, Sisko, and Cal Hudson looking concerned">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1776,7 +1782,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>311 &amp; 313</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">The Maquis (Parts I and II)</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1844,7 +1850,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e22" class="episodeCard">
-		<img src="images/ds9-2x22.png" class="episodeCardBG" alt="Garak yelling at Dr. Bashir">
+		<img src="images/ds9-2x22.webp" class="episodeCardBG" alt="Garak yelling at Dr. Bashir">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1856,7 +1862,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>315</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">The Wire</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1932,7 +1938,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e23" class="episodeCard">
-		<img src="images/ds9-2x23.png" class="episodeCardBG" alt="Kira staring at an alternate version of herself">
+		<img src="images/ds9-2x23.webp" class="episodeCardBG" alt="Kira staring at an alternate version of herself">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -2025,14 +2031,14 @@
 	<p>&nbsp;</p>
 	
 	<div class="outsideEpisodeCard">
-		<a href="/tng/tng-s7.html#e24"><img src="/tng/images/tng-7x24.png" class="outsideCardImg" alt="Ro Laren being interrogated by three members of the Maquis"></a>
+		<a href="/tng/tng-s7.html#e24"><img src="/tng/images/tng-7x24.webp" class="outsideCardImg" alt="Ro Laren being interrogated by three members of the Maquis"></a>
 		<div style="font-family:BB,Roboto,sans-serif;font-size:xx-large;margin-top:15px">Ro Laren goes undercover with the Maquis</div>
 		
 		<p><a href="/tng/tng-s7.html#e24">TNG 7x24: Preemptive Strike</a> aired on May 16, 1994, and takes place between these two <em>DS9</em> episodes. In it, Lieutenant Ro Laren is caught between loyalties when she is sent undercover to infiltrate a Maquis cell on the Federation-Cardassian border.</p>
 	</div>
 	<p>&nbsp;</p>
 	<div id="e24" class="episodeCard">
-		<img src="images/ds9-2x24.png" class="episodeCardBG" alt="Kira, Bareil, and Winn on the Promenade">
+		<img src="images/ds9-2x24.webp" class="episodeCardBG" alt="Kira, Bareil, and Winn on the Promenade">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -2044,7 +2050,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>319</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">The Collaborator</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -2113,7 +2119,7 @@
 	<p>&nbsp;</p>
 	
 	<div class="outsideEpisodeCard">
-		<a href="/tng/tng-s7.html#e25"><img src="/tng/images/tng-7x25.png" class="outsideCardImg" alt="A bird's-eye view of Picard, Riker, La Forge, Worf, Data, Crusher, and Troi, playing poker around a circular table"></a>
+		<a href="/tng/tng-s7.html#e25"><img src="/tng/images/tng-7x25.webp" class="outsideCardImg" alt="A bird's-eye view of Picard, Riker, La Forge, Worf, Data, Crusher, and Troi, playing poker around a circular table"></a>
 		<div style="font-family:BB,Roboto,sans-serif;font-size:xx-large;margin-top:15px"><em>The Next Generation</em>&nbsp; Series Finale</div>
 		
 		<p>The series finale of <em>TNG</em>, <a href="/tng/tng-s7.html#e25">TNG 7x25/26: All Good Things...</a> aired on May 23, 1994, between these two <em>DS9</em> episodes. However, based on the stardates given in these episodes, the events of &ldquo;All Good Things...&rdquo; actually takes place <span style="text-decoration:underline">after</span> <em>DS9</em>'s &ldquo;Tribunal&rdquo;.</p>
@@ -2121,7 +2127,7 @@
 	
 	<p>&nbsp;</p>
 	<div id="e25" class="episodeCard">
-		<img src="images/ds9-2x25.png" class="episodeCardBG" alt="O'Brien on the witness stand in a Cardassian court">
+		<img src="images/ds9-2x25.webp" class="episodeCardBG" alt="O'Brien on the witness stand in a Cardassian court">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -2133,7 +2139,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>321</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Tribunal</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -2200,7 +2206,7 @@
 		</table>
 	</div>
 	<p>&nbsp;</p><div id="e26" class="episodeCard">
-		<img src="images/ds9-2x26.png" class="episodeCardBG" alt="Sisko and an alien speaking with a Jem'Hadar">
+		<img src="images/ds9-2x26.webp" class="episodeCardBG" alt="Sisko and an alien speaking with a Jem'Hadar">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -2212,7 +2218,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>322</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="ds9 combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">The Jem'Hadar</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -2298,7 +2304,7 @@
 <a href="ds9-s3.html">Season 3</a> • <a href="ds9-s4.html">Season 4</a> • <a href="ds9-s5.html">Season 5</a> • <a href="ds9-s6.html">Season 6</a> • <a href="ds9-s7.html">Season 7</a></h3>
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
 
-<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 <div id="TTDIV">
 	<div id="FepisodeToolTip" class="tooltip" onClick="closeToolTip(this)">"Franchise Episode" tells you the order in which episodes from ANY/ALL Star Trek television shows aired or streamed for the first time. This number excludes movies, TOS's "The Cage", and the "Very Short Treks" web shorts.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>

@@ -3,6 +3,7 @@
 
 <head>
 
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
@@ -17,6 +18,11 @@
 	});
 	var host = window.location.hostname;
 	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
 		gtag('js', new Date());
 		gtag('config', 'G-DM44X85QLJ');
 	}
@@ -24,20 +30,20 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="/main.css?v=1.5.2">
-<link rel="stylesheet" href="/tts.css?v=1.5.2">
-<link rel="stylesheet" href="films.css?v=1.5.2">
+<link rel="stylesheet" href="/main.css?v=1.6">
+<link rel="stylesheet" href="/tts.css?v=1.6">
+<link rel="stylesheet" href="films.css?v=1.6">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <meta property="og:title" content="Star Trek Nemesis | C6Reviews">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://c6reviews.com/films/images/nemesis/ogimage.png">
+<meta property="og:image" content="https://c6reviews.com/films/images/nemesis/ogimage.webp">
 <meta property="og:url" content="https://c6reviews.com/films/nemesis.html">
 <meta property="og:description" content="Movie review and guide for the film Star Trek Nemesis.">
 
-<script src="films.js"></script>
-<script src="/tts.js"></script>
-<script src="/cookies.js"></script>
+<script src="films.js?v=1.6"></script>
+<script src="/tts.js?v=1.6"></script>
+<script src="/cookies.js?v=1.6"></script>
 <script>
 	function prepTextToSpeech(id)
 	{
@@ -53,15 +59,15 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.png" alt="c6reviews"></a></div>
-	<div class="pageTitleImage"><img src="images/nemesis/nemesis-header.png" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 60%, rgba(0,0,0,0))" alt="An image of a man standing in shadows in a staircase"></div>
+<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+	<div class="pageTitleImage"><img src="images/nemesis/nemesis-header.webp" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 60%, rgba(0,0,0,0))" alt="An image of a man standing in shadows in a staircase"></div>
 	<div class="pageTitleContainer">
 		<div class="pageTitle">
-			<a href="/index.html"><img src="/images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br>Star Trek Nemesis
+			<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>Star Trek Nemesis
 			<span class="pageSubtitle" style="color:red;font-size:large">&nbsp;</span>
 		</div>
 	</div>
-	<div class="c6Right"><a href="/index.html"><img src="/images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+	<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div>
@@ -75,7 +81,7 @@
 				<th colspan=2 style="font-size:16px">Star Trek Nemesis</th>
 			</tr>
 			<tr>
-				<td colspan=2 style="text-align:center"><img src="images/nemesis/nemesis-poster.png" style="width:300px" alt="Nemesis movie poster"></td>
+				<td colspan=2 style="text-align:center"><img src="images/nemesis/nemesis-poster.webp" style="width:300px" alt="Nemesis movie poster"></td>
 			</tr>
 			<tr>
 				<td><strong>Film number:</strong></td>
@@ -226,7 +232,7 @@
 	</table>
 	
 	<div class="sectionHeader" style="margin-top:0px">
-		<img src="images/ds9_voy_combadge.png" style="width:25px;" alt="A DS9/VOY-era combadge"> <em>Star Trek Nemesis</em>
+		<img src="images/ds9_voy_combadge.webp" style="width:25px;" alt="A DS9/VOY-era combadge"> <em>Star Trek Nemesis</em>
 		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select id="ttsratemain" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 		<button class="TTSplayButton" id="tts1pb" onclick="textToSpeech('tts1',prepTextToSpeech('tts1'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 	</div>
@@ -262,19 +268,19 @@
 					<th style="width: auto">Description / Relevance</th>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tos-abbr.png" style="height:20px;" alt="TOS"></td>
+					<td style="text-align:center"><img src="/images/tos-abbr.webp" style="height:20px;" alt="TOS"></td>
 					<td>1x08</td>
 					<td><a href="/tos/tos-s1.html#e08">Balance of Terror</a></td>
 					<td>Who are the Romulans?</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+					<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 					<td>1x01/02</td>
 					<td><a href="/tng/tng-s1.html#e01">Encounter at Farpoint</a></td>
 					<td>The crew's first adventure (<em>TNG</em> Series Premiere)</td>
 				</tr>
 				<tr>
-					<td style="text-align:center"><img src="/images/tng-abbr.png" style="height:15px;" alt="TNG"></td>
+					<td style="text-align:center"><img src="/images/tng-abbr.webp" style="height:15px;" alt="TNG"></td>
 					<td>1x13</td>
 					<td><a href="/tng/tng-s1.html#e13">Datalore</a></td>
 					<td>Data's origins as an android</td>
@@ -308,12 +314,12 @@
 	</div>
 	<div id="tts2" class="serif" style="margin-left:40px">
 		<p>When I first saw this film in 2002, I thought it was actually pretty good. I wasn't a huge fan of Tom Hardy as a young Picard, but other than that, I was happy to see the gang again in a film that had more action than its predecessor. Looking back on it now, I do see the film as a bit of a disappointment. Even though it wasn't intended to be the final film for the TNG cast, it ended up being the final film, making it even more disappointing.</p>
-		<p>In an important exercise in &ldquo;Don't believe everything you see on the internet,&rdquo; there is a trivia element on IMDb for this film that says in part, &ldquo;[Director Stuart] Baird expresses his frustration in the Blu-ray commentary at having to tell a story in an established universe with pre-existing design and character relationships, hated having to utilize recycled sets and props, and had trouble remembering the names of the main cast.&rdquo; This interpretation of the commentary seems to be heavily colored by the author of this comment. Having watched the entire Blu-ray commentary myself, it seems to me that Baird speaks very matter-of-factly and unemotionally about how shooting differs between the smaller <em>Enterprise</em> sets versus the larger <em>Scimitar</em> sets, as well as his desire to make some changes and updates to existing props. I don't detect any frustration and certainly no &ldquo;hatred&rdquo; about these things in Baird's commentary.</p>
+		<p>In an important exercise in &ldquo;Don't believe everything you see on the internet&rdquo;, there is a trivia element on IMDb for this film that says in part, &ldquo;[Director Stuart] Baird expresses his frustration in the Blu-ray commentary at having to tell a story in an established universe with pre-existing design and character relationships, hated having to utilize recycled sets and props, and had trouble remembering the names of the main cast.&rdquo; This interpretation of the commentary seems to be heavily colored by the author of this comment. Having watched the entire Blu-ray commentary myself, it seems to me that Baird speaks very matter-of-factly and unemotionally about how shooting differs between the smaller <em>Enterprise</em> sets versus the larger <em>Scimitar</em> sets, as well as his desire to make some changes and updates to existing props. I don't detect any frustration and certainly no &ldquo;hatred&rdquo; about these things in Baird's commentary.</p>
 		<div class="calloutdiv"><span class="calloutspan">&ldquo;The director was an idiot.&rdquo;</span></div>
 		<p>I'm no Baird apologist, but I think the assessment found in IMDb is unfair. It is true that Baird was new to Star Trek and that he may not have been interested in delving into its history prior to directing the film, but I haven't found any evidence that he felt hatred toward the franchise. Now, it is also true that Baird did not accept any help from veteran <em>Trek</em> actor and director Jonathan Frakes (Will Riker), and I have found accounts of other actors criticizing Baird, perhaps the harshest of which came from Marina Sirtis (Deanna Troi) who bluntly said, &ldquo;The director was an idiot.&rdquo;</p>
 		<p>Baird did work to make the film as accessible to non-Trek fans as possible, but he did this by cutting many of the references to previous art that the fans would have greatly appreciated, and in so doing, he created a more generic action flick that lacked some of the uniqueness of <em>Trek</em>. I also have a hard time really believing in Shinzon as a villain. First of all, he just... <em>somehow</em> built the most powerful ship the quadrant has ever seen at a secret base despite working in the mines, having no resources, and having just barely entered adulthood. And he has <em>somehow</em> harnessed and weaponized a type of radiation that had only been theoretical up to this point. Seems a bit unlikely, no? Also, the idea that Picard would have turned into a monster if he had had Shinzon's upbringing, just because they share the same DNA... I'm not buying it. Sure, it raises the larger question of nature versus nurture, but I don't feel like the movie really explores it enough. Besides, all I see is Tom Hardy, I can't really believe it's a clone of Picard. Now, if the villain had been played by Patrick Stewart &ndash; truly a mirror version &ndash; now THAT would have been something!</p>
 		<p>The movie also sort of squanders an opportunity to learn more about the Romulans, definitely one of the more secretive races in the <em>Trek</em> universe. Instead, we take time away from the main story just so that Shinzon can telepathically rape Deanna Troi... and Picard basically just says, &ldquo;I need you to keep working so just deal with it.&rdquo; If this whole part had been left out of the movie, literally nothing would have been lost. Overall, the film just doesn't live up to the <em>Star Trek</em> name.</p>
-		<p style="text-align:center"><img src="images/nemesis/wedding.png" style="width:800px;transform:rotate(2deg);" alt="An image of Picard giving the best man's speech at Will and Deanna's wedding reception"></p>
+		<p style="text-align:center"><img src="images/nemesis/wedding.webp" style="width:800px;transform:rotate(2deg);" alt="An image of Picard giving the best man's speech at Will and Deanna's wedding reception"></p>
 	</div>
 	
 	
@@ -335,7 +341,7 @@
 		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 		<button class="TTSplayButton" id="tts4pb" onclick="textToSpeech('tts4',prepTextToSpeech('tts4'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 	</div>
-	<img src="images/nemesis/rememberme.png" style="float:left;height:300px;margin-right:20px;margin-top:20px;" alt="A picture of Deanna Troi concentrating, with her eyes closed, in a darkened room with only one band of light across her eyes">
+	<img src="images/nemesis/rememberme.webp" style="float:left;height:300px;margin-right:20px;margin-top:20px;" alt="A picture of Deanna Troi concentrating, with her eyes closed, in a darkened room with only one band of light across her eyes">
 	<div id="tts4" class="serif" style="margin-left:460px;">
 		<p><strong><span style="font-size:large;text-shadow: red 2px 2px 8px">👎 </span>Director Stuart Baird</strong> &mdash; If accounts of the main cast are true, Stuart Baird didn't know much about the <em>Star Trek</em> universe and didn't accept any help from the veteran actors. Actor LeVar Burton said that Baird frequently called him &ldquo;Laverne&rdquo;. Although Baird put forth a sincere effort, it is clear that his involvement had a negative impact on morale and the film as a whole.</p>
 		
@@ -355,7 +361,7 @@
 		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 		<button class="TTSplayButton" id="tts5pb" onclick="textToSpeech('tts5',prepTextToSpeech('tts5'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 	</div>
-	<img src="images/nemesis/b-4-head.png" style="float:right;height:300px;margin-left:40px;margin-top:20px;" alt="A picture of B-4's head sitting on a pedestal">
+	<img src="images/nemesis/b-4-head.webp" style="float:right;height:300px;margin-left:40px;margin-top:20px;" alt="A picture of B-4's head sitting on a pedestal">
 	<ul id="tts5" class="serif">
 		<li>Poor Wesley Crusher. You can see him at the wedding reception, but he doesn't have any lines. The last we saw him was in <a href="/tng/tng-s7.html#e20">TNG 7x20: Journey's End</a>, when he went off with The Traveler to experience other planes of existence. Now, sure, it's possible he stopped by <em>this</em> plane of existence to attend the wedding, but it doesn't explain why he's wearing a Starfleet uniform and seems to have gotten a promotion, since he sports the rank insignia of a Lieutenant Junior Grade. He did have a few lines, originally, but they were cut from the final release.</li>
 		<li>No explanation is given for Worf's presence on the <em>Enterprise</em>. He was last seen being appointed as the Federation ambassador to Qo'nos in the series finale of <em>Deep Space Nine</em>. I suppose they just gave up on trying, considering that in the previous movie, Worf tries to explain his presence, but his dialogue is purposely drowned out by another conversation.</li>
@@ -373,7 +379,7 @@
 		<li>&ldquo;I am in a room, with lights!&rdquo; &mdash; B-4, summing up the film's creative direction.</li>
 	</ul>
 	
-<div class="finalGraphic"><img src="images/nemesis/nemesis-cap.png" style="width:100%" alt="A photo of an ill-looking Shinzon staring Picard directly in the eyes"></div>
+<div class="finalGraphic"><img src="images/nemesis/nemesis-cap.webp" style="width:100%" alt="A photo of an ill-looking Shinzon staring Picard directly in the eyes"></div>
 <table class="ratingBlock">
 	<tr>
 		<td class="myRatingDescriptionBox" style="width:260px">My rating: </td>			
@@ -425,7 +431,7 @@
 	
 </div>
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
-<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 <div id="TTDIV">
 	<div id="SFDToolTip" class="tooltip" onClick="closeToolTip(this)">SF Debris is an independent comedic reviewer who rates <em>Star Trek</em> episodes on a scale of 0 to 10. Visit his site to enjoy funny video-reviews at <span style="white-space:nowrap;"><a href="https://sfdebris.com" target="_blank">sfdebris.com</a></span>.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>

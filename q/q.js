@@ -109,13 +109,13 @@ async function createTable(showSpoiler) {
 					break;
 				case 3:
 					cellClass = "col_series";
-						cell = cell.replace('TOS','<img src="../images/tos-abbr.png" style="height:20px;" alt="TOS" title="The Original Series">');
-						cell = cell.replace('TNG','<img src="../images/tng-abbr.png" style="height:15px;" alt="TNG" title="The Next Generation">');
-						cell = cell.replace('DS9','<img src="../images/ds9-abbr.png" style="height:15px;" alt="DS9" title="Deep Space Nine">');
-						cell = cell.replace('VOY','<img src="../images/voy-abbr.png" style="height:15px;" alt="VOY" title="Voyager">');
-						cell = cell.replace('LOW','<img src="../images/low-abbr.png" style="height:15px;" alt="LOW" title="Lower Decks">');
-						cell = cell.replace('PIC','<img src="../images/pic-abbr.png" style="height:20px;" alt="PIC" title="Picard">');
-						cell = cell.replace('SNW','<img src="../images/snw-abbr.png" style="height:20px;" alt="SNW" title="Strange New Worlds">');
+						cell = cell.replace('TOS','<img src="../images/tos-abbr.webp" style="height:20px;" alt="TOS" title="The Original Series">');
+						cell = cell.replace('TNG','<img src="../images/tng-abbr.webp" style="height:15px;" alt="TNG" title="The Next Generation">');
+						cell = cell.replace('DS9','<img src="../images/ds9-abbr.webp" style="height:15px;" alt="DS9" title="Deep Space Nine">');
+						cell = cell.replace('VOY','<img src="../images/voy-abbr.webp" style="height:15px;" alt="VOY" title="Voyager">');
+						cell = cell.replace('LOW','<img src="../images/low-abbr.webp" style="height:15px;" alt="LOW" title="Lower Decks">');
+						cell = cell.replace('PIC','<img src="../images/pic-abbr.webp" style="height:20px;" alt="PIC" title="Picard">');
+						cell = cell.replace('SNW','<img src="../images/snw-abbr.webp" style="height:20px;" alt="SNW" title="Strange New Worlds">');
 					break;
 				case 4:
 					cellClass = "col_episodeNumber";

@@ -3,6 +3,7 @@
 
 <head>
 
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
@@ -17,6 +18,11 @@
 	});
 	var host = window.location.hostname;
 	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
 		gtag('js', new Date());
 		gtag('config', 'G-DM44X85QLJ');
 	}
@@ -24,20 +30,20 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="/main.css?v=1.5.2">
-<link rel="stylesheet" href="/tts.css?v=1.5.2">
-<link rel="stylesheet" href="q.css?v=1.5.2">
+<link rel="stylesheet" href="/main.css?v=1.6">
+<link rel="stylesheet" href="/tts.css?v=1.6">
+<link rel="stylesheet" href="q.css?v=1.6">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <meta property="og:title" content="Q | C6Reviews">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://c6reviews.com/q/images/ogimage.png">
+<meta property="og:image" content="https://c6reviews.com/q/images/ogimage.webp">
 <meta property="og:url" content="https://c6reviews.com/q/">
 <meta property="og:description" content="A look at Star Trek's omnipotent troublemaker, Q.">
 
-<script src="q.js"></script>
-<script src="/tts.js"></script>
-<script src="/cookies.js"></script>
+<script src="q.js?v=1.6"></script>
+<script src="/tts.js?v=1.6"></script>
+<script src="/cookies.js?v=1.6"></script>
 <script>
 	function prepTextToSpeech(id)
 	{
@@ -53,15 +59,15 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.png" alt="c6reviews"></a></div>
-<div class="pageTitleImage"><img src="images/q-header.png" alt="Q, wearing his judge's robes"></div>
+<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+<div class="pageTitleImage"><img src="images/q-header.webp" alt="Q, wearing his judge's robes"></div>
 <div class="pageTitleContainer">
 	<div class="pageTitle">
-		<a href="/index.html"><img src="/images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br><span class="Q">Q</span>
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br><span class="Q">Q</span>
 		<span class="pageSubtitle" style="color:red;font-size:large"><span style="text-shadow: red 0px 0px 12px">🚨</span> This page may contain spoilers <span style="text-shadow: red 0px 0px 12px">🚨</span></span>
 	</div>
 </div>
-<div class="c6Right"><a href="/index.html"><img src="/images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div> 
@@ -73,19 +79,19 @@
 	
 		<p style="text-align: center"><a href="#tableContainer" style="text-decoration:none">▼ Jump to list of appearances ▼</a></p>
 	
-		<div class="sectionHeader Q" style="font-family:CCS,'Times New Roman',serif;">&nbsp;Q</div>
+		<div class="sectionHeader Q" style="font-family:CCS,'Times New Roman',serif;font-size:1.8rem">&nbsp;Q</div>
 		
 		<div style="position:relative">
 			<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select id="ttsratemain" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 			<button class="TTSplayButton" id="tts1pb" onclick="textToSpeech('tts1',prepTextToSpeech('tts1'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 		</div>
 		
-		<div class="articleImage" style="float:left;margin-top:24px;"><img src="images/judgeq.png" style="width:450px;" alt="Q in his judges robes"><br>&ldquo;Judge&rdquo; Q, in his first appearance before<br>the crew of the <em>Enterprise</em>&#8209;D (2364)</div>
+		<div class="articleImage" style="float:left;margin-top:24px;"><img src="images/judgeq.webp" style="width:450px;" alt="Q in his judges robes"><br>&ldquo;Judge&rdquo; Q, in his first appearance before<br>the crew of the <em>Enterprise</em>&#8209;D (2364)</div>
 		
 		<div class="serif" id="tts1">	
 			<p>Q is a very powerful entity who first introduced himself to humanity by appearing on the bridge of the <em>Enterprise</em>&#8209;D, commanded by Captain Jean-Luc Picard. With a snap of his fingers, Q has the power to change his form, create objects out of thin air, transport people and objects around as he chooses, create elaborate fantasy worlds... practically, he can do anything and everything. Q claims to be omnipotent, and while he is indeed very powerful, his omnipotence is still a matter for debate. He and the other Q entities reside in the Q Continuum, or as Q describes it, the &ldquo;limitless dimensions of the galaxy in which we exist&rdquo;.</p>
 			
-			<div class="articleImage" style="float:right;"><img src="images/sheriffq.png" style="width:350px;" alt="Q, in a Medieval-era outfit, posing as the Sheriff of Nottingham"><br>Q as the Sheriff of Nottingham (2367)</div>
+			<div class="articleImage" style="float:right;"><img src="images/sheriffq.webp" style="width:350px;" alt="Q, in a Medieval-era outfit, posing as the Sheriff of Nottingham"><br>Q as the Sheriff of Nottingham (2367)</div>
 			
 			<p>&nbsp;</p>
 			
@@ -97,10 +103,10 @@
 
 		</div>
 			
-			<div class="articleImage" style="margin-left:auto;margin-right:auto;clear:both"><img src="images/godq.png" style="width:250px;" alt="Q, in white robes, standing alone in a white void"><br>Q as &ldquo;God&rdquo; (2369)</div>
+			<div class="articleImage" style="margin-left:auto;margin-right:auto;clear:both"><img src="images/godq.webp" style="width:250px;" alt="Q, in white robes, standing alone in a white void"><br>Q as &ldquo;God&rdquo; (2369)</div>
 		
 		
-		<div class="sectionHeader" style="font-family:CCS,'Times New Roman',serif;">Other Q</div>
+		<div class="sectionHeader">Other <span style="font-family:CCS,'Times New Roman',serif;font-size:1.8rem">Q</span></div>
 		
 		<div style="position:relative">
 			<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
@@ -112,21 +118,21 @@
 		</div>
 		
 		<div style="margin:auto;text-align:center">
-			<div class="articleImage" style="display:inline-block"><img src="images/quinn.png" style="width:250px;" alt="Quinn"><br>Quinn (2372)</div>
-			<div class="articleImage" style="display:inline-block"><img src="images/missq.png" style="width:250px;" alt="Miss Q"><br>Miss Q (2373)</div>
-			<div class="articleImage" style="display:inline-block"><img src="images/qjr.png" style="width:250px;" alt="Q Jr."><br>Q Jr. (2378)</div>
-			<div class="articleImage" style="display:inline-block"><img src="images/amanda_rogers.png" style="width:250px;" alt="Amanda Rogers"><br>Amanda Rogers (2369)</div>
+			<div class="articleImage" style="display:inline-block"><img src="images/quinn.webp" style="width:250px;" alt="Quinn"><br>Quinn (2372)</div>
+			<div class="articleImage" style="display:inline-block"><img src="images/missq.webp" style="width:250px;" alt="Miss Q"><br>Miss Q (2373)</div>
+			<div class="articleImage" style="display:inline-block"><img src="images/qjr.webp" style="width:250px;" alt="Q Jr."><br>Q Jr. (2378)</div>
+			<div class="articleImage" style="display:inline-block"><img src="images/amanda_rogers.webp" style="width:250px;" alt="Amanda Rogers"><br>Amanda Rogers (2369)</div>
 		</div>
 		
-		<div class="sectionHeader" style="font-family:CCS,'Times New Roman',serif;">The Trelane Connection</div>
+		<div class="sectionHeader">The Trelane Connection</div>
 		
 		<div style="position:relative">
 			<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 			<button class="TTSplayButton" id="tts3pb" onclick="textToSpeech('tts3',prepTextToSpeech('tts3'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 		</div>
 		
-			<div class="articleImage" style="float:left;margin-bottom:40px;margin-right:0px"><img src="images/trelane-snw.png" style="width:225px;" alt="Trelane as he appeared in Strange New Worlds"><br>Trelane (SNW, 2261)</div>
-			<div class="articleImage" style="float:left"><img src="images/trelane-tos.png" style="width:225px;" alt="Trelane as he appeared in the Original Series"><br>Trelane (TOS, 2267)</div>
+			<div class="articleImage" style="float:left;margin-bottom:40px;margin-right:0px"><img src="images/trelane-snw.webp" style="width:225px;" alt="Trelane as he appeared in Strange New Worlds"><br>Trelane (SNW, 2261)</div>
+			<div class="articleImage" style="float:left"><img src="images/trelane-tos.webp" style="width:225px;" alt="Trelane as he appeared in the Original Series"><br>Trelane (TOS, 2267)</div>
 		
 		<div class="serif" id="tts3">
 		
@@ -137,14 +143,14 @@
 		</div>
 		
 		
-		<div class="sectionHeader" style="font-family:CCS,'Times New Roman',serif;clear:left">Q's keen interest in Picard</div>
+		<div class="sectionHeader" style="clear:left"><span style="font-family:CCS,'Times New Roman',serif;font-size:1.8rem">Q</span>'s keen interest in Picard</div>
 		
 		<div style="position:relative">
 			<span class="TTScontrols"><label><span class="ttsicon">🗣</span> <select class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 			<button class="TTSplayButton" id="tts4pb" onclick="textToSpeech('tts4',prepTextToSpeech('tts4'))">⏯</button><button class="TTSstopButton" onclick="speechStop()">⏹</button></span>
 		</div>
 		
-		<div class="articleImage" style="float:right"><img src="images/agedq.png" style="" alt="Q, appearing to have aged"><br>Q, aging himself as a favor to Picard,<br>during a visit in the 25th century (2401)</div>
+		<div class="articleImage" style="float:right"><img src="images/agedq.webp" style="" alt="Q, appearing to have aged"><br>Q, aging himself as a favor to Picard,<br>during a visit in the 25th century (2401)</div>
 		
 		<div class="serif" id="tts4">
 			<p>Although Q had visited other Starfleet officers, including Janeway and Sisko, he always seemed to have a particular fascination with Jean-Luc Picard. This would become evident when Q pays a visit to Picard in 2401, thirty-seven years after their first meeting. Seeing that Picard had aged, Q also made himself appear aged as a favor to him (and &ndash; let's be honest &ndash; so the show could avoid costly de-aging CGI). In this time, Q appears in order to take Picard on a bit of a wild adventure so that Picard can learn to forgive himself for a traumatic childhood event that has haunted him for years. Q admits that he's done this simply because he <em>likes</em> Picard. This story is the primary focus of <a href="/pic/pic-s2.html">Season 2 of <em>Star Trek: Picard</em></a>.</p>
@@ -157,11 +163,11 @@
 	
 		
 	<div id="tableContainer" style="margin-top:100px;clear:both">
-		<h1 style="font-family:BB,Roboto,sans-serif;text-align:center;text-decoration:underline">All Appearances of Q</h1>
+		<h1 style="font-family:BB,Roboto,sans-serif;text-align:center;text-decoration:underline">All Appearances of <span class="Q" style="font-family:CCS,'Times New Roman',serif;font-size:2.25rem">Q</span></h1>
 		<div style="border:1px solid;border-radius:5px;margin-left:80px;margin-right:80px;padding:8px;font-size:small;font-style:italic">
-			<p>* The recommendation column in this table is based on which episodes are the most important for learning more about Q. These recommendations do not necessarily match the recommendations made on the individual series' episode guides.</p>
-			<p><sup>†</sup> Ratings are relative to the series in which the episode belongs.</p>
-			<p><sup>‡</sup> Episodes in <a href="/pic/index.html" style="font-style:normal">Star Trek: Picard</a> are part of 10-episode season-long story arcs. You should watch entire seasons for the full story, not just individual episodes.</p>
+			<p>Note: Episodes in <a href="/pic/index.html" style="font-style:normal">Star Trek: Picard</a> are part of 10-episode season-long story arcs. You should watch entire seasons for the full story, not just individual episodes.</p>
+			<p>* The recommendation column in this table is based on which episodes are the most important for learning more about the Borg. These recommendations do not necessarily match the recommendations made on the individual series' episode guides.<br>
+			** Ratings are relative to the series in which the episode belongs.</p>
 			<p><strong>There is one appearance of Q that is omitted from this table</strong> because listing it here would be a serious spoiler. Even mentioning the series might give too much away. If you want to display the hidden row, you should first click this spoiler tag to get a hint about when the mystery appearance might occur:
 			<span class="spoiler"><span class="spoilerTag" onClick="displaySpoiler(this)">Spoiler » </span><span class="spoilerContent">You should NOT reveal the hidden appearance of Q if you have not watched ALL of <a href="/pic/index.html" style="font-style:normal">Star Trek: Picard</a>. If you're still sure you want to reveal the hidden entry in this table, click this spoiler tag and the confirmation button:
 				<span class="spoiler"><span class="spoilerTag" onClick="displaySpoiler(this)">I am sure! » </span><span class="spoilerContent">
@@ -214,7 +220,7 @@
 				</th>
 				<th style="width:auto" onclick="sortTable(5,event)">Notes <span id="5asc" class="sortarrows">↿</span><span id="5desc" class="sortarrows">⇂</span></th>
 				<th style="width:240px" onclick="sortTable(6,event)">Recommendation* <span id="6asc" class="sortarrows">↿</span><span id="6desc" class="sortarrows">⇂</span></th>
-				<th style="width:80px" onclick="sortTable(7,event)">Rating<sup>†</sup> <span id="7asc" class="sortarrows">↿</span><span id="7desc" class="sortarrows">⇂</span></th>
+				<th style="width:80px" onclick="sortTable(7,event)">Rating** <span id="7asc" class="sortarrows">↿</span><span id="7desc" class="sortarrows">⇂</span></th>
 			</tr>
 		</table>
 		<table id="episodeTable">
@@ -224,7 +230,7 @@
 </div> <!-- content div ends here -->
 <p>&nbsp;</p>
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
-<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 <div id="TTDIV">
 

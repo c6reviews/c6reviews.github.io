@@ -3,6 +3,7 @@
 
 <head>
 
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
@@ -17,6 +18,11 @@
 	});
 	var host = window.location.hostname;
 	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
 		gtag('js', new Date());
 		gtag('config', 'G-DM44X85QLJ');
 	}
@@ -24,19 +30,19 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="/main.css?v=1.5.2">
-<link rel="stylesheet" href="tng.css?v=1.5.2">
-<link rel="stylesheet" href="tng-episode-guides.css?v=1.5.2">
+<link rel="stylesheet" href="/main.css?v=1.6">
+<link rel="stylesheet" href="tng.css?v=1.6">
+<link rel="stylesheet" href="tng-episode-guides.css?v=1.6">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <meta property="og:title" content="TNG Season 1 | C6Reviews">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://c6reviews.com/tng/images/ogimage.png">
+<meta property="og:image" content="https://c6reviews.com/tng/images/ogimage.webp">
 <meta property="og:url" content="https://c6reviews.com/tng/tng-s1.html">
 <meta property="og:description" content="Episode reviews and guides for Star Trek: The Next Generation, Season 1.">
 
-<script src="tng.js"></script>
-<script src="/cookies.js"></script>
+<script src="tng.js?v=1.6"></script>
+<script src="/cookies.js?v=1.6"></script>
 <title>C6 | TNG Season 1</title>
 </head>
 
@@ -44,15 +50,15 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.png" alt="c6reviews"></a></div>
-<div class="pageTitleImage"><img src="images/tng-header.png" alt="The USS Enterprise-D with the Star Trek TNG title"></div>
+<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+<div class="pageTitleImage"><img src="images/tng-header.webp" alt="The USS Enterprise-D with the Star Trek TNG title"></div>
 <div class="pageTitleContainer">
 	<div class="pageTitle">
-		<a href="/index.html"><img src="/images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br>Star Trek: The Next Generation
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>Star Trek: The Next Generation
 		<span class="pageSubtitle">Season 1 Episode Guides</span>
 	</div>
 </div>
-<div class="c6Right"><a href="/index.html"><img src="/images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 <h3 class="seasonNav"><a href="tng-episode-list.html">Full Episode List</a><br><span class="activeSeason"><a href="tng-s1.html">Season 1</a></span> • <a href="tng-s2.html">Season 2</a> • <a href="tng-s3.html">Season 3</a> • <a href="tng-s4.html">Season 4</a> • <a href="tng-s5.html">Season 5</a> • <a href="tng-s6.html">Season 6</a> • <a href="tng-s7.html">Season 7</a></h3>
 
@@ -64,7 +70,7 @@
 <div id="mainSidenav" class="sidenav">
 	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	<a href="index.html"><span style="font-size:large">←</span> TNG Episode Guide Home</a><br>
-	<a href="index.html"><img src="/images/tng-title.png" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="tng logo"></a><br>
+	<a href="index.html"><img src="/images/tng-title.webp" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="tng logo"></a><br>
 	<a href="tng-episode-list.html" style="text-align:center">Full Episode List</a>
 	<div class="sidenavseasons">
 		Season: 
@@ -107,7 +113,7 @@
 		<p>I will also use this space to point out that many of the <em>Enterprise</em>&#8209;D sets were reuses of sets from the original Refit <em>Enterprise</em> in <em>Star Trek</em> films 1-3. Some were effectively redressed enough to be distinct, but other sets were very obvious reuses &ndash; and that sort of makes you wonder why Starfleet ship technology didn't seem to change in the 80+ years that intervened between the movies and <em>The Next Generation</em>. On top of that, some of the new <em>TNG</em> sets were then used for films 5 and 6! I could go into more detail, but I don't have to because Ex&nbsp;Astris&nbsp;Scientia has an extensive analysis on the subject that can be found here: <a href="https://www.ex-astris-scientia.org/inconsistencies/reused_ship_interiors.htm" target="_blank">Re-Used Starship Interiors</a>.</p>
 	</div>
 	<div id="e01" class="episodeCard">
-		<img src="images/tng-1x01.png" class="episodeCardBG" alt="Q, in his judge's robes, staring Picard directly in the eyes">
+		<img src="images/tng-1x01.webp" class="episodeCardBG" alt="Q, in his judge's robes, staring Picard directly in the eyes">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -119,7 +125,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>102</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Encounter at Farpoint</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -225,7 +231,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e03" class="episodeCard">
-		<img src="images/tng-1x03.png" class="episodeCardBG" alt="Picard and Worf on the bridge, with Data leaning casually on the wall of the turbolift that has just arrived">
+		<img src="images/tng-1x03.webp" class="episodeCardBG" alt="Picard and Worf on the bridge, with Data leaning casually on the wall of the turbolift that has just arrived">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -237,7 +243,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>103</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">The Naked Now</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -316,7 +322,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e04" class="episodeCard">
-		<img src="images/tng-1x04.png" class="episodeCardBG" alt="Picard addressing the assembled leaders after they have kidnapped Tasha">
+		<img src="images/tng-1x04.webp" class="episodeCardBG" alt="Picard addressing the assembled leaders after they have kidnapped Tasha">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -328,7 +334,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>104</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Code of Honor</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -406,7 +412,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e05" class="episodeCard">
-		<img src="images/tng-1x05.png" class="episodeCardBG" alt="Picard addressing a Ferengi on the viewscreen">
+		<img src="images/tng-1x05.webp" class="episodeCardBG" alt="Picard addressing a Ferengi on the viewscreen">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -418,7 +424,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>105</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">The Last Outpost</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -501,7 +507,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e06" class="episodeCard">
-		<img src="images/tng-1x06.png" class="episodeCardBG" alt="Wesley speaking with Kosinski and his alien assistant">
+		<img src="images/tng-1x06.webp" class="episodeCardBG" alt="Wesley speaking with Kosinski and his alien assistant">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -513,7 +519,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>106</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Where No One Has Gone Before</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -593,7 +599,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e07" class="episodeCard">
-		<img src="images/tng-1x07.png" class="episodeCardBG" alt="Picard standing at the front of the bridge while blue-colored lightning incapacitates the rest of the crew">
+		<img src="images/tng-1x07.webp" class="episodeCardBG" alt="Picard standing at the front of the bridge while blue-colored lightning incapacitates the rest of the crew">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -605,7 +611,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>107</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Lonely Among Us</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -685,7 +691,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e08" class="episodeCard">
-		<img src="images/tng-1x08.png" class="episodeCardBG" alt="Members of the Enterprise crew speaking with several of the scantily-clad Edo in a pleasant garden">
+		<img src="images/tng-1x08.webp" class="episodeCardBG" alt="Members of the Enterprise crew speaking with several of the scantily-clad Edo in a pleasant garden">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -697,7 +703,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>108</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Justice</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -777,7 +783,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e09" class="episodeCard">
-		<img src="images/tng-1x09.png" class="episodeCardBG" alt="Picard witnessing hallucinations of his former crew">
+		<img src="images/tng-1x09.webp" class="episodeCardBG" alt="Picard witnessing hallucinations of his former crew">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -789,7 +795,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>109</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">The Battle</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -861,7 +867,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e10" class="episodeCard">
-		<img src="images/tng-1x10.png" class="episodeCardBG" alt="Q and Riker enjoying a glass of lemonade">
+		<img src="images/tng-1x10.webp" class="episodeCardBG" alt="Q and Riker enjoying a glass of lemonade">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -873,7 +879,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>110</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Hide and Q</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -953,7 +959,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e11" class="episodeCard">
-		<img src="images/tng-1x11.png" class="episodeCardBG" alt="Troi, her mother Lwaxana, Picard, and Lwaxana's valet, Mr. Homn">
+		<img src="images/tng-1x11.webp" class="episodeCardBG" alt="Troi, her mother Lwaxana, Picard, and Lwaxana's valet, Mr. Homn">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -965,7 +971,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>111</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Haven</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1053,7 +1059,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e12" class="episodeCard">
-		<img src="images/tng-1x12.png" class="episodeCardBG" alt="Data, Picard, and Dr. Crusher wearing 1940s clothing on the holodeck">
+		<img src="images/tng-1x12.webp" class="episodeCardBG" alt="Data, Picard, and Dr. Crusher wearing 1940s clothing on the holodeck">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1065,7 +1071,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>112</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">The Big Goodbye</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1149,7 +1155,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e13" class="episodeCard">
-		<img src="images/tng-1x13.png" class="episodeCardBG" alt="Data holding up an android head identical to his own">
+		<img src="images/tng-1x13.webp" class="episodeCardBG" alt="Data holding up an android head identical to his own">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1161,7 +1167,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>113</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Datalore</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1245,7 +1251,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e14" class="episodeCard">
-		<img src="images/tng-1x14.png" class="episodeCardBG" alt="Riker speaking with the planet's leader, Beata">
+		<img src="images/tng-1x14.webp" class="episodeCardBG" alt="Riker speaking with the planet's leader, Beata">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1257,7 +1263,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>114</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Angel One</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1333,7 +1339,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e15" class="episodeCard">
-		<img src="images/tng-1x15.png" class="episodeCardBG" alt="Riker talking to the holographic 'Minuet' while the Bynars work on the computer in the background">
+		<img src="images/tng-1x15.webp" class="episodeCardBG" alt="Riker talking to the holographic 'Minuet' while the Bynars work on the computer in the background">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1345,7 +1351,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>115</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">11001001</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1429,7 +1435,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e16" class="episodeCard">
-		<img src="images/tng-1x16.png" class="episodeCardBG" alt="An elderly wheelchair-bound Admiral and his wife">
+		<img src="images/tng-1x16.webp" class="episodeCardBG" alt="An elderly wheelchair-bound Admiral and his wife">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1441,7 +1447,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>116</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Too Short a Season</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1521,7 +1527,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e17" class="episodeCard">
-		<img src="images/tng-1x17.png" class="episodeCardBG" alt="Wesley sitting around a table with six other children from the Enterprise">
+		<img src="images/tng-1x17.webp" class="episodeCardBG" alt="Wesley sitting around a table with six other children from the Enterprise">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1533,7 +1539,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>117</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">When the Bough Breaks</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1612,7 +1618,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e18" class="episodeCard">
-		<img src="images/tng-1x18.png" class="episodeCardBG" alt="Picard, Data, Wesley, La Forge, and Crusher observing a new life form in the science lab">
+		<img src="images/tng-1x18.webp" class="episodeCardBG" alt="Picard, Data, Wesley, La Forge, and Crusher observing a new life form in the science lab">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1624,7 +1630,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>118</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Home Soil</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1708,7 +1714,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e19" class="episodeCard">
-		<img src="images/tng-1x19.png" class="episodeCardBG" alt="Wesley sitting at a computer terminal taking an exam for Starfleet Academy">
+		<img src="images/tng-1x19.webp" class="episodeCardBG" alt="Wesley sitting at a computer terminal taking an exam for Starfleet Academy">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1720,7 +1726,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>119</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Coming of Age</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1828,7 +1834,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e20" class="episodeCard">
-		<img src="images/tng-1x20.png" class="episodeCardBG" alt="Worf and two other Klingons howling over the body of a deceased comrade">
+		<img src="images/tng-1x20.webp" class="episodeCardBG" alt="Worf and two other Klingons howling over the body of a deceased comrade">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1840,7 +1846,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>120</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Heart of Glory</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1916,7 +1922,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e21" class="episodeCard">
-		<img src="images/tng-1x21.png" class="episodeCardBG" alt="Picard, Crusher, Yar, and Data analyzing Riker, who has been trapped in a force field of some kind">
+		<img src="images/tng-1x21.webp" class="episodeCardBG" alt="Picard, Crusher, Yar, and Data analyzing Riker, who has been trapped in a force field of some kind">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1928,7 +1934,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>121</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">The Arsenal of Freedom</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -2008,7 +2014,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e22" class="episodeCard">
-		<img src="images/tng-1x22.png" class="episodeCardBG" alt="An alien man holding Riker hostage with an electric pulse emanating from his hand">
+		<img src="images/tng-1x22.webp" class="episodeCardBG" alt="An alien man holding Riker hostage with an electric pulse emanating from his hand">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -2020,7 +2026,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>122</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Symbiosis</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -2092,7 +2098,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e23" class="episodeCard">
-		<img src="images/tng-1x23.png" class="episodeCardBG" alt="Riker, Data, and Yar confronting Armus, a life-form that appears like black tar">
+		<img src="images/tng-1x23.webp" class="episodeCardBG" alt="Riker, Data, and Yar confronting Armus, a life-form that appears like black tar">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -2104,7 +2110,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>123</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Skin of Evil</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -2184,7 +2190,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e24" class="episodeCard">
-		<img src="images/tng-1x24.png" class="episodeCardBG" alt="Three versions of Data across three different timeframes standing in front of a brilliant column of energy">
+		<img src="images/tng-1x24.webp" class="episodeCardBG" alt="Three versions of Data across three different timeframes standing in front of a brilliant column of energy">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -2196,7 +2202,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>124</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">We'll Always Have Paris</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -2276,7 +2282,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e25" class="episodeCard">
-		<img src="images/tng-1x25.png" class="episodeCardBG" alt="Riker and Picard confronting Remmick">
+		<img src="images/tng-1x25.webp" class="episodeCardBG" alt="Riker and Picard confronting Remmick">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -2288,7 +2294,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>125</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">Conspiracy</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -2381,7 +2387,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e26" class="episodeCard">
-		<img src="images/tng-1x26.png" class="episodeCardBG" alt="Riker addressing the three people who were unfrozen from their cryogenic tubes">
+		<img src="images/tng-1x26.webp" class="episodeCardBG" alt="Riker addressing the three people who were unfrozen from their cryogenic tubes">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -2393,7 +2399,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>126</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="TNG combadge" height="37" src="images/tng_combadge.webp" width="36"></td>
 						<td class="titleBox">The Neutral Zone</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -2481,7 +2487,7 @@
 <a href="tng-s3.html">Season 3</a> • <a href="tng-s4.html">Season 4</a> • <a href="tng-s5.html">Season 5</a> • <a href="tng-s6.html">Season 6</a> • <a href="tng-s7.html">Season 7</a></h3>
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
 
-<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 <div id="TTDIV">
 	<div id="FepisodeToolTip" class="tooltip" onClick="closeToolTip(this)">"Franchise Episode" tells you the order in which episodes from ANY/ALL Star Trek television shows aired or streamed for the first time. This number excludes movies, TOS's "The Cage", and the "Very Short Treks" web shorts.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>

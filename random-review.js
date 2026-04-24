@@ -24,11 +24,16 @@ const reviews = [
 	'pro/pro-s2.html#e01','pro/pro-s2.html#e02','pro/pro-s2.html#e03','pro/pro-s2.html#e04','pro/pro-s2.html#e05','pro/pro-s2.html#e06','pro/pro-s2.html#e07','pro/pro-s2.html#e08','pro/pro-s2.html#e09','pro/pro-s2.html#e10','pro/pro-s2.html#e11','pro/pro-s2.html#e12','pro/pro-s2.html#e13','pro/pro-s2.html#e14','pro/pro-s2.html#e15','pro/pro-s2.html#e16','pro/pro-s2.html#e17','pro/pro-s2.html#e18','pro/pro-s2.html#e19','pro/pro-s2.html#e20',
 	'pic/pic-s1.html#e01','pic/pic-s1.html#e02','pic/pic-s1.html#e03','pic/pic-s1.html#e04','pic/pic-s1.html#e05','pic/pic-s1.html#e06','pic/pic-s1.html#e07','pic/pic-s1.html#e08','pic/pic-s1.html#e09','pic/pic-s1.html#e10',
 	'pic/pic-s2.html#e01','pic/pic-s2.html#e02','pic/pic-s2.html#e03','pic/pic-s2.html#e04','pic/pic-s2.html#e05','pic/pic-s2.html#e06','pic/pic-s2.html#e07','pic/pic-s2.html#e08','pic/pic-s2.html#e09','pic/pic-s2.html#e10',
-	'pic/pic-s3.html#e01','pic/pic-s3.html#e02','pic/pic-s3.html#e03','pic/pic-s3.html#e04','pic/pic-s3.html#e05','pic/pic-s3.html#e06','pic/pic-s3.html#e07','pic/pic-s3.html#e08','pic/pic-s3.html#e09'
+	'pic/pic-s3.html#e01','pic/pic-s3.html#e02','pic/pic-s3.html#e03','pic/pic-s3.html#e04','pic/pic-s3.html#e05','pic/pic-s3.html#e06','pic/pic-s3.html#e07','pic/pic-s3.html#e08','pic/pic-s3.html#e09',
+	'low/low-s1.html#e01','low/low-s1.html#e02','low/low-s1.html#e03','low/low-s1.html#e04','low/low-s1.html#e05','low/low-s1.html#e06','low/low-s1.html#e07','low/low-s1.html#e08','low/low-s1.html#e09','low/low-s1.html#e10',
+	'low/low-s2.html#e01','low/low-s2.html#e02','low/low-s2.html#e03','low/low-s2.html#e04','low/low-s2.html#e05','low/low-s2.html#e06','low/low-s2.html#e07','low/low-s2.html#e08','low/low-s2.html#e09','low/low-s2.html#e10',
+	'low/low-s3.html#e01','low/low-s3.html#e02','low/low-s3.html#e03','low/low-s3.html#e04','low/low-s3.html#e05','low/low-s3.html#e06','low/low-s3.html#e07','low/low-s3.html#e08','low/low-s3.html#e09','low/low-s3.html#e10',
+	'low/low-s4.html#e01','low/low-s4.html#e02','low/low-s4.html#e03','low/low-s4.html#e04','low/low-s4.html#e05','low/low-s4.html#e06','low/low-s4.html#e07','low/low-s4.html#e08','low/low-s4.html#e09','low/low-s4.html#e10',
+	'low/low-s5.html#e01','low/low-s5.html#e02','low/low-s5.html#e03','low/low-s5.html#e04','low/low-s5.html#e05','low/low-s5.html#e06','low/low-s5.html#e07','low/low-s5.html#e08','low/low-s5.html#e09','low/low-s5.html#e10'
 ];
 // PIC 3x10 HAS BEEN OMITTED FROM THE ABOVE LIST BECAUSE THE EPISODE PHOTO IS A MAJOR SPOILER
 
-// const reviews = ['tng/tng-s1.html#e01','tng/tng-s1.html#e03','tng/tng-s1.html#e04'];   //<------ FOR TESTING
+//const reviews = [];   //<------ FOR TESTING
 
 var reviewPool = [...reviews];
 

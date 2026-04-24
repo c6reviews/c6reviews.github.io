@@ -3,6 +3,7 @@
 
 <head>
 
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
@@ -17,6 +18,11 @@
 	});
 	var host = window.location.hostname;
 	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
 		gtag('js', new Date());
 		gtag('config', 'G-DM44X85QLJ');
 	}
@@ -35,16 +41,16 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="main.css?v=1.5.2">
+<link rel="stylesheet" href="main.css?v=1.6">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <meta property="og:title" content="Updates | C6Reviews">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://c6reviews.com/images/ogimage.png">
+<meta property="og:image" content="https://c6reviews.com/images/ogimage.webp">
 <meta property="og:url" content="https://c6reviews.com/updates.html">
 <meta property="og:description" content="Site update log for C6Reviews.com">
 
-<script src="cookies.js"></script>
+<script src="cookies.js?v=1.6"></script>
 <title>C6Reviews | Updates</title>
 </head>
 
@@ -52,21 +58,20 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="index.html"><img src="images/c6reviews-vert.png" alt="c6reviews"></a></div>
-	<div class="pageTitleImage"><img src="images/main-header.png" alt="Starfleet delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
+<div class="c6Left"><a href="index.html"><img src="images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+	<div class="pageTitleImage"><img src="images/main-header.webp" alt="Starfleet delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
 	<div class="pageTitleContainer">
 		<div class="pageTitle">
-			<a href="index.html"><img src="images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br>Star Trek Episode Guides
+			<a href="index.html"><img src="images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>Star Trek Episode Guides
 			<span class="pageSubtitle">Site Updates</span>
 		</div>
 	</div>
-	<div class="c6Right"><a href="index.html"><img src="images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="about.html" style="margin-top:8px;">ABOUT</a><a href="updates.html">UPDATES</a><a href="blog/index.html">BLOG</a>
+	<div class="c6Right"><a href="index.html"><img src="images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="about.html" style="margin-top:8px;">ABOUT</a><a href="updates.html">UPDATES</a><a href="blog/index.html">BLOG</a>
 	<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a>
-	<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+	<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div>
-
 
 
 	<div class="updatesAcknowledgements">
@@ -84,6 +89,30 @@
 			<th>Version</th>
 			<th style="text-align:left;padding-left: 35px;">Description</th>
 		</tr>
+		<tr class="dotRelease">
+			<td><span class="updateDate">April 24, 2026</span></td>
+			<td>1.6</td>
+			<td>
+				<ul>
+					<li><span class="newGuideRelease">The <a href="low/index.html"><em>Star Trek: Lower Decks</em></a> Series Guide is now online!</span></li>
+					<li><span class="newGuideRelease">The <a href="theborg/index.html">Borg</a> Topic Guide is also live!</span></li>
+					<li>Site performance improvements:
+						<ul>
+							<li style="line-height:1;margin-top:8px">All images have been <strong>converted from PNG to WEBP</strong>, and many large episode images were reduced in size by 40%.<br>
+								<span style="font-size:small;font-style:italic">As a result, the site's total size has decreased by over 1 GB.</span>
+							</li>
+							<li style="line-height:1">All fonts have been <strong>converted from TTF to WOFF2</strong>.<br>
+								<span style="font-size:small;font-style:italic">I finally realized why some text was taking so long to display on some pages: the font file was humongous.</span>
+							</li>
+						</ul>
+					</li>
+					<li>Spun up an <a href="https://umami.is/" target="_blank">Umami</a> instance on <a href="https://railway.com/" target="_blank">Railway</a> to gather page visit statistics since everyone is probably rejecting the cookies needed for Google Analytics (and I don't blame you one bit!)</li>
+				</ul>
+				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
+					Added a TOC and a &ldquo;conventions used on this site&rdquo; section on the About page, in case anyone questions why I don't capitalize &ldquo;easter&rdquo; when talking about easter eggs; fixed the never-appearing scroll-to-top button on the About page so that it... appears; made some consistency updates to the tables in the Seven of Nine, Q, and Borg guides; made a few aesthetic improvements on the Q topic guide; the borders on season and guide tiles on the series home pages now also highlight when hovering; aria-label attributes added to images in the SVG overlay on the comprehensive timeline for better WCAG compliance.
+				</div>
+			</td>
+		</tr>
 		<tr>
 			<td><span class="updateDate">April 5, 2026</span><div style="text-align:center;margin-top:15px"><span style="font-size:40px">👽&#xFE0F;</span><br>Happy<br>First Contact Day!</div></td>
 			<td>1.5.2</td>
@@ -95,7 +124,7 @@
 					<li>Though I presently have nothing published to show for it, I've started laying the groundwork for making this site more mobile-friendly.</li>
 				</ul>
 				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
-					Aesthetic improvements were made to timelines (including a higher-quality image of Cochrane and the <em>Phoenix</em>); the full timeline spoiler menu now shows the number of spoilers hidden for each series; slightly improved the appearance of the &ldquo;pips&rdquo; icons; sanitized title and timeline search inputs so I don't get &ldquo;<a href="https://xkcd.com/327/" target="_blank">Little Bobby Tables'd</a>&rdquo;; changed a whole bunch of absolute and relative links to be root-relative; moved styles for the cookie consent popup to the css file where they belong instead of the js file; made consistent the mentions of guest stars reprising their roles; and put a considerable amount of work into making consistent the italicization of series names, film names, and ship names across the website... I probably missed a few, but at least it wasn't the hyphens again.
+					Aesthetic improvements were made to timelines (including a higher-quality image of Cochrane and the <em>Phoenix</em>); the full timeline spoiler menu now shows the number of spoilers hidden for each series; slightly improved the appearance of the &ldquo;pips&rdquo; icons; sanitized title and timeline search inputs so I don't get &ldquo;<a href="https://xkcd.com/327/" target="_blank">Little Bobby Tables'd</a>&rdquo;; changed a whole bunch of absolute and relative links to be root-relative; moved styles for the cookie consent popup to the css file where they belong instead of the js file; made consistent the mentions of guest stars reprising their roles; and put a considerable amount of work into making consistent the italicization of series names, film names, and ship names across the website... I probably missed a few, but at least I wasn't dealing with the hyphens again.
 				</div>
 			</td>
 		</tr>
@@ -138,8 +167,7 @@
 		<span style="text-align:left"><a href="updates-y1.html">❰ Previous Year</a></span><span style="text-align:right;color:#555">Next Year ❱</span>
 	</div>
 
-
-<div class="pageFooter"><a href="index.html"><img src="images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a href="blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="index.html"><img src="images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a href="blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 
 <div id="TTDIV">

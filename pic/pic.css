@@ -111,6 +111,9 @@ html {
 	font-size:large;
 	font-weight:bold;
 	vertical-align:bottom;
+	&:hover {
+		border-color: #F1F1F1;
+	}
 }
 .guidesTable td {
 	border: 1px solid #1B8ABA88;
@@ -120,6 +123,9 @@ html {
 	font-size:large;
 	font-weight:bold;
 	vertical-align:middle;
+	&:hover {
+		border-color: #F1F1F1;
+	}
 }
 .seasonsTable div {
 	text-align:center;

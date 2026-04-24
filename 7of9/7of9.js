@@ -64,7 +64,7 @@ function createTable(array) {
 					break;
 				case 1:
 					cellClass = "col_series";
-						cell = cell.replace('VOY','<img src="../images/voy-abbr.png" style="height:15px;" alt="VOY">').replace('PIC','<img src="../images/pic-abbr.png" style="height:20px;" alt="PIC">');
+						cell = cell.replace('VOY','<img src="../images/voy-abbr.webp" style="height:15px;" alt="VOY">').replace('PIC','<img src="../images/pic-abbr.webp" style="height:20px;" alt="PIC">');
 					break;
 				case 2:
 					cellClass = "col_episodeNumber";

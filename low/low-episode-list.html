@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('consent', 'default', {
+		'ad_user_data': 'denied',
+		'ad_personalization': 'denied',
+		'ad_storage': 'denied',
+		'analytics_storage': 'denied',
+		'wait_for_update': 500,
+	});
+	var host = window.location.hostname;
+	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
+		gtag('js', new Date());
+		gtag('config', 'G-DM44X85QLJ');
+	}
+</script>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="darkreader-lock" content="47">
+<link rel="stylesheet" href="/main.css?v=1.6">
+<link rel="stylesheet" href="low.css?v=1.6">
+<link rel="stylesheet" href="low-episode-list.css?v=1.6">
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+<meta property="og:title" content="Lower Decks Episode List | C6Reviews">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://c6reviews.com/low/images/ogimage.webp">
+<meta property="og:url" content="https://c6reviews.com/low/low-episode-list.html">
+<meta property="og:description" content="A list of every episode of Star Trek: Lower Decks.">
+
+<script src="low.js?v=1.6"></script>
+<script src="low-episode-list.js?v=1.6"></script>
+<script src="/cookies.js?v=1.6"></script>
+<title>C6 | Lower Decks Episode List</title>
+</head>
+
+<body>
+
+<div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
+
+<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+<div class="pageTitleImage"><img src="images/low-header.webp" alt="The USS Cerritos and the Lower Decks title"></div>
+<div class="pageTitleContainer">
+	<div class="pageTitle">
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>Star Trek: Lower Decks
+		<span class="pageSubtitle">Full Episode List</span>
+	</div>
+</div>
+<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+
+
+<div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div> 
+
+<div id="leftNavOpenButton" onclick="toggleNav()">🧭<br>nav</div>
+<div id="mainSidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<a href="index.html"><span style="font-size:large">←</span> LOW Episode Guide Home</a><br>
+	<a href="index.html"><img src="/images/low-title.webp" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="lower decks logo"></a><br>
+	<a href="low-episode-list.html" style="text-align:center">Full Episode List</a>
+	<div class="sidenavseasons">
+		Season: 
+		<a href="low-s1.html">1</a> • <a href="low-s2.html">2</a> • <a href="low-s3.html">3</a> • <a href="low-s4.html">4</a> • <a href="low-s5.html">5</a>
+	</div>
+</div>
+
+<div id="backButton" onclick="window.location = 'index.html';"><span style="font-size:large;font-weight:bold">←</span><br>LOW<br>home</div>
+
+<div id="tableContainer">
+	<table id="episodeTable">
+		<tr id="preHeaderRow">
+			<td><div id="filterTotalbox">Showing<br><span id="filterTotal">50</span> of 50<br>episodes</div></td>
+			<td style="padding-right:8px;vertical-align:bottom;position:relative;">
+				<div class="episodeSearchBoxContainer">
+					<input type="text" id="episodeSearchBox" placeholder="Title search" onkeyup="filterTitle()" size="28" style="height:21px"><input type="button" value="✖&#xFE0E;" class="textClearButton" onClick="document.getElementById('episodeSearchBox').value='';filterTitle()">
+				</div>
+				<div class="filterModeContainer">
+					<span style="font-size: 12px;text-decoration:underline">Filter mode</span><br>
+					<label class="radioContainer">AND&nbsp;<input type="radio" class="andorradio" id="andordefault" value="and" name="andor" onClick="setFilters('andor')" checked ><span class="radioDot"></span></label><br>
+					<label class="radioContainer">OR&nbsp;<input type="radio" class="andorradio" value="or" name="andor" onClick="setFilters('andor')" ><span class="radioDot"></span></label>
+				</div>
+				
+			</td>
+			<td style="text-align:center;vertical-align:bottom;">
+				<div class="xx-small">Mouse over tags<br>to see description<br><br></div>
+				<input type="text" id="tagFilterTextbox" placeholder="Tags filter" size="10" onclick="toggleFilterBox('tagFilter')" style="height:21px;" readonly>
+				<input id="tagFilterDropdownArrow" type="button" class="dropdownArrow" value="▼" onClick="toggleFilterBox('tagFilter')">
+				<div class="filterDropdownContainer" id="tagFilter" style="transform: translateX(-112px);">
+					<label class="checkContainer"><input type="checkbox" id="tagsfilterall" onClick="setFilters('tagsall')" checked><span class="checkmark"></span><span class="icon"></span>&nbsp;All&nbsp;Tags</label>
+					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="‼" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon">‼&#xFE0F;</span>&nbsp;Very&nbsp;Important&nbsp;episodes</label>
+					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="❗" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon">❗</span>&nbsp;Important&nbsp;episodes</label>
+					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="⁉" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon">⁉&#xFE0F;</span>&nbsp;Bizarre&nbsp;episodes</label>
+					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="♥" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon">♥&#xFE0F;</span>&nbsp;Personal&nbsp;Favorites</label>
+					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="🥇|🥈|🥉|🏅|🎖|💩" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon">🏅</span>&nbsp;Episodes with extra awards</label>
+					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="badgey" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon" style="display:none">[B]</span><span style="display:inline-block;width:30px;text-align:center;"><img src="images/badgey.webp" style="height:20px;vertical-align:middle;" title="Badgey!" alt="[B]"></span>&nbsp;Badgey!</label>
+					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="/ph." onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon" style="display:none">[P]</span><span style="display:inline-block;width:30px;text-align:center;"><img src="images/ph.webp" style="height:20px;vertical-align:middle;" title="Peanut Hamper!" alt="[P]"></span>&nbsp;Peanut&nbsp;Hamper!</label>
+					<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="agimus" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon" style="display:none">[A]</span><span style="display:inline-block;width:30px;text-align:center;"><img src="images/agimus.webp" style="height:20px;vertical-align:middle;" title="AGIMUS!" alt="[A]"></span>&nbsp;AGIMUS!</label>
+				</div>
+			</td>
+			<td style="text-align:center;vertical-align:bottom;">
+				<input type="text" id="recommendationFilterTextbox" placeholder="Reference Meter filter" size="16" onclick="toggleFilterBox('recommendationFilter')" style="height:21px" readonly>
+				<input id="recommendationFilterDropdownArrow" type="button" class="dropdownArrow" value="▼" onClick="toggleFilterBox('recommendationFilter')">
+				<div class="filterDropdownContainer" id="recommendationFilter" style="transform: translateX(29px);">
+					<label class="checkContainer"><input type="checkbox" id="rnfilterall" onClick="setFilters('rnall')" checked><span class="checkmark"></span><span class="icon">All</span></label>
+					<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="1️⃣" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">1️⃣</span></label>
+					<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="2️⃣" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">2️⃣</span></label>
+					<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="3️⃣" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">3️⃣</span></label>
+					<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="4️⃣" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">4️⃣</span></label>
+					<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="5️⃣" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">5️⃣</span></label>
+					<label class="checkContainer"><input type="checkbox" class="rnfiltercheckbox" value="⭐" onClick="setFilters('rn')"><span class="checkmark"></span><span class="icon">⭐</span></label>
+					<input type="hidden" class="rnfiltercheckbox" value="None">
+				</div>
+			</td>
+			<td style="text-align:right;vertical-align:bottom;">
+				<input type="button" class="resetFiltersButton" onClick="resetFilters()" value="Clear Filters">
+			</td>
+		</tr>
+		<tr id="headerRow">
+			<th style="width:100px;text-align:left" onclick="sortTable(0,event)">Episode <span id="0asc" class="sortarrows">↿</span><span id="0desc" class="sortarrows">⇂</span></th>
+			<th style="width:auto;text-align:left" onclick="sortTable(1,event)">Title <span id="1asc" class="sortarrows">↿</span><span id="1desc" class="sortarrows">⇂</span>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span style="font-weight:normal;font-size:x-small">
+					<label class="radioContainer"><input type="radio" class="sorttype" value="strictaz" name="sorttype" checked >Strict A-Z Sort&nbsp;<span class="radioDot"></span></label>&nbsp;&nbsp;
+					<label class="radioContainer"><input type="radio" class="sorttype" value="title" name="sorttype">Title Sort (ignore a, an, the)&nbsp;<span class="radioDot"></span></label>
+				</span>
+			</th>
+			<th style="width:150px" onclick="sortTable(2,event)">Tags <span id="sortarrows"><span id="2asc" class="sortarrows">↿</span><span id="2desc" class="sortarrows">⇂</span></span></th>
+			<th style="width:250px" onclick="sortTable(3,event)">Reference Meter <span id="3asc" class="sortarrows">↿</span><span id="3desc" class="sortarrows">⇂</span></th>
+			<th style="width:80px" onclick="sortTable(4,event)">Rating <span id="4asc" class="sortarrows">↿</span><span id="4desc" class="sortarrows">⇂</span></th>
+		</tr>
+		
+	</table>
+</div>
+
+<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
+<div id="TTDIV"></div>
+
+
+<div id="bottomBorder"></div>
+</body>
+</html>

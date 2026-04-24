@@ -302,6 +302,17 @@
 		td:has(> .iconDescription){
 			vertical-align: top;
 		}
+		.minorReferencesList{
+			font-size:small;
+			line-height: 1;
+			margin-top: 2px;
+			margin-left: 12px;
+			padding-left: 12px;
+			& li {
+				line-height:1;
+				margin-bottom: 2px;
+			}
+		}
 		.nitpickery {
 			border-radius: 8px;
 			text-align: left;
@@ -335,6 +346,33 @@
 			width: fit-content;
 			background-color: #18181890;
 			padding: 3px;
+		}
+		.expandable {
+			position: relative;
+			overflow: hidden;
+			mask-image:  linear-gradient(180deg, #000 60%, transparent 90%);
+			transition: max-height 0.8s ease-in-out;
+			border-top: 3px solid #808080;
+			padding-top: 5px;
+			padding-bottom: 10px;
+		}
+		td:has(> .keepReadingButton){
+			position: relative;
+		}
+		.keepReadingButton {
+			position: absolute;
+			color: white;
+			text-align: center;
+			background-image: linear-gradient(to bottom, #08080844, #080808EE);
+			padding: 1px;
+			font-size: small;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 0px;
+			cursor: pointer;
+			border-bottom: 3px solid #808080;
+			border-radius: 0px 0px 8px 8px;
+			width: 99.5%;
 		}
 
 

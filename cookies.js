@@ -82,6 +82,28 @@ function unsetAllCookies(){
 	setCookie('timelineSNWspoilers','',-1);
 	setCookie('timelineDEATHspoilers','',-1);
 	setCookie('timelineALLspoilers','',-1);
+	
+	const cookies = document.cookie.split(";");
+
+	cookies.forEach(cookie => {
+		const name = cookie.split("=")[0].trim();
+
+		if (name.startsWith("_ga")) {
+		  // Delete for current domain
+		  document.cookie = name + "=; Max-Age=0; path=/";
+
+		  // Delete for root domain (important!)
+		  document.cookie = name + "=; Max-Age=0; path=/; domain=" + location.hostname;
+
+		  // Also try removing subdomain prefix
+		  const domainParts = location.hostname.split('.');
+		  if (domainParts.length > 2) {
+			const rootDomain = '.' + domainParts.slice(-2).join('.');
+			document.cookie = name + "=; Max-Age=0; path=/; domain=" + rootDomain;
+		  }
+		}
+	  });
+	
 }
 
 function displayConsentDialogue(){

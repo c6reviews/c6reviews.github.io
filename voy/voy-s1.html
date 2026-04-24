@@ -3,6 +3,7 @@
 
 <head>
 
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
@@ -17,6 +18,11 @@
 	});
 	var host = window.location.hostname;
 	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
 		gtag('js', new Date());
 		gtag('config', 'G-DM44X85QLJ');
 	}
@@ -24,19 +30,19 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="/main.css?v=1.5.2">
-<link rel="stylesheet" href="voy.css?v=1.5.2">
-<link rel="stylesheet" href="voy-episode-guides.css?v=1.5.2">
+<link rel="stylesheet" href="/main.css?v=1.6">
+<link rel="stylesheet" href="voy.css?v=1.6">
+<link rel="stylesheet" href="voy-episode-guides.css?v=1.6">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <meta property="og:title" content="VOY Season 1 | C6Reviews">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://c6reviews.com/voy/images/ogimage.png">
+<meta property="og:image" content="https://c6reviews.com/voy/images/ogimage.webp">
 <meta property="og:url" content="https://c6reviews.com/voy/voy-s1.html">
 <meta property="og:description" content="Episode reviews and guides for Star Trek: Voyager, Season 1.">
 
-<script src="voy.js"></script>
-<script src="/cookies.js"></script>
+<script src="voy.js?v=1.6"></script>
+<script src="/cookies.js?v=1.6"></script>
 <title>C6 | VOY Season 1</title>
 </head>
 
@@ -44,15 +50,15 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.png" alt="c6reviews"></a></div>
-<div class="pageTitleImage"><img src="images/voy-header.png" alt="The USS Voyager and show title"></div>
+<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+<div class="pageTitleImage"><img src="images/voy-header.webp" alt="The USS Voyager and show title"></div>
 <div class="pageTitleContainer">
 	<div class="pageTitle">
-		<a href="/index.html"><img src="/images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br><em>Star Trek: Voyager</em>
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br><em>Star Trek: Voyager</em>
 		<span class="pageSubtitle">Season 1 Episode Guides</span>
 	</div>
 </div>
-<div class="c6Right"><a href="/index.html"><img src="/images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 <h3 class="seasonNav"><a href="voy-episode-list.html">Full Episode List</a><br><span class="activeSeason"><a href="voy-s1.html">Season 1</a></span> • <a href="voy-s2.html">Season 2</a> • <a href="voy-s3.html">Season 3</a> • <a href="voy-s4.html">Season 4</a> • <a href="voy-s5.html">Season 5</a> • <a href="voy-s6.html">Season 6</a> • <a href="voy-s7.html">Season 7</a></h3>
 
@@ -64,7 +70,7 @@
 <div id="mainSidenav" class="sidenav">
 	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	<a href="index.html"><span style="font-size:large">←</span> VOY Episode Guide Home</a><br>
-	<a href="index.html"><img src="/images/voy-title.png" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="voy logo"></a><br>
+	<a href="index.html"><img src="/images/voy-title.webp" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="voy logo"></a><br>
 	<a href="voy-episode-list.html" style="text-align:center">Full Episode List</a>
 	<div class="sidenavseasons">
 		Season: 
@@ -94,7 +100,7 @@
 		Welcome to the opening season of <em>Star Trek: Voyager</em>. Season 1 is a little awkward as the actors get used to their roles, and also because it seems to end abruptly after only sixteen episodes. Obviously, the premiere will set up the story for how <em>Voyager</em> got stuck in the Delta Quadrant, but after that, it will settle almost immediately into &ldquo;business as usual&rdquo;. Unlike <em>Deep Space Nine</em>, this show will be almost entirely episodic, more like TOS and TNG. So, look forward to some action, adventure, betrayal, and swordplay, why not!
 	</div>
 	<div id="e01" class="episodeCard">
-		<img src="images/voy-1x01.png" class="episodeCardBG" alt="Janeway, Chakotay, and Paris confronting Banjo-Man">
+		<img src="images/voy-1x01.webp" class="episodeCardBG" alt="Janeway, Chakotay, and Paris confronting Banjo-Man">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -106,7 +112,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>335</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.webp" width="36"></td>
 						<td class="titleBox">Caretaker</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -200,7 +206,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e03" class="episodeCard">
-		<img src="images/voy-1x03.png" class="episodeCardBG" alt="Torres and Carey sitting at the conference table">
+		<img src="images/voy-1x03.webp" class="episodeCardBG" alt="Torres and Carey sitting at the conference table">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -212,7 +218,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>336</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.webp" width="36"></td>
 						<td class="titleBox">Parallax</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -300,7 +306,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e04" class="episodeCard">
-		<img src="images/voy-1x04.png" class="episodeCardBG" alt="Janeway and a young boy tend to an injured Paris">
+		<img src="images/voy-1x04.webp" class="episodeCardBG" alt="Janeway and a young boy tend to an injured Paris">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -312,7 +318,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>337</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.webp" width="36"></td>
 						<td class="titleBox">Time and Again</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -388,7 +394,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e05" class="episodeCard">
-		<img src="images/voy-1x05.png" class="episodeCardBG" alt="Two ugly-ass aliens">
+		<img src="images/voy-1x05.webp" class="episodeCardBG" alt="Two ugly-ass aliens">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -400,7 +406,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>339</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.webp" width="36"></td>
 						<td class="titleBox">Phage</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -472,7 +478,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e06" class="episodeCard">
-		<img src="images/voy-1x06.png" class="episodeCardBG" alt="Voyager firing two energy beams, one fore and one aft, at the edges of a giant space sphincter">
+		<img src="images/voy-1x06.webp" class="episodeCardBG" alt="Voyager firing two energy beams, one fore and one aft, at the edges of a giant space sphincter">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -484,7 +490,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>341</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.webp" width="36"></td>
 						<td class="titleBox">The Cloud</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -560,7 +566,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e07" class="episodeCard">
-		<img src="images/voy-1x07.png" class="episodeCardBG" alt="A Romulan on Voyager's main viewscreen">
+		<img src="images/voy-1x07.webp" class="episodeCardBG" alt="A Romulan on Voyager's main viewscreen">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -572,7 +578,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>343</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.webp" width="36"></td>
 						<td class="titleBox">Eye Of The Needle</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -645,7 +651,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e08" class="episodeCard">
-		<img src="images/voy-1x08.png" class="episodeCardBG" alt="A black-and-white image of Lieutenant Paris and a woman embracing">
+		<img src="images/voy-1x08.webp" class="episodeCardBG" alt="A black-and-white image of Lieutenant Paris and a woman embracing">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -657,7 +663,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>345</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.webp" width="36"></td>
 						<td class="titleBox">Ex Post Facto</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -733,7 +739,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e09" class="episodeCard">
-		<img src="images/voy-1x09.png" class="episodeCardBG" alt="Harry Kim lying in some sort of pod with several people standing around him looking shocked">
+		<img src="images/voy-1x09.webp" class="episodeCardBG" alt="Harry Kim lying in some sort of pod with several people standing around him looking shocked">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -745,7 +751,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>347</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.webp" width="36"></td>
 						<td class="titleBox">Emanations</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -813,7 +819,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e10" class="episodeCard">
-		<img src="images/voy-1x10.png" class="episodeCardBG" alt="Captain Janeway in casual clothing sitting with a man having food and drink">
+		<img src="images/voy-1x10.webp" class="episodeCardBG" alt="Captain Janeway in casual clothing sitting with a man having food and drink">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -825,7 +831,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>348</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.webp" width="36"></td>
 						<td class="titleBox">Prime Factors</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -897,7 +903,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e11" class="episodeCard">
-		<img src="images/voy-1x11.png" class="episodeCardBG" alt="Seska lying on a bed in sickbay talking to Chakotay">
+		<img src="images/voy-1x11.webp" class="episodeCardBG" alt="Seska lying on a bed in sickbay talking to Chakotay">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -909,7 +915,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>349</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.webp" width="36"></td>
 						<td class="titleBox">State of Flux</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -981,7 +987,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e12" class="episodeCard">
-		<img src="images/voy-1x12.png" class="episodeCardBG" alt="The Doctor awkwardly holding a sword while onlookers smile">
+		<img src="images/voy-1x12.webp" class="episodeCardBG" alt="The Doctor awkwardly holding a sword while onlookers smile">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -993,7 +999,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>352</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.webp" width="36"></td>
 						<td class="titleBox">Heroes and Demons</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1069,7 +1075,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e13" class="episodeCard">
-		<img src="images/voy-1x13.png" class="episodeCardBG" alt="B'Elanna and the Doctor standing over Chakotay who is lying, unconscious, on a bed in sickbay">
+		<img src="images/voy-1x13.webp" class="episodeCardBG" alt="B'Elanna and the Doctor standing over Chakotay who is lying, unconscious, on a bed in sickbay">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1081,7 +1087,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>354</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.webp" width="36"></td>
 						<td class="titleBox">Cathexis</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1161,7 +1167,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e14" class="episodeCard">
-		<img src="images/voy-1x14.png" class="episodeCardBG" alt="A fully-Klingon version of B'Elanna standing in a darkened room">
+		<img src="images/voy-1x14.webp" class="episodeCardBG" alt="A fully-Klingon version of B'Elanna standing in a darkened room">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1173,7 +1179,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>356</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.webp" width="36"></td>
 						<td class="titleBox">Faces</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1241,7 +1247,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e15" class="episodeCard">
-		<img src="images/voy-1x15.png" class="episodeCardBG" alt="An alien scanning Neelix with a medical device">
+		<img src="images/voy-1x15.webp" class="episodeCardBG" alt="An alien scanning Neelix with a medical device">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1253,7 +1259,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>358</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.webp" width="36"></td>
 						<td class="titleBox">Jetrel</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1329,7 +1335,7 @@
 	</div>
 	<p>&nbsp;</p>
 	<div id="e16" class="episodeCard">
-		<img src="images/voy-1x16.png" class="episodeCardBG" alt="Tuvok inspecting a line of four other officers">
+		<img src="images/voy-1x16.webp" class="episodeCardBG" alt="Tuvok inspecting a line of four other officers">
 		<table class="episodeCardTable">
 			<tr><td>
 				<table class="titleBlock">
@@ -1341,7 +1347,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>360</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.png" width="36"></td>
+						<td class="combadgeBox"><img alt="voy combadge" height="37" src="images/ds9_voy_combadge.webp" width="36"></td>
 						<td class="titleBox">Learning Curve</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1390,7 +1396,7 @@
 						</tr>
 						<tr>
 							<td>&nbsp;</td>
-							<td><div class="thoughtsSection"><strong>Thoughts: </strong>Janeway says she wants to make the crewmen feel like &ldquo;part of the team,&rdquo; so Tuvok proceeds to put them through basic training and treat them like raw cadets. When they object, Chakotay punches one of them in the face and says he'll keep punching him in the face until he does what he's told, damn it! I'm sorry, WHAT? The episode proceeds to <em>try</em> and make it seem like Tuvok learned as much from the crewmen as they learned from him, but it does a poor job of that.</div></td>
+							<td><div class="thoughtsSection"><strong>Thoughts: </strong>Janeway says she wants to make the crewmen feel like &ldquo;part of the team&rdquo;, so Tuvok proceeds to put them through basic training and treat them like raw cadets. When they object, Chakotay punches one of them in the face and says he'll keep punching him in the face until he does what he's told, damn it! I'm sorry, WHAT? The episode proceeds to <em>try</em> and make it seem like Tuvok learned as much from the crewmen as they learned from him, but it does a poor job of that.</div></td>
 						</tr>
 						<tr>
 							<td>&nbsp;</td>
@@ -1447,7 +1453,7 @@
 <a href="voy-s3.html">Season 3</a> • <a href="voy-s4.html">Season 4</a> • <a href="voy-s5.html">Season 5</a> • <a href="voy-s6.html">Season 6</a> • <a href="voy-s7.html">Season 7</a></h3>
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
 
-<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 <div id="TTDIV">
 	<div id="FepisodeToolTip" class="tooltip" onClick="closeToolTip(this)">"Franchise Episode" tells you the order in which episodes from ANY/ALL Star Trek television shows aired or streamed for the first time. This number excludes movies, TOS's "The Cage", and the "Very Short Treks" web shorts.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>

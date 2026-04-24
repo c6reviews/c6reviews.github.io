@@ -3,6 +3,19 @@ var G_sortdir = "asc";
 
 document.addEventListener('DOMContentLoaded', function() {
 	
+	const urlParams = new URLSearchParams(window.location.search);
+	var goToFilm = urlParams.get('goToFilm');
+
+    if (goToFilm) {
+        // Find the element you want to click and trigger it
+        const targetLink = document.getElementById("#" + goToFilm);
+        if (targetLink) {
+            setTimeout(() => {
+				targetLink.click();
+			}, 200);
+        }
+    }
+	
 	var bottomBorder = document.getElementById('bottomBorder');
 	setTimeout(function() {bottomBorder.style.width = '74%';}, 100);
 	setTimeout(function() {if(bottomBorder.style.width != '100%'){bottomBorder.style.width = '75%';}}, 1000);

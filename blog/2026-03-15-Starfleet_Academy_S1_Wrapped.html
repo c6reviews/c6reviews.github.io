@@ -3,6 +3,7 @@
 
 <head>
 
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
@@ -17,6 +18,11 @@
 	});
 	var host = window.location.hostname;
 	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
 		gtag('js', new Date());
 		gtag('config', 'G-DM44X85QLJ');
 	}
@@ -24,20 +30,20 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="/main.css?v=1.5.2">
-<link rel="stylesheet" href="/tts.css?v=1.5.2">
-<link rel="stylesheet" href="blog.css?v=1.5.2">
+<link rel="stylesheet" href="/main.css?v=1.6">
+<link rel="stylesheet" href="/tts.css?v=1.6">
+<link rel="stylesheet" href="blog.css?v=1.6">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <meta property="og:title" content='Starfleet Academy Season 1 Wrapped | C6Reviews'>
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://c6reviews.com/blog/images/2026-03-15/atrium.png">
+<meta property="og:image" content="https://c6reviews.com/blog/images/2026-03-15/atrium.webp">
 <meta property="og:url" content="https://c6reviews.com/blog/2026-03-15-Starfleet_Academy_S1_Wrapped.html">
 <meta property="og:description" content="C6 shares his thoughts on SFA Season 1">
 
-<script src="blog.js"></script>
-<script src="/tts.js"></script>
-<script src="/cookies.js"></script>
+<script src="blog.js?v=1.6"></script>
+<script src="/tts.js?v=1.6"></script>
+<script src="/cookies.js?v=1.6"></script>
 <script>
 	function prepTextToSpeech(id)
 	{
@@ -53,15 +59,15 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.png" alt="c6reviews"></a></div>
-<div class="pageTitleImage"><img src="/images/main-header.png" alt="Starfleet Delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
+<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+<div class="pageTitleImage"><img src="/images/main-header.webp" alt="Starfleet Delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
 <div class="pageTitleContainer">
 	<div class="pageTitle">
-		<a href="/index.html"><img src="/images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br>Starfleet Academy Season 1 Wrapped
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>Starfleet Academy Season 1 Wrapped
 		<span class="pageSubtitle">&nbsp;</span>
 	</div>
 </div>
-<div class="c6Right"><a href="/index.html"><img src="/images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div> 
@@ -82,7 +88,7 @@
 
 		<p>With Season 1 of <em>Starfleet Academy</em> officially in the books, of course I have some thoughts I wanted to share. With a more complete picture of what the show wants to be, my opinion has certainly changed a bit since <a href="2026-01-20-Starfleet_Academy_First_Thoughts.html">my initial optimism after episodes 1 and 2</a>, and then <a href="2026-01-25-Starfleet_Academy_Second_Thoughts.html">my note of concern after episode 3</a>. </p>
 		
-		<img src="images/2026-03-15/mir.png" class="articleImage" style="float:right" alt="a yearbook photo of Caleb Mir as a child, marked as part of the class of 3196">
+		<img src="images/2026-03-15/mir.webp" class="articleImage" style="float:right" alt="a yearbook photo of Caleb Mir as a child, marked as part of the class of 3196">
 		
 		<p>I have a couple of things to get out of the way before getting into any specifics. First, I think that all of modern <em>Star Trek</em> &ndash; this show included &ndash; suffers from this 10-episode format, especially in their first seasons. We have brand-new characters that need to be introduced and backstories that need to be presented, and we have such a limited time to do it. As such, character introduction-episodes take up too great of a portion of the season, leaving us with less time for the &ldquo;meat and potatoes&rdquo; episodes. We've hardly gotten to know most of our characters, and we're already out of new stories until next year.</p>
 		
@@ -116,11 +122,11 @@
 		
 		<p><strong><span style="font-size:large;text-shadow: green 2px 2px 8px">👍 </span>The season finale</strong> &mdash; It was worth the ride, in the end. I enjoyed the conclusion, and the atmosphere of the ad-hoc trial in the graffitied atrium. It reminded me of Sander Cohen's stage in <a href="https://bioshock.fandom.com/wiki/Fort_Frolic" target="_blank">Fort Frolic</a> from <em>BioShock</em> &ndash; I know, that's not an especially timely reference, and I'm crossing universes. Anyway, after all of the strife and drama, there was something very relieving about once again hearing that running gag about the Talaxian furfly from the Digital Dean of Students (voiced by <a href="https://memory-alpha.fandom.com/wiki/Stephen_Colbert" target="_blank">Stephen Colbert</a>), signaling that things were getting back to normal.</p>
 		
-		<figure class="articleImage" style="margin:auto"><img src="images/2026-03-15/atrium.png" style="width:800px" alt=""><br><figcaption>The Academy atrium, graffitied and burning under the despotism of Nus Braka.</figcaption></figure>
+		<figure class="articleImage" style="margin:auto"><img src="images/2026-03-15/atrium.webp" style="width:800px" alt=""><br><figcaption>The Academy atrium, graffitied and burning under the despotism of Nus Braka.</figcaption></figure>
 		
 		<hr style="width:50%;margin-top:50px;margin-bottom:50px">
 		
-		<figure class="articleImage" style="width:300px;float:left"><img src="images/2026-03-15/origami_chicken.png" style="width:300px" alt="an origami chicken"><br><figcaption>Sadly, Nus Braka's strange &ldquo;origami chicken&rdquo; comment in the series premiere was just a one-off and did not become any sort of running gag. Instead, we got a sort of lame, one-liner explanation for why he shaved a tic-tac-toe board into his hair.</figcaption></figure>
+		<figure class="articleImage" style="width:300px;float:left"><img src="images/2026-03-15/origami_chicken.webp" style="width:300px" alt="an origami chicken"><br><figcaption>Sadly, Nus Braka's strange &ldquo;origami chicken&rdquo; comment in the series premiere was just a one-off and did not become any sort of running gag. Instead, we got a sort of lame, one-liner explanation for why he shaved a tic-tac-toe board into his hair.</figcaption></figure>
 		
 		<p><strong><span style="font-size:large;text-shadow: yellow 2px 2px 8px">❔ </span>The question</strong> I find myself asking is this: other than the time and setting, is there something in this series that takes advantage of the uniqueness of &ldquo;<em>Star Trek</em>&rdquo;, or does it simply borrow elements from that universe and make an otherwise-generic young adult drama? One way to begin to answer that question is to strip away the sci-fi elements and see what remains &ndash; see how much of the story stands on its own and how much falls apart. Does the story still work if everyone is human, on Earth, in... say... 2026? If so, does it really need to be &ldquo;in space&rdquo;? See, today, there is nothing analogous to space exploration here on Earth, and <em>Star Trek</em> has often used the vast unknown as a stage to explore ideas by using alien species as vehicles to examine the human condition. Is <em>SFA</em> doing that? I am not fully prepared to answer that question at this time.</p>
 		
@@ -136,7 +142,7 @@
 </div> <!-- content div ends here -->
 <p>&nbsp;</p>
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
-<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 <div id="TTDIV"></div>
 

@@ -1,0 +1,871 @@
+﻿
+/* ----------------------------------------------------- GLOBAL VARIABLES ----------------------------------------------------- */
+
+var G_numRows = 50; // <-----                  !!!! UPDATE THIS WITH THE NUMBER OF ROWS IN THE TABLE !!!!
+
+var G_sortcol = 0;
+var G_sortdir = "asc";
+var G_filterset = document.getElementsByClassName("filterableRow");
+
+/* ----------------------------------------------------- CREATE THE TABLE ----------------------------------------------------- */
+
+function csvToNestedArray(csvString) {
+  // Split into rows
+  const rows = csvString.split('\n');
+  // Split each row into an array. This regex splits using a comma delimiter, but ignores commas that are within quotation marks.
+  const nestedArray = rows.map(row => row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/)); 
+  return nestedArray;
+}
+
+function createTable(array) {
+    
+	// ----------------- ADD CONTENT -----------------
+	
+	var columns = 5;
+	var content = "";
+	
+	array.slice(1).forEach(function(row) {
+        content += '<tr class="filterableRow">';
+		
+		for (var i = 0; i < columns; i++) {
+			
+			//Set cell contents
+			var cell = row[i];
+			
+			//Set cell class
+			switch (i) {
+				case 0:
+					cellClass = "col_episodeNumber";
+					break;
+				case 1:
+					cellClass = "col_episodeTitle";
+					if (cell.startsWith('"') && cell.endsWith('"')){
+						cell = cell.substring(1, cell.length-1);
+					}
+					break;
+				case 2:
+					cellClass = "col_episodeTags";
+					// Replace flags
+					cell = cell.replace("R⚑",'<span style="color:red" title="Red Flag">⚑&#xFE0E;</span>');
+					cell = cell.replace("P⚑",'<span style="color:yellow" title="Penalty Flag">⚑&#xFE0E;</span>');
+					
+					// Replace pips
+					cell = cell.replace("A🟡",'<img alt="admiral insignia" title="Full Admiral Pips" src="images/admiral.webp" width="29" >');
+					cell = cell.replace("V🟡",'<img alt="vice admiral insignia" title="Vice Admiral Pips" src="images/vice_admiral.webp" width="26" >');
+					
+					// Add titles to remaining tags
+					cell = cell.replace("♥",'<span title="Personal Favorite">♥&#xFE0F;</span>');
+					cell = cell.replace("🕖",'<span title="Time Travel Episode">🕖</span>');
+					cell = cell.replace("🤖",'<span title="Proper Borg Episode">🤖</span>');
+					cell = cell.replace('(<span title="Proper Borg Episode">🤖</span>)','<span title="Episode involves the Borg">(🤖)</span>');
+					cell = cell.replace("Q",'<span title="Q Episode" class="Q">Q</span>');
+					cell = cell.replace("31",'<span title="Section 31" style="border:1px solid #C0C0C0;border-radius:10px;">31</span>');
+					cell = cell.replace("⚖",'<span title="Courtroom Episode">⚖&#xFE0F;</span>');
+					cell = cell.replace("♊",'<span title="Mirror Universe episode">♊</span>');
+					cell = cell.replace("🌎",'<span title="Episode takes place on Earth">🌎</span>');
+					cell = cell.replace("🟨",'<span title="Holodeck Episode">🟨</span>');
+					cell = cell.replace("👬",'<span title="Parallel / Alternate Reality">👬</span>');
+					cell = cell.replace("🎭",'<span title="Lighthearted/Comedy">🎭</span>');
+					cell = cell.replace("😱",'<span title="Scary">😱</span>');
+					//cell = cell.replace("🥇",'<span title="1st place episode">🥇</span>');
+					//cell = cell.replace("🥈",'<span title="2nd place episode">🥈</span>');
+					//cell = cell.replace("🥉",'<span title="3rd place episode">🥉</span>');
+					cell = cell.replace("🏅",'<span title="Special Award">🏅</span>');
+					cell = cell.replace("🎖",'<span title="General Award">🎖&#xFE0F;</span>');
+					cell = cell.replace("💩",'<span title="Worst episode of the series">💩</span>');
+					cell = cell.replace("❗",'<span title="Important episode">❗</span>');
+					cell = cell.replace("‼&#xFE0F;",'<span title="Very Important episode">‼&#xFE0F;</span>');
+					cell = cell.replace("⁉&#xFE0F;",'<span title="Truly Bizarre episode">⁉&#xFE0F;</span>');
+					break;
+				case 3:
+					cellClass = "col_episodeReferenceMeter";
+					// Stylize certain entries
+					cell = cell.replace("✔",'✔&#xFE0E;');
+					cell = cell.replace("♦",'♦&#xFE0E;');
+					cell = cell.replace("🕶 ‼ Must Watch/Bare Minimum",'<span class="mustWatch">🕶&#xFE0E;</span> <span class="bareMinimum">‼&#xFE0E;</span> Must Watch/Bare Minimum');
+					cell = cell.replace("🕶 Must Watch",'<span class="mustWatch">🕶&#xFE0E;</span> Must Watch');
+					cell = cell.replace("✖ Notably Bad",'<span class="notablyBad">✖&#xFE0E;</span> Notably Bad');
+					break;
+				case 4:
+					cellClass = "col_episodeRating";
+					break;
+			}
+			
+            content += '<td class="' + cellClass + '">' + cell + "</td>" ;
+		}
+			
+        content += "</tr>";
+    });
+    document.getElementById("episodeTable").innerHTML += content;
+	
+	// ----------------- ADD LINKS -----------------
+	
+	var epNumCells = Array.from(document.getElementsByClassName("col_episodeNumber"));
+	
+	epNumCells.forEach((cell) => {
+		var cellContents = cell.innerHTML;
+		var season = cellContents.substring(0,1);
+		var episode = cellContents.substring(2,4);
+		var link = "low-s" + season + ".html#e" + episode;
+		
+		var titleCell = cell.parentElement.querySelectorAll("td")[1];
+		cellContents = titleCell.innerHTML;
+		titleCell.innerHTML = '<a href="' + link + '">' + cellContents + '</a>';
+		
+	});
+	
+}
+
+/* ------------------------------------------------------------ TABLE SORT ------------------------------------------------------------ */
+
+async function sortTable(n,event) {
+
+	if (event.target.className.startsWith("radio")) {
+		return;
+	}
+	
+	sortArrowOff = document.getElementById(G_sortcol + G_sortdir);
+	sortArrowOff.style.color = "#555";
+	
+	var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+	var sorttype = document.querySelector('input[name="sorttype"]:checked').value;
+	table = document.getElementById("episodeTable");
+	switching = true;
+	// Set the sorting direction to ascending:
+	dir = "asc";
+	// Clear the title search
+	document.getElementById("episodeSearchBox").value = "";
+	await filterTitle();
+	
+	/* Make a loop that will continue until
+	no switching has been done: */
+	while (switching) {
+		// Start by saying: no switching is done:
+		switching = false;
+		rows = table.rows;
+		/* Loop through all table rows (except the
+		first two, which contains table headers): */
+		for (i = 2; i < (rows.length - 1); i++) {
+			// Start by saying there should be no switching:
+			shouldSwitch = false;
+			/* Get the two elements you want to compare,
+			one from current row and one from the next: */
+			x = rows[i].getElementsByTagName("TD")[n];
+			y = rows[i + 1].getElementsByTagName("TD")[n];
+			/* Check if the two rows should switch place,
+			based on the direction, asc or desc: */
+			
+			var isNumber = x.innerHTML.match(/[0-9]\.[0-9]/);
+			if (!!isNumber){
+				if (dir == "asc") {
+					if (Number(x.innerHTML) > Number(y.innerHTML)) {
+						// If so, mark as a switch and break the loop:
+						shouldSwitch = true;
+						break;
+					}
+				} else if (dir == "desc") {
+					if (Number(x.innerHTML) < Number(y.innerHTML)) {
+						// If so, mark as a switch and break the loop:
+						shouldSwitch = true;
+						break;
+					}
+				}
+			  
+			} else {
+				
+				// Ignore link
+				if (x.innerHTML.startsWith("<a")) {
+					x = x.querySelectorAll("a")[0];
+					y = y.querySelectorAll("a")[0];
+				}
+				
+				// SPECIAL CASE: Get inner div contents for "wej Duj" title
+				if (x.innerHTML.startsWith("<div")) {
+					x = x.querySelectorAll("div")[0];
+				}
+				if (y.innerHTML.startsWith("<div")) {
+					y = y.querySelectorAll("div")[0];
+				}
+				
+				
+				// If sorting by Title
+				if (n == 1)
+				{
+					
+					if (sorttype == "title"){
+						//	x = x.replace(/^('|a\s|an\s|the\s)/, '')
+						//	y = y.replace(/^('|a\s|an\s|the\s)/, '')
+						
+						// Move "the" "a" "an" to the end	
+						var words = x.innerHTML.trim().split(/\s+/);
+						//if (words.length <= 1) {break}
+						
+						if (words[0].toLowerCase() === "the" || words[0].toLowerCase() === "a" || words[0].toLowerCase() === "an")
+						{
+							const wordToMove = words.shift();
+							x.innerHTML = words.join(" ") + ", " + wordToMove;
+						}
+						
+						var words = y.innerHTML.trim().split(/\s+/);
+						//if (words.length <= 1) {break}
+						
+						if (words[0].toLowerCase() === "the" || words[0].toLowerCase() === "a" || words[0].toLowerCase() === "an")
+						{
+							const wordToMove = words.shift();
+							y.innerHTML = words.join(" ") + ", " + wordToMove;
+						}
+					}
+					
+					if (sorttype == "strictaz"){
+						//	x = x.replace(/^('|a\s|an\s|the\s)/, '')
+						//	y = y.replace(/^('|a\s|an\s|the\s)/, '')
+						
+						// Move "the" "a" "an" to the beginning
+						var words = x.innerHTML.trim().split(/\s+/);
+						//if (words.length <= 1) {break}
+						
+						
+						if (words[words.length-1].toLowerCase() === "the" || words[words.length-1].toLowerCase() === "a" || words[words.length-1].toLowerCase() === "an")
+						{
+							const wordToMove = words.pop();
+							x.innerHTML = (wordToMove + " " + words.join(" ")).slice(0, -1);
+						}
+						
+						var words = y.innerHTML.trim().split(/\s+/);
+						//if (words.length <= 1) {break}
+						
+						if (words[words.length-1].toLowerCase() === "the" || words[words.length-1].toLowerCase() === "a" || words[words.length-1].toLowerCase() === "an")
+						{
+							const wordToMove = words.pop();
+							y.innerHTML = (wordToMove + " " + words.join(" ")).slice(0, -1);
+						}
+					}
+					
+				}
+				
+				// Ignore leading '
+				x = x.innerHTML.toLowerCase().replace(/^(')/, '');
+				y = y.innerHTML.toLowerCase().replace(/^(')/, '');
+				if (dir == "asc") {
+					if (x > y) {
+						// If so, mark as a switch and break the loop:
+						shouldSwitch = true;
+						break;
+					}
+				} else if (dir == "desc") {
+					if (x < y) {
+						// If so, mark as a switch and break the loop:
+						shouldSwitch = true;
+						break;
+					}
+				}
+			  
+			}
+		}
+		if (shouldSwitch) {
+			/* If a switch has been marked, make the switch
+			and mark that a switch has been done: */
+			rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+			switching = true;
+			// Each time a switch is done, increase this count by 1:
+			switchcount ++;
+		} else {
+			/* If no switching has been done AND the direction is "asc",
+			set the direction to "desc" and run the while loop again. */
+			if (switchcount == 0 && dir == "asc") {
+				dir = "desc";
+				switching = true;
+			}
+		}
+	}
+	
+	G_sortcol = n;
+	G_sortdir = dir;
+	
+	removeSeasonSeparator();
+	
+	if (G_sortcol == 0) {
+		addSeasonSeparator();
+	}
+	
+	sortArrowOn = document.getElementById(G_sortcol + G_sortdir);
+	sortArrowOn.style.color = "white";
+
+}
+
+/* ------------------------------------------------------------ TABLE FILTERS ------------------------------------------------------------ */
+
+function updateFilterCount() {
+	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
+	var displayedRows = 0;
+
+	filterrows.forEach((filterrow) => {
+		if (filterrow.style.display != "none") {
+			displayedRows += 1;
+			if (filterrow.querySelector(".col_episodeNumber").innerHTML.match("&")){
+				displayedRows += 1;
+			}
+		}
+	});
+	
+	document.getElementById("filterTotal").innerHTML = displayedRows;
+	if (displayedRows != G_numRows) {
+		document.getElementById("filterTotal").style.color = "yellow";
+		document.getElementById("filterTotal").style.fontWeight = "bold";
+	} else {
+		document.getElementById("filterTotal").style.color = "";
+		document.getElementById("filterTotal").style.fontWeight = "";
+	}
+}
+
+function filterTitle() {
+	const filterrows = G_filterset;
+	
+	//Clear all yellow highlights
+	for (i = 0; i < filterrows.length; i++) {
+		td = filterrows[i].getElementsByClassName("col_episodeTitle")[0];
+		if (td) {
+			td.innerHTML = td.innerHTML.replaceAll('<span style="color:yellow">',"")
+			td.innerHTML = td.innerHTML.replaceAll('</span>',"")
+		}
+	}
+	
+	var input, filter, table, td, i, txtValue;
+	input = document.getElementById("episodeSearchBox");
+	filter = input.value.toLowerCase();
+	table = document.getElementById("episodeTable");
+	
+	for (i = 0; i < filterrows.length; i++) {
+		td = filterrows[i].getElementsByClassName("col_episodeTitle")[0];
+		if (td) {
+			txtValue = td.textContent || td.innerText;
+			if (txtValue.toLowerCase().indexOf(filter) > -1) {
+				filterrows[i].style.display = "";
+				const regEx = new RegExp(filter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+				if (filter != "") {
+					var link = td.querySelector('a');
+					var linktext = link.innerText;
+					
+					if (link.innerHTML.includes('<div')){ // SPECIAL CASE for LOW 2x09: wej Duj
+						link.innerHTML = "<div style='display:inline;font-family:Klingon'>" + linktext.slice(0,7).replace(regEx, '<span style="color:yellow">$&</span>') + "</div>" + linktext.slice(7).replace(regEx, '<span style="color:yellow">$&</span>');
+					} else {
+						link.innerHTML = linktext.replace(regEx, '<span style="color:yellow">$&</span>');
+					}
+				}
+			} else {
+				filterrows[i].style.display = "none";
+			}
+		}
+	}
+
+	updateFilterCount();
+	removeSeasonSeparator();
+	if (G_sortcol == 0) {
+		addSeasonSeparator();
+	}
+	
+	return;
+}
+
+function toggleFilterBox(id) {
+	var box = document.getElementById(id);
+
+	if (box.style.display != "block") {
+		box.style.display = "block";
+	} else {
+		box.style.display = "none";
+	}
+}
+
+window.addEventListener('mouseup',function(event){
+	var filterBox = document.getElementById("tagFilter");
+	if(event.target != filterBox && event.target.parentNode != filterBox && event.target.parentNode.parentNode != filterBox && event.target.parentNode != filterBox.parentNode){
+        filterBox.style.display = "none";
+    }
+});
+
+window.addEventListener('mouseup',function(event){
+	var filterBox = document.getElementById("recommendationFilter");
+	if(event.target != filterBox && event.target.parentNode != filterBox && event.target.parentNode.parentNode != filterBox && event.target.parentNode != filterBox.parentNode){
+        filterBox.style.display = "none";
+    }
+});
+
+function setRnFilters() {
+	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
+	var checkedRnFilters = document.querySelectorAll(".rnfiltercheckbox:checked");
+	let activeRnFilters = [];
+	var activeIcons = "";
+	
+	Array.from(checkedRnFilters).forEach((filter) => {
+		activeRnFilters.push(filter.value);
+		var rnIcon = filter.parentElement.querySelector("span.icon").innerHTML
+		activeIcons += rnIcon + "   ";
+	})
+	
+	document.getElementById("recommendationFilterTextbox").value = activeIcons;
+
+	filterrows.forEach((filterrow) => {
+		
+		filterrow.style.display="none";
+		var checkCell = filterrow.getElementsByTagName("td")[3];
+	
+		Array.from(activeRnFilters).forEach((rnfilter) => {
+			if ((checkCell.innerHTML).includes(rnfilter)){
+				filterrow.style.display="";
+			}
+		})
+		
+	})
+	
+	updateFilterCount();
+	removeSeasonSeparator();
+	if (G_sortcol == 0) {
+		addSeasonSeparator();
+	}
+	G_filterset = filterrows.filter(function(ele) {
+		return window.getComputedStyle(ele).display !== 'none';
+	});
+	filterTitle();
+}
+
+function setTagsFilters() {
+	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
+	var checkedTagsFilters = document.querySelectorAll(".tagsfiltercheckbox:checked");
+	let activeTagsFilters = [];
+	var activeIcons = "";
+	
+	Array.from(checkedTagsFilters).forEach((filter) => {
+		const filterItem = filter.value.split('|');
+		filterItem.forEach((item) => {
+			activeTagsFilters.push(item);
+		});
+		activeIcons += filter.parentElement.querySelector("span.icon").innerHTML;
+	});
+
+	document.getElementById("tagFilterTextbox").value = activeIcons;
+
+	filterrows.forEach((filterrow) => {
+
+		filterrow.style.display="none";
+		var checkCell = filterrow.getElementsByTagName("td")[2];
+		
+		Array.from(activeTagsFilters).forEach((tagsfilter) => {
+			
+			if ((checkCell.innerHTML).includes(tagsfilter)){
+				filterrow.style.display="";
+			}
+			
+			/*Array.from(checkCell.innerHTML).forEach((tag) => {
+				Array.from(tagsfilter).forEach((filter) => {
+					if (tag == filter){
+						filterrow.style.display="";
+					}
+				});
+			});*/
+			
+		});
+		
+		
+	});
+	
+	updateFilterCount();
+	removeSeasonSeparator();
+	if (G_sortcol == 0) {
+		addSeasonSeparator();
+	}
+	G_filterset = filterrows.filter(function(ele) {
+		return window.getComputedStyle(ele).display !== 'none';
+	});
+	filterTitle();
+}
+
+function setFilters(type) {
+	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
+
+	if (type.endsWith("all")) { // "All Tags" or "All Recommendations" was checked or unchecked
+		
+		if (type == "rnall") { // "All Recommendations" was checked or unchecked
+			var rnallfilter = document.getElementById("rnfilterall");
+			var rnfilters = document.getElementsByClassName("rnfiltercheckbox");
+			
+			if (!rnallfilter.checked) { // "All Recommendations" was unchecked: re-check it
+				rnallfilter.checked = true;
+				return;
+			}
+			else // "All Recommendations" was checked
+			{
+				// Uncheck all other Recommendation selections
+				Array.from(rnfilters).forEach((filter) => {
+					filter.checked = false;
+				})
+				
+				// Clear the filter textbox
+				document.getElementById("recommendationFilterTextbox").value = "";
+				
+				toggleFilterBox('recommendationFilter');
+				
+				if (tagsfilterall.checked) { // If "All Tags" is also selected, show all rows
+					filterrows.forEach((filterrow) => {
+						filterrow.style.display = "";
+					})
+					updateFilterCount();
+					removeSeasonSeparator();
+					if (G_sortcol == 0) {
+						addSeasonSeparator();
+					}
+					G_filterset = filterrows.filter(function(ele) {
+						return window.getComputedStyle(ele).display !== 'none';
+					});
+					filterTitle();
+					return;
+				}
+				else // Else if "All Tags" is not selected, filter by Tags
+				{
+					setTagsFilters();
+					return;
+				}
+			}
+		}
+		
+		if (type == "tagsall") { // "All Tags" was checked or unchecked
+			var tagsallfilter = document.getElementById("tagsfilterall");
+			var tagsfilters = document.getElementsByClassName("tagsfiltercheckbox");
+			
+			if (!tagsallfilter.checked) { // "All Tags" was unchecked: re-check it
+				tagsallfilter.checked = true;
+				return;
+			}
+			else // "All Tags" was checked
+			{
+				// Uncheck all other Tags selections
+				Array.from(tagsfilters).forEach((filter) => {
+					filter.checked = false;
+				})
+				
+				// Clear the filter textbox
+				document.getElementById("tagFilterTextbox").value = "";
+				
+				toggleFilterBox('tagFilter');
+				
+				if (rnfilterall.checked) { // If "All Recommendations" is also selected, show all rows
+					filterrows.forEach((filterrow) => {
+						filterrow.style.display = "";
+					})
+					updateFilterCount();
+					removeSeasonSeparator();
+					if (G_sortcol == 0) {
+						addSeasonSeparator();
+					}
+					G_filterset = filterrows.filter(function(ele) {
+						return window.getComputedStyle(ele).display !== 'none';
+					});
+					filterTitle();
+					return;
+				}
+				else // Else if "All Recommendations" is not selected, filter by Tags
+				{
+					setRnFilters();
+					return;
+				}
+			}
+		}
+	}
+	else // A selection was made that WASN'T of of the "All" options
+	{
+		var rnallfilter = document.getElementById("rnfilterall");
+		var tagsallfilter = document.getElementById("tagsfilterall");
+		
+
+		if (type=="rn") { // A recommendation filter was checked or unchecked
+			rnallfilter.checked = false;
+			
+			if (tagsallfilter.checked) { // All Tags is checked: just filter by Recommendation
+				setRnFilters();
+				return;
+			}
+		}
+		if (type=="tags") { // A tags filter was checked or unchecked
+			tagsallfilter.checked = false;
+			
+			if (rnallfilter.checked) { // All Recommendations is checked: just filter by Tags
+				setTagsFilters();
+				return;
+			}
+		}
+		if (type=="andor") { // The and/or selector was changed
+			if (rnallfilter.checked && tagsallfilter.checked) { // Both Tags and Recommendations are set to "All": Show all rows
+				filterrows.forEach((filterrow) => {
+					filterrow.style.display = "";
+				})
+				updateFilterCount();
+				removeSeasonSeparator();
+				if (G_sortcol == 0) {
+					addSeasonSeparator();
+				}
+				G_filterset = filterrows.filter(function(ele) {
+						return window.getComputedStyle(ele).display !== 'none';
+					});		
+				filterTitle();
+				return;
+			}
+			if (rnallfilter.checked && !tagsallfilter.checked) { // Recommendations is set to "All": filter by Tags
+				setTagsFilters();
+				return;
+			}
+			if (!rnallfilter.checked && tagsallfilter.checked) { // Tags is set to "All": filter by Recommendation
+				setRnFilters();
+				return;
+			}
+		}
+		
+	// ********** A SELECTION WAS MADE THAT REQUIRES FILTERING BY BOTH FILTERS **********
+		
+		var checkedRnFilters = document.querySelectorAll(".rnfiltercheckbox:checked");
+		let activeRnFilters = [];
+		var activeRnIcons = "";
+		var checkedTagsFilters = document.querySelectorAll(".tagsfiltercheckbox:checked");
+		let activeTagsFilters = [];
+		var activeTagsIcons = "";
+		var andorradio = document.querySelector(".andorradio:checked");
+		var andor = andorradio.value;
+	
+		Array.from(checkedRnFilters).forEach((filter) => {
+			activeRnFilters.push(filter.value);
+			activeRnIcons += filter.parentElement.querySelector("span.icon").innerHTML + "   ";
+		});
+
+		document.getElementById("recommendationFilterTextbox").value = activeRnIcons;
+		
+		
+		Array.from(checkedTagsFilters).forEach((filter) => {
+			activeTagsFilters.push(filter.value);
+			activeTagsIcons += filter.parentElement.querySelector("span.icon").innerHTML;
+		});
+		
+		document.getElementById("tagFilterTextbox").value = activeTagsIcons;
+		
+		filterrows.forEach((filterrow) => {
+			
+			var partmatch = false;
+			
+			filterrow.style.display="none";
+			
+			
+			Array.from(activeRnFilters).forEach((rnfilter) => {
+				if ((filterrow.innerHTML).includes(rnfilter)){
+					if (andor == "and"){
+						partmatch = true;
+					} else {
+						filterrow.style.display="";
+					}
+				}
+			})
+			
+			if (partmatch || andor == "or"){
+				var checkCell = filterrow.getElementsByTagName("td")[2];
+				Array.from(activeTagsFilters).forEach((tagsfilter) => {
+					if ((checkCell.innerHTML).includes(tagsfilter)){
+						filterrow.style.display="";
+					}
+				})
+			}
+			
+		
+		})
+	}
+	
+	updateFilterCount();
+	removeSeasonSeparator();
+	if (G_sortcol == 0) {
+		addSeasonSeparator();
+	}
+	G_filterset = filterrows.filter(function(ele) {
+		return window.getComputedStyle(ele).display !== 'none';
+	});
+	filterTitle();
+}
+
+
+function resetFilters() {
+	
+	var filterallcheckboxes = document.querySelectorAll("#rnfilterall,#tagsfilterall");
+	var filtercheckboxes = document.querySelectorAll(".rnfiltercheckbox,.tagsfiltercheckbox");
+	
+	document.getElementById("recommendationFilterTextbox").value = "";
+	document.getElementById("tagFilterTextbox").value = "";
+	document.getElementById("episodeSearchBox").value = "";
+	
+	Array.from(filterallcheckboxes).forEach((checkbox) => {
+		checkbox.checked = true;
+	})
+	
+	Array.from(filtercheckboxes).forEach((checkbox) => {
+		checkbox.checked = false;
+	})
+	
+	var andordefault = document.getElementById("andordefault");
+	andordefault.checked = true;
+	
+	setFilters("andor");
+	updateFilterCount();
+	removeSeasonSeparator();
+	if (G_sortcol == 0) {
+		addSeasonSeparator();
+	}
+}
+/* ------------------------------------------------------------ (End TABLE FILTERS) ------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------ SEASON SEPARATOR ------------------------------------------------------------ */
+
+function addSeasonSeparator() {
+	table = document.getElementById("episodeTable");
+	rows = table.rows;
+	
+	/* Loop through all table rows (except the
+		first and second, which contains filters and table headers): */
+	for (i = 2; i < (rows.length - 1); i++) {
+		
+		rowstyle = getComputedStyle(rows[i]);
+		if (rowstyle.display == "none") {continue;};	
+		x = rows[i].getElementsByTagName("TD")[0];
+		
+		for (j = i + 1; j < (rows.length - 1); j++) {
+			
+			y = rows[j].getElementsByTagName("TD")[0];
+			rowstyle = getComputedStyle(rows[j]);
+			if (rowstyle.display != "none") {break;};
+			
+		}
+		
+		if (Array.from(x.innerHTML)[0] != Array.from(y.innerHTML)[0]) {
+			var rcells = y.parentElement.querySelectorAll("td");
+			Array.from(rcells).forEach((rcell) => {
+				rcell.style.borderTop="thick double #C0C0C0";
+			});
+		}	
+	}
+}
+
+function removeSeasonSeparator() {
+	var allCells = document.getElementById("episodeTable").querySelectorAll("td");
+	Array.from(allCells).forEach((cell) => {
+		cell.style.borderTop="";
+	});
+}
+
+/* ------------------------------------------------------------------------------------------------------------
+   -------------------------------------------------- ONLOAD --------------------------------------------------
+   ------------------------------------------------------------------------------------------------------------ */
+
+window.onload = function() {
+
+var csvString = `Episode,Title,Tags,Reference Meter,Rating
+1x01,Second Contact,,<span class="large" style="background-color:#777">1️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,4.8
+1x02,Envoys,,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,3.0
+1x03,Temporal Edict,,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,3.6
+1x04,Moist Vessel,,<span class="large" style="background-color:#777">1️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,4.9
+1x05,Cupid's Errant Arrow,,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;3️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,5.8
+1x06,Terminal Provocations,‼&#xFE0F; <img src="images/badgey.webp" style="height:20px;vertical-align:middle" title="Badgey!" alt="Badgey!">,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,4.5
+1x07,Much Ado About Boimler,,<span class="large" style="background-color:#777">1️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,4.8
+1x08,Veritas,,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;4️⃣&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,5.5
+1x09,Crisis Point,,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,6.9
+1x10,No Small Parts,‼&#xFE0F; <img src="images/badgey.webp" style="height:20px;vertical-align:middle" title="Badgey!" alt="Badgey!"> <img src="images/ph.webp" style="height:20px;vertical-align:middle" title="Peanut Hamper!" alt="Peanut Hamper!"> <div style="display:inline-block;text-align:center;line-height:0.9" title="Third Place episode for Originality">O<br>🥉</div>,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;5️⃣&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,8.2
+2x01,Strange Energies,❗,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,1.4
+2x02,"Kayshon, His Eyes Open",,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;5️⃣&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,5.4
+2x03,We'll Always Have Tom Paris,❗,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;4️⃣&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,4.6
+2x04,"Mugato, Gumato",,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,4.1
+2x05,"An Embarrassment of Dooplers",,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;4️⃣&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,6.0
+2x06,The Spy Humongous,,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;3️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,6.9
+2x07,Where Pleasant Fountains Lie,<img src="images/agimus.webp" style="height:20px;vertical-align:middle" title="AGIMUS!" alt="AGIMUS!">,<span class="large" style="background-color:#777">1️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,4.6
+2x08,"I, Excretus",<div style="display:inline-block;text-align:center;line-height:0.9" title="Third Place episode for Fan Service">FS<br>🥉</div>,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;5️⃣&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,7.7
+2x09,"<div style='display:inline;font-family:Klingon'>wej Duj</div> / wej Duj [Three Ships]",❗ <div style="display:inline-block;text-align:center;line-height:0.9" title="First Place episode for Originality">O<br>🥇</div>,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;3️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,9.3
+2x10,First First Contact,‼&#xFE0F;,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,8.2
+3x01,Grounded,❗♥,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;4️⃣&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,6.3
+3x02,The Least Dangerous Game,,<span class="large" style="background-color:#777">1️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,5.6
+3x03,Mining The Mind's Mines,,<span class="large" style="background-color:#777">1️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,4.4
+3x04,Room For Growth,,<span class="large" style="background-color:#777">1️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,5.2
+3x05,Reflections,‼&#xFE0F;,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;4️⃣&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,7.3
+3x06,"Hear All, Trust Nothing",,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;4️⃣&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,7.3
+3x07,A Mathematically Perfect Redemption,⁉&#xFE0F;<img src="images/ph.webp" style="height:20px;vertical-align:middle" title="Peanut Hamper!" alt="Peanut Hamper!">,<span class="large" style="background-color:#777">1️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,5.1
+3x08,Crisis Point 2: Paradoxus,,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;4️⃣&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,6.8
+3x09,Trusted Sources,,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,5.4
+3x10,The Stars at Night,‼&#xFE0F; <div style="display:inline-block;text-align:center;line-height:0.9" title="Second Place episode for Originality">O<br>🥈</div>,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;3️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,8.2
+4x01,Twovix,♥ <div style="display:inline-block;text-align:center;line-height:0.9" title="First Place episode for Fan Service">FS<br>🥇</div>,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;5️⃣&#xFE0F;</span>,8.1
+4x02,"I Have No Bones Yet I Must Flee",♥,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,6.8
+4x03,In the Cradle of Vexilon,,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;3️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,3.7
+4x04,"Something Borrowed, Something Green",,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,5.3
+4x05,Empathalogical Fallacies,,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,4.6
+4x06,Parth Ferengi's Heart Place,,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,5.5
+4x07,A Few Badgeys More,‼&#xFE0F; <img src="images/badgey.webp" style="height:20px;vertical-align:middle" title="Badgey!" alt="Badgey!"> <img src="images/ph.webp" style="height:20px;vertical-align:middle" title="Peanut Hamper!" alt="Peanut Hamper!"> <img src="images/agimus.webp" style="height:20px;vertical-align:middle" title="AGIMUS!" alt="AGIMUS!">,<span class="large" style="background-color:#777">1️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,6.9
+4x08,Caves,,<span class="large" style="background-color:#777">1️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,5.2
+4x09,The Inner Fight,❗,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;3️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,7.1
+4x10,"Old Friends, New Planets",‼&#xFE0F;,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;3️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,8.2
+5x01,Dos Cerritos,,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;3️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,5.7
+5x02,Shades of Green,,<span class="large" style="background-color:#777">⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,3.2
+5x03,The Best Exotic Nanite Hotel,,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,4.6
+5x04,A Farewell to Farms,,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,5.3
+5x05,Starbase 80?!,,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;3️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,5.7
+5x06,Of Gods and Angles,,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,1.9
+5x07,Fully Dilated,,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;3️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,6.9
+5x08,Upper Decks,,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,4.4
+5x09,Fissure Quest,‼&#xFE0F; <div style="display:inline-block;text-align:center;line-height:0.9" title="Second Place episode for Fan Service">FS<br>🥈</div>,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;4️⃣&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,8.4
+5x10,The New Next Generation,‼&#xFE0F;,<span class="large" style="background-color:#777">1️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,7.0`;
+
+	var array = csvToNestedArray(csvString);
+	
+	createTable(array);
+	
+	// Add episode rating colors
+	Array.from(document.getElementsByClassName("col_episodeRating")).forEach(rating => {
+		
+		rating.style.color = 'black';
+		
+		switch (Array.from(rating.innerHTML)[0]) {
+			case "0":
+				rating.style.backgroundColor = '#F8393BBF';
+				break;
+			case "1":
+				if (Array.from(rating.innerHTML)[1] == "0") {
+					rating.style.backgroundColor = '#03BE4BBF';
+				} else {
+					rating.style.backgroundColor = '#F95350BF';
+				}
+				break;
+			case "2":
+				rating.style.backgroundColor = '#FA6D55BF';
+				break;
+			case "3":
+				rating.style.backgroundColor = '#FC975ABF';
+				break;
+			case "4":
+				rating.style.backgroundColor = '#FDC16FBF';
+				break;
+			case "5":
+				rating.style.backgroundColor = '#FFEB74BF';
+				break;
+			case "6":
+				rating.style.backgroundColor = '#C0E373BF';
+				break;
+			case "7":
+				rating.style.backgroundColor = '#91DA71BF';
+				break;
+			case "8":
+				rating.style.backgroundColor = '#72D06FBF';
+				break;
+			case "9":
+				rating.style.backgroundColor = '#43C75DBF';
+				break;
+		}
+		
+	});
+	
+	sortArrowOn = document.getElementById(G_sortcol + G_sortdir);
+	sortArrowOn.style.color = "white";
+	
+	addSeasonSeparator();
+	
+	var bottomBorder = document.getElementById('bottomBorder');
+	setTimeout(function(){bottomBorder.style.width = '100%'},500);
+}

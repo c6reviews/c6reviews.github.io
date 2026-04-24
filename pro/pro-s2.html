@@ -3,6 +3,7 @@
 
 <head>
 
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
@@ -17,6 +18,11 @@
 	});
 	var host = window.location.hostname;
 	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
 		gtag('js', new Date());
 		gtag('config', 'G-DM44X85QLJ');
 	}
@@ -24,19 +30,19 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="/main.css?v=1.5.2">
-<link rel="stylesheet" href="pro.css?v=1.5.2">
-<link rel="stylesheet" href="pro-episode-guides.css?v=1.5.2">
+<link rel="stylesheet" href="/main.css?v=1.6">
+<link rel="stylesheet" href="pro.css?v=1.6">
+<link rel="stylesheet" href="pro-episode-guides.css?v=1.6">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <meta property="og:title" content="Prodigy Season 2 | C6Reviews">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://c6reviews.com/pro/images/ogimage.png">
+<meta property="og:image" content="https://c6reviews.com/pro/images/ogimage.webp">
 <meta property="og:url" content="https://c6reviews.com/pro/pro-s2.html">
 <meta property="og:description" content="Episode reviews and guides for Star Trek: Prodigy, Season 2.">
 
-<script src="pro.js"></script>
-<script src="/cookies.js"></script>
+<script src="pro.js?v=1.6"></script>
+<script src="/cookies.js?v=1.6"></script>
 <title>C6 | Prodigy Season 2</title>
 </head>
 
@@ -44,15 +50,15 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.png" alt="c6reviews"></a></div>
-<div class="pageTitleImage"><img src="images/pro-header.png" alt="Hologram-Janeway, The USS Protostar, and the show title"></div>
+<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+<div class="pageTitleImage"><img src="images/pro-header.webp" alt="Hologram-Janeway, The USS Protostar, and the show title"></div>
 <div class="pageTitleContainer">
 	<div class="pageTitle">
-		<a href="/index.html"><img src="/images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br>Star Trek: Prodigy
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>Star Trek: Prodigy
 		<span class="pageSubtitle">Season 2 Episode Guides</span>
 	</div>
 </div>
-<div class="c6Right"><a href="/index.html"><img src="/images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 <h3 class="seasonNav"><a href="pro-episode-list.html">Full Episode List</a><br><a href="pro-s1.html">Season 1</a> • <span class="activeSeason"><a href="pro-s2.html">Season 2</a></span></h3>
 
@@ -64,7 +70,7 @@
 <div id="mainSidenav" class="sidenav">
 	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	<a href="index.html"><span style="font-size:large">←</span> PRO Episode Guide Home</a><br>
-	<a href="index.html"><img src="/images/pro-title.png" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="pro logo"></a><br>
+	<a href="index.html"><img src="/images/pro-title.webp" style="width:150px;display:block;margin-left:auto;margin-right:auto;" alt="pro logo"></a><br>
 	<a href="pro-timeline.html" style="text-align:center">Series Timeline</a>
 	<a href="pro-episode-list.html" style="text-align:center">Full Episode List</a>
 	<div class="sidenavseasons">
@@ -111,7 +117,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>900</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">Into the Breach, Part I</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -127,7 +133,7 @@
 								The gang embark on a mission on the USS <em>Voyager</em>&#8209;A to analyze the newly-opened wormhole, but it seems that the crew is hiding something from them.<br><br>
 								<span class="arcDescription">Arc 4: The Anomaly (1 of 5)</span>
 							</div></td>
-							<td rowspan="8"><img src="images/pro-2x01.png" class="episodeCardBG" alt="Rok, Murf, Dal, Jankom, and Zero at Starfleet academy wearing cadet uniforms"></td>
+							<td rowspan="8"><img src="images/pro-2x01.webp" class="episodeCardBG" alt="Rok, Murf, Dal, Jankom, and Zero at Starfleet academy wearing cadet uniforms"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">💁‍♂️</td>
@@ -203,7 +209,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>901</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">Into the Breach, Part II</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -219,7 +225,7 @@
 								Gwyn arrives at Solum, but her message has been preempted by Asencia, so Gwyn goes to meet her father, instead. Janeway explains her plan to take a cloaked ship into the wormhole to save Chakotay, but Dal messes everything up.<br><br>
 								<span class="arcDescription">Arc 4: The Anomaly (2 of 5)</span>
 							</div></td>
-							<td rowspan="5"><img src="images/pro-2x02.png" class="episodeCardBG" alt="Gwyn and Asencia arguing before the council on Solum"></td>
+							<td rowspan="5"><img src="images/pro-2x02.webp" class="episodeCardBG" alt="Gwyn and Asencia arguing before the council on Solum"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">&nbsp;</td>
@@ -284,7 +290,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>902</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">Who Saves the Saviors</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -300,7 +306,7 @@
 								 Gwyn invokes the Va'Lu'Rah ritual to do battle with Asencia and prove that she is of Solum. In the future, the gang help Chakotay escape, but instead of sending the <em>Protostar</em> back unmanned, Chakotay and his first officer escape on it, altering the timeline again.<br><br>
 								<span class="arcDescription">Arc 4: The Anomaly (3 of 5)</span>
 							</div></td>
-							<td rowspan="4"><img src="images/pro-2x03.png" class="episodeCardBG" alt="Chakotay, Adreek, Jankom, Dal, Maj'el, and Zero discussing their next move in a holding cell"></td>
+							<td rowspan="4"><img src="images/pro-2x03.webp" class="episodeCardBG" alt="Chakotay, Adreek, Jankom, Dal, Maj'el, and Zero discussing their next move in a holding cell"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">🔗</td>
@@ -359,7 +365,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>903</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">Temporal Mechanics 101</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -375,7 +381,7 @@
 								Because of the time paradox, Gwyn is now caught between quantum realities where she both exists and does not exist. Dal, Zero, and Jankom build a time machine… somehow… to go back in time to save her. A mysterious benefactor helps the gang on their way.<br><br>
 								<span class="arcDescription">Arc 4: The Anomaly (4 of 5)</span>
 							</div></td>
-							<td rowspan="6"><img src="images/pro-2x04.png" class="episodeCardBG" alt="A young Ilthuran holding Gwyn, who is injured and semi-transparent because of a time paradox"></td>
+							<td rowspan="6"><img src="images/pro-2x04.webp" class="episodeCardBG" alt="A young Ilthuran holding Gwyn, who is injured and semi-transparent because of a time paradox"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">🔗</td>
@@ -443,7 +449,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>904</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">Observer's Paradox</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -459,7 +465,7 @@
 								The gang determine that their benefactor is Chakotay, and they decipher a strange message that was given to Murf. Under orders, Janeway closes the wormhole with Chakotay still lost inside.<br><br>
 								<span class="arcDescription">Arc 4: The Anomaly (5 of 5)</span>
 							</div></td>
-							<td rowspan="6"><img src="images/pro-2x05.png" class="episodeCardBG" alt="Gwyn, Dal, Rok, Jankom, and Zero discuss their next move while Murf swims with a whale in Cetacean Ops"></td>
+							<td rowspan="6"><img src="images/pro-2x05.webp" class="episodeCardBG" alt="Gwyn, Dal, Rok, Jankom, and Zero discuss their next move while Murf swims with a whale in Cetacean Ops"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">🔗</td>
@@ -527,7 +533,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>905</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">Imposter Syndrome</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -540,7 +546,7 @@
 					<table>
 						<tr>
 							<td class="summaryBox" colspan="2"><div class="summary">The gang hatch a plan to steal &ndash; er, <span style="font-style:normal">borrow</span> &ndash; the <em>Infinity</em> to save Chakotay. To cover their tracks, they create hologram duplicates of themselves, but the holograms turn out to be a little too perfect.</div></td>
-							<td rowspan="5"><img src="images/pro-2x06.png" class="episodeCardBG" alt="Dal and the gang looking at holographic versions of themselves"></td>
+							<td rowspan="5"><img src="images/pro-2x06.webp" class="episodeCardBG" alt="Dal and the gang looking at holographic versions of themselves"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">&nbsp;</td>
@@ -604,7 +610,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>906</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">The Fast and the Curious</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -619,7 +625,7 @@
 							<td class="summaryBox" colspan="2"><div class="summary">
 								Having successfully stolen &ndash; er, <span style="font-style:normal">borrowed</span> &ndash; the <em>Infinity</em>, the gang are captured by a Kazon who makes them race some ships for his amusement. But it turns out the Kazon is being controlled by a malevolent supercomputer.
 							</div></td>
-							<td rowspan="5"><img src="images/pro-2x07.png" class="episodeCardBG" alt="Dal, Gwyn, Rok, and Jankom being held at gunpoint by two Kazon"></td>
+							<td rowspan="5"><img src="images/pro-2x07.webp" class="episodeCardBG" alt="Dal, Gwyn, Rok, and Jankom being held at gunpoint by two Kazon"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">&nbsp;</td>
@@ -683,7 +689,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>907</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">Is There in Beauty No Truth?</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -698,7 +704,7 @@
 							<td class="summaryBox" colspan="2"><div class="summary">
 								Zero gets a new body from a colony of other embodied non-corporeal lifeforms. Janeway discovers that the gang on <em>Voyager</em> are just holograms.
 							</div></td>
-							<td rowspan="7"><img src="images/pro-2x08.png" class="episodeCardBG" alt="Dal and the gang, including Zero with his new body, smiling on a sunny planet"></td>
+							<td rowspan="7"><img src="images/pro-2x08.webp" class="episodeCardBG" alt="Dal and the gang, including Zero with his new body, smiling on a sunny planet"></td>
 						</tr>
 						<tr>
 							<td class="iconBox" style="color:lime;font-size:x-large">⬆</td>
@@ -770,7 +776,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>908</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">The Devourer of All Things, Part 1</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -786,7 +792,7 @@
 								The gang arrive at the coordinates where they expect to find the <em>Protostar</em>, but instead they find out that their mysterious benefactor is actually Wesley Crusher. He explains how the timeline is unraveling because of the current paradox, and that the things that tried to capture Gwyn in an earlier episode are entities called the Loom, and they devour broken timelines.<br><br>
 								<span class="arcDescription">Arc 5: The Loom (1 of 2)</span>
 							</div></td>
-							<td rowspan="8"><img src="images/pro-2x09.png" class="episodeCardBG" alt="Dal and Gwyn listening to Wesley Crusher explain the situation"></td>
+							<td rowspan="8"><img src="images/pro-2x09.webp" class="episodeCardBG" alt="Dal and Gwyn listening to Wesley Crusher explain the situation"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">💁‍♂️</td>
@@ -862,7 +868,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>909</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">The Devourer of All Things, Part 2</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -878,7 +884,7 @@
 								The Loom catch up to the gang, but Janeway swoops in to help fight them off.<br><br>
 								<span class="arcDescription">Arc 5: The Loom (2 of 2)</span>
 							</div></td>
-							<td rowspan="5"><img src="images/pro-2x10.png" class="episodeCardBG" alt="Numerous Loom creatures circling menacingly around Dal and his crew"></td>
+							<td rowspan="5"><img src="images/pro-2x10.webp" class="episodeCardBG" alt="Numerous Loom creatures circling menacingly around Dal and his crew"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">🔗</td>
@@ -942,7 +948,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>910</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">Last Flight of the Protostar, Part I</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -958,7 +964,7 @@
 								The gang are glad to see Chakotay, but he's been stranded for 10 years and has become a broken, bitter man after having lost his crew.<br><br>
 								<span class="arcDescription">Arc 6: Chakotay's Rescue (1 of 2)</span>
 							</div></td>
-							<td rowspan="3"><img src="images/pro-2x11.png" class="episodeCardBG" alt="Dal confronting an uninterested Chakotay on the bridge of the Protostar"></td>
+							<td rowspan="3"><img src="images/pro-2x11.webp" class="episodeCardBG" alt="Dal confronting an uninterested Chakotay on the bridge of the Protostar"></td>
 						</tr>
 						<tr>
 							<td>&nbsp;</td>
@@ -1014,7 +1020,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>911</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">Last Flight of the Protostar, Part II</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1030,7 +1036,7 @@
 								Chakotay and the gang sail the <em>Protostar</em> across a gas cloud and brave a storm to get the deuterium they need to launch the ship. Dal heroically saves Chakotay when he goes overboard.<br><br>
 								<span class="arcDescription">Arc 6: Chakotay's Rescue (2 of 2)</span>
 							</div></td>
-							<td rowspan="4"><img src="images/pro-2x12.png" class="episodeCardBG" alt="The USS Protostar, with a large sail on it, coasting through the clouds toward the sunset"></td>
+							<td rowspan="4"><img src="images/pro-2x12.webp" class="episodeCardBG" alt="The USS Protostar, with a large sail on it, coasting through the clouds toward the sunset"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">💁‍♀️</td>
@@ -1090,7 +1096,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>912</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">A Tribble Called Quest</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1105,7 +1111,7 @@
 							<td class="summaryBox" colspan="2"><div class="summary">
 								The gang stop on a planet to refuel, but they find it to be inhabited by giant tribbles.
 							</div></td>
-							<td rowspan="5"><img src="images/pro-2x13.png" class="episodeCardBG" alt="Gwyn, Maj'el, and Murf doting over a tribble-brikar hybrid"></td>
+							<td rowspan="5"><img src="images/pro-2x13.webp" class="episodeCardBG" alt="Gwyn, Maj'el, and Murf doting over a tribble-brikar hybrid"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">&nbsp;</td>
@@ -1169,7 +1175,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>913</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_terran.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_terran.webp"></td>
 						<td class="titleBox">Cracked Mirror</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1184,7 +1190,7 @@
 							<td class="summaryBox" colspan="2"><div class="summary">
 								The gang make it back to <em>Voyager</em>, but their use of the proto-drive has caused realities to fracture. They must navigate multiple universes &ndash; including the dreaded Mirror Universe &ndash; to get to the bridge and set things right.
 							</div></td>
-							<td rowspan="10"><img src="images/pro-2x14.png" class="episodeCardBG" alt="Chakotay confronting Mirror-Universe counterparts of Janeway and himself"></td>
+							<td rowspan="10"><img src="images/pro-2x14.webp" class="episodeCardBG" alt="Chakotay confronting Mirror-Universe counterparts of Janeway and himself"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">♊</td>
@@ -1268,7 +1274,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>914</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">Ascension, Part I</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1283,7 +1289,7 @@
 							<td class="summaryBox" colspan="2"><div class="summary">
 								With things having calmed down, Jellico once again orders <em>Voyager</em> back home… but Asencia has been using time dilation technology to build herself a fleet of attack vessels, and she chooses just then to attack <em>Voyager</em>.
 							</div></td>
-							<td rowspan="4"><img src="images/pro-2x15.png" class="episodeCardBG" alt="Asencia speaking to the bridge crew on Voyager"></td>
+							<td rowspan="4"><img src="images/pro-2x15.webp" class="episodeCardBG" alt="Asencia speaking to the bridge crew on Voyager"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">🔗</td>
@@ -1343,7 +1349,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>915</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">Ascension, Part II</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1358,7 +1364,7 @@
 							<td class="summaryBox" colspan="2"><div class="summary">
 								An exciting battle ensues!
 							</div></td>
-							<td rowspan="6"><img src="images/pro-2x16.png" class="episodeCardBG" alt="Dal, in a cockpit, watching Voyager fight off Asencia's drones"></td>
+							<td rowspan="6"><img src="images/pro-2x16.webp" class="episodeCardBG" alt="Dal, in a cockpit, watching Voyager fight off Asencia's drones"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">&nbsp;</td>
@@ -1426,7 +1432,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>916</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">Brink</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1442,7 +1448,7 @@
 								The gang are sent on their own to Solum to gather data on Asencia's weapons and save Gwyn's father, but despite gaining an unlikely ally, things don't go exactly to plan.<br><br>
 								<span class="arcDescription">Arc 7: The Battle for Solum (1 of 4)</span>
 							</div></td>
-							<td rowspan="5"><img src="images/pro-2x17.png" class="episodeCardBG" alt="Asencia holding Dal and his crew at gunpoint"></td>
+							<td rowspan="5"><img src="images/pro-2x17.webp" class="episodeCardBG" alt="Asencia holding Dal and his crew at gunpoint"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">&nbsp;</td>
@@ -1506,7 +1512,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>917</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">Touch of Grey</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1522,7 +1528,7 @@
 								Janeway, Chakotay, the Doctor, and Wesley head to Solum to rescue the gang.<br><br>
 								<span class="arcDescription">Arc 7: The Battle for Solum (2 of 4)</span>
 							</div></td>
-							<td rowspan="5"><img src="images/pro-2x18.png" class="episodeCardBG" alt="One of the Loom menacingly approaching Dal and his crew"></td>
+							<td rowspan="5"><img src="images/pro-2x18.webp" class="episodeCardBG" alt="One of the Loom menacingly approaching Dal and his crew"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">&nbsp;</td>
@@ -1586,7 +1592,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>918</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">Ouroboros, Part I</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1602,7 +1608,7 @@
 								Asencia launches an all-out attack on the Federation while the gang try to figure out how to mend the timeline.<br><br>
 								<span class="arcDescription">Arc 7: The Battle for Solum (3 of 4)</span>
 							</div></td>
-							<td rowspan="5"><img src="images/pro-2x19.png" class="episodeCardBG" alt="Rok, Zero, Maj'el, and Wesley analyzing diagrams depicting the time fractures"></td>
+							<td rowspan="5"><img src="images/pro-2x19.webp" class="episodeCardBG" alt="Rok, Zero, Maj'el, and Wesley analyzing diagrams depicting the time fractures"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">&nbsp;</td>
@@ -1666,7 +1672,7 @@
 						<td class="FepisodeNumberBox"><span class="x-small">Franchise Episode</span><br><strong>919</strong></td>
 					</tr>
 					<tr>
-						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.png"></td>
+						<td class="combadgeBox"><img alt="prodigy combadge" height="47" src="images/pro_combadge.webp"></td>
 						<td class="titleBox">Ouroboros, Part II</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
@@ -1682,7 +1688,7 @@
 								The gang must do one last battle with the Loom before they can restore the timeline.<br><br>
 								<span class="arcDescription">Arc 7: The Battle for Solum (4 of 4)</span>
 							</div></td>
-							<td rowspan="8"><img src="images/pro-2x20.png" class="episodeCardBG" alt="A combadge from the Protostar with a glint of light reflecting off of it"></td>
+							<td rowspan="8"><img src="images/pro-2x20.webp" class="episodeCardBG" alt="A combadge from the Protostar with a glint of light reflecting off of it"></td>
 						</tr>
 						<tr>
 							<td class="iconBox">🔗</td>
@@ -1690,7 +1696,7 @@
 						</tr>
 						<tr>
 							<td class="iconBox">🔗</td>
-							<td><div class="iconDescription">Dr. Crusher's plaque naming her an honorary citizen of Cor Coroli V <span style="vertical-align:super;font-size:x-small">[sic]</span> is a minor reference to <a href="/tng/tng-s3.html#e18">TNG 3x18: Allegiance</a>, where her successful eradication of a plague on that planet is only mentioned in dialogue. The plaque can also be seen in <a href="/pic/pic-s3.html#e01">PIC 3x01: The Next Generation</a>. There is a real-life star named &ldquo;Cor Caroli,&rdquo; suggesting that this plaque has a spelling error.</div></td>
+							<td><div class="iconDescription">Dr. Crusher's plaque naming her an honorary citizen of Cor Coroli V <span style="vertical-align:super;font-size:x-small">[sic]</span> is a minor reference to <a href="/tng/tng-s3.html#e18">TNG 3x18: Allegiance</a>, where her successful eradication of a plague on that planet is only mentioned in dialogue. The plaque can also be seen in <a href="/pic/pic-s3.html#e01">PIC 3x01: The Next Generation</a>. There is a real-life star named &ldquo;Cor Caroli&rdquo;, suggesting that this plaque has a spelling error.</div></td>
 						</tr>
 						<tr>
 							<td class="iconBox">🔗</td>
@@ -1761,7 +1767,7 @@
 <h3 class="seasonNav"><a href="pro-episode-list.html">Full Episode List</a><br><a href="pro-s1.html">Season 1</a> • <span class="activeSeason"><a href="pro-s2.html">Season 2</a></span></h3>
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
 
-<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 <div id="TTDIV">
 	<div id="FepisodeToolTip" class="tooltip" onClick="closeToolTip(this)">"Franchise Episode" tells you the order in which episodes from ANY/ALL Star Trek television shows aired or streamed for the first time. This number excludes movies, TOS's "The Cage", and the "Very Short Treks" web shorts.<br><span class="xx-small" style="display:table;margin:0 auto;">click or scroll to close</span></div>

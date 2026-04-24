@@ -9,27 +9,28 @@
 /* ---------------------------------------- MAIN SETUP ---------------------------------------- */
 @font-face {
   font-family: "BB";
-  src: url("assets/Boucherie Block.ttf");
+  src: url("assets/BoucherieBlock.woff2");
 }
 @font-face {
   font-family: "BBB";
-  src: url("assets/Boucherie Block Bold.ttf");
+  src: url("assets/BoucherieBlock-Bold.woff2");
 }
 @font-face {
   font-family: "BBI";
-  src: url("assets/Boucherie Block Italic.ttf");
+  src: url("assets/BoucherieBlock-Italic.woff2");
 }
 @font-face {
   font-family: "Exo";
-  src: url("assets/Exo-VariableFont_wght.ttf");
+  /*src: url("assets/Exo-Regular.woff2");*/
+  src: url("assets/Exo-VariableFont_wght.woff2");
 }
 @font-face {
   font-family: "CCS";
-  src: url("assets/CactusClassicalSerif-Regular.ttf");
+  src: url("assets/CactusClassicalSerif-Regular.woff2");
 }
 @font-face {
   font-family: "Klingon";
-  src: url("assets/Klingon.ttf");
+  src: url("assets/Klingon.woff2");
 }
 html {
 	@media (max-width: 1000px) and (pointer: coarse) {
@@ -59,7 +60,7 @@ body a:hover {
 body li {
 	margin-bottom: 10px;
 }
-.content a[target="_blank"]::after,#TTDIV a[target="_blank"]::after {
+:is(.content,.updateTable,#TTDIV) a[target="_blank"]::after {
   /* Adds box-and-arrow icon after links that open a new tab */
   content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAACXRFWHRDb21tZW50AACJKo0GAAAASElEQVR4nGP4//8/AzZ85syZ/8gYQwBNcQKKQhwmwhQl4FSIrAjmDAyF6IpgGEXhqVOnFLApwlAIU4zue6wKsQUT6QoJYZBCABxrNhBirnqBAAAAAElFTkSuQmCC);
   margin: 0px 3px 0px 5px;
@@ -925,6 +926,13 @@ body li {
 		font-family: CCS,serif;
 		font-weight: bold;
 		text-shadow: 0 0 8px #fff;
+	}
+	.outOfUniverse {
+		color: #B0A398;
+		border: 2px dotted #BB4C1C;
+		border-radius: 6px;
+		padding: 6px;
+		transform: skew(-10deg);
 	}
 
 /* ---------------------------------------- GLOBAL: TIMELINE TABLE ---------------------------------------- */

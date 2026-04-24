@@ -3,6 +3,7 @@
 
 <head>
 
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
 <script>
@@ -17,6 +18,11 @@
 	});
 	var host = window.location.hostname;
 	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
 		gtag('js', new Date());
 		gtag('config', 'G-DM44X85QLJ');
 	}
@@ -24,20 +30,20 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="/main.css?v=1.5.2">
-<link rel="stylesheet" href="/tts.css?v=1.5.2">
-<link rel="stylesheet" href="7of9.css?v=1.5.2">
+<link rel="stylesheet" href="/main.css?v=1.6">
+<link rel="stylesheet" href="/tts.css?v=1.6">
+<link rel="stylesheet" href="7of9.css?v=1.6">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <meta property="og:title" content="Seven of Nine | C6Reviews">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://c6reviews.com/7of9/images/ogimage.png">
+<meta property="og:image" content="https://c6reviews.com/7of9/images/ogimage.webp">
 <meta property="og:url" content="https://c6reviews.com/7of9/">
 <meta property="og:description" content="A look at the life of Star Trek's Borg-turned-human-again, Seven of Nine.">
 
-<script src="7of9.js"></script>
-<script src="/tts.js"></script>
-<script src="/cookies.js"></script>
+<script src="7of9.js?v=1.6"></script>
+<script src="/tts.js?v=1.6"></script>
+<script src="/cookies.js?v=1.6"></script>
 <script>
 	function prepTextToSpeech(id)
 	{
@@ -53,15 +59,15 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.png" alt="c6reviews"></a></div>
-<div class="pageTitleImage"><img src="images/7of9-header.png" alt="A close-up of Seven of Nine's face, with blackened eyes, and the text 'Seven of Nine'"></div>
+<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+<div class="pageTitleImage"><img src="images/7of9-header.webp" alt="A close-up of Seven of Nine's face, with blackened eyes, and the text 'Seven of Nine'"></div>
 <div class="pageTitleContainer">
 	<div class="pageTitle">
-		<a href="/index.html"><img src="/images/c6reviews-hor.png" style="width:350px" alt="c6reviews"></a><br>Seven of Nine
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>Seven of Nine
 		<span class="pageSubtitle" style="color:red;font-size:large"><span style="text-shadow: red 0px 0px 12px">🚨</span> This page may contain spoilers <span style="text-shadow: red 0px 0px 12px">🚨</span></span>
 	</div>
 </div>
-<div class="c6Right"><a href="/index.html"><img src="/images/c6.png" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.png" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.png" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div> 
@@ -75,7 +81,7 @@
 	
 		<div class="sectionHeader">Seven of Nine</div>
 		
-		<div class="articleImage" style="float:left;margin-top:24px;"><img src="images/annika.png" style="width:300px;" alt="A photo of Annika Hansen"><br>Annika Hansen, 2350 (Age 6)</div>
+		<div class="articleImage" style="float:left;margin-top:24px;"><img src="images/annika.webp" style="width:300px;" alt="A photo of Annika Hansen"><br>Annika Hansen, 2350 (Age 6)</div>
 		
 		<div style="position:relative">
 			<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select id="ttsratemain" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
@@ -85,7 +91,7 @@
 		<div class="serif" id="tts1">	
 		<p><strong>Seven of Nine</strong> was born <strong>Annika Hansen</strong>, and she was five years old when she accompanied her parents on a mission to the Delta Quadrant with the goal of studying the Borg. While the Hansens did gather some valuable data, their efforts to remain undetected eventually failed, resulting in the three of them being assimilated into the Borg collective shortly after Annika's sixth birthday. The story of the Hansen family's assimilation is told in <a href="/voy/voy-s4.html#e06">VOY 4x06: The Raven</a>, and much more of their story is told when the data they collected on the Borg was put to good use by the <em>Voyager</em> crew in <a href="/voy/voy-s5.html#e15">VOY 5x15/16: Dark Frontier</a>.</p>
 		
-		<div class="articleImage" style="float:right;"><img src="images/7of9beforeandafter.png" style="width:350px;" alt="Photos of Seven of Nine, before an after having her implants removed"><br>Seven of Nine, before and after<br>leaving the Borg collective, 2374</div>
+		<div class="articleImage" style="float:right;"><img src="images/7of9beforeandafter.webp" style="width:350px;" alt="Photos of Seven of Nine, before an after having her implants removed"><br>Seven of Nine, before and after<br>leaving the Borg collective, 2374</div>
 		<p>&nbsp;</p>
 		<p>Twenty-four years later, Annika had obtained her full Borg designation, <strong>&ldquo;Seven of Nine, Tertiary Adjunct of Unimatrix Zero-One&rdquo;</strong>. She was selected as a liaison to facilitate communication between the Borg collective and the <em>Voyager</em> crew when they formed a temporary alliance against Species 8472 in <a href="/voy/voy-s3.html#e26">VOY 3x26 &amp; 4x01: Scorpion (Parts I and II)</a>. As part of those events, Seven of Nine was forcibly disconnected from the collective and <em>Voyager</em>'s doctor was forced to remove most of her Borg implants. Having been assimilated at such a young age, Seven of Nine found it difficult to adapt to being human again, preferring to retain her Borg designation over her human name, though she did permit the name to be shortened to just <strong>&ldquo;Seven&rdquo;</strong>.</p>
 		
@@ -98,16 +104,18 @@
 		<p>Twenty-one years after returning to the Alpha Quadrant, Seven teamed up with Jean-Luc Picard in his search for Bruce Maddox in <a href="/pic/pic-s1.html#e05">PIC 1x05: Stardust City Rag</a>. Then, a year later, she would be transported along with Picard and several others to an alternate timeline, forced to try and repair the changes in the timeline in the year 2024, as told in <a href="/pic/pic-s2.html"><em>Picard</em> Season 2</a>. Finally, in 2401, Seven would be given a field commission by Picard and then later formally commissioned by Starfleet to become the first officer of the USS <em>Titan</em>&#8209;A under Captain Liam Shaw, as told in <a href="/pic/pic-s3.html"><em>Picard</em> Season 3</a>.</p>
 		</div>	
 		
-		<div class="articleImage" style="margin-left:auto;margin-right:auto;clear:both"><img src="images/7of9vigilante.png" style="width:800px;" alt="A photo of Seven of Nine holding two phaser rifles"><br>Seven of Nine as a Fenris Ranger, 2399</div>
+		<div class="articleImage" style="margin-left:auto;margin-right:auto;clear:both"><img src="images/7of9vigilante.webp" style="width:800px;" alt="A photo of Seven of Nine holding two phaser rifles"><br>Seven of Nine as a Fenris Ranger, 2399</div>
 		
 		
 	
 		
 	<div id="tableContainer" style="margin-top:100px;">
 		<h1 style="font-family:BB,Roboto,sans-serif;text-align:center;text-decoration:underline">All Appearances of Seven of Nine</h1>
-		<p style="font-style:italic;margin-left:80px;margin-right:80px;">* The recommendation column in this table is based on which episodes are the most important for learning more about Seven of Nine. These recommendations do not necessarily match the recommendations made on the individual series' episode guides. For example, <a href="/voy/voy-s6.html#e16">VOY 6x16: Collective</a> is marked here as &ldquo;Must Watch&rdquo; because it is essential to better understanding the character of Seven of Nine, but the episode is only &ldquo;Recommended&rdquo; as part of the larger story line of the series <span style="font-style:normal">Star Trek: Voyager</span>.</p>
-		<p style="font-style:italic;margin-left:80px;margin-right:80px;"><sup>†</sup> Ratings are relative to the series in which the episode belongs.</p>
-		<p style="font-style:italic;margin-left:80px;margin-right:80px;"><sup>‡</sup> It is recommended to watch entire seasons of <span style="font-style:normal">Star Trek: Picard</span> and not just individual episodes.</p>
+		<div style="border:1px solid;border-radius:5px;margin-left:80px;margin-right:80px;padding:8px;font-size:small;font-style:italic">
+			<p>Note: Episodes in <a href="/pic/index.html" style="font-style:normal">Star Trek: Picard</a> are part of 10-episode season-long story arcs. You should watch entire seasons for the full story, not just individual episodes.</p>
+			<p>* The recommendation column in this table is based on which episodes are the most important for learning more about Seven of Nine. These recommendations do not necessarily match the recommendations made on the individual series' episode guides. For example, <a href="/voy/voy-s6.html#e16">VOY 6x16: Collective</a> is marked here as &ldquo;Must Watch&rdquo; because it is essential to better understanding the character of Seven of Nine, but the episode is only &ldquo;Recommended&rdquo; as part of the larger story line of the series <span style="font-style:normal">Star&nbsp;Trek:&nbsp;Voyager</span>.<br>
+			** Ratings are relative to the series in which the episode belongs.</p>
+		</div>
 		<table id="episodeTable">
 			<tr id="preHeaderRow">
 				<td><div id="filterTotalbox">Showing<br><span id="filterTotal">125</span> of 125<br>episodes</div></td>
@@ -150,7 +158,7 @@
 				</th>
 				<th style="width:auto" onclick="sortTable(4,event)">Notes <span id="sortarrows"><span id="4asc" class="sortarrows">↿</span><span id="4desc" class="sortarrows">⇂</span></span></th>
 				<th style="width:240px" onclick="sortTable(5,event)">Recommendation* <span id="5asc" class="sortarrows">↿</span><span id="5desc" class="sortarrows">⇂</span></th>
-				<th style="width:80px" onclick="sortTable(6,event)">Rating<sup>†</sup> <span id="6asc" class="sortarrows">↿</span><span id="6desc" class="sortarrows">⇂</span></th>
+				<th style="width:80px" onclick="sortTable(6,event)">Rating** <span id="6asc" class="sortarrows">↿</span><span id="6desc" class="sortarrows">⇂</span></th>
 			</tr>
 		</table>
 	</div>
@@ -158,7 +166,7 @@
 </div> <!-- content div ends here -->
 <p>&nbsp;</p>
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
-<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.png" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.png" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 <div id="TTDIV"></div>
 
