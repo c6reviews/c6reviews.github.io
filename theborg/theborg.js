@@ -47,12 +47,12 @@ function displaySpoiler(caller,blurRadius = '6px') {
 	var content = caller.parentNode.querySelector('.spoilerContent');
 	var style = getComputedStyle(content);
 
-	if (style.filter === "blur(blurRadius)") {
+	if (style.filter === "blur("+blurRadius+")") {
 		content.style.filter = "none";
 		content.style.userSelect = "auto";
 		content.style.pointerEvents = "auto";
 	} else {
-		content.style.filter = "blur(blurRadius)";
+		content.style.filter = "blur("+blurRadius+")";
 		content.style.userSelect = "none";
 		content.style.pointerEvents = "none";
 	}
