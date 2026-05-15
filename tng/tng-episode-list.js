@@ -761,7 +761,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 1x15,11001001,,✔ Recommended,6.3
 1x16,Too Short a Season,,-,3.0
 1x17,When the Bough Breaks,,-,3.5
-1x18,Home Soil,,-,4.7
+1x18,Home Soil,,-,4.8
 1x19,Coming of Age,,-,3.8
 1x20,Heart of Glory,,✔ Recommended,5.5
 1x21,The Arsenal of Freedom,,-,5.3

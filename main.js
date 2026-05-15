@@ -15,6 +15,22 @@ function toggleMobileMenu(button) {
 		button.style.transform = "scale(1) translate(0px,0px)";
 		menu.style.display = "none";
 	}
-	
 
+}
+
+function toggleKofi() {
+	const frame = document.getElementById('kofiframe');
+	const div = document.getElementById('kofiframediv');
+
+	if (frame.src !== 'https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true') {
+		frame.src = 'https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true';
+	}
+
+	if (getComputedStyle(div).height === '0px') {
+		div.style.height = '700px';
+		div.style.border = '1px solid white';
+	} else {
+		div.style.height = '0px';
+		div.style.border = 'none';
+	}
 }

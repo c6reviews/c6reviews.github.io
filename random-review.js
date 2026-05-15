@@ -33,7 +33,7 @@ const reviews = [
 ];
 // PIC 3x10 HAS BEEN OMITTED FROM THE ABOVE LIST BECAUSE THE EPISODE PHOTO IS A MAJOR SPOILER
 
-//const reviews = [];   //<------ FOR TESTING
+//const reviews = ['pic/pic-s3.html#e04'];   //<------ FOR TESTING
 
 var reviewPool = [...reviews];
 

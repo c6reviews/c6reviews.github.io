@@ -21,7 +21,6 @@
 }
 @font-face {
   font-family: "Exo";
-  /*src: url("assets/Exo-Regular.woff2");*/
   src: url("assets/Exo-VariableFont_wght.woff2");
 }
 @font-face {
@@ -85,7 +84,7 @@ body li {
 	z-index: 200;
 	background-color: #381818BB;
 	font-family: BBB, Roboto, sans-serif;
-	font-size: 32px;
+	font-size: 2rem;
 	color: red;
 	text-align: center;
 	pointer-events: none;
@@ -108,6 +107,11 @@ body li {
 	overflow: hidden;
 	z-index: 99;
 	width: 40px;
+	height: 87px;
+	@media (max-width: 1000px) and (pointer: coarse) {
+		width: 80px;
+		height: 175px;
+	}
 }
 #backButton:hover {
 	background-color: #124054;
@@ -128,6 +132,9 @@ body li {
   border-radius: 0px 12px 12px 0px;
   overflow: hidden;
   width: 40px;
+  @media (max-width: 1000px) and (pointer: coarse) {
+	  width: 80px;
+  }
 }
 #toTopButton:hover {
   background-color: #124054;
@@ -147,7 +154,7 @@ body li {
 	padding: 5px;
 	border-radius:5px;
 	background-color:#031014DD;
-	font-size:small;
+	font-size: 0.8125rem;
 	cursor: pointer;
 	max-width: 300px;
 	z-index: 200;
@@ -249,7 +256,7 @@ body li {
 	display: block;
 	color: #e47545;
 	text-align: center;
-	font-size: small;
+	font-size: 0.8125rem;
 }
 .c6Right .bsky{
 	position: absolute;
@@ -280,8 +287,14 @@ body li {
 	transform: scale(0.8);
 	z-index:300;
 	overflow: hidden;
-	
+	@media (max-width: 1000px) and (pointer: coarse) {
+		transform: scale(2);
+		right: auto;
+		left: 250px;
+		top: 450px;
+	}
 }
+
 #kofiframe {
 	height: 700px;
 	width: 400px;
@@ -292,7 +305,7 @@ body li {
 	left: 10px;
 	right: 10px;
 	z-index: 90;
-	font-size: xx-large;
+	font-size: 2rem;
 	cursor: pointer;
 }
 .pageTitleImage {
@@ -346,6 +359,7 @@ body li {
 	height: 60px;
 }
 .pageFooter {
+	position: relative;
 	clear: both;
 	height: 25px;
 	width: 100%;
@@ -354,6 +368,9 @@ body li {
 	border-top: 1px solid;
 	border-bottom: 1px solid;
 	border-color: #404040;
+	@media (max-width: 1000px) and (pointer: coarse) {
+		height: 100px;
+	}
 }
 .pageFooter a {
 	display: inline-block;
@@ -366,17 +383,24 @@ body li {
 	margin-right: 4px;
 	height: 18px;
 	vertical-align: middle;
-	
+	@media (max-width: 1000px) and (pointer: coarse) {
+		height: 30px;
+	}
 }
 .pageFooter .bsky{
 	position: absolute;
 	right: 8px;
-	font-size: 11px;
+	font-size: 0.6875rem;
 	vertical-align: middle;
+	@media (max-width: 1000px) and (pointer: coarse) {
+		right: auto;
+		left: 8px;
+		bottom: 8px;
+	}
 }
 .legalCopy {
 	text-align: center;
-	font-size: x-small;
+	font-size: 0.625rem;
 	font-style: italic;
 	color: #E47545;
 	margin-top:8px;
@@ -449,6 +473,13 @@ body li {
 	}
 }
 
+.mobileContent{
+	display: none;
+	@media (max-width: 1000px) and (pointer: coarse) {
+		display: block;
+	}
+}
+
 	/* | ---------------------------------------- MAIN INDEX-SPECIFIC CONTENT ---------------------------------------- */
 	#mainPanel{
 		width: 100%;
@@ -456,6 +487,9 @@ body li {
 		border: 2px solid #E47545;
 		margin: auto;
 		background-color: #181818DD;
+		@media (max-width: 1000px) and (pointer: coarse) {
+			display: none;
+		}
 	}
 	
 	#mainMarquee{
@@ -468,9 +502,6 @@ body li {
 		margin: auto;
 		overflow-x: hidden;
 		overflow-y: clip;
-		@media (max-width: 1000px) and (pointer: coarse) {
-			display: none;
-		}
 	}
 	.yearDiff {
 		display: inline;
@@ -506,7 +537,7 @@ body li {
 		background: linear-gradient(to bottom, #000000FF, #00000040);
 		border-radius: 0px 0px 4px 4px;
 		.marquee-pause{
-			font-size: large;
+			font-size: 1.125rem;
 		}
 	}
 	#mainMarquee .marqueeImg {
@@ -539,7 +570,7 @@ body li {
 	
 	#headquote {
 		font-family: CCS, Georgia, sans-serif;
-		font-size: 16px;
+		font-size: 1rem;
 		text-align: center;
 		text-wrap: pretty;
 		margin: 0px auto 10px auto;
@@ -549,6 +580,10 @@ body li {
 		border-width: 2px 0px 0px 0px;
 		border-radius: 10px;
 		background: linear-gradient(to top, #BB4C1C88, #181818 35%);
+		@media (max-width: 1000px) {
+			width: 70%;
+			margin-bottom: 40px;
+		}
 	}
 	#headquote a[target="_blank"]::after {
 		content:"";
@@ -562,6 +597,9 @@ body li {
 	#headquote img {
 		border-radius: 10px;
 		width: 250px;
+		@media (max-width: 1000px) {
+			width: 100%;
+		}
 	}
 	#randomReview {
 		border: 3px solid #E47545;
@@ -571,25 +609,36 @@ body li {
 		text-align: center;
 		background-color: #181818;
 		overflow: hidden;
+		@media (max-width: 1000px) {
+			width: 70%;
+			margin-bottom: 40px;
+		}
 	}
 	#randomReviewImage img {
 		width: 250px;
+		@media (max-width: 1000px) {
+			width: 90%;
+		}
 	}
 	#randomReviewEpisodeID {
 		margin-left: 5px;
 	}
 	#randomReviewTitle {
-		margin-left: 5px;
+		margin-left: auto;
+		margin-right: auto;
 		font-family: BBI, serif;
-		font-size: x-large;
+		font-size: 1.5rem;
 		width: 240px;
 		line-height: 1;
+		@media (max-width: 1000px) {
+			width: 95%;
+		}
 	}
 	#randomReviewMyScore {
 		margin: 5px auto auto auto;
 		width: fit-content;
 		max-width: 250px;
-		font-size: large;
+		font-size: 1.125rem;
 		border-top: 1px solid #505050;
 		line-height: 1;
 	}
@@ -601,13 +650,13 @@ body li {
 		margin: 5px auto 5px auto;
 		width: fit-content;
 		font-weight: bold;
-		font-size: large;
+		font-size: 1.125rem;
 	}
 	
 	.blogButton {
 		display: block;
 		font-family: Exo, sans-serif;
-		font-size: 30px;
+		font-size: 1.8rem;
 		font-weight: bold;
 		color: #E47545;
 		text-align: center;
@@ -618,6 +667,9 @@ body li {
 		border-width: 2px 0px 0px 0px;
 		border-radius: 10px;
 		background: linear-gradient(to top, #BB4C1C88, #181818 35% );
+		@media (max-width: 1000px) {
+			margin-bottom: 40px;
+		}
 	}
 	
 	.news{
@@ -629,6 +681,9 @@ body li {
 		background-color: #282828EE;
 		padding-bottom: 8px;
 		text-align: center;
+		@media (max-width: 1000px) {
+			width: 70%;
+		}
 	}
 	.news .highlight{
 		background-color: #BB4C1C55;
@@ -644,7 +699,7 @@ body li {
 		padding: 3px;
 		border-top: 1px solid #E4754544;
 		border-bottom: 1px solid #E4754544;
-		font-size: small;
+		font-size: 0.8125rem;
 		text-align: left;
 	}
 	.news table {
@@ -765,6 +820,10 @@ body li {
 		background-color: #101010;
 		line-height: 1.1;
 		text-align: center;
+		@media (max-width: 1000px) {
+			width: 70%;
+			height: 200px;
+		}
 	}
 	.seriesCardBG{
 		position: absolute;
@@ -784,15 +843,25 @@ body li {
 		display: inline-block;
 		height: 120px;
 		vertical-align: middle;
-		font-size: x-large;
+		font-size: 2rem;
+		margin:auto;
+		@media (max-width: 1000px) {
+			height: 200px;
+		}
 	}
 	.seriesCardTitle tr {
 		height: 120px;
 		vertical-align: middle;
+		@media (max-width: 1000px) {
+			height: 200px;
+		}
 	}
 	.seriesCardTitle img{
 		width: 40%;
 		vertical-align: middle;
+		@media (max-width: 1000px) {
+			width: 50%;
+		}
 	}
 	.comingSoonFlag{
 		position: absolute;
@@ -804,6 +873,9 @@ body li {
 		overflow:hidden;
 		object-fit:contain;
 		mask-image: linear-gradient(to left, rgba(0,0,0,1),  rgba(0,0,0,0));
+		@media (max-width: 1000px) {
+			height: 130%;
+		}
 	}
 	.updateNav{
 		display: flex;
@@ -816,7 +888,7 @@ body li {
 		}
 	}
 	.updateDate{
-		font-size: large;
+		font-size: 1.125rem;
 		font-weight: bold;
 		margin-right: 8px;
 	}
@@ -830,7 +902,7 @@ body li {
 		padding: 0px 12px 0px 12px;		
 	}
 	.updateTable .miniUpdate {
-		font-size: small;
+		font-size: 0.8125rem;
 		color: #999;
 		font-style: italic;
 		margin-top: 15px;
@@ -841,7 +913,7 @@ body li {
 		}
 	}
 	.updateTable .minorUpdates {
-		font-size: small;
+		font-size: 0.8125rem;
 		color: #999;
 		font-style: italic;
 		margin-left: 40px;
@@ -885,7 +957,7 @@ body li {
 	.finalVerdict {
 		text-align: center;
 		font-family: Exo, Roboto, sans-serif !important;
-		font-size: x-large;
+		font-size: 1.5rem;
 		border: 2px solid;
 		padding: 3px;
 		margin: auto;
@@ -894,7 +966,7 @@ body li {
 		clear: both;
 	}
 	.finalVerdict .tagline {
-		font-size: small;
+		font-size: 0.8125rem;
 	}
 	.WTWN {
 		width: 65%;
@@ -927,12 +999,20 @@ body li {
 		font-weight: bold;
 		text-shadow: 0 0 8px #fff;
 	}
-	.outOfUniverse {
+	div.outOfUniverse {
 		color: #B0A398;
 		border: 2px dotted #BB4C1C;
 		border-radius: 6px;
 		padding: 6px;
 		transform: skew(-10deg);
+	}
+	span.outOfUniverse {
+		color: #B0A398;
+		border: 2px dotted #BB4C1C;
+		border-radius: 6px;
+		padding: 0px 2px 0px 0px;
+		transform: skew(-10deg);
+		cursor: default;
 	}
 
 /* ---------------------------------------- GLOBAL: TIMELINE TABLE ---------------------------------------- */
@@ -957,7 +1037,7 @@ body li {
 	 border-top: 1px dotted #DDD;
 	 border-bottom: 1px dotted #DDD;
 	 background-color: #303030;
-	 font-size: 16px;
+	 font-size: 1rem;
 }
 
 .timelineTable td {
@@ -982,7 +1062,7 @@ body li {
 		background-color: #2F2F39;
 		border: 1px solid #C0C0C0;
 		font-family: BBB, serif;
-		font-size: medium;
+		font-size: 1rem;
 		text-shadow: black 2px 2px 1px;
 		border-radius: 10px;
 	}
@@ -1006,7 +1086,7 @@ body li {
 		border: 1px solid #C0C0C0;
 		padding-left: 24px;
 		font-family: BBB, serif;
-		font-size: medium;
+		font-size: 1rem;
 		border-radius: 10px;
 	}
 	.episodeBox::before{
@@ -1028,7 +1108,7 @@ body li {
 		border: 1px solid #C0C0C0;
 		padding-left: 24px;
 		font-family: BBB, serif;
-		font-size: medium;
+		font-size: 1rem;
 		text-shadow: black 2px 2px 1px;
 		border-radius: 10px;
 	}
@@ -1149,7 +1229,7 @@ body li {
 		position: absolute;
 		left: -10px;
 		top: -6px;
-		font-size: x-large;
+		font-size: 1.5rem;
 		transform: rotate(-20deg);
 	}
 }
@@ -1378,58 +1458,58 @@ input:checked + .slider:before {
 	font-size: xx-small;
 }
 .x-small {
-	font-size: x-small;
+	font-size: 0.625rem;
 }
 .small {
-	font-size: small;
+	font-size: 0.8125rem;
 }
 .large {
-	font-size: large;
+	font-size: 1.125rem;
 }
 .x-large {
-	font-size: x-large;
+	font-size: 1.5rem;
 }
 .xx-large {
-	font-size: xx-large;
+	font-size: 2rem;
 }
 #randomReviewMyScore .stars0 {
 	display: inline;
-	font-size: x-large;
+	font-size: 1.5rem;
 	color: #F8393B;
 	height: 24px;
 	padding-left: 8px;
 }
 #randomReviewMyScore .stars1 {
 	display: inline;
-	font-size: x-large;
+	font-size: 1.5rem;
 	color: #FA6453;
 	height: 24px;
 	padding-left: 8px;
 }
 #randomReviewMyScore .stars2 {
 	display: inline;
-	font-size: x-large;
+	font-size: 1.5rem;
 	color: #FC9F5B;
 	height: 24px;
 	padding-left: 8px;
 }
 #randomReviewMyScore .stars3 {
 	display: inline;
-	font-size: x-large;
+	font-size: 1.5rem;
 	color: #FFEB84;
 	height: 24px;
 	padding-left: 8px;
 }
 #randomReviewMyScore .stars4 {
 	display: inline;
-	font-size: x-large;
+	font-size: 1.5rem;
 	color: #81D570;
 	height: 24px;
 	padding-left: 8px;
 }
 #randomReviewMyScore .stars5 {
 	display: inline;
-	font-size: x-large;
+	font-size: 1.5rem;
 	color: #03BE4B;
 	height: 24px;
 	padding-left: 8px;
@@ -1440,10 +1520,13 @@ input:checked + .slider:before {
 #randomReviewMyScore .halfstar {
 	display: inline-block;
 	position: relative;
-	font-size:x-large;
+	font-size:1.5rem;
 	height:26px;
 	overflow:hidden;
 	vertical-align:top;
+	@media (max-width: 1000px) {
+		height: 1.5rem;
+	}
 }
 #randomReviewMyScore .lefthalfstar{
 	position: relative;
@@ -1455,6 +1538,9 @@ input:checked + .slider:before {
 	white-space: nowrap;
 	width:50%;
 	transform: translateX(-6px);
+	@media (max-width: 1000px) {
+		transform: translateX(-12px);
+	}
 }
 #randomReviewMyScore .righthalfstar{
 	position: absolute;

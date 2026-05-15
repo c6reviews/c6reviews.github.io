@@ -69,6 +69,7 @@ function unsetAllCookies(){
 	setConsent('','','','','');
 	
 	setCookie('PICallSpoilers','',-1);
+	setCookie('DISallSpoilers','',-1);
 	setCookie('timelineTOSspoilers','',-1);
 	setCookie('timelineTNGspoilers','',-1);
 	setCookie('timelineDS9spoilers','',-1);

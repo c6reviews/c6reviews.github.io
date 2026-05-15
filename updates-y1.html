@@ -41,7 +41,7 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="main.css?v=1.6">
+<link rel="stylesheet" href="main.css?v=1.6.1">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <meta property="og:title" content="Updates | C6Reviews">
@@ -50,7 +50,31 @@
 <meta property="og:url" content="https://c6reviews.com/updates.html">
 <meta property="og:description" content="Site update log for C6Reviews.com">
 
-<script src="cookies.js?v=1.6"></script>
+<script src="cookies.js?v=1.6.1"></script>
+<script>
+	function scrollToTop() {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	} 
+	   
+	window.onscroll = function scrollFunction() {
+		
+		// Show or Hide "Scroll to top" button
+			let toTopButton = document.getElementById("toTopButton");
+			
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				toTopButton.style.display = "block";
+			} else {
+				toTopButton.style.display = "none";
+			}
+		// Close Tool Tips
+			for (const item of document.getElementsByClassName('tooltip')) {
+			closeToolTip(item);
+			}
+	}
+</script>
 <title>C6Reviews | Updates</title>
 </head>
 
@@ -72,6 +96,8 @@
 
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div>
+
+<div id="backButton" onclick="window.location = 'index.html';"><span style="font-size:large;font-weight:bold">←</span><br>Star<br>Trek<br>home</div>
 
 
 	<div class="updatesAcknowledgements">
@@ -102,7 +128,7 @@
 			<td>
 				<ul>
 					<li><span class="newGuideRelease">The film review for <a href="films/beyond.html"><em>Star Trek Beyond</em></a> has been posted!</span></li>
-					<li>Several updates and corrections to the <a href="timeline/index.html">Star Trek Universe Full Timeline</a> were made as a result of re-watching <em>Star Trek Beyond</em>.</li>
+					<li>Several updates and corrections to the <a href="timeline/index.html">Star Trek Universe Comprehensive Timeline</a> were made as a result of re-watching <em>Star Trek Beyond</em>.</li>
 					<li>Added a <strong>&ldquo;tear-jerker&rdquo; designator</strong> to a few episodes in <em>DS9</em> and <em>VOY</em>. There will be some in the upcoming <em>TNG</em> guide, too.</li>
 				</ul>
 				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
@@ -167,7 +193,7 @@
 			<td>
 				<ul>
 					<li>404 page mini-game: Picard now moves more smoothly and has been upgraded with the ability to move <em>DIAGONALLY!</em> 🤯  Also, there's now an option to mute game sounds.</li>
-					<li>The <a href="timeline/index.html">Star Trek Universe Full Timeline</a> table now <strong>highlights the row the mouse is hovering over</strong>.</li>
+					<li>The <a href="timeline/comprehensive.html">Star Trek Universe Comprehensive Timeline</a> table now <strong>highlights the row the mouse is hovering over</strong>.</li>
 					<li>All episode table <strong>header rows are now &ldquo;sticky&rdquo;</strong> (they stay at the top of the window when you scroll down).</li>
 				</ul>
 				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
@@ -247,7 +273,7 @@
 			<td>1.2.1</td>
 			<td>
 				<ul>
-					<li>Added a <strong>search bar</strong> to the <a href="timeline/index.html">Star Trek Universe Full Timeline</a>, along with some other style and quality updates.</li>
+					<li>Added a <strong>search bar</strong> to the <a href="timeline/comprehensive.html">Star Trek Universe Comprehensive Timeline</a>, along with some other style and quality updates.</li>
 					<li>Adjusted color coding on all timelines to be WCAG AA compliant.</li>
 					<li>Updated various fonts and styles throughout the site.</li>
 				</ul>
@@ -261,7 +287,7 @@
 			<td>
 				<ul>
 					<li><span class="newGuideRelease">The <a href="voy/index.html"><em>Star Trek: Voyager</em></a> Series Guide just dropped!!</span></li>
-					<li>Added a few minor events to the <a href="timeline/index.html">Star Trek Universe Full Timeline</a>.</li>
+					<li>Added a few minor events to the <a href="timeline/comprehensive.html">Star Trek Universe Comprehensive Timeline</a>.</li>
 				</ul>
 				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
 					Fixed an error where filtering episode lists by &ldquo;Recommended&rdquo; would also display &ldquo;Highly Recommended&rdquo; episodes; further standardized episode quotes formatting; added color coding to series timelines; added an OpenGraph image for social media link previews; spruced up the Section 31 movie review page.</div>
@@ -272,7 +298,7 @@
 			<td>1.1.1</td>
 			<td>
 				<ul>
-					<li>Added some photos for series and important events to the <a href="timeline/index.html">Star Trek Universe Full Timeline</a>, plus some other small improvements.</li>
+					<li>Added some photos for series and important events to the <a href="timeline/comprehensive.html">Star Trek Universe Comprehensive Timeline</a>, plus some other small improvements.</li>
 					<li>Added season descriptions and episode air dates to the <em><a href="ds9/index.html">Star Trek: Deep Space Nine</a></em> guide.</li>
 					<li>Linked series- and episode-specific timelines to the full timeline.</li>
 				</ul>
@@ -282,7 +308,7 @@
 			<td><span class="updateDate">February 28, 2025</span></td>
 			<td>1.1</td>
 			<td><ul>
-					<li><span class="newGuideRelease">The <a href="timeline/index.html">Star Trek Universe Full Timeline</a> is here! I am particularly excited about this one.</span></li>
+					<li><span class="newGuideRelease">The <a href="timeline/comprehensive.html">Star Trek Universe Comprehensive Timeline</a> is here! I am particularly excited about this one.</span></li>
 				</ul>
 				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
 					Reorganized the home page; made episode quotes formatting consistent across the DS9 guide to match the upcoming VOY guide; added smooth scroll to some places it was missing.</div>
@@ -371,14 +397,6 @@
 	
 	function closeToolTip(caller) {
 		caller.style.display = 'none';
-	}
-	
-	window.onscroll = function scrollFunction() {
-
-		for (const item of document.getElementsByClassName('tooltip')) {
-			closeToolTip(item);
-		}
-		
 	}
 </script>
 

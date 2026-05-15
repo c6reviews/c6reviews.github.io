@@ -1,0 +1,260 @@
+html {
+	scroll-behavior: smooth;
+}
+
+#timelineLegendDiv {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  background-color: #111111EE;
+  overflow-x: hidden;
+  padding-top: 20px; 
+  transition: 0.2s; 
+  & .closebtn {
+	  font-size: 88px;
+	  margin-left: 35px;
+  }
+}
+
+#timelineGrid {
+	display: grid;
+	grid-template-columns: 100px repeat(3, 1fr);
+	grid-auto-rows: minmax(1rem, auto);
+	grid-column-gap: 8px;
+	grid-row-gap: 1px;
+	
+	& > div:not(.yearBox):not(.hrule) {
+		display: grid;
+		place-items: center;
+		text-align: center;
+		transform: translateY(-1px);
+	}
+	
+	& a {
+		white-space: normal;
+	}
+}
+.timelineFlex {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	gap: 10px;
+}
+
+	#allCenturiesOverview {
+		justify-content: flex-start;
+	}
+	#legendFlex {
+		div {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			align-items: center;
+			font-size: 40px !important;
+			text-wrap: pretty;
+		}
+	}
+
+.yearBox {
+	text-align: right !important;
+}
+.centuryLink {
+	position:relative;
+	text-align: left;
+	margin-top:25px;
+	margin-bottom:25px;
+	& a:nth-of-type(2) {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+
+
+.timelineBlock {
+	flex-basis: 200px;
+	margin: 10px auto;
+	width: 800px;
+	border: 1px solid #BB4C1C;
+	border-radius: 5px;
+	padding: 8px;
+	padding-bottom: 50px;
+	background-color: #080808;
+	scroll-margin: 150px;
+}
+
+.timelineBlockTitle {
+	font-family: Exo;
+	font-size: 2.8rem;
+	font-weight: bold;
+	text-align: center;
+	position: sticky;
+	top: 0px;
+	background-image: linear-gradient(to bottom, #000000, #783011);
+	border: 4px solid #E47545;
+	border-radius: 8px;
+	padding: 5px;
+	margin: 0;
+	margin-bottom: 50px;
+	z-index: 10;
+}
+
+.timelineBlockContent{
+	display: block;
+	width: 95%;
+	vertical-align: top;
+	margin: 3px auto;
+	font-size: 1.5rem;
+	line-height: 0.9;
+	hr {
+		margin-top: 6px;
+		margin-bottom: 6px;
+		border:none;
+		height:4px;
+		background-color: #999;
+		&.titleDivider {
+			margin-top:15px;
+			margin-bottom:15px;
+		}
+	}
+	.lineicon {
+		font-size: 1.5rem;
+	}
+}
+.contentBlockContainer {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	position: relative;
+	line-height: 1.1;
+	min-height: 100px;
+	min-width: 580px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+.contentBlock {
+	width: 350px;
+}
+.kelvinBlock {
+	color: #00B757;
+	background-color: #002007;
+	padding-left: 6px;
+}
+.contentDate {
+	margin: 8px auto;
+	text-align: center;
+	text-decoration: underline;
+}
+.mediaTitle {
+	font-size: 1.5rem;
+	font-family: BB,serif;
+	font-style: italic;
+}
+.titleImage {
+	width:300px;
+	margin-left:25px;
+}
+.titleDivider {
+	
+}
+
+.filmBox,.episodeBox,.seriesBox {
+	border-width: 2px !important;
+	scroll-margin: 200px;
+}
+.bgimage {	
+	background-repeat: no-repeat;
+	background-position: right top;
+	@media (max-width: 1000px) {
+		background-image: none !important;
+	}
+}
+.seriesImage{
+	pointer-events: none;
+	height: var(--desktop-height);
+	opacity: 0.8;
+	right: calc(var(--desktop-height)/6);
+	@media (max-width: 1000px) {
+		height: var(--mobile-height);
+		right: calc(var(--mobile-height)/-2 - var(--offset, 0px));
+	}
+}
+.joinLeft {
+	margin-right: -4px;
+}
+.joinRight {
+	margin-left: -4px;
+}
+.joinMiddle {
+	margin-right: -4px;
+	margin-left: -4px;
+}
+
+.timelineCenturyDiv {
+	border: 1px solid;
+	margin: 40px auto 40px auto;
+	padding: 6px;
+	text-align: center;
+	background-color:#080808;
+	scroll-margin: 150px;
+}
+.timelineCenturyDivTitle {
+	font-size: 2rem;
+	font-weight: bold;
+}
+.blinkBox {
+	color: yellow !important;
+	border-color: yellow !important;
+	text-decoration: underline overline 2px;
+}
+
+
+
+@media (max-width: 1000px) and (pointer: coarse) {
+	#timelineGrid {
+		/*font-size: xx-large;*/
+		& > div:not(.yearBox) {
+			font-size: xx-large;
+		}
+	}
+	#allCenturiesOverview {
+		gap: 100px;
+	}
+	.centuryLink {
+		/*font-size: 42px;*/
+	}
+	.timelineBlock{
+		width: 100%;
+	}
+	.timelineBlockTitle {
+		/*font-size: 52px;*/
+		top: 100px;
+	}
+	.lineicon {
+		/*font-size: xxx-large;*/
+	}
+	.timelineBlockContent{
+		/*font-size: 32px;*/
+	}
+	.contentBlockContainer {
+		width: 100%;
+	}
+	.mediaTitle {
+		/*font-size: 42px;*/
+	}
+	.contentBlock {
+		width: 50vw;
+	}
+	.titleImage {
+		width: 45vw;
+	}
+	
+	.episodeBox::before{
+		top: -12px !important;
+	}
+}

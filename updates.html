@@ -37,11 +37,15 @@
 	padding: 10px;
 	line-height: 1.1;
 }
+.mobilever {
+	font-size: 0.625rem;
+	font-style: italic;
+}
 </style>
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="main.css?v=1.6">
+<link rel="stylesheet" href="main.css?v=1.6.1">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <meta property="og:title" content="Updates | C6Reviews">
@@ -50,7 +54,31 @@
 <meta property="og:url" content="https://c6reviews.com/updates.html">
 <meta property="og:description" content="Site update log for C6Reviews.com">
 
-<script src="cookies.js?v=1.6"></script>
+<script src="cookies.js?v=1.6.1"></script>
+<script>
+	function scrollToTop() {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	} 
+	   
+	window.onscroll = function scrollFunction() {
+		
+		// Show or Hide "Scroll to top" button
+			let toTopButton = document.getElementById("toTopButton");
+			
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				toTopButton.style.display = "block";
+			} else {
+				toTopButton.style.display = "none";
+			}
+		// Close Tool Tips
+			for (const item of document.getElementsByClassName('tooltip')) {
+			closeToolTip(item);
+			}
+	}
+</script>
 <title>C6Reviews | Updates</title>
 </head>
 
@@ -73,6 +101,7 @@
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div>
 
+<div id="backButton" onclick="window.location = 'index.html';"><span style="font-size:large;font-weight:bold">←</span><br>Star<br>Trek<br>home</div>
 
 	<div class="updatesAcknowledgements">
 		<span style="font-family:BBI,Roboto,sans-serif;font-size:x-large;text-decoration:underline">Site Update Acknowledgements</span><br><br>
@@ -88,6 +117,23 @@
 			<th style="width:170px;">Date</th>
 			<th>Version</th>
 			<th style="text-align:left;padding-left: 35px;">Description</th>
+		</tr>
+		<tr>
+			<td><span class="updateDate">May 15, 2026</span></td>
+			<td>1.6.1<br><span class="mobilever">mobile 0.1</span></td>
+			<td>
+				<ul>
+					<li style="line-height:1">There's a brand-new <a href="timeline/simple.html"><strong>mobile-friendly simplified timeline</strong></a> to complement the full, <a href="timeline/comprehensive.html">comprehensive timeline</a>. The Home page was also improved for better mobile-viewing.<br>
+						<span style="font-size:small;font-style:italic">This is my first real foray into doing mobile-friendly content. It probably needs more work, but I'm excited about it none the less!</span>
+					</li>
+					<li>All of the links <span style="font-size:0.8125rem">(with one exception)</span> on the site that go to a specific event on the timeline should now go to either the comprehensive OR simple timeline based on your device type.
+					</li>
+					<li>Various updates to the comprehensive timeline, including more source pop-ups.</li>
+				</ul>
+				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
+					Added some additional quote-of-the-day entries on the home page for certain holidays, and generally streamlined the script; standardized the size of the back button on all pages; added back button to this page and the About page; updated &ldquo;What is C6Reviews?&rdquo; on the About page; added the missing &ldquo;scroll to top&rdquo; sidebar button to this page; fixed an issue where the browser would scroll to the wrong location on the <em>Picard</em> reviews under certain circumstances; fixed a couple of broken links on the Section 31 film review &ndash; that page has been here since version 1.0, there's bound to be some detritus!
+				</div>
+			</td>
 		</tr>
 		<tr class="dotRelease">
 			<td><span class="updateDate">April 24, 2026</span></td>
@@ -154,7 +200,7 @@
 					<li>Added <strong>&ldquo;What to watch next&rdquo; suggestions</strong> to all TV series and film pages.</li>
 					<li>An <strong>AI Policy</strong> was added to the <a href="about.html">About</a> page.</li>
 					<li style="line-height:1"><strong>Some re-branding</strong>: The C6 android image and the &ldquo;Starfleet Delta&rdquo; header logo were both re-created.<br><span style="font-size:small;font-style:italic">The android image was re-created so that it (1) Does not resemble and is legally distinct from the <a href="https://memory-alpha.fandom.com/wiki/F8" target="_blank">F8 android</a> played by Alex Diehl, and (2) More closely resembles my own facial features, although I must admit that this android is considerably more handsome than me...</span></li>
-					<li style="line-height:1">Started adding <strong>&ldquo;Source&rdquo; pop-ups</strong> for some entries on the <a href="timeline/index.html">Full Timeline</a>.<br><span style="font-size:small;font-style:italic">I still have a lot to go.</span></li>
+					<li style="line-height:1">Started adding <strong>&ldquo;Source&rdquo; pop-ups</strong> for some entries on the <a href="timeline/comprehensive.html">Comprehensive Timeline</a>.<br><span style="font-size:small;font-style:italic">I still have a lot to go.</span></li>
 				</ul>
 				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
 					Added a &ldquo;re-roll&rdquo; button to the Random Review box on the home page; lots of small HTML fixes throughout the site not worth detailing; fixed an issue on the <em>Picard</em> reviews where list items would not display correctly when showing spoilers for a single episode; added a statement in the footer of every page about this being a fan site not endorsed by Paramount, even though I have delusions of grandeur and would love for Paramount to send me a &lsquo;cease and desist&rsquo; letter because that would mean my site was actually popular; finally settled on standardizing to the British style of placing punctuation outside of quotation marks when the punctuation is not necessarily part of the quote, and fixed a bunch of instances where I hadn't done that &ndash; I may be American, myself, but I think the Brits got this one right &ndash; and apparently I hadn't punished myself enough with the hyphens. Also, <em>Star Trek: Starfleet Academy</em> was added to the Star Trek Universe Full Timeline on Jan 16th.
@@ -179,14 +225,7 @@
 	function closeToolTip(caller) {
 		caller.style.display = 'none';
 	}
-	
-	window.onscroll = function scrollFunction() {
 
-		for (const item of document.getElementsByClassName('tooltip')) {
-			closeToolTip(item);
-		}
-		
-	}
 </script>
 
 </body>

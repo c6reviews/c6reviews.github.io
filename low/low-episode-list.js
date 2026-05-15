@@ -794,7 +794,7 @@ var csvString = `Episode,Title,Tags,Reference Meter,Rating
 3x10,The Stars at Night,‼&#xFE0F; <div style="display:inline-block;text-align:center;line-height:0.9" title="Second Place episode for Originality">O<br>🥈</div>,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;3️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>&nbsp;,8.2
 4x01,Twovix,♥ <div style="display:inline-block;text-align:center;line-height:0.9" title="First Place episode for Fan Service">FS<br>🥇</div>,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;5️⃣&#xFE0F;</span>,8.1
 4x02,"I Have No Bones Yet I Must Flee",♥,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,6.8
-4x03,In the Cradle of Vexilon,,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;3️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,3.7
+4x03,In the Cradle of Vexilon,,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;3️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,3.9
 4x04,"Something Borrowed, Something Green",,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,5.3
 4x05,Empathalogical Fallacies,,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,4.6
 4x06,Parth Ferengi's Heart Place,,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,5.5

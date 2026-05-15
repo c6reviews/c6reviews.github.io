@@ -42,7 +42,7 @@ const comedicQuotes = [
 	
 	["images/headquotes/hq-voy-1x06.webp","The Doctor and Torres having a discussion in sickbay","Now there's an interesting concept: a hologram that programs himself. What would I do with that ability? Create a family... raise an army...","The Doctor","voy/voy-s1.html#e06","VOY 1x06: The Cloud"],
 	
-	["images/headquotes/hq-low-1x04.webp","Lieutenant J.G. O'Connor turning a translucent-blue color while levitating and surrounded by the image of a large bird","The universe is balanced on the back of a giant koala! Why is he smiling? WHAT DOES HE KNOW?!","Lt. J.G. O'Connor","low/low-s1.html#e04","LOW 1x04: Moist Vessel"],
+	["images/headquotes/hq-low-1x04.webp","Lt. j.g. O'Connor turning a translucent-blue color while levitating and surrounded by the image of a large bird","The universe is balanced on the back of a giant koala! Why is he smiling? WHAT DOES HE KNOW?!","Lt. j.g. O'Connor","low/low-s1.html#e04","LOW 1x04: Moist Vessel"],
 	
 	["images/headquotes/hq-tng-4x05.webp","Dr. Crusher alone on the bridge, tapping controls at the Ops station and looking concerned","If there's nothing wrong with <em>me</em>, maybe there's something wrong with the <em>universe</em>!","Doctor Beverly Crusher","tng/tng-s4.html#e05","TNG 4x05: Remember Me"],
 	
@@ -105,67 +105,47 @@ document.addEventListener('DOMContentLoaded', function() {
 	var monthAndDate = today.toLocaleDateString("en-US", {month: 'long', day: 'numeric'});
 	var year = today.toLocaleDateString("en-US", {year: 'numeric'});
 	
-	const laborDay = (function() {
-		const sep1 = new Date(year, 8, 1);
-		const sep1DOW = sep1.getDay();
+	function getHoliday(ordinal,dayOfWeek,month) { // Example: to find the 2nd Wednesday of May, pass variables 2,4,5 (2 == 2nd, 4 == Wednesday, 5 == May)
+		const the1st = new Date(year, (month-1), 1);
+		const the1stDOW = the1st.getDay();
 		var daysToAdd = 0;
-		if (sep1DOW != 1) {
-			daysToAdd = (8 - sep1DOW) % 7;
+		if (the1stDOW != (dayOfWeek-1)) {  
+			daysToAdd = ((7+dayOfWeek-1) - the1stDOW) % 7;
 		}
-		return "September " + (sep1.getDate() + daysToAdd);
-	})();
-	const indigenousPeoplesDay = (function() {
-		const oct1 = new Date(year, 9, 1);
-		const oct1DOW = oct1.getDay();
-		var daysToAdd = 0;
-		if (oct1DOW != 1) {
-			daysToAdd = (8 - oct1DOW) % 7;
-		}
-		return "October " + (oct1.getDate() + daysToAdd + 7);
-	})();
-	const thanksgiving = (function() {
-		const nov1 = new Date(year, 10, 1);
-		const nov1DOW = nov1.getDay();
-		var daysToAdd = 0;
-		if (nov1DOW != 4) {
-			daysToAdd = (11 - nov1DOW) % 7;
-		}
-		return "November " + (nov1.getDate() + daysToAdd + 21);
-	})();
-
-	var easter = "";
-	switch (year) {
-		case "2026":
-			easter = "April 5";
-			break;
-		case "2027":
-			easter = "March 28";
-			break;
-		case "2028":
-			easter = "April 16";
-			break;
-		case "2029":
-			easter = "April 1";
-			break;
-		case "2030":
-			easter = "April 21";
-			break;
-		case "2031":
-			easter = "April 13";
-			break;
-		case "2032":
-			easter = "March 28";
-			break;
-		case "2033":
-			easter = "April 17";
-			break;
-		case "2034":
-			easter = "April 9";
-			break;
-		case "2035":
-			easter = "March 25";
-			break;
+		return the1st.toLocaleDateString("en-US", {month: 'long'}) + " " + (the1st.getDate() + daysToAdd + ((ordinal-1)*7));
 	}
+	
+	const mlkDay = getHoliday(3,2,1);
+	const mothersDay = getHoliday(2,1,5);
+	const fathersDay = getHoliday(3,1,6);
+	const laborDay = getHoliday(1,2,9);
+	const indigenousPeoplesDay = getHoliday(2,2,10);
+	const thanksgiving = getHoliday(4,5,11);
+
+	const easter = (function(year) {
+		  const f = Math.floor;
+		  // Step 1: Golden Number - cycle in the lunar calendar
+		  const a = year % 19;
+		  const b = f(year / 100);
+		  const c = year % 100;
+		  // Steps 2-4: Leap year corrections and epact
+		  const d = f(b / 4);
+		  const e = b % 4;
+		  const g = f((8 * b + 13) / 25);
+		  const h = (19 * a + b - d - g + 15) % 30;
+		  const i = f(c / 4);
+		  const k = c % 100 % 4;
+		  // Step 5: Day of the week for the Paschal full moon
+		  const l = (32 + 2 * e + 2 * i - h - k) % 7;
+		  const m = f((a + 11 * h + 22 * l) / 451);
+		  // Step 6: Final month and day
+		  const month = f((h + l - 7 * m + 114) / 31); // 3 = March, 4 = April
+		  const day = ((h + l - 7 * m + 114) % 31) + 1;
+		  
+		  // Note: JS months are 0-indexed, so we subtract 1 from month
+		  var result = new Date(year, month - 1, day);
+		  return result.toLocaleDateString("en-US", {month: 'long', day: 'numeric'});
+	})(year);
 	
 	var quote = [];
 
@@ -173,17 +153,29 @@ document.addEventListener('DOMContentLoaded', function() {
 		case "January 6":
 			quote = ["images/headquotes/hq-snw-1x01.webp","Captain Pike giving a speech with a video of the Capitol building burning in the background","You'll use competing ideas of liberty to bomb each other to rubble, just like we did, and then your last day will look just like this. Perhaps, somewhere, all your ends are written as indelibly as mine. But I choose to believe that your destinies are still your own. Maybe that's why I'm here &ndash; to remind you of the power of possibility. Maybe that's the good in seeing my future &ndash; that I might remind you that, right up until the very end, life is to be worn gloriously. Because, 'til our last moment, the future's what we make it. So... go to war with each other, or... join our Federation of Planets and reach for the stars. The choice is yours.","Captain Christopher Pike","snw/snw-s1.html#e01","SNW 1x01: Strange New Worlds"];
 			break;
+		case mlkDay:
+			quote = ["images/headquotes/hq-ds9-6x13.webp","Benny Russell crying during an impassioned speech in the magazine's writing room","I am a human being, damn it. You can deny me all you want but you cannot deny Ben Sisko. He exists! That future, that space station, all those people, they exist in here. In my mind; I created it. And every one of you know it. You read it. It's here. You hear what I'm telling you? You can pulp a story but you cannot destroy an idea. Don't you understand? That's ancient knowledge. You cannot destroy an idea. That future, I created it, and it's real. Don't you understand? It is real! I created it and it's real! It's real! Oh, God.","Benny Russell","ds9/ds9-s6.html#e13","DS9 6x13: Far Beyond the Stars"];
+			break;
 		case "February 14":
 			quote = ["images/headquotes/hq-voy-3x11.webp","Janeway and Q standing in front of a bed with red satin sheets and heart-shaped pillows","The night is young, and the sheets are satin.","<span class='Q'>Q</span>","voy/voy-s3.html#e11","VOY 3x11: The Q and the Grey"];
+			break;
+		case "March 14":
+			quote = ["images/headquotes/hq-tos-2x14.webp","Mister Spock speaking on the bridge of the Enterprise","Computer, this is a Class A compulsory directive. Compute to the last digit the value of pi.&rdquo; <span style='font-style:normal'>[to Kirk]</span> &ldquo;As we know, the value of pi is a transcendental figure without resolution. The computer banks will work on this problem to the exclusion of all else until we order it to stop.","Spock","tos/tos-s2.html#e14","TOS 2x14: Wolf in the Fold"];
 			break;
 		case "April 1":
 			quote = ["images/headquotes/hq-aprilfools.webp","Patrick Stewart","Use the force, Harry.","Gandalf",'https://tardis.fandom.com/wiki/Genesis_of_the_Daleks_(TV_story)" target="_blank',"DW 12x04: Genesis of the Daleks"];
 			break;
 		case "April 5":
-			quote = ["images/headquotes/hq-fc-1.webp","A Vulcan performing the traditional Vulcan salute","Live long and prosper.","Unnamed Vulcan","../films/firstcontact.html","<em>Star Trek: First Contact</em>"];
+			quote = ["images/headquotes/hq-fc-1.webp","Zefram Cochrane looking pensively into the night sky as Riker, La Forge, and Troi observe","Why not?","Zefram Cochrane, considering the prospect of making his warp flight in hopes for a better future","/films/firstcontact.html","<em>Star Trek: First Contact</em>"];
 			break;	
 		case easter:
-			quote = ["images/headquotes/hq-tos-1x15.webp","A human-sized white rabbit with a plaid jacket and pocket watch","Oh, my paws and whiskers! I'll be late!","Rabbit","../tos/tos-s1.html#e15","TOS 1x15: Shore Leave"];
+			quote = ["images/headquotes/hq-tos-1x15.webp","A human-sized white rabbit with a plaid jacket and pocket watch","Oh, my paws and whiskers! I'll be late!","Rabbit","/tos/tos-s1.html#e15","TOS 1x15: Shore Leave"];
+			break;
+		case mothersDay:
+			quote = ["images/headquotes/hq-tng-1x11.webp","Picard and Troi in the transporter room, with Troi holding a white rose","I should warn you, sir. My mother is a little... eccentric.","Deanna Troi","/tng/tng-s1.html#e11","TNG 1x11: Haven"];
+			break;
+		case fathersDay:
+			quote = ["images/headquotes/hq-ds9-5x25-2.webp","A close-up of Jake Sisko","My father has never let me down. He's always been there for me when I needed him. And right now he needs me. I don't want to let him down.","Jake Sisko","/ds9/ds9-s5.html#e25","DS9 5x25: In the Cards"];
 			break;
 		case laborDay:
 			quote = ["images/headquotes/hq-ds9-4x16.webp","Rom reading from a PADD and quoting Karl Marx","Workers of the world, unite! You have nothing to lose but your chains!","Rom","ds9/ds9-s4.html#e16","DS9 4x16: Bar Association"];
@@ -192,10 +184,10 @@ document.addEventListener('DOMContentLoaded', function() {
 			quote = ["images/headquotes/hq-tng-7x20.webp","Wesley Crusher in his cadet's uniform","What you are doing down there is wrong. These people are not some random group of colonists; they are a unique culture with a history that predates the Federation and Starfleet.","Wesley Crusher","tng/tng-s7.html#e20","TNG 7x20: Journey's End"];
 			break;
 		case "October 31":
-			quote = ["images/headquotes/hq-voy-2x23.webp","A clown standing in shadows","I'm afraid.","The Clown","../voy/voy-s2.html#e23","VOY 2x23: The Thaw"];
+			quote = ["images/headquotes/hq-voy-2x23.webp","A clown standing in shadows","I'm afraid.","The Clown","/voy/voy-s2.html#e23","VOY 2x23: The Thaw"];
 			break;
 		case thanksgiving:
-			quote = ["images/headquotes/hq-snw-1x02.webp","Pike, Spock, Una Chin-Riley, Ortegas, Uhura, and Chapel feasting at the dinner table","Sometimes, Mr. Spock, things go so badly you just have to laugh.","Captain Christopher Pike","../snw/snw-s1.html#e02","SNW 1x02: Children of the Comet"];
+			quote = ["images/headquotes/hq-snw-1x02.webp","Pike, Spock, Una Chin-Riley, Ortegas, Uhura, and Chapel feasting at the dinner table","Sometimes, Mr. Spock, things go so badly you just have to laugh.","Captain Christopher Pike","/snw/snw-s1.html#e02","SNW 1x02: Children of the Comet"];
 			break;
 		case "December 31":
 			quote = ["images/headquotes/hq-voy-5x23.webp","Shannon O'Donnel, holding a cold pint of beer","Last year, when 2000 arrived? Everyone was convinced it was the dawn of a new era. But when the world didn't end and the flying saucers didn't land and the Y2K bug didn't turn off a single light bulb, you'd think everybody would have realized it was a number on a calendar. But, oh, no, they had to listen to all those hucksters who told them the real millennium was 2001. So this New Year's Eve will be as boring as last year.","Shannon O'Donnel","voy/voy-s5.html#e23","VOY 5x23: 11:59"];
@@ -215,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			<span id="headquoteText">&ldquo;${quote[2]}&rdquo;</span>
 			<br>&mdash; ${quote[3]},
 			<br><a href="${quote[4]}" style="font-family:Exo,Roboto,sans-serif;font-weight:bold;white-space:normal">${quote[5]}</a>
-			<br><span style="font-size:x-small;font-family:Exo,Roboto,sans-serif;border-top: 1px solid #909090">QUOTE OF THE DAY</span>
+			<br><span style="font-size:0.625rem;font-family:Exo,Roboto,sans-serif;border-top: 1px solid #909090">QUOTE OF THE DAY</span>
 		</div>
 	`
 

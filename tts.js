@@ -53,8 +53,10 @@ function textToSpeech(id,text) {
 			text = text.
 				replaceAll("Betazed","Beta-zed").
 				replaceAll("Cardassian","Card-ass-ian").
+				replaceAll("Denobulan","Dunno-byewlin").
 				replaceAll("Ferengi","Fer-ren-gii").
 				replaceAll("Ferenginar","Fer-ren-geh-narr").
+				replaceAll("Klingon","Kling-on").
 				replaceAll("Qo'noS","Kro-nohs").
 				replaceAll("Reman","Reemin").
 				replaceAll("Risa","Ryza").
@@ -77,11 +79,12 @@ function textToSpeech(id,text) {
 				replaceAll("Locutus","locude-us").
 				replaceAll("Martok","Martock").
 				replaceAll("Nagus","Naygus").
-				replaceAll("Sarek","Sareck").
+				replaceAll("Sarek","Sare-ick").
+				replaceAll("Saru","Sah-rue").
 				replaceAll("Shinzon","Shinzahn").
+				replaceAll("T'Kuvma","Tuh-koovma").
 				replaceAll("Tuvok","Two-vock").
 				replaceAll("Zefram","Zefrum");
-
 
 			// Actors
 			text = text.replaceAll("Takei","Tuh-kay");

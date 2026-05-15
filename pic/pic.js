@@ -1,4 +1,10 @@
-﻿
+﻿// Get rid of the URL hash so the browser doesn't scroll to early
+const hash = window.location.hash;
+if (hash) {
+  history.replaceState(null, '', window.location.pathname + window.location.search);
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
 	var bottomBorder = document.getElementById('bottomBorder');
 	setTimeout(function() {bottomBorder.style.width = '74%';}, 100);
@@ -245,7 +251,6 @@ function alwaysShowFullReview(caller) {
 		}
 		
 	}
-	
 }
 
 
@@ -377,6 +382,17 @@ window.onload = function() {
 		}	
 		
 		alwaysShowFullReview(document.getElementById("mainToggle"));
+	}
+	
+	// Scroll to the URL hash (if there was one) after spoilers are revealed
+	if (hash) {
+		const el = document.querySelector(hash);
+		if (el) el.scrollIntoView();
+		
+		// Restore the hash to the URL
+		const url = new URL(window.location);
+		url.hash = hash;
+		history.replaceState(null, '', url);
 	}
 
 	var bottomBorder = document.getElementById('bottomBorder');
