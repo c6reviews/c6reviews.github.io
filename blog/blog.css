@@ -1,21 +1,29 @@
 /* ----- INDEX ----- */
-.blogEntry {
-	display: block;
+
+.blogGrid {
+	display: grid;
+	grid-template-columns: 18.75rem 1fr;
+	gap: 1.5rem 0.5rem;
+	text-align: left;
+	width: 95%;
 	padding: 3px;
-	margin-left: 8px;
-	margin-top: 8px;
-	margin-bottom: 30px;
-	min-height: 125px;
-	font-size: large;
-	clear: both;
-	border: 1px solid #606060;	
+	margin-top: 10px;
+	margin-bottom: 20px;
+	align-items: start;
 }
 .blogImg{
-	display: inline-block;
-	height: 125px;
-	float: left;
-	margin-right: 20px;
+	justify-self: end;
 }
+.blogImg img{
+	height: 125px;
+}
+.blogEntry {
+	padding: 3px;
+	font-size: large;
+	border: 1px solid #606060;	
+	min-height: 117px;
+}
+
 .blogDate {
 	display: inline-block;
 	width: fit-content;

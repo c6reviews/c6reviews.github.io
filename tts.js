@@ -56,6 +56,7 @@ function textToSpeech(id,text) {
 				replaceAll("Denobulan","Dunno-byewlin").
 				replaceAll("Ferengi","Fer-ren-gii").
 				replaceAll("Ferenginar","Fer-ren-geh-narr").
+				replaceAll("J'naii","Juh-nigh").
 				replaceAll("Klingon","Kling-on").
 				replaceAll("Qo'noS","Kro-nohs").
 				replaceAll("Reman","Reemin").
@@ -66,10 +67,13 @@ function textToSpeech(id,text) {
 			
 			// Characters
 			text = text.
+				replaceAll("Adira","Uh-deer-uh").
 				replaceAll("B'Elanna","Bull-on-uh").
 				replaceAll("B'Etor","bay-tor").
 				replaceAll("Data's","Dayta's").
 				replaceAll("Duras","Duross").
+				replaceAll("Elim","Eelim").
+				replaceAll("Garak","Garrick").
 				replaceAll("Gowron","Gow-ron").
 				replaceAll("Guinan","Guynan").
 				replaceAll(/Gul\sDukat/g,"Gull Dukaat").
@@ -83,6 +87,7 @@ function textToSpeech(id,text) {
 				replaceAll("Saru","Sah-rue").
 				replaceAll("Shinzon","Shinzahn").
 				replaceAll("T'Kuvma","Tuh-koovma").
+				replaceAll("T'Pol","Tuh-paul").
 				replaceAll("Tuvok","Two-vock").
 				replaceAll("Zefram","Zefrum");
 
