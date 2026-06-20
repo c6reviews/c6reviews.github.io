@@ -44,6 +44,8 @@ const comedicQuotes = [
 	
 	["images/headquotes/hq-low-1x04.webp","Lt. j.g. O'Connor turning a translucent-blue color while levitating and surrounded by the image of a large bird","The universe is balanced on the back of a giant koala! Why is he smiling? WHAT DOES HE KNOW?!","Lt. j.g. O'Connor","low/low-s1.html#e04","LOW 1x04: Moist Vessel"],
 	
+	["images/headquotes/hq-dis-1x07.webp","Harry Mudd speaking to Lorca while holding him at bay with a phaser","There really are so many ways to blow up this ship, it's almost a design flaw.","Harcourt Fenton Mudd","dis/dis-s1.html#e07","DIS 1x07: Magic to Make the Sanest Man Go Mad"],
+	
 	["images/headquotes/hq-tng-4x05.webp","Dr. Crusher alone on the bridge, tapping controls at the Ops station and looking concerned","If there's nothing wrong with <em>me</em>, maybe there's something wrong with the <em>universe</em>!","Doctor Beverly Crusher","tng/tng-s4.html#e05","TNG 4x05: Remember Me"],
 	
 	["images/headquotes/hq-tos-2x11.webp","McCoy helping a pregnant woman climb a craggy incline","I'm a doctor, not an escalator!","Leonard &ldquo;Bones&rdquo; McCoy","tos/tos-s2.html#e11","TOS 2x11: Friday's Child"],
@@ -82,19 +84,20 @@ for (let i=0; i<maxLength; i++) {
 	}
 }
 
-// Totals
+// Totals: Serious + Comedic
 // TOS: 03 + 01  =  4
 // TNG: 05 + 05  = 10
 // DS9: 02 + 03  =  5
 // VOY: 01 + 04  =  5
 // ENT: 01 + 00  =  1
+// DIS: 00 + 01  =  1
 // PIC: 03 + 02  =  5
 // LOW: 00 + 01  =  1
 // PRO: 00 + 00  =  0
 // SNW: 00 + 00  =  0
 // SFA: 00 + 00  =  0
 //
-// Total: 15 + 16  = 31
+// Total: 15 + 16  = 32
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -192,14 +195,14 @@ document.addEventListener('DOMContentLoaded', function() {
 		case "December 31":
 			quote = ["images/headquotes/hq-voy-5x23.webp","Shannon O'Donnel, holding a cold pint of beer","Last year, when 2000 arrived? Everyone was convinced it was the dawn of a new era. But when the world didn't end and the flying saucers didn't land and the Y2K bug didn't turn off a single light bulb, you'd think everybody would have realized it was a number on a calendar. But, oh, no, they had to listen to all those hucksters who told them the real millennium was 2001. So this New Year's Eve will be as boring as last year.","Shannon O'Donnel","voy/voy-s5.html#e23","VOY 5x23: 11:59"];
 			break;	
-			
+		
 		default:
 			var dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
 			quoteNumber = (dayOfYear - 1) % quotePool.length;
 			quote = quotePool[quoteNumber];
 	}
 
-	//quote = quotePool[0];   // <-- For testing only
+	//quote = quotePool[9];   // <-- For testing only
 
 	content = `
 		<img src="${quote[0]}" alt="${quote[1]}">

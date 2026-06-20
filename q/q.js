@@ -551,7 +551,15 @@ function setRnFilters() {
 }
 
 
-function setFilters(type) {
+function setFilters(type,closeBox = true) {
+	if (type == "rn") { // Check if all Recommendation boxes were unchecked, then recheck "all" and change the filter type
+		var checkedRnFilters = document.querySelectorAll(".rnfiltercheckbox:checked");
+		if (checkedRnFilters.length == 0) {
+			document.getElementById('rnfilterall').checked = true;
+			type = 'rnall';
+			closeBox = false;
+		}
+	}																													   
 	
 	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
 	
@@ -575,7 +583,7 @@ function setFilters(type) {
 				// Clear the filter textbox
 				document.getElementById("recommendationFilterTextbox").value = "";
 				
-				toggleFilterBox('recommendationFilter');
+				if (closeBox) {toggleFilterBox('recommendationFilter');}
 				
 				// Show all rows
 				filterrows.forEach((filterrow) => {

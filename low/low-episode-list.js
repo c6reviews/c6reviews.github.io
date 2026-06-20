@@ -480,9 +480,25 @@ function setTagsFilters() {
 	filterTitle();
 }
 
-function setFilters(type) {
+function setFilters(type,closeBox = true) {
 	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
 
+	if (type == "rn") { // Check if all Recommendation boxes were unchecked, then recheck "all" and change the filter type
+		var checkedRnFilters = document.querySelectorAll(".rnfiltercheckbox:checked");
+		if (checkedRnFilters.length == 0) {
+			document.getElementById('rnfilterall').checked = true;
+			type = 'rnall';
+			closeBox = false;
+		}
+	}
+	if (type == "tags") { // Check if all Tag boxes were unchecked, then recheck "all" and change the filter type
+		var checkedTagsFilters = document.querySelectorAll(".tagsfiltercheckbox:checked");
+		if (checkedTagsFilters.length == 0) {
+			document.getElementById('tagsfilterall').checked = true;
+			type = 'tagsall';
+			closeBox = false;
+		}
+	}
 	if (type.endsWith("all")) { // "All Tags" or "All Recommendations" was checked or unchecked
 		
 		if (type == "rnall") { // "All Recommendations" was checked or unchecked
@@ -503,7 +519,7 @@ function setFilters(type) {
 				// Clear the filter textbox
 				document.getElementById("recommendationFilterTextbox").value = "";
 				
-				toggleFilterBox('recommendationFilter');
+				if (closeBox) {toggleFilterBox('recommendationFilter');}
 				
 				if (tagsfilterall.checked) { // If "All Tags" is also selected, show all rows
 					filterrows.forEach((filterrow) => {
@@ -546,7 +562,7 @@ function setFilters(type) {
 				// Clear the filter textbox
 				document.getElementById("tagFilterTextbox").value = "";
 				
-				toggleFilterBox('tagFilter');
+				if (closeBox) {toggleFilterBox('tagFilter');}
 				
 				if (rnfilterall.checked) { // If "All Recommendations" is also selected, show all rows
 					filterrows.forEach((filterrow) => {
@@ -639,7 +655,10 @@ function setFilters(type) {
 		
 		
 		Array.from(checkedTagsFilters).forEach((filter) => {
-			activeTagsFilters.push(filter.value);
+			const filterItem = filter.value.split('|');
+			filterItem.forEach((item) => {
+				activeTagsFilters.push(item);
+			});
 			activeTagsIcons += filter.parentElement.querySelector("span.icon").innerHTML;
 		});
 		
@@ -795,7 +814,7 @@ var csvString = `Episode,Title,Tags,Reference Meter,Rating
 4x01,Twovix,♥ <div style="display:inline-block;text-align:center;line-height:0.9" title="First Place episode for Fan Service">FS<br>🥇</div>,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;🟦&#xFE0F;5️⃣&#xFE0F;</span>,8.1
 4x02,"I Have No Bones Yet I Must Flee",♥,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,6.8
 4x03,In the Cradle of Vexilon,,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;3️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,3.9
-4x04,"Something Borrowed, Something Green",,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,5.3
+4x04,"Something Borrowed, Something Green",,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,5.0
 4x05,Empathalogical Fallacies,,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,4.6
 4x06,Parth Ferengi's Heart Place,,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,5.5
 4x07,A Few Badgeys More,‼&#xFE0F; <img src="images/badgey.webp" style="height:20px;vertical-align:middle" title="Badgey!" alt="Badgey!"> <img src="images/ph.webp" style="height:20px;vertical-align:middle" title="Peanut Hamper!" alt="Peanut Hamper!"> <img src="images/agimus.webp" style="height:20px;vertical-align:middle" title="AGIMUS!" alt="AGIMUS!">,<span class="large" style="background-color:#777">1️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,6.9

@@ -33,6 +33,88 @@ function scrollToTop() {
 	});
 }
 
+/* -------------------------------------------------- TAG FILTER -------------------------------------------------- */
+
+function toggleFilterBox(id) {
+	var box = document.getElementById(id);
+
+	if (box.style.display != "block") {
+		box.style.display = "block";
+	} else {
+		box.style.display = "none";
+	}
+}
+
+function setFilters(type) {
+	
+	const grid = document.getElementById('blogGrid');
+	const posts = Array.from(grid.children);
+	
+	if (type == "tagsall") { // "All Tags" was checked or unchecked
+		var tagsallfilter = document.getElementById("tagsfilterall");
+		var tagsfilters = document.getElementsByClassName("tagsfiltercheckbox");
+		
+		if (!tagsallfilter.checked) { // "All Tags" was unchecked: re-check it
+			tagsallfilter.checked = true;
+			return;
+		}
+		else // "All Tags" was checked
+		{
+			// Uncheck all other Tags selections
+			Array.from(tagsfilters).forEach((filter) => {
+				filter.checked = false;
+			})
+			
+			// Clear the filter textbox
+			document.getElementById("tagFilterTextbox").value = "";
+			
+			toggleFilterBox('tagFilter');
+			
+			posts.forEach(post => {
+				post.style.display = "";
+			});
+		}
+	}	
+	else // A selection was made that WASN'T the "all" option
+	{
+		var tagsallfilter = document.getElementById("tagsfilterall");
+		
+		if (type=="tags") { // A tags filter was checked or unchecked
+			tagsallfilter.checked = false;
+		}
+		
+			posts.forEach(post => {
+				
+				var checkedTagsFilters = document.querySelectorAll(".tagsfiltercheckbox:checked");
+				let activeTagsFilters = [];
+				
+				Array.from(checkedTagsFilters).forEach((filter) => {
+					const filterItem = filter.value.split('|');
+					filterItem.forEach((item) => {
+						activeTagsFilters.push(item);
+					});
+				});
+
+				document.getElementById("tagFilterTextbox").value = activeTagsFilters;
+
+				posts.forEach(post => {
+
+					post.style.display="none";
+					
+					Array.from(activeTagsFilters).forEach((tagsfilter) => {
+						
+						if (!!post.dataset.tags && post.dataset.tags.includes(tagsfilter)){
+							post.style.display="";			
+						}
+					});
+				});	
+			});
+	
+	}
+	
+
+}
+
 
 /* -------------------------------------------------- ONSCROLL -------------------------------------------------- */
    

@@ -306,6 +306,13 @@ function updateFilterCount() {
 	}
 }
 
+function normalizeText(str) {
+	return str
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "")
+		.toLowerCase();
+}
+
 function filterTitle() {
 	const filterrows = G_filterset;
 	
@@ -320,20 +327,28 @@ function filterTitle() {
 	
 	var input, filter, table, td, i, txtValue;
 	input = document.getElementById("episodeSearchBox");
-	filter = input.value.toLowerCase();
+	filter = normalizeText(input.value);
 	table = document.getElementById("episodeTable");
 	
 	for (i = 0; i < filterrows.length; i++) {
 		td = filterrows[i].getElementsByClassName("col_episodeTitle")[0];
 		if (td) {
 			txtValue = td.textContent || td.innerText;
-			if (txtValue.toLowerCase().indexOf(filter) > -1) {
+			if (normalizeText(txtValue).indexOf(filter) > -1) {
 				filterrows[i].style.display = "";
-				const regEx = new RegExp(filter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+
 				if (filter != "") {
 					var link = td.querySelector('a');
 					var linktext = link.innerText;
-					link.innerHTML = linktext.replace(regEx, '<span style="color:yellow">$&</span>');
+
+					if (linktext === "Ménage à Troi" && normalizeText(linktext).indexOf(filter) > -1) {
+						const accentedFilter = filter.replace("e","é").replace(" a"," à").replace("a ","à ");
+						const sanitizedFilter = new RegExp(accentedFilter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'); // Input sanitization
+						link.innerHTML = linktext.replace(sanitizedFilter, '<span style="color:yellow">$&</span>');
+					} else {					
+						const sanitizedFilter = new RegExp(filter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'); // Input sanitization
+						link.innerHTML = linktext.replace(sanitizedFilter, '<span style="color:yellow">$&</span>');
+					}
 				}
 			} else {
 				filterrows[i].style.display = "none";
@@ -463,9 +478,25 @@ function setTagsFilters() {
 	filterTitle();
 }
 
-function setFilters(type) {
+function setFilters(type,closeBox = true) {
 	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
-
+	if (type == "rn") { // Check if all Recommendation boxes were unchecked, then recheck "all" and change the filter type
+		var checkedRnFilters = document.querySelectorAll(".rnfiltercheckbox:checked");
+		if (checkedRnFilters.length == 0) {
+			document.getElementById('rnfilterall').checked = true;
+			type = 'rnall';
+			closeBox = false;
+		}
+	}
+	if (type == "tags") { // Check if all Tag boxes were unchecked, then recheck "all" and change the filter type
+		var checkedTagsFilters = document.querySelectorAll(".tagsfiltercheckbox:checked");
+		if (checkedTagsFilters.length == 0) {
+			document.getElementById('tagsfilterall').checked = true;
+			type = 'tagsall';
+			closeBox = false;
+		}
+	}
+	
 	if (type.endsWith("all")) { // "All Tags" or "All Recommendations" was checked or unchecked
 		
 		if (type == "rnall") { // "All Recommendations" was checked or unchecked
@@ -486,7 +517,7 @@ function setFilters(type) {
 				// Clear the filter textbox
 				document.getElementById("recommendationFilterTextbox").value = "";
 				
-				toggleFilterBox('recommendationFilter');
+				if (closeBox) {toggleFilterBox('recommendationFilter');}
 				
 				if (tagsfilterall.checked) { // If "All Tags" is also selected, show all rows
 					filterrows.forEach((filterrow) => {
@@ -529,7 +560,7 @@ function setFilters(type) {
 				// Clear the filter textbox
 				document.getElementById("tagFilterTextbox").value = "";
 				
-				toggleFilterBox('tagFilter');
+				if (closeBox) {toggleFilterBox('tagFilter');}
 				
 				if (rnfilterall.checked) { // If "All Recommendations" is also selected, show all rows
 					filterrows.forEach((filterrow) => {
@@ -622,7 +653,10 @@ function setFilters(type) {
 		
 		
 		Array.from(checkedTagsFilters).forEach((filter) => {
-			activeTagsFilters.push(filter.value);
+			const filterItem = filter.value.split('|');
+			filterItem.forEach((item) => {
+				activeTagsFilters.push(item);
+			});
 			activeTagsIcons += filter.parentElement.querySelector("span.icon").innerHTML;
 		});
 		
@@ -636,7 +670,8 @@ function setFilters(type) {
 			
 			
 			Array.from(activeRnFilters).forEach((rnfilter) => {
-				if ((filterrow.innerHTML).includes(rnfilter)){
+				var checkCell = filterrow.getElementsByTagName("td")[3];
+				if ((checkCell.innerHTML).includes(rnfilter)) {
 					if (andor == "and"){
 						partmatch = true;
 					} else {
@@ -759,7 +794,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 1x13,Datalore,,🕶 Must Watch,5.1
 1x14,Angel One,,-,2.3
 1x15,11001001,,✔ Recommended,6.3
-1x16,Too Short a Season,,-,3.0
+1x16,Too Short a Season,,-,3.2
 1x17,When the Bough Breaks,,-,3.5
 1x18,Home Soil,,-,4.8
 1x19,Coming of Age,,-,3.8

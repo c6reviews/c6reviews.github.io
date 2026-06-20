@@ -1,6 +1,6 @@
 /* ----- INDEX ----- */
 
-.blogGrid {
+#blogGrid {
 	display: grid;
 	grid-template-columns: 18.75rem 1fr;
 	gap: 1.5rem 0.5rem;
@@ -58,6 +58,40 @@
 	border: 1px solid #505050;
 	border-radius: 50%;
 	background-color: #181818;
+}
+/* ----- FILTER ----- */
+
+.filterDropdownContainer {
+	padding: 8px;
+	border:1px solid #FFFFFF;
+	border-radius:5px;
+	width:max-content;
+	text-align: left;
+	position: absolute;
+	right:0;
+	background-color:black;
+	z-index: 10;
+	display: none;
+}
+.dropdownArrow {
+	width:24px;
+	height:24px;
+	padding-left:4px;
+	padding-top:0px;
+	border-radius:2px;
+	margin-left:2px;
+}
+input[type=text] {
+	background-color: #333;
+	color: white;
+	border: 1px solid gray;
+	border-radius: 3px;
+}
+input[type=button] {
+	background-color: #00000000;
+	color: #C0C0C0;
+	border: 1px solid #C0C0C0;
+	cursor: pointer;
 }
 
 /* ----- ENTRIES ----- */

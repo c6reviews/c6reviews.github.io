@@ -30,9 +30,9 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="/main.css?v=1.6.1">
-<link rel="stylesheet" href="/tts.css?v=1.6.1">
-<link rel="stylesheet" href="blog.css?v=1.6.1">
+<link rel="stylesheet" href="/main.css?v=1.6.2">
+<link rel="stylesheet" href="/tts.css?v=1.6.2">
+<link rel="stylesheet" href="blog.css?v=1.6.2">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <meta property="og:image" content="https://c6reviews.com/images/ogimage.webp">
 
@@ -42,10 +42,10 @@
 <meta property="og:url" content="https://c6reviews.com/blog/">
 <meta property="og:description" content="C6Reviews periodic musings about Star Trek.">
 
-<script src="blog.js?v=1.6.1"></script>
-<script src="/tts.js?v=1.6.1"></script>
-<script src="/main.js?v=1.6.1"></script>
-<script src="/cookies.js?v=1.6.1"></script>
+<script src="blog.js?v=1.6.2"></script>
+<script src="/tts.js?v=1.6.2"></script>
+<script src="/main.js?v=1.6.2"></script>
+<script src="/cookies.js?v=1.6.2"></script>
 <script>
 	function prepTextToSpeech(id)
 	{
@@ -79,48 +79,64 @@
 	
 <div class="content" style="width:70%;margin:auto">
 
-	<div class="blogGrid">
-		<div class="blogImg" style="overflow:hidden">
+	<div style="margin:auto;text-align:center;position:relative;width:fit-content">
+		Filter posts by tag: <input type="text" id="tagFilterTextbox" placeholder="Tags filter" size="50" onclick="toggleFilterBox('tagFilter')" style="height:21px;" readonly>
+			<input id="tagFilterDropdownArrow" type="button" class="dropdownArrow" value="▼" onClick="toggleFilterBox('tagFilter')">
+			<div class="filterDropdownContainer" id="tagFilter">
+				<label class="checkContainer"><input type="checkbox" id="tagsfilterall" onClick="setFilters('tagsall')" checked><span class="checkmark"></span><span class="icon"></span>&nbsp;All&nbsp;Tags</label>
+				<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="first-thoughts" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon"></span>&nbsp;First&nbsp;Thoughts</label>	
+				<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="sfa" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon"></span>&nbsp;<em>Star&nbsp;Trek:&nbsp;Starfleet&nbsp;Academy</em></label>
+				<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="snw" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon"></span>&nbsp;<em>Star&nbsp;Trek:&nbsp;Strange&nbsp;New&nbsp;Worlds</em></label>	
+				<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="voy" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon"></span>&nbsp;<em>Star&nbsp;Trek:&nbsp;Voyager</em></label>	
+				<label class="checkContainer"><input type="checkbox" class="tagsfiltercheckbox" value="watch-list" onClick="setFilters('tags')"><span class="checkmark"></span><span class="icon"></span>&nbsp;Watch&nbsp;List</label>	
+			</div>
+	</div>
+	
+	<hr style="margin: 25px auto;">
+
+	<div id="blogGrid">
+	
+		<div class="blogImg" style="overflow:hidden" data-tags="watch-list">
 			<a href="2026-06-10-Pride_Month_Episode_Watch-List.html"><img src="/images/main-header-pride.webp" alt="A Starfleet delta with a Pride Flag interior" style="margin-right:-100px"></a>
 		</div>
-		<div class="blogEntry">	
+		<div class="blogEntry" data-tags="watch-list">	
 			<div class="blogDate">10 June 2026</div><br>
 			<a href="2026-06-10-Pride_Month_Episode_Watch-List.html" class="blogTitle">Pride Month Episode Watch List</a><br>
 			<span class="blogTag">Watch List</span> 
 		</div>
 	
-		<div class="blogImg">
+		<div class="blogImg" data-tags="voy">
 			<a href="2026-05-22-Across_The_Unknown_Review.html"><img src="images/2026-05-22/title.webp" alt="The title screen of 'Across the Unknown', featuring the USS Voyager"></a>
 		</div>
-		<div class="blogEntry">	
+		<div class="blogEntry" data-tags="voy">	
 			<div class="blogDate">22 May 2026</div><br>
 			<a href="2026-05-22-Across_The_Unknown_Review.html" class="blogTitle"><em>Star Trek: Voyager</em> &ldquo;Across the Unknown&rdquo; Game Review</a><br>
 			<span class="blogTag">Star Trek: Voyager</span> 
 		</div>
 		
 		
-		<div class="blogImg">
+		<div class="blogImg" data-tags="sfa first-thoughts">
 			<a href="2026-03-15-Starfleet_Academy_S1_Wrapped.html"><img src="images/2026-03-15/mir.webp" alt="a yearbook photo of Caleb Mir as a young child"></a>		
 		</div>
-		<div class="blogEntry">
+		<div class="blogEntry" data-tags="sfa first-thoughts">
 			<div class="blogDate">15 Mar 2026</div><br>
 			<a href="2026-03-15-Starfleet_Academy_S1_Wrapped.html" class="blogTitle"><em>Starfleet Academy</em>: Season 1 Wrapped</a><br>
 			<span class="blogTag">First Thoughts</span> <span class="blogTag">Star Trek: Starfleet Academy</span> 
 		</div>
 		
-		<div class="blogImg">
+		<div class="blogImg" data-tags="sfa">
 			<a href="2026-01-25-Starfleet_Academy_Second_Thoughts.html"><img src="images/2026-01-25/thok.webp" alt="Commander Lura Thok"></a>
 		</div>
-		<div class="blogEntry">
+		<div class="blogEntry" data-tags="sfa">
 			<div class="blogDate">25 Jan 2026</div><br>
 			<a href="2026-01-25-Starfleet_Academy_Second_Thoughts.html" class="blogTitle"><em>Starfleet Academy</em>: Second Thoughts</a><br>
 			<span class="blogTag">Star Trek: Starfleet Academy</span> 
 		</div>
 		
-		<div class="blogImg">
+		<div class="blogImg" data-tags="sfa first-thoughts">
 			<a href="2026-01-20-Starfleet_Academy_First_Thoughts.html"><img src="images/2026-01-20/chair.webp" alt="Lura Thok in the foreground, with Captain Ake in the background, peeking over the armrest of her Captain's chair, with her legs nearly straight up in the air"></a>
 		</div>
-		<div class="blogEntry">
+		<div class="blogEntry" data-tags="sfa first-thoughts">
 			<div class="blogDate">20 Jan 2026</div><br>
 			<a href="2026-01-20-Starfleet_Academy_First_Thoughts.html" class="blogTitle"><em>Starfleet Academy</em>: First Thoughts</a><br>
 			<span class="blogTag">First Thoughts</span> <span class="blogTag">Star Trek: Starfleet Academy</span> 
@@ -134,37 +150,37 @@
 			<a href="2026-01-06-Ruminations_on_Second_vs_Third_Generation_Trek.html" class="blogTitle">Ruminations on Second vs. Third Generation <em>Trek</em></a><br>
 		</div>
 		
-		<div class="blogImg">
-			<a href="2025-12-13-SA_Exclusive_Clip.html"><img src="images/2025-12-13/clip_thumb.webp" alt="the main antagonist of Star Trek: Starfleet Academy strolling through the bridge"></a>
+		<div class="blogImg" data-tags="sfa">
+			<a href="2025-12-13-SFA_Exclusive_Clip.html"><img src="images/2025-12-13/clip_thumb.webp" alt="the main antagonist of Star Trek: Starfleet Academy strolling through the bridge"></a>
 		</div>
-		<div class="blogEntry">
+		<div class="blogEntry" data-tags="sfa">
 			<div class="blogDate">13 Dec 2025</div><br>
-			<a href="2025-12-13-SA_Exclusive_Clip.html" class="blogTitle"><em>Starfleet Academy</em> Exclusive Clip</a><br>
+			<a href="2025-12-13-SFA_Exclusive_Clip.html" class="blogTitle"><em>Starfleet Academy</em> Exclusive Clip</a><br>
 			<span class="blogTag">Star Trek: Starfleet Academy</span>
 		</div>
 		
-		<div class="blogImg">
+		<div class="blogImg" data-tags="snw">
 			<a href="2025-11-13-SNW_S4_Clip_and_S3_Reflections.html"><img src="/images/marquee/SNWs4.webp" alt="a dorsal view of the Enterprise above a brilliant orange nebula"></a>
 		</div>
-		<div class="blogEntry">
+		<div class="blogEntry" data-tags="snw">
 			<div class="blogDate">13 Nov 2025</div><br>
 			<a href="2025-11-13-SNW_S4_Clip_and_S3_Reflections.html" class="blogTitle"><em>Strange New Worlds</em> Season 4 Clip and Season 3 Reflections</a><br>
 			<span class="blogTag">Star Trek: Strange New Worlds</span>
 		</div>
 		
-		<div class="blogImg">
+		<div class="blogImg" data-tags="watch-list">
 			<a href="2025-10-31-Halloween_Episode_Watch-List.html"><img src="images/2025-10-31/nightterrors.webp" alt="Deanna Troi floating in a hazy green fog with two bright lights in the distance"></a>
 		</div>
-		<div class="blogEntry">
+		<div class="blogEntry" data-tags="watch-list">
 			<div class="blogDate">31 Oct 2025</div><br>
-			<a href="2025-10-31-Halloween_Episode_Watch-List.html" class="blogTitle">Halloween Episode Watch-List</a>
+			<a href="2025-10-31-Halloween_Episode_Watch-List.html" class="blogTitle">Halloween Episode Watch-List</a><br>
 			<span class="blogTag">Watch List</span> 
 		</div>
 		
-		<div class="blogImg">
+		<div class="blogImg" data-tags="sfa first-thoughts">
 			<a href="2025-10-22-StarfleetAcademyTrailer.html"><img src="images/2025-10-22/FT-STSA.webp" alt="several Starfleet cadets, with a young man in the foreground wearing a varsity jacket"></a>
 		</div>
-		<div class="blogEntry">
+		<div class="blogEntry" data-tags="sfa first-thoughts">
 			<div class="blogDate">22 Oct 2025</div><br>
 			<a href="2025-10-22-StarfleetAcademyTrailer.html" class="blogTitle"><em>Star Trek: Starfleet Academy</em> Trailer</a><br>
 			<span class="blogTag">First Thoughts</span> <span class="blogTag">Star Trek: Starfleet Academy</span> 

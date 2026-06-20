@@ -45,7 +45,7 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="main.css?v=1.6.1">
+<link rel="stylesheet" href="main.css?v=1.6.2">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <meta property="og:title" content="Updates | C6Reviews">
@@ -54,7 +54,8 @@
 <meta property="og:url" content="https://c6reviews.com/updates.html">
 <meta property="og:description" content="Site update log for C6Reviews.com">
 
-<script src="cookies.js?v=1.6.1"></script>
+<script src="/main.js?v=1.6.2"></script>
+<script src="cookies.js?v=1.6.2"></script>
 <script>
 	function scrollToTop() {
 		window.scrollTo({
@@ -95,7 +96,7 @@
 		</div>
 	</div>
 	<div class="c6Right"><a href="index.html"><img src="images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="about.html" style="margin-top:8px;">ABOUT</a><a href="updates.html">UPDATES</a><a href="blog/index.html">BLOG</a>
-	<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a>
+	<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a>
 	<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 
@@ -117,6 +118,27 @@
 			<th style="width:170px;">Date</th>
 			<th>Version</th>
 			<th style="text-align:left;padding-left: 35px;">Description</th>
+		</tr>
+		<tr>
+			<td><span class="updateDate">June 20, 2026</span></td>
+			<td>1.6.2<br><span class="mobilever">mobile 0.1</span></td>
+			<td>
+				<ul>
+					<li style="line-height:1"><strong>Character pages</strong> have been added to <em>The&nbsp;Next&nbsp;Generation</em> and <em>Deep&nbsp;Space&nbsp;Nine</em>, along with a character timeline for only one character so far: <a href="/characters/worf.html">Worf</a>!</li>
+					<li>A <strong>tag filter</strong> has been added to the <a href="/blog/index.html">blog</a>.</li>
+					<li>Several <strong>improvements and fixes to episode list search and filter functions</strong>.
+						<ul style="font-size:0.875rem">
+							<li style="margin-bottom:0px">Title search function is now more forgiving about diacritics (e.g., searching for &ldquo;e&rdquo; now also matches &ldquo;é&rdquo;).</li>
+							<li style="margin-bottom:0px">Unchecking the only checked item in a filter will now automatically recheck the "All" option instead of displaying an empty table.</li>
+							<li style="margin-bottom:0px">Fixed an issue where filtering by the &ldquo;awards&rdquo; tag and also filtering by any recommendation would display zero rows.</li>
+							<li>Fixed an issue where filtering by &ldquo;no recommendation&rdquo; and also filtering by any tag would ignore the recommendation filter.</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
+					Some simple visual improvements were made to the Blog page; added one quote from <em>Discovery</em> to the Quote of the Day rotation; updated the Section 31 distinction icon for <em>DS9</em> to match the upcoming <em>Discovery</em> reviews; moved around some scripting related to the Kofi frame.
+				</div>
+			</td>
 		</tr>
 		<tr>
 			<td><span class="updateDate">May 15, 2026</span></td>
@@ -213,7 +235,7 @@
 		<span style="text-align:left"><a href="updates-y1.html">❰ Previous Year</a></span><span style="text-align:right;color:#555">Next Year ❱</span>
 	</div>
 
-<div class="pageFooter"><a href="index.html"><img src="images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a href="blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="index.html"><img src="images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a href="blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 
 <div id="TTDIV">

@@ -30,8 +30,8 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="main.css?v=1.6.1">
-<link rel="stylesheet" href="tts.css?v=1.6.1">
+<link rel="stylesheet" href="main.css?v=1.6.2">
+<link rel="stylesheet" href="tts.css?v=1.6.2">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <meta property="og:title" content="About | C6Reviews">
@@ -40,8 +40,9 @@
 <meta property="og:url" content="https://c6reviews.com/about.html">
 <meta property="og:description" content="About C6Reviews.com">
 
-<script src="tts.js?v=1.6.1"></script>
-<script src="cookies.js?v=1.6.1"></script>
+<script src="/main.js?v=1.6.2"></script>
+<script src="tts.js?v=1.6.2"></script>
+<script src="cookies.js?v=1.6.2"></script>
 <script>
 	function prepTextToSpeech(id)
 	{
@@ -115,7 +116,7 @@
 	</div>
 	<div class="c6Right"><a href="index.html"><img src="images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="about.html" style="margin-top:8px;">ABOUT</a><a href="updates.html">UPDATES</a><a href="blog/index.html">BLOG</a>
 	
-	<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a>
+	<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a>
 	
 	<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
@@ -198,14 +199,14 @@
 			<tr>
 				<td style="text-align:right;font-weight:bold;padding-right:20px">Writing, Opinions, and Other Text Content</td>
 				<td style="text-align:center;">✅</td>
-				<td>0% generative AI:</td>
+				<td>Zero generative AI:</td>
 				<td style="padding-left: 8px;">I would never use AI to write for me, create opinions about <em>Star Trek</em> material, or generate any other text content. All of the written content is my own unless explicitly quoted as being from another source, but that source will never be AI.</td>
 			</tr>
 			<tr>
 				<td style="text-align:right;font-weight:bold;padding-right:20px">Coding</td>
 				<td style="text-align:center;">✅</td>
-				<td>0% generative AI:</td>
-				<td style="padding-left: 8px;">This site is entirely hand-coded in HTML, CSS, and JavaScript, using a simple text editor. While AI has sometimes helped me with specific coding questions, I use it to understand and fix problems on my own, and never to just write blocks of code in my stead.</td>
+				<td>Minimal generative AI:</td>
+				<td style="padding-left: 8px;">This site is entirely hand-coded in HTML, CSS, and JavaScript, using a simple text editor. While AI has sometimes helped me with specific coding questions, I use it to understand and fix problems on my own, and never to just write blocks of code in my stead.<br><strong>⚠&#xFE0E; There is one exception:</strong> The logic for spacing on the new character timelines became so complicated that I did eventually capitulate and had generative AI write a JavaScript function for me to check for collisions of text content on the timeline. I spent hours and hours trying to do it myself, and eventually I just asked Codex to do it, and I had a working function in less than 30 minutes.</td>
 			</tr>
 			<tr>
 				<td style="text-align:right;font-weight:bold;padding-right:20px">Images of <em>Star Trek</em> characters, ships, etc.</td>
@@ -245,7 +246,7 @@
 				<li><strong style="color:#C0A000">First Gen <em>Trek</em> (1966&ndash;1991)</strong> includes <a href="/tos/index.html"><em>The Original Series</em></a>, <a href="/tas/index.html"><em>The Animated Series</em></a>, and <a href="/films/index.html">films</a> #1&ndash;#6.</li>
 				<li>The first and second generations overlap (1987-1991) because <em>The Next Generation</em> premiered while two more films with the original cast were still on the way, and the ethos of the <em>Original Series</em> was still very much an influence in the early seasons of <em>TNG</em>. First Gen <em>Trek</em> and this overlap period could be called the <strong>&ldquo;Roddenberry Era&rdquo;</strong>, after the founder/creator and executive producer of <em>Star Trek</em>, Gene Roddenberry.</li>
 				<li><strong style="color:#FF6262">Second Gen <em>Trek</em> (1987&ndash;2005)</strong> includes <a href="/tng/index.html"><em>The Next Generation</em></a>, <a href="/ds9/index.html"><em>Deep Space Nine</em></a>, <a href="/voy/index.html"><em>Voyager</em></a>, <a href="/ent/index.html"><em>Enterprise</em></a>, and <a href="/films/index.html">films</a> #7&ndash;#10. Often referred to as the <strong>&ldquo;Berman&nbsp;Era&rdquo;</strong>, named after the executive producer of the time.</li>
-				<li>During the long television hiatus between 2005 and 2017, the <span style="color: #00B757;">&ldquo;Kelvin Trilogy&rdquo;</span> of films (#11-#13) were released. Since they take place in an alternate timeline, I don't consider them part of either the Second or Third generations of <em>Trek</em>. They are their own thing. These films are sometimes referred to as the <strong>&ldquo;Abrams-verse&rdquo;</strong>, named after the producer, J.J. Abrams.</li>
+				<li>During the long television hiatus between 2005 and 2017, the <span style="color: #00B757;">&ldquo;Kelvin Trilogy&rdquo;</span> of <a href="/films/index.html">films</a> (#11-#13) were released. Since they take place in an alternate timeline, I don't consider them part of either the Second or Third generations of <em>Trek</em>. They are their own thing. These films are sometimes referred to as the <strong>&ldquo;Abrams-verse&rdquo;</strong>, named after the producer, J.J. Abrams.</li>
 				<li><strong style="color:#3E9FE5">Third Gen <em>Trek</em> (2017&ndash;ongoing)</strong> includes <a href="/dis/index.html"><em>Discovery</em></a>, <a href="/dis/index.html"><em>Short Treks</em></a>, <a href="/pic/index.html"><em>Picard</em></a>, <a href="/low/index.html"><em>Lower Decks</em></a>, <a href="/pro/index.html"><em>Prodigy</em></a>, <a href="/snw/index.html"><em>Strange New Worlds</em></a>, <a href="/sfa/index.html"><em>Starfleet Academy</em></a>, and <a href="/films/index.html">film</a> #14. Often referred to as the <strong>&ldquo;Kurtzman&nbsp;Era&rdquo;</strong>, named after the executive producer of the time.</li>
 			</ul>
 		</li>
@@ -259,7 +260,7 @@
 
 </div>
 
-<div class="pageFooter"><a href="index.html"><img src="images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a href="blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="if(document.getElementById('kofiframe').src!='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'){document.getElementById('kofiframe').src='https://ko-fi.com/c6reviews/?hidefeed=true&widget=true&embed=true&preview=true'};x=getComputedStyle(document.getElementById('kofiframediv')).height;if(x=='0px'){x='700px';y='1px solid white'}else{x='0px';y='none'};document.getElementById('kofiframediv').style.height=x;document.getElementById('kofiframediv').style.border=y;">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="pageFooter"><a href="index.html"><img src="images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a href="blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
 <div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
 <div id="TTDIV"></div>
 

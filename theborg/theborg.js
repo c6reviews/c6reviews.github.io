@@ -517,6 +517,13 @@ function updateFilterCount() {
 	}
 }
 
+function normalizeText(str) {
+	return str
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "")
+		.toLowerCase();
+}
+
 function filterTitle(clear) {
 	const filterrows = G_filterset;
 	
@@ -543,13 +550,21 @@ function filterTitle(clear) {
 		td = filterrows[i].getElementsByClassName("col_episodeTitle")[0];
 		if (td) {
 			txtValue = td.textContent || td.innerText;
-			if (txtValue.toLowerCase().indexOf(filter) > -1) {
+			if (normalizeText(txtValue).indexOf(filter) > -1) {
 				filterrows[i].style.display = "";
 				const regEx = new RegExp(filter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
 				if (filter != "") {
 					var link = td.querySelector('a');
 					var linktext = link.innerText;
-					link.innerHTML = linktext.replace(regEx, '<span style="color:yellow">$&</span>');
+
+					if (linktext === "Võx" && normalizeText(linktext).indexOf(filter) > -1) {
+						const accentedFilter = filter.replace("o","õ");
+						const sanitizedFilter = new RegExp(accentedFilter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'); // Input sanitization
+						link.innerHTML = linktext.replace(sanitizedFilter, '<span style="color:yellow">$&</span>');
+					} else {					
+						const sanitizedFilter = new RegExp(filter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'); // Input sanitization
+						link.innerHTML = linktext.replace(sanitizedFilter, '<span style="color:yellow">$&</span>');
+					}
 				}
 			} else {
 				filterrows[i].style.display = "none";
@@ -617,7 +632,15 @@ function setRnFilters() {
 }
 
 
-function setFilters(type) {
+function setFilters(type,closeBox = true) {
+	if (type == "rn") { // Check if all Recommendation boxes were unchecked, then recheck "all" and change the filter type
+		var checkedRnFilters = document.querySelectorAll(".rnfiltercheckbox:checked");
+		if (checkedRnFilters.length == 0) {
+			document.getElementById('rnfilterall').checked = true;
+			type = 'rnall';
+			closeBox = false;
+		}
+	}	
 	
 	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
 	
@@ -641,7 +664,7 @@ function setFilters(type) {
 				// Clear the filter textbox
 				document.getElementById("recommendationFilterTextbox").value = "";
 				
-				toggleFilterBox('recommendationFilter');
+				if (closeBox) {toggleFilterBox('recommendationFilter');}
 				
 				// Show all rows
 				filterrows.forEach((filterrow) => {

@@ -55,7 +55,7 @@ function createTable(array) {
 					cell = cell.replace("♥",'<span title="Personal Favorite">♥</span>');
 					cell = cell.replace("🕖",'<span title="Time Travel Episode">🕖</span>');
 					cell = cell.replace("Q",'<span title="Q Episode" class="Q">Q</span>');
-					cell = cell.replace("31",'<span title="Section 31" style="border:1px solid #C0C0C0;border-radius:10px;">31</span>');
+					cell = cell.replace("🕵",'<span title="Section 31" style="color:#505050;font-size:1.125rem">🕵&#xFE0E;</span>');
 					cell = cell.replace("⚖",'<span title="Courtroom Episode">⚖&#xFE0F;</span>');
 					cell = cell.replace("♊",'<span title="Mirror Universe episode">♊</span>');
 					cell = cell.replace("🌎",'<span title="Episode takes place on Earth">🌎</span>');
@@ -460,9 +460,26 @@ function setTagsFilters() {
 	filterTitle();
 }
 
-function setFilters(type) {
+function setFilters(type,closeBox = true) {
 	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
-
+	
+	if (type == "rn") { // Check if all Recommendation boxes were unchecked, then recheck "all" and change the filter type
+		var checkedRnFilters = document.querySelectorAll(".rnfiltercheckbox:checked");
+		if (checkedRnFilters.length == 0) {
+			document.getElementById('rnfilterall').checked = true;
+			type = 'rnall';
+			closeBox = false;
+		}
+	}
+	if (type == "tags") { // Check if all Tag boxes were unchecked, then recheck "all" and change the filter type
+		var checkedTagsFilters = document.querySelectorAll(".tagsfiltercheckbox:checked");
+		if (checkedTagsFilters.length == 0) {
+			document.getElementById('tagsfilterall').checked = true;
+			type = 'tagsall';
+			closeBox = false;
+		}
+	}
+	
 	if (type.endsWith("all")) { // "All Tags" or "All Recommendations" was checked or unchecked
 		
 		if (type == "rnall") { // "All Recommendations" was checked or unchecked
@@ -483,7 +500,7 @@ function setFilters(type) {
 				// Clear the filter textbox
 				document.getElementById("recommendationFilterTextbox").value = "";
 				
-				toggleFilterBox('recommendationFilter');
+				if (closeBox) {toggleFilterBox('recommendationFilter');}
 				
 				if (tagsfilterall.checked) { // If "All Tags" is also selected, show all rows
 					filterrows.forEach((filterrow) => {
@@ -526,7 +543,7 @@ function setFilters(type) {
 				// Clear the filter textbox
 				document.getElementById("tagFilterTextbox").value = "";
 				
-				toggleFilterBox('tagFilter');
+				if (closeBox) {toggleFilterBox('tagFilter');}
 				
 				if (rnfilterall.checked) { // If "All Recommendations" is also selected, show all rows
 					filterrows.forEach((filterrow) => {
@@ -619,7 +636,10 @@ function setFilters(type) {
 		
 		
 		Array.from(checkedTagsFilters).forEach((filter) => {
-			activeTagsFilters.push(filter.value);
+			const filterItem = filter.value.split('|');
+			filterItem.forEach((item) => {
+				activeTagsFilters.push(item);
+			});
 			activeTagsIcons += filter.parentElement.querySelector("span.icon").innerHTML;
 		});
 		
@@ -633,7 +653,8 @@ function setFilters(type) {
 			
 			
 			Array.from(activeRnFilters).forEach((rnfilter) => {
-				if ((filterrow.innerHTML).includes(rnfilter)){
+				var checkCell = filterrow.getElementsByTagName("td")[3];
+				if ((checkCell.innerHTML).includes(rnfilter)) {
 					if (andor == "and"){
 						partmatch = true;
 					} else {
@@ -878,7 +899,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 6x15,Honor Among Thieves,,-,4.1
 6x16,Change of Heart,,-,3.5
 6x17,Wrongs Darker Than Death or Night,🕖,-,5.0
-6x18,Inquisition,31♥️,✔ Recommended,7.3
+6x18,Inquisition,🕵♥️,✔ Recommended,7.3
 6x19,In the Pale Moonlight,🌌A🟡🥇,🕶 ‼ Must Watch/Bare Minimum,9.6
 6x20,His Way,,♦ Optional,4.4
 6x21,The Reckoning,,-,4.3
@@ -902,14 +923,14 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 7x13,Field of Fire,,-,5.1
 7x14,Chimera,,-,3.8
 7x15,"Badda-Bing, Badda-Bang",🎭🟨♥️,♦ Optional,6.4
-7x16,Inter Arma Enim Silent Leges,V🟡31♥️,✔+ Highly Recommended,7.6
+7x16,Inter Arma Enim Silent Leges,V🟡🕵♥️,✔+ Highly Recommended,7.6
 7x17,Penumbra,,✔+ Highly Recommended,5.1
 7x18,'Til Death Do Us Part,,🕶 Must Watch,5.7
 7x19,Strange Bedfellows,,🕶 Must Watch,6.4
 7x20,The Changing Face of Evil,,🕶 ‼ Must Watch/Bare Minimum,7.8
 7x21,When It Rains…,,🕶 ‼ Must Watch/Bare Minimum,7.1
 7x22,Tacking Into the Wind,,🕶 Must Watch,7.8
-7x23,Extreme Measures,31,✔+ Highly Recommended,5.6
+7x23,Extreme Measures,🕵,✔+ Highly Recommended,5.6
 7x24,The Dogs of War,A🟡,🕶 Must Watch,8.4
 7x25/26 [FL],What You Leave Behind,🌌A🟡,🕶 ‼ Must Watch/Bare Minimum,9.4`;
 

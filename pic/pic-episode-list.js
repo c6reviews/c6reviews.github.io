@@ -269,7 +269,66 @@ function updateFilterCount() {
 	}
 }
 
+function normalizeText(str) {
+	return str
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "")
+		.toLowerCase();
+}
+
 function filterTitle() {
+	const filterrows = G_filterset;
+	
+	//Clear all yellow highlights
+	for (i = 0; i < filterrows.length; i++) {
+		td = filterrows[i].getElementsByClassName("col_episodeTitle")[0];
+		if (td) {
+			td.innerHTML = td.innerHTML.replaceAll('<span style="color:yellow">',"")
+			td.innerHTML = td.innerHTML.replaceAll('</span>',"")
+		}
+	}
+	
+	var input, filter, table, td, i, txtValue;
+	input = document.getElementById("episodeSearchBox");
+	filter = normalizeText(input.value);
+	table = document.getElementById("episodeTable");
+	
+	for (i = 0; i < filterrows.length; i++) {
+		td = filterrows[i].getElementsByClassName("col_episodeTitle")[0];
+		if (td) {
+			txtValue = td.textContent || td.innerText;
+			if (normalizeText(txtValue).indexOf(filter) > -1) {
+				filterrows[i].style.display = "";
+
+				if (filter != "") {
+					var link = td.querySelector('a');
+					var linktext = link.innerText;
+
+					if (linktext === "Võx" && normalizeText(linktext).indexOf(filter) > -1) {
+						const accentedFilter = filter.replace("o","õ");
+						const sanitizedFilter = new RegExp(accentedFilter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'); // Input sanitization
+						link.innerHTML = linktext.replace(sanitizedFilter, '<span style="color:yellow">$&</span>');
+					} else {					
+						const sanitizedFilter = new RegExp(filter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'); // Input sanitization
+						link.innerHTML = linktext.replace(sanitizedFilter, '<span style="color:yellow">$&</span>');
+					}
+				}
+			} else {
+				filterrows[i].style.display = "none";
+			}
+		}
+	}
+
+	updateFilterCount();
+	removeSeasonSeparator();
+	if (G_sortcol == 0) {
+		addSeasonSeparator();
+	}
+	
+	return;
+}
+
+/*function filterTitle() {
 	
 	const filterrows = G_filterset;
 	
@@ -299,7 +358,7 @@ function filterTitle() {
 	if (G_sortcol == 0) {
 		addSeasonSeparator();
 	}
-}
+}*/
 
 function toggleFilterBox(id) {
 	var box = document.getElementById(id);
@@ -353,10 +412,18 @@ function setTagsFilters() {
 	filterTitle();
 }
 
-function setFilters(type) {
+function setFilters(type,closeBox = true) {
 	
 	const filterrows = Array.from(document.getElementsByClassName("filterableRow"));
 
+	if (type == "tags") { // Check if all Tag boxes were unchecked, then recheck "all" and change the filter type
+		var checkedTagsFilters = document.querySelectorAll(".tagsfiltercheckbox:checked");
+		if (checkedTagsFilters.length == 0) {
+			document.getElementById('tagsfilterall').checked = true;
+			type = 'tagsall';
+			closeBox = false;
+		}
+	}																												   
 	if (type.endsWith("all")) { // "All Tags" or "All Recommendations" was checked or unchecked
 		
 		if (type == "tagsall") { // "All Tags" was checked or unchecked
@@ -377,7 +444,7 @@ function setFilters(type) {
 				// Clear the filter textbox
 				document.getElementById("tagFilterTextbox").value = "";
 				
-				toggleFilterBox('tagFilter');
+				if (closeBox) {toggleFilterBox('tagFilter');}
 				
 				filterrows.forEach((filterrow) => {
 					filterrow.style.display = "";

@@ -250,3 +250,26 @@ html {
 	pointer-events: none;
 }
 
+/* ---------------------------------------- CHARACTER FLEXBOX ---------------------------------------- */
+
+.characterFlex {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 60px;
+	margin-right: 60px;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.characterBox {
+	height: 310px;
+	width: 240px;
+	border: 1px solid;
+	padding: 10px;
+	text-align: center;
+	font-size: 1.5rem;
+	line-height: 1.1;
+	img {
+		height: 225px;
+	}
+}
