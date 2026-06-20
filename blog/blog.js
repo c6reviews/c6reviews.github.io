@@ -45,10 +45,19 @@ function toggleFilterBox(id) {
 	}
 }
 
-function setFilters(type) {
+function setFilters(type,closeBox = true) {
 	
 	const grid = document.getElementById('blogGrid');
 	const posts = Array.from(grid.children);
+	
+	if (type == "tags") { // Check if all Tag boxes were unchecked, then recheck "all" and change the filter type
+		var checkedTagsFilters = document.querySelectorAll(".tagsfiltercheckbox:checked");
+		if (checkedTagsFilters.length == 0) {
+			document.getElementById('tagsfilterall').checked = true;
+			type = 'tagsall';
+			closeBox = false;
+		}
+	}
 	
 	if (type == "tagsall") { // "All Tags" was checked or unchecked
 		var tagsallfilter = document.getElementById("tagsfilterall");
@@ -68,7 +77,7 @@ function setFilters(type) {
 			// Clear the filter textbox
 			document.getElementById("tagFilterTextbox").value = "";
 			
-			toggleFilterBox('tagFilter');
+			if (closeBox) {toggleFilterBox('tagFilter');}
 			
 			posts.forEach(post => {
 				post.style.display = "";
