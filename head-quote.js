@@ -1,5 +1,6 @@
 var quotebox;
 var content;
+var tagline = "QUOTE OF THE DAY";
 
 const seriousQuotes = [
 
@@ -164,21 +165,25 @@ document.addEventListener('DOMContentLoaded', function() {
 			break;
 		case "March 14":
 			quote = ["images/headquotes/hq-tos-2x14.webp","Mister Spock speaking on the bridge of the Enterprise","Computer, this is a Class A compulsory directive. Compute to the last digit the value of pi.&rdquo; <span style='font-style:normal'>[to Kirk]</span> &ldquo;As we know, the value of pi is a transcendental figure without resolution. The computer banks will work on this problem to the exclusion of all else until we order it to stop.","Spock","tos/tos-s2.html#e14","TOS 2x14: Wolf in the Fold"];
+			tagline = "HAPPY PI DAY";
 			break;
 		case "April 1":
 			quote = ["images/headquotes/hq-aprilfools.webp","Patrick Stewart","Use the force, Harry.","Gandalf",'https://tardis.fandom.com/wiki/Genesis_of_the_Daleks_(TV_story)" target="_blank',"DW 12x04: Genesis of the Daleks"];
 			break;
 		case "April 5":
 			quote = ["images/headquotes/hq-fc-1.webp","Zefram Cochrane looking pensively into the night sky as Riker, La Forge, and Troi observe","Why not?","Zefram Cochrane, considering the prospect of making his warp flight in hopes for a better future","/films/firstcontact.html","<em>Star Trek: First Contact</em>"];
+			tagline = "HAPPY FIRST CONTACT DAY";
 			break;	
 		case easter:
 			quote = ["images/headquotes/hq-tos-1x15.webp","A human-sized white rabbit with a plaid jacket and pocket watch","Oh, my paws and whiskers! I'll be late!","Rabbit","/tos/tos-s1.html#e15","TOS 1x15: Shore Leave"];
 			break;
 		case mothersDay:
 			quote = ["images/headquotes/hq-tng-1x11.webp","Picard and Troi in the transporter room, with Troi holding a white rose","I should warn you, sir. My mother is a little... eccentric.","Deanna Troi","/tng/tng-s1.html#e11","TNG 1x11: Haven"];
+			tagline = "HAPPY MOTHER'S DAY";
 			break;
 		case fathersDay:
 			quote = ["images/headquotes/hq-ds9-5x25-2.webp","A close-up of Jake Sisko","My father has never let me down. He's always been there for me when I needed him. And right now he needs me. I don't want to let him down.","Jake Sisko","/ds9/ds9-s5.html#e25","DS9 5x25: In the Cards"];
+			tagline = "HAPPY FATHER'S DAY";
 			break;
 		case laborDay:
 			quote = ["images/headquotes/hq-ds9-4x16.webp","Rom reading from a PADD and quoting Karl Marx","Workers of the world, unite! You have nothing to lose but your chains!","Rom","ds9/ds9-s4.html#e16","DS9 4x16: Bar Association"];
@@ -188,12 +193,15 @@ document.addEventListener('DOMContentLoaded', function() {
 			break;
 		case "October 31":
 			quote = ["images/headquotes/hq-voy-2x23.webp","A clown standing in shadows","I'm afraid.","The Clown","/voy/voy-s2.html#e23","VOY 2x23: The Thaw"];
+			tagline = "HAPPY HALLOWEEN";
 			break;
 		case thanksgiving:
 			quote = ["images/headquotes/hq-snw-1x02.webp","Pike, Spock, Una Chin-Riley, Ortegas, Uhura, and Chapel feasting at the dinner table","Sometimes, Mr. Spock, things go so badly you just have to laugh.","Captain Christopher Pike","/snw/snw-s1.html#e02","SNW 1x02: Children of the Comet"];
+			tagline = "HAPPY THANKSGIVING";
 			break;
 		case "December 31":
 			quote = ["images/headquotes/hq-voy-5x23.webp","Shannon O'Donnel, holding a cold pint of beer","Last year, when 2000 arrived? Everyone was convinced it was the dawn of a new era. But when the world didn't end and the flying saucers didn't land and the Y2K bug didn't turn off a single light bulb, you'd think everybody would have realized it was a number on a calendar. But, oh, no, they had to listen to all those hucksters who told them the real millennium was 2001. So this New Year's Eve will be as boring as last year.","Shannon O'Donnel","voy/voy-s5.html#e23","VOY 5x23: 11:59"];
+			tagline = "HAPPY NEW YEAR";
 			break;	
 		
 		default:
@@ -210,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			<span id="headquoteText">&ldquo;${quote[2]}&rdquo;</span>
 			<br>&mdash; ${quote[3]},
 			<br><a href="${quote[4]}" style="font-family:Exo,Roboto,sans-serif;font-weight:bold;white-space:normal">${quote[5]}</a>
-			<br><span style="font-size:0.625rem;font-family:Exo,Roboto,sans-serif;border-top: 1px solid #909090">QUOTE OF THE DAY</span>
+			<br><span style="font-size:0.625rem;font-family:Exo,Roboto,sans-serif;border-top: 1px solid #909090">${tagline}</span>
 		</div>
 	`
 
