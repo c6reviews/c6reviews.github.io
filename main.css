@@ -45,6 +45,22 @@ body a {
 	color: #44b3e3;
 	text-decoration: none;
 	white-space: nowrap;
+	&.firstGen {
+		color: #A2D9F1;
+		text-decoration: underline dotted 2px #C0A000;
+	}
+	&.secondGen {
+		color: #A2D9F1;
+		text-decoration: underline dotted 2px #FF6262;
+	}
+	&.thirdGen {
+		color: #A2D9F1;
+		text-decoration: underline dotted 2px #3E9FE5;
+	}
+	&.kelvin {
+		color: #A2D9F1;
+		text-decoration: underline dotted 2px #00B757;
+	}
 }
 body p a {
 	text-decoration: underline dotted 1px;
@@ -680,7 +696,10 @@ body li {
 		margin: auto auto 20px auto;
 		background-color: #282828EE;
 		padding-bottom: 8px;
+		padding-left: 3px;
+		padding-right: 3px;
 		text-align: center;
+		text-wrap: pretty;
 		@media (max-width: 1000px) {
 			width: 70%;
 		}

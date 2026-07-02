@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('consent', 'default', {
+		'ad_user_data': 'denied',
+		'ad_personalization': 'denied',
+		'ad_storage': 'denied',
+		'analytics_storage': 'denied',
+		'wait_for_update': 500,
+	});
+	var host = window.location.hostname;
+	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
+		gtag('js', new Date());
+		gtag('config', 'G-DM44X85QLJ');
+	}
+</script>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="darkreader-lock" content="47">
+<link rel="stylesheet" href="/main.css?v=1.6.2">
+<link rel="stylesheet" href="/tts.css?v=1.6.2">
+<link rel="stylesheet" href="blog.css?v=1.6.2">
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+<style>
+.emoji-list {
+  list-style: none;
+  padding-left: 0;
+}
+.emoji-list li {
+  position: relative;
+  padding-left: 1.8em;
+  margin-bottom: 1em;
+}
+.emoji-list li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+li.x::before { content: "❌\FE0F"; }
+li.check::before { content: "✔\FE0F"; }
+li.arrow::before { content: "➡\FE0F"; }
+
+.watchTrack{
+	border: 1px solid #D0D0D0;
+	padding: 8px;
+	width: 350px;
+}
+.watchTrackTitle{
+	font-size: 1.25rem;
+	font-family: Exo,Roboto,sans-serif;
+	font-weight: bold;
+}
+
+</style>
+
+<meta property="og:title" content='In What Order Should I Watch Star Trek? | C6Reviews'>
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://c6reviews.com/blog/images/2026-07-02/ogimage.webp">
+<meta property="og:url" content="https://c6reviews.com/blog/2026-07-02-What_order_should_I_watch.html">
+<meta property="og:description" content="It may seem daunting, but I promise it's easy!">
+
+<script src="blog.js?v=1.6.2"></script>
+<script src="/tts.js?v=1.6.2"></script>
+<script src="/main.js?v=1.6.2"></script>
+<script src="/cookies.js?v=1.6.2"></script>
+<script>
+	function prepTextToSpeech(id)
+	{
+		let text = document.getElementById(id).innerText.replaceAll("•",",").replaceAll(/#(\d{1,2})[-–]#(\d{1,2})/gi,"number $1 through number $2").replace("dos and don'ts","dooze and don'ts").replaceAll("➡︎",", then").replace("🔌","").replace("◼","");
+		return text;
+	}
+</script>
+
+<title>C6 | How to Watch Star Trek</title>
+</head>
+
+<body>
+
+<div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
+
+<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+<div class="pageTitleImage"><img src="/images/main-header.webp" alt="A Starfleet Delta" style="height:235px;mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
+<div class="pageTitleContainer">
+	<div class="pageTitle">
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>HOW TO WATCH STAR TREK
+		<span class="pageSubtitle">&nbsp;</span>
+	</div>
+</div>
+<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+
+
+<div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div> 
+
+
+<div id="backButton" onclick="window.location = 'index.html';"><span style="font-size:large;font-weight:bold">←</span><br>back</div>
+	
+<div class="content">
+	
+	<div class="sectionHeader" style="margin-top:0px">
+		&ldquo;In what order should I watch <em>Star Trek</em>?&rdquo;
+		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select id="ttsratemain" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+		<button class="TTSplayButton" id="tts1pb" onclick="textToSpeech('tts1',prepTextToSpeech('articleContent'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
+	</div>
+	<div class="dateline">July 2, 2026</div>
+	
+	<div id="articleContent" style="font-family:CCS,Roboto,serif;">
+	
+		<img src="images/2026-07-02/trek_cloud.webp" style="float:right;height:300px;margin-left:15px;margin-bottom:8px" alt="A spiraling vortex in space with names of several Star Trek shows swirling around it">
+		
+		<p>It's the eternal question about watching <em>Star Trek</em>. Maybe you've caught a few episodes on TV and now you want to see more. Maybe you watched a whole series and want to try a different one. Or maybe you're a long-time <em>Trek</em> fan and you want to introduce friends and family to the show. If you ask fans, many will have very strong opinions about your watch order, and many of those opinions will be different, often times depending on the age of the person you ask! In the worst cases, some fans may even gatekeep the experience and make watching feel like a chore rather than the delightful adventure that it should be. Feel free to ask for advice, but ultimately the decision is yours. Below, I will try to clear up some of the noise and give you my best advice that is generic enough for you to make an informed decision on your own. The most important takeaway is to <em>enjoy the story</em>!</p>
+		
+		<div style="font-family:exo,roboto,sans-serif;font-size:2.5rem;text-align:center;font-weight:bold">Don't Panic • Enjoy the Ride • You won't &ldquo;miss&rdquo; anything</div>
+		
+		<p style="text-align:center;position:sticky;top:0;background-color:#181818;z-index:3;padding-bottom:5px;padding-left:8px;clear:right;width:fit-content;border:1px dotted #D0D0D0;margin:auto"><strong>Generations of <em>Star Trek</em>:</strong> 
+					<a class="firstGen" style="margin: auto 8px;pointer-events: none;">First Generation Trek (1966-1991)</a> • 
+					<a class="secondGen" style="margin: auto 8px;pointer-events: none;">Second Generation Trek (1987-2005)</a> • 
+					<a class="kelvin" style="margin: auto 8px;pointer-events: none;">Kelvin Timeline Films (2009-2016)</a> • 
+					<a class="thirdGen" style="margin: auto 8px;pointer-events: none;">Third Generation Trek (2017-present)</a>
+			<br> See the <a href="/about.html#conventions" target="_blank">About</a> page for more details.</p>
+		
+		<hr style="width:40%;margin: 3em auto;">
+		<span style="font-size:1.5em;font-weight:bold;font-family:exo,roboto,sans-serif">General dos and don'ts:</span>
+		
+		<ul class="emoji-list">
+			<li class="check"><strong>DO find a show that you like.</strong><br>If you find yourself not interested in what you're watching, set it aside and try a different show.</li>
+			
+			<li class="x"><strong>DON'T stress about trying to find the perfect order to watch.</strong><br>Each show can be enjoyed on its own.</li>
+			
+			<li class="check"><strong>but DO consider maintaining the order of two important captains' stories</strong><br>&nbsp;
+				<div style="border:1px solid #D0D0D0;width:fit-content;padding:3px">
+					<strong>Captain Kirk:</strong>  <a href="/tos/index.html" class="firstGen"><em>The Original Series</em></a> ➡&#xFE0E; <a href="/tas/index.html" class="firstGen"><em>The Animated Series</em></a> ➡&#xFE0E; <a href="/films/index.html" class="firstGen">Films</a> #1&ndash;#6<br>
+					<strong>Captain Picard:</strong> <a href="/tng/index.html" class="secondGen"><em>The Next Generation</em></a> ➡&#xFE0E; <a href="/films/index.html" class="secondGen">Films</a> #7&ndash;#10 ➡&#xFE0E; <a href="/pic/index.html" class="thirdGen"><em>Picard</em></a>
+				</div>
+			</li>
+			
+			<li class="x"><strong>DON'T watch <em>Star&nbsp;Trek:&nbsp;Enterprise</em> first just because it comes first chronologically.</strong><br><em>Enterprise</em> is sort of meant to be a prequel, intended to be watched after you've seen some of the 24th-century shows (<em>TNG</em>, <em>DS9</em>, and <em>VOY</em>).</li>
+			
+			
+			<li class="check"><strong>DO be aware in which era each show and movie takes place, and approximately when each show was produced.</strong><br>
+				This is important for having context of where/when you are in the universe, and also whether the show is new or decades old.<br>&nbsp;
+				
+				<ul style="border:1px solid #D0D0D0;width:fit-content;padding-right:12px;">
+					<li><strong>22nd century:</strong>
+						<ul>
+							<li><a href="/ent/index.html" class="secondGen"><em>Star Trek: Enterprise</em></a> (2000s)</li>
+						</ul>
+					</li>
+					<li><strong>23rd century (Pike/Kirk/Spock Era):</strong>
+						<ul>
+							<li style="margin-bottom:0"><a href="/dis/index.html" class="thirdGen"><em>Star Trek: Discovery</em> Seasons 1 &amp; 2</a> (late 2010s)</li>
+							<li style="margin-bottom:0"><a href="/snw/index.html" class="thirdGen"><em>Star Trek: Strange New Worlds</em></a> (2020s)</li>
+							<li style="margin-bottom:0"><a href="/tos/index.html" class="firstGen"><em>Star Trek: The Original Series</em></a> (1960s)</li>
+							<li style="margin-bottom:0"><a href="/tas/index.html" class="firstGen"><em>Star Trek: The Animated Series</em></a> (1970s)</li>
+							<li style="margin-bottom:0"><a href="/films/index.html" class="firstGen">Films</a> #1&ndash;#6 (1979-1991)</li>
+							<li><a href="/films/index.html" class="kelvin">Alternate/Kelvin Timeline Films</a> #11&ndash;#13 (2009-2016)</li>
+						</ul>
+					</li>
+					<li><strong>24th century (Picard/Sisko/Janeway Era):</strong>
+						<ul>
+							<li style="margin-bottom:0"><a href="/films/section31.html" class="thirdGen"><em>Star Trek: Section 31</em></a> straight-to-streaming film (2025)</li>
+							<li style="margin-bottom:0"><a href="/tng/index.html" class="secondGen"><em>Star Trek: The Next Generation</em></a> (1990s)</li>
+							<li style="margin-bottom:0"><a href="/ds9/index.html" class="secondGen"><em>Star Trek: Deep Space Nine</em></a> (1990s)</li>
+							<li style="margin-bottom:0"><a href="/voy/index.html" class="secondGen"><em>Star Trek: Voyager</em></a> (1990s)</li>
+							<li style="margin-bottom:0"><a href="/films/index.html" class="secondGen">Films</a> #7&ndash;#10 (1994-2002)</li>
+							<li style="margin-bottom:0"><a href="/low/index.html" class="thirdGen"><em>Star Trek: Lower Decks</em></a> (2020s)</li>
+							<li><a href="/pro/index.html" class="thirdGen"><em>Star Trek: Prodigy</em></a> (2020s)</li>
+						</ul>
+					</li>
+					<li><strong>End of 24th century / Start of 25th century:</strong>
+						<ul>
+							<li><a href="/pic/index.html" class="thirdGen"><em>Star Trek: Picard</em></a> (2020s)</li>
+						</ul>
+					</li>
+					<li style="list-style-type: none;text-align:center;margin-bottom:0">• • •
+					<li><strong>32nd century:</strong>
+						<ul>
+							<li style="margin-bottom:0"><a href="/dis/index.html" class="thirdGen"><em>Star Trek: Discovery</em> Seasons 3&ndash;5</a> (2020s)</li>
+							<li><a href="/sfa/index.html" class="thirdGen"><em>Star Trek: Starfleet Academy</em></a> (2020s)</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			
+			<li class="x"><strong>DON'T forget that <em>Star Trek</em> has fans of all ages.</strong><br>If you're older, you might firmly believe that <em>The&nbsp;Original&nbsp;Series</em> is the paragon of <em>Star&nbsp;Trek</em>, and you might find some of the newer shows hard to watch. If you're younger, you might find shows from the 1960s or 1990s to feel a little &ldquo;old-timey&rdquo; and hard to watch. Neither of you is &ldquo;wrong&rdquo;, so be kind when discussing your opinions!</li>
+			
+			<li class="check"><strong>DO use my spoiler-free website, <a href="/">C6Reviews.com</a>, as your watch companion to learn more about shows, episodes, and to help you find links between them! 🔌</strong></li>
+		</ul>
+		
+		<hr style="width:40%;margin: 3em auto;">
+		<span style="font-size:1.5em;font-weight:bold;font-family:exo,roboto,sans-serif">Did you watch one of the recent shows and that's what got you interested?</span>
+		
+		<ul class="emoji-list">
+			<li class="arrow">If you watched <a href="/dis/index.html" class="thirdGen"><em>Star Trek: Discovery</em></a>, you could move on to <a href="/snw/index.html" class="thirdGen"><em>Star Trek: Strange New Worlds</em></a>, which continues the story of Pike and Spock. Then you could continue Spock's story after that by going back to the beginning, with <a href="/tos/index.html" class="firstGen"><em>Star Trek: The Original Series</em></a>.</li>
+			<li class="arrow">If you watched <a href="/pic/index.html" class="thirdGen"><em>Star Trek: Picard</em></a>, now would be a great time to go back and see Jean-Luc Picard and his crew in their prime, in <a href="/tng/index.html" class="secondGen"><em>Star Trek: The Next Generation</em></a>, or you could learn more about Seven of Nine in <a href="/voy/index.html" class="secondGen"><em>Star Trek: Voyager</em></a>!</li>
+			<li class="arrow">If you watched <a href="/low/index.html" class="thirdGen"><em>Star Trek: Lower Decks</em></a>, you've seen a great example of life in the 24th century. You can see more of the 24th century (and the source of many of <em>Lower Decks</em>' jokes) in <a href="/tng/index.html" class="secondGen"><em>Star Trek: The Next Generation</em></a>, <a href="/ds9/index.html" class="secondGen"><em>Star Trek: Deep Space Nine</em></a>, and <a href="/voy/index.html" class="secondGen"><em>Star Trek: Voyager</em></a>. If you like animated shows, you could check out the original, <a href="/tas/index.html" class="firstGen"><em>Star Trek: The Animated Series</em></a>.</li>
+			<li class="arrow">If you watched <a href="/pro/index.html" class="thirdGen"><em>Star Trek: Prodigy</em></a>, you could learn more about Janeway and Chakotay in their original series, <a href="/voy/index.html" class="secondGen"><em>Star Trek: Voyager</em></a>, or you could go back to the O.G. animated series, <a href="/tas/index.html" class="firstGen"><em>Star Trek: The Animated Series</em></a>.</li>
+			<li class="arrow">If you watched <a href="/snw/index.html" class="thirdGen"><em>Star Trek: Strange New Worlds</em></a>, you could continue Spock's story by going back to the beginning, with <a href="/tos/index.html" class="firstGen"><em>Star Trek: The Original Series</em></a>.</li>
+			<li class="arrow">If you watched <a href="/sfa/index.html" class="thirdGen"><em>Star Trek: Starfleet Academy</em></a>, you could see The Doctor's origin story in his first series, <a href="/voy/index.html" class="secondGen"><em>Star Trek: Voyager</em></a>.</li>
+		</ul>
+			
+		<hr style="width:40%;margin: 3em auto;">
+		<span style="font-size:1.5em;font-weight:bold;font-family:exo,roboto,sans-serif">Suggested Watch Tracks</span>
+		
+		<p>Still looking for suggestions? If you think you might actually tackle the entire <em>Star Trek</em> franchise, here are a few ways you could go about it. Good luck!</p>
+		
+		<div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:space-around;margin-top:50px;">
+		
+			<div class="watchTrack">
+				<span class="watchTrackTitle">Track 1: Mostly-Release Order<br>(simple)</span><br>
+				One obvious way to tackle this is just to watch everything in the order that it was released! This list gives you mostly that, but it keeps important storylines together, such as keeping the films near their related series.
+				<hr>
+				<ol>
+					<li><a href="/tos/index.html" class="firstGen"><em>The Original Series</em></a></li>
+					<li><a href="/tas/index.html" class="firstGen"><em>The Animated Series</em></a></li>
+					<li><a href="/films/index.html" class="firstGen">Films</a> #1&ndash;#6</li>
+					<li><a href="/tng/index.html" class="secondGen"><em>The Next Generation</em></a></li>
+					<li><a href="/films/index.html" class="secondGen">Films</a> #7&ndash;#10</li>
+					<li><a href="/ds9/index.html" class="secondGen"><em>Deep Space Nine</em></a></li>
+					<li><a href="/voy/index.html" class="secondGen"><em>Voyager</em></a></li>
+					<li><a href="/ent/index.html" class="secondGen"><em>Enterprise</em></a></li>
+					<li><a href="/films/index.html" class="kelvin">Alternate/Kelvin Timeline Films</a> #11&ndash;#13</li>
+					<li><a href="/dis/index.html" class="thirdGen"><em>Discovery</em></a></li>
+					<li><a href="/films/index.html" class="thirdGen">Film</a> #14</li>
+					<li><a href="/pic/index.html" class="thirdGen"><em>Picard</em></a></li>
+					<li><a href="/low/index.html" class="thirdGen"><em>Lower Decks</em></a></li>
+					<li><a href="/pro/index.html" class="thirdGen"><em>Prodigy</em></a></li>
+					<li><a href="/snw/index.html" class="thirdGen"><em>Strange New Worlds</em></a></li>
+					<li><a href="/sfa/index.html" class="thirdGen"><em>Starfleet Academy</em></a></li>
+				</ol>
+			</div>
+			
+			<div class="watchTrack">
+				<span class="watchTrackTitle">Track 2: Mostly-Release Order<br>(more precise)</span><br>
+				I actually <strong>don't</strong> recommend this track. Track 1 actually keeps important storylines together, but if you really want the experience of watching things in the order they were released for some strange reason, here's a list closer to that schedule.
+				<hr>
+				<ol>
+					<li><a href="/tos/index.html" class="firstGen"><em>The Original Series</em></a></li>
+					<li><a href="/tas/index.html" class="firstGen"><em>The Animated Series</em></a></li>
+					<li><a href="/films/index.html" class="firstGen">Films</a> #1&ndash;#4</li>
+					<li><a href="/tng/index.html" class="secondGen"><em>The Next Generation</em></a> (Seasons 1&ndash;2)</li>
+					<li><a href="/films/index.html" class="firstGen">Film</a> #5</li>
+					<li><a href="/tng/index.html" class="secondGen"><em>The Next Generation</em></a> (Seasons 3&ndash;4)</li>
+					<li><a href="/films/index.html" class="firstGen">Film</a> #6</li>
+					<li><a href="/tng/index.html" class="secondGen"><em>The Next Generation</em></a> (Season 5)</li>
+					<li><a href="/ds9/index.html" class="secondGen"><em>Deep Space Nine</em></a> (Season 1)</li>
+					<li><a href="/tng/index.html" class="secondGen"><em>The Next Generation</em></a> (Season 6)</li>
+					<li><a href="/ds9/index.html" class="secondGen"><em>Deep Space Nine</em></a> (Season 2)</li>
+					<li><a href="/tng/index.html" class="secondGen"><em>The Next Generation</em></a> (Season 7)</li>
+					<li><a href="/ds9/index.html" class="secondGen"><em>Deep Space Nine</em></a> (Season 3)</li>
+					<li><a href="/voy/index.html" class="secondGen"><em>Voyager</em></a> (Season 1)</li>
+					<li><a href="/films/index.html" class="secondGen">Film</a> #7</li>
+					<li><a href="/ds9/index.html" class="secondGen"><em>Deep Space Nine</em></a> (Season 4)</li>
+					<li><a href="/voy/index.html" class="secondGen"><em>Voyager</em></a> (Season 2)</li>
+					<li><a href="/ds9/index.html" class="secondGen"><em>Deep Space Nine</em></a> (Season 5)</li>
+					<li><a href="/voy/index.html" class="secondGen"><em>Voyager</em></a> (Season 3)</li>
+					<li><a href="/films/index.html" class="secondGen">Film</a> #8</li>
+					<li><a href="/ds9/index.html" class="secondGen"><em>Deep Space Nine</em></a> (Season 6)</li>
+					<li><a href="/voy/index.html" class="secondGen"><em>Voyager</em></a> (Season 4)</li>
+					<li><a href="/ds9/index.html" class="secondGen"><em>Deep Space Nine</em></a> (Season 7)</li>
+					<li><a href="/voy/index.html" class="secondGen"><em>Voyager</em></a> (Seasons 5&ndash;7)</li>
+					<li><a href="/ent/index.html" class="secondGen"><em>Enterprise</em></a> (Season 1)</li>
+					<li><a href="/films/index.html" class="secondGen">Film</a> #9</li>
+					<li><a href="/ent/index.html" class="secondGen"><em>Enterprise</em></a> (Seasons 2&ndash;4)</li>
+					<li><a href="/films/index.html" class="kelvin">Alternate/Kelvin Timeline Films</a> #11&ndash;#13</li>
+					<li><a href="/dis/index.html" class="thirdGen"><em>Discovery</em></a> (Season 1)</li>
+					<li><a href="/dis/index.html" class="thirdGen"><em>Short Treks</em></a> (Season 1)</li>
+					<li><a href="/dis/index.html" class="thirdGen"><em>Discovery</em></a> (Season 2)</li>
+					<li><a href="/dis/index.html" class="thirdGen"><em>Short Treks</em></a> (Season 2)</li>
+					<li><a href="/pic/index.html" class="thirdGen"><em>Picard</em></a> (Season 1)</li>
+					<li><a href="/low/index.html" class="thirdGen"><em>Lower Decks</em></a> (Season 1)</li>
+					<li><a href="/dis/index.html" class="thirdGen"><em>Discovery</em></a> (Season 3)</li>
+					<li><a href="/low/index.html" class="thirdGen"><em>Lower Decks</em></a> (Season 2)</li>
+					<li><a href="/pro/index.html" class="thirdGen"><em>Prodigy</em></a> (Frist 10 episodes)</li>
+					<li><a href="/dis/index.html" class="thirdGen"><em>Discovery</em></a> (Season 4)</li>
+					<li><a href="/pic/index.html" class="thirdGen"><em>Picard</em></a> (Season 2)</li>
+					<li><a href="/snw/index.html" class="thirdGen"><em>Strange New Worlds</em></a> (Season 1)</li>
+					<li><a href="/low/index.html" class="thirdGen"><em>Lower Decks</em></a> (Season 3)</li>
+					<li><a href="/pro/index.html" class="thirdGen"><em>Prodigy</em></a> (Next 10 episodes)</li>
+					<li><a href="/pic/index.html" class="thirdGen"><em>Picard</em></a> (Season 3)</li>
+					<li><a href="/snw/index.html" class="thirdGen"><em>Strange New Worlds</em></a> (Season 2)</li>
+					<li><a href="/low/index.html" class="thirdGen"><em>Lower Decks</em></a> (Season 4)</li>
+					<li><a href="/dis/index.html" class="thirdGen"><em>Discovery</em></a> (Season 5)</li>
+					<li><a href="/pro/index.html" class="thirdGen"><em>Prodigy</em></a> (Season 2)</li>
+					<li><a href="/low/index.html" class="thirdGen"><em>Lower Decks</em></a> (Season 5)</li>
+					<li><a href="/films/index.html" class="thirdGen">Film</a> #14</li>
+					<li><a href="/snw/index.html" class="thirdGen"><em>Strange New Worlds</em></a> (Season 3)</li>
+					<li><a href="/sfa/index.html" class="thirdGen"><em>Starfleet Academy</em></a> (Season 1)</li>
+					<li><a href="/snw/index.html" class="thirdGen"><em>Strange New Worlds</em></a> (Season 4)</li>
+					<li><a href="/sfa/index.html" class="thirdGen"><em>Starfleet Academy</em></a> (Season 2)</li>
+					<li><a href="/snw/index.html" class="thirdGen"><em>Strange New Worlds</em></a> (Season 5)</li>
+				</ol>
+			</div>
+			
+			<div class="watchTrack">
+				<span class="watchTrackTitle">Track 3: Mostly-chronological</span><br>
+				This list puts shows in a more chronological order based on the <em>Star&nbsp;Trek</em> universe, while still maintaining prequel fidelity. <em>TNG</em> and <em>DS9</em> overlap in the timeline, so this watch list keeps things chunked into full seasons even if they aren't quite exact. <em>VOY</em> also overlaps <em>DS9</em>, but since <em>VOY</em> ends up being its own self-contained story on the other side of the galaxy, it is kept separate on this list.<br>
+				<hr>
+				<span style="font-size:1.25rem;font-weight:600;font-family:exo,roboto,sans-serif">23rd century:</span>
+				<ol>
+					<li><a href="/dis/index.html" class="thirdGen"><em>Discovery</em></a> (Seasons 1 &amp; 2)</li>
+					<li><a href="/tos/index.html" class="firstGen"><em>The Original Series</em></a></li>
+					<li><a href="/tas/index.html" class="firstGen"><em>The Animated Series</em></a></li>
+					<li><a href="/snw/index.html" class="thirdGen"><em>Strange New Worlds</em></a> (prequel to <em>TOS</em>)</li>
+					<li><a href="/films/index.html" class="firstGen">Films</a> #1&ndash;#6</li>
+					<li><a href="/films/index.html" class="kelvin">Alternate/Kelvin Timeline Films</a> #11&ndash;#13</li>
+				</ol>
+				<hr>
+				<span style="font-size:1.25rem;font-weight:600;font-family:exo,roboto,sans-serif">24th century:</span>
+				<ol start="7">
+					<li><a href="/films/index.html" class="thirdGen">Film</a> #14</li>
+					<li><a href="/tng/index.html" class="secondGen"><em>The Next Generation</em></a> (Seasons 1&ndash;5)</li>
+					<li><a href="/ds9/index.html" class="secondGen"><em>Deep Space Nine</em></a> (Seasons 1&ndash;3)</li>
+					<li><a href="/tng/index.html" class="secondGen"><em>The Next Generation</em></a> (Seasons 6&ndash;7)</li>
+					<li><a href="/films/index.html" class="secondGen">Film</a> #7</li>
+					<li><a href="/ds9/index.html" class="secondGen"><em>Deep Space Nine</em></a> (Seasons 4&ndash;5)</li>
+					<li><a href="/films/index.html" class="secondGen">Film</a> #8</li>
+					<li><a href="/ds9/index.html" class="secondGen"><em>Deep Space Nine</em></a> (Seasons 6&ndash;7)</li>
+					<li><a href="/films/index.html" class="secondGen">Film</a> #9</li>
+					<li><a href="/voy/index.html" class="secondGen"><em>Voyager</em></a></li>
+					<li><a href="/films/index.html" class="secondGen">Film</a> #10</li>
+					<li><a href="/ent/index.html" class="secondGen"><em>Enterprise</em></a> (prequel series, 22nd century)</li>
+					<li><a href="/low/index.html" class="thirdGen"><em>Lower Decks</em></a></li>
+					<li><a href="/pro/index.html" class="thirdGen"><em>Prodigy</em></a></li>
+					<li><a href="/pic/index.html" class="thirdGen"><em>Picard</em></a></li>
+				</ol>
+				<hr>
+				<span style="font-size:1.25rem;font-weight:600;font-family:exo,roboto,sans-serif">32nd century:</span>
+				<ol start="22">
+					<li><a href="/dis/index.html" class="thirdGen"><em>Discovery</em></a> (Seasons 3&ndash;5)</li>
+					<li><a href="/sfa/index.html" class="thirdGen"><em>Starfleet Academy</em></a></li>
+				</ol>
+			</div>
+			
+			<div class="watchTrack">
+				<span class="watchTrackTitle">Track 4: Modern-interspersed</span><br>
+				If you are averse to watching shows from the 1900s (ha!) and would like to intersperse your historical viewing with modern shows, this list provides a decent balance and keeps things in a sensible order.
+				<hr>
+				<ol>
+					<li><a href="/dis/index.html" class="thirdGen"><em>Discovery</em></a> (Seasons 1 &amp; 2)</li>
+					<li><a href="/tos/index.html" class="firstGen"><em>The Original Series</em></a></li>
+					<li><a href="/tas/index.html" class="firstGen"><em>The Animated Series</em></a></li>	
+					<li><a href="/snw/index.html" class="thirdGen"><em>Strange New Worlds</em></a> (prequel to <em>TOS</em>)</li>
+					<li><a href="/films/index.html" class="firstGen">Films</a> #1&ndash;#6</li>
+					<li><a href="/films/index.html" class="kelvin">Alternate/Kelvin Timeline Films</a> #11&ndash;#13</li>
+					<li><a href="/dis/index.html" class="thirdGen"><em>Discovery</em></a> (Seasons 3&ndash;5)</li>
+					<li><a href="/tng/index.html" class="secondGen"><em>The Next Generation</em></a></li>
+					<li><a href="/sfa/index.html" class="thirdGen"><em>Starfleet Academy</em></a></li>
+					<li><a href="/films/index.html" class="secondGen">Films</a> #7&ndash;#10</li>
+					<li><a href="/pic/index.html" class="thirdGen"><em>Picard</em></a></li>
+					<li><a href="/voy/index.html" class="secondGen"><em>Voyager</em></a></li>
+					<li><a href="/pro/index.html" class="thirdGen"><em>Prodigy</em></a></li>
+					<li><a href="/ds9/index.html" class="secondGen"><em>Deep Space Nine</em></a></li>
+					<li><a href="/low/index.html" class="thirdGen"><em>Lower Decks</em></a></li>
+					<li><a href="/ent/index.html" class="secondGen"><em>Enterprise</em></a></li>
+					<li><a href="/films/index.html" class="thirdGen">Film</a> #14</li>
+				</ol>
+			</div>
+		
+		</div>
+			
+		
+	</div>
+	
+</div> <!-- content div ends here -->
+<p>&nbsp;</p>
+<div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
+<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
+<div id="TTDIV"></div>
+
+
+<div id="bottomBorder"></div>
+</body>
+</html>
