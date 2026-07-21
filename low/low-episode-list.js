@@ -816,7 +816,7 @@ var csvString = `Episode,Title,Tags,Reference Meter,Rating
 4x03,In the Cradle of Vexilon,,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;3️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,3.9
 4x04,"Something Borrowed, Something Green",,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,5.0
 4x05,Empathalogical Fallacies,,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,4.4
-4x06,Parth Ferengi's Heart Place,,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,5.5
+4x06,Parth Ferengi's Heart Place,,<span class="large" style="background-color:#777">🟦&#xFE0F;2️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,5.4
 4x07,A Few Badgeys More,‼&#xFE0F; <img src="images/badgey.webp" style="height:20px;vertical-align:middle" title="Badgey!" alt="Badgey!"> <img src="images/ph.webp" style="height:20px;vertical-align:middle" title="Peanut Hamper!" alt="Peanut Hamper!"> <img src="images/agimus.webp" style="height:20px;vertical-align:middle" title="AGIMUS!" alt="AGIMUS!">,<span class="large" style="background-color:#777">1️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,6.9
 4x08,Caves,,<span class="large" style="background-color:#777">1️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span>,5.2
 4x09,The Inner Fight,❗,<span class="large" style="background-color:#777">🟦&#xFE0F;🟦&#xFE0F;3️⃣&#xFE0F;⬛&#xFE0F;⬛&#xFE0F;</span><br>⭐️ <span class="small">Guest Star Bonus!</span>,7.1
