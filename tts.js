@@ -51,18 +51,24 @@ function textToSpeech(id,text) {
 			
 			// Species and Homeworlds
 			text = text.
+				replaceAll("Andorian","An-dorian").
+				replaceAll("Ba'ul","Bah-ool").
 				replaceAll("Betazed","Beta-zed").
 				replaceAll("Cardassian","Card-ass-ian").
 				replaceAll("Denobulan","Dunno-byewlin").
 				replaceAll("Ferengi","Fer-ren-gii").
 				replaceAll("Ferenginar","Fer-ren-geh-narr").
 				replaceAll("J'naii","Juh-nigh").
+				replaceAll("JahSepp","Jaw-sepp").
+				replaceAll("Kaminar","Cam-in-are").
 				replaceAll("Klingon","Kling-on").
 				replaceAll("Qo'noS","Kro-nohs").
 				replaceAll("Reman","Reemin").
 				replaceAll("Risa","Ryza").
 				replaceAll("Romulan","Rahmulin").
 				replaceAll("Talaxian","Tal-ax-ian").
+				replaceAll("Talosian","Tal-ozian").
+				replaceAll("Xahea","zah-HEya").
 				replaceAll("Xahean","zah-HEyan");
 			
 			// Characters
@@ -79,10 +85,13 @@ function textToSpeech(id,text) {
 				replaceAll(/Gul\sDukat/g,"Gull Dukaat").
 				replaceAll("Hikaru","Hik-are-ooh").
 				replaceAll("Icheb","E-chehb").
+				replaceAll("L'Rell","la-rel").
 				replaceAll(/La\sForge/g,"LaForge").
 				replaceAll("Locutus","locude-us").
 				replaceAll("Martok","Martock").
+				replaceAll("Me Hani Ika Hali Ka Po","Me Hani Eeka Hali Ka Po").
 				replaceAll("Nagus","Naygus").
+				replaceAll("Nhan","Nahn").
 				replaceAll("Sarek","Sare-ick").
 				replaceAll("Saru","Sah-rue").
 				replaceAll("Shinzon","Shinzahn").
@@ -96,9 +105,16 @@ function textToSpeech(id,text) {
 		
 			// Misc
 			text = text.
+				replaceAll("AUs","A-yooz").
+				replaceAll("Broken Bow","Broken Bo").
+				replaceAll(/canonically/gi,"can-onicly").
 				replaceAll(/ensign/gi,"ensin").
 				replaceAll("Enterprise‑D's", "Enterprise‑Deez").
 				replaceAll("d'état","d'etat,").
+				replaceAll(/dilithium/gi,"die-lithium").
+				replaceAll(/gimbal/gi,"ghimbal").
+				replaceAll(/Heglu'meH QaQ jajvam/gi,"HEG-loo-meh, KAK, jadge vom").
+				replaceAll(/Heghlu'meH QaQ jajvam/gi,"HEG-loo-meh, KAK, jadge vom").
 				replaceAll(/mythos/gi,"myth-ohhs").
 				replaceAll("ol'","oul").
 				replaceAll("PADD","pad").

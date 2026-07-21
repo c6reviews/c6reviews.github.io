@@ -113,7 +113,7 @@ input[type=button] {
 h2 {
 	font-family: Exo, Roboto, sans-serif;
 }
-#articleContent > :first-child::first-letter {
+#articleContent > :where(p):first-of-type::first-letter {
 	initial-letter: 2;
 	font-size: 48px;
 	font-family: BB,serif;

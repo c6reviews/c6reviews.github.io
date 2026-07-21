@@ -914,14 +914,12 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 6x07,Rascals,,-,4.9
 6x08,A Fistful of Datas,🎭🟨,-,5.2
 6x09,The Quality of Life,V🟡,✔ Recommended,5.6
-6x10,"Chain of Command, Part I",🌌🥉A🟡,🕶 Must Watch,9.3
-6x11,"Chain of Command, Part II",🌌🥉A🟡,🕶 Must Watch,9.3
+6x10 & 11,Chain of Command (Parts I and II),🌌🥉A🟡,🕶 Must Watch,9.3
 6x12,Ship in a Bottle,🟨,✔ Recommended,7.9
 6x13,Aquiel,,-,4.1
 6x14,Face of the Enemy,,✔ Recommended,7.5
 6x15,Tapestry,🕖QV🟡,🕶 Must Watch,8.5
-6x16,"Birthright, Part I",,✔ Recommended,7.0
-6x17,"Birthright, Part II",,✔ Recommended,7.0
+6x16 & 17,Birthright (Parts I and II),,✔ Recommended,7.0
 6x18,Starship Mine,♥️,-,7.7
 6x19,Lessons,,✔ Recommended,6.2
 6x20,The Chase,,✔ Recommended,7.8
@@ -934,8 +932,7 @@ var csvString = `Episode,Title,Tags,Recommendation,Rating
 7x01,"Descent, Part II",🤖,🕶 ‼ Must Watch/Bare Minimum,8.2
 7x02,Liaisons,,-,3.8
 7x03,Interface,,-,3.1
-7x04,"Gambit, Part I",,✔ Recommended,6.7
-7x05,"Gambit, Part II",,✔ Recommended,6.7
+7x04 & 05,Gambit (Parts I and II),,✔ Recommended,6.7
 7x06,Phantasms,,-,5.0
 7x07,Dark Page,😢,-,5.1
 7x08,Attached,,✔ Recommended,5.3

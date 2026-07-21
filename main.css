@@ -1033,6 +1033,28 @@ body li {
 		transform: skew(-10deg);
 		cursor: default;
 	}
+	div.soapbox {
+		display: flow-root;
+		position: relative;
+		border: 1px solid transparent;
+		border-radius: 6px;
+		padding: 3px;
+		margin: 10px 0;
+		background: 
+			linear-gradient(to right, #242424, #181818) padding-box,
+			linear-gradient(to right, #D0D0D0, #18181800 50%) border-box;
+		
+		p,ul,div {
+			margin-left: 215px;
+		}
+		
+		& > img:first-of-type {
+			position: absolute;
+			left: 0;
+			bottom: 20px;	
+			width: 200px;
+		}
+	}
 
 /* ---------------------------------------- GLOBAL: TIMELINE TABLE ---------------------------------------- */
 .goToTimelineLink {
