@@ -530,7 +530,7 @@ function addSeasonSeparator() {
 		if (rowstyle.display == "none") {continue;};	
 		x = rows[i].getElementsByTagName("TD")[0];
 		
-		for (j = i + 1; j < (rows.length - 1); j++) {
+		for (j = i + 1; j <= (rows.length - 1); j++) {
 			
 			y = rows[j].getElementsByTagName("TD")[0];
 			rowstyle = getComputedStyle(rows[j]);
@@ -644,6 +644,8 @@ var csvString = `Episode,Title,Distinctions,NostalgiaMeter,Rating
 	sortArrowOn.style.color = "white";
 	
 	addSeasonSeparator();
+	
+	document.getElementById('episodeSearchBox').focus();
 	
 	var bottomBorder = document.getElementById('bottomBorder');
 	setTimeout(function(){bottomBorder.style.width = '100%'},500);

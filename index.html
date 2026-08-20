@@ -30,7 +30,7 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="main.css?v=1.6.3">
+<link rel="stylesheet" href="main.css?v=1.6.4">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <meta property="og:title" content="Star Trek reviews and guides | C6Reviews">
@@ -39,16 +39,47 @@
 <meta property="og:url" content="https://c6reviews.com/">
 <meta property="og:description" content="A comprehensive review site for the Star Trek universe, made for newcomers to the franchise and long-time fans alike. Easily find links between episodes and films, without accidentally spoiling the story!">
 
-<script src="main.js?v=1.6.3"></script>
-<script src="random-review.js?v=1.6.3"></script>
-<script src="main-marquee.js?v=1.6.3"></script>
-<script src="head-quote.js?v=1.6.3"></script>
-<script src="cookies.js?v=1.6.3"></script>
-<script src="deltas.js?v=1.6.3"></script>
-
-<style>
-
-</style>
+<script src="main.js?v=1.6.4"></script>
+<script src="random-review.js?v=1.6.4"></script>
+<script src="main-marquee.js?v=1.6.4"></script>
+<script src="head-quote.js?v=1.6.4"></script>
+<script src="cookies.js?v=1.6.4"></script>
+<script src="deltas.js?v=1.6.4"></script>
+<script>
+	function sortSeries(by) {
+	
+		var sortableElements = Array.from(document.querySelector('#episodeGuides').children);
+		var centurySeparators = Array.from(document.querySelectorAll('.seriesCentury'));
+		var newOrder = [];
+		
+		sortableElements.forEach((ele) => {
+			ele.style.transform = '';
+		});
+		
+		if (by == "release") {
+			newOrder = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+			document.querySelector('#DISall').style.display = 'block';
+			document.querySelector('#DIS12').style.display = 'none';
+			document.querySelector('#DIS345').style.display = 'none';
+			centurySeparators.forEach(sep => {
+				sep.style.display = 'none';
+			});
+		} else if (by == "chron") {
+			newOrder = [1,7,8,10,11,12,3,20,5,18,15,13,14,6,19,2,4,9,16,17];
+			document.querySelector('#DISall').style.display = 'none';
+			document.querySelector('#DIS12').style.display = 'block';
+			document.querySelector('#DIS345').style.display = 'block';
+			centurySeparators.forEach(sep => {
+				sep.style.display = 'block';
+			});
+		}
+		
+		for (let i=0; i < sortableElements.length; i++) {
+			sortableElements[i].style.order = newOrder[i];
+		}
+			
+	}
+</script>
 
 <title>C6Reviews | Star Trek </title>
 </head>
@@ -124,8 +155,8 @@
 						<img class="marqueeImg" src="images/ogimage.webp" alt="a Starfleet delta with the logo 'C6Reviews'">
 						<div class="marqueeTitle">SITE UPDATES AND NEWS</div>
 						<div class="marqueeSubtitle"></div>
-						<div class="marqueeContent">Last update: July 20 &ndash; <a href="updates.html">Details</a>
-							<br><br>The episode guides for <a href="/low/index.html"><em>Star Trek: Lower Decks</em></a> went live on April 24!
+						<div class="marqueeContent">Last update: August 20 &ndash; <a href="updates.html">Details</a>
+							<br><br>The review for <a href="/films/insurrection.html"><em>Star Trek: Insurrection</em></a> is online as of August 20!
 						</div>
 					</div>
 					<div class="marquee-page">
@@ -181,44 +212,56 @@
 					</tr>
 				</table>
 				<br>
-				<span class="small">The next major update, <strong>Discovery&nbsp;&amp;&nbsp;Short&nbsp;Treks</strong>, is coming along, but its progress is slow. I am estimating that it won't be done until the end of October 2026 unless I get a strong burst of motivation sometime soon. Thanks for your patience and for sticking with me!</span>
+				<span class="small">The next major update, <strong>Discovery&nbsp;&amp;&nbsp;Short&nbsp;Treks</strong>, is coming along, but its progress is slow. I am estimating that it won't be done until the end of November 2026 unless I get a strong burst of motivation sometime soon. Thanks for your patience and for sticking with me!</span>
 				<hr style="width:50%">
 					Follow me on Bluesky <a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank">@c6reviews.bsky.social</a> to find out when more guides go live!
 			</div>
 		</div>
 
 		<div id="episodeGuides">
-			<h1 style="text-decoration:underline;font-family:BB,Roboto,sans-serif;">Series Episode Guides</h1>
+			<div style="background:#181818EE;margin-top:21.44px;order:1">
+				<h1 style="text-decoration:underline;font-family:BB,Roboto,sans-serif;margin:0px auto">Series Episode Guides</h1>
+				<div style="text-align:left;width:fit-content;margin:auto;padding:3px 100px">
+						<label class="radioContainer"><input type="radio" class="andorradio" id="andordefault" value="and" name="andor" onClick="sortSeries('release')" checked ><span class="radioDot"></span><span style="margin-left:30px">Sort by release date</span></label><br>
+						<label class="radioContainer"><input type="radio" class="andorradio" value="or" name="andor" onClick="sortSeries('chron')" ><span class="radioDot"></span><span style="margin-left:30px">Sort by in-universe chronological</span></label>
+				</div>
+			</div>
 		
-			<div class="seriesCard" style="border-color:#444">
+			<div class="seriesCard" style="border-color:#444;order:2">
 				<img src="images/tos.webp" class="seriesCardBG inactive" alt="The USS Enterprise NCC-1701">
 				<table class="seriesCardTitle">
 					<tr>
 						<td><img src="images/tos-title-bw.webp" alt="Star Trek [The Original Series]" class="inactive"></td>
 					</tr>
 				</table>
+				<div class="seriesCardAirDates inactive">aired 1966-1969<br>takes place 2265-2269</div>
 				<img src="images/coming-someday.webp" class="comingSoonFlag" alt="coming someday">
 			</div>
-			<div class="seriesCard" style="border-color:#444">
+			
+			<div class="seriesCard" style="border-color:#444;order:3">
 				<img src="images/tas.webp" class="seriesCardBG inactive" alt="a drawing of the USS Enterprise NCC-1701">
 				<table class="seriesCardTitle">
 					<tr>
 						<td><img src="images/tas-title-bw.webp" alt="Star Trek: The Animated Series" style="width:50%" class="inactive"></td>
 					</tr>
 				</table>
+				<div class="seriesCardAirDates inactive">aired 1973-1974<br>takes place 2269-2270</div>
 				<img src="images/coming-someday.webp" class="comingSoonFlag" alt="coming someday">
 			</div>
-			<a href="tng/index.html">
-			<div class="seriesCard">
-				<img src="images/tng.webp" class="seriesCardBG" alt="The USS Enterprise NCC-1701-D">
-				<table class="seriesCardTitle">
-					<tr>
-						<td><img src="images/tng-title.webp" alt="Star Trek: The Next Generation"></td>
-					</tr>
-				</table>
-			</div>
+			
+			<a href="tng/index.html" style="order:4">
+				<div class="seriesCard">
+					<img src="images/tng.webp" class="seriesCardBG" alt="The USS Enterprise NCC-1701-D">
+					<table class="seriesCardTitle">
+						<tr>
+							<td><img src="images/tng-title.webp" alt="Star Trek: The Next Generation"></td>
+						</tr>
+					</table>
+					<div class="seriesCardAirDates">aired 1987-1994<br>takes place 2364-2370</div>
+				</div>
 			</a>
-			<a href="ds9/index.html">
+			
+			<a href="ds9/index.html" style="order:5">
 				<div class="seriesCard">
 					<img src="images/ds9.webp" class="seriesCardBG" alt="Space station Deep Space Nine">
 					<table class="seriesCardTitle">
@@ -226,9 +269,11 @@
 							<td><img src="images/ds9-title.webp" alt="Star Trek: Deep Space Nine"></td>
 						</tr>
 					</table>
+					<div class="seriesCardAirDates">aired 1993-1999<br>takes place 2369-2375</div>
 				</div>
 			</a>
-			<a href="voy/index.html">
+			
+			<a href="voy/index.html" style="order:6">
 				<div class="seriesCard">
 					<img src="images/voy.webp" class="seriesCardBG" alt="The USS Voyager NCC-74656">
 					<table class="seriesCardTitle">
@@ -236,28 +281,57 @@
 							<td><img src="images/voy-title.webp" alt="Star Trek: Voyager"></td>
 						</tr>
 					</table>
+					<div class="seriesCardAirDates">aired 1995-2001<br>takes place 2371-2378</div>
 				</div>
 			</a>
-			<div class="seriesCard" style="border-color:#444">
+			
+			<div class="seriesCard" style="border-color:#444;order:7">
 				<img src="images/ent.webp" class="seriesCardBG inactive" alt="The Enterprise NX-01">
 				<table class="seriesCardTitle">
 					<tr>
 						<td><img src="images/ent-title-bw.webp" alt="Star Trek: Enterprise" class="inactive"></td>
 					</tr>
 				</table>
+				<div class="seriesCardAirDates inactive">aired 2001-2005<br>takes place 2151-2155</div>
 				<img src="images/coming-someday.webp" class="comingSoonFlag" alt="coming someday">
 			</div>
-			<div class="seriesCard" style="border-color:#444">
+			
+			
+			<div class="seriesCard" id="DISall" style="border-color:#444;order:8">
 				<img src="images/dis.webp" class="seriesCardBG inactive" alt="The USS Discovery NCC-1031 flying into a rift">
 				<table class="seriesCardTitle">
 					<tr>
 						<td><img src="images/dis-title-bw.webp" alt="Star Trek: Discovery" class="inactive"></td>
 					</tr>
 				</table>
+				<div class="seriesCardAirDates inactive">released 2017-2024<br>S. 1-2 take place 2256-2258<br>S. 3-5 take place 3188-3191</div>
 				<img src="images/coming-next.webp" class="comingSoonFlag" alt="coming up next!">
-				<div style="position:absolute;bottom:2px;left:50%;transform:translateX(-50%);font-family:BB;display:flex;align-items:center;gap:3px;filter: grayscale(100%);color:#444">AND<img src="images/sho-title.webp" style="height:20px"></div>
+				<div style="position:absolute;bottom:2px;left:50%;transform:translateX(-50%);font-family:BB;display:flex;align-items:center;gap:3px;filter: grayscale(100%);color:#444">AND<img src="images/sho-title.webp" style="height:20px" alt="Short Treks"></div>
 			</div>
-			<a href="pic/index.html">
+			<div class="seriesCard" id="DIS12" style="border-color:#444;display:none;order:9">
+				<img src="images/dis.webp" class="seriesCardBG inactive" alt="The USS Discovery NCC-1031 flying into a rift">
+				<table class="seriesCardTitle">
+					<tr>
+						<td><img src="images/dis-title-bw.webp" alt="Star Trek: Discovery" class="inactive"><span class="inactive" style="display:block;font-size:1rem">SEASONS 1-2</span></td>
+					</tr>
+				</table>
+				<div class="seriesCardAirDates inactive">released 2017-2019<br>takes place 2256-2258</div>
+				<img src="images/coming-next.webp" class="comingSoonFlag" alt="coming up next!">
+				<div style="position:absolute;bottom:2px;left:50%;transform:translateX(-50%);font-family:BB;display:flex;align-items:center;gap:3px;filter: grayscale(100%);color:#444">AND<img src="images/sho-title.webp" style="height:20px" alt="Short Treks"></div>
+			</div>
+			<div class="seriesCard" id="DIS345" style="border-color:#444;display:none;order:10">
+				<img src="images/dis.webp" class="seriesCardBG inactive" alt="The USS Discovery NCC-1031 flying into a rift">
+				<table class="seriesCardTitle">
+					<tr>
+						<td><img src="images/dis-title-bw.webp" alt="Star Trek: Discovery" class="inactive"><span class="inactive" style="display:block;font-size:1rem">SEASONS 3-5</span></td>
+					</tr>
+				</table>
+				<div class="seriesCardAirDates inactive">released 2020-2024<br>takes place 3188-3191</div>
+				<img src="images/coming-next.webp" class="comingSoonFlag" alt="coming up next!">
+			</div>
+			
+			
+			<a href="pic/index.html" style="order:11">
 				<div class="seriesCard">
 					<img src="images/pic.webp" class="seriesCardBG" alt="Jean-Luc Picard">
 					<table class="seriesCardTitle">
@@ -265,9 +339,11 @@
 							<td><img src="images/pic-title.webp" alt="Star Trek: Picard"></td>
 						</tr>
 					</table>
+					<div class="seriesCardAirDates">released 2020-2023<br>takes place 2399-2402</div>
 				</div>
 			</a>
-			<a href="low/index.html">
+			
+			<a href="low/index.html" style="order:12">
 				<div class="seriesCard">
 					<img src="images/low.webp" class="seriesCardBG" alt="The USS Cerritos NCC-75567 knocking over a stalagmite made of ice">
 					<table class="seriesCardTitle">
@@ -275,9 +351,11 @@
 							<td style="vertical-align:bottom"><img src="images/low-title.webp" alt="Star Trek: Lower Decks" style="width:50%"></td>
 						</tr>
 					</table>
+					<div class="seriesCardAirDates">released 2020-2024<br>takes place 2380-2382</div>
 				</div>
 			</a>
-			<a href="pro/index.html">
+			
+			<a href="pro/index.html" style="order:13">
 				<div class="seriesCard">
 					<img src="images/pro.webp" class="seriesCardBG" alt="a profile view of Kathryn Janeway watching the USS Protostar">
 					<table class="seriesCardTitle">
@@ -285,30 +363,49 @@
 							<td><img src="images/pro-title.webp" alt="Star Trek: Prodigy"></td>
 						</tr>
 					</table>
+					<div class="seriesCardAirDates">released 2021-2024<br>takes place 2383-2385</div>
 				</div>
 			</a>
-			<div class="seriesCard" style="border-color:#444">
+			
+			<div class="seriesCard" style="border-color:#444;order:14">
 				<img src="images/snw.webp" class="seriesCardBG inactive" alt="an aft view of the USS Enterprise NCC-1701">
 				<table class="seriesCardTitle">
 					<tr>
 						<td><img src="images/snw-title-bw.webp" alt="Star Trek: Strange New Worlds" class="inactive"></td>
 					</tr>
 				</table>
+				<div class="seriesCardAirDates inactive">released 2022-&nbsp;&nbsp;<br>takes place 2259-&nbsp;&nbsp;</div>
 				<img src="images/coming-someday.webp" class="comingSoonFlag" alt="coming someday">
 			</div>
-			<div class="seriesCard" style="border-color:#444">
+			
+			<div class="seriesCard" style="border-color:#444;order:15">
 				<img src="images/sfa.webp" class="seriesCardBG inactive" alt="the Starfleet Academy building at the San Francisco bay">
 				<table class="seriesCardTitle">
 					<tr>
 						<td><img src="images/sfa-title-bw.webp" alt="Star Trek: Starfleet Academy" class="inactive" style="width:80%;"></td>
 					</tr>
 				</table>
+				<div class="seriesCardAirDates inactive">released 2026-&nbsp;&nbsp;<br> takes place 3192-&nbsp;&nbsp;</div>
 				<img src="images/coming-someday.webp" class="comingSoonFlag" alt="coming someday">
 			</div>
+			
+			<div class="seriesCentury" style="order:16">22nd Century</div>
+			<div class="seriesCentury" style="order:17">23rd Century</div>
+			<div class="seriesCentury" style="order:18">24th Century</div>
+			<div class="seriesCentury" style="text-decoration:none;order:19">.<br>.<br>.</div>
+			<div class="seriesCentury" style="order:20">32nd Century</div>
 		</div>
 
+
+
+
 		<div id="otherGuides">
-			<h1 style="text-decoration:underline;font-family:BB,Roboto,sans-serif;"> Other Guides </h1>
+			
+			<div style="background:#181818EE;margin-top:21.44px;height:92px;">
+				<h1 style="text-decoration:underline;font-family:BB,Roboto,sans-serif;margin-top:0px;margin-bottom:42px;"> Other Guides </h1>
+			</div>
+			
+			
 			<a href="timeline/index.html">
 				<div class="seriesCard">
 					<img src="images/timelinebg.webp" class="seriesCardBG" style="object-fit:fill;mask-image: radial-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.4) 40%, rgba(0,0,0,0));" alt="background image of colored lines representing a timeline">

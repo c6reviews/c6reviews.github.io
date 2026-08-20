@@ -166,13 +166,19 @@ html {
 	top: 16px;
 	width: 16px;
 	height: 16px;
-	background: #E47545;
+	background: var(--timeline-item-color, #E47545);
 	background-clip: padding-box; 
 	border: 8px solid #181818B0;
 	border-radius: 50%;
 	z-index: 3;
 }
-
+.timeline-item.branch-item:not(.left.dual)::before {
+	background: var(--timeline-item-color, #EE82EE);
+	background-clip: padding-box; 
+	border: 8px solid #181818B0;
+	border-radius: 50%;
+	z-index: 3;
+}
 /* Or no dot on the line */
 
 .timeline-item.range-event::before {
@@ -238,7 +244,7 @@ html {
 	position: relative;
 	line-height:1.1;
 	text-wrap: balance;
-	background: #18181888;
+	background: #181818E4;
 	padding: 0px;
 	border: 1px dotted #909090;
 	border-radius: 6px;
@@ -254,7 +260,7 @@ html {
 	right: -20px;
 	width: 20px;
 	height: 2px;
-	background: #E47545;
+	background: var(--timeline-item-color, #E47545);
 	z-index: 5;
 }
 .timeline-item.right .timelineItemContent::before {
@@ -264,8 +270,11 @@ html {
 	left: -20px;
 	width: 20px;
 	height: 2px;
-	background: #E47545;
+	background: var(--timeline-item-color, #E47545);
 	z-index: 5;
+}
+.timeline-item.branch-item .timelineItemContent::before {
+	background: var(--timeline-item-color, #EE82EE);
 }
 
 .timeline-item.left.dual .timelineItemContent {
@@ -336,15 +345,15 @@ html {
 
 /* Left side dates*/
 .timeline-item.left .timelineItemDate {
-	right: -70px;
+	right: -78px;
 }
 /* Right side dates */
 .timeline-item.right:not(.dual) .timelineItemDate {
-	left: -70px;
+	left: -78px;
 }
 /* Right side .dual dates */
 .timeline-item.right.dual .timelineItemDate{
-	left: 20px;
+	left: 28px;
 }
 
 /*--------------- Minor timeline items --------------*/
@@ -397,6 +406,7 @@ html {
 	text-align: right;
 	z-index: 1;
 	transform: translateX(var(--offsetx, 0px)) translateY(var(--offsety, 0px));
+	pointer-events: none;
 	img {
 		max-width: 450px;
 		border-radius: 8px;
@@ -511,6 +521,78 @@ html {
 	transform: translate(var(--range-label-x, 20px), var(--range-label-y, 40px));
 }
 
+/* ---------------------------- TIMELINE BRANCHES ------------------------- */
+
+.timeline-branch {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	width: var(--branch-offset, 100px);
+	height: 0;
+	z-index: 0;
+	pointer-events: none;
+}
+
+.timeline-branch::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: var(--branch-diagonal-length, 110px);
+	height: 4px;
+	background: var(--timeline-item-color, #EE82EE99);
+	transform-origin: left center;
+	transform: rotate(25deg);
+}
+
+.timeline-branch::after {
+	content: "";
+	position: absolute;
+	top: var(--branch-drop, 47px);
+	left: var(--branch-offset, 100px);
+	width: 4px;
+	height: var(--branch-height, 100px);
+	background: var(--timeline-item-color, #EE82EE99);
+	transform: translateX(-50%);
+}
+.timeline-item.branch-item {
+	left: calc(50% + var(--branch-offset, 100px));
+	width: calc(50% - var(--branch-offset, 100px));
+}
+
+.timeline-item.branch-item::before {
+	left: -16px;
+	right: auto;
+}
+
+.timeline-item.branch-item .timelineItemDate {
+	left: -71px !important;
+	right: auto;
+	background: var(--bg-color, #EE82EE55);
+}
+
+.timeline-item.branch-item .timelineItemContent {
+	border: 1px dotted #EE82EE;
+}
+.timeline-item.branch-item .timelineItemContent::before {
+	left: -20px;
+	right: auto;
+}
+.timeline-item.branch-item .timelineItemContent::after {
+	position: absolute;
+	content: var(--content, "Alternate Timeline");
+	left: 5px;
+	top: -23px;
+	background: var(--note-color, #EE82EE66);
+	padding: 3px 3px 0px 3px;
+	border-radius: ;
+}
+
+
+
+
+
+/* ----------------------------  ------------------------- */
 
 .apocryphal{
 	color: orange;

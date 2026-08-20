@@ -200,15 +200,13 @@ input[type=button]:hover {
 .spoilerRow {
 	display:none;
 }
-.col_releaseOrder{
+.col_releaseDate{
 	width: 50px;
-	text-align: right;
-	padding-right: 5px !important;
+	text-align: left;
 }
-.col_timelineOrder{
+.col_inUniverseDate{
 	width: 50px;
-	text-align: right;
-	padding-right: 5px !important;
+	text-align: left;
 }
 .col_series{
 	width: 90px;

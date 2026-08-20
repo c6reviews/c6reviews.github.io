@@ -348,20 +348,20 @@ td:has(> img.episodeCardBG) {
 			vertical-align: top;
 		}
 		.minorReferencesList{
-			font-size:small;
+			font-size: 0.8125rem;
 			line-height: 1;
 			margin-top: 2px;
 			margin-left: 12px;
 			padding-left: 12px;
 			& li {
-				line-height:1;
+				line-height: 1;
 				margin-bottom: 2px;
 			}
 		}
 		.nitpickery {
 			border-radius: 8px;
 			text-align: left;
-			font-size: small;
+			font-size: 0.8125rem;
 			height: auto;
 			width: fit-content;
 			/*background-color: #18181890;*/

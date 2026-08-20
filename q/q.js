@@ -99,13 +99,14 @@ async function createTable(showSpoiler) {
 					}
 					continue;
 				case 1:
-					cellClass = "col_releaseOrder";
+					cellClass = "col_releaseDate";
 					if (showSpoiler == false && cell == "24") {
 						cell = "23";
 					}
 					break;
 				case 2:
-					cellClass = "col_timelineOrder";
+					cellClass = "col_inUniverseDate";
+					cell = cell.replace(/(\d)(\...)/,'$1<span style="font-size:.625rem;color:#606060;font-style:italic">$2</span>');
 					break;
 				case 3:
 					cellClass = "col_series";

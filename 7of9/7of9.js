@@ -592,7 +592,7 @@ function addSeasonSeparator() {
 		if (rowstyle.display == "none") {continue;};	
 		x = rows[i].getElementsByTagName("TD")[1];
 		
-		for (j = i + 1; j < (rows.length - 1); j++) {
+		for (j = i + 1; j <= (rows.length - 1); j++) {
 			
 			y = rows[j].getElementsByTagName("TD")[1];
 			rowstyle = getComputedStyle(rows[j]);

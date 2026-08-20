@@ -94,7 +94,10 @@ function buildTimeline() {
 		}
 		if (el.classList.contains('year-marker')) {
 			offset = -25;
-		} 
+		}
+		if (el.classList.contains('branch-item')) {
+			offset += 45;
+		}
 
 		let y = yearToY(year,offset);
 		
@@ -303,6 +306,7 @@ function adjustForCollisions() {
 		const matchingDotAnchors = anchors.filter(anchor => {
 			return (
 				anchor.classList.contains('timeline-item') &&
+				!anchor.classList.contains('branch-item') &&
 				Number(anchor.dataset.year) === year &&
 				anchorHasVisibleDot(anchor)
 			);
@@ -355,6 +359,47 @@ function adjustForCollisions() {
 		});
 	};
 
+	const positionBranchesWithCorrectedTops = () => {
+		const branchEls = document.querySelectorAll('.timeline-branch');
+
+		branchEls.forEach(branch => {
+			const startYear = Number(branch.dataset.from);
+			const endYear = Number(branch.dataset.to);
+
+			const branchOffset = 100;
+			const branchAngle = 25;
+			const branchAngleRadians = branchAngle * (Math.PI / 180);
+			const branchDrop = branchOffset * Math.tan(branchAngleRadians);
+			const branchDiagonalLength = branchOffset / Math.cos(branchAngleRadians);
+
+			const top = getCorrectedYearTop(startYear) + 28;
+			const bottom = getCorrectedYearTop(endYear) + 28 + 46.63;
+			const verticalHeight = Math.max(0, bottom - top - branchDrop);
+
+			branch.style.top = `${top}px`;
+			branch.style.setProperty('--branch-drop', `${branchDrop}px`);
+			branch.style.setProperty('--branch-diagonal-length', `${branchDiagonalLength}px`);
+			branch.style.setProperty('--branch-height', `${verticalHeight}px`);
+		});
+	};			
+
+	const syncBranchItems = () => {
+		const branches = [...document.querySelectorAll('.timeline-branch')];
+
+		branches.forEach(branch => {
+			const branchId = branch.dataset.branch;
+			const offset = parseFloat(window.getComputedStyle(branch).getPropertyValue('--branch-offset')) || 100;
+
+			if (!branchId) {
+				return;
+			}
+
+			document.querySelectorAll(`.timeline-item.branch-item[data-branch="${branchId}"]`).forEach(item => {
+				item.style.setProperty('--branch-offset', `${offset}px`);
+			});
+		});
+	};
+	
 	// Clear old transforms before measuring.
 	anchors.forEach(anchor => {
 		const content = getContent(anchor);
@@ -452,6 +497,8 @@ function adjustForCollisions() {
 
 	// Redraw timeline ranges after final anchor shifts.
 	positionRangesWithCorrectedTops();
+	positionBranchesWithCorrectedTops();	
+	syncBranchItems();	
 
 	// Position content within the settled timeline.
 	anchors.forEach((anchor, index) => {
@@ -575,6 +622,14 @@ function adjustForCollisions() {
 			maxBottom = Math.max(maxBottom, rangeBottom);
 		});
 
+		document.querySelectorAll('.timeline-branch').forEach(branch => {
+			const branchTop = parseFloat(branch.style.top) || 0;
+			const branchOffset = parseFloat(window.getComputedStyle(branch).getPropertyValue('--branch-offset')) || 100;
+			const branchHeight = parseFloat(branch.style.getPropertyValue('--branch-height')) || 0;
+			const branchBottom = branchTop + branchOffset + branchHeight;
+
+			maxBottom = Math.max(maxBottom, branchBottom);
+		});														   
 		timeline.style.height = `${maxBottom + 150}px`;
 	};
 

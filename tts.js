@@ -52,6 +52,7 @@ function textToSpeech(id,text) {
 			// Species and Homeworlds
 			text = text.
 				replaceAll("Andorian","An-dorian").
+				replaceAll("Ba'ku","Bah-koo").
 				replaceAll("Ba'ul","Bah-ool").
 				replaceAll("Betazed","Beta-zed").
 				replaceAll("Cardassian","Card-ass-ian").
@@ -60,12 +61,15 @@ function textToSpeech(id,text) {
 				replaceAll("Ferenginar","Fer-ren-geh-narr").
 				replaceAll("J'naii","Juh-nigh").
 				replaceAll("JahSepp","Jaw-sepp").
+				replaceAll("Jem'Hadar","Jem huh-darr").
 				replaceAll("Kaminar","Cam-in-are").
 				replaceAll("Klingon","Kling-on").
+				replaceAll("Mintakan","min tokken").
 				replaceAll("Qo'noS","Kro-nohs").
 				replaceAll("Reman","Reemin").
 				replaceAll("Risa","Ryza").
 				replaceAll("Romulan","Rahmulin").
+				replaceAll("Son'a","So-nuh").
 				replaceAll("Talaxian","Tal-ax-ian").
 				replaceAll("Talosian","Tal-ozian").
 				replaceAll("Xahea","zah-HEya").
@@ -77,6 +81,7 @@ function textToSpeech(id,text) {
 				replaceAll("B'Elanna","Bull-on-uh").
 				replaceAll("B'Etor","bay-tor").
 				replaceAll("Data's","Dayta's").
+				replaceAll("Damar","Duh-mar").
 				replaceAll("Duras","Duross").
 				replaceAll("Elim","Eelim").
 				replaceAll("Garak","Garrick").
@@ -98,6 +103,7 @@ function textToSpeech(id,text) {
 				replaceAll("T'Kuvma","Tuh-koovma").
 				replaceAll("T'Pol","Tuh-paul").
 				replaceAll("Tuvok","Two-vock").
+				replaceAll("Weyoun","Way-oon").
 				replaceAll("Zefram","Zefrum");
 
 			// Actors
@@ -115,11 +121,14 @@ function textToSpeech(id,text) {
 				replaceAll(/gimbal/gi,"ghimbal").
 				replaceAll(/Heglu'meH QaQ jajvam/gi,"HEG-loo-meh, KAK, jadge vom").
 				replaceAll(/Heghlu'meH QaQ jajvam/gi,"HEG-loo-meh, KAK, jadge vom").
+				replaceAll(/ketracel-white/gi,"ket-trah-cell-white").
 				replaceAll(/mythos/gi,"myth-ohhs").
 				replaceAll("ol'","oul").
 				replaceAll("PADD","pad").
 				replaceAll(/\bPart\sI\b/g,"Part 1").
 				replaceAll(/\bParts\sI\b/g,"Parts 1").
+				replaceAll("Qowat Milat","Co-watt Mil-aht").
+				replaceAll(/retconned/gi,"rett-conned").
 				replaceAll(/tricorder/gi,"try-corder").
 				replaceAll(/trilithium/gi,"try-lithium").
 				replaceAll(/voyage/gi,"voyij").

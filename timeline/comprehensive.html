@@ -318,7 +318,7 @@
 
 <div class="content">
 	<img src="images/timeline.webp" alt="A screen capture from Star Trek: First Contact, with Deanna Troi incredulously yelling 'Timeline?!' at Commander Riker" style="width:451px;margin-right:100px;margin-top:16px;margin-bottom:12px;margin-left:36px;float:right;border: 1px solid #606060;border-radius:25px;">
-	<h3 style="text-align:center"><em>How To Timeline</em></h3>
+	<div style="text-align:center;font-weight:bold;font-style:italic;font-size:1.125rem">How To Timeline</div>
 	<table style="margin-left:24px;margin-bottom:24px;">
 		<tr>
 			<td style="padding:3px;text-align:center">🧭</td>
@@ -491,19 +491,9 @@
 	</tr>
 	<tr class="contentRow nonEssential">
 		<td>&nbsp;</td>
-		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;"></td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr class="contentRow nonEssential">
-		<td colspan="2" onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;font-weight:bold">≈2 million <br>years ago</td>
-		<td colspan="3" style="text-align:left">The ancient Bajoran civilization is flourishing by this time (<a style="color:#44B3E3" href="/tng/tng-s5.html#e03">TNG 5x03: Ensign Ro</a>)</td>
-		<td>&nbsp;</td>
+		<td colspan="3" style="height:1.5rem" class="joinLeft">Pike must navigate a difficult choice after <em>Enterprise</em> is thrown back in time</td>
+		<td class="majorTimeTravel thirdGen joinRight">❰❰ SNW: Valles Marineris</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -529,6 +519,25 @@
 		<td class="yearGap">&nbsp;</td>
 		<td class="yearGap">&nbsp;</td>
 		<td class="yearGap">&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td>&nbsp;</td>
+		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="contentRow nonEssential">
+		<td colspan="2" onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;font-weight:bold">≈2 million <br>years ago</td>
+		<td colspan="3" style="text-align:left">The ancient Bajoran civilization is flourishing by this time (<a style="color:#44B3E3" href="/tng/tng-s5.html#e03">TNG 5x03: Ensign Ro</a>)</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow nonEssential">
 		<td>&nbsp;</td>
@@ -3071,7 +3080,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td class="realLife secondGen essential">Star Trek: Insurrection premieres</td>
+		<td class="realLife secondGen essential"><a href="/films/insurrection.html">Star Trek: Insurrection premieres</a></td>
 	</tr>
 	<tr class="contentRow">
 		<td>&nbsp;</td>
@@ -3913,8 +3922,7 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2066</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td colspan="2" data-source="Star Trek: Insurrection" onmouseover="showSource(this);" onmouseout="closeSource();">A group of Ba'ku refugees settle on a planet with unique metaphasic properties in the Briar Patch</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5685,7 +5693,7 @@
 	<tr class="contentRow">
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2228</td>
-		<td data-source="SNW 1x01: Strange New WOrlds" onmouseover="showSource(this);" onmouseout="closeSource();">La'an Noonien-Singh born (December 8)</td>
+		<td data-source="SNW 1x01: Strange New Worlds" onmouseover="showSource(this);" onmouseout="closeSource();">La'an Noonien-Singh born (December 8)</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5708,8 +5716,8 @@
 		<td>&nbsp;</td>
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2230</td>
 		<td data-source="numerous" onmouseover="showSource(this);" onmouseout="closeSource();">Spock born (January 6)</td>
-		<td>&nbsp;</td>
 		<td id="TGWMTS1">&nbsp;</td>
+		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5731,8 +5739,7 @@
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">2232</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td id="TGWMTS2" colspan="2" class="episodeBox thirdGen essential">≈ SHO: "The Girl Who Made the Stars" <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(2x05)</span> <span style="font-size:x-small;font-weight:normal;font-family:Exo,Roboto,sans-serif;">(year unknown)</span></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5761,9 +5768,10 @@
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2235</td>
 		<td>&nbsp;</td>
+		<td id="TGWMTS3">&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td id="TGWMTS2" colspan="2" class="episodeBox thirdGen essential">≈ SHO: "The Girl Who Made the Stars" <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(2x05)</span> <span style="font-size:x-small;font-weight:normal;font-family:Exo,Roboto,sans-serif;">(year unknown)</span></td>
+		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 	</tr>
@@ -5796,9 +5804,9 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2239</td>
-		<td class="episodeBox thirdGen joinLeft essential">SHO: "The Brightest Star" <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(1x03)</span></td>
+		<td class="episodeBox thirdGen joinLeft essential" id="TheBrightestStar">SHO: "The Brightest Star" <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(1x03)</span></td>
 		<td class="joinRight essential">Saru leaves his home</td>
-		<td id="TGWMTS3">&nbsp;</td>
+		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -5933,7 +5941,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2253</td>
-		<td class="episodeBox thirdGen joinLeft essential">SHO: &ldquo;Q&amp;A&rdquo; <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(2x01)</span></td>
+		<td class="episodeBox thirdGen joinLeft essential" id="Q&A">SHO: &ldquo;Q&amp;A&rdquo; <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(2x01)</span></td>
 		<td class="joinRight essential">Spock joins the USS <em>Enterprise</em></td>
 		<td>(Kirk Age 20)</td>
 		<td>&nbsp;</td>
@@ -5992,7 +6000,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2259</td>
-		<td class="seriesBox thirdGen essential" style="background-image:url('images/pike-bg.webp');background-size:100% auto;background-blend-mode:lighten;padding-right:20px" rowspan="3" id="SNW">STAR TREK <br>
+		<td class="seriesBox thirdGen essential" style="background-image:url('images/pike-bg.webp');background-size:100% auto;background-blend-mode:lighten;padding-right:20px" rowspan="4" id="SNW">STAR TREK <br>
 		STRANGE NEW WORLDS (SNW) <br><span class="x-small" style="font-weight:normal;font-family:serif">2022-Present</span></td>
 		<td class="apocryphal">(Pike Age 54)*</td>
 		<td>&nbsp;</td>
@@ -6021,7 +6029,6 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="kirkEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2262</td>
-		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -6459,7 +6466,7 @@
 	<tr class="contentRow">
 		<td rowspan="96" class="picardEra centuryEnd essential" style="font-family:BBB,serif;font-size:xx-large">P<br>I<br>C<br>A<br>R<br>D<br>&nbsp;<br>E<br>R<br>A</td>
 		<td class="picardEra lostEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2305</td>
-		<td data-source="TNG 5x14: Conundrum" onmouseover="showSource(this);" onmouseout="closeSource();">Picard born (July 13)</td>
+		<td id="picardBorn" data-source="TNG 5x14: Conundrum" onmouseover="showSource(this);" onmouseout="closeSource();">Picard born (July 13)</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -6727,7 +6734,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra lostEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2332</td>
-		<td data-source="Extrapolation (no direct canon reference)" onmouseover="showSource(this);" onmouseout="closeSource();">Ben Sisko born</td>
+		<td id="siskoBorn" data-source="Extrapolation (no direct canon reference)" onmouseover="showSource(this);" onmouseout="closeSource();">Ben Sisko born</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -6768,7 +6775,7 @@
 	<tr class="contentRow">
 		<td class="picardEra lostEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2336</td>
 		<td data-source="TNG 5x14: Conundrum" onmouseover="showSource(this);" onmouseout="closeSource();">Troi born (March 29)</td>
-		<td class="apocryphal moreInfo" onClick="openToolTip(event,'JanewayTT')">Kathryn Janeway born*</td>
+		<td id="janewayBorn" class="apocryphal moreInfo" onClick="openToolTip(event,'JanewayTT')">Kathryn Janeway born*</td>
 		<td>&nbsp;</td>
 		<td>|</td>
 		<td>|</td>
@@ -6787,7 +6794,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra lostEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2338</td>
-		<td data-source="TNG 5x14: Conundrum" onmouseover="showSource(this);" onmouseout="closeSource();">Data activated on Omicron Theta (Feb 2)</td>
+		<td id="dataActivated" data-source="TNG 5x14: Conundrum" onmouseover="showSource(this);" onmouseout="closeSource();">Data activated on Omicron Theta (Feb 2)</td>
 		<td class="spoiler TNGSpoiler">Noonien Soong escapes the Crystalline Entity</td>
 		<td>&nbsp;</td>
 		<td>|</td>
@@ -6807,7 +6814,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra lostEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2340</td>
-		<td>Worf born</td>
+		<td id="worfBorn">Worf born</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>|</td>
@@ -6837,7 +6844,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra lostEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2343</td>
-		<td>Kira Nerys born</td>
+		<td id="kiraBorn">Kira Nerys born</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>|</td>
@@ -7126,7 +7133,7 @@
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2373</td>
 		<td>&nbsp;</td>
-		<td id="FC" class="filmBox secondGen" style="text-align:left;padding-left:32px;"><a href="/films/firstcontact.html">FIRST CONTACT <span class="x-small" style="font-weight:normal;font-family:serif">(1996, #8)</a></span></td>
+		<td id="FC" class="filmBox secondGen" style="text-align:left;padding-left:32px;"><a href="/films/firstcontact.html">FIRST CONTACT <span class="x-small" style="font-weight:normal;font-family:serif">(1996, #8)</span></a></td>
 		<td class="majorEventBox" rowspan="3">Dominion War</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -7141,7 +7148,7 @@
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2375</td>
 		<td>&nbsp;</td>
-		<td id="INS" class="filmBox secondGen" style="text-align:left;padding-left:32px;">INSURRECTION <span class="x-small" style="font-weight:normal;font-family:serif">(1998, #9)</span></td>
+		<td id="INS" class="filmBox secondGen" style="text-align:left;padding-left:32px;"><a href="/films/insurrection.html">INSURRECTION <span class="x-small" style="font-weight:normal;font-family:serif">(1998, #9)</span></a></td>
 		<td class="spoiler DS9Spoiler characterDeath">USS <em>DEFIANT</em> NX&#8209;74205 Destroyed</td>
 		<td class="spoiler DS9Spoiler characterDeath">USS <em>DEFIANT</em> NX&#8209;74205 (2) Launched</td>
 	</tr>
@@ -7184,7 +7191,7 @@
 	</tr>
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2380</td>
-		<td class="seriesBox thirdGen"  style="background-image:url('images/mariner&boimler-bg.webp');background-size:100% auto;background-blend-mode:screen" rowspan="3" id="LOW"><a href="/low/index.html">STAR TREK <br>LOWER DECKS (LOW) <br><span class="x-small" style="font-weight:normal;font-family:serif">2020-2024</a></span></td>
+		<td class="seriesBox thirdGen"  style="background-image:url('images/mariner&boimler-bg.webp');background-size:100% auto;background-blend-mode:screen" rowspan="3" id="LOW"><a href="/low/index.html">STAR TREK <br>LOWER DECKS (LOW) <br><span class="x-small" style="font-weight:normal;font-family:serif">2020-2024</span></a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -7232,7 +7239,7 @@
 	<tr class="contentRow">
 		<td class="picardEra essential" onclick="toggleHighlight(this)" style="cursor:pointer;">2385</td>
 		<td class="majorEventBox joinLeft">Rogue Synth Attack on Mars (April 5)</td>
-		<td class="episodeBox thirdGen joinMiddle" style="border-left:0px;border-right:0px;">SHO: &ldquo;Children of Mars&rdquo; <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(2x06)</span></td>
+		<td class="episodeBox thirdGen joinMiddle" style="border-left:0px;border-right:0px;" id="ChildrenOfMars">SHO: &ldquo;Children of Mars&rdquo; <span style="font-family:Exo,Roboto,sans-serif;font-size:12px;">(2x06)</span></td>
 		<td class="minorTimeTravel thirdGen joinMiddle"><a href="/pic/pic-s1.html#e02">❰ PIC: Maps and Legends</a></td>
 		<td class="joinRight spoiler PICSpoiler">Picard resigns from Starfleet</td>		
 		<td>(Picard Age 80)</td>
@@ -8014,7 +8021,6 @@
 		<td class="minorTimeTravel secondGen joinRight"><a href="/tng/tng-s5.html#e09">≈ ❱ TNG 5x09: A Matter of Time</a></td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
 	</tr>
 	<tr class="contentRow">
 		<td><strong>Century</strong></td>
@@ -8420,9 +8426,8 @@
 		<td onclick="toggleHighlight(this)" class="essential" style="cursor:pointer;">3177</td>
 		<td class="majorTimeTravel thirdGen joinLeft">❰❰ SFA: Kids These Days</td>
 		<td class="joinRight">Caleb separated from his mother</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td class="minorTimeTravel thirdGen joinLeft">❰ DIS: People of Earth</td>
+		<td colspan="2" class="joinRight">Admiral Tal invites anyone who still believes in the Federation to Earth</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 	</tr>
