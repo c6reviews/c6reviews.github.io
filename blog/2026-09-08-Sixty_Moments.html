@@ -1,0 +1,537 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DM44X85QLJ"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('consent', 'default', {
+		'ad_user_data': 'denied',
+		'ad_personalization': 'denied',
+		'ad_storage': 'denied',
+		'analytics_storage': 'denied',
+		'wait_for_update': 500,
+	});
+	var host = window.location.hostname;
+	if (host !== "localhost" && host !== "127.0.0.1" && host !== "10.13.83.9" && host !== "") {
+		const script = document.createElement('script');
+		script.defer = true;
+		script.src = 'https://umami-production-bb03.up.railway.app/script.js';
+		script.setAttribute('data-website-id', '6a2b4a9c-d106-4539-bc0a-3c554cab7b47');
+		document.head.appendChild(script);
+		gtag('js', new Date());
+		gtag('config', 'G-DM44X85QLJ');
+	}
+</script>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="darkreader-lock" content="47">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="/main.css?v=1.6.4">
+<link rel="stylesheet" href="/tts.css?v=1.6.4">
+<link rel="stylesheet" href="blog.css?v=1.6.4">
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+<style>
+	.localItemDiv {
+		position: relative;
+		min-height: 300px;
+		margin: 20px auto;
+	}
+	.localItemTitle {
+		font-weight: bold;
+		font-size: 1.75rem;
+		font-family: Exo, Roboto, sans-serif;
+	}
+	.spoilerTag{
+		position: absolute;
+		font-weight: bold;
+		color: orange;
+		cursor: pointer;
+		white-space: nowrap;
+		font-size: 1.5rem;
+		text-align: center;
+		top: 50%;
+		width: 400px;
+		transform: translateY(-50%);
+		background-color: #845600DD;
+		border-radius: 3px;
+		padding: 5px;
+		z-index: 5;
+	}
+	.spoilerTag:hover{
+		
+		color: white;
+		
+	}
+	.spoilerContent{
+		filter: blur(10px);
+		color: #FFE1CA;
+		transition: 0.5s;
+		user-select: none;
+		pointer-events: none;
+	}
+</style>
+
+<meta property="og:title" content='Sixty Trek Moments | C6Reviews'>
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://c6reviews.com/blog/images/2026-09-08/ogimage.webp">
+<meta property="og:url" content="https://c6reviews.com/blog/2026-09-08-Sixty_Moments.html">
+<meta property="og:description" content="Sixty moments from classic Trek chosen by yours truly">
+
+<script src="blog.js?v=1.6.4"></script>
+<script src="/tts.js?v=1.6.4"></script>
+<script src="/main.js?v=1.6.4"></script>
+<script src="/cookies.js?v=1.6.4"></script>
+<script>
+	function prepTextToSpeech(id)
+	{
+		let text = document.getElementById(id).innerText.replaceAll(/cogenitor/gi,"Co-genitor").replaceAll("Pa'nar","puh-narr").replace("◼","");
+		return text;
+	}
+	function displaySpoiler(caller) {
+		
+		var content = caller.parentNode.querySelector('.spoilerContent');
+		var style = getComputedStyle(content);
+		
+		caller.style.display = "none";
+		content.style.filter = "none";
+		content.style.userSelect = "auto";
+		content.style.pointerEvents = "auto";
+		
+	}
+</script>
+
+<title>C6 | Sixty Trek Moments</title>
+</head>
+
+<body>
+
+<div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
+
+<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+<div class="pageTitleImage"><img src="/images/main-header.webp" alt="A Starfleet Delta" style="height:235px;mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
+<div class="pageTitleContainer">
+	<div class="pageTitle">
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>SIXTY <em>TREK</em> MOMENTS
+		<span class="pageSubtitle" style="font-size:large"><span style="text-shadow: red 0px 0px 12px">🚨</span> This page contains minor spoilers. Major spoilers are hidden. <span style="text-shadow: red 0px 0px 12px">🚨</span></span>
+	</div>
+</div>
+<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+
+
+<div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div> 
+
+
+<div id="backButton" onclick="window.location = 'index.html';"><span style="font-size:large;font-weight:bold">←</span><br>back</div>
+	
+<div class="content">
+	
+	<div class="sectionHeader" style="margin-top:0px">
+		&nbsp;
+		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select id="ttsratemain" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
+		<button class="TTSplayButton" id="tts1pb" onclick="textToSpeech('tts1',prepTextToSpeech('articleContent'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
+	</div>
+	<div class="dateline">September 8, 2026</div>
+	
+	<div id="articleContent" style="font-family:CCS,Roboto,serif;">
+		<p>In honor of <em>Star Trek</em>'s 60th anniversary today, I've compiled a list of sixty moments from some classic live-action <em>Trek</em> shows.<br>&nbsp;</p>
+		
+		<p>The best moments? No.<br>The most iconic moments? Not necessarily.<br>The funniest moments? Nope.<br>Just sixty moments that I chose entirely subjectively, and I will neither explain nor defend my selections!</p>
+		
+		<p style="font-size:1.5rem;font-weight:bold">Happy 60th birthday, <em>Star&nbsp;Trek</em>!</p>
+		
+		<hr style="width:90%;margin: 20px auto;">
+		
+		<div style="width:80%;margin:auto">
+		
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/01.webp" style="float:left; height:300px; margin-right: 10px" alt="Kirk fighting a Gorn, which in this case is a man in a terrible rubber suit">
+				<span class="localItemTitle">1. Kirk fights the Gorn</span>
+				<p>(1967) May we never forget the day that Captain Kirk fought this ridiculous rubber suit in one of the slowest, most lethargic hand-to-hand fights on television, from <a href="/tos/tos-s1.html#e18">TOS 1x18: Arena</a>.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/02.webp" style="float:left; height:300px; margin-right: 10px" alt="Kirk and Spock standing behind an approximately 12-foot, roughly-circular portal">
+				<span class="localItemTitle">2. Kirk and Spock encounter the Guardian of Forever</span>
+				<p>(1967) <a href="/tos/tos-s1.html#e28">TOS 1x28: The City on the Edge of Forever</a> is a highly-regarded fan favorite episode from <em>The&nbsp;Original&nbsp;Series</em>. In it, Kirk and Spock encounter the Guardian of Forever, a portal which transports them to New York City in the year 1930, where they play an important role in a touching and memorable story and learn a hard lesson about preserving the timeline.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/03.webp" style="float:left; height:300px; margin-right: 10px" alt="Spock performing the traditional Vulcan salute">
+				<span class="localItemTitle">3. Live Long and Prosper</span>
+				<p>(1967) Spock presents the Vulcan salute and traditional message for the first time in <a href="/tos/tos-s2.html#e01">TOS 2x01: Amok Time</a>, and it became an icon representing the <em>Star&nbsp;Trek</em> franchise. 🖖 Live long, and prosper.</p>
+			</div>
+		
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/04.webp" style="float:left; height:300px; margin-right: 10px" alt="Spock, with a goatee, and a transporter operator performing the Terran Empire salute">
+				<span class="localItemTitle">4. First foray into the Mirror Universe</span>
+				<p>(1967) <a href="/tos/tos-s2.html#e04">TOS 2x04: Mirror, Mirror</a> is the first episode in the <em>Star&nbsp;Trek</em> franchise to crossover to the &ldquo;Mirror Universe&rdquo;, an alternate reality where everyone is, well, kind of evil. And sometimes they have goatees. The Mirror Universe would become a realm to be explored in several other <em>Trek</em> series: <em>Deep&nbsp;Space&nbsp;Nine</em>, <em>Enterprise</em>, <em>Discovery</em>, and <em>Prodigy</em>.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/05.webp" style="float:left; height:300px; margin-right: 10px" alt="Kirk standing in a small mountain of small, furry creatures known as tribbles">
+				<span class="localItemTitle">5. Kirk buried in tribbles</span>
+				<p>(1967) This iconic moment from the iconic episode <a href="/tos/tos-s2.html#e15">TOS 2x15: The Trouble with Tribbles</a> is one that can be recognized even by non-fans of <em>Star&nbsp;Trek</em>. &ldquo;The Tribble episode&rdquo; gives us a humorous story about tiny, cute balls of fur that, unfortunately, reproduce at an astonishing rate. This story is famously revisited in the <em>DS9</em> episode, <a href="/ds9/ds9-s5.html#e06">DS9 5x06: Trials and Tribble-ations</a>.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/06.webp" style="float:left; height:300px; margin-right: 10px" alt="Kirk yelling into a handheld communication device">
+				<span class="localItemTitle">6. KHAAAAAAN!!</span>
+				<p>(1982) There are few moments across <em>Star&nbsp;Trek</em> that make it into pop culture or mainstream media, but Kirk's iconic scream in <a href="/films/ii-twok.html"><em>Star Trek II: The Wrath of Khan</em></a> is one of them. Reaching a breaking point with Khan Noonien Singh, Kirk screams into his communicator at Khan, and his voice echoes loudly through space. Well, not really, since sound doesn't travel through space but... metaphorically, sure!</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/07.webp" style="float:left; height:300px; margin-right: 10px" alt="The Enterprise-D performing a saucer separation">
+				<span class="localItemTitle">7. The <em>Enterprise</em>&#8209;D separates</span>
+				<p>(1987) <em>Star&nbsp;Trek:&nbsp;The&nbsp;Next&nbsp;Generation</em> premiered with the feature-length episode <a href="/tng/tng-s1.html#e01">TNG 1x01/02: Encounter at Farpoint</a>. In it, the new <em>Enterprise</em> NCC&#8209;1701&#8209;D shows off its superpower: it separates into two ships! This ability was originally supposed to be used more often in the show, but because of how the separation sequence puts a halt to the storytelling, the <em>Enterprise</em> only separated four total times in the entire franchise!</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/08.webp" style="float:left; height:300px; margin-right: 10px" alt="Data and Geordi observing on the bridge viewscreen a lifeform which is a small point of light under a glass dome in a lab">
+				<span class="localItemTitle">8. Ugly giant bags of mostly water</span>
+				<p>(1988) The <em>Enterprise</em> encounters a new kind of inorganic life form in <a href="/tng/tng-s1.html#e18">TNG 1x18: Home Soil</a>, and after finally establishing communication, the life form calls the humans &ldquo;ugly giant bags of mostly water&rdquo; &ndash; not because it was being critical, but simply for a lack of a better description!</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<div class="spoilerTag" onClick="displaySpoiler(this)"><em>TNG</em> Season 1<br>Spoiler »</div>
+				<div class="spoilerContent">
+					<img src="images/2026-09-08/09.webp" style="float:left; height:300px; margin-right: 10px" alt="Tasha Yar regarding a black tar-looking entity">
+					<span class="localItemTitle">9. Armus kills Tasha Yar</span>
+					<p>(1988) In an unexpected first-season twist, security chief Natasha Yar is killed by a malevolent tar-like entity known as Armus in <a href="/tng/tng-s1.html#e23">TNG 1x23: Skin of Evil</a> &ndash; and this wasn't some sci-fi reincarnation story. Tasha Yar, a main character, died before she could even get through the first season. Her loss is felt deeply among the crew and the fans, though she would be seen for twice more in special guest appearances...</p>
+				</div>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/10.webp" style="float:left; height:300px; margin-right: 10px" alt="Two phaser beams striking Remmick's face and torso">
+				<span class="localItemTitle">10. Remmick's head explodes</span>
+				<p>(1988) In the notably-unresolved story from <a href="/tng/tng-s1.html#e25">TNG 1x25: Conspiracy</a>, a man's head quite literally explodes, and the subsequent damage left a grotesque, smoking, hollowed-out corpse on display. This scene was cut from the BBC airing, and the episode received a viewer discretion warning on Canadian television. It's certainly a moment I'll never forget!</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/11.webp" style="float:left; height:300px; margin-right: 10px" alt="A woman looking curiously at Moriarty who is dressed in a suit and top hat">
+				<span class="localItemTitle">11. Moriarty becomes sentient</span>
+				<p>(1988) In <a href="/tng/tng-s2.html#e03">TNG 2x03: Elementary, Dear Data</a>, a holodeck recreation of Sherlock Holmes' nemesis, Moriarty, unintentionally becomes self-aware when members of the crew try to program a story capable of outsmarting Data. The moment that sentience is breathed into Moriarty (played by <a href="https://memory-alpha.fandom.com/wiki/Daniel_Davis" target="_blank">Daniel Davis</a>), he says he feels like a &ldquo;new man&rdquo;. Although he only appeared in two episodes of the series, the character left a lasting impression, and he even made one more cameo appearance in a season three episode of <em>Star&nbsp;Trek:&nbsp;Picard</em>.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/12.webp" style="float:left; height:300px; margin-right: 10px" alt="Riker holding up Data's detached arm as an exhibit in a hearing">
+				<span class="localItemTitle">12. Riker shuts off Data</span>
+				<p>(1989) When the question of Data's rights as an android is litigated in a formal hearing, Riker is placed in the unenviable position of acting as the petitioner's counsel, fighting <em>against</em> Data's rights. In the course of his research, Riker discovers that Data has an &ldquo;off switch&rdquo;, which he has kept private, only once previously sharing the information with Doctor Crusher. In a dramatic display in the courtroom, Riker removes Data's arm and then proceeds to completely deactivate him in front of everyone, for all to see that Data is just a machine. These events take place in the episode <a href="/tng/tng-s2.html#e09">TNG 2x09: The Measure of a Man</a>.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/13.webp" style="float:left; height:300px; margin-right: 10px" alt="The Enterprise-D being dwarfed by a huge cubical vessel">
+				<span class="localItemTitle">13. The <em>Enterprise</em> encounters the Borg</span>
+				<p>(1989) When <span class="Q">Q</span> flings the <em>Enterprise</em> a great distance to another part of the galaxy, the ship is dwarfed by a gigantic cube manned by cybernetic drones with a singular consciousness. Here, in <a href="/tng/tng-s2.html#e16">TNG 2x16: Q Who</a>, humanity's greatest threat in the 24th century is first encountered.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/14.webp" style="float:left; height:300px; margin-right: 10px" alt="Picard on the bridge, reciting paragraphs from a treaty on a PADD in his hand">
+				<span class="localItemTitle">14. Picard owns the Sheliak</span>
+				<p>(1989) In <a href="/tng/tng-s3.html#e02">TNG 3x02: The Ensigns of Command</a>, this moment, without explosions or hand-to-hand combat or other edge-of-your-seat action, is simply one of my favorites. In fact, not only is it actionless, but one wouldn't be entirely wrong to call it &ldquo;boring&rdquo;, with Picard going on at length with lines like &ldquo;pursuant to paragraph one thousand two hundred and ninety...&rdquo;. But that's what's so great about it. The Sheliak had been beating Picard over the head with this lengthy treaty, weaponizing the legal technicalities within the document to get their way. Picard finally found a legal loophole within the treaty that would force the Sheliak to back down, and so he gleefully reads out the exact paragraphs and subsections. And when the Sheliak balk at granting his request, Picard drops the oh-so-satisfying bomb, &ldquo;Then I hereby declare this treaty in abeyance&rdquo; and cuts off communication before the Sheliak can respond. It's a thing of beauty.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/15.webp" style="float:left; height:300px; margin-right: 10px" alt="Guinan lifting a fork in the air, preparing to stab Q's hand with it">
+				<span class="localItemTitle">15. Guinan stabs Q with a fork</span>
+				<p>(1990) In <a href="/tng/tng-s3.html#e13">TNG 3x13: Deja Q</a>, after <span class="Q">Q</span> appears on the <em>Enterprise</em> claiming that he has lost his powers, Guinan takes it upon herself to test his claim by stabbing him with a nearby fork. When Q cries out in pain, Guinan seems satisfied, saying &ldquo;Seems human enough to me&rdquo;. This rivalry between Q and Guinan is explored even further in <a href="/pic/pic-s2.html"><em>Star Trek: Picard</em> Season 2</a>.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/16.webp" style="float:left; height:300px; margin-right: 10px" alt="Worf holding a beverage in Ten Forward">
+				<span class="localItemTitle">16. Worf tries prune juice for the first time</span>
+				<p>(1990) This unassuming moment comes from one of the best episodes of the entire series, <a href="/tng/tng-s3.html#e15">TNG 3x15: Yesterday's Enterprise</a>, and it actually has almost nothing to do with the main story. This episode is remembered for its grim alternate timeline, the introduction of the <em>Enterprise</em>&#8209;C, and the return of Tasha Yar, so one could easily forget that in the opening teaser, Guinan introduces Worf to prune juice, which he immediately dubs a &ldquo;warrior's drink&rdquo;. Worf's love of prune juice would continue to be an occasional running gag that would follow him even to Deep Space Nine.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/17.webp" style="float:left; height:300px; margin-right: 10px" alt="Counselor Troi standing next to a holodeck recreation of herself">
+				<span class="localItemTitle">17. Troi tells the Goddess of Empathy to &ldquo;muzzle it&rdquo;</span>
+				<p>(1990) In the episode that first introduces Lt. Reginald Barclay, <a href="/tng/tng-s3.html#e21">TNG 3x21: Hollow Pursuits</a>, some of the senior staff stroll through a holodeck scene created by the problematic junior officer. It appears that Barclay has recreated the likenesses of some of the crew and placed them in his absurd fantasy. At first, Troi cautions the others about taking it too seriously, and is herself a little amused at the whole situation &ndash; that is, until she happens upon a recreation of herself, who welcomes them with the words &ldquo;I am the Goddess of Empathy! Cast off your inhibitions and embrace love, truth, joy!&rdquo; Suddenly not in such a bemused state, Troi approaches the hologram and says, &ldquo;Muzzle&nbsp;it!&rdquo;</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/18.webp" style="float:left; height:300px; margin-right: 10px" alt="Riker, with a grim look on his face, on the bridge at red alert">
+				<span class="localItemTitle">18. &ldquo;Fire&rdquo;</span>
+				<p style="position:relative">(1990) <span class="spoilerTag" style="top:50%" onClick="displaySpoiler(this)"><em>TNG</em> &ldquo;The Best of Both Worlds&rdquo;<br>Spoiler »</span> <span class="spoilerContent"> In <a href="/tng/tng-s3.html#e26">TNG 3x26: The Best of Both Worlds (Part I)</a>, Captain Picard is assimilated by the Borg, leaving Riker in command of the <em>Enterprise</em>. When all other options are exhausted, Riker has no choice but to fire a superweapon at the Borg vessel, even though Picard is still on board. Riker essentially orders the death of his captain with one simple word, &ldquo;Fire&rdquo;, after which the screen cuts to black and then displays the words &ldquo;To Be Continued...&rdquo;  Fans had to wait over three months for Part II, to find out the consequences of Riker's order.</span></p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/19.webp" style="float:left; height:300px; margin-right: 10px" alt="Crusher tapping at the ops console, alone on the bridge at red alert">
+				<span class="localItemTitle">19. &ldquo;If there's nothing wrong with me... maybe there's something wrong with the universe!&rdquo;</span>
+				<p>(1990) Perhaps my favorite line ever uttered in all of <em>Star&nbsp;Trek</em>, Doctor Crusher sums up my feelings any time things don't go my way. After a particularly stressful day questioning her own sanity in <a href="/tng/tng-s4.html#e05">TNG 4x05: Remember Me</a>, Doctor Crusher finally comes to the conclusion that she is not crazy, so her problems must be the universe's fault!</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/20.webp" style="float:left; height:300px; margin-right: 10px" alt="Crusher teaching Data to tap dance in a traditional studio">
+				<span class="localItemTitle">20. Crusher teaches Data to tap dance</span>
+				<p>(1991) In <a href="/tng/tng-s4.html#e11">TNG 4x11: Data's Day</a>, we get insight into a somewhat-average day for Data, learning ever so slowly to trust his instincts and better interact with the humans around him. On this day, Data asks the doctor to teach him to dance. During the humorous lesson in the holodeck, Data quickly masters tap dance, but then struggles with a simple waltz. </p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/21.webp" style="float:left; height:300px; margin-right: 10px" alt="Worf, in tights, smashing a lute against a tree as La Forge, also in tights, recoils from the impact">
+				<span class="localItemTitle">21. Worf smashes Geordi's lute</span>
+				<p>(1991) After being whisked away by the God of Mischief, <span class="Q">Q</span>, to Nottingham forest and made to play out the parts of Robin Hood's merry men in <a href="/tng/tng-s4.html#e20">TNG 4x20: Qpid</a>, Worf takes a therapeutic moment to smash the lute which Geordi had been absentmindedly plucking. He hands the destroyed instrument back to La Forge and calmly says, &ldquo;Sorry&rdquo;.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/22.webp" style="float:left; height:300px; margin-right: 10px" alt="Picard and the Tamarian captain holding knives and discussing strategy on the surface of a planet">
+				<span class="localItemTitle">22. Picard establishes communication with the Children of Tama</span>
+				<p>(1991) Darmok and Jalad at Tanagra! This iconic line has been printed on T-shirts and the like. It may not have been intended to become such a memorable line, but it was repeated numerous times during the episode, and the episode itself is pretty good, making this line go down in history as synonymous with <em>The Next Generation</em>. In <a href="/tng/tng-s5.html#e02">TNG 5x02: Darmok</a>, Picard and a fellow captain from a Tamarian ship struggle to communicate while trying to work together in a pitched battle against a dangerous foe. Finally, after some time, Picard unlocks the key to understanding the Tamarian language. Sokath, his eyes open!</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/23.webp" style="float:left; height:300px; margin-right: 10px" alt="Picard, looking exhausted and with visible stubble, yelling">
+				<span class="localItemTitle">23. &ldquo;THERE... ARE... FOUR! LIGHTS!&rdquo;</span>
+				<p>(1992) If you're not too familiar with <em>TNG</em>, you may have seen this iconic line printed on a t-shirt or a coffee mug... or in a meme... and assumed it was some funny line that all the fans share as some kind of in-joke. While sometimes still used lightheartedly, the line's actual context is quite dark. In <a href="/tng/tng-s6.html#e10">Chain of Command, Part II</a>, Picard had been a prisoner of the Cardassians and subjected to both physical and psychological torture for about eight days. Gul Madred was Picard's torturer, and throughout their time together, Madred would illuminate four lights and ask Picard how many lights he saw. Madred insisted that there were five lights, and any time Picard defiantly said there were only four, Madred would subject Picard to intense pain. Finally, on the day that Picard was to be released, Madred tried once more to get Picard to capitulate and say that there were five lights despite that being clearly untrue. Picard remained in silence, staring at the lights, until the guards came to remove him. Once he knew that he was going free, Picard turned to Madred and hollered the iconic line, &ldquo;THERE...&nbsp;ARE...&nbsp;FOUR!&nbsp;LIGHTS!&rdquo;</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/24.webp" style="float:left; height:300px; margin-right: 10px" alt="Picard pointing at a smiley face he has drawn in a cloud being emitted from the warp core">
+				<span class="localItemTitle">24. Core breach smiley face</span>
+				<p>(1993) In <a href="/tng/tng-s6.html#e25">TNG 6x25: Timescape</a>, Picard, Data, Geordi, and Troi return to an <em>Enterprise</em> that has been frozen in time. In engineering, a core breach has occurred, with the explosion stopped mid-blast. Proving wrong anyone that says Captain Picard is incapable of whimsy, he takes a moment to enjoy the humor of the situation by using his finger to draw a smiley face in the deadly cloud.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/25.webp" style="float:left; height:300px; margin-right: 10px" alt="Worf holding Data's cat very awkwardly as he leaves the room">
+				<span class="localItemTitle">25. Worf sneezes in Spot's face</span>
+				<p>(1993) Poor Spot! In <a href="/tng/tng-s7.html#e06">TNG 7x06: Phantasms</a>, Data begins experiencing hallucinations that lead him to perform violent acts. Afraid that he might hurt his cat, Spot, he asks Worf to take care of the feline until Data's hallucinations stop. Worf, clearly unsure what to do with the cat, holds Spot awkwardly as he leaves Data's quarters. Just before it cuts to the next scene, Worf sneezes right in poor Spot's face in a hilarious moment that seemed almost a little uncharacteristic for <em>TNG</em>!</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/26.webp" style="float:left; height:300px; margin-right: 10px" alt="Data improvising a song at the ops console on the bridge as others watch him quizzically">
+				<span class="localItemTitle">26. Data just loves scanning for life forms</span>
+				<p>(1994) For all of his life, Data operated almost entirely without emotions (perhaps a stray one here and there). Well, finally in the film <a href="/films/generations.html"><em>Star Trek: Generations</em></a>, Data gets an upgrade that allows him to feel the full range of human emotion. The new emotions are still a little unstable, however, as Data gets used to the upgrade. Earlier in the film, he was overcome by fear and unable to help his friend, Geordi. In this scene, however, Data has learned that Geordi is all right, which puts him in a good mood. When Riker asks him to scan for life forms, Data improvises a short musical number about his love of scanning, which gets the attention of everyone on the bridge.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/27.webp" style="float:left; height:300px; margin-right: 10px" alt="The Bajoran wormhole opening before a runabout">
+				<span class="localItemTitle">27. Ben Sisko and Jadzia Dax discover the wormhole</span>
+				<p>(1993) In the series premiere of <em>Star&nbsp;Trek:&nbsp;Deep&nbsp;Space&nbsp;Nine</em>, <a href="/ds9/ds9-s1.html#e01">DS9 1x01/02: Emissary</a>, Commander Benjamin Sisko and Lieutenant Jadzia Dax discover the only known stable wormhole in the galaxy, leading them to the Gamma Quadrant and kicking off the seven-season story for the show.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/28.webp" style="float:left; height:300px; margin-right: 10px" alt="Q, reacting to having been punched in the gut">
+				<span class="localItemTitle">28. Sisko punches Q</span>
+				<p>(1993) In <a href="/ds9/ds9-s1.html#e07">DS9 1x07: Q-less</a>, Sisko establishes himself as a different kind of commanding officer, saying &ldquo;I'm not Picard&rdquo; after having punched <span class="Q">Q</span> rather than putting up with his antics.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/29.webp" style="float:left; height:300px; margin-right: 10px" alt="Bashir, Sisko, Kira, and Dax observing a little girl playing hopscotch">
+				<span class="localItemTitle">29. Allamaraine!</span>
+				<p>(1993) The senior staff at DS9 are forced to play games by their visitors, the Wadi, and those games include a bit of a hopscotch-and-rhyme challenge. I can't imagine why <a href="/ds9/ds9-s1.html#e10">DS9 1x10: Move Along Home</a> is not a well-liked episode, unless people didn't enjoy watching four grown adults play hopscotch! &ldquo;Allamaraine, count to four, Allamaraine, then three more. Allamaraine, if you can see, Allamaraine, you'll come with me!&rdquo;</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/30.webp" style="float:left; height:300px; margin-right: 10px" alt="A Cardassian in a holding cell holding a cloth over his face">
+				<span class="localItemTitle">30. A Cardassian war criminal awaits execution</span>
+				<p>(1993) Perhaps the first great episode of <em>DS9</em>, <a href="/ds9/ds9-s1.html#e19">DS9 1x19: Duet</a> marks an important moment of growth for Kira, as she begins to realize that the brutal Cardassians who occupied her homeworld for fifty years might not all be deserving of hatred. Kira is assigned to interrogate a Cardassian prisoner named Marritza, played by <a href="https://memory-alpha.fandom.com/wiki/Harris_Yulin" target="_blank">Harris Yulin</a>, and their interaction is what makes this episode a bit of a masterpiece. In this moment, Marritza covers his face with a cloth as he says that he awaits execution.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/31.webp" style="float:left; height:300px; margin-right: 10px" alt="Kira, face-to-face with the Mirror Universe version of herself">
+				<span class="localItemTitle">31. Kira crosses over to the Mirror Universe</span>
+				<p>(1994) <a href="/ds9/ds9-s2.html#e23">DS9 2x23: Crossover</a>: Many years after Kirk's accidental trip to the Mirror Universe, Major Kira finds herself in the upside-down, slightly eviler version of her own reality, and comes face to face with... herself. This episode kicked off a five-episode serial about the alternate universe in <em>DS9</em> which followed up on Kirk's original story.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/32.webp" style="float:left; height:300px; margin-right: 10px" alt="Kira and O'Brien holding flowers and making peace signs with their fingers">
+				<span class="localItemTitle">32. Kira and O'Brien briefly visit 1967 Earth</span>
+				<p>(1995) <a href="/ds9/ds9-s3.html#e11">DS9 3x12: Past Tense, Part II</a>: While searching for Sisko, Bashir, and Dax, who had been lost in time on Earth, Kira and O'Brien briefly appear in 1967 where they're provided with flowers by a young hippie couple flashing peace signs. In a moment of bad timing, Kira and O'Brien are beamed away right in front of the couple's eyes. The hippies are impressed and, since there was no contamination of the timeline, it's safe to assume that they were probably a little zooted at the time.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/33.webp" style="float:left; height:300px; margin-right: 10px" alt="O'Brien in a Jefferies tube looking shocked">
+				<span class="localItemTitle">33. O'Brien vehemently denies flirting with a Cardassian scientist</span>
+				<p>(1995) In <a href="/ds9/ds9-s3.html#e15">DS9 3x15: Destiny</a>, O'Brien works with a Cardassian scientist named Gilora. Their relationship is strained, with Gilora not really giving O'Brien any sort of equal partnership in the work. While working in a Jefferies tube, Gilora's demeanor seems to have changed as she is now showing interest in the Chief. When she finds out that O'Brien is married, she says &ldquo;Then why have you been leading me to believe that you... wanted me?&rdquo; and the Chief's honest response makes me laugh every time, &ldquo;I haven't!&rdquo;</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/34.webp" style="float:left; height:300px; margin-right: 10px" alt="Garak sipping a glass of root beer while Quark awaits his reaction">
+				<span class="localItemTitle">34. Quark asks Garak to try root beer</span>
+				<p>(1995) The season 4 premiere of <em>DS9</em>, <a href="/ds9/ds9-s4.html#e01">DS9 4x01/02: The Way of the Warrior</a> was a memorable one, introducing Worf to the show and setting a new tone for the next four seasons. One small gem in this episode is a simple scene between Quark and Garak at the bar, when Quark asks for Garak's thoughts on root beer. More than just a beverage in this context, the two use the sweet, bubbly drink as a metaphor for the Federation.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/35.webp" style="float:left; height:300px; margin-right: 10px" alt="Worf, Quark, Bashir, and O'Brien in Quark's bar">
+				<span class="localItemTitle">35. &ldquo;Now?!&rdquo;</span>
+				<p>(1996) In <a href="/ds9/ds9-s4.html#e17">DS9 4x17: Accession</a>, Quark tells Worf the good news: O'Brien's wife Keiko is going to have another baby! Worf immediately responds with a very concerned, &ldquo;Now?!&rdquo; Poor Worf! During an emergency on the <em>Enterprise</em>&#8209;D in <a href="/tng/tng-s5.html#e05">TNG 5x05: Disaster</a>, Worf had to deliver Keiko's first baby while they were trapped in the ship's bar, and apparently the event was a bit traumatizing for him. The idea of being present in the bar when Keiko is having another child was a bit too much for him to bear.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/36.webp" style="float:left; height:300px; margin-right: 10px" alt="Sisko and Kirk conversing on the bridge of the original Enterprise while Uhura watches">
+				<span class="localItemTitle">36. Sisko gets Kirk's signature</span>
+				<p>(1996) The crew of the <em>Defiant</em> accidentally go back in time to James Kirk's era and must solve a mystery before it's too late, in <a href="/ds9/ds9-s5.html#e06">DS9 5x06: Trials and Tribble-ations</a>. Sisko insists that the crew be very cautious to avoid inadvertently altering the timeline while they're in the past, but after their mission was a success, Sisko takes a chance by posing as a lieutenant and getting Kirk's sign-off on some ship's paperwork.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/37.webp" style="float:left; height:300px; margin-right: 10px" alt="A fleet of hundreds of Starfleet ships">
+				<span class="localItemTitle">37. Starfleet engages the Dominion en route to retake Deep Space Nine</span>
+				<p>(1997) <a href="/ds9/ds9-s6.html#e06">DS9 6x06: Sacrifice of Angels</a> marks an important change in <em>Star&nbsp;Trek</em> visual effects production. The massive space battle between the Federation and the Dominion/Cardassian fleet in this episode was envisioned to involve <em>hundreds</em> of ships, making their traditional method of motion-control filming of physical miniatures impractical. This was the first <em>Trek</em> episode to exclusively use CGI for its battle scenes, and the results are quite impressive for their time.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/38.webp" style="float:left; height:300px; margin-right: 10px" alt="Keevan looking thoroughly disappointed">
+				<span class="localItemTitle">38. &ldquo;I hate Ferengi&rdquo;</span>
+				<p>(1997) When the Vorta named Keevan is taken as a prisoner exchange for Quark's mother, he must endure the antics of an eclectic group of ill-prepared Ferengi. Clumsy mistake after clumsy mistake, Keevan's nightmare culminates in <a href="/ds9/ds9-s6.html#e10">DS9 6x10: The Magnificent Ferengi</a> when he is accidently shot and killed by a poorly-aimed rifle. His last words before collapsing to the floor: &ldquo;I <em>hate</em> Ferengi&rdquo;.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/39.webp" style="float:left; height:300px; margin-right: 10px" alt="Benny, with fists balled up and teeth gritted, sobbing">
+				<span class="localItemTitle">39. Benny's breakdown</span>
+				<p>(1998) <a href="/ds9/ds9-s6.html#e13">DS9 6x13: Far Beyond the Stars</a> is a bit of a departure from the norm on <em>Deep&nbsp;Space&nbsp;Nine</em>, but it is a glorious departure. The crew of the space station are transported to 1950s Earth where they play the roles of science-fiction writers. In this emotionally-charged scene, Benny (Ben Sisko) is fired from the writing staff when an executive didn't approve of his story which featured a black man in a prominent role. Benny's breakdown is one of those heart-wrenching scenes that you'll never forget.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/40.webp" style="float:left; height:300px; margin-right: 10px" alt="Luther Sloan in an all-black uniform">
+				<span class="localItemTitle">40. Luther Sloan reveals himself</span>
+				<p>(1998) I suppose this is a bit of a spoiler for the episode <a href="/ds9/ds9-s6.html#e18">DS9 6x18: Inquisition</a>, which tells a story about Luther Sloan, posing as Starfleet Internal Affairs, and his obsessive interrogation of Dr. Bashir. After enduring Sloan's attitude all day long, Dr. Bashir is finally made privy to the truth: Sloan actually works for the shadowy black-ops division of Starfleet Intelligence known as Section 31. This was the episode which first introduced Section 31 into the franchise, and its story would continue to be told in other series like <em>Enterprise</em>, <em>Discovery</em>, and <em>Picard</em>. You would think the clandestine organization would play an important role in the straight-to-streaming film <a href="/films/section31.html"><em>Star Trek: Section 31</em></a>, but if you'll excuse the editorializing for a moment, the connection between that film and the actual Section 31 is entirely arbitrary.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/41.webp" style="float:left; height:300px; margin-right: 10px" alt="A Romulan Senator holding up a blue rod and looking angry">
+				<span class="localItemTitle">41. &ldquo;It's a faaaake!&rdquo;</span>
+				<p>(1998) This often-memed moment from <a href="/ds9/ds9-s6.html#e19">DS9 6x19: In the Pale Moonlight</a> is remembered for the absurdity of its delivery. The episode is an iconic one, showing the great lengths that Sisko is willing to go to win the war, even at the cost of his own self-respect. It's a bit of a cautionary tale about slippery slopes, and it has a strong moral message. In this critical moment of the story, Sisko attempts to pass off a forgery to a Romulan Senator, and his plans are crushed when the Senator successfully determines that... &ldquo;It's a faaaake!&rdquo;</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/42.webp" style="float:left; height:300px; margin-right: 10px" alt="Nog lying on a medical cot">
+				<span class="localItemTitle">42. Nog loses a leg</span>
+				<p>(1998) In another controversial episode, <a href="/ds9/ds9-s7.html#e08">DS9 7x08: The Siege of AR-558</a>, <em>DS9</em> explores more dark themes that some found to be antithetical to <em>Star&nbsp;Trek</em>'s primarily-optimistic viewpoints. However, this story unapologetically looks at the horrors of war in a very realistic way, and I don't think it's something we should pretend doesn't happen, just to preserve the optimistic story. While under siege by the Jem'Hadar, Nog is hit during a skirmish, and the doctor has no choice but to amputate his leg. Since this is the 24th century, he is later able to receive a new leg at a hospital, but the trauma of what happened to him will carry on to a future episode that will look into the truths about PTSD.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<div class="spoilerTag" onClick="displaySpoiler(this)"><em>DS9</em> Series Finale<br>Spoiler »</div>
+				<div class="spoilerContent">
+					<img src="images/2026-09-08/43.webp" style="float:left; height:300px; margin-right: 10px" alt="Kai Winn Adami burning alive in hellfire">
+					<span class="localItemTitle">43. Winn burns alive in hellfire</span>
+					<p>(1999) Too good for her, I say! Winn Adami was an insidious villain throughout the entire seven seasons of <em>Deep&nbsp;Space&nbsp;Nine</em>, constantly ruining our heroes' plans and being a constant frustration. In the series finale, <a href="/ds9/ds9-s7.html#e25">DS9 7x25/26: What You Leave Behind</a>, Winn finally gets what's coming to her in what should have been a satisfying comeuppance for the horrible person: she is literally burned alive in the hellfire of the Pah-Wraiths. Still, it somehow just doesn't feel like <em>quite enough</em>... like she deserved a worse fate, somehow.</p>
+				</div>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/44.webp" style="float:left; height:300px; margin-right: 10px" alt="The USS Voyager being swept away by an enormous anomaly">
+				<span class="localItemTitle">44. Voyager is swept away to the Delta Quadrant</span>
+				<p>(1995) In the series opener <a href="/voy/voy-s1.html#e01">VOY 1x01/02: Caretaker</a>, the USS <em>Voyager</em> is catapulted to the other side of the galaxy, kicking off their story as they begin the 70-year journey back to Earth.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/45.webp" style="float:left; height:300px; margin-right: 10px" alt="Two large salamander-like creatures on a sandy dune">
+				<span class="localItemTitle">45. Janeway and Paris have salamander-babies</span>
+				<p>(1996) There was obviously no way that this moment wouldn't have made this subjective list. In what is regarded as the worst episode of <em>Voyager</em>, <a href="/voy/voy-s2.html#e15">VOY 2x15: Threshold</a>, Tom Paris and Captain Janeway travel at Warp 10, that is, infinite velocity, a mathematical concept that somehow became a reality. And since they occupied every point in the universe simultaneously (yes, seriously), that obviously caused them both to hyper-evolve. Now, we know that populations involve, not individuals, but this episode throws science right out the airlock! After &ldquo;evolving&rdquo; into clearly inferior salamander-like creatures, Tom and Janeway decide to have babies. Obviously since they evolved, this was a well-reasoned decision made by very self-aware, superior brains, and not some instinct-driven animal behavior! Right? <em>Right??</em></p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/46.webp" style="float:left; height:300px; margin-right: 10px" alt="Commander Riker and Captain Janeway in Voyager's conference room">
+				<span class="localItemTitle">46. Riker meets Captain Janeway</span>
+				<p>(1996) After <em>Voyager</em> was lost in the Delta Quadrant, I bet you lost all hope for any crossover episodes. Well, fear not! <a href="/voy/voy-s2.html#e18">VOY 2x18: Death Wish</a> gives us a crossover with Commander William Riker from <em>TNG</em> all thanks to a little omnipotent power from <span class="Q">Q</span>!</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/47.webp" style="float:left; height:300px; margin-right: 10px" alt="Janeway, looking grim, and two security officers escorting Tuvix to sickbay">
+				<span class="localItemTitle">47. Janeway murders Tuvix</span>
+				<p>(1996) When a wacky transporter accident combines the DNA and memories of the ship's two most polar-opposite members, Tuvok and Neelix, in <a href="/voy/voy-s2.html#e24">VOY 2x24: Tuvix</a>, Janeway must make a command decision about who lives and who dies... sorry Tuvix, you're on the chopping block! <em>Star&nbsp;Trek:&nbsp;Lower&nbsp;Decks</em> famously revisited this story in <a href="/low/low-s4.html#e01">LOW 4x01: Twovix</a>.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/48.webp" style="float:left; height:300px; margin-right: 10px" alt="Tuvok serving tea to Sulu on the bridge of the USS Excelsior">
+				<span class="localItemTitle">48. Tuvok serves tea to Captain Sulu</span>
+				<p>(1996) Janeway joins Tuvok in a journey back through his memory, back to when he was an ensign under the command of Captain Hikaru Sulu. In <a href="/voy/voy-s3.html#e02">VOY 3x02: Flashback</a>, Tuvok serves tea to the captain on the bridge, and then after Sulu makes a joke about Tuvok currying favor for a promotion, he logically denies it.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/49.webp" style="float:left; height:300px; margin-right: 10px" alt="Tom Paris shaking hands with Rain Robinson in her astronomy lab">
+				<span class="localItemTitle">49. Tom thinks Rain Robinson's lab is &ldquo;groovy&rdquo;</span>
+				<p>(1996) When the crew of <em>Voyager</em> travels back in time to 1996 in <a href="/voy/voy-s3.html#e08">VOY 3x08 &amp; 3x09: Future's End</a>, they have a little bit of trouble fitting in. No one tries harder and still gets things wrong like Tom Paris, who uses all of his knowledge of &ldquo;ancient&rdquo; Earth slang, but is a few decades off with his lingo. Rain Robinson (played by <a href="https://memory-alpha.fandom.com/wiki/Sarah_Silverman" target="_blank">Sarah Silverman</a>) finds Tom's mistakes to be highly suspicious, but also a bit charming.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/50.webp" style="float:left; height:300px; margin-right: 10px" alt="A fully-Borg Seven of Nine looking shocked with Janeway lurking in the background">
+				<span class="localItemTitle">50. Seven of Nine is severed from the Borg collective</span>
+				<p>(1997) Similar to the season four refresh in <em>DS9</em>, <em>Voyager</em> had its own makeover in its season four opener <a href="/voy/voy-s4.html#e01">VOY 4x01: Scorpion, Part II</a>. After temporarily forming a truce with the Borg, Janeway works with a drone with the designation Seven of Nine to battle their mutual enemy. Janeway's first officer is highly skeptical at the alliance, and convinces Janeway to make contingency plans for bad outcomes. When Seven of Nine attempts to take over the ship, Janeway puts her plan into action, severing the drone from the collective. Seven of Nine would go on to become part of the crew while constantly struggling to regain her humanity.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/51.webp" style="float:left; height:300px; margin-right: 10px" alt="The warp core floating in space behind the USS Voyager">
+				<span class="localItemTitle">51. Voyager ejects its warp core</span>
+				<p>(1997) Not only is this event notable because it's the first time that a warp core ejection from a starship was depicted on-screen in <em>Trek</em>, but it's also a small miracle that it actually worked! After all, it seems like, for maximum drama, whenever someone needs to eject the warp core, the ejection systems are always damaged or offline! This impressively successful ejection occurs in <a href="/voy/voy-s4.html#e03">VOY 4x03: Day of Honor</a>.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/52.webp" style="float:left; height:300px; margin-right: 10px" alt="Janeway in a stained uniform with tousled hair and burn marks on her arms and face">
+				<span class="localItemTitle">52. Janeway relieved of command</span>
+				<p>(1997) In <a href="/voy/voy-s4.html#e08">VOY 4x09: Year of Hell, Part II</a>, after nearly a year of constant attacks by the Krenim Imperium, Janeway takes greater and greater risks to keep the ship together. After refusing to remain in The Doctor's care after receiving severe burns, The Doctor has no choice: &ldquo;Captain Kathryn Janeway, under Starfleet Medical Regulation 121 Section A, I, the Chief Medical Officer, do hereby relieve you of your active command, effective immediately&rdquo;. Janeway then refuses to comply with The Doctor's order and says she'll happily face a court martial once she gets the crew home. Fortunately for Janeway, this all took place in an alternate timeline, so the failure to follow orders never appears on her record.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/53.webp" style="float:left; height:300px; margin-right: 10px" alt="The Doctor covering the mouth of the EMH Mark II to keep him quiet">
+				<span class="localItemTitle">53. The Doctor meets the EMH Mark II</span>
+				<p>(1998) After travelling halfway across the galaxy through an alien communications network in <a href="/voy/voy-s4.html#e14">VOY 4x14: Message in a Bottle</a>, The Doctor finds himself on an experimental Starfleet ship with a new Emergency Medical Hologram. Played by <a href="https://memory-alpha.fandom.com/wiki/Andy_Dick" target="_blank">Andy Dick</a>, the EMH Mark II and The Doctor constantly antagonize each other while still having to work together to retake the ship from Romulans.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/54.webp" style="float:left; height:300px; margin-right: 10px" alt="Neelix looking very confused in sickbay where he finds The Doctor and Naomi Wildman">
+				<span class="localItemTitle">54. Neelix is caught off guard by the Doctor's happiness to see him</span>
+				<p>(1998) In a rare moment of self-awareness in <a href="/voy/voy-s5.html#e05">VOY 5x05: Once Upon a Time</a>, Neelix is flummoxed when The Doctor cheerily says, &ldquo;Neelix! What a pleasure to see you!&rdquo;. The Doctor was happy that Neelix had arrived to take over care for Naomi, who had started asking The Doctor uncomfortable questions about her missing mother, but the look on Neelix's face says it all: &ldquo;No one is ever excited to see me, what is The Doctor on about??&rdquo;</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/55.webp" style="float:left; height:300px; margin-right: 10px" alt="Janeway dressed as Arachnia, speaking with Dr. Chaotica in a black-and-white laboratory">
+				<span class="localItemTitle">55. Arachnia uncorks the pheromones</span>
+				<p>(1999) <a href="/voy/voy-s5.html#e12">VOY 5x12: Bride of Chaotica!</a> is a delightful romp in a campy 1930s sci-fi melodrama, parodying <em>Voyager</em>'s own genre. In it, Captain Janeway must play the role of Arachnia, Queen of the Spider People. Her mission? To lull Dr. Chaotica into a sense of security so he'll lower his lightning shield, allowing Captain Proton (Tom Paris) to destroy Chaotica's Death Ray and save the galaxy!</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/56.webp" style="float:left; height:300px; margin-right: 10px" alt="The Doctor and Seven fo Nine singing in the cargo bay">
+				<span class="localItemTitle">56. Seven of Nine and The Doctor sing &ldquo;You Are My Sunshine&rdquo;</span>
+				<p>(1999) In <a href="/voy/voy-s5.html#e22">VOY 5x22: Someone to Watch Over Me</a>, The Doctor provides Seven with lessons in romantic affairs, and together they sing a duet of &ldquo;You Are My Sunshine&rdquo; where The Doctor starts to realize that he, himself, is falling for Seven. This touching moment between the two is a memorable one.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/57.webp" style="float:left; height:300px; margin-right: 10px" alt="The Doctor on the bridge, wearing a red uniform and captain's pips">
+				<span class="localItemTitle">57. The Doctor fires the photonic cannon</span>
+				<p>(1999) The Doctor is known for having a touch of arrogance when it comes to his own abilities. In <a href="/voy/voy-s6.html#e04">VOY 6x04: Tinker Tenor Doctor Spy</a>, he takes it a step further when he starts to daydream about being a hero. In his fantasy, he becomes the acting captain of the ship after Janeway is killed, and he successfully thwarts an attack by the Borg by firing his &ldquo;photonic cannon&rdquo;, a devastating weapon of his own design.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/58.webp" style="float:left; height:300px; margin-right: 10px" alt="Dr. Zimmerman looking very frustrated with The Doctor">
+				<span class="localItemTitle">58. The Doctor deactivates the iguana</span>
+				<p>(2000) The Doctor visits his creator in <a href="/voy/voy-s6.html#e24">VOY 6x24: Life Line</a> after learning that he's terminally ill. Hoping to provide a unique medical viewpoint, The Doctor has his progress stunted at every turn by the stubborn Dr. Zimmerman. Surrounded by Zimmerman's holographic assistants and pets, The Doctor eventually has enough and says, &ldquo;Computer, deactivate iguana&rdquo;, removing one of the beloved pets from the room, much to Zimmerman's frustration.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<img src="images/2026-09-08/59.webp" style="float:left; height:300px; margin-right: 10px" alt="The Doctor with a very guilty look on his face">
+				<span class="localItemTitle">59. After indulging a little too much while in control of Seven's body, the Doctor has some regrets</span>
+				<p>(2000) When captured by a race of aliens who are intolerant of holograms in <a href="/voy/voy-s7.html#e07">VOY 7x07: Body and Soul</a>, The Doctor has no choice but to hide in Seven of Nine's implants, giving him control of her body. After indulging in food and drink while controlling her body, not to mention becoming sexually aroused, The Doctor returns to his normal self to find that Seven of Nine is none too pleased by his actions.</p>
+			</div>
+			
+			<div class="localItemDiv">
+				<div class="spoilerTag" onClick="displaySpoiler(this)"><em>VOY</em> Series Finale<br>Spoiler »</div>
+				<div class="spoilerContent">
+					<img src="images/2026-09-08/60.webp" style="float:left; height:300px; margin-right: 10px" alt="The USS Voyager being escorted to Earth by several other Starfleet ships">
+					<span class="localItemTitle">60. Voyager makes it home</span>
+					<p>(2001) I suppose it was never a guarantee that they'd make it home by the end of the series, but <a href="/voy/voy-s7.html#e25">VOY 7x25/26: Endgame</a> does effectively wrap up <em>Voyager</em>'s story with a satisfying &ldquo;happily ever after&rdquo; right alongside a huge victory. Wouldn't it have been a let-down if <em>Voyager</em> just got blown up and everyone died in the finale? Ha! I wonder whatever happened to all those Ocampa who were sealed underground by the Caretaker? Oh well! Our main characters are home!</p>
+				</div>
+			</div>
+		
+		</div>
+		<p>&nbsp;</p>
+		<p>I could easily pick sixty more moments, but these will have to do for today. Once again, Happy Birthday to <em>Star Trek</em>!◼</p>
+		
+	</div>
+	
+</div> <!-- content div ends here -->
+<p>&nbsp;</p>
+<div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
+<div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
+<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
+<div id="TTDIV"></div>
+
+
+<div id="bottomBorder"></div>
+</body>
+</html>
