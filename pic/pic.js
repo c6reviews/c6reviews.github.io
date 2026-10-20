@@ -199,6 +199,10 @@ function displaySpoilerContent(episodeID,caller) {
 			} else {
 				content.style.display = "inline";
 			}
+			content.removeAttribute("aria-hidden");
+			content.querySelectorAll("[tabindex='-1']").forEach(element => {
+				element.removeAttribute("tabindex");
+			});
 		} else {
 			content.style.display = "none";
 		}
@@ -225,6 +229,10 @@ function alwaysShowFullReview(caller) {
 			} else {
 				content.style.display = "inline";
 			}
+			content.removeAttribute("aria-hidden");
+			content.querySelectorAll("[tabindex='-1']").forEach(element => {
+				element.removeAttribute("tabindex");
+			});
 		});
 		if (getCookie('consent_preferences') == 'granted') {
 			setCookie('PICallSpoilers', 'true', 90);

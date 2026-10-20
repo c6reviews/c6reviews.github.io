@@ -132,6 +132,32 @@ function scrollToTop() {
 	});
 } 
 
+/* -------------------------------------------------- SPOILERS -------------------------------------------------- */
+
+function displaySpoiler(caller) {
+	
+	var content = caller.parentNode.querySelector('.spoilerContent');
+	var style = getComputedStyle(content);
+
+	if (style.filter === "blur(6px)") {
+		content.style.filter = "none";
+		content.style.userSelect = "auto";
+		content.style.pointerEvents = "auto";
+		content.removeAttribute("aria-hidden");
+		content.querySelectorAll("[tabindex='-1']").forEach(element => {
+			element.removeAttribute("tabindex");
+		});
+	} else {
+		content.style.filter = "blur(6px)";
+		content.style.userSelect = "none";
+		content.style.pointerEvents = "none";
+		content.setAttribute("aria-hidden", "true");
+		content.querySelectorAll("a, button, input, select, textarea").forEach(element => {
+			element.setAttribute("tabindex", "-1");
+		});
+	}
+}
+
 /* -------------------------------------------------- ONSCROLL -------------------------------------------------- */
    
 window.onscroll = function scrollFunction() {

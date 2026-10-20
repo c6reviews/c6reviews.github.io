@@ -45,7 +45,8 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="main.css?v=1.6.4">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="main.css?v=1.6.5">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <meta property="og:title" content="Updates | C6Reviews">
@@ -54,8 +55,8 @@
 <meta property="og:url" content="https://c6reviews.com/updates.html">
 <meta property="og:description" content="Site update log for C6Reviews.com">
 
-<script src="/main.js?v=1.6.4"></script>
-<script src="cookies.js?v=1.6.4"></script>
+<script src="/main.js?v=1.6.5"></script>
+<script src="cookies.js?v=1.6.5"></script>
 <script>
 	function scrollToTop() {
 		window.scrollTo({
@@ -118,6 +119,32 @@
 			<th style="width:170px;">Date</th>
 			<th>Version</th>
 			<th style="text-align:left;padding-left: 35px;">Description</th>
+		</tr>
+		<tr>
+			<td><span class="updateDate">October 20, 2026</span></td>
+			<td>1.6.5</td>
+			<td>
+				<ul>
+					<li>Added an <strong>episode scoring philosophy</strong> section to each series' home page to give some context on whether I've watched the series a hundred times or only twice.</li>
+					<li><strong>New character timeline</strong> added: <a href="/characters/odo.html">Odo</a>.</li>
+					<li>Addition of and improvements to <strong>spoiler content</strong> throughout the site:<br>
+						<ul style="font-size:0.8125rem;margin-top:8px;line-height:.8">
+							<li>Major spoilers on character timelines have been obfuscated.</li>
+							<li><em>The&nbsp;Wrath&nbsp;of&nbsp;Khan</em> spoilers in the <em>Into&nbsp;Darkness</em> review have been obfuscated.</li>
+							<li>All hidden spoiler content is now also hidden from screen readers and other assistive technologies.</li>
+						</ul>
+					</li>
+					<li style="line-height:1"><strong>All <em>TOS</em> links fixed</strong><br>
+						<span style="font-size:0.8125rem;font-style:italic;">In numerous places, I conflated TOS episode air numbers with production numbers (thanks Memory Alpha 🙄). This site will standardize by using the order in which TOS aired, not the order in which they were produced. All TOS links now have a pop-up containing the production number when you hover over them.</span>
+					</li>
+					<li style="line-height:1"><strong>Fixed a <em>ton</em> of tiny mistakes</strong><br>
+						<span style="font-size:0.8125rem;font-style:italic;">Of course I proofread and use a spelling and grammar checker, but those methods still managed to miss several wrong word choices and words that were missing entirely. So I admit that I had ChatGPT proofread most of the site for me to find things that are objectively incorrect. I did NOT use it to improve or change my writing in ways other than the correction of errors.</span>
+					</li>
+				</ul>
+				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
+					Using the title search box clear button now returns focus to the title search box; added missing Characters link to the nav menu for <em>Voyager</em>; fixed/prevented mobile browsers trying to turn date ranges into clickable phone numbers throughout the site; movie title graphics added to certain character timelines; made consistent capitalization of &ldquo;The Doctor&rdquo; (the character from <em>Voyager</em>), &ldquo;the Burn&rdquo; (the event in <em>Discovery</em>), and the words &ldquo;season&rdquo; and &ldquo;episode&rdquo; when used like names, e.g. &ldquo;the third episode&rdquo; versus &ldquo;Episode 3&rdquo;. I'm going to have to write my own style guide eventually.
+				</div>
+			</td>
 		</tr>
 		<tr>
 			<td><span class="updateDate">August 20, 2026</span></td>
@@ -231,7 +258,7 @@
 					<li>Site cookies now let you <strong>save some spoiler preferences</strong> (currently on the main timeline and the main spoiler toggle for <em>Star&nbsp;Trek:&nbsp;Picard</em>).</li>
 					<li>The home page now has a <strong>Quote of the Day</strong> that rotates through a pool of 31 quotes, plus some special quotes that show up on certain days.
 					<li><strong>Improvements to the Random Review box</strong> on the home page including the addition of the episode's Watch Recommendation.</li>
-					<li>Citations for <strong>songs sung by the Doctor</strong> in <em>Star&nbsp;Trek:&nbsp;Voyager</em> were added to the appropriate episodes.</li>
+					<li>Citations for <strong>songs sung by The Doctor</strong> in <em>Star&nbsp;Trek:&nbsp;Voyager</em> were added to the appropriate episodes.</li>
 				</ul>
 				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
 					Starfleet Academy tile was added to the home page; a few aesthetic fixes and improvements to the universe timeline were made, including a notification flag on the spoiler menu button when any spoilers are being shown; improved the appearance of the season/guide tiles on each series page; added the new cookie consent form and the "reset cookie preferences" link at the bottom of each page; random review box re-roll button now removes displayed episodes from the selection pool to ensure a new one each time, and pictures from series with wide aspect ratios have been zoomed and cropped for better visibility; some more source pop-ups were added to the timeline; and though it pains me greatly, I removed the colons from all mentions of <em>Star&nbsp;Trek&nbsp;Nemesis</em> since the title officially has no colon.

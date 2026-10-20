@@ -241,7 +241,27 @@
 		border: 2px solid #C0C0C0;
 		z-index: 1;
 }
-
+/* ---------------------------------------- SPOILER TAGS ---------------------------------------- */
+.spoiler{
+	
+}
+.spoilerTag{
+	font-weight: bold;
+	color: orange;
+	cursor: pointer;
+	white-space: nowrap;
+}
+.spoilerTag:hover{
+	background-color: #845600EE;
+	border-radius: 3px;
+}
+.spoilerContent{
+	filter: blur(6px);
+	color: #FFE1CA;
+	transition: 0.5s;
+	user-select: none;
+	pointer-events: none;
+}
 /* | -------------------- RATING BLOCK ELEMENTS -------------------- */
 		.myRatingDescriptionBox {
 			text-align: right;

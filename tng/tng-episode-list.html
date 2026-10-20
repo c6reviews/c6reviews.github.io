@@ -30,9 +30,10 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
-<link rel="stylesheet" href="/main.css?v=1.6.4">
-<link rel="stylesheet" href="tng.css?v=1.6.4">
-<link rel="stylesheet" href="tng-episode-list.css?v=1.6.4">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="/main.css?v=1.6.5">
+<link rel="stylesheet" href="tng.css?v=1.6.5">
+<link rel="stylesheet" href="tng-episode-list.css?v=1.6.5">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <meta property="og:title" content="TNG Episode List | C6Reviews">
@@ -41,10 +42,10 @@
 <meta property="og:url" content="https://c6reviews.com/tng/tng-episode-list.html">
 <meta property="og:description" content="A list of every episode of Star Trek: The Next Generation.">
 
-<script src="tng.js?v=1.6.4"></script>
-<script src="tng-episode-list.js?v=1.6.4"></script>
-<script src="/main.js?v=1.6.4"></script>
-<script src="/cookies.js?v=1.6.4"></script>
+<script src="tng.js?v=1.6.5"></script>
+<script src="tng-episode-list.js?v=1.6.5"></script>
+<script src="/main.js?v=1.6.5"></script>
+<script src="/cookies.js?v=1.6.5"></script>
 <title>C6 | TNG Episode List</title>
 </head>
 
@@ -86,7 +87,7 @@
 			<td><div id="filterTotalbox">Showing<br><span id="filterTotal">176</span> of 176<br>episodes</div></td>
 			<td style="padding-right:8px;vertical-align:bottom;position:relative;">
 				<div class="episodeSearchBoxContainer">
-					<input type="text" id="episodeSearchBox" placeholder="Title search" onkeyup="filterTitle()" size="28" style="height:21px"><input type="button" value="✖&#xFE0E;" class="textClearButton" onClick="document.getElementById('episodeSearchBox').value='';filterTitle()">
+					<input type="text" id="episodeSearchBox" placeholder="Title search" onkeyup="filterTitle()" size="28" style="height:21px"><input type="button" value="✖&#xFE0E;" class="textClearButton" onClick="document.getElementById('episodeSearchBox').value='';filterTitle();document.getElementById('episodeSearchBox').focus();">
 				</div>
 				<div class="filterModeContainer">
 					<span style="font-size: 12px;text-decoration:underline">Filter mode</span><br>

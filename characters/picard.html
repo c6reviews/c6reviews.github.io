@@ -25,8 +25,8 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
 <meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" href="/main.css?v=1.6.4">
-<link rel="stylesheet" href="characters.css?v=1.6.4">
+<link rel="stylesheet" href="/main.css?v=1.6.5">
+<link rel="stylesheet" href="characters.css?v=1.6.5">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <meta property="og:title" content="Jean-Luc Picard | C6Reviews">
@@ -35,8 +35,8 @@
 <meta property="og:url" content="https://c6reviews.com/characters/picard.html">
 <meta property="og:description" content="Character review for Jean-Luc Picard.">
 
-<script src="characters.js?v=1.6.4"></script>
-<script src="/main.js?v=1.6.4"></script>
+<script src="characters.js?v=1.6.5"></script>
+<script src="/main.js?v=1.6.5"></script>
 <title>C6 | Jean-Luc Picard</title>
 </head>
 
@@ -50,7 +50,7 @@
 	<div class="pageTitleContainer">
 		<div class="pageTitle">
 			<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>Jean-Luc Picard
-			<span class="pageSubtitle" style="color:red;font-size:large"><span style="text-shadow: red 0px 0px 12px">🚨</span> This page contains spoilers <span style="text-shadow: red 0px 0px 12px">🚨</span></span>
+			<span class="pageSubtitle" style="font-size:large"><span style="text-shadow: red 0px 0px 12px">🚨</span> This page contains minor spoilers. Major spoilers are hidden. <span style="text-shadow: red 0px 0px 12px">🚨</span></span>
 		</div>
 	</div>
 	<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
@@ -149,15 +149,15 @@
 		<div class="timelineItemContent"></div>
 	</div>
 
-	<div class="timeline-image right" data-year="2314" style="--offsetx:50px;--offsety:-20%">
+	<div class="timeline-image right spoilerContent" id="Yvette1" data-year="2314" style="--offsetx:50px;--offsety:-20%">
 		<img src="images/picard-mother.webp" alt="A young Picard in his pajamas">
 	</div>
 
 	<div class="timeline-item left range-event" data-year="2314" style="--highlight-color: rgba(150, 150, 0, 0.25); --highlight-line: rgb(190, 190, 70);">
 		<div class="timelineItemDate">2310-2319</div>
 		<div class="timelineItemContent">
-			<div class="timelineItemTitle">Picard's mother dies</div>
-			Some time in the 2310s, Yvette Picard &ndash; who had a history of mental health issues &ndash; died by suicide. Jean-Luc took her death hard, believing that he was responsible by letting her out of her locked room that night.<br>
+			<div class="timelineItemTitle"><span class="spoilerTag" onClick="displaySpoilerIDs('Yvette1','Yvette2','Yvette3')"><em>Picard</em> Season 2 Spoiler » </span><br><span class="spoilerContent" id="Yvette2">Picard's mother dies</span></div>
+			<span class="spoilerContent" id="Yvette3">Some time in the 2310s, Yvette Picard &ndash; who had a history of mental health issues &ndash; died by suicide. Jean-Luc took her death hard, believing that he was responsible by letting her out of her locked room that night.</span><br>
 			<a href="/pic/pic-s2.html#e07">PIC 2x07: Monsters</a><br>
 			<a href="/pic/pic-s2.html#e09">PIC 2x09: Hide and Seek</a>
 		</div>
@@ -230,7 +230,7 @@
 		<time class="timelineItemDate">2353</time>
 		<div class="timelineItemContent">
 			<div class="timelineItemTitle">Under Picard's command, Jack R. Crusher is lost in the line of duty</div>
-			Picard chose to save another life at the expense of Jack's life, and subsequently had to inform Jack's widow, Beverly Crusher. Jack and Beverly's son, Wesley, says that this was one of his earliest memories.
+			Picard chose to save another life at the expense of Jack's life, and subsequently had to inform Jack's widow, Beverly Crusher. Beverly's son, Wesley, says that this was one of his earliest memories.
 		</div>
 	</div>
 	
@@ -259,6 +259,10 @@
 		<span class="range-label"><a href="/tng/index.html"><img src="/images/tng-title.webp" style="height:5rem" alt="Star Trek: The Next Generation"></a></span>
 	</div>
 
+	<div class="timeline-image right" data-year="2364" style="--offsetx:100px;--offsety:-40%">
+		<img src="/tng/images/tng-1x01.webp" style="height:300px;" alt="Picard, face to face with Q who is wearing judges robes">
+	</div>
+
 	<div class="timeline-item left" data-year="2364">
 		<time class="timelineItemDate">2364</time>
 		<div class="timelineItemContent">
@@ -277,15 +281,15 @@
 		</div>
 	</div>
 
-	<div class="timeline-image left" data-year="2367" style="--offsetx:0px;--offsety:-20%">
+	<div class="timeline-image left spoilerContent" id="BOBW1" data-year="2367" style="--offsetx:0px;--offsety:-20%">
 		<img src="images/locutus.webp" alt="Picard, assimilated by the Borg, acting as Locutus">
 	</div>
 
 	<div class="timeline-item right" data-year="2367">
 		<time class="timelineItemDate">2367</time>
 		<div class="timelineItemContent">
-			<div class="timelineItemTitle">Battle of Wolf 359</div>
-			Picard, assimilated by the Borg and now acting under the name &ldquo;Locutus&rdquo;, destroys dozens of Federation ships and ends thousands of lives at Wolf 359, where Starfleet mounted its last stand against the Borg cube headed to Earth. For Picard, this traumatic event would have lasting psychological and social repercussions for many years.
+			<div class="timelineItemTitle"><span class="spoilerTag" onClick="displaySpoilerIDs('BOBW1','BOBW2')"><em>TNG</em> Season 3/4 Spoiler » </span>Battle of Wolf 359</div>
+			<span class="spoilerContent" id="BOBW2">Picard, assimilated by the Borg and now acting under the name &ldquo;Locutus&rdquo;, destroys dozens of Federation ships and ends thousands of lives at Wolf 359, where Starfleet mounted its last stand against the Borg cube headed to Earth. For Picard, this traumatic event would have lasting psychological and social repercussions for many years.</span>
 			<br>
 			<a href="/tng/tng-s3.html#e26">TNG 3x26 &amp; 4x01: The Best of Both Worlds</a>
 		</div>
@@ -318,16 +322,16 @@
 		</div>
 	</div>
 
-	<div class="timeline-image right" data-year="2371" style="--offsetx:0px;--offsety:0px">
+	<div class="timeline-image right spoilerContent" id="GEN1" data-year="2371" style="--offsetx:0px;--offsety:0px">
 		<img src="images/enterprise-d-destruction.webp" alt="The Enterprise-D saucer section escaping as the stardrive section explodes">
 	</div>
 
 	<div class="timeline-item left" data-year="2371">
 		<time class="timelineItemDate">2371</time>
 		<div class="timelineItemContent">
-			<div class="timelineItemTitle">Destruction of the <em>Enterprise</em></div>
-			The <em>Enterprise</em> embarks on a mission to stop Tolian Soran from destroying a star. A conflict with the Duras sisters during these events would lead to the destruction of the <em>Enterprise</em>&#8209;D.<br>
-			<a href="/films/generations.html"><em>Star Trek Generations</em></a>
+			<a href="/films/generations.html"><img src="/films/images/generations/generations-title.webp" style="height:3rem"></a><br>&nbsp;
+			<div class="timelineItemTitle"><span class="spoilerTag" onClick="displaySpoilerIDs('GEN1','GEN2','GEN3')">Spoiler » </span><span class="spoilerContent" id="GEN2">Destruction of the <em>Enterprise</em></span></div>
+			<span class="spoilerContent" id="GEN3">The <em>Enterprise</em> embarks on a mission to stop Tolian Soran from destroying a star. A conflict with the Duras sisters during these events would lead to the destruction of the <em>Enterprise</em>&#8209;D.</span>
 		</div>
 	</div>
 
@@ -338,18 +342,17 @@
 	<div class="timeline-item right" data-year="2373">
 		<time class="timelineItemDate">2373</time>
 		<div class="timelineItemContent">
-			<div class="timelineItemTitle">First Contact</div>
-			Picard takes the <em>Enterprise</em>&#8209;E back in time to Earth's first contact with an alien species in order to stop the Borg from assimilating humanity. Picard must face his greatest fear: The Borg Queen.<br>
-			<a href="/films/firstcontact.html"><em>Star Trek: First Contact</em></a>
+			<a href="/films/firstcontact.html"><img src="/films/images/firstcontact/firstcontact-title.webp" style="height:3rem"></a><br>&nbsp;<br>
+			Picard takes the <em>Enterprise</em>&#8209;E back in time to Earth's first contact with an alien species in order to stop the Borg from assimilating humanity. Picard must face his greatest fear: The Borg Queen.
 		</div>
 	</div>
 	
 	<div class="timeline-item left" data-year="2375">
 		<time class="timelineItemDate">2375</time>
 		<div class="timelineItemContent">
+			<a href="/films/insurrection.html"><img src="/films/images/insurrection/insurrection-title.webp" style="height:3rem"></a><br>&nbsp;
 			<div class="timelineItemTitle">Mission to the Briar Patch</div>
-			Picard leads the Enterprise crew on their mission to investigate what was happening among the Son'a and Ba'ku in the region of space known as the Briar Patch.<br>
-			<a href="/films/insurrection.html"><em>Star Trek: Insurrection</em></a>
+			Picard leads the Enterprise crew on their mission to investigate what was happening among the Son'a and Ba'ku in the region of space known as the Briar Patch.
 		</div>
 	</div>
 
@@ -360,9 +363,9 @@
 	<div class="timeline-item left" data-year="2379">
 		<time class="timelineItemDate">2379</time>
 		<div class="timelineItemContent">
+			<a href="/films/nemesis.html"><img src="/films/images/nemesis/nemesis-title.webp" style="height:3rem"></a><br>&nbsp;
 			<div class="timelineItemTitle">Picard vs. Shinzon</div>
-			The <em>Enterprise</em> is called to Romulus to meet the new Praetor, a young clone of Jean-Luc Picard named Shinzon.<br>
-			<a href="/films/nemesis.html"><em>Star Trek Nemesis</em></a>
+			The <em>Enterprise</em> is called to Romulus to meet the new Praetor, a young clone of Jean-Luc Picard named Shinzon.
 		</div>
 	</div>
 	

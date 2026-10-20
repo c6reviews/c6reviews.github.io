@@ -748,6 +748,10 @@ body li {
 		text-align: center;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
+		a {
+			width: fit-content;
+		}
 	}
 	#mainIndexGrid #otherGuides {
 		grid-area: 2 / 2 / 3 / 3;
@@ -1007,6 +1011,13 @@ body li {
 	}
 	.finalVerdict .tagline {
 		font-size: 0.8125rem;
+	}
+	.scoringPhilosophy {
+		background-color: #1B8ABA44;
+		width: 75%;
+		margin: 12px auto;
+		border-radius: 20px;
+		padding: 1px 12px;
 	}
 	.WTWN {
 		width: 65%;

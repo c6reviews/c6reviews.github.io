@@ -34,3 +34,14 @@ function toggleKofi() {
 		div.style.border = 'none';
 	}
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+	document.querySelectorAll(".spoilerContent").forEach(spoiler => {
+		spoiler.setAttribute("aria-hidden", "true");
+
+		spoiler.querySelectorAll("a, button, input, select, textarea").forEach(element => {
+			element.setAttribute("tabindex", "-1");
+		});
+	});
+});

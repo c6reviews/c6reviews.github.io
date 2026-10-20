@@ -99,6 +99,9 @@ html {
 	transition: 0.5s;
 	user-select: none;
 	pointer-events: none;
+	&.timeline-image {
+		filter: blur(15px);
+	}
 }
 
 /* ----------------------------------------------------------------*/

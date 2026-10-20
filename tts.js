@@ -64,7 +64,9 @@ function textToSpeech(id,text) {
 				replaceAll("Jem'Hadar","Jem huh-darr").
 				replaceAll("Kaminar","Cam-in-are").
 				replaceAll("Klingon","Kling-on").
+				replaceAll("Kwejian","Kwejohn").
 				replaceAll("Mintakan","min tokken").
+				replaceAll("Ni'Var","Nihv-are").
 				replaceAll("Qo'noS","Kro-nohs").
 				replaceAll("Reman","Reemin").
 				replaceAll("Risa","Ryza").
@@ -90,6 +92,7 @@ function textToSpeech(id,text) {
 				replaceAll(/Gul\sDukat/g,"Gull Dukaat").
 				replaceAll("Hikaru","Hik-are-ooh").
 				replaceAll("Icheb","E-chehb").
+				replaceAll("Kovich","Co-vitch").
 				replaceAll("L'Rell","la-rel").
 				replaceAll(/La\sForge/g,"LaForge").
 				replaceAll("Locutus","locude-us").
@@ -97,6 +100,7 @@ function textToSpeech(id,text) {
 				replaceAll("Me Hani Ika Hali Ka Po","Me Hani Eeka Hali Ka Po").
 				replaceAll("Nagus","Naygus").
 				replaceAll("Nhan","Nahn").
+				replaceAll("Osyraa","oh-sighruh").
 				replaceAll("Sarek","Sare-ick").
 				replaceAll("Saru","Sah-rue").
 				replaceAll("Shinzon","Shinzahn").
@@ -104,6 +108,7 @@ function textToSpeech(id,text) {
 				replaceAll("T'Pol","Tuh-paul").
 				replaceAll("Tuvok","Two-vock").
 				replaceAll("Weyoun","Way-oon").
+				replaceAll("Zareh","Zayrr-uh").
 				replaceAll("Zefram","Zefrum");
 
 			// Actors
@@ -124,11 +129,15 @@ function textToSpeech(id,text) {
 				replaceAll(/ketracel-white/gi,"ket-trah-cell-white").
 				replaceAll(/mythos/gi,"myth-ohhs").
 				replaceAll("ol'","oul").
+				replaceAll("Olatunde","Oh-lah-toon-day").
+				replaceAll("Osunsanmi","Oh-soon-saan-mee").
 				replaceAll("PADD","pad").
 				replaceAll(/\bPart\sI\b/g,"Part 1").
 				replaceAll(/\bParts\sI\b/g,"Parts 1").
 				replaceAll("Qowat Milat","Co-watt Mil-aht").
 				replaceAll(/retconned/gi,"rett-conned").
+				replaceAll(/ribidium/gi,"rib-idiom").
+				replaceAll(/T'Kal-in-ket/gi,"tickall-in-ket").
 				replaceAll(/tricorder/gi,"try-corder").
 				replaceAll(/trilithium/gi,"try-lithium").
 				replaceAll(/voyage/gi,"voyij").

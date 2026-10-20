@@ -25,8 +25,8 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
 <meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" href="/main.css?v=1.6.4">
-<link rel="stylesheet" href="characters.css?v=1.6.4">
+<link rel="stylesheet" href="/main.css?v=1.6.5">
+<link rel="stylesheet" href="characters.css?v=1.6.5">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <meta property="og:title" content="Data| C6Reviews">
@@ -35,14 +35,8 @@
 <meta property="og:url" content="https://c6reviews.com/characters/data.html">
 <meta property="og:description" content="Character review for Data.">
 
-<script src="characters.js?v=1.6.4"></script>
-<script src="/main.js?v=1.6.4"></script>
-
-<script>
-	document.querySelector('.characterTimeline').style.setProperty(
-		'--pixels-per-year',`${PIXELS_PER_YEAR}px`
-	);
-</script>
+<script src="characters.js?v=1.6.5"></script>
+<script src="/main.js?v=1.6.5"></script>
 
 <style>
 .characterTimeline::before {
@@ -77,7 +71,7 @@
 	<div class="pageTitleContainer">
 		<div class="pageTitle">
 			<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>Data
-			<span class="pageSubtitle" style="color:red;font-size:large"><span style="text-shadow: red 0px 0px 12px">🚨</span> This page contains spoilers <span style="text-shadow: red 0px 0px 12px">🚨</span></span>
+			<span class="pageSubtitle" style="font-size:large"><span style="text-shadow: red 0px 0px 12px">🚨</span> This page contains minor spoilers. Major spoilers are hidden. <span style="text-shadow: red 0px 0px 12px">🚨</span></span>
 		</div>
 	</div>
 	<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
@@ -178,7 +172,7 @@
 	<div class="timeline-item left" data-year="2345">
 		<time class="timelineItemDate">2345</time>
 		<div class="timelineItemContent">
-			<div class="timelineItemTitle">Data graduates from the Academy; assigned to the USS <em>Trieste</em></div>
+			<div class="timelineItemTitle">Data graduates from the Academy, is assigned to the USS <em>Trieste</em></div>
 			Data graduated with honors in exobiology and probability mechanics. He was assigned to the USS <em>Trieste</em> where he spent three years as an ensign and twelve as a lieutenant.
 		</div>
 	</div>
@@ -288,16 +282,16 @@
 		</div>
 	</div>
 
-	<div class="timeline-image right" data-year="2371" style="--offsetx:0px;--offsety:0px">
+	<div class="timeline-image right spoilerContent" id="GEN1" data-year="2371" style="--offsetx:0px;--offsety:0px">
 		<img src="images/enterprise-d-destruction.webp" alt="The Enterprise-D saucer section escaping as the stardrive section explodes">
 	</div>
 
 	<div class="timeline-item left" data-year="2371">
 		<time class="timelineItemDate">2371</time>
 		<div class="timelineItemContent">
-			<div class="timelineItemTitle">Destruction of the <em>Enterprise</em></div>
-			The <em>Enterprise</em> embarks on a mission to stop Tolian Soran from destroying a star. A conflict with the Duras sisters during these events would lead to the destruction of the <em>Enterprise</em>&#8209;D.<br>
-			<a href="/films/generations.html"><em>Star Trek Generations</em></a>
+			<a href="/films/generations.html"><img src="/films/images/generations/generations-title.webp" style="height:3rem"></a><br>&nbsp;
+			<div class="timelineItemTitle"><span class="spoilerTag" onClick="displaySpoilerIDs('GEN1','GEN2','GEN3')">Spoiler » </span><span class="spoilerContent" id="GEN2">Destruction of the <em>Enterprise</em></span></div>
+			<span class="spoilerContent" id="GEN3">The <em>Enterprise</em> embarks on a mission to stop Tolian Soran from destroying a star. A conflict with the Duras sisters during these events would lead to the destruction of the <em>Enterprise</em>&#8209;D.</span>
 		</div>
 	</div>
 
@@ -308,18 +302,18 @@
 	<div class="timeline-item right" data-year="2373">
 		<time class="timelineItemDate">2373</time>
 		<div class="timelineItemContent">
+			<a href="/films/firstcontact.html"><img src="/films/images/firstcontact/firstcontact-title.webp" style="height:3rem"></a><br>&nbsp;<br>
 			<div class="timelineItemTitle">Data captured by the Borg Queen</div>
-			After going back in time with the <em>Enterprise</em>&#8209;E to stop the Borg from assimilating humanity, Data is captured by the Borg Queen and partially made to look more human.<br>
-			<a href="/films/firstcontact.html"><em>Star Trek: First Contact</em></a>
+			After going back in time with the <em>Enterprise</em>&#8209;E to stop the Borg from assimilating humanity, Data is captured by the Borg Queen and partially made to look more human.
 		</div>
 	</div>
 	
 	<div class="timeline-item left" data-year="2375">
 		<time class="timelineItemDate">2375</time>
 		<div class="timelineItemContent">
+			<a href="/films/insurrection.html"><img src="/films/images/insurrection/insurrection-title.webp" style="height:3rem"></a><br>&nbsp;
 			<div class="timelineItemTitle">Mission to the Briar Patch</div>
-			Data's ethical subroutines take over when he discovered a plot by the Federation and the Son'a to relocate a peaceful race known as the Ba'ku<br>
-			<a href="/films/insurrection.html"><em>Star Trek: Insurrection</em></a>
+			Data's ethical subroutines take over when he discovered a plot by the Federation and the Son'a to relocate a peaceful race known as the Ba'ku.
 		</div>
 	</div>
 	
@@ -330,9 +324,9 @@
 	<div class="timeline-item left" data-year="2379">
 		<time class="timelineItemDate">2379</time>
 		<div class="timelineItemContent">
-			<div class="timelineItemTitle">Battle with the Scimitar</div>
-			During a mission to Romulus to investigate a major change of political power, the <em>Enterprise</em> is confronted by a warship called the <em>Scimitar</em>, under the command of Shinzon. During their protracted battle with the <em>Scimitar</em>, Data makes the ultimate sacrifice to save Picard and destroy Shinzon's weapon of mass destruction.<br>
-			<a href="/films/nemesis.html"><em>Star Trek Nemesis</em></a>
+			<a href="/films/nemesis.html"><img src="/films/images/nemesis/nemesis-title.webp" style="height:3rem"></a><br>&nbsp;
+			<div class="timelineItemTitle"><span class="spoilerTag" onClick="displaySpoilerIDs('NEM1','NEM2')">Spoiler » </span><span class="spoilerContent" id="NEM1">Battle with the Scimitar</div>
+			<span class="spoilerContent" id="NEM2">During a mission to Romulus to investigate a major change of political power, the <em>Enterprise</em> is confronted by a warship called the <em>Scimitar</em>, under the command of Shinzon. During their protracted battle with the <em>Scimitar</em>, Data makes the ultimate sacrifice to save Picard and destroy Shinzon's weapon of mass destruction.</span>
 		</div>
 	</div>
 
@@ -351,23 +345,23 @@
 		<span class="range-label"><a href="/pic/index.html"><img src="/images/pic-title.webp" style="height:5rem" alt="Star Trek: Picard"></a></span>
 	</div>
 	
-	<div class="timeline-image right" data-year="2399" style="--offsetx:150px;--offsety:-15%">
+	<div class="timeline-image right spoilerContent" id="PIC1-3" data-year="2399" style="--offsetx:150px;--offsety:-15%">
 		<img src="images/data-snifter.webp" style="height:250px" alt="Data, with his eyes closed, in a smoking jacket holding a snifter with a dark beverage">
 	</div>
 
 	<div class="timeline-item left" data-year="2399">
 		<time class="timelineItemDate">2399</time>
 		<div class="timelineItemContent">
-			<div class="timelineItemTitle">Data's consciousness encounters Picard in a complex quantum simulation</div>
-			A version of Data's consciousness existed based on Data's memories that were uploaded to the B-4 android, which were revived in a quantum simulation by Soong's neuronic cloning process. While Picard's memories were being uploaded to Soong's golem, Data's consciousness was able to interact with that of Picard's within the simulation. This version of Data made one last request of his long-time friend: to terminate his consciousness so that he could appreciate the finite nature of Human life. After leaving the simulation, Picard complied with Data's request.<br>
+			<div class="timelineItemTitle"><span class="spoilerTag" onClick="displaySpoilerIDs('PIC1-1','PIC1-2','PIC1-3')"><em>Star&nbsp;Trek:&nbsp;Picard</em> Season 1 Spoiler » </span><br><span class="spoilerContent" id="PIC1-1">Data's consciousness encounters Picard in a complex quantum simulation</span></div>
+			<span class="spoilerContent" id="PIC1-2">A version of Data's consciousness existed based on Data's memories that were uploaded to the B-4 android, which were revived in a quantum simulation by Soong's neuronic cloning process. While Picard's memories were being uploaded to Soong's golem, Data's consciousness was able to interact with that of Picard's within the simulation. This version of Data made one last request of his long-time friend: to terminate his consciousness so that he could appreciate the finite nature of Human life. After leaving the simulation, Picard complied with Data's request.</span><br>
 			<a href="/pic/pic-s1.html#e10">PIC 1x10: Et in Arcadia Ego, Part 2</a>
 		</div>
 	</div>
 
 	<div class="timeline-item left dual" data-year="2401">
 		<div class="timelineItemContent">
-			<div class="timelineItemTitle">Altan Soong constructs a new android combining parts of B-4, Lore, Lal, and Data</div>
-			With the lifting of the ban on synths, Altan Soong continued his life's work by creating a new android, combining the memories and personalities of several of its predecessors. Soong died before completing his project, and his android was seized by Section 31 and made to serve as an AI security system at Daystrom Station.<br>
+			<div class="timelineItemTitle"><span class="spoilerTag" onClick="displaySpoilerIDs('PIC3-1','PIC3-2')"><em>Star&nbsp;Trek:&nbsp;Picard</em> Season 3 Spoiler » </span><br><span class="spoilerContent" id="PIC3-1">Altan Soong constructs a new android combining parts of B-4, Lore, Lal, and Data<span></div>
+			<span class="spoilerContent" id="PIC3-2">With the lifting of the ban on synths, Altan Soong continued his life's work by creating a new android, combining the memories and personalities of several of its predecessors. Soong died before completing his project, and his android was seized by Section 31 and made to serve as an AI security system at Daystrom Station.</span><br>
 			<a href="/pic/pic-s3.html"><em>Star Trek: Picard</em> Season 3</a>
 		</div>
 	</div>
@@ -375,8 +369,8 @@
 	<div class="timeline-item right dual" data-year="2401">
 		<time class="timelineItemDate">2401</time>
 		<div class="timelineItemContent">
-			<div class="timelineItemTitle">Data triumphs over Lore in an internal battle for control of the android body</div>
-			After being rescued from Daystrom Station, the new Soong android was unstable, with the Data and Lore personalities at odds with each other. After a struggle for dominance, Data was the victor. This &ldquo;new&rdquo; Data now had a more-human personality, influenced by Lore's memories, and he went on to play a crucial role in the <em>Enterprise</em>&#8209;D's victory over one final Borg threat against the Federation.<br>
+			<div class="timelineItemTitle"><span class="spoilerTag" onClick="displaySpoilerIDs('PIC3-3','PIC3-4')"><em>Star&nbsp;Trek:&nbsp;Picard</em> Season 3 Spoiler » </span><br><span class="spoilerContent" id="PIC3-3">Data triumphs over Lore in an internal battle for control of the android body</span></div>
+			<span class="spoilerContent" id="PIC3-4">After being rescued from Daystrom Station, the new Soong android was unstable, with the Data and Lore personalities at odds with each other. After a struggle for dominance, Data was the victor. This &ldquo;new&rdquo; Data now had a more-human personality, influenced by Lore's memories, and he went on to play a crucial role in the <em>Enterprise</em>&#8209;D's victory over one final Borg threat against the Federation.</span><br>
 			<a href="/pic/pic-s3.html"><em>Star Trek: Picard</em> Season 3</a>
 		</div>
 	</div>
@@ -397,4 +391,13 @@
 
 <div id="bottomBorder"></div>
 </body>
+
+<script>
+	// Needed (allegedly) because of the dashed two-year lead-in at the top of the timeline
+	document.querySelector('.characterTimeline').style.setProperty(
+		'--pixels-per-year',`${PIXELS_PER_YEAR}px`
+	);
+</script>
+
+
 </html>

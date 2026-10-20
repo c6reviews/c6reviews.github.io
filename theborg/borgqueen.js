@@ -58,10 +58,18 @@ function displaySpoiler(caller,blurRadius = 6) {
 		content.style.filter = "none";
 		content.style.userSelect = "auto";
 		content.style.pointerEvents = "auto";
+		content.removeAttribute("aria-hidden");
+		content.querySelectorAll("[tabindex='-1']").forEach(element => {
+			element.removeAttribute("tabindex");
+		});
 	} else {
 		content.style.filter = "blur("+blurPx+")";
 		content.style.userSelect = "none";
 		content.style.pointerEvents = "none";
+		content.setAttribute("aria-hidden", "true");
+		content.querySelectorAll("a, button, input, select, textarea").forEach(element => {
+			element.setAttribute("tabindex", "-1");
+		});
 	}
 }
 
