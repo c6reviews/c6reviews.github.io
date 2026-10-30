@@ -114,8 +114,9 @@ function textToSpeech(id,text) {
 			// Actors
 			text = text.replaceAll("Takei","Tuh-kay");
 		
-			// Misc
+			// Misc (first line replaces non-breaking hyphens &#8209; to standard hyphens)
 			text = text.
+				replaceAll("‑","-").
 				replaceAll("AUs","A-yooz").
 				replaceAll("Broken Bow","Broken Bo").
 				replaceAll(/canonically/gi,"can-onicly").
