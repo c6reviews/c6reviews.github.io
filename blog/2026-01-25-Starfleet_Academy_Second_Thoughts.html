@@ -31,10 +31,18 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
 <meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" href="/main.css?v=1.6.5">
-<link rel="stylesheet" href="/tts.css?v=1.6.5">
-<link rel="stylesheet" href="blog.css?v=1.6.5">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="/main.css?v=1.6.6">
+<link rel="stylesheet" href="/tts.css?v=1.6.6">
+<link rel="stylesheet" href="blog.css?v=1.6.6">
+<style>
+	.articleImage {
+		float:left;
+		@media (max-width: 1000px) {
+			float:none;
+		}
+	}
+</style>
 
 <meta property="og:title" content='Second Thoughts on Starfleet Academy | C6Reviews'>
 <meta property="og:type" content="article">
@@ -42,10 +50,10 @@
 <meta property="og:url" content="https://c6reviews.com/blog/2026-01-25-Starfleet_Academy_Second_Thoughts.html">
 <meta property="og:description" content="C6 talks about Episode 3 and tries to comprehend how Lura Thok is too 'woke' or whatever">
 
-<script src="blog.js?v=1.6.5"></script>
-<script src="/tts.js?v=1.6.5"></script>
-<script src="/main.js?v=1.6.5"></script>
-<script src="/cookies.js?v=1.6.5"></script>
+<script src="blog.js?v=1.6.6"></script>
+<script src="/tts.js?v=1.6.6"></script>
+<script src="/main.js?v=1.6.6"></script>
+<script src="/cookies.js?v=1.6.6"></script>
 <script>
 	function prepTextToSpeech(id)
 	{
@@ -61,15 +69,33 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
-<div class="pageTitleImage"><img src="/images/main-header.webp" alt="Starfleet Delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
-<div class="pageTitleContainer">
-	<div class="pageTitle">
-		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>Second Thoughts on Starfleet Academy
-		<span class="pageSubtitle">&nbsp;</span>
+<div id="standardHeader">
+	<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+	<div class="pageTitleImage"><img src="/images/main-header.webp" alt="Starfleet Delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
+	<div class="pageTitleContainer">
+		<div class="pageTitle">
+			<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>Second Thoughts on Starfleet Academy
+			<span class="pageSubtitle">&nbsp;</span>
+		</div>
+	</div>
+	<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+</div>
+<div id="mobileHeader">
+	<div class="leftTitle">SFA Second Thoughts</div>
+	<div class="rightMenu">
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a> <div id="mobileMenuButton" onclick="toggleMobileMenu(this)">☰</div>
+	</div>
+	<div id="mobileMenu">
+		<div class="mobileTopLinks">
+			<img src="/images/c6reviews-hor-noglow.webp" style="width:400px" alt="c6reviews">
+			<a href="/about.html" style="margin-top:8px;">ABOUT</a>
+			<a href="/updates.html">UPDATES</a>
+			<a href="/blog/index.html">BLOG</a>
+			<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a>
+			<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" alt="bluesky logo" style="transform: translate(-20px,35px);">@c6reviews.<br>bsky.social</a></span>
+		</div>
 	</div>
 </div>
-<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div> 
@@ -98,7 +124,7 @@
 		
 		<p>Now, I'd like to devote the rest of this article to criticizing the critics. There are two things I keep hearing repeated by several different critics of the show, and I want to address them both. The first one is just a sticking point that people don't want to let go of, and the second one is actually really concerning and insane. And they both have to do with Lura Thok.</p>
 		
-		<figure class="articleImage" style="float:left"><img src="images/2026-01-25/thok.webp" style="height:650px"><br><figcaption>Commander Lura Thok, apparently somehow a controversial character</figcaption></figure>
+		<figure class="articleImage"><img src="images/2026-01-25/thok.webp" style="height:650px"><br><figcaption>Commander Lura Thok, apparently somehow a controversial character</figcaption></figure>
 		
 		<p>The first point that people like to pedantically throw out has to do with Thok being a Klingon-Jem'Hadar hybrid. &ldquo;The Jem'Hadar are genetically engineered! Bred in laboratories! There are no Jem'Hadar women, and they don't reproduce sexually!&rdquo;, they say, indignantly claiming that the writers don't know their <em>Trek</em> lore. Listen guys, all those things they say about the Jem'Hadar are correct &ndash; or rather, they <em>were</em> correct, 800 years prior to the events of <em>Star Trek: Starfleet Academy</em>. 800 years is a long, long time, and a lot can happen in that time. Obviously, things have changed, and it now appears that the Jem'Hadar are capable of having children of their own. It's okay for things to be a little different after 800 years of change and progress &ndash; this is such a weird hill for the critics to die on.</p>
 		
@@ -121,7 +147,8 @@
 <p>&nbsp;</p>
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
 <div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
-<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
+<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br>
+<span style="font-style:normal"><a href="/sitemap.html">Site Map</a> • <a href="mailto:contact@c6reviews.com">Contact</a> • <a onClick="unsetAllCookies()">Reset Cookie Preferences</a></span></div>
 <div id="TTDIV"></div>
 
 

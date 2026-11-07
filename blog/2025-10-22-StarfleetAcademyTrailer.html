@@ -31,11 +31,24 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
 <meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" href="/main.css?v=1.6.5">
-<link rel="stylesheet" href="/tts.css?v=1.6.5">
-<link rel="stylesheet" href="blog.css?v=1.6.5">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-<meta property="og:image" content="https://c6reviews.com/images/ogimage.webp">
+<link rel="stylesheet" href="/main.css?v=1.6.6">
+<link rel="stylesheet" href="/tts.css?v=1.6.6">
+<link rel="stylesheet" href="blog.css?v=1.6.6">
+<style>
+	#clipBox {
+		width:580px;
+		float:right;
+		border:1px solid #E47545;
+		padding:8px;
+		margin:12px;
+		@media (max-width: 1000px) {
+			float: none;
+			text-align:center;
+			margin:auto;
+		}
+	}
+</style>
 
 <meta property="og:title" content='First Thoughts: "Starfleet Academy" Trailer | C6Reviews'>
 <meta property="og:type" content="article">
@@ -43,10 +56,10 @@
 <meta property="og:url" content="https://c6reviews.com/blog/2025-10-22-StarfleetAcademyTrailer.html">
 <meta property="og:description" content="C6Reviews first thoughts about the trailer for Star Trek: Starfleet Academy">
 
-<script src="blog.js?v=1.6.5"></script>
-<script src="/tts.js?v=1.6.5"></script>
-<script src="/main.js?v=1.6.5"></script>
-<script src="/cookies.js?v=1.6.5"></script>
+<script src="blog.js?v=1.6.6"></script>
+<script src="/tts.js?v=1.6.6"></script>
+<script src="/main.js?v=1.6.6"></script>
+<script src="/cookies.js?v=1.6.6"></script>
 <script>
 	function prepTextToSpeech(id)
 	{
@@ -62,15 +75,33 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
-<div class="pageTitleImage"><img src="/images/main-header.webp" alt="Starfleet Delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
-<div class="pageTitleContainer">
-	<div class="pageTitle">
-		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>STAR TREK: STARFLEET ACADEMY TRAILER
-		<span class="pageSubtitle">FIRST THOUGHTS</span>
+<div id="standardHeader">
+	<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+	<div class="pageTitleImage"><img src="/images/main-header.webp" alt="Starfleet Delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
+	<div class="pageTitleContainer">
+		<div class="pageTitle">
+			<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>STAR TREK: STARFLEET ACADEMY TRAILER
+			<span class="pageSubtitle">FIRST THOUGHTS</span>
+		</div>
+	</div>
+	<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+</div>
+<div id="mobileHeader">
+	<div class="leftTitle">SFA Trailer</div>
+	<div class="rightMenu">
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a> <div id="mobileMenuButton" onclick="toggleMobileMenu(this)">☰</div>
+	</div>
+	<div id="mobileMenu">
+		<div class="mobileTopLinks">
+			<img src="/images/c6reviews-hor-noglow.webp" style="width:400px" alt="c6reviews">
+			<a href="/about.html" style="margin-top:8px;">ABOUT</a>
+			<a href="/updates.html">UPDATES</a>
+			<a href="/blog/index.html">BLOG</a>
+			<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a>
+			<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" alt="bluesky logo" style="transform: translate(-20px,35px);">@c6reviews.<br>bsky.social</a></span>
+		</div>
 	</div>
 </div>
-<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div> 
@@ -80,18 +111,18 @@
 	
 <div class="content">
 	
-	<div style="width:580px;float:right;border:1px solid #E47545;padding:8px;margin:12px"><strong>Check out the new trailer for <em>Star Trek: Starfleet Academy</em> here:</strong><br>
-		<iframe style="margin: 5px" width="560" height="315" src="https://www.youtube.com/embed/3_C_PefoE4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-		<br>Whoops, that was a parody of <em>Stargate: SG-1</em> where they cast younger actors as a joke in their 200th episode. (And yeah, it came out in 2006, before the first iPhone.)<br><br><strong>Here's the real trailer:</strong><br>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/rHDDzcyNWGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-	</div>
-
 	<div class="sectionHeader" style="margin-top:0px">
 		<em>Star Trek: Starfleet Academy</em> trailer disappoints
 		<span class="TTScontrols"><label><span class="ttsicon">🗣&#xFE0E;</span> <select id="ttsratemain" class="ttsrate"><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></label>
 		<button class="TTSplayButton" id="tts1pb" onclick="textToSpeech('tts1',prepTextToSpeech('articleContent'))">⏯&#xFE0E;</button><button class="TTSstopButton" onclick="speechStop()">⏹&#xFE0E;</button></span>
 	</div>
 	<div class="dateline">October 22, 2025</div>
+	
+	<div id="clipBox"><strong>Check out the new trailer for <em>Star Trek: Starfleet Academy</em> here:</strong><br>
+		<iframe style="margin: 5px" width="560" height="315" src="https://www.youtube.com/embed/3_C_PefoE4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		<br>Whoops, that was a parody of <em>Stargate: SG-1</em> where they cast younger actors as a joke in their 200th episode. (And yeah, it came out in 2006, before the first iPhone.)<br><br><strong>Here's the real trailer:</strong><br>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/rHDDzcyNWGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	</div>
 	
 	<div id="articleContent" style="font-family:CCS,Roboto,serif;">
 		<p>Listen, I don't want to yuck someone else's yum &ndash; and in fact, I am usually the one to defend &ldquo;new Trek&rdquo; and its value and validity, to fans who may be a little too hung up on what <em>Trek</em> used to be &ndash; but this trailer does not fill me with confidence. I'm sorry, but this looks like a below-average, generic, young-adult coming-of-age story with a <em>Star Trek</em> flavor. Even if I concede that maybe I'm personally just not interested in a &ldquo;college drama&rdquo;, I think it still looks pretty bad for anyone who <em>would</em> be interested in that genre.</p>
@@ -117,7 +148,8 @@
 <p>&nbsp;</p>
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
 <div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
-<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
+<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br>
+<span style="font-style:normal"><a href="/sitemap.html">Site Map</a> • <a href="mailto:contact@c6reviews.com">Contact</a> • <a onClick="unsetAllCookies()">Reset Cookie Preferences</a></span></div>
 <div id="TTDIV"></div>
 
 

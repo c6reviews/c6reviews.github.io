@@ -31,8 +31,8 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
 <meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" href="main.css?v=1.6.5">
-<link rel="stylesheet" href="tts.css?v=1.6.5">
+<link rel="stylesheet" href="main.css?v=1.6.6">
+<link rel="stylesheet" href="tts.css?v=1.6.6">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <meta property="og:title" content="About | C6Reviews">
@@ -41,9 +41,9 @@
 <meta property="og:url" content="https://c6reviews.com/about.html">
 <meta property="og:description" content="About C6Reviews.com">
 
-<script src="/main.js?v=1.6.5"></script>
-<script src="tts.js?v=1.6.5"></script>
-<script src="cookies.js?v=1.6.5"></script>
+<script src="/main.js?v=1.6.6"></script>
+<script src="tts.js?v=1.6.6"></script>
+<script src="cookies.js?v=1.6.6"></script>
 <script>
 	function prepTextToSpeech(id)
 	{
@@ -107,7 +107,8 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="index.html"><img src="images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+<div id="standardHeader">
+	<div class="c6Left"><a href="index.html"><img src="images/c6reviews-vert.webp" alt="c6reviews"></a></div>
 	<div class="pageTitleImage"><img src="images/main-header.webp" alt="Starfleet delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
 	<div class="pageTitleContainer">
 		<div class="pageTitle">
@@ -115,11 +116,24 @@
 			<span class="pageSubtitle">About C6Reviews</span>
 		</div>
 	</div>
-	<div class="c6Right"><a href="index.html"><img src="images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="about.html" style="margin-top:8px;">ABOUT</a><a href="updates.html">UPDATES</a><a href="blog/index.html">BLOG</a>
-	
-	<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a>
-	
-	<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+	<div class="c6Right"><a href="index.html"><img src="images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="about.html" style="margin-top:8px;">ABOUT</a><a href="updates.html">UPDATES</a><a href="blog/index.html">BLOG</a><a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+</div>
+<div id="mobileHeader">
+	<div class="leftTitle">About</div>
+	<div class="rightMenu">
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a> <div id="mobileMenuButton" onclick="toggleMobileMenu(this)">☰</div>
+	</div>
+	<div id="mobileMenu">
+		<div class="mobileTopLinks">
+			<img src="/images/c6reviews-hor-noglow.webp" style="width:400px" alt="c6reviews">
+			<a href="/about.html" style="margin-top:8px;">ABOUT</a>
+			<a href="/updates.html">UPDATES</a>
+			<a href="/blog/index.html">BLOG</a>
+			<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a>
+			<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" alt="bluesky logo" style="transform: translate(-20px,35px);">@c6reviews.<br>bsky.social</a></span>
+		</div>
+	</div>
+</div>
 
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div>
@@ -254,6 +268,7 @@
 				<li><strong style="color:#3E9FE5">Third Gen <em>Trek</em> (2017&ndash;ongoing)</strong> includes <a href="/dis/index.html" class="thirdGen"><em>Discovery</em></a>, <a href="/dis/index.html" class="thirdGen"><em>Short Treks</em></a>, <a href="/pic/index.html" class="thirdGen"><em>Picard</em></a>, <a href="/low/index.html" class="thirdGen"><em>Lower Decks</em></a>, <a href="/pro/index.html" class="thirdGen"><em>Prodigy</em></a>, <a href="/snw/index.html" class="thirdGen"><em>Strange New Worlds</em></a>, <a href="/sfa/index.html" class="thirdGen"><em>Starfleet Academy</em></a>, and <a href="/films/index.html" class="thirdGen">film</a> #14. Often referred to as the <strong>&ldquo;Kurtzman&nbsp;Era&rdquo;</strong>, named after the executive producer of the time.</li>
 			</ul>
 		</li>
+		<li><strong style="color:white"><em>The Original Series</em> is numbered by <span style="text-decoration:underline">air date</span></strong><br>The de facto <em>Star&nbsp;Trek</em> wiki <a href="https://memory-alpha.fandom.com" target="_blank">Memory Alpha</a> chooses to number <em>TOS</em> episodes by their <span style="text-decoration:underline">production date</span>, so our numbers will not match. I tried to remember to create pop-ups when you mouse over <em>TOS</em> links that will tell you the production number.</li>
 		<li><strong style="color:white">No capitalization of &ldquo;easter egg&rdquo;</strong><br>When talking about little things hidden in a TV show or movie intended for fans to find and enjoy, like an in-joke or background set piece, the term &ldquo;easter egg&rdquo; is commonly used. I choose not to capitalize &ldquo;Easter&rdquo; in this case because the term has nothing to do with the holiday and is referring more to the idea of a &ldquo;hidden egg&rdquo;. Not capitalizing the word is actually meant to be out of respect for the holiday, since its use in this context would take away from the meaning of the upper-case &ldquo;Easter&rdquo;.</li>
 		<li><strong style="color:white">Punctuation kept outside of quotation marks</strong><br>Though I am American, myself, I have chosen to use the British convention of keeping ending punctuation outside of quotation marks, unless the punctuation is specifically part of the quote. Putting periods and commas inside closing quotation marks is an aesthetic choice, but I prefer the logical order of the British convention. I would argue that reversing the quote and punctuation mark would look aesthetically acceptable to us if that is what we were used to seeing.</li>
 		
@@ -265,7 +280,8 @@
 </div>
 
 <div class="pageFooter"><a href="index.html"><img src="images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a href="blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
-<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
+<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br>
+<span style="font-style:normal"><a href="/sitemap.html">Site Map</a> • <a href="mailto:contact@c6reviews.com">Contact</a> • <a onClick="unsetAllCookies()">Reset Cookie Preferences</a></span></div>
 <div id="TTDIV"></div>
 
 </body>

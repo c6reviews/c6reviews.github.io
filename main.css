@@ -750,7 +750,7 @@ body li {
 		flex-direction: column;
 		align-items: center;
 		a {
-			width: fit-content;
+			width: 100%;
 		}
 	}
 	#mainIndexGrid #otherGuides {
@@ -1336,8 +1336,8 @@ td.diagonalFalling {
   display: block;
   position: relative;
   cursor: pointer;
-  padding-left: 16px;
-  font-size: 14px;
+  padding-left: 1rem;
+  font-size: 0.875rem;
   margin-top: 3px;
   margin-bottom: 3px;
   vertical-align: middle;
@@ -1345,7 +1345,7 @@ td.diagonalFalling {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  height: 18px;
+  height: 1.125rem;
 }
 /* Hide the browser's default checkbox */
 .checkContainer input {
@@ -1361,8 +1361,8 @@ td.diagonalFalling {
   top: 50%;
   transform: translateY(-50%);
   left: 0;
-  height: 14px;
-  width: 14px;
+  height: 0.875rem;
+  width: 0.875rem;
   border: 1px solid #ccc;
 }
 /* On mouse-over, add a grey background color */
@@ -1385,10 +1385,10 @@ td.diagonalFalling {
 }
 /* Style the checkmark/indicator */
 .checkContainer .checkmark:after {
-  left: 4px;
-  top: 1px;
-  width: 4px;
-  height: 7px;
+  left: 0.25rem;
+  top: 0.063rem;
+  width: 0.25rem;
+  height: 0.438rem;
   border: solid white;
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);

@@ -31,9 +31,9 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
 <meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" href="/main.css?v=1.6.5">
-<link rel="stylesheet" href="/tts.css?v=1.6.5">
-<link rel="stylesheet" href="blog.css?v=1.6.5">
+<link rel="stylesheet" href="/main.css?v=1.6.6">
+<link rel="stylesheet" href="/tts.css?v=1.6.6">
+<link rel="stylesheet" href="blog.css?v=1.6.6">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <style>
 	.quote {
@@ -48,6 +48,11 @@
 		border-radius: 5px;
 		padding: 8px;
 	}
+	@media (max-width: 1000px) {
+		#articleContent{
+			flex-direction: column-reverse;
+		}
+	}
 </style>
 
 <meta property="og:title" content='In Memory of Sir Patrick Stewart | C6Reviews'>
@@ -56,10 +61,10 @@
 <meta property="og:url" content="https://c6reviews.com/blog/2026-10-30-In_Memory_of_Sir_Patrick_Stewart.html">
 <meta property="og:description" content="C6 pays his respects to Sir Patrick Stewart, who played one of his childhood role models, Captain Jean-Luc Picard.">
 
-<script src="blog.js?v=1.6.5"></script>
-<script src="/tts.js?v=1.6.5-1"></script>
-<script src="/main.js?v=1.6.5"></script>
-<script src="/cookies.js?v=1.6.5"></script>
+<script src="blog.js?v=1.6.6"></script>
+<script src="/tts.js?v=1.6.6"></script>
+<script src="/main.js?v=1.6.6"></script>
+<script src="/cookies.js?v=1.6.6"></script>
 <script>
 	function prepTextToSpeech(id)
 	{
@@ -75,15 +80,33 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='/loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
-<div class="pageTitleImage"><img src="/images/main-header.webp" alt="Starfleet Delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
-<div class="pageTitleContainer">
-	<div class="pageTitle">
-		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>In Memory of Sir Patrick Stewart
-		<span class="pageSubtitle">&nbsp;</span>
+<div id="standardHeader">
+	<div class="c6Left"><a href="/index.html"><img src="/images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+	<div class="pageTitleImage"><img src="/images/main-header.webp" alt="Starfleet Delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
+	<div class="pageTitleContainer">
+		<div class="pageTitle">
+			<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a><br>In Memory of Sir Patrick Stewart
+			<span class="pageSubtitle">&nbsp;</span>
+		</div>
+	</div>
+	<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+</div>
+<div id="mobileHeader">
+	<div class="leftTitle">In Memoriam</div>
+	<div class="rightMenu">
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a> <div id="mobileMenuButton" onclick="toggleMobileMenu(this)">☰</div>
+	</div>
+	<div id="mobileMenu">
+		<div class="mobileTopLinks">
+			<img src="/images/c6reviews-hor-noglow.webp" style="width:400px" alt="c6reviews">
+			<a href="/about.html" style="margin-top:8px;">ABOUT</a>
+			<a href="/updates.html">UPDATES</a>
+			<a href="/blog/index.html">BLOG</a>
+			<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a>
+			<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" alt="bluesky logo" style="transform: translate(-20px,35px);">@c6reviews.<br>bsky.social</a></span>
+		</div>
 	</div>
 </div>
-<div class="c6Right"><a href="/index.html"><img src="/images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="/images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="/about.html" style="margin-top:8px;">ABOUT</a><a href="/updates.html">UPDATES</a><a href="/blog/index.html">BLOG</a><a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
 
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div> 
@@ -140,7 +163,7 @@
 		<p>And so, in best maritime tradition, I now wish clear horizons to a man who helped make me who I am today: Patrick Stewart. May your tea, Earl Grey, forever be hot, and the lights forever be four (never five). See you... out there! ◼</p>
 		</div>
 		
-		<div>
+		<div style="text-align:center">
 		<img src="images/2026-10-30/patrick_stewart.webp" style="width:500px;" alt="A black and white image of Captain Jean-Luc Picard standing in silhouette in the Observation Lounge of the Enterprise, with the words 'Patrick Stewart, July 13, 1940 - October 28, 2026'">
 		</div>
 	</div>
@@ -149,7 +172,8 @@
 <p>&nbsp;</p>
 <div class="toTopFooter"><a onClick="scrollToTop()">▲ Back to Top ▲</a></div>
 <div class="pageFooter"><a href="/index.html"><img src="/images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about.html">ABOUT</a>&nbsp;&nbsp;<a href="/updates.html">UPDATES</a>&nbsp;&nbsp;<a href="/blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="/images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
-<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
+<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br>
+<span style="font-style:normal"><a href="/sitemap.html">Site Map</a> • <a href="mailto:contact@c6reviews.com">Contact</a> • <a onClick="unsetAllCookies()">Reset Cookie Preferences</a></span></div>
 <div id="TTDIV"></div>
 
 

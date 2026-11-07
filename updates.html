@@ -46,7 +46,7 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="darkreader-lock" content="47">
 <meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" href="main.css?v=1.6.5">
+<link rel="stylesheet" href="main.css?v=1.6.6">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 <meta property="og:title" content="Updates | C6Reviews">
@@ -55,8 +55,8 @@
 <meta property="og:url" content="https://c6reviews.com/updates.html">
 <meta property="og:description" content="Site update log for C6Reviews.com">
 
-<script src="/main.js?v=1.6.5"></script>
-<script src="cookies.js?v=1.6.5"></script>
+<script src="/main.js?v=1.6.6"></script>
+<script src="cookies.js?v=1.6.6"></script>
 <script>
 	function scrollToTop() {
 		window.scrollTo({
@@ -88,7 +88,8 @@
 
 <div id='kofiframediv'><iframe id="kofiframe" src='loader.html' title="kofi frame"></iframe><span id="koficlose" onclick="document.getElementById('kofiframediv').style.height='0px';document.getElementById('kofiframediv').style.border='none';">&times;</span></div>
 
-<div class="c6Left"><a href="index.html"><img src="images/c6reviews-vert.webp" alt="c6reviews"></a></div>
+<div id="standardHeader">
+	<div class="c6Left"><a href="index.html"><img src="images/c6reviews-vert.webp" alt="c6reviews"></a></div>
 	<div class="pageTitleImage"><img src="images/main-header.webp" alt="Starfleet delta" style="mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8) 40%, rgba(0,0,0,0))"></div>
 	<div class="pageTitleContainer">
 		<div class="pageTitle">
@@ -99,14 +100,33 @@
 	<div class="c6Right"><a href="index.html"><img src="images/c6.webp" alt="a smiling, pale-skinned android with C6 tattooed to his forehead"><img src="images/c6reviews-hor-noglow.webp" style="margin-top:3px" alt="c6reviews"></a><a href="about.html" style="margin-top:8px;">ABOUT</a><a href="updates.html">UPDATES</a><a href="blog/index.html">BLOG</a>
 	<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a>
 	<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="images/bsky.webp" style="width:20px;" alt="bluesky logo">@c6reviews.<br>bsky.social</a></span></div>
+</div>
+<div id="mobileHeader">
+	<div class="leftTitle">Updates</div>
+	<div class="rightMenu">
+		<a href="/index.html"><img src="/images/c6reviews-hor.webp" style="width:350px" alt="c6reviews"></a> <div id="mobileMenuButton" onclick="toggleMobileMenu(this)">☰</div>
+	</div>
+	<div id="mobileMenu">
+		<div class="mobileTopLinks">
+			<img src="/images/c6reviews-hor-noglow.webp" style="width:400px" alt="c6reviews">
+			<a href="/about.html" style="margin-top:8px;">ABOUT</a>
+			<a href="/updates.html">UPDATES</a>
+			<a href="/blog/index.html">BLOG</a>
+			<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a>
+			<span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank"><img src="/images/bsky.webp" alt="bluesky logo" style="transform: translate(-20px,35px);">@c6reviews.<br>bsky.social</a></span>
+		</div>
+	</div>
+</div>
 
 
 <div onclick="scrollToTop()" id="toTopButton" title="Go to top">🔺<br>top</div>
 
 <div id="backButton" onclick="window.location = 'index.html';"><span style="font-size:large;font-weight:bold">←</span><br>Star<br>Trek<br>home</div>
 
+<div class="content">
+
 	<div class="updatesAcknowledgements">
-		<span style="font-family:BBI,Roboto,sans-serif;font-size:x-large;text-decoration:underline">Site Update Acknowledgements</span><br><br>
+		<span style="font-family:BBI,Roboto,sans-serif;font-size:1.5rem;text-decoration:underline">Site Update Acknowledgements</span><br><br>
 		Currently, updates on this site are primarily focused on <span style="text-decoration:underline">content</span>, with a secondary focus on features and accessibility for <span style="text-decoration:underline">desktop browsers</span>. I am aware that this site doesn't really look good on smaller screens, such as tablets or phones. Some day, maybe after most of the content is done, maybe then I'll work on making the site more mobile-friendly. Until then... enjoy these content updates!
 	</div>
 
@@ -119,6 +139,22 @@
 			<th style="width:170px;">Date</th>
 			<th>Version</th>
 			<th style="text-align:left;padding-left: 35px;">Description</th>
+		</tr>
+		<tr>
+			<td><span class="updateDate">November 7, 2026</span></td>
+			<td>1.6.6<br><span class="mobilever">mobile 0.2</span></td>
+			<td>
+				<ul>
+					<li>A <strong>character page</strong> was added to the <a href="/pic/index.html"><em>Picard</em></a> guides, and <strong>new character timelines</strong> were added: <a href="/characters/riker.html">Riker</a>, <a href="/characters/tuvok.html">Tuvok</a>.</li>
+					<li>The <a href="/about.html">About</a> page, this <a href="/updates.html">Updates</a> page, the <a href="/blog/index.html">Blog</a>, and all the Blog entries have been made mobile-friendly-<span style="font-weight:bold;font-style:italic">er</span>.<br>
+						<span style="font-size:0.8125rem;font-style:italic;">They're still not excellent, but they're a lot better than they were!</span>
+					</li>
+					<li>Created a simple <a href="/sitemap.html">Site Map</a> and linked it at the bottom of each page along with a new contact link.</li>
+				</ul>
+				<div class="minorUpdates"><span style="text-decoration:underline">Other fixes and quality improvements</span><br>
+					Added &ldquo;Featured&rdquo; and &ldquo;In Memoriam&rdquo; category tags to the Blog; fixed incorrect and missing Open Graph data for the simple timeline pages; fixed several HTML issues on Data's character page; fixed a sizing issue on the Home page when viewed on a mobile browser; in addition to the Blog page, drop-down selection boxes across the entire site were made mobile-friendly-er than they were. Also, I created a landing page specifically for anyone who scans the QR code on the C6Reviews business cards that I'm taking to the ST-PHL convention next week 😄
+				</div>
+			</td>
 		</tr>
 		<tr>
 			<td><span class="updateDate">October 20, 2026</span></td>
@@ -289,8 +325,11 @@
 		<span style="text-align:left"><a href="updates-y1.html">❰ Previous Year</a></span><span style="text-align:right;color:#555">Next Year ❱</span>
 	</div>
 
+</div>
+
 <div class="pageFooter"><a href="index.html"><img src="images/c6reviews-hor.webp" alt="c6reviews" style="transform: translateY(-1px);"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="about.html">ABOUT</a>&nbsp;&nbsp;<a href="updates.html">UPDATES</a>&nbsp;&nbsp;<a href="blog/index.html">BLOG</a>&nbsp;&nbsp;<a style="cursor:pointer" onclick="toggleKofi()">SUPPORT</a><span class="bsky"><a href="https://bsky.app/profile/c6reviews.bsky.social" target="_blank" style="display: flex;align-items: center;"><img src="images/bsky.webp" alt="bluesky logo">@c6reviews.bsky.social</a></span></div>
-<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br><a onClick="unsetAllCookies()">Reset Cookie Preferences</a></div>
+<div class="legalCopy">This is an independent fan site and is not affiliated with or endorsed by Paramount Global. Star Trek and all related marks, logos, and characters are the property of Paramount Global.<br>
+<span style="font-style:normal"><a href="/sitemap.html">Site Map</a> • <a href="mailto:contact@c6reviews.com">Contact</a> • <a onClick="unsetAllCookies()">Reset Cookie Preferences</a></span></div>
 
 <div id="TTDIV">
 

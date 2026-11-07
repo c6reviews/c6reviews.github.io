@@ -10,42 +10,58 @@
 	margin-top: 10px;
 	margin-bottom: 20px;
 	align-items: start;
+	@media (max-width: 1000px) {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 .blogImg{
 	justify-self: end;
 }
 .blogImg img{
 	height: 125px;
+	@media (max-width: 1000px) {
+		height: auto;
+		width: 100%;
+	}
 }
 .blogEntry {
 	padding: 3px;
-	font-size: large;
+	font-size: 1.125rem;
 	border: 1px solid #606060;	
 	min-height: 117px;
+	@media (max-width: 1000px) {
+		a {
+			white-space: normal;
+		}
+	}
 }
 
 .blogDate {
 	display: inline-block;
 	width: fit-content;
-	font-size: large;
+	font-size: 1.125rem;
 	padding-left: 3px;
 	padding-right: 3px;
 }
 .blogTitle {
 	font-weight: bold;
-	font-size: x-large;
+	font-size: 1.5rem;
 }
 .blogTag {
 	position: relative;
 	display: inline-block;
 	font-family: BB;
-	font-size: medium;
+	font-size: 1rem;
 	color: #A0A0A0;
 	background-color: #303030;
 	height: 20px;
 	min-width: 30px;
 	padding: 0px 3px 0px 14px;
 	clip-path: polygon(8px 0%, 100% 0%, 100% 100%, 8px 100%, 0% 75%, 0% 25%);
+	@media (max-width: 1000px) {
+		height: auto;
+		padding: 0px 10px 0px 14px;
+	}
 }
 .blogTag::before {
 	content: "";
@@ -74,8 +90,8 @@
 	display: none;
 }
 .dropdownArrow {
-	width:24px;
-	height:24px;
+	height: 1.5rem;
+	width: 1.5rem;
 	padding-left:4px;
 	padding-top:0px;
 	border-radius:2px;
@@ -86,12 +102,22 @@ input[type=text] {
 	color: white;
 	border: 1px solid gray;
 	border-radius: 3px;
+	height:21px;
+	@media (max-width: 1000px) {
+		height: 40px;
+		width: 400px;
+		font-size: 1.25rem;
+	}
 }
 input[type=button] {
 	background-color: #00000000;
 	color: #C0C0C0;
 	border: 1px solid #C0C0C0;
 	cursor: pointer;
+		
+	@media (max-width: 1000px) {
+	
+	}
 }
 
 /* ----- ENTRIES ----- */
@@ -101,7 +127,7 @@ input[type=button] {
 	position: relative;
 	color: #E47545;
 	font-family: BB, Roboto, sans-serif;
-	font-size: x-large;
+	font-size: 1.5rem;
 	margin-top: 40px;
 	border-bottom: 1px solid #E47545;
 	overflow: hidden;
@@ -115,7 +141,7 @@ h2 {
 }
 #articleContent > :where(p):first-of-type::first-letter {
 	initial-letter: 2;
-	font-size: 48px;
+	font-size: 3rem;
 	font-family: BB,serif;
 	float: left;
 	line-height: 1;
@@ -126,7 +152,7 @@ h2 {
 	font-family: Roboto, sans-serif;
 	font-style: italic;
 	em {font-style: normal};
-	font-size: small;
+	font-size: 0.8125rem;
 	margin: 8px 25px;
 	padding-bottom: 3px;
 	border-bottom: 1px dotted #C0C0C0;
@@ -134,13 +160,13 @@ h2 {
 }
 .criticQuote {
 	font-family: CCS, serif;
-	font-size: x-large;
+	font-size: 1.5rem;
 	width: 250px;
 	border-top: 3px solid;
 	margin: 15px;
 	color: white;
 	.byLine{
-		font-size: small;
+		font-size: 0.8125rem;
 		color: #A0A0A0;
 	}
 }
