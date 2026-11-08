@@ -750,7 +750,7 @@ body li {
 		flex-direction: column;
 		align-items: center;
 		a {
-			width: 100%;
+			width: fit-content;
 		}
 	}
 	#mainIndexGrid #otherGuides {
@@ -791,6 +791,12 @@ body li {
 		}
 		#mainIndexGrid #otherGuides {
 			grid-area: 4 / 1 / 5 / 1;
+		}
+		#mainIndexGrid #episodeGuides a {
+			width: 70%;
+		}
+		#mainIndexGrid #episodeGuides a .seriesCard {
+			width: 100% !important;
 		}
 	}
 	
